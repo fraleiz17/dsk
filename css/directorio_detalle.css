@@ -1,0 +1,85 @@
+.contenido_directorio{
+	margin-top:15px;
+	display:inline-block;
+	width:315px;
+	height:251px;
+	border: 3px solid #DED9D5;
+	-moz-border-radius: 15px; /* Firefox */
+    -webkit-border-radius: 15px; /* Google Chrome y Safari */
+    border-radius: 15px; /* CSS3 (Opera 10.5, IE 9 y estándar a ser soportado por todos los futuros navegadores) */
+	}
+.contenedor_logotipo_directorio{
+	width:316px;
+	height:183px;
+	padding-top:5px;
+	text-align:center;
+	}
+.contenedor_nombre_empresa{
+	width:311px;
+	height:51px;
+	padding-left:5px;
+	background-color:#762EA4;
+	font-size:18px;
+	font-family:'titulos';
+	color:#FFFFFF;
+	}
+.contenedor_titulo_informcacion{
+	width:99%;
+	height:37px;
+	padding-top:14px;
+	padding-left:5px;
+	background-color:#9C9E9F;
+	color:#762EA4;
+	margin-top:15px;
+	text-align:center;
+	font-size:18px;
+	font-family:'titulos';
+	}
+.contenedor_informacion{
+	width:306px;
+	height:178px;
+	padding:5px;}
+.contenedor_descripcion_detalle{
+	display:inline-block;
+	margin-top:15px;
+	width:435px;
+	height:271px;
+	}
+.contenedor_del_mapa{
+	background-color:#999999;
+	display:inline-block;
+	margin-top:15px;
+	width:369px;
+	height:271px;
+	margin-left:10px;
+	margin-right:10px;
+	}
+.contenedor_horarios{
+	display:inline-block;
+	padding:5px;
+	margin-top:15px;
+	width:142px;
+	height:264px;
+	border: 3px solid #DED9D5;
+	-moz-border-radius: 15px; /* Firefox */
+    -webkit-border-radius: 15px; /* Google Chrome y Safari */
+    border-radius: 15px; /* CSS3 (Opera 10.5, IE 9 y estándar a ser soportado por todos los futuros navegadores) */
+	}
+.boton_morado li{
+	padding:5px;
+	height:14px;
+	background-color:#762EA4;
+	text-align:center;
+	width:84px;
+	color:#FFF;
+	box-shadow: 2px 2px 7px #999;
+	list-style:none;
+	font-size:11px;
+	}
+.boton_morado li:hover{
+	color:#762EA4;
+	background-color:#FFF;
+	cursor:pointer;
+	}
+.margin_top_10{
+	margin-top:10px;}

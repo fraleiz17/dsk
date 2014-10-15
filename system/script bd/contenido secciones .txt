@@ -1,0 +1,20 @@
+CREATE TABLE `contenido` (
+  `contenidoID` int(11) NOT NULL AUTO_INCREMENT,
+  `seccionID` int(1) NOT NULL,
+  `seccionDetalle` varchar(50) NOT NULL,
+  `texto` text NOT NULL,
+  `fecha` date NOT NULL,
+  `zonaID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`contenidoID`),
+  KEY `seccion` (`seccionID`) USING BTREE,
+  CONSTRAINT `contenido_fk1` FOREIGN KEY (`seccionID`) REFERENCES `seccion` (`seccionID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `fotoscontenido` (
+  `fotoID` int(11) NOT NULL AUTO_INCREMENT,
+  `foto` varchar(120) NOT NULL,
+  `contenidoID` int(11) NOT NULL,
+  PRIMARY KEY (`fotoID`) USING BTREE,
+  KEY `productoID_new` (`contenidoID`) USING BTREE,
+  CONSTRAINT `fotostienda_fk1_new` FOREIGN KEY (`contenidoID`) REFERENCES `catalogoproductos` (`productoID`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AVG_ROW_LENGTH=819;

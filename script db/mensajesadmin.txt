@@ -1,0 +1,7 @@
+CREATE TABLE `mensajesadmin` (
+  `mensajeID` int(11) NOT NULL AUTO_INCREMENT,
+  `tipoMensaje` varchar(80) DEFAULT NULL,
+  `asunto` int(11) DEFAULT NULL,
+  `contenido` int(11) DEFAULT NULL,
+  PRIMARY KEY (`mensajeID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 PACK_KEYS=0;

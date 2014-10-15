@@ -1,0 +1,6065 @@
+<?xml version="1.0" encoding="utf-8"?>
+<properties>
+	<Controls>
+		<Table>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="21"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table"/>
+				<position value="61;823"/>
+				<size value="179;104"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table>
+		<Table1>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="20"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table1"/>
+				<position value="61;676"/>
+				<size value="176;122"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table1>
+		<Table10>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="11"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table10"/>
+				<position value="580;931"/>
+				<size value="152;158"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table10>
+		<Table11>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="10"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table11"/>
+				<position value="580;733"/>
+				<size value="152;158"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table11>
+		<Table12>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="9"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table12"/>
+				<position value="61;995"/>
+				<size value="191;140"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table12>
+		<Table13>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="8"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table13"/>
+				<position value="61;1154"/>
+				<size value="135;104"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table13>
+		<Table14>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="7"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table14"/>
+				<position value="269;1205"/>
+				<size value="185;104"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table14>
+		<Table15>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="6"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table15"/>
+				<position value="322;16"/>
+				<size value="168;212"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table15>
+		<Table16>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="5"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table16"/>
+				<position value="95;16"/>
+				<size value="171;176"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table16>
+		<Table17>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="4"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table17"/>
+				<position value="566;24"/>
+				<size value="189;194"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table17>
+		<Table18>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="3"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table18"/>
+				<position value="806;24"/>
+				<size value="186;212"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table18>
+		<Table19>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="2"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table19"/>
+				<position value="609;462"/>
+				<size value="134;212"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table19>
+		<Table2>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="19"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table2"/>
+				<position value="42;289"/>
+				<size value="198;356"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table2>
+		<Table20>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="1"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table20"/>
+				<position value="857;591"/>
+				<size value="192;104"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table20>
+		<Table3>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="1"/>
+				<^level value="18"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table3"/>
+				<position value="312;289"/>
+				<size value="223;374"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table3>
+		<Table4>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="17"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table4"/>
+				<position value="286;706"/>
+				<size value="175;266"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table4>
+		<Table5>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="16"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table5"/>
+				<position value="276;995"/>
+				<size value="185;194"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table5>
+		<Table6>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="15"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table6"/>
+				<position value="844;331"/>
+				<size value="148;248"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table6>
+		<Table7>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="14"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table7"/>
+				<position value="1064;237"/>
+				<size value="177;284"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table7>
+		<Table8>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="13"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table8"/>
+				<position value="603;237"/>
+				<size value="176;176"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table8>
+		<Table9>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="12"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table9"/>
+				<position value="857;706"/>
+				<size value="186;374"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table9>
+		<Usuario>
+			<Properties>
+				<^lock value="0"/>
+				<back_color value="FFFFFF"/>
+				<gamma value="0"/>
+				<name value="Usuario"/>
+				<size value="2048;2048"/>
+				<style value="4"/>
+				<style_links value="0"/>
+				<units value="5"/>
+			</Properties>
+			<Type value="Diagram"/>
+		</Usuario>
+	</Controls>
+	<GUI>
+		<FullToolbarLeft value="1"/>
+		<FullToolbarRight value="1"/>
+		<PageEditor value="-1"/>
+		<PageEditorH value="0"/>
+		<PageToolbarLeft value="0"/>
+		<PageToolbarRB value="0"/>
+		<PageToolbarRight value="0"/>
+		<PaneClipboard value="0"/>
+		<PaneLayout value="0"/>
+		<PaneView value="0"/>
+		<ScrollX value="0"/>
+		<ScrollY value="225"/>
+		<Selection value="VGFibGU4"/>
+		<ShowAll value="1"/>
+		<ShowChanges value="1"/>
+		<ShowGL value="1"/>
+		<ShowGrid value="1"/>
+		<UseGrid value="0"/>
+	</GUI>
+	<Model>
+		<quieroun_perro_dev>
+			<link>
+				<o0>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="usuariodetalle"/>
+						<Foreign_Key value="aWRVc3Vhcmlv"/>
+						<Name value="detalleUsuario"/>
+						<On_Delete value="Cascade"/>
+						<On_Update value="Cascade"/>
+						<Parent_Table value="usuario"/>
+						<Primary_Key value="aWRVc3Vhcmlv"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<name value="detalleUsuario"/>
+				</o0>
+				<o1>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="giroempresa"/>
+						<Foreign_Key value="aWRVc3VhcmlvRGV0YWxsZQ=="/>
+						<Name value="giroempresa_fk1"/>
+						<On_Delete value="Cascade"/>
+						<On_Update value="Cascade"/>
+						<Parent_Table value="usuariodetalle"/>
+						<Primary_Key value="aWR1c3VhcmlvRGV0YWxsZQ=="/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<name value="giroempresa_fk1"/>
+				</o1>
+				<o10>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to ONE"/>
+						<Child_Table value="videos"/>
+						<Foreign_Key value="cHVibGljYWNpb25JRA== c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+						<Name value="publicacionVideo"/>
+						<On_Delete value="Cascade"/>
+						<On_Update value="Cascade"/>
+						<Parent_Table value="publicaciones"/>
+						<Primary_Key value="cHVibGljYWNpb25JRA== c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<name value="publicacionVideo"/>
+				</o10>
+				<o11>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="zonageograficaestado"/>
+						<Foreign_Key value="em9uYWdlb2dyYWZpY2FJRA=="/>
+						<Name value="zonageograficaestado_fk1"/>
+						<On_Delete value="Cascade"/>
+						<On_Update value="Cascade"/>
+						<Parent_Table value="zonageografica"/>
+						<Primary_Key value="em9uYUlE"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<name value="zonageograficaestado_fk1"/>
+				</o11>
+				<o12>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="carrito"/>
+						<Foreign_Key value="dXN1YXJpb0lE"/>
+						<Name value="carrito_fk1"/>
+						<On_Delete value="Cascade"/>
+						<On_Update value="Cascade"/>
+						<Parent_Table value="usuario"/>
+						<Primary_Key value="aWRVc3Vhcmlv"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<name value="carrito_fk1"/>
+				</o12>
+				<o13>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="compra"/>
+						<Foreign_Key value="dXN1YXJpb0lE"/>
+						<Name value="compra_fk1"/>
+						<On_Delete value="No Action"/>
+						<On_Update value="No Action"/>
+						<Parent_Table value="usuario"/>
+						<Primary_Key value="aWRVc3Vhcmlv"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<name value="compra_fk1"/>
+				</o13>
+				<o14>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="compradetalle"/>
+						<Foreign_Key value="Y29tcHJhSUQ="/>
+						<Name value="compradetalle_fk1"/>
+						<On_Delete value="Cascade"/>
+						<On_Update value="Cascade"/>
+						<Parent_Table value="compra"/>
+						<Primary_Key value="Y29tcHJhSUQ="/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<name value="compradetalle_fk1"/>
+				</o14>
+				<o15>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="serviciocontratado"/>
+						<Foreign_Key value="ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+						<Name value="historicoPaquete"/>
+						<On_Delete value="No Action"/>
+						<On_Update value="No Action"/>
+						<Parent_Table value="detallepaquete"/>
+						<Primary_Key value="ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<name value="historicoPaquete"/>
+				</o15>
+				<o16>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="detallepaquete"/>
+						<Foreign_Key value="cGFxdWV0ZUlE"/>
+						<Name value="detallePaquete"/>
+						<On_Delete value="Cascade"/>
+						<On_Update value="Cascade"/>
+						<Parent_Table value="paquete"/>
+						<Primary_Key value="cGFxdWV0ZUlE"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<name value="detallePaquete"/>
+				</o16>
+				<o2>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="giroempresa"/>
+						<Foreign_Key value="Z2lyb0lE"/>
+						<Name value="giroempresa_fk2"/>
+						<On_Delete value="Restrict"/>
+						<On_Update value="Cascade"/>
+						<Parent_Table value="giro"/>
+						<Primary_Key value="Z2lyb0lE"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<name value="giroempresa_fk2"/>
+				</o2>
+				<o3>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="usuariodato"/>
+						<Foreign_Key value="aWRVc3Vhcmlv"/>
+						<Name value="adicional"/>
+						<On_Delete value="Cascade"/>
+						<On_Update value="Cascade"/>
+						<Parent_Table value="usuario"/>
+						<Primary_Key value="aWRVc3Vhcmlv"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<name value="adicional"/>
+				</o3>
+				<o4>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="ubicacionusuario"/>
+						<Foreign_Key value="aWRVc3VhcmlvRGF0bw=="/>
+						<Name value="ubicacionUsuario"/>
+						<On_Delete value="Cascade"/>
+						<On_Update value="Cascade"/>
+						<Parent_Table value="usuariodato"/>
+						<Primary_Key value="aWRVc3VhcmlvRGF0bw=="/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<name value="ubicacionUsuario"/>
+				</o4>
+				<o5>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="serviciocontratado"/>
+						<Foreign_Key value="aWRVc3Vhcmlv"/>
+						<Name value="detallePaqueteUsuario"/>
+						<On_Delete value="Cascade"/>
+						<On_Update value="Cascade"/>
+						<Parent_Table value="usuario"/>
+						<Primary_Key value="aWRVc3Vhcmlv"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<name value="detallePaqueteUsuario"/>
+				</o5>
+				<o6>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="cuponadquirido"/>
+						<Foreign_Key value="c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+						<Name value="detalleCuponPaquete"/>
+						<On_Delete value="No Action"/>
+						<On_Update value="No Action"/>
+						<Parent_Table value="serviciocontratado"/>
+						<Primary_Key value="c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<name value="detalleCuponPaquete"/>
+				</o6>
+				<o7>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="cuponadquirido"/>
+						<Foreign_Key value="Y3Vwb25EZXRhbGxlSUQ= Y3Vwb25JRA=="/>
+						<Name value="historicoCupon"/>
+						<On_Delete value="No Action"/>
+						<On_Update value="No Action"/>
+						<Parent_Table value="cupondetalle"/>
+						<Primary_Key value="Y3Vwb25EZXRhbGxlSUQ= Y3Vwb25JRA=="/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<name value="historicoCupon"/>
+				</o7>
+				<o8>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="publicaciones"/>
+						<Foreign_Key value="c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+						<Name value="contenidoPublicacion"/>
+						<On_Delete value="Cascade"/>
+						<On_Update value="Cascade"/>
+						<Parent_Table value="serviciocontratado"/>
+						<Primary_Key value="c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<name value="contenidoPublicacion"/>
+				</o8>
+				<o9>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to ONE"/>
+						<Child_Table value="fotospublicacion"/>
+						<Foreign_Key value="cHVibGljYWNpb25JRA== c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+						<Name value="publicacionFotos"/>
+						<On_Delete value="Cascade"/>
+						<On_Update value="Cascade"/>
+						<Parent_Table value="publicaciones"/>
+						<Primary_Key value="cHVibGljYWNpb25JRA== c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<name value="publicacionFotos"/>
+				</o9>
+			</link>
+			<table>
+				<o0>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="13"/>
+						<Average_Row_Size value="1489"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-31 16:52:45"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="2"/>
+						<Index_Count value="1"/>
+						<Link_Count value="1"/>
+						<Name value="giro"/>
+						<Primary_Key value="Z2lyb0lE"/>
+						<Record_Count value="12"/>
+						<Size value="16.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value="Se definen de acuerdo al formulario de registro para empresa en index_view"/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="giroID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="1"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="giroID"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="0"/>
+								<Length value="100"/>
+								<Name value="nombreGiro"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="nombreGiro"/>
+						</o1>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="Z2lyb0lE"/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</index>
+					<name value="giro"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="Z2lyb0lE"/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o0>
+				<o1>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="63"/>
+						<Average_Row_Size value="528"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-31 16:55:05"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="3"/>
+						<Index_Count value="3"/>
+						<Link_Count value="2"/>
+						<Name value="giroempresa"/>
+						<Primary_Key value="Z2lyb0VtcHJlc2FJRA=="/>
+						<Record_Count value="31"/>
+						<Size value="48.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table1"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="giroEmpresaID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="1"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="giroEmpresaID"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="3"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="giroID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="giroID"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="idUsuarioDetalle"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="idUsuarioDetalle"/>
+						</o2>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="Z2lyb0lE"/>
+								<Name value="giroempresa_fk2_idx"/>
+								<Type value="BTREE"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="giroempresa_fk2_idx"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="aWRVc3VhcmlvRGV0YWxsZQ=="/>
+								<Name value="idUsuarioDetalle"/>
+								<Type value="BTREE"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="idUsuarioDetalle"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="Z2lyb0VtcHJlc2FJRA=="/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o2>
+					</index>
+					<name value="giroempresa"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="Z2lyb0VtcHJlc2FJRA=="/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o1>
+				<o10>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="0"/>
+						<Average_Row_Size value="0"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-25 09:30:12"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="5"/>
+						<Index_Count value="1"/>
+						<Link_Count value="1"/>
+						<Name value="fotospublicacion"/>
+						<Primary_Key value="cHVibGljYWNpb25JRA== c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+						<Record_Count value="1"/>
+						<Size value="16.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table10"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="4"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="detalleID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="detalleID"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="0"/>
+								<Length value="-1"/>
+								<Name value="foto"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="LongBlob"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="foto"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="5"/>
+								<Indexed value="0"/>
+								<Length value="3"/>
+								<Name value="paqueteID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="paqueteID"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="publicacionID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="publicacionID"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="3"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="servicioID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="servicioID"/>
+						</o4>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="cHVibGljYWNpb25JRA== c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</index>
+					<name value="fotospublicacion"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="cHVibGljYWNpb25JRA== c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o10>
+				<o11>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="0"/>
+						<Average_Row_Size value="0"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-25 09:30:15"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="5"/>
+						<Index_Count value="1"/>
+						<Link_Count value="1"/>
+						<Name value="videos"/>
+						<Primary_Key value="cHVibGljYWNpb25JRA== c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+						<Record_Count value="0"/>
+						<Size value="16.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table11"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="4"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="detalleID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="detalleID"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="0"/>
+								<Length value="-1"/>
+								<Name value="link"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="Text"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="link"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="5"/>
+								<Indexed value="0"/>
+								<Length value="3"/>
+								<Name value="paqueteID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="paqueteID"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="publicacionID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="publicacionID"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="3"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="servicioID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="servicioID"/>
+						</o4>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="cHVibGljYWNpb25JRA== c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</index>
+					<name value="videos"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="cHVibGljYWNpb25JRA== c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o11>
+				<o12>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="35"/>
+						<Average_Row_Size value="496"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-25 09:30:15"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="4"/>
+						<Index_Count value="2"/>
+						<Link_Count value="1"/>
+						<Name value="zonageograficaestado"/>
+						<Primary_Key value="em9uYUlE ZXN0YWRvSUQ="/>
+						<Record_Count value="33"/>
+						<Size value="32.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table12"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="3"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="estadoID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="estadoID"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="0"/>
+								<Length value="20"/>
+								<Name value="nombre"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="nombre"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="4"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="zonageograficaID"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="zonageograficaID"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="zonaID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="zonaID"/>
+						</o3>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="em9uYUlE ZXN0YWRvSUQ="/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="em9uYWdlb2dyYWZpY2FJRA=="/>
+								<Name value="zonageograficaID"/>
+								<Type value="BTREE"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="zonageograficaID"/>
+						</o1>
+					</index>
+					<name value="zonageograficaestado"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="em9uYUlE ZXN0YWRvSUQ="/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o12>
+				<o13>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="10"/>
+						<Average_Row_Size value="1820"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-25 09:30:04"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="2"/>
+						<Index_Count value="1"/>
+						<Link_Count value="1"/>
+						<Name value="zonageografica"/>
+						<Primary_Key value="em9uYUlE"/>
+						<Record_Count value="9"/>
+						<Size value="16.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table13"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="0"/>
+								<Length value="60"/>
+								<Name value="zona"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="zona"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="zonaID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="1"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="zonaID"/>
+						</o1>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="em9uYUlE"/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</index>
+					<name value="zonageografica"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="em9uYUlE"/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o13>
+				<o14>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="34"/>
+						<Average_Row_Size value="496"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-25 09:30:01"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="2"/>
+						<Index_Count value="1"/>
+						<Link_Count value="0"/>
+						<Name value="estado"/>
+						<Primary_Key value="ZXN0YWRvSUQ="/>
+						<Record_Count value="33"/>
+						<Size value="16.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table14"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="estadoID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="1"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="estadoID"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="0"/>
+								<Length value="30"/>
+								<Name value="nombreEstado"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="nombreEstado"/>
+						</o1>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="ZXN0YWRvSUQ="/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</index>
+					<name value="estado"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="ZXN0YWRvSUQ="/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o14>
+				<o15>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="7"/>
+						<Average_Row_Size value="5461"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-25 15:40:21"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="8"/>
+						<Index_Count value="2"/>
+						<Link_Count value="1"/>
+						<Name value="carrito"/>
+						<Primary_Key value="Y2FydElE"/>
+						<Record_Count value="3"/>
+						<Size value="32.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table15"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value="cantidad"/>
+								<Default_Value value=""/>
+								<Field_Position value="4"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="cantidad"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="cantidad"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="cartID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="1"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="cartID"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="8"/>
+								<Indexed value="0"/>
+								<Length value="70"/>
+								<Name value="color"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="color"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="6"/>
+								<Indexed value="0"/>
+								<Length value="120"/>
+								<Name value="nombre"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="nombre"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="5"/>
+								<Indexed value="0"/>
+								<Length value="0"/>
+								<Name value="precio"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="5"/>
+								<Scale value="2"/>
+								<Type value="Float"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="precio"/>
+						</o4>
+						<o5>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="3"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="productoID"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="productoID"/>
+						</o5>
+						<o6>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="7"/>
+								<Indexed value="0"/>
+								<Length value="120"/>
+								<Name value="talla"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="talla"/>
+						</o6>
+						<o7>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="usuarioID"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="usuarioID"/>
+						</o7>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="Y2FydElE"/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="dXN1YXJpb0lE"/>
+								<Name value="usuarioID"/>
+								<Type value="BTREE"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="usuarioID"/>
+						</o1>
+					</index>
+					<name value="carrito"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="Y2FydElE"/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o15>
+				<o16>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="4"/>
+						<Average_Row_Size value="8192"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-25 09:30:00"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="6"/>
+						<Index_Count value="1"/>
+						<Name value="carritototal"/>
+						<Primary_Key value="Y2Fycml0b1RvdGFsSUQ="/>
+						<Record_Count value="2"/>
+						<Size value="16.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table16"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="carritoTotalID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="1"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="carritoTotalID"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="6"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="descuento"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="descuento"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="5"/>
+								<Indexed value="0"/>
+								<Length value="0"/>
+								<Name value="subtotal"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="9"/>
+								<Scale value="2"/>
+								<Type value="Float"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="subtotal"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="4"/>
+								<Indexed value="0"/>
+								<Length value="0"/>
+								<Name value="totalPrecio"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="9"/>
+								<Scale value="2"/>
+								<Type value="Float"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="totalPrecio"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="3"/>
+								<Indexed value="0"/>
+								<Length value="0"/>
+								<Name value="totalProductos"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="9"/>
+								<Scale value="2"/>
+								<Type value="Float"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="totalProductos"/>
+						</o4>
+						<o5>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="usuarioID"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="usuarioID"/>
+						</o5>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="Y2Fycml0b1RvdGFsSUQ="/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</index>
+					<name value="carritototal"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="Y2Fycml0b1RvdGFsSUQ="/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o16>
+				<o17>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="2"/>
+						<Average_Row_Size value="0"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-29 15:14:28"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="7"/>
+						<Index_Count value="2"/>
+						<Link_Count value="2"/>
+						<Name value="compra"/>
+						<Primary_Key value="Y29tcHJhSUQ="/>
+						<Record_Count value="1"/>
+						<Size value="16.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table17"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="compraID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="1"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="compraID"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="5"/>
+								<Indexed value="0"/>
+								<Length value="2"/>
+								<Name value="descuento"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="descuento"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="7"/>
+								<Indexed value="0"/>
+								<Length value="-1"/>
+								<Name value="fecha"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="DateTime"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="fecha"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="4"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="idCuponAdquirido"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="idCuponAdquirido"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="3"/>
+								<Indexed value="0"/>
+								<Length value="0"/>
+								<Name value="subtotal"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="5"/>
+								<Scale value="2"/>
+								<Type value="Float"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="subtotal"/>
+						</o4>
+						<o5>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value="0.00"/>
+								<Field_Position value="6"/>
+								<Indexed value="0"/>
+								<Length value="0"/>
+								<Name value="total"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="5"/>
+								<Scale value="2"/>
+								<Type value="Float"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="total"/>
+						</o5>
+						<o6>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="usuarioID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="usuarioID"/>
+						</o6>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="Y29tcHJhSUQ="/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="dXN1YXJpb0lE"/>
+								<Name value="usuarioID"/>
+								<Type value="BTREE"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="usuarioID"/>
+						</o1>
+					</index>
+					<name value="compra"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="Y29tcHJhSUQ="/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o17>
+				<o18>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="2"/>
+						<Average_Row_Size value="0"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-25 09:30:10"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="8"/>
+						<Index_Count value="2"/>
+						<Link_Count value="1"/>
+						<Name value="compradetalle"/>
+						<Primary_Key value="Y29tcHJhRGV0YWxsZUlE"/>
+						<Record_Count value="1"/>
+						<Size value="16.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table18"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="4"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="cantidad"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="cantidad"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="8"/>
+								<Indexed value="0"/>
+								<Length value="120"/>
+								<Name value="color"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="color"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="compraDetalleID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="1"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="compraDetalleID"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="compraID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="compraID"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="6"/>
+								<Indexed value="0"/>
+								<Length value="120"/>
+								<Name value="nombre"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="nombre"/>
+						</o4>
+						<o5>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="5"/>
+								<Indexed value="0"/>
+								<Length value="0"/>
+								<Name value="precio"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="5"/>
+								<Scale value="2"/>
+								<Type value="Float"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="precio"/>
+						</o5>
+						<o6>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="3"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="productoID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="productoID"/>
+						</o6>
+						<o7>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="7"/>
+								<Indexed value="0"/>
+								<Length value="120"/>
+								<Name value="talla"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="talla"/>
+						</o7>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="Y29tcHJhSUQ="/>
+								<Name value="compraID"/>
+								<Type value="BTREE"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="compraID"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="Y29tcHJhRGV0YWxsZUlE"/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o1>
+					</index>
+					<name value="compradetalle"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="Y29tcHJhRGV0YWxsZUlE"/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o18>
+				<o19>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="4"/>
+						<Average_Row_Size value="5461"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-25 09:30:12"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="8"/>
+						<Index_Count value="2"/>
+						<Link_Count value="2"/>
+						<Name value="detallepaquete"/>
+						<Primary_Key value="ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+						<Record_Count value="3"/>
+						<Size value="16.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table19"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="cantFotos"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="cantFotos"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="3"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="caracteres"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="caracteres"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="5"/>
+								<Indexed value="0"/>
+								<Length value="2"/>
+								<Name value="cupones"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="cupones"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="detalleID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="detalleID"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="8"/>
+								<Indexed value="1"/>
+								<Length value="3"/>
+								<Name value="paqueteID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="paqueteID"/>
+						</o4>
+						<o5>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="7"/>
+								<Indexed value="0"/>
+								<Length value="0"/>
+								<Name value="precio"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="5"/>
+								<Scale value="2"/>
+								<Type value="Float"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="precio"/>
+						</o5>
+						<o6>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="6"/>
+								<Indexed value="0"/>
+								<Length value="2"/>
+								<Name value="videos"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="videos"/>
+						</o6>
+						<o7>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="4"/>
+								<Indexed value="0"/>
+								<Length value="2"/>
+								<Name value="vigencia"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="vigencia"/>
+						</o7>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="cGFxdWV0ZUlE"/>
+								<Name value="detallePaquete"/>
+								<Type value="BTREE"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="detallePaquete"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o1>
+					</index>
+					<name value="detallepaquete"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o19>
+				<o2>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="232"/>
+						<Average_Row_Size value="381"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-25 09:30:03"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="16"/>
+						<Index_Count value="1"/>
+						<Link_Count value="8"/>
+						<Name value="usuario"/>
+						<Primary_Key value="aWRVc3Vhcmlv"/>
+						<Record_Count value="43"/>
+						<Size value="16.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table3"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="3"/>
+								<Indexed value="0"/>
+								<Length value="65"/>
+								<Name value="apellido"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="apellido"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="15"/>
+								<Indexed value="0"/>
+								<Length value="100"/>
+								<Name value="authKey"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="authKey"/>
+						</o1>
+						<o10>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value="si paquete gratis = 1 no lo ha usado, si = 0 entonces ya tiene costo"/>
+								<Default_Value value="1"/>
+								<Field_Position value="16"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="paqueteGratis"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="paqueteGratis"/>
+						</o10>
+						<o11>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value="1 - recepciÃ¯Â¿Â½n de correo activa
+ 0 - recepciÃ¯Â¿Â½n de correo inactiva"/>
+								<Default_Value value="1"/>
+								<Field_Position value="7"/>
+								<Indexed value="0"/>
+								<Length value="1"/>
+								<Name value="recepcionCorreo"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="recepcionCorreo"/>
+						</o11>
+						<o12>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value="0 - no activado
+1 - activo"/>
+								<Default_Value value="0"/>
+								<Field_Position value="9"/>
+								<Indexed value="0"/>
+								<Length value="1"/>
+								<Name value="status"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="status"/>
+						</o12>
+						<o13>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="4"/>
+								<Indexed value="0"/>
+								<Length value="10"/>
+								<Name value="telefono"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="telefono"/>
+						</o13>
+						<o14>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value="0 - Administrador
+1 - usuario normal
+2 - negocio
+3 - AC"/>
+								<Default_Value value="1"/>
+								<Field_Position value="8"/>
+								<Indexed value="0"/>
+								<Length value="1"/>
+								<Name value="tipoUsuario"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="tipoUsuario"/>
+						</o14>
+						<o15>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="13"/>
+								<Indexed value="0"/>
+								<Length value="255"/>
+								<Name value="useragent"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="useragent"/>
+						</o15>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value="cÃ¯Â¿Â½digo necesario para confirmar cuenta."/>
+								<Default_Value value=""/>
+								<Field_Position value="11"/>
+								<Indexed value="0"/>
+								<Length value="100"/>
+								<Name value="codigoConfirmacion"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="codigoConfirmacion"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="6"/>
+								<Indexed value="0"/>
+								<Length value="100"/>
+								<Name value="contrasena"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="contrasena"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="5"/>
+								<Indexed value="0"/>
+								<Length value="45"/>
+								<Name value="correo"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="correo"/>
+						</o4>
+						<o5>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="12"/>
+								<Indexed value="0"/>
+								<Length value="-1"/>
+								<Name value="fechaRegistro"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="DateTime"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="fechaRegistro"/>
+						</o5>
+						<o6>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="idUsuario"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="1"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="idUsuario"/>
+						</o6>
+						<o7>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="14"/>
+								<Indexed value="0"/>
+								<Length value="16"/>
+								<Name value="last_ip_access"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="last_ip_access"/>
+						</o7>
+						<o8>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value="establecimiento de jerarquÃ¯Â¿Â½a en usuarios"/>
+								<Default_Value value=""/>
+								<Field_Position value="10"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="nivel"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="nivel"/>
+						</o8>
+						<o9>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="0"/>
+								<Length value="39"/>
+								<Name value="nombre"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="nombre"/>
+						</o9>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="aWRVc3Vhcmlv"/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</index>
+					<name value="usuario"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="aWRVc3Vhcmlv"/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o2>
+				<o20>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="4"/>
+						<Average_Row_Size value="5461"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-25 09:30:02"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="2"/>
+						<Index_Count value="1"/>
+						<Link_Count value="1"/>
+						<Name value="paquete"/>
+						<Primary_Key value="cGFxdWV0ZUlE"/>
+						<Record_Count value="3"/>
+						<Size value="16.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table20"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="0"/>
+								<Length value="20"/>
+								<Name value="nombrePaquete"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="nombrePaquete"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="1"/>
+								<Length value="3"/>
+								<Name value="paqueteID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="1"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="paqueteID"/>
+						</o1>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="cGFxdWV0ZUlE"/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</index>
+					<name value="paquete"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="cGFxdWV0ZUlE"/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o20>
+				<o3>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="232"/>
+						<Average_Row_Size value="528"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value="Ambos usuarios, Negocio y AC comparten estos datos, por lo cual ambos se almacenan en esta tabla"/>
+						<Create_Time value="2014-07-25 09:30:14"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="16"/>
+						<Index_Count value="3"/>
+						<Link_Count value="2"/>
+						<Name value="usuariodetalle"/>
+						<Primary_Key value="aWR1c3VhcmlvRGV0YWxsZQ== aWRVc3Vhcmlv"/>
+						<Record_Count value="31"/>
+						<Size value="48.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table2"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="8"/>
+								<Indexed value="0"/>
+								<Length value="45"/>
+								<Name value="calle"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="calle"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="11"/>
+								<Indexed value="0"/>
+								<Length value="45"/>
+								<Name value="colonia"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="colonia"/>
+						</o1>
+						<o10>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="6"/>
+								<Indexed value="0"/>
+								<Length value="45"/>
+								<Name value="nombreContacto"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="nombreContacto"/>
+						</o10>
+						<o11>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="4"/>
+								<Indexed value="0"/>
+								<Length value="80"/>
+								<Name value="nombreNegocio"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="nombreNegocio"/>
+						</o11>
+						<o12>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="9"/>
+								<Indexed value="0"/>
+								<Length value="45"/>
+								<Name value="numero"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="numero"/>
+						</o12>
+						<o13>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="14"/>
+								<Indexed value="0"/>
+								<Length value="45"/>
+								<Name value="paginaWeb"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="paginaWeb"/>
+						</o13>
+						<o14>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="7"/>
+								<Indexed value="0"/>
+								<Length value="45"/>
+								<Name value="telefono"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="telefono"/>
+						</o14>
+						<o15>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="3"/>
+								<Indexed value="0"/>
+								<Length value="1"/>
+								<Name value="tipoUsuario"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="tipoUsuario"/>
+						</o15>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="13"/>
+								<Indexed value="0"/>
+								<Length value="45"/>
+								<Name value="correo"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="correo"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="12"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="cp"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="cp"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="16"/>
+								<Indexed value="0"/>
+								<Length value="-1"/>
+								<Name value="descripcion"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="TinyText"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="descripcion"/>
+						</o4>
+						<o5>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="5"/>
+								<Indexed value="0"/>
+								<Length value="45"/>
+								<Name value="giro"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="giro"/>
+						</o5>
+						<o6>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="10"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="idEstado"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="idEstado"/>
+						</o6>
+						<o7>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="idUsuario"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="idUsuario"/>
+						</o7>
+						<o8>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="idusuarioDetalle"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="idusuarioDetalle"/>
+						</o8>
+						<o9>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="15"/>
+								<Indexed value="0"/>
+								<Length value="45"/>
+								<Name value="logo"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="logo"/>
+						</o9>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="aWRVc3Vhcmlv"/>
+								<Name value="detalleUsuario"/>
+								<Type value="BTREE"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="detalleUsuario"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="aWR1c3VhcmlvRGV0YWxsZQ=="/>
+								<Name value="idusuarioDetalle"/>
+								<Type value="BTREE"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="idusuarioDetalle"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="aWR1c3VhcmlvRGV0YWxsZQ== aWRVc3Vhcmlv"/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o2>
+					</index>
+					<name value="usuariodetalle"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="aWR1c3VhcmlvRGV0YWxsZQ== aWRVc3Vhcmlv"/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o3>
+				<o4>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="232"/>
+						<Average_Row_Size value="468"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-25 09:30:14"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="11"/>
+						<Index_Count value="2"/>
+						<Link_Count value="2"/>
+						<Name value="usuariodato"/>
+						<Primary_Key value="aWRVc3VhcmlvRGF0bw=="/>
+						<Record_Count value="35"/>
+						<Size value="32.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table4"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="5"/>
+								<Indexed value="0"/>
+								<Length value="45"/>
+								<Name value="calle"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="calle"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="8"/>
+								<Indexed value="0"/>
+								<Length value="7"/>
+								<Name value="cp"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="cp"/>
+						</o1>
+						<o10>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="4"/>
+								<Indexed value="0"/>
+								<Length value="20"/>
+								<Name value="rfc"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="rfc"/>
+						</o10>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="10"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="estadoID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="estadoID"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value="147 = MÃ¯Â¿Â½xico"/>
+								<Default_Value value="147"/>
+								<Field_Position value="11"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="idPais"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="idPais"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="idUsuario"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="idUsuario"/>
+						</o4>
+						<o5>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="idUsuarioDato"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="1"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="idUsuarioDato"/>
+						</o5>
+						<o6>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="9"/>
+								<Indexed value="0"/>
+								<Length value="45"/>
+								<Name value="municipio"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="municipio"/>
+						</o6>
+						<o7>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="7"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="noExterior"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="noExterior"/>
+						</o7>
+						<o8>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="6"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="noInterior"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="noInterior"/>
+						</o8>
+						<o9>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="3"/>
+								<Indexed value="0"/>
+								<Length value="45"/>
+								<Name value="razonSocial"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="razonSocial"/>
+						</o9>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="aWRVc3Vhcmlv"/>
+								<Name value="adicional"/>
+								<Type value="BTREE"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="adicional"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="aWRVc3VhcmlvRGF0bw=="/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o1>
+					</index>
+					<name value="usuariodato"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="aWRVc3VhcmlvRGF0bw=="/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o4>
+				<o5>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="32"/>
+						<Average_Row_Size value="528"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-25 09:30:14"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="7"/>
+						<Index_Count value="2"/>
+						<Link_Count value="1"/>
+						<Name value="ubicacionusuario"/>
+						<Primary_Key value="dWJpY2FjaW9uVXN1YXJpb0lE aWRVc3VhcmlvRGF0bw=="/>
+						<Record_Count value="31"/>
+						<Size value="32.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table5"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="6"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="estadoID"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="estadoID"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="5"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="idUsuarioDato"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="idUsuarioDato"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="3"/>
+								<Indexed value="0"/>
+								<Length value="40"/>
+								<Name value="latitud"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="latitud"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="4"/>
+								<Indexed value="0"/>
+								<Length value="20"/>
+								<Name value="longitud"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="longitud"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="0"/>
+								<Length value="1"/>
+								<Name value="tipoUsuario"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="tipoUsuario"/>
+						</o4>
+						<o5>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="ubicacionUsuarioID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="ubicacionUsuarioID"/>
+						</o5>
+						<o6>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="7"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="zonageograficaID"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="zonageograficaID"/>
+						</o6>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="dWJpY2FjaW9uVXN1YXJpb0lE aWRVc3VhcmlvRGF0bw=="/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="aWRVc3VhcmlvRGF0bw=="/>
+								<Name value="ubicacionUsuario"/>
+								<Type value="BTREE"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="ubicacionUsuario"/>
+						</o1>
+					</index>
+					<name value="ubicacionusuario"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="dWJpY2FjaW9uVXN1YXJpb0lE aWRVc3VhcmlvRGF0bw=="/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o5>
+				<o6>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="2"/>
+						<Average_Row_Size value="16384"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-25 09:30:14"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="10"/>
+						<Index_Count value="3"/>
+						<Link_Count value="4"/>
+						<Name value="serviciocontratado"/>
+						<Primary_Key value="c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+						<Record_Count value="1"/>
+						<Size value="16.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table6"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="cantFotos"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="cantFotos"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="3"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="caracteres"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="caracteres"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="5"/>
+								<Indexed value="0"/>
+								<Length value="2"/>
+								<Name value="cupones"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="cupones"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="8"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="detalleID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="detalleID"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="10"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="idUsuario"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="idUsuario"/>
+						</o4>
+						<o5>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="9"/>
+								<Indexed value="0"/>
+								<Length value="3"/>
+								<Name value="paqueteID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="paqueteID"/>
+						</o5>
+						<o6>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="7"/>
+								<Indexed value="0"/>
+								<Length value="0"/>
+								<Name value="precio"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="5"/>
+								<Scale value="2"/>
+								<Type value="Float"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="precio"/>
+						</o6>
+						<o7>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="servicioID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="servicioID"/>
+						</o7>
+						<o8>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="6"/>
+								<Indexed value="0"/>
+								<Length value="2"/>
+								<Name value="videos"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="videos"/>
+						</o8>
+						<o9>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="4"/>
+								<Indexed value="0"/>
+								<Length value="2"/>
+								<Name value="vigencia"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="vigencia"/>
+						</o9>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="aWRVc3Vhcmlv"/>
+								<Name value="detallePaqueteUsuario"/>
+								<Type value="BTREE"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="detallePaqueteUsuario"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+								<Name value="historicoPaquete"/>
+								<Type value="BTREE"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="historicoPaquete"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o2>
+					</index>
+					<name value="serviciocontratado"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o6>
+				<o7>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="101"/>
+						<Average_Row_Size value="8192"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-25 09:30:11"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="12"/>
+						<Index_Count value="3"/>
+						<Link_Count value="2"/>
+						<Name value="cuponadquirido"/>
+						<Primary_Key value="aWRDdXBvbkFkcXVpcmlkbw== c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+						<Record_Count value="2"/>
+						<Size value="48.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table7"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="11"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="cuponDetalleID"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="cuponDetalleID"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="12"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="cuponID"/>
+								<Nullable value="1"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="cuponID"/>
+						</o1>
+						<o10>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="4"/>
+								<Indexed value="0"/>
+								<Length value="-1"/>
+								<Name value="vigencia"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="Date"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="vigencia"/>
+						</o10>
+						<o11>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="6"/>
+								<Indexed value="0"/>
+								<Length value="1"/>
+								<Name value="vigente"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="3"/>
+								<Scale value="0"/>
+								<Type value="TinyInt"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="vigente"/>
+						</o11>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="0"/>
+								<Length value="100"/>
+								<Name value="descripcion"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="descripcion"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="9"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="detalleID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="detalleID"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="idCuponAdquirido"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="idCuponAdquirido"/>
+						</o4>
+						<o5>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="10"/>
+								<Indexed value="0"/>
+								<Length value="3"/>
+								<Name value="paqueteID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="paqueteID"/>
+						</o5>
+						<o6>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="8"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="servicioID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="servicioID"/>
+						</o6>
+						<o7>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="5"/>
+								<Indexed value="0"/>
+								<Length value="1"/>
+								<Name value="tipoCupon"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="tipoCupon"/>
+						</o7>
+						<o8>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="7"/>
+								<Indexed value="0"/>
+								<Length value="1"/>
+								<Name value="usado"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="3"/>
+								<Scale value="0"/>
+								<Type value="TinyInt"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="usado"/>
+						</o8>
+						<o9>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="3"/>
+								<Indexed value="0"/>
+								<Length value="100"/>
+								<Name value="valor"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="valor"/>
+						</o9>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+								<Name value="detalleCuponPaquete"/>
+								<Type value="BTREE"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="detalleCuponPaquete"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="Y3Vwb25EZXRhbGxlSUQ= Y3Vwb25JRA=="/>
+								<Name value="historicoCupon"/>
+								<Type value="BTREE"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="historicoCupon"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="aWRDdXBvbkFkcXVpcmlkbw== c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o2>
+					</index>
+					<name value="cuponadquirido"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="aWRDdXBvbkFkcXVpcmlkbw== c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o7>
+				<o8>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="3"/>
+						<Average_Row_Size value="8192"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-25 09:30:11"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="6"/>
+						<Index_Count value="2"/>
+						<Link_Count value="2"/>
+						<Name value="cupondetalle"/>
+						<Primary_Key value="Y3Vwb25EZXRhbGxlSUQ= Y3Vwb25JRA=="/>
+						<Record_Count value="2"/>
+						<Size value="32.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table8"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="cuponDetalleID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="cuponDetalleID"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="6"/>
+								<Indexed value="1"/>
+								<Length value="11"/>
+								<Name value="cuponID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="cuponID"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="0"/>
+								<Length value="100"/>
+								<Name value="descripcion"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="descripcion"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="5"/>
+								<Indexed value="0"/>
+								<Length value="1"/>
+								<Name value="tipoCupon"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="tipoCupon"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="3"/>
+								<Indexed value="0"/>
+								<Length value="100"/>
+								<Name value="valor"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="valor"/>
+						</o4>
+						<o5>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="4"/>
+								<Indexed value="0"/>
+								<Length value="2"/>
+								<Name value="vigencia"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="vigencia"/>
+						</o5>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="Y3Vwb25JRA=="/>
+								<Name value="detalleCupon"/>
+								<Type value="BTREE"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="detalleCupon"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="Y3Vwb25EZXRhbGxlSUQ= Y3Vwb25JRA=="/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o1>
+					</index>
+					<name value="cupondetalle"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="Y3Vwb25EZXRhbGxlSUQ= Y3Vwb25JRA=="/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o8>
+				<o9>
+					<Changes value=""/>
+					<Properties>
+						<Autoincrement value="2"/>
+						<Average_Row_Size value="16384"/>
+						<Charset value="utf8"/>
+						<Collation value="utf8_general_ci"/>
+						<Comment value=""/>
+						<Create_Time value="2014-07-25 09:30:13"/>
+						<Engine value="InnoDB"/>
+						<Field_Count value="17"/>
+						<Index_Count value="2"/>
+						<Link_Count value="3"/>
+						<Name value="publicaciones"/>
+						<Primary_Key value="cHVibGljYWNpb25JRA== c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+						<Record_Count value="1"/>
+						<Size value="16.00 Kb"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+						<Update_Time value=""/>
+					</Properties>
+					<control value="Table9"/>
+					<delete value="0"/>
+					<field>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="14"/>
+								<Indexed value="0"/>
+								<Length value="1"/>
+								<Name value="aprobada"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="3"/>
+								<Scale value="0"/>
+								<Type value="TinyInt"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="aprobada"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="12"/>
+								<Indexed value="0"/>
+								<Length value="-1"/>
+								<Name value="descripcion"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="Text"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="descripcion"/>
+						</o1>
+						<o10>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="11"/>
+								<Indexed value="0"/>
+								<Length value="0"/>
+								<Name value="precio"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="5"/>
+								<Scale value="2"/>
+								<Type value="Float"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="precio"/>
+						</o10>
+						<o11>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="1"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="1"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="publicacionID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="publicacionID"/>
+						</o11>
+						<o12>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="10"/>
+								<Indexed value="0"/>
+								<Length value="20"/>
+								<Name value="razaID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="Char"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="razaID"/>
+						</o12>
+						<o13>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="2"/>
+								<Indexed value="0"/>
+								<Length value="1"/>
+								<Name value="seccion"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="seccion"/>
+						</o13>
+						<o14>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="15"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="servicioID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="servicioID"/>
+						</o14>
+						<o15>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value="utf8"/>
+								<Collation value="utf8_general_ci"/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="3"/>
+								<Indexed value="0"/>
+								<Length value="50"/>
+								<Name value="titulo"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="VarChar"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="titulo"/>
+						</o15>
+						<o16>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="4"/>
+								<Indexed value="0"/>
+								<Length value="1"/>
+								<Name value="vigente"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="3"/>
+								<Scale value="0"/>
+								<Type value="TinyInt"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="vigente"/>
+						</o16>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="16"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="detalleID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="detalleID"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="8"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="estadoID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="estadoID"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="5"/>
+								<Indexed value="0"/>
+								<Length value="-1"/>
+								<Name value="fechaCreacion"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="Date"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="fechaCreacion"/>
+						</o4>
+						<o5>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="6"/>
+								<Indexed value="0"/>
+								<Length value="-1"/>
+								<Name value="fechaVencimiento"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="0"/>
+								<Scale value="0"/>
+								<Type value="Date"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="fechaVencimiento"/>
+						</o5>
+						<o6>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="9"/>
+								<Indexed value="0"/>
+								<Length value="1"/>
+								<Name value="genero"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="3"/>
+								<Scale value="0"/>
+								<Type value="TinyInt"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="genero"/>
+						</o6>
+						<o7>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="13"/>
+								<Indexed value="0"/>
+								<Length value="1"/>
+								<Name value="muestraTelefono"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="3"/>
+								<Scale value="0"/>
+								<Type value="TinyInt"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="muestraTelefono"/>
+						</o7>
+						<o8>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="7"/>
+								<Indexed value="0"/>
+								<Length value="11"/>
+								<Name value="numeroVisitas"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="numeroVisitas"/>
+						</o8>
+						<o9>
+							<Changes value=""/>
+							<Properties>
+								<Autoincrement value="0"/>
+								<Charset value=""/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Field_Position value="17"/>
+								<Indexed value="0"/>
+								<Length value="3"/>
+								<Name value="paqueteID"/>
+								<Nullable value="0"/>
+								<On_Update_Set_Current value="0"/>
+								<Precision value="10"/>
+								<Scale value="0"/>
+								<Type value="Int"/>
+								<Unique value="0"/>
+								<Unsigned value="0"/>
+								<Zerofill value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="paqueteID"/>
+						</o9>
+					</field>
+					<index>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+								<Name value="contenidoPublicacion"/>
+								<Type value="BTREE"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="contenidoPublicacion"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="cHVibGljYWNpb25JRA== c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+								<Name value="PRIMARY"/>
+								<Type value="BTREE"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o1>
+					</index>
+					<name value="publicaciones"/>
+					<unique>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Fields value="cHVibGljYWNpb25JRA== c2VydmljaW9JRA== ZGV0YWxsZUlE cGFxdWV0ZUlE"/>
+								<Name value="PRIMARY"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="PRIMARY"/>
+						</o0>
+					</unique>
+				</o9>
+			</table>
+		</quieroun_perro_dev>
+	</Model>
+</properties>
+

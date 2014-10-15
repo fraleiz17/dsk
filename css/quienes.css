@@ -1,0 +1,61 @@
+.central_quienes {
+width: 660px;
+height:492px;
+overflow-x:auto;
+display: inline-block;
+}
+.contenedor_banner {
+display: inline-block;
+width: 200px;
+margin-left: 15px;
+margin-top:-57px;
+}
+.sub_quienes{
+	font-size:60px;
+	margin: 0 auto; 
+	font-family:"titulos";
+	color:#7EA715;
+	margin-top: 15px;
+    height: 60px;
+    line-height: 1em;
+}
+.contenedor_paque_mini{
+	display:inline-block;
+	margin-top:20px;
+	padding-top:12px;
+	padding-left:10px;
+	width:307px;
+	height:63px;
+	border: 1px solid #DED9D5;
+	vertical-align:central;
+	}
+.contenedor_paque_mini{
+	cursor:pointer;}
+.franja_naranja{
+    width: 37px;
+    height: 75px;
+    background-color: #E95D0F;
+    margin-top: -12px;
+    float: right;
+	}
+.franja_verde{
+    width: 37px;
+    height: 75px;
+    background-color: #7EA715;
+    margin-top: -12px;
+    float: right;
+	}
+.franja_morada{
+    width: 37px;
+    height: 75px;
+    background-color: #762EA4;
+    margin-top: -12px;
+    float: right;
+	}
+.nombre_paquete{
+	margin-left:10px;
+	margin-top:10px;
+	display:inline-block;
+	font-size:21px;
+	font-family:'titulos';
+	}

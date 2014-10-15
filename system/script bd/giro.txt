@@ -1,0 +1,5 @@
+
+CREATE TABLE `giro` (
+  `giroID` int(11) DEFAULT NULL,
+  `giro` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 PACK_KEYS=0;
