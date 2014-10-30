@@ -880,7 +880,7 @@ $('.mas_anuncio').on('click', function(){
     <img src="<?php echo base_url()?>images/banner_inferior/3.png" width="638" height="93"/>
 </div>
 
-<div class="division_menu_inferior"></div>
+
 <?php $this->load->view('general/footer_view');?>
 
 </body>

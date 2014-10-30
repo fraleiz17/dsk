@@ -3,20 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Quierounperro</title>
-<link rel="shortcut icon" href="<?php echo base_url()?>images/ico.ico" />
-<link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/reset.css" media="screen"></link>
-
-<link rel="stylesheet" href="<?php echo base_url()?>css/nivo-slider.css" type="text/css" media="screen" /> 
-<link rel="stylesheet" href="<?php echo base_url()?>css/responsiveslides.css">
- <link href="<?php echo base_url()?>css/bootstrap.min.css" rel="stylesheet" type="text/css">
- 
- <link rel="stylesheet" href="<?php echo base_url()?>css/validator/validationEngine.jquery.css" type="text/css"/>
-
-<script type="text/javascript" src="<?php echo base_url()?>js/jquery-1.8.2.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url()?>js/validator/languages/jquery.validationEngine-es.js"></script>
-<script type="text/javascript" src="<?php echo base_url()?>js/validator/jquery.validationEngine.js"></script>
- 
- 
 <!--<script src="<?php echo base_url()?>js/jquery-latest.js" type="text/javascript"></script>-->
 <script src="<?php echo base_url()?>js/funciones_.js" type="text/javascript"></script>
 

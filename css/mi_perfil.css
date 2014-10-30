@@ -17,14 +17,14 @@
 	color:#FFFFFF;
 	text-decoration:none;
 	}
-.menu_perfil li:hover a{
-	color:#3E3E40;
-	}
+
 .menu_perfil li:hover {
 	background-image:url(../images/boton_perfil_select.png);
 	color:#3E3E40;
 	cursor:pointer;}
-
+.menu_perfil li:hover a{
+	color:#3E3E40;
+	}
 .icono_seleccion{
 	width:132px;
 	height:49px;

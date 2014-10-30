@@ -553,7 +553,7 @@ body{
 	overflow-X:hidden;-ms-overflow-X:hidden;
 	}
 .numeros_publicar_anuncio_mini{
-	width:765px;
+	width:740px;
 	height:85px;
 	background-image:url(../images/fondo_numeros.png);
 	float:left;
@@ -594,6 +594,7 @@ body{
 	}
 .descipcion_pasos_mini{
 	width:840px;
+	height:500px;
 	background-color: #FFF;
 	border:2px solid #762EA4;
 	margin-top:70px;
@@ -608,7 +609,8 @@ body{
 	width:840px;
 	min-height:650px;
 	background-color: #FFF;
-	margin-top:30px;}
+	border:2px solid #762EA4;
+	margin-top:70px;}
 .titulo_de_pasos_mini{
     width:840;
 	height:110px;
@@ -637,7 +639,7 @@ body{
 	}
 .contenido_indicacion_mini{
 	width:840px;
-
+	height:325px;
 	color:#762EA4;
 	font-size:18px;
 	}
@@ -656,7 +658,10 @@ body{
 	margin-top:40px;
 	float:left;
 	}
-.morado_mini li{	
+.morado_mini li{
+	margin-left:700px;
+	margin-top:250px;
+	
 	width:134px;
 	height:42px;
 	color:#FFFFFF;
@@ -878,16 +883,11 @@ body{
 	margin-left:70px;
 	}
 .contenido_indicacion_formulario_mini{
-	border-left:2px solid #762EA4; 
-	border-right:2px solid #762EA4;
-	background-color:#FFFFFF;
 	font-size:13px;
 	color:#762EA4;
 	padding:10px;
 	text-align:left;
-	height: auto;
-	width: 820px;
-    margin-left: -2px;
+	height:500px;
 	}
 .margen_25_rigth_mini{
 	margin-right:25px;
@@ -904,7 +904,7 @@ body{
 	}
 .background_morado_55_mini{
 	color:#FFFFFF;
-	margin-right:14px;
+	margin-right:55px;
 	background-color:#762EA4;
 	border:hidden;
 	}
@@ -921,31 +921,13 @@ body{
 	}
 .background_gris_55_mini{
 	color:#762EA4;
-	margin-right:10px;
+	margin-right:55px;
 	background-color:#D9DADB;
 	border:hidden;
 	}
 .background_gris_100_mini{
 	color:#762EA4;
-	margin-right:0px;
-	background-color:#D9DADB;
-	border:hidden;
-	}
-.background_gris_7_mini{
-	color:#762EA4;
-	margin-right:55px;
-	background-color:#D9DADB;
-	border:hidden;
-	}
-.background_gris_82_mini{
-	color:#762EA4;
-	margin-right:10px;
-	background-color:#D9DADB;
-	border:hidden;
-	}
-.background_gris_78_mini{
-	color:#762EA4;
-	margin-right:87px;
+	margin-right:100px;
 	background-color:#D9DADB;
 	border:hidden;
 	}
@@ -1287,18 +1269,3 @@ border: none;
 	font-size:16px;
 	text-align:center !important;
 	}
-#btn_sig{
-	display: block; 
-	text-align: right; 
-	padding-right: 10px;
-	border-bottom: 2px solid #762EA4; 
-	border-left:2px solid #762EA4; 
-	border-right:2px solid #762EA4; 
-	background-color: #FFF;width: 830px;
-	margin-left: -2px; padding-top: 35px;
-	}
-#msj_paso{
-	font-size: 10px;
-	display: inline-block; 
-	vertical-align: bottom; 
-	height: 38px;}
