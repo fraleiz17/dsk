@@ -621,7 +621,7 @@ COSTO
 </tr>
 <tr>
 <td colspan="2">
- <img style="" src="images/mini_cupon.png"/> <font class="texto_de_cupon" >Cupones de descuento: </font> </br> <font id="ver_cupones" class="ver_cupones" onclick="muestra('los_cupones_disponibles');muestra('no_ver_cupones');
+ <img style="" src="<?php echo base_url()?>images/mini_cupon.png"/> <font class="texto_de_cupon" >Cupones de descuento: </font> </br> <font id="ver_cupones" class="ver_cupones" onclick="muestra('los_cupones_disponibles');muestra('no_ver_cupones');
  oculta('ver_cupones');"> Ver cupones </font> 
   <font style="display:none;" id="no_ver_cupones" class="ver_cupones" onclick="oculta('los_cupones_disponibles');oculta('no_ver_cupones');muestra('ver_cupones');"> Ocultar cupones </font>
 <div id="los_cupones_disponibles" style="padding:15px; display:none;">
