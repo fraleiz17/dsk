@@ -77,6 +77,18 @@ if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
 <script type="text/javascript">
   jQuery(document).ready(function () {
             // binds form submission and fields to the validation engine
+            $(".paquete_comprar").click(function() {  
+            <?php if (is_logged()): ?>  
+             var paquete_val = $(this).data('paquete');
+             console.log(paquete_val,paquete_val.nombre);
+             muestra('contenedor_publicar_anuncio');
+            <?php else :?>
+                muestra('contenedor_login');
+                oculta('contenedor_publicar_anuncio');
+            <?php endif;?>
+            });
+
+            
             jQuery("form").validationEngine({
                 promptPosition: "topRight",
                 scroll: false,
