@@ -357,9 +357,8 @@ MI PERFIL
     </div>
 </div>
   
-
+<div class="division_menu_inferior"></div>
 <?php $this->load->view('general/footer_view');?>
-
 </body>
 </html>
 

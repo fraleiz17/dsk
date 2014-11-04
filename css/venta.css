@@ -370,7 +370,7 @@ border: none;
 	
 .youtube_video{
 	width:291px;
-	height:184px;
+	min-height:184px;
 	margin-top:15px;
 	}
 	

@@ -130,10 +130,7 @@ border: none;
 	}
 
 .boton_verde li{
-	padding-left:5px;
-	padding-right:5px;
-	padding:5px;
-	height:13px;
+	height:23px;
 	background-color:#7EA715;
 	text-align:center;
 	width:143px;
@@ -146,8 +143,6 @@ border: none;
 	
 .boton_verde li:hover{
 	width:143px;
-	padding:5px;
-	height:13px;
 	background-color:#FFF;
 	text-align:center;
 	color:#7EA715;

@@ -9,10 +9,9 @@
             }
         </script>
         
+        
 
-<div class="division_menu_inferior" style = "overflow: hidden;"></div>
 <div id="menu_inferior" align="center">
-
     <div id="acerca_nosotros" class="menu_inferiror">
         <p class="title_final">Acerca de nosotros</p>
 
