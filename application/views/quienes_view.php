@@ -160,9 +160,9 @@ if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
         
             <div class="indicador">
              <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
-             <img src="images/indicador_si.png" title="Ya estas logueado">
+             <img src="<?php echo base_url() ?>images/indicador_si.png" title="Ya estas logueado">
              <?php else: ?>
-             <img src="images/indicador_no.png">
+             <img src="<?php echo base_url() ?>images/indicador_no.png">
              <?php endif; ?>
               </div>
             <img src="<?php echo base_url() ?>images/sesion.png"/></li> 
@@ -170,9 +170,9 @@ if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
         <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  <?php else: ?>onclick="muestra('contenedor_registro');" <?php endif; ?>>
             <div class="indicador"> 
             <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
-             <img src="images/indicador_si.png" title="Ya estas registrado">
+             <img src="<?php echo base_url() ?>images/indicador_si.png" title="Ya estas registrado">
              <?php else: ?>
-             <img src="images/indicador_no.png">
+             <img src="<?php echo base_url() ?>images/indicador_no.png">
              <?php endif; ?>
              </div>
             <img src="<?php echo base_url() ?>images/registrate.png"/>
