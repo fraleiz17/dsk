@@ -1,3 +1,4 @@
+
 <script>
             if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
 
@@ -60,8 +61,7 @@
     <a href="<?php echo base_url() ?>#" class="margen"><img src="<?php echo base_url() ?>images/ico_tw.png" width="32"
                                                             height="32" style="margin-top:10px;"/></a>
 </div>
-<div class="division_final">
-
+<div class="division_final" style= "display:block;overflow:hidden;">
 </div>
 <div class="pie_pagina">
     Copyright © 2014 QuieroUnPerro.com

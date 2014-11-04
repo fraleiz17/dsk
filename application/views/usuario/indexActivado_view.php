@@ -1809,17 +1809,7 @@ La primera semana de vida del cachorro la pasa el 90% del tiempo dormido...
 </br></br>
 </br></br>
 </br>
-<div class="footer">
-<img src="<?php echo base_url()?>images/perro_final.png" width="46" height="42"/>
-<a href="<?php echo base_url()?>#" ><img  src="<?php echo base_url()?>images/ico_fb.png" width="32" height="32" style="margin-top:10px;"/></a>
-<a href="<?php echo base_url()?>#" class="margen"><img src="<?php echo base_url()?>images/ico_tw.png" width="32" height="32" style="margin-top:10px;"/></a>
-</div>
-<div class="division_final">
-
-</div>
-<div class="pie_pagina">
-Copyright © 2014 QuieroUnPerro.com
-</div>
+<?php $this->load->view('general/footer_view');?>
 </center>
 <script src="<?php echo base_url()?>js/bootstrap.min.js"></script>
   <script>
