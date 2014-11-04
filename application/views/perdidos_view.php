@@ -353,6 +353,7 @@ que el nombre del criador esté en el certificado.
 </div>
 
 <div id="contenedor_central"  >
+    <div style="display:block;float:left;widht:100px;height:344px;">
 <div id="espacio_izquierda" class="seccion_izquierda_secciones">
 <ul class="iconos" id="iconos_grandes">
         <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  onclick="window.location='<?= base_url() ?>carrito';" <?php else: ?>  <?php endif; ?>>
@@ -388,7 +389,7 @@ que el nombre del criador esté en el certificado.
             <img src="<?php echo base_url() ?>images/registrate.png"/>
         </li>
     </ul>
-</div>
+</div></div>
 
 
 <div class="contenedor_central" style="margin-top:5px;">
@@ -900,61 +901,7 @@ $('.mas_anuncio').on('click', function(){
                 ?>
 	</div>
     
-<div class="division_menu_inferior"> </div>
-<div class="contenedor_menu_inferior" align="center"> 
-
-<ul class="menu_inferior">
-<li>
-Acerca de Nosotros
-<ul>
-<li> - ¿Quiénes Somos? 
-</li>
-<li> - La comunidad QUP </li>
-</ul>
-</li>
-
-</ul>
-
-
-<ul class="menu_inferior">
-<li>
-Políticas
-<ul>
-<li> - Aviso de Privacidad </li>
-<li>  - Política de Provacidad </li>
-<li> - Términos y Condiciones </li>
-</ul>
-</li>
-
-</ul>
-
-
-<ul class="menu_inferior">
-<li>
-Contacto
-<ul>
-<li>- Tutorial</li>
-<li>- Publicidad </li>
-<li>- Soporte </li>
-<li>- Preguntas Frecuentes </li>
-</ul>
-</li>
-
-</ul>
-</div>
-    
-    
-<div class="footer">
-<img src="<?=base_url()?>images/perro_final.png" width="46" height="42"/>
-<a href="<?=base_url()?>#" ><img  src="<?=base_url()?>images/ico_fb.png" width="32" height="32" style="margin-top:10px;"/></a>
-<a href="<?=base_url()?>#" class="margen"><img src="<?=base_url()?>images/ico_tw.png" width="32" height="32" style="margin-top:10px;"/></a>
-</div>
-<div class="division_final">
-
-</div>
-<div class="pie_pagina">
-Copyright © 2014 QuieroUnPerro.com
-</div>
-
+<div class="division_menu_inferior" style="overflow:hidden;display:block;"></div>
+<?php $this->load->view('general/footer_view');?>
 </body>
 </html>

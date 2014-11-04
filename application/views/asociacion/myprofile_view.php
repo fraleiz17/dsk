@@ -289,6 +289,7 @@ MI PERFIL
 
 
 <div id="contenedor_central">
+  <div style="widht:100px; height:344px; display:block; float: left;">
 <div id="espacio_izquierda" class="seccion_izquierda_secciones">
 <ul class="iconos">
 <li> <img src="<?php echo base_url()?>images/compras.png"/></li>
@@ -296,7 +297,7 @@ MI PERFIL
 
 </ul>
 </div>
-
+</div>
 
 <div class="contenedor_central" style="margin-bottom:45px;">
 <div id="appSectionContainer">

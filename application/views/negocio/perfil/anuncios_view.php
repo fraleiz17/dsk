@@ -7,17 +7,17 @@
 </br>
 <ul class="menu_perfil_mini">
 <li class="icono_seleccion_mini">
-<p style=" margin-top:3px; margin-left:5px;" onclick="muestra('anuncios'); oculta('anunciosAct'); oculta('anunciosInAct'); "> Todos (<?php echo count($anuncios)?>) </p>
+<p style=" margin-top:3px; margin-left:5px;" onclick="muestra('anunciar');oculta('anunciosAct');oculta('anunciosInAct');"> Todos (<?php echo count($anuncios)?>) </p>
 </li>
 <li>
-<p style=" margin-top:3px; margin-left:5px;" onclick="oculta('anuncios');muestra('anunciosAct');oculta('anunciosInAct');"> Activos (<?php echo count($anunciosAct)?>) </p>
+<p style=" margin-top:3px; margin-left:5px;" onclick="muestra('anunciosAct');oculta('anunciar');oculta('anunciosInAct');"> Activos (<?php echo count($anunciosAct)?>) </p>
 </li>
 <li>
-<p style=" margin-top:3px; margin-left:5px;" onclick="oculta('anuncios'); oculta('anunciosAct'); muestra('anunciosInAct');"> Expirados (<?php echo count($anunciosInAct)?>) </p>
+<p style=" margin-top:3px; margin-left:5px;" onclick="muestra('anunciosInAct');oculta('anunciosAct');oculta('anunciar');"> Expirados (<?php echo count($anunciosInAct)?>) </p>
 </li>
 </ul>
 </br>
-<div id="anuncios" style="display:block;">
+<div id="anunciar" style="display:block;" >
 <table class="tabla_perfil" width="795" >
   <tr>
   <th width="76"> Paquete </th>

@@ -264,7 +264,7 @@ MI PERFIL
 <p style="margin-top:13px; margin-left:10px;"><a id="mi_perfil" href="<?=base_url()?>negocio/principal/miPerfil/" style="text-decoration:none;color:white;" class="ajaxLink">Mi Perfil</a></p>
 </li>
 <li class="anuncios">
-<p style="margin-top:5px; margin-left:10px;"><a id="anuncios" href="<?=base_url()?>negocio/principal/anuncios/" style="text-decoration:none;color:white;" class="ajaxLink"> Admin. Anuncios</a> </p>
+<p style="margin-top:5px; margin-left:10px;"><a id="anuncios" href="<?=base_url()?>negocio/principal/anuncios/" style="text-decoration:none;color:white;" class="ajaxLink" > Admin. Anuncios</a> </p>
 </li>
 <li class="mensajes">
 <p style="margin-top:5px; margin-left:10px;"><a id="mensajes" href="<?=base_url()?>negocio/principal/mensajes/" style="text-decoration:none;color:white;" class="ajaxLink"> Mensajes</a> </p>
@@ -289,6 +289,7 @@ MI PERFIL
 
 
 <div id="contenedor_central">
+<div style="widht:100px; height:344px; display:block; float: left;">
 <div id="espacio_izquierda" class="seccion_izquierda_secciones">
 <ul class="iconos" id="iconos_grandes">
         <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  onclick="window.location='<?= base_url() ?>carrito';" <?php else: ?>  <?php endif; ?>>
@@ -324,6 +325,7 @@ MI PERFIL
             <img src="<?php echo base_url() ?>images/registrate.png"/>
         </li>
     </ul>
+</div>
 </div>
 
 

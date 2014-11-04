@@ -143,6 +143,7 @@ if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
 </div>
 
 <div id="contenedor_central">
+    <div style="display:block;float:left;widht:100px;height:344px;">
 <div id="espacio_izquierda" class="seccion_izquierda_secciones">
 <ul class="iconos" id="iconos_grandes">
         <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  onclick="window.location='<?= base_url() ?>carrito';" <?php else: ?>  <?php endif; ?>>
@@ -178,7 +179,7 @@ if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
             <img src="<?php echo base_url() ?>images/registrate.png"/>
         </li>
     </ul>
-</div>
+</div></div>
 
 <div class="central_quienes"> 
 <p> 

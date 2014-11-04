@@ -76,6 +76,7 @@ LA RAZA DEL MES
 </div>
 
 <div id="contenedor_central">
+<div style="display:block;float:left;widht:100px;height:344px;">
 <div id="espacio_izquierda" class="seccion_izquierda_secciones">
 <ul class="iconos" id="iconos_grandes">
         <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  onclick="window.location='<?= base_url() ?>carrito';" <?php else: ?>  <?php endif; ?>>
@@ -111,7 +112,7 @@ LA RAZA DEL MES
             <img src="<?php echo base_url() ?>images/registrate.png"/>
         </li>
     </ul>
-</div>
+</div></div>
 
 </br>
 <div class="contenedor_central" style="margin-bottom:45px;">
@@ -476,7 +477,7 @@ foreach($fotocontenido as $foto){
     </div>
 </div>
   
-<div class="division_menu_inferior"></div>
+<div class="division_menu_inferior" style="overflow:hidden;display:block;"></div>
 <?php $this->load->view('general/footer_view');?>
 </body>
 </html>

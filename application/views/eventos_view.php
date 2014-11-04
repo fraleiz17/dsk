@@ -235,6 +235,7 @@ margin-top: 30px;">
 </div>
 
 <div id="contenedor_central">
+  <div style="display:block;float:left;widht:100px;height:344px;">
 <div id="espacio_izquierda" class="seccion_izquierda_secciones">
 <ul class="iconos" id="iconos_grandes">
         <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  onclick="window.location='<?= base_url() ?>carrito';" <?php else: ?>  <?php endif; ?>>
@@ -270,7 +271,7 @@ margin-top: 30px;">
             <img src="<?php echo base_url() ?>images/registrate.png"/>
         </li>
     </ul>
-</div>
+</div></div>
 
 
 <div class="contenedor_central" style="margin-bottom:45px;">
