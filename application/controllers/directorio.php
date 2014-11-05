@@ -425,7 +425,7 @@ class Directorio extends CI_Controller {
             "payer" => array(
                 'name' => $this->session->userdata('nombre'),
                 'surname' => $this->session->userdata('apellido'),
-                'email' => $this->session->userdata('email'),
+                'email' => $this->session->userdata('correo'),
                 'date_created' => date('Y-m-d')
             ),
             "back_urls" => array(
