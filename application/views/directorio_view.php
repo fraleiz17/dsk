@@ -341,8 +341,7 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
 <?php $this->load->view('general/footer_view'); ?>
 
 <?php
-$this->load->view('partial/_pasos_anuncio', array('paquetes' => $paquetes,
-    'estados' => $estados, 'razas' => $razas));
+//$this->load->view('partial/_pasos_anuncio', array('paquetes' => $paquetes, 'estados' => $estados, 'razas' => $razas));
 ?>
 
 <?php $this->load->view('partial/_pasos_anuncio_negocio'); ?>

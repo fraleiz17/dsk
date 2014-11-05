@@ -154,11 +154,11 @@ class Directorio extends CI_Controller {
     }
 
     public function upload_file() {
-        $config['upload_path'] = './images/tmp/';
+        $config['upload_path'] = 'images/temp/';
         $config['allowed_types'] = 'gif|jpg|png';
-        $config['max_size'] = '900';
-        $config['max_width'] = '400';
-        $config['max_height'] = '400';
+        $config['max_size'] = '999999';
+        $config['max_width'] = '99999';
+        $config['max_height'] = '99999';
         $config['file_name'] = UUID::v4();
 
         $this->load->library('upload', $config);
@@ -169,8 +169,8 @@ class Directorio extends CI_Controller {
             echo json_encode($error);
         } else {
             $upload_data = $this->upload->data();
-            $values['orig_name'] = 'images/tmp/' . $upload_data['orig_name'];
-            $values['url_logo'] = base_url() . 'images/tmp/' . $upload_data['orig_name'];
+            $values['orig_name'] = 'images/temp/' . $upload_data['orig_name'];
+            $values['url_logo'] = base_url() . 'images/temp/' . $upload_data['orig_name'];
             $values['file_type'] = $upload_data['file_type'];
 
             echo json_encode($values);

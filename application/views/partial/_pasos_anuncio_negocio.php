@@ -20,6 +20,8 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
  * requiere el listado de los giros, estados, planes, datos de myInfo de usuario
  */
 ?>
+
+
 <style>
     #paso_tres_negocio label{
         display: inline-block;
@@ -43,10 +45,13 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
         height: 68px!important;
     }
 </style>
+<link href="http://hayageek.github.io/jQuery-Upload-File/uploadfile.min.css" rel="stylesheet">
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+<script src="http://hayageek.github.io/jQuery-Upload-File/jquery.uploadfile.min.js"></script>
 <div id="contenedor_publicar_anuncio_negocio" class="contenedor_publicar_anuncio" style=" display:none;">
     <!-- Inicio contenedor pap publicar anuncio anuncio !-->
-    <div id="publicar_anuncio_negocio" class="pubicar_anuncio">
-        <?php if (is_logged() && $this->session->userdata('tipoUsuario') == 2): ?>
+    <div id="publicar_anuncio_negocio" class="pubicar_anuncio"><?= $this->session->userdata('tipoUsuario')?>
+        <?php if (is_logged() && ($this->session->userdata('tipoUsuario') == 2 || $this->session->userdata('tipoUsuario') == 3)): ?>
             <form method="post" name="form_anuncio_negocio" id="form_anuncio_negocio">
                 <div class="numeros_publicar_anuncio">
                     <ul class="listado_numeros_anuncio">
@@ -78,6 +83,7 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
                                         <label style="display: inline-block; margin-bottom: 2px;">
                                             <input class="giro_form validate[required]" type="checkbox" name="giro_<?php echo ($index + 1) ?>_form" value="<?php echo $giro->giroID ?>" id="CheckboxGiro_0" />
                                             <?php echo $giro->nombreGiro; ?>
+                                            <input type="hidden" name="<?=$giro->nombreGiro?>" id="giro_<?php echo ($index + 1) ?>_form" value="<?=$giro->logo?>" />
                                         </label>
                                         <br />
                                     <?php endif; ?>
@@ -90,6 +96,7 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
                                         <label style="display: inline-block; margin-bottom: 2px;">
                                             <input class="giro_form validate[required]" type="checkbox" name="giro_<?php echo ($index + 1) ?>_form" value="<?php echo $giro->giroID ?>" id="CheckboxGiro_0" />
                                             <?php echo $giro->nombreGiro; ?>
+                                            <input type="hidden" name="<?=$giro->nombreGiro?>" id="giro_<?php echo ($index + 1) ?>_form" value="<?=$giro->logo?>" />
                                         </label>
                                         <br />
                                     <?php endif; ?>
@@ -164,14 +171,14 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
                         <div class="sub_instrucciones_pasos"> Datos de contacto </div>
                         <div class="contenido_indicacion_formulario" style="height: auto!important;">
                             <p class="margen_15_left" >
-                                <label>Nombre:</label><input name="nombre_negocio" value="<?php echo $user->nombre; ?>" type="text" class="background_morado_35 validate[required]" readonly="readonly" /> 
-                                <label>Apellido:</label><input name="apellido_negocio" value="<?php echo $user->apellido; ?>" type="text" class="background_morado_35 validate[required]" readonly="readonly" />  
+                                <label>Nombre:</label><input name="nombre_negocio" id="nombre_negocioT" value="<?php echo $user->nombre; ?>" type="text" class="background_morado_35 validate[required]" readonly="readonly" /> 
+                                <label>Apellido:</label><input name="apellido_negocio" id="apellido_negocioT" value="<?php echo $user->apellido; ?>" type="text" class="background_morado_35 validate[required]" readonly="readonly" />  
                                 <label>Correo electrónico:</label><input name="email_negocio" value="<?php echo $user->correo; ?>" type="text" class="background_morado validate[required, custom[email]]" readonly="readonly" />
                             </p>
                             <br/>
                             <p class="margen_15_left"> 
-                                <label>Teléfono:</label><input name="telefono_negocio" value="<?php echo $user->telefono; ?>" type="text" class="background_gris_35 validate[required, custom[phone]]"/> 
-                                <label>Mostrar teléfono en el anuncio:</label><select name="muestra_telefono_negocio" class="background_gris validate[required]">
+                                <label>Teléfono:</label><input name="telefono_negocio" id="telefono_negocioT" value="<?php echo $user->telefono; ?>" type="text" class="background_gris_35 validate[required, custom[phone]]"/> 
+                                <label>Mostrar teléfono en el anuncio:</label><select name="muestra_telefono_negocio" class="background_gris validate[required]" id="muestra_telefono_negocioS">
                                     <option value="0">--</option>
                                     <option value="1"> Si </option>
                                     <option value="0"> No </option>
@@ -213,7 +220,7 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
                                 <p class="margen_15_left"> 
                                     <label>CP:</label><input name="cp_negocio" value="<?php echo $user->cp; ?>" type="text" class="background_gris_55 validate[required,maxSize[5],minSize[5],custom[integer]]"/> 
                                     <label>E-mail:</label><input name="email_negocio" type="text" value="<?php echo $user->correo; ?>" class="background_gris validate[required]"/>
-                                    <label>Pagina Web:</label><input name="pagina_web_negocio" value="<?php echo $user->paginaWeb; ?>" class="background_gris validate[required,custom[url]]" type="text"/>
+                                    <label>Pagina Web:</label><input name="pagina_web_negocio" id="pagina_web_negocioT" value="<?php echo $user->paginaWeb; ?>" class="background_gris validate[required,custom[url]]" type="text"/>
                                 </p>
                             </div>
                             <br/>
@@ -235,7 +242,7 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
                             <input name="name_logo_form" value="" type="hidden"/>
                             <div class="row-fluid">
                                 <span id="error_logo" style="display:none;" class="alert alert-error"></span>
-                                <img id="logo_image" class="span6 thumbnail" src=""/>
+                                <img id="logo_image" class="span6 thumbnail" src="" width="50px" />
                             </div>
                             </p>
                             <div style="width:800px; height:150px;">
@@ -278,7 +285,7 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
                                         <span id="calle_negocio">Querétaro</span> <span id="numero_negocio">Querétaro</span> <span id="colonia_negocio"></span>
                                         <span id="ciudad_negocio"></span> C.P. <span id="cp_negocio"></span></p>
 
-                                    <p>Tel: <span id="telefono_negocio">442 181 42 14</span></p>
+                                    <p id="telefono_anuncio">Tel: <span id="telefono_negocio">442 181 42 14</span></p>
 
                                     <p>Contacto: <span id="nombre_negocio"> Luis</span> <span id="apellido_negocio">Garay</span></p>
 
@@ -293,7 +300,7 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
                             <div class="contenido_directorio_mini">
                                 <div class="contenedor_titulo_informcacion_mini"> SERVICIOS </div>
                                 <div id="giro_form" class="contenedor_informacion_mini">
-                                    <p> <img src="<?php echo base_url() ?>images/giros_negocio/adistramiento_canino.png" width="24" height="20"/> Adiestramiento Canino </p>
+                                    <p > <img src="<?php echo base_url() ?>images/giros_negocio/adistramiento_canino.png" width="24" height="20"/> Adiestramiento Canino </p>
 
                                     <p style="margin-top:7px;"> <img src="<?php echo base_url() ?>images/giros_negocio/criadero.png" width="24" height="20"/> Criadero de Perros </p>
                                 </div>
@@ -315,7 +322,7 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
 
                         <div id="contendedor_morado" class="contenedor_morado">
                             <ul class="morado_15_sinmargen" >
-                                <li data-titulo="Completa tu información" data-p="paso_tres_negocio">
+                                <li data-titulo="Completa tu información" data-p="paso_tres_negocio" onclick="$('.paso', '#form_anuncio_negocio').hide(); $('#paso_tres_negocio', '#form_anuncio_negocio').show().addClass('paso_show');">
                                     Editar
                                 </li>
                             </ul>
@@ -511,9 +518,32 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
 
         $(function() {
             var form_negocio = $('#form_anuncio_negocio');
+            $('#pagina_web_negocio').html('');
+            $('#nombre_negocio').html($('#nombre_negocioT').val());
+            $('#apellido_negocio').html($('#apellido_negocioT').val());
+            $('#telefono_negocio').html($('#telefono_negocioT').val());
 
             $('.paso', form_negocio).hide();
             $('#paso_uno_negocio', form_negocio).show().addClass('paso_show');
+            $('#giro_form').html('');
+            $('.giro_form').on('click', function() {
+
+                var valor = $(this).is(":checked");
+                var giro = $(this).attr('name');
+                var logo = $('#'+giro).val();
+                var giroNombre = $('#'+giro).attr('name');
+                console.log(valor);
+                
+                if(valor === false){
+                    $('#'+giro+'P').detach();
+                } else {
+                
+                //alert(logo+giro+giroNombre);
+                //$('#giro_form').html('');
+                $('<p id="'+giro+'P" style="margin-top:7px;"> <img src="<?php echo base_url() ?>images/'+logo+'" width="24" height="20"/>'+giroNombre+'</p>').appendTo('#giro_form');
+                }
+                
+            });
 
             $('.sig_paso', form_negocio).on('click', function() {
                 var sig_paso = $('.paso_show', form_negocio).next('.paso');
@@ -530,7 +560,7 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
                     sel_paso.addClass('numero_seccion view_step');
                     $('.instrucciones_pasos', form_negocio).text(sel_paso.data('titulo'));
                     $('#msj_paso').text("");
-                    //add_step_move();
+                    add_step_move();
                 }
             });
 
@@ -579,6 +609,9 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
                         }
                     }
                     return true;
+
+
+
                 }
 
                 return true;
@@ -611,6 +644,17 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
                 $('#total', form_negocio).text('$ ' + (total_val.toFixed(2)));
 
             });
+
+            $('#muestra_telefono_negocioS').on('change', function() {
+                        var field = $(this).val();
+                        if(field == 1){
+                            $('#telefono_anuncio').fadeIn();
+                        } else{
+                             $('#telefono_anuncio').fadeOut();
+                        }
+
+            });
+            
 
             $("#fileuploader").uploadFile({
                 url: "<?php echo base_url('directorio/upload_file') ?>",
