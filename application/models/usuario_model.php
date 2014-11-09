@@ -464,11 +464,11 @@ class Usuario_model extends CI_Model
         $this->db->join("seccion se", "p.seccion=se.seccionID");
         $this->db->join("usuario u", "sc.idUsuario=u.idUsuario");
 
-        $this->db->join('usuariodetalle ud', 'u.idUsuario=ud.idUsuario');
+        $this->db->join('usuariodetalle ud', 'u.idUsuario=ud.idUsuario', 'left');
         $this->db->join('usuariodato uda', 'u.idUsuario=uda.idUsuario');
-        $this->db->join('ubicacionusuario uu', 'uda.idUsuarioDato=uu.idUsuarioDato');
+        $this->db->join('ubicacionusuario uu', 'uda.idUsuarioDato=uu.idUsuarioDato', 'left');
         $this->db->join('giroempresa ge', 'ud.idUsuarioDetalle=ge.idUsuarioDetalle', 'left');
-        $this->db->join('giro g', 'ge.giroID=g.giroID');
+        $this->db->join('giro g', 'ge.giroID=g.giroID', 'left');
 
         $this->db->join("estado es", "p.estadoID=es.estadoID");
         $this->db->join("fotospublicacion fp", "p.publicacionID=fp.publicacionID", 'left');

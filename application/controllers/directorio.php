@@ -47,12 +47,12 @@ class Directorio extends CI_Controller {
         $data['paquetes'] = $this->defaultdata_model->getPaquetes();
         $data['razas'] = $this->defaultdata_model->getRazas();
         $data['giros'] = $this->defaultdata_model->getGiros();
-        $data['directorios'] = $this->usuario_model->getDirectorios(2);
+        $data['directorios'] = $this->usuario_model->getDirectorios(4);
         $data['user'] = $this->usuario_model->myInfo($this->session->userdata('idUsuario'));
         $data['planes'] = $this->defaultdata_model->getPaquetesCupon(2);
         $data['seccion'] = 4;
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
-
+        //var_dump($data['directorios']);
         $this->load->view('directorio_view', $data);
     }
 
@@ -62,12 +62,12 @@ class Directorio extends CI_Controller {
         $estado = $this->input->post('estado') === '' ? NULL : intval($this->input->post('estado'));
         $palabra_clave = $this->input->post('palabra_clave') === '' ? NULL : $this->input->post('palabra_clave');
 
-        echo json_encode($this->usuario_model->getDirectorios(2, $giro, $estado, $palabra_clave));
+        echo json_encode($this->usuario_model->getDirectorios(4, $giro, $estado, $palabra_clave));
     }
 
     public function detalles($id) {
 
-        $data['detalles'] = $this->usuario_model->getDirectorios(2, null, null, null, intval($id));
+        $data['detalles'] = $this->usuario_model->getDirectorios(4, null, null, null, intval($id));
         $data['giros'] = $this->usuario_model->getGirosUsuario(intval($id));
 
         $data['seccion'] = 4;
@@ -75,7 +75,7 @@ class Directorio extends CI_Controller {
     }
 
     public function contactar($id) {
-        $directorio = $this->usuario_model->getDirectorios(2, null, null, null, intval($id));
+        $directorio = $this->usuario_model->getDirectorios(4, null, null, null, intval($id));
 
         $config = array(
             'mailtype' => 'html',
@@ -178,6 +178,7 @@ class Directorio extends CI_Controller {
     }
 
     public function nuevo() {
+        var_dump($_POST);
 
         $count_giros = count($this->defaultdata_model->getGiros());
         $giro_form = array();
@@ -453,6 +454,12 @@ class Directorio extends CI_Controller {
         $this->defaultdata_model->updateItem('compraID', $compraID, array('pagado' => $estado), 'compra');
         $this->defaultdata_model->updateItem('servicioID', $servicioID, array('pagado' => $estado), 'serviciocontratado');
         redirect('principal/miPerfil');
+    }
+
+    function meh(){
+        $myinfo = $this->usuario_model->myInfo($this->session->userdata('idUsuario'));
+        $zona_geo = $this->defaultdata_model->get_zona_geografica(22);
+        var_dump($myinfo,$zona_geo);
     }
 
 }
