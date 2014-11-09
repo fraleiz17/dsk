@@ -295,10 +295,10 @@
                                                   class="background_morado_35_mini" readonly="readonly"
                                                   value="<?php echo $this->session->userdata('nombre'); ?>"/>
         Apellido:
-        <input required="required" type="text" name="apellido" class="background_morado_55_mini" readonly="readonly"
+        <input required="required" type="text" name="apellido"  class="background_morado_55_mini" readonly="readonly"
                value="<?php echo $this->session->userdata('apellido') ?>"/>
         Correo electrónico: <input required="required" type="text" name="correo" class="background_morado_55_mini"
-                                   readonly="readonly" value="<?php echo $this->session->userdata('correo') ?>"/></p>
+                                   readonly="readonly" value="<?php echo $this->session->userdata('correo') ?>" style = "margin-right:-4px;"/></p>
     <br/>
 
     <p class="margen_15_left_mini"> Teléfono*: <input name="telefono" type="text"

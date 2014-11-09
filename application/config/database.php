@@ -50,7 +50,7 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['database'] = 'quieroun_perro_dev';
+$db['default']['database'] = 'qup';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';
 $db['default']['dbdriver'] = 'mysql';
