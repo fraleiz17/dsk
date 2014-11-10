@@ -282,9 +282,9 @@ Pantallas
 
 
 <?php  ?>
-                    <div class="close_sesion" style="text-align: right; padding-right: 5px;"><a
+                    <div class="close_sesion" style="text-align: right; padding-right: 5px;overflow:hidden;display:block;"><a
                             href="<?php echo base_url('sesion/logout/principal') ?>"><img style="height: 30px;"
-                                                                                          src="<?php echo base_url() ?>images/logout.png"
+                                                                                          src="<?php echo base_url() ?>images/logout_short.png"
                                                                                           alt="Cerrar sesión"/></a>
                     </div>
                 <?php  ?>

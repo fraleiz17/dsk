@@ -1,3 +1,4 @@
+ 
 <?php $this -> load -> view('admin/menu_view.php') ?>
 <script type="text/javascript" src="<?php echo base_url()?>js/jquery-1.8.2.min.js"></script>
 <script>
@@ -395,7 +396,7 @@ ELIMINAR TEXTO</div>
 
 <div class="contenedor_central">
 <div class="titulo_seccion">
-PANTALLAS- <label id="nombreSeccion"><label id="seccion">Seleccione</label></label> 
+PANTALLAS- <label id="nombreSeccion"><label id="seccion" >Seleccione</label></label> 
 </div>
 <div class="contenedor_buscador">
 <div class="fondo_select">
