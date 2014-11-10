@@ -67,15 +67,14 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
 <div id="contenedor_central">
     <div class="contenido_directorio">
         <div class="contenedor_logotipo_directorio"> 
-            <?php if (!is_null($detalles->logo)): ?>
-                <img src="<?php echo base_url() ?>images/negocio_logo/<?php echo str_replace(' ', '_', strtolower($detalles->logo)); ?>.png"/>
+            <?php if (!is_null($detalles->logo)):  ?>
+                <img style="width: 66%;" src="<?php echo base_url() ?><?php echo str_replace(' ', '_', strtolower($detalles->foto)); ?>"/>
             <?php else: ?>
                 <img style="width: 66%;" src="<?php echo base_url() ?>images/giros_negocio/<?php echo str_replace(' ', '_', strtolower($detalles->nombreGiro)); ?>.png"/>
             <?php endif; ?>
         </div>
 
-        <div class="contenedor_nombre_empresa"> <?php echo $detalles->razonSocial ?>
-            CANINO VON MARAB</div>
+        <div class="contenedor_nombre_empresa"> <?php echo $detalles->nombreNegocio ?></div>
     </div>
 
     <div style=" margin-left:8px; margin-right:8px;" class="contenido_directorio">
@@ -97,7 +96,7 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
         <div class="contenedor_informacion">
             <?php foreach ($giros as $giro): ?>
                 <p> 
-                    <img src="<?php echo base_url() ?>images/giros_negocio/<?php echo str_replace(' ', '_', strtolower($giro->nombreGiro)); ?>.png" width="36" height="30"/> 
+                    <img src="<?php echo base_url() ?>images/<?php echo str_replace(' ', '_', strtolower($giro->logo)); ?>" width="36" height="30"/> 
                     <?php echo $giro->nombreGiro; ?>
                 </p>
             <?php endforeach; ?>

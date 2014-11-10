@@ -451,9 +451,17 @@ class Usuario_model extends CI_Model
         /*
          * 
          * Posible recomentacion para pasarlo a una vista
+         $this->db->select('p.*, (select nombreGiro from `giroempresa`
+LEFT JOIN `giro` g ON `giroempresa`.`giroID`=`g`.`giroID` 
+LEFT JOIN `usuariodetalle` ON `usuariodetalle`.`idUsuarioDetalle`=`giroempresa`.`idUsuarioDetalle`
+limit 1) as nombreGiro, (select giroempresa.giroID as giroID
+from `giroempresa`
+LEFT JOIN `giro` g ON `giroempresa`.`giroID`=`g`.`giroID` 
+LEFT JOIN `usuariodetalle` ON `usuariodetalle`.`idUsuarioDetalle`=`giroempresa`.`idUsuarioDetalle`
+limit 1) as giroID');
          */
 
-
+        
         $this->db->from("publicaciones p");
 
         $this->db->join("serviciocontratado sc", "p.detalleID=sc.detalleID AND p.paqueteID=sc.paqueteID AND p.servicioID=sc.servicioID");
@@ -477,6 +485,7 @@ class Usuario_model extends CI_Model
         $this->db->where("p.aprobada", 1);
         $this->db->where("p.vigente", 1);
         $this->db->where('u.status', 1);
+        $this->db->group_by('p.publicacionID');
 
         if (!is_null($seccion)) {
             $this->db->where("p.seccion", $seccion);

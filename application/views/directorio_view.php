@@ -102,7 +102,13 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
 
                     <div class="contenedor_negocio" data-object='<?php echo json_encode($directorio) ?>'>
                         <div class="contenedor_imagen_negocio">
-                            <img src="<?php echo base_url() ?>images/giros_negocio/adistramiento_canino.png"/>
+                        <?php if (isset($giros)): ?>
+                            <?php foreach ($giros as $g): 
+                                    if($g->giroID == $directorio->giroID):?>
+                            <img src="<?php echo base_url() ?>images/<?=$g->logo?>"/>
+                        <?php endif;
+                              endforeach;
+                              endif; ?>
                         </div>
                         <div class="contenedor_nombre_negocio">
                             <strong>
@@ -398,7 +404,7 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
 
                         var cont_imagen = $('<div class="contenedor_imagen_negocio"></div>');
                         var logo = data[i].logo !== null ? data[i].logo : 'adistramiento_canino.png';
-                        cont_imagen.append('<img src="<?php echo base_url() ?>images/giros_negocio/' + logo + '" alt="logo"/>');
+                        cont_imagen.append('<img src="<?php echo base_url() ?>images/' + logo + '" alt="logo"/>');
                         cont_neg.append(cont_imagen);
 
                         var cont_nombre = $('<div class="contenedor_nombre_negocio"></div>');

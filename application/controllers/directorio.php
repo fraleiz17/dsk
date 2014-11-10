@@ -71,6 +71,7 @@ class Directorio extends CI_Controller {
         $data['giros'] = $this->usuario_model->getGirosUsuario(intval($id));
 
         $data['seccion'] = 4;
+        var_dump($data['detalles']);
         $this->load->view('d_directorio_view', $data);
     }
 
@@ -178,7 +179,7 @@ class Directorio extends CI_Controller {
     }
 
     public function nuevo() {
-        var_dump($_POST);
+        //var_dump($_POST);
 
         $count_giros = count($this->defaultdata_model->getGiros());
         $giro_form = array();
@@ -237,7 +238,7 @@ class Directorio extends CI_Controller {
             if (!file_exists('./images/negocio_logo/' . $name_file[2])) {
                 rename('./' . $name_logo_form, './images/negocio_logo/' . $name_file[2]);
             }
-            $logo_form = './images/negocio_logo/' . $name_file[2];
+            $logo_form = 'images/negocio_logo/' . $name_file[2];
         } else {
             $logo_form = '';
         }
@@ -459,7 +460,8 @@ class Directorio extends CI_Controller {
     function meh(){
         $myinfo = $this->usuario_model->myInfo($this->session->userdata('idUsuario'));
         $zona_geo = $this->defaultdata_model->get_zona_geografica(22);
-        var_dump($myinfo,$zona_geo);
+        $detalles_plan = $this->defaultdata_model->getPaquetesCupon(null, 2);
+        var_dump($myinfo,$zona_geo,$detalles_plan);
     }
 
 }
