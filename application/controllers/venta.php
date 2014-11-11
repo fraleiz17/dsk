@@ -142,9 +142,9 @@ if(is_logged()){
     public function upload_file() {
         $config['upload_path'] = 'images/temp/';
         $config['allowed_types'] = 'gif|jpg|png';
-        $config['max_size'] = '900';
-        $config['max_width'] = '400';
-        $config['max_height'] = '400';
+        $config['max_size'] = '999999';
+        $config['max_width'] = '9999999';
+        $config['max_height'] = '9999999';
         $config['file_name'] = UUID::v4();
 
         $this->load->library('upload', $config);

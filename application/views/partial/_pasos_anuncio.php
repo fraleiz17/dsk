@@ -394,8 +394,8 @@ $(document).ready(function()
 						
 
                         $('#logo_image').fadeIn();
-                        $('<img id="logo_image" class="span6 thumbnail" src="'+data.url_logo+'"/><input name="name_logo_form[]" value="'+data.orig_name+'" type="hidden"/>').appendTo('.row-fluid');
-                        $('<img src="'+data.url_logo+'" width="50" height="50"/>').appendTo('.picse_mini');
+                        $('<img id="logo_image" class="span6 thumbnail" width="50" height="50" src="'+data.url_logo+'"/><input name="name_logo_form[]" value="'+data.orig_name+'" type="hidden"/>').appendTo('.row-fluid');
+                        $('<img src="'+data.url_logo+'" width="200" height="200"/>').appendTo('.picse_mini');
 						
                     }
 					
