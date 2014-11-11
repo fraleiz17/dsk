@@ -35,7 +35,7 @@ function contener_images() {
     easing:  'easeInOutBack',
         pager:  '#nav_anuncio_previo',
         pagerAnchorBuilder: function(idx, slide) {
-            return '<li><a href="#"><img src="' + slide.src + '" width="61" height="44" /></a></li>';
+            return '<li><a href="#"><img src="' + slide.src + '" width="61" height="61" /></a></li>';
         }
     });
 }

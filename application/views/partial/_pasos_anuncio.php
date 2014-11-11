@@ -469,7 +469,7 @@ $(document).ready(function()
 <div id="paso_cuatro" class="paso contenido_indicacion_formulario_mini">
 <div class="leer_anuncio_mini">
     <div class="contenedor_galeria_mini">
-        <div id="slideshow_publicar_anuncio" class="picse_mini">
+        <div id="slideshow_publicar_anuncio" class="picse_mini" style="width:200px;height:200px;">
         
             
         </div>
@@ -486,7 +486,7 @@ $(document).ready(function()
     easing:  'easeInOutBack',
         pager:  '#nav_anuncio',
         pagerAnchorBuilder: function(idx, slide) {
-            return '<li><a href="#"><img src="' + slide.src + '" width="61" height="44" /></a></li>';
+            return '<li><a href="#"><img src="' + slide.src + '" width="60" height="60" /></a></li>';
         }
     });
 }
