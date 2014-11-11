@@ -153,8 +153,8 @@ class Defaultdata_model extends CI_Model {
         
         $this->db->from('paquete p');
         $this->db->join('detallepaquete dp', 'p.paqueteID=dp.paqueteID');
-        $this->db->join('cupon c', 'p.paqueteID=c.paqueteID');
-        $this->db->join('cupondetalle cd', 'c.cuponID=cd.cuponID');
+        $this->db->join('cupon c', 'p.paqueteID=c.paqueteID', 'left');
+        $this->db->join('cupondetalle cd', 'c.cuponID=cd.cuponID', 'left');
         
         if(!is_null($tipopaquete)){
             $this->db->where('dp.tipoPaquete', $tipopaquete);

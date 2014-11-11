@@ -49,7 +49,7 @@ class Directorio extends CI_Controller {
         $data['giros'] = $this->defaultdata_model->getGiros();
         $data['directorios'] = $this->usuario_model->getDirectorios(4);
         $data['user'] = $this->usuario_model->myInfo($this->session->userdata('idUsuario'));
-        $data['planes'] = $this->defaultdata_model->getPaquetesCupon(2);
+        $data['planes'] = $this->defaultdata_model->getPaquetesCupon(4);
         $data['seccion'] = 4;
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
         //var_dump($data['directorios']);
@@ -70,8 +70,13 @@ class Directorio extends CI_Controller {
         $data['detalles'] = $this->usuario_model->getDirectorios(4, null, null, null, intval($id));
         $data['giros'] = $this->usuario_model->getGirosUsuario(intval($id));
 
-        $data['seccion'] = 4;
-        var_dump($data['detalles']);
+        if($this->session->userdata('tipoUsuario') == 3){
+             $data['seccion'] = 11;
+        } else {
+            $data['seccion'] = 4;
+        }
+        
+        
         $this->load->view('d_directorio_view', $data);
     }
 
@@ -305,10 +310,11 @@ class Directorio extends CI_Controller {
 
         //reset
         $data = array();
-
+        
         $obj_date = new DateTime(date('Y-m-d H:i:s'));
         $obj_date_end = new DateTime($obj_date->format('Y-m-d H:i:s'));
         $obj_date_end->add(new DateInterval('P' . $detalles_plan->vigencia . 'D'));
+       
 
         $data['serviciocontratado'][] = array(
             'cantFotos' => $detalles_plan->cantFotos,
@@ -326,6 +332,8 @@ class Directorio extends CI_Controller {
 
         $key_servicio = $this->db->insert_id();
 
+
+        if( $detalles_plan->cupones != 0){
         $data = array();
 
         $data['cuponadquirido'][] = array(
@@ -343,13 +351,38 @@ class Directorio extends CI_Controller {
         );
 
         $this->usuario_model->insert_values($data);
-
         $key_cupon_ad = $this->db->insert_id();
+        } else {
+            $key_cupon_ad = '';
+        }
+        
 
         //reset
         $data = array();
 
-        $data['publicaciones'][] = array(
+        
+
+        if($this->session->userdata('tipoUsuario') == 3){
+             $data['publicaciones'][] = array(
+            'seccion' => 11,
+            'titulo' => 'publicacion de directorio',
+            'vigente' => 1,
+            'fechaCreacion' => $obj_date->format('Y-m-d H:i:s'),
+            'fechaVencimiento' => $obj_date_end->format('Y-m-d H:i:s'),
+            'numeroVisitas' => 0,
+            'estadoID' => $estado_negocio,
+            'genero' => 0,
+            'razaID' => 1,
+            'precio' => $detalles_plan->precio,
+            'descripcion' => $descripcion_negocio,
+            'muestraTelefono' => $telefono_ver,
+            'aprobada' => 0,
+            'servicioID' => $key_servicio,
+            'detalleID' => $detalles_plan->detalleID,
+            'paqueteID' => $detalles_plan->paqueteID
+        );
+        } else {
+            $data['publicaciones'][] = array(
             'seccion' => 4,
             'titulo' => 'publicacion de directorio',
             'vigente' => 1,
@@ -367,6 +400,7 @@ class Directorio extends CI_Controller {
             'detalleID' => $detalles_plan->detalleID,
             'paqueteID' => $detalles_plan->paqueteID
         );
+        }
 
         $this->usuario_model->insert_values($data);
 
@@ -414,6 +448,30 @@ class Directorio extends CI_Controller {
             'productoID' => NULL
         );
 
+        if($precio_total <= 00.00){
+        $this->defaultdata_model->updateItem('compraID', $key_compra, $data = array('pagado' => 1), 'compra');
+        $this->defaultdata_model->updateItem('servicioID', $key_servicio, $data = array('pagado' => 1), 'serviciocontratado');
+           echo '<div class="registro_normal"> <!-- Contenedor morado registro -->
+
+                <div class="titulo_registro">GRACIAS</div>
+                </br>
+                <div class="imagen_confirmacion">
+                    <img src="'.base_url().'images/palomita.png"/>
+                </div>
+                <div class="contenido_confirmacion">
+                    <strong> Gracias por publicar en QUP </strong>
+                    </br></br>
+                    <div> Tu anuncio ha pasado a la sección de aprobación, pronto recibirás un correo con la confirmación de la publicación.</div>
+                    <div id="confirm">
+              </div>
+        
+                </div>
+            </div>
+
+            <a href="'.base_url().'principal/miPerfil" style="text-decoration:none; float:right;">Cerrar Proceso</a>
+                  ';
+
+        } else {
 
         $preference_data = array(
             "items" => array(
@@ -449,6 +507,7 @@ class Directorio extends CI_Controller {
             //TODO hay que cambiar a init_point
             echo '<iframe src="' .$preference['response']['init_point']. '" name="MP-Checkout" width="840" height="450" frameborder="0"></iframe>';
         }
+         }
     }
 
     public function procesar_pago($compraID, $estado, $servicioID) {

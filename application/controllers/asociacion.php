@@ -27,7 +27,7 @@ class Asociacion extends CI_Controller {
         $data['razas'] = $this->defaultdata_model->getRazas();
         $data['giros'] = $this->defaultdata_model->getGiros();
         $data['seccion'] = 11;
-        $data['directorios'] = $this->usuario_model->getDirectorios(3);
+        $data['directorios'] = $this->usuario_model->getDirectorios(11);
         $data['user'] = $this->usuario_model->myInfo($this->session->userdata('idUsuario'));
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
         $this->load->view('asociacion_view', $data);
@@ -44,7 +44,7 @@ class Asociacion extends CI_Controller {
     
     public function detalles($id) {
 
-        $data['detalles'] = $this->usuario_model->getDirectorios(3,null, null, null, intval($id));
+        $data['detalles'] = $this->usuario_model->getDirectorios(11,null, null, null, intval($id));
         
         $data['giros'] = $this->usuario_model->getGirosUsuario(intval($id));
 

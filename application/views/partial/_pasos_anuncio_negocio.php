@@ -77,7 +77,17 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
                         <div class="contenido_indicacion">
                             <img src="<?php echo base_url() ?>images/pero_paso_uno.png" class="perrito_uno"/>
 
+                           
+                            <?php if($this->session->userdata('tipoUsuario') == 3):?>
                             <div class="contenedor_checkbox">
+                                <label style="display: inline-block; margin-bottom: 2px;">
+                                            <input class="giro_form validate[required]" type="checkbox" name="giro_13_form" value="13" id="CheckboxGiro_0" />
+                                            <?php echo 'Asociacion Protectora'; ?>
+                                            <input type="hidden" name="Asociación Protectora" id="giro_13_form" value="giros_negocio/protectora.png" />
+                                        </label>
+                            </div>
+                            <?php else : ?>
+                             <div class="contenedor_checkbox">
                                 <?php foreach ($giros as $index => $giro): ?>
                                     <?php if ($index % 2 !== 0): ?>
                                         <label style="display: inline-block; margin-bottom: 2px;">
@@ -102,6 +112,7 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
                                     <?php endif; ?>
                                 <?php endforeach; ?>
                             </div>
+                        <?php endif; ?>
                             <br/>                        
                             <div>
                                 <ul class="morado_directorio">
@@ -133,6 +144,19 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
                                     <th> Descuento </th>
                                     <th> Precio </th>
                                 </tr>
+                                <?php if($this->session->userdata('tipoUsuario') == 3):?>
+                                   <?php foreach ($planes as $plan): ?>
+                                    <tr>
+                                        <td>
+                                            <label>
+                                                <input data-vigencia="<?php echo intval($plan->vigencia / 30) ?>" data-descuento="<?php echo $plan->valor ?>" data-precio="<?php echo $plan->precio ?>" type="radio" name="plan_form" class="validate[required]" value="<?php echo $plan->paqueteID ?>" id="RadioGroup2_0" />
+                                                Vigencia Ilimitada</label>
+                                        </td>
+                                        <td>0 % </td>
+                                        <td> Sin costo </td>
+                                    </tr>
+                                    <?php endforeach; ?>
+                                <?php else: ?>
                                 <?php foreach ($planes as $plan): ?>
                                     <tr>
                                         <td>
@@ -144,7 +168,7 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
                                         <td> $<?php echo $plan->precio ?> </td>
                                     </tr>
                                 <?php endforeach; ?>
-
+                            <? endif;?>
                             </table>
 
                             <br/>
