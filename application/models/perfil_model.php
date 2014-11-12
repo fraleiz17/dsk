@@ -31,7 +31,7 @@ where a.idUsuario ='.$idUsuario);
 
 	function infoDetalleN($idUsuario){
 		$query = $this->db-> query('SELECT b.nombreNegocio, b.nombreContacto, b.telefono, b.calle, b.numero, b.colonia, b.municipioC, b.idEstado, b.cp, b.correo, b.paginaWeb, b.Logo, b.descripcion, d.latitud, d.longitud
-FROM usuario a, usuariodetalle b , ubicacionusuario D WHERE a.idUsuario = b.idUsuario AND b.idUsuario = d.idusuariodato AND a.idUsuario ='.$idUsuario);
+FROM usuario a, usuariodetalle b , ubicacionusuario d WHERE a.idUsuario = b.idUsuario AND b.idUsuario = d.idusuariodato AND a.idUsuario ='.$idUsuario);
 		if ($query->num_rows() == 1){
 			return $query->row();
 		} else {
