@@ -163,7 +163,7 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
 
     <div class="seccion_derecha_paquetes">
         <ul class="aqui_crear_anuncio">
-            <li onclick="muestra('contenedor_publicar_anuncio');">
+            <li onclick="muestra('contenedor_publicar_anuncio_negocio');">
 
             </li>
         </ul>
@@ -346,9 +346,14 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
 <div class="division_menu_inferior"> </div>
 <?php $this->load->view('general/footer_view'); ?>
 
-<?php
-//$this->load->view('partial/_pasos_anuncio', array('paquetes' => $paquetes, 'estados' => $estados, 'razas' => $razas));
-?>
+  <!-- <div id="contenedor_publicar_anuncio" class="contenedor_publicar" style=" display:none">
+
+   Inicio contenedor pap publicar anuncio aunucio 
+    <div id="publicar_anuncio" class="pubicar_anuncio_mini">
+        <?php //$this->load->view('partial/_pasos_anuncio', array('paquetes' => $paquetes, 'estados' => $estados, 'razas' => $razas,'cupones' => $cupones)); ?>
+
+    </div>
+</div>!-->
 
 <?php $this->load->view('partial/_pasos_anuncio_negocio'); ?>
 

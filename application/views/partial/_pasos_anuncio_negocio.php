@@ -1,20 +1,4 @@
-Skip to content
- 
-This repository 
-Explore
-Gist
-Blog
-Help
-marthahdez2 marthahdez2
- 
- 
-3  Unwatch 
-  Star 0
- Fork 0 fraleiz17/qup
- branch: MARTINEE  qup / application / views / partial / _pasos_anuncio_negocio.php
-Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron en directorio
-2 contributors  Martin Estrada Soto  fraleiz17
-502 lines (450 sloc)  24.993 kb RawBlameHistory   
+
 <?php
 /**
  * requiere el listado de los giros, estados, planes, datos de myInfo de usuario
@@ -445,7 +429,7 @@ Martin Estrada Soto pepetin44 3 days ago Se agregan los elementos que cambiaron 
             </div>
             <div class="descipcion_pasos" style="margin-top: 90px!important;">
                 <div class="titulo_de_pasos"> PUBLICAR EN DIRECTORIO </div>
-                <div class="instrucciones_pasos"> Favor de registrarte o <a href="<?php echo base_url('principal/index') ?>">iniciar sesión.</a></div>
+                <div class="instrucciones_pasos" style="font-size:22px; color:white !important;"> Favor de registrarte como Asociación, Negocio o <a href="<?php echo base_url('principal/index') ?>" style="color:white !important;">Inicia Sesi&oacute;n.</a></div>
             </div>
         <?php endif; ?>
     </div>

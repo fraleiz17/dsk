@@ -53,9 +53,11 @@ class Venta extends CI_Controller {
         $data['paquetes'] = $this->defaultdata_model->getPaquetes();
         $data['razas'] = $this->defaultdata_model->getRazas();
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
-if(is_logged()){
+        if(is_logged()){
          $cupones = $this->usuario_model->getCuponesUsuario($this->session->userdata('idUsuario'));
          $data['cupones'] = $cupones;
+        } else {
+            $data['cupones'] = null;
         }
         $this->load->view('venta_view', $data);
 		

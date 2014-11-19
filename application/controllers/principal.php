@@ -88,6 +88,8 @@ class Principal extends CI_Controller {
         if(is_logged()){
         	$cupones = $this->usuario_model->getCuponesUsuario($this->session->userdata('idUsuario'));
         	$data['cupones'] = $cupones;
+        } else {
+        	$data['cupones'] = null;
         }
         $data['seccion'] = 1;
         $data['posicion'] = 1;
@@ -270,6 +272,16 @@ class Principal extends CI_Controller {
         $data['zona'] = 9;
         $data['banner'] = $this->defaultdata_model->getTable('banner');
 		$data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
+		$data['estados'] 	= $this->defaultdata_model->getEstados();
+		$data['paises'] 	= $this->defaultdata_model->getPaises();
+		$data['paquetes'] = $this->defaultdata_model->getPaquetes();
+		$data['razas'] = $this->defaultdata_model->getRazas();
+		if(is_logged()){
+        	$cupones = $this->usuario_model->getCuponesUsuario($this->session->userdata('idUsuario'));
+        	$data['cupones'] = $cupones;
+        } else {
+        	$data['cupones'] = null;
+        }
 		$this->load->view('tienda_view',$data);
 		
 		$config['base_url'] = base_url() . 'principal/tienda';

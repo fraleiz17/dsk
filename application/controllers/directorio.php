@@ -46,13 +46,26 @@ class Directorio extends CI_Controller {
         $data['paises'] = $this->defaultdata_model->getPaises();
         $data['paquetes'] = $this->defaultdata_model->getPaquetes();
         $data['razas'] = $this->defaultdata_model->getRazas();
-        $data['giros'] = $this->defaultdata_model->getGiros();
-        $data['directorios'] = $this->usuario_model->getDirectorios(4);
-        $data['user'] = $this->usuario_model->myInfo($this->session->userdata('idUsuario'));
-        $data['planes'] = $this->defaultdata_model->getPaquetesCupon(4);
-        $data['seccion'] = 4;
+        $data['giros'] = $this->defaultdata_model->getGiros();        
+        $data['user'] = $this->usuario_model->myInfo($this->session->userdata('idUsuario'));        
+         if(is_logged()){
+            $cupones = $this->usuario_model->getCuponesUsuario($this->session->userdata('idUsuario'));
+            $data['cupones'] = $cupones;
+        }
+        
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
         //var_dump($data['directorios']);
+        if($this->session->userdata('tipoUsuario') == 2){
+            $data['directorios'] = $this->usuario_model->getDirectorios(4);
+            $data['planes'] = $this->defaultdata_model->getPaquetesCupon(5);
+            $data['seccion'] = 4;
+        } else{
+        $data['directorios'] = $this->usuario_model->getDirectorios(11);
+        $data['planes'] = $this->defaultdata_model->getPaquetesCupon(4);
+        $data['seccion'] = 4;
+        }
+
+
         $this->load->view('directorio_view', $data);
     }
 

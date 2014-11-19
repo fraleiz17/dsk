@@ -433,6 +433,8 @@ echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
     </ul>
 </div>
 
+
+
 <script>
 
 function buscar_anunciante(id){

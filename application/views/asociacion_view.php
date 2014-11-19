@@ -133,7 +133,7 @@ $this->load->view('general/general_header_view', array('title' => 'Asociaciones 
 
     <div class="seccion_derecha_paquetes">
         <ul class="aqui_crear_anuncio">
-            <li onclick="muestra('contenedor_publicar_anuncio');">
+            <li onclick="muestra('contenedor_publicar_anuncio_negocio');">
 
             </li>
         </ul>
@@ -315,10 +315,7 @@ $this->load->view('general/general_header_view', array('title' => 'Asociaciones 
 </div>
 <div class="division_menu_inferior"> </div>
 <?php $this->load->view('general/footer_view'); ?>
-<?php
-$this->load->view('partial/_pasos_anuncio', array('paquetes' => $paquetes,
-    'estados' => $estados, 'razas' => $razas));
-?>
+
 
 <?php $this->load->view('partial/_pasos_anuncio_negocio'); ?>
 <script>
