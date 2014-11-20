@@ -27,6 +27,7 @@ $this->load->view('general/general_header_view', array('title' => 'Asociaciones 
     </form>
 </div>
 <div id="contenedor_central">
+    <div style="display:block;float:left;widht:100px;height:344px;">
     <div id="espacio_izquierda" class="seccion_izquierda_secciones">
         <ul class="iconos" id="iconos_grandes">
         <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  onclick="window.location='<?= base_url() ?>carrito';" <?php else: ?>  <?php endif; ?>>
@@ -62,7 +63,7 @@ $this->load->view('general/general_header_view', array('title' => 'Asociaciones 
             <img src="<?php echo base_url() ?>images/registrate.png"/>
         </li>
     </ul>
-    </div>
+    </div></div>
 
 
     <div class="contenedor_central" style="margin-bottom:45px;">
