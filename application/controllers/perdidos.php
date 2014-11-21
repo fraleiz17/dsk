@@ -47,6 +47,12 @@ class Perdidos extends CI_Controller
         $data['giros']       = $this->defaultdata_model->getGiros();
         $data['publicaciones']       = $this->venta_model->getAnuncios(self::$seccion);
 		$data['seccion']= self::$seccion;
+         if(is_logged()){
+         $cupones = $this->usuario_model->getCuponesUsuario($this->session->userdata('idUsuario'));
+         $data['cupones'] = $cupones;
+        } else {
+            $data['cupones'] = null;
+        }
        //var_dump($data['publicaciones']);
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
         $this->load->view('perdidos_view', $data);

@@ -45,9 +45,11 @@ class Raza extends CI_Controller
        $data['estados']     = $this->defaultdata_model->getEstados();
        $data['paquetes'] = $this->defaultdata_model->getPaquetes();
        $data['razas'] = $this->defaultdata_model->getRazas();
-       if(is_logged()){
-            $cupones = $this->usuario_model->getCuponesUsuario($this->session->userdata('idUsuario'));
-            $data['cupones'] = $cupones;
+        if(is_logged()){
+         $cupones = $this->usuario_model->getCuponesUsuario($this->session->userdata('idUsuario'));
+         $data['cupones'] = $cupones;
+        } else {
+            $data['cupones'] = null;
         }
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
         $this->load->view('raza_view',$data);

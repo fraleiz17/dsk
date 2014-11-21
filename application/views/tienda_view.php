@@ -289,5 +289,6 @@
         <?php $this->load->view('partial/_pasos_anuncio', array('paquetes' => $paquetes, 'estados' => $estados, 'razas' => $razas,'cupones' => $cupones)); ?>
 
     </div>
+    </div>
     </body>
 </html>
