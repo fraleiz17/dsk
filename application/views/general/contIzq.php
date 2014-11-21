@@ -66,7 +66,7 @@
 			
             <div class="titulo_registro"> INGRESAR</div>
 			<div id="ingreso_normal">
-            <div class="texto_inputs">
+            <div class="texto_inputs" style="margin-top:10px;">
                 <p> Usuario:</p>
 
                 <p style="margin-top:15px;">Contraseña:</p>
@@ -141,18 +141,18 @@
 
 <div class="titulo_registro"> REGISTRATE</div>
 
-<div class="texto_inputs">
+<div class="texto_inputs" style="margin-top:9px;" >
     <p> Nombre:</p>
 
-    <p style="margin-top:15px;">Apellido:</p>
+    <p style="margin-top:12px;">Apellido:</p>
 
-    <p style="margin-top:15px;">Correo:</p>
+    <p style="margin-top:-1px;">Correo:</p>
 
-    <p style="margin-top:15px;">Teléfono:</p>
+    <p style="margin-top:3px;">Teléfono:</p>
 
-    <p style="margin-top:15px;">Contrase&ntilde;a:</p>
+    <p style="margin-top:5px;">Contrase&ntilde;a:</p>
 
-    <p>Confirmar Contrase&ntilde;a:</p>
+    <p style="margin-top:-3px;">Confirmar Contrase&ntilde;a:</p>
 
 </div>
 <div class="contendeor_inputs" >
@@ -214,22 +214,22 @@
     <div class="datos_fiscales"> Datos fiscales</div>
 
 
-    <div class="texto_inputs">
+    <div class="texto_inputs" style="margin-top:12px;">
         <p> Razón Social:</p>
 
-        <p style="margin-top:15px;">RFC:</p>
+        <p style="margin-top:0px;">RFC:</p>
 
-        <p style="margin-top:15px;">Calle:</p>
+        <p style="margin-top:5px;">Calle:</p>
 
-        <p style="margin-top:15px;">No. Exterior:</p>
+        <p style="margin-top:8px;">No. Exterior:</p>
 
-        <p style="margin-top:15px;">CP:</p>
+        <p style="margin-top:-2px;">CP:</p>
 
-        <p style="margin-top:15px;">Municipio:</p>
+        <p style="margin-top:-1px;">Municipio:</p>
 
-        <p style="margin-top:15px;">Estado:</p>
+        <p style="margin-top:-1px;">Estado:</p>
 
-        <p style="margin-top:15px;">País:</p>
+        <p style="margin-top:-2px;">País:</p>
 
 
     </div>
@@ -283,22 +283,24 @@
 
     <div class="datos_fiscales"> Datos fiscales</div>
 
-    <div class="texto_inputs">
+    
+
+    <div class="texto_inputs" style="margin-top:12px;">
         <p> Razón Social:</p>
 
-        <p style="margin-top:15px;">RFC:</p>
+        <p style="margin-top:0px;">RFC:</p>
 
-        <p style="margin-top:15px;">Calle:</p>
+        <p style="margin-top:5px;">Calle:</p>
 
-        <p style="margin-top:15px;">No. Exterior:</p>
+        <p style="margin-top:8px;">No. Exterior:</p>
 
-        <p style="margin-top:15px;">CP:</p>
+        <p style="margin-top:-2px;">CP:</p>
 
-        <p style="margin-top:15px;">Municipio:</p>
+        <p style="margin-top:-1px;">Municipio:</p>
 
-        <p style="margin-top:15px;">Estado:</p>
+        <p style="margin-top:-1px;">Estado:</p>
 
-        <p style="margin-top:15px;">País:</p>
+        <p style="margin-top:-2px;">País:</p>
 
 
     </div>
@@ -420,32 +422,32 @@
     </div>
 
 
-    <div class="texto_inputs">
+    <div class="texto_inputs" style="margin-top:8px;">
         <p>Contacto:</p>
 
-        <p style="margin-top:15px;">Teléfono:</p>
+        <p style="margin-top:11px;">Teléfono:</p>
 
         <p style="margin-top:15px;">Calle:</p>
 
-        <p style="margin-top:15px;">Número:</p>
+        <p style="margin-top:11px;">Número:</p>
 
-        <p style="margin-top:15px;">Colonia:</p>
+        <p style="margin-top:12px;">Colonia:</p>
 
-        <p style="margin-top:15px;">Municipio:</p>
+        <p style="margin-top:13px;">Municipio:</p>
 
-        <p style="margin-top:15px;">Estado:</p>
+        <p style="margin-top:-1px;">Estado:</p>
 
-        <p style="margin-top:15px;">Código Postal:</p>
+        <p style="margin-top:3px;">Código Postal:</p>
 
-        <p style="margin-top:15px;">Correo:</p>
+        <p style="margin-top:10px;">Correo:</p>
 
-        <p style="margin-top:15px;">Página web:</p>
+        <p style="margin-top:14px;">Página web:</p>
 
-        <p style="margin-top:15px;">Logo:</p>
+        <p style="margin-top:12px;">Logo:</p>
 
         <p style="margin-top:15px;">Descripción:</p>
 
-        <p style="margin-top:35px;">Ubicación:</p>
+        <p style="margin-top:45px;">Ubicación:</p>
     </div>
 
     <div class="contendeor_inputs">
@@ -496,22 +498,22 @@
 
     <div class="datos_fiscales"> Datos fiscales</div>
 
-    <div class="texto_inputs">
+    <div class="texto_inputs" style="margin-top:12px;">
         <p> Razón Social:</p>
 
-        <p style="margin-top:15px;">RFC:</p>
+        <p style="margin-top:0px;">RFC:</p>
 
-        <p style="margin-top:15px;">Calle:</p>
+        <p style="margin-top:5px;">Calle:</p>
 
-        <p style="margin-top:15px;">No. Exterior:</p>
+        <p style="margin-top:8px;">No. Exterior:</p>
 
-        <p style="margin-top:15px;">CP:</p>
+        <p style="margin-top:-2px;">CP:</p>
 
-        <p style="margin-top:15px;">Municipio:</p>
+        <p style="margin-top:-1px;">Municipio:</p>
 
-        <p style="margin-top:15px;">Estado:</p>
+        <p style="margin-top:-1px;">Estado:</p>
 
-        <p style="margin-top:15px;">País:</p>
+        <p style="margin-top:-2px;">País:</p>
 
 
     </div>
@@ -558,34 +560,32 @@
     <div class="datos_fiscales"> Datos de la Asociación</div>
 
 
-    <div class="texto_inputs">
-        <p> Nombre: </p>
+    <div class="texto_inputs" style="margin-top:8px;">
+        <p>Contacto:</p>
 
-        <p style="margin-top:15px;">Contacto:</p>
-
-        <p style="margin-top:15px;">Teléfono:</p>
+        <p style="margin-top:11px;">Teléfono:</p>
 
         <p style="margin-top:15px;">Calle:</p>
 
-        <p style="margin-top:15px;">Número:</p>
+        <p style="margin-top:11px;">Número:</p>
 
-        <p style="margin-top:15px;">Colonia:</p>
+        <p style="margin-top:12px;">Colonia:</p>
 
-        <p style="margin-top:15px;">Municipio:</p>
+        <p style="margin-top:13px;">Municipio:</p>
 
-        <p style="margin-top:15px;">Estado:</p>
+        <p style="margin-top:-1px;">Estado:</p>
 
-        <p style="margin-top:15px;">Código Postal:</p>
+        <p style="margin-top:3px;">Código Postal:</p>
 
-        <p style="margin-top:15px;">Correo:</p>
+        <p style="margin-top:10px;">Correo:</p>
 
-        <p style="margin-top:15px;">Página web:</p>
+        <p style="margin-top:14px;">Página web:</p>
 
-        <p style="margin-top:15px;">Logo:</p>
+        <p style="margin-top:12px;">Logo:</p>
 
         <p style="margin-top:15px;">Descripción:</p>
 
-        <p style="margin-top:35px;">Ubicación:</p>
+        <p style="margin-top:45px;">Ubicación:</p>
     </div>
 
     <div class="contendeor_inputs">
@@ -631,7 +631,7 @@
 </div>
 <!-- fin datos Asociacion -->
 
-<div id="map-canvas" style="display:none;">
+<div id="map-canvas" style="display:none;margin-top:-26px;">
     <?php $this->load->view($mapaSegundo); ?>
 
 </div>
