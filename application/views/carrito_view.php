@@ -975,10 +975,7 @@
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
-                            <tr>
-                                <td colspan="4"> <p class="subtotal"> SUBTOTAL </p> </td>
-                                <td> <p class="sub_cantidad"> $&nbsp;<?php echo round($totalSinIVA, 2); ?> </p> </td>
-                            </tr>
+                           
                             <tr> 
                                 <td colspan="4">
                                     <p class="subtotal"> <img src="images/cupon_perfil.png" width="34" height="27"> Cupones de descuento
@@ -1091,6 +1088,10 @@
                                                                     </div>
                                                                     </td>
                                                                     <td> <p class="sub_cantidad">  $0.00 </p> </td>
+                                                                    </tr>
+                                                                     <tr>
+                                                                     <th colspan="4">SUBTOTAL</th>
+                                                                     <th> <p class=""> $&nbsp;<?php echo round($totalSinIVA, 2); ?> </p> </th>
                                                                     </tr>
                                                                     <tr>
                                                                         <th colspan="4"> IVA </th>

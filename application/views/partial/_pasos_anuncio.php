@@ -638,14 +638,7 @@ COSTO
 <p class="totales">$<label id="nprecio" class="nprecio"></label></p>
 </td>
 </tr>
-<tr> 
-<td colspan="2">
-<p>SUBTOTAL:</p>
-</td>
-<td>
-<p class="totales"> $<label id="subtotal" class="nprecio"></label> </p>
-</td>
-</tr>
+
 <tr>
 <td colspan="2">
  <img style="" src="<?php echo base_url()?>images/mini_cupon.png"/> <font class="texto_de_cupon" >Cupones de descuento: </font> </br> <font id="ver_cupones" class="ver_cupones" onclick="muestra('los_cupones_disponibles');muestra('no_ver_cupones');
@@ -678,6 +671,14 @@ $c = 0;
 <td>
 <p class="totales">- $<label id="descuentoCupon">00.00</label> </p>
 </td>
+</tr>
+<tr> 
+<th colspan="2">
+<p>SUBTOTAL:</p>
+</th>
+<th>
+<p class="totales"> $<label id="subtotal" class="nprecio"></label> </p>
+</th>
 </tr>
 <tr> 
 <td colspan="2">
