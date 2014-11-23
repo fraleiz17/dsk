@@ -272,6 +272,7 @@ class Admin_model extends CI_Model
     function getDatosAnunciante($publicacionID){
         $query = $this->db->query("SELECT * FROM (`publicaciones` p) JOIN `serviciocontratado` sc ON `p`.`detalleID`=`sc`.`detalleID` AND p.paqueteID=sc.paqueteID AND p.servicioID=sc.servicioID 
         JOIN `detallepaquete` dp ON `sc`.`paqueteID`=`dp`.`paqueteID` AND sc.detalleID=dp.detalleID 
+        join seccion on seccion.seccionID = p.seccion
         JOIN `usuario` u ON `sc`.`idUsuario`=`u`.`idUsuario` 
         WHERE `p`.`publicacionID` = ".$publicacionID);
          if ($query->num_rows() == 1)

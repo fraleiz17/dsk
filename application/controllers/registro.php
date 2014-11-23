@@ -93,31 +93,40 @@ class Registro extends CI_Controller {
 <table width="647" align="center">
 <tr>
 <td width="231" height="129" colspan="2" valign="top">
-<img src="http://quierounperro.com/quiero_un_perro/images/logo_mail.jpg"/>
+<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
 </td>
 </tr>
 <tr>
-<td>
-<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:19px; font-weight:bold; color:#72A937;" >Hola: '.$this->input->get('nombre').' </font>
+<td align="center"><h4 style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;">¡Bienvenido a QuieroUnPerro.com!</h4></td>
+</tr> 
+<tr>
+<td style="padding-left:15px;"> 
+<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >Hola: '.$this->input->get('nombre').' </font>
 <br/>
 <br/>
 
+<font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
+Gracias por registrate en QuieroUnperro.com<br/>
+Tu usuario ha sido creado correctamente. Te recordamos tus datos de inicio de sesi&oacute;:<br/><br/>
+Correo: '.$this->input->get('correo').' <br/>
+Contrase&nacute;a: * Por seguridad no se muestra. En caso de olvidarla sol&iacute;citala en el portal.<br/><br/>
+Para poder comenzar a disfrutar de todas las herramientas del portal, valida tu cuenta haciendo clic <a href="'.base_url().'registro/activar/'.$confirmationCode.'">aqu&iacute;</a> o copia esta direcci&oacute;n en el explorador:<br/><br/>
 
-<font style="font-family:Verdana, Geneva, sans-serif;">Tu usuario '.$this->input->get('correo').' con la contraseña: '.$this->input->get('contrasena').' </br></br> ha sido registrado correctamente, solo falta un paso para completar tu registro. Haz clic en en el siguiente link:</font>
-</br>
-</br>
-<font style="font-family:Verdana, Geneva, sans-serif;" color="#000066"><a href="'.base_url().'registro/activar/'.$confirmationCode.'">Activar cuenta QUP</a> </font>
-<br/>
+'.base_url().'registro/activar/'.$confirmationCode.'
+<br/><br/>
 
-
+</font>
+<p> </p>
 </td>
 </tr>
 
-<tr bgcolor="#6A2C91" >
+<tr>
 <td colspan="7" >
-<font style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px; color:#FFFFFF;"> Bienvenido </font>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;"> ¡Muchas Gracias! </font>
 <br/>
-<font style=" font-family:Verdana, Geneva, sans-serif; font-size:12px; padding-left:15px; color:#FFFFFF;"> Equipo QuieroUnPerro.com </font>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:12px; padding-left:15px;"> El Equipo de QuieroUnPerro.com </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:10px; padding-left:15px;"> Todos los derechos reservados '.date('Y').' </font>
 </td>
 </tr>
 </table>
@@ -125,7 +134,8 @@ class Registro extends CI_Controller {
 
 
 </body>
-</html>';
+</html>
+';
 
 		if($this->email_model->send_email('', $emailUsuario, 'Gracias por registrarte en QUP', $mensaje)){
 			$data['response'] = true;

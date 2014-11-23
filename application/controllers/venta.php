@@ -555,71 +555,64 @@ class Venta extends CI_Controller {
 
         $this->email->from($this->session->userdata('correo'), $this->session->userdata('nombre') . ' ' . $this->session->userdata('apellido'));
 
-        $this->email->to('sorry_stick@hotmail.com');
+        $this->email->to('marthahdez2@gmail.com','contacto@qup.com');
 
         $this->email->subject('Denuncia de anuncio');
 
         $msj = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-        <html xmlns="http://www.w3.org/1999/xhtml">
-        <head>
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            <title>Bienvenido-QuieroUnPerro.com</title>
-            <link rel="stylesheet" href="http://quierounperro.com/quiero_un_perro/css/general.css" type="text/css" media="screen" />
-        </head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Notificacion-QuieroUnPerro.com</title>
 
-        <body>
-            <table width="647" align="center">
-                <tr>
-                    <td width="231" rowspan="2">
-                        <img src="'.base_url().'images/logo_mail.jpg"/>
-                    </td>
-					</tr>
-					<tr>
-                    <td height="48" colspan="6" style=" font-size:50px; color:#72A937; margin:0px; padding:0px; margin-bottom:-10px;">
-                      <strong>  Denuncia</strong>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="7" >
-                        <p>&nbsp;  </p>
-                        <font> El usuario ' . $this->session->userdata('nombre') . ' ' . $this->session->userdata('apellido') . ' ha denunciado el siguiente anuncio..</font>
-                       
-                    </br>
-                </br>
- <font style="margin-top:100px; font-size:19px; font-weight:bold; color:#72A937;" >' . ($directorio['data'][0]->titulo).'</font>
-                
-            </br>
-           <font> Creado por: '.$directorio['data'][0]->correo.'</font>
-		   </br>
-           <font> Fecha de creacion: '.$directorio['data'][0]->fechaCreacion.'</font>
-		   </br>
-           <font> Duracion: '.$directorio['data'][0]->vigencia.' ('.$directorio['data'][0]->fechaVencimiento.')</font>
-		   </br>
-           <font> Descripcion: '.$directorio['data'][0]->descripcion.'</font>
-        </br>
-		</br>
+</head>
 
-        <font color="#000066"><strong> Asunto:</strong> ' . $this->input->post('asunto_denuncia') . '</font>
-		</br>
-        <font color="#000066"><strong>Mensaje: </strong><br/>' . $this->input->post('comentarios_denuncia') . '</font>
-        <br/>
-        <p> </p>
-    </td>
+<body>
+<table width="647" align="center">
+<tr>
+<td width="231" height="129" colspan="2" valign="top">
+<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
+</td>
+</tr>
+<!-- <tr>
+<td align="center"><h4 style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;">¡Bienvenido a QuieroUnPerro.com!</h4></td>
+</tr> -->
+<tr>
+<td style="padding-left:15px;"> 
+<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >Hola: Marina </font>
+<br/>
+<br/>
+
+<font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
+Te informamos que tu anuncio <strong>"ANUNCIO"</strong> ha sido rportado por uno(s) de nuestros usuarios por las siguientes razones.<br/><br/>
+' . $this->input->post('asunto_denuncia') . '<br/><br/>
+' . $this->input->post('comentarios_denuncia') . '<br/><br/>
+<br/><br/>
+Es por esto que tu anuncio ha sido retirado de nuestra p&aacute;gina, recuerda que QuieroUnPerro.com es un espacio que promueve la seguridad y la confianza para todos nuestros usuarios.<br/>
+Si tienes cualquier duda al respecto, por favor escr&iacute;benos a contacto@quierounperro.com
+</font>
+<p> </p>
+</td>
 </tr>
 
-<tr bgcolor="#6A2C91" >
-    <td colspan="7" >
-        <font style=" font-size:14px; padding-left:15px; color:#FFFFFF;">Gracias por tu preferencia </font>
-        <br/>
-        <font style=" font-size:12px; padding-left:15px; color:#FFFFFF;"> Equipo QuieroUnPerro.com </font>
-		<br/>
-		<font style=" font-size:12px; padding-left:15px; color:#FFFFFF;"> Todos los derechos reservados </font>
-    </td>
+<tr>
+<td colspan="7" >
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;"> ¡Muchas Gracias! </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:12px; padding-left:15px;"> El Equipo de QuieroUnPerro.com </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:10px; padding-left:15px;"> Todos los derechos reservados '.date('Y').' </font>
+</td>
 </tr>
 </table>
-</body>
-</html>';
 
+
+
+</body>
+</html>
+ ';
+
+       
         $this->email->message($msj);
 
         if (!$this->email->send()) {
