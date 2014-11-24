@@ -44,4 +44,6 @@ $config['tablas']['usuario'] = 'usuario';
  $config['tablas']['seccion'] = 'seccion';
  $config['tablas']['fotoscontenido'] = 'fotoscontenido';
  $config['tablas']['mensajesadmin'] = 'mensajesadmin';
+ $config['tablas']['grupoenvio'] = 'grupoenvio';
+ $config['tablas']['destinoenvio'] = 'destinoenvio';
 ?>

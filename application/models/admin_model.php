@@ -408,6 +408,29 @@ class Admin_model extends CI_Model
         return true;
     }
 
+    function getGruposEnvio(){
+        $query = $this->db->query("select * from grupoenvio ");
+         if ($query->num_rows() >= 1){            
+            return $query->result();
+         } else {
+            return null;
+         }
+    }
+
+    function getDestinosEnvio(){
+         $query = $this->db->query("select * from destinoenvio join estado on estado.estadoID = destinoenvio.estadoID ");
+         if ($query->num_rows() >= 1){            
+            return $query->result();
+         } else {
+            return null;
+         }
+    }
+
+    function deleteDestinos($id){
+        $this -> db -> where('grupoID', $id);
+        $this -> db -> delete($this -> tablas['destinoenvio']);
+        return true;
+    }
 
 
 

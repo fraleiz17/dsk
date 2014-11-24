@@ -371,6 +371,46 @@ class TiendaAdmin extends CI_Controller {
     }
         
 
+    function gastosEnvio(){
+        $data['SYS_metaTitle']           = '';
+        $data['SYS_metaKeyWords']       = '';
+        $data['SYS_metaDescription']    = '';  
+        $data['gruposEnvio']    = $this->admin_model->getGruposEnvio();
+        $data['destinos']    = $this->admin_model->getDestinosEnvio();
+        $data['estados']     = $this->defaultdata_model->getEstados();
+        $data['catalogoProductos']     = null;
+        $this->load->view('admin/admin_gastos_view',$data);
+    }
+
+
+    function editGrupo($grupoID){
+        $data = array(
+            'costo' => $this->input->post('costo')
+        );
+        $this->admin_model->updateItem('grupoID',$grupoID,$data,'grupoenvio');
+
+        $estados = $this->input->post('estado');
+        $this->admin_model->deleteDestinos($grupoID,'grupoID');
+                if( $estados != null){
+                    for($i=0;$i<=count($estados)-1;$i++){
+                        
+                        if($estados[$i] != '0'){
+                        $arrTalla= array(
+                            'grupoID'   => $grupoID,
+                            'estadoID' =>$estados[$i]
+                        );
+                            $e = $this->admin_model->insertItem('destinoenvio',$arrTalla);
+                            //var_dump($e);
+                        }
+                        $arrTalla = null;
+                    }
+                }
+
+         
+
+        redirect('admin/tiendaAdmin/gastosEnvio');
+    }
+
     
 
 
