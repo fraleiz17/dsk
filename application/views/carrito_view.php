@@ -1069,7 +1069,7 @@
                                                                                         foreach ($estados as $edo):
                                                                                             ?>
                                                                                             <option
-                                                                                                value="<?php echo $edo->estadoID ?>" <?php echo ($edo->estadoID == $datosPersonales->idEstado) ? 'selected="selected"' : '' ?>><?php echo $edo->nombreEstado ?></option>
+                                                                                                value="<?php echo $edo->estadoID ?>" <?php echo ($edo->estadoID == $datosPersonales->estadoID) ? 'selected="selected"' : '' ?>><?php echo $edo->nombreEstado ?></option>
 
                                                                                         <?php
                                                                                         endforeach;
@@ -1087,7 +1087,7 @@
                                                                         </div>
                                                                     </div>
                                                                     </td>
-                                                                    <td> <p class="sub_cantidad">  $0.00 </p> </td>
+                                                                    <td> <p class="sub_cantidad"> $&nbsp;<?php echo round($costo, 2); ?> </p> </td>
                                                                     </tr>
                                                                      <tr>
                                                                      <th colspan="4">SUBTOTAL</th>
@@ -1099,7 +1099,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <th colspan="4"> TOTAL </th>
-                                                                        <th> $&nbsp;<?php echo $carritototal->totalPrecio; ?> </th>
+                                                                        <th> $&nbsp;<?php echo $carritototal->totalPrecio+ $costo; ?> </th>
                                                                     </tr>
 <?php else: ?>
                                                                     <tr>

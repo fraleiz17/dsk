@@ -294,11 +294,8 @@ class Usuario_model extends CI_Model
     function myInfo($idUsuario)
     {
 
-        $this->db->select($this->tablas['usuariodato'] . '.*,' . $this->tablas['usuariodetalle'] . '.*,' . $this->tablas['usuario'] . '.*');
-        $this->db->join($this->tablas['usuariodato'], $this->tablas['usuariodato'] . '.idUsuario = ' . $this->tablas['usuario'] . '.idUsuario', 'left');
-        $this->db->join($this->tablas['usuariodetalle'], $this->tablas['usuariodetalle'] . '.idUsuario = ' . $this->tablas['usuario'] . '.idUsuario', 'left');
-        $this->db->where($this->tablas['usuario'] . '.idUsuario', $idUsuario);
-        $query = $this->db->get($this->tablas['usuario']);
+        
+        $query = $this->db->query('SELECT `usuariodato`.*, `usuariodetalle`.*, `usuario`.* from usuario LEFT JOIN `usuariodato` ON `usuariodato`.`idUsuario` = `usuario`.`idUsuario` LEFT JOIN `usuariodetalle` ON `usuariodetalle`.`idUsuario` = `usuario`.`idUsuario` WHERE `usuario`.`idUsuario` = '.$idUsuario.' limit 1');
         if ($query->num_rows() == 1) {
             return $query->row();
         } else {
@@ -407,9 +404,11 @@ class Usuario_model extends CI_Model
 
     function getInfoCompleta($idUsuario)
     {
-        $this->db->join($this->tablas['usuariodetalle'], $this->tablas['usuariodetalle'] . '.idUsuario = ' . $this->tablas['usuariodato'] . '.idUsuario', 'left');
-        $this->db->where($this->tablas['usuariodato'] . '.idUsuario', $idUsuario);
-        $query = $this->db->get($this->tablas['usuariodato']);
+       
+        $query = $this->db->query('SELECT * from  usuariodato 
+left JOIN `usuariodetalle` ON `usuariodetalle`.`idUsuario` = `usuariodato`.`idUsuario` 
+WHERE `usuariodato`.`idUsuario` = '.$idUsuario.'
+limit 1');
         if ($query->num_rows() == 1) {
             return $query->row();
         } else {
@@ -572,6 +571,16 @@ $this->output->enable_profiler(FALSE);
         $this->db->delete($table);
     }
 
+    function getCostoEnvio($estadoID){
+         $query = $this->db->query('select costo from grupoenvio join destinoenvio on destinoenvio.grupoID = grupoenvio.grupoID where destinoenvio.estadoID = '.$estadoID.'
+limit 1');
+        if ($query->num_rows() == 1) {
+            $costo = $query->row();
+            return $costo = $costo->costo;
+        } else {
+            return null;
+        }
+    }
 }
 
 ?>

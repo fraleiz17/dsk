@@ -20,7 +20,7 @@ class Perfil_model extends CI_Model{
 		
 		$query = $this->db-> query('SELECT b.razonSocial, b.rfc, b.calle, b.noExterior, b.cp, b.municipio, b.estadoID, b.idPais
 from usuario a INNER JOIN usuariodato b ON a.idUsuario = b.idUsuario 
-where a.idUsuario ='.$idUsuario);
+where a.idUsuario ='.$idUsuario.' limit 1');
 		if ($query->num_rows() == 1){
 			return $query->row();
 		} else {

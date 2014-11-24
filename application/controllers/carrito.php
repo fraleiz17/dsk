@@ -46,7 +46,8 @@ class Carrito extends CI_Controller
         $data['SYS_metaDescription'] = '';
         $data['carrito'] = $this->admin_model->getCarrito($this->session->userdata('idUsuario')); //$this->admin_model->getSingleItem('usuarioID',$this->session->userdata('idUsuario'),'carrito');
         $data['carritototal'] = $this->admin_model->getSingleItem('usuarioID', $this->session->userdata('idUsuario'), 'carritototal');
-        $data['datosPersonales'] = $this->usuario_model->myInfo($this->session->userdata('idUsuario'));
+        $datosPersonales = $this->usuario_model->myInfo($this->session->userdata('idUsuario'));
+        $data['datosPersonales'] = $datosPersonales;
         $data['direcciones'] = $this->usuario_model->getDireccionesEnvioUsuario($this->session->userdata('idUsuario'));
         $data['estados'] = $this->defaultdata_model->getEstados();
         $data['paises'] = $this->defaultdata_model->getPaises();
@@ -55,6 +56,11 @@ class Carrito extends CI_Controller
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
         $carrito = $this->admin_model->getCarrito($this->session->userdata('idUsuario'));
         $carritototal = $this->admin_model->getSingleItem('usuarioID', $this->session->userdata('idUsuario'), 'carritototal');
+        $estadoID = $datosPersonales->estadoID;
+        $costo = $this->usuario_model->getCostoEnvio($estadoID);
+        $data['costo'] = $costo;
+        
+        var_dump($costo);
 
         $productos = 0;
         $precio = 0;
@@ -93,7 +99,7 @@ class Carrito extends CI_Controller
         if ($carritototal->totalPrecio == 0.00) {
             $precio = '10.00';
         } else {
-            $precio = $carritototal->totalPrecio;
+            $precio = $carritototal->totalPrecio + $costo;
         }
         $preference_data = array(
             "items" => array(

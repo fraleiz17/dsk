@@ -17,6 +17,7 @@ class Cuenta extends CI_Controller {
        
         $this->load->model('defaultdata_model');
 		$this->load->model('usuario_model');
+        $this->load->model('admin_model');
         $this->load->model('email_model');
         $this->load->helper(array('form', 'url'));
         $this->load->library('googlemaps');
@@ -119,6 +120,7 @@ class Cuenta extends CI_Controller {
         $data['SYS_metaKeyWords']       = '';
         $data['SYS_metaDescription']    = '';  
         $data['myInfo']    = $this->usuario_model->getMyInfo($this->session->userdata('idUsuario'));
+        
         $data['info']     = $this->usuario_model->getInfoCompleta($this->session->userdata('idUsuario'));
         $data['estados']    = $this->defaultdata_model->getEstados();
         $data['paquetes'] = $this->defaultdata_model->getPaquetes();
@@ -133,6 +135,7 @@ class Cuenta extends CI_Controller {
         }
         $data['seccion'] = 5;
         $data['banner'] = $this->defaultdata_model->getTable('banner');
+        $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
         $this->load->view('usuario/myprofile_view',$data);
     }
 
