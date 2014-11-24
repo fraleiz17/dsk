@@ -59,8 +59,6 @@ class Carrito extends CI_Controller
         $estadoID = $datosPersonales->estadoID;
         $costo = $this->usuario_model->getCostoEnvio($estadoID);
         $data['costo'] = $costo;
-        
-        var_dump($costo);
 
         $productos = 0;
         $precio = 0;
