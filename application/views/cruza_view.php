@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Cruza-Quierounperro.com</title>
+<?php $this->load->view('general/LoginFiles');?>
 <link rel="shortcut icon" href="<?=base_url()?>images/ico.ico" />  
 <link type="text/css" rel="stylesheet" href="<?=base_url()?>css/reset.css" media="screen"></link>
 <link rel="stylesheet" href="<?=base_url()?>css/jPages.css">

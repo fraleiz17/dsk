@@ -101,7 +101,7 @@ class Registro extends CI_Controller {
 </tr> 
 <tr>
 <td style="padding-left:15px;"> 
-<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >Hola: '.$this->input->get('nombre').' </font>
+<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >Hola '.$this->input->get('nombre').': </font>
 <br/>
 <br/>
 
@@ -109,7 +109,7 @@ class Registro extends CI_Controller {
 Gracias por registrate en QuieroUnperro.com<br/>
 Tu usuario ha sido creado correctamente. Te recordamos tus datos de inicio de sesi&oacute;:<br/><br/>
 Correo: '.$this->input->get('correo').' <br/>
-Contrase&nacute;a: * Por seguridad no se muestra. En caso de olvidarla sol&iacute;citala en el portal.<br/><br/>
+Contrase&ntilde;a: * Por seguridad no se muestra. En caso de olvidarla sol&iacute;citala en el portal.<br/><br/>
 Para poder comenzar a disfrutar de todas las herramientas del portal, valida tu cuenta haciendo clic <a href="'.base_url().'registro/activar/'.$confirmationCode.'">aqu&iacute;</a> o copia esta direcci&oacute;n en el explorador:<br/><br/>
 
 '.base_url().'registro/activar/'.$confirmationCode.'

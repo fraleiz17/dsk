@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php $this->load->view('general/LoginFiles');?>
 <title>Adopcion-Quierounperro.com</title>
 <link rel="shortcut icon" href="<?=base_url()?>images/ico.ico" />  
 <link type="text/css" rel="stylesheet" href="<?=base_url()?>css/reset.css" media="screen"></link>

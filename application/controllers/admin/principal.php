@@ -222,7 +222,7 @@ class Principal extends CI_Controller {
         );
         //var_dump($file_data);
 
-        $imagen = $this->file_model->uploadBanner($folder, $file_data, 'banner', false);
+        $imagen = $this->file_model->uploadBanner($folder, $file_data, 'banner', true);
             if (is_array($imagen)) {                // $data['response'] = 'false';
                 $data['error'] = $imagen['error'];
                 //$this -> session -> set_flashdata('custom_error', $imagen['error']);

@@ -1,7 +1,7 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es-419">
 <head>
+
 <?php $this->load->view('general/LoginFiles');?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Preguntas Frecuentes-Quierounperro.com</title>
@@ -99,6 +99,7 @@ if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
 
 
 <?php $this->load->view('general/menu_view')?>
+
 <div class="titulo_seccion">
 PREGUNTAS FRECUENTES
 

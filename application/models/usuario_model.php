@@ -291,7 +291,7 @@ class Usuario_model extends CI_Model
         }
     }
 
-    function myInfo($idUsuario)
+    function myInfo( $idUsuario = null)
     {
 
         
@@ -310,6 +310,7 @@ class Usuario_model extends CI_Model
         $this->db->join($this->tablas['usuariodato'], $this->tablas['usuariodato'] . '.idUsuario = ' . $this->tablas['usuario'] . '.idUsuario', 'left');
         $this->db->join($this->tablas['usuariodetalle'], $this->tablas['usuariodetalle'] . '.idUsuario = ' . $this->tablas['usuario'] . '.idUsuario', 'left');
         $this->db->where($this->tablas['usuario'] . '.idUsuario', $idUsuario);
+        $this->db->limit(1);
         $query = $this->db->get($this->tablas['usuario']);
         if ($query->num_rows() == 1) {
             return $query->row();
