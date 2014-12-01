@@ -222,7 +222,7 @@ class Principal extends CI_Controller {
         );
         //var_dump($file_data);
 
-        $imagen = $this->file_model->uploadBanner($folder, $file_data, 'banner', false);
+        $imagen = $this->file_model->uploadBanner($folder, $file_data, 'banner', true);
             if (is_array($imagen)) {                // $data['response'] = 'false';
                 $data['error'] = $imagen['error'];
                 //$this -> session -> set_flashdata('custom_error', $imagen['error']);
@@ -876,9 +876,9 @@ Para poder comenzar a disfrutar de todas las herramientas del portal, valida tu 
       
         $config['upload_path'] = 'images/raza_mes';
         $config['allowed_types'] = 'gif|jpg|png|jpeg';
-        $config['max_size'] = '5120';
-        $config['max_width'] = '1024';
-        $config['max_height'] = '768';
+        $config['max_size'] = '99999';
+        $config['max_width'] = '99999';
+        $config['max_height'] = '99999';
         $this->upload->initialize($config);
 
         if ($this->upload->do_multi_upload("fotos")) { 
@@ -923,9 +923,9 @@ Para poder comenzar a disfrutar de todas las herramientas del portal, valida tu 
       
         $config['upload_path'] = 'images/curiosos';
         $config['allowed_types'] = 'gif|jpg|png|jpeg';
-        $config['max_size'] = '5120';
-        $config['max_width'] = '1024';
-        $config['max_height'] = '768';
+        $config['max_size'] = '99999';
+        $config['max_width'] = '99999';
+        $config['max_height'] = '99999';
         $this->upload->initialize($config);
 
         if ($this->upload->do_multi_upload("fotos")) { 
@@ -980,9 +980,9 @@ Para poder comenzar a disfrutar de todas las herramientas del portal, valida tu 
       
         $config['upload_path'] = 'images/eventos';
         $config['allowed_types'] = 'gif|jpg|png|jpeg';
-        $config['max_size'] = '5120';
-        $config['max_width'] = '1024';
-        $config['max_height'] = '768';
+        $config['max_size'] = '99999';
+        $config['max_width'] = '99999';
+        $config['max_height'] = '99999';
         $this->upload->initialize($config);
 
         if ($this->upload->do_multi_upload("fotos")) { 
@@ -1024,9 +1024,9 @@ Para poder comenzar a disfrutar de todas las herramientas del portal, valida tu 
       
         $config['upload_path'] = 'images/datos_curiosos';
         $config['allowed_types'] = 'gif|jpg|png|jpeg';
-        $config['max_size'] = '5120';
-        $config['max_width'] = '1024';
-        $config['max_height'] = '768';
+        $config['max_size'] = '99999';
+        $config['max_width'] = '99999';
+        $config['max_height'] = '99999';
         $this->upload->initialize($config);
 
         if ($this->upload->do_multi_upload("fotos")) { 
@@ -1079,9 +1079,9 @@ Para poder comenzar a disfrutar de todas las herramientas del portal, valida tu 
       
         $config['upload_path'] = 'images/datos_curiosos';
         $config['allowed_types'] = 'gif|jpg|png|jpeg';
-        $config['max_size'] = '5120';
-        $config['max_width'] = '1024';
-        $config['max_height'] = '768';
+        $config['max_size'] = '99999';
+        $config['max_width'] = '99999';
+        $config['max_height'] = '99999';
         $this->upload->initialize($config);
 
         if ($this->upload->do_multi_upload("fotos")) { 

@@ -69,9 +69,9 @@ class File_model extends CI_Model {
 		// $config['allowed_types'] = '*';
 
 		// $config['encrypt_name'] = 'TRUE';
-		$config['max_size'] = '5120';
-		$config['max_width'] = '1024';
-		$config['max_height'] = '768';
+		$config['max_size'] = '99999';
+		$config['max_width'] = '99999';
+		$config['max_height'] = '99999';
 
 		$config['file_name'] = $this->name($ori_name, $data['date'], $data['random'], $data['user_id']);
 		$this->upload->initialize($config);
@@ -114,7 +114,7 @@ class File_model extends CI_Model {
 		// $config['allowed_types'] = '*';
 
 		// $config['encrypt_name'] = 'TRUE';
-		$config['max_size'] = '5120';
+		$config['max_size'] = '99999';
 
 		$config['file_name'] = $this->name($ori_name, $data['date'], $data['random'], $data['user_id']);
 		$this->upload->initialize($config);
@@ -177,9 +177,9 @@ class File_model extends CI_Model {
 		// $config['allowed_types'] = '*';
 
 		// $config['encrypt_name'] = 'TRUE';
-		$config['max_size'] = '5120';
-		$config['max_width'] = '2048';
-		$config['max_height'] = '2048';
+		$config['max_size'] = '99999';
+		$config['max_width'] = '99999';
+		$config['max_height'] = '99999';
 
 		$config['file_name'] = $this->name($ori_name, $data['date'], $data['random'], $data['user_id']);
 		$this->upload->initialize($config);
