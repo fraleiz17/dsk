@@ -47,10 +47,14 @@ class Directorio extends CI_Controller {
         $data['paquetes'] = $this->defaultdata_model->getPaquetes();
         $data['razas'] = $this->defaultdata_model->getRazas();
         $data['giros'] = $this->defaultdata_model->getGiros();        
-        $data['user'] = $this->usuario_model->myInfo($this->session->userdata('idUsuario'));        
+                
          if(is_logged()){
             $cupones = $this->usuario_model->getCuponesUsuario($this->session->userdata('idUsuario'));
             $data['cupones'] = $cupones;
+            $data['user'] = $this->usuario_model->myInfo($this->session->userdata('idUsuario'));
+        } else {
+            $data['cupones'] = null;
+            $data['user'] = null;
         }
         
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
