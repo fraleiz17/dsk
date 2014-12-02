@@ -245,9 +245,9 @@ Costo
 <img src="<?=base_url()?>images/pago_lite.png" width="171" height="86"/>
 <?php } elseif($paquete->paqueteID == 2){?>
 <img src="<?=base_url()?>images/pago_regular.png" width="171" height="86"/>
-<?php }else{?>
+<?php }elseif($paquete->paqueteID == 3){?>
 <img src="<?=base_url()?>images/pago_premium.png" width="171" height="86"/>
-<?php  } ?>
+<?php  } else { echo '<label class="titulo_modificaciones" style="color:black; font-size:13px !important;">'.$paquete->nombrePaquete.'</label>';}?>
 </td>
 <!--<td>
 1
