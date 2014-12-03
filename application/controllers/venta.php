@@ -53,6 +53,44 @@ class Venta extends CI_Controller {
         $data['paquetes'] = $this->defaultdata_model->getPaquetes();
         $data['razas'] = $this->defaultdata_model->getRazas();
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
+        $config = array();
+$config['center'] = 'auto';
+$config['zoom'] = 'auto';
+$config['onboundschanged'] = 'if (!centreGot) {
+var mapCentre = map.getCenter();
+marker_0.setOptions({
+position: new google.maps.LatLng(mapCentre.lat(), mapCentre.lng()) 
+});
+} 
+centreGot = true;';
+$config['map_name'] = 'map';
+$config['map_div_id'] = 'map_canvas';
+$this->googlemaps->initialize($config);
+$data['map'] = $this->googlemaps->create_map();
+
+// set up the marker ready for positioning 
+// once we know the users location
+$marker = array();
+$marker['draggable'] = true;
+$marker['ondragend'] = 'updateDatabase(event.latLng.lat(), event.latLng.lng());';
+//$marker['ondragend'] = 'alert(\'You just dropped me at: \' + event.latLng.lat() + \', \' + event.latLng.lng());';
+$this->googlemaps->add_marker($marker);
+
+// mapa
+
+
+$data['mapaSegundo'] = 'mapa_view'; 
+$data['seccion'] = 12;
+$data['banner'] = $this->defaultdata_model->getTable('banner');
+$data['estados'] = $this->defaultdata_model->getEstados();
+$data['paquetes'] = $this->defaultdata_model->getPaquetes();
+$data['razas'] = $this->defaultdata_model->getRazas();
+$data['zona'] = 9;
+$data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
+$data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
+$data['paises'] = $this->defaultdata_model->getPaises();
+
+
         if(is_logged()){
          $cupones = $this->usuario_model->getCuponesUsuario($this->session->userdata('idUsuario'));
          $data['cupones'] = $cupones;
