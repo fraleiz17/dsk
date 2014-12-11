@@ -352,9 +352,10 @@
     <br/>
 
     <p class="margen_15_left_mini">
-        Descripción*:<textarea required="required" class="background_gris_mini preview validate[required]" name="descripcion" id="descripcion" cols="95" rows="3"></textarea><br />
-    Caracteres:<input name="meh" type="text" id="meh" size="3" readonly="readonly" />
+        Descripción*:&nbsp;<textarea required="required" class="background_gris_mini preview validate[required]" name="descripcion" id="descripcion" cols="95" rows="3"></textarea><br />
+    <div style="margin-top:8px;margin-left:16px;">Caracteres:&nbsp;&nbsp;<input name="meh" type="text" id="meh" size="3" readonly="readonly" />
     <input name="caracteresN" type="text" id="caracteresN" size="3" readonly="readonly" />
+    </div>
     </p>
     <br/>
     <div id="links_videos">
@@ -681,11 +682,11 @@ $c = 0;
 </th>
 </tr>
 <tr> 
-<td colspan="2">
+<th colspan="2" style="background:#FFF;color:#000;">
 <p>IVA:</p>
 </td>
 <td>
-<p class="iva"> $<label id="niva" class="niva"></label> </p>
+<p class="totales"> $<label id="niva" class="niva"></label> </p>
 </td>
 </tr>
 <tr>
