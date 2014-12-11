@@ -2,13 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<?php $this->load->view('general/LoginFiles');?>
+
 <title>Adopcion-Quierounperro.com</title>
 <link rel="shortcut icon" href="<?=base_url()?>images/ico.ico" />  
 <link type="text/css" rel="stylesheet" href="<?=base_url()?>css/reset.css" media="screen"></link>
 <link rel="stylesheet" href="<?=base_url()?>css/jPages.css">
 <link type="text/css" rel="stylesheet" href="<?=base_url()?>css/general.css" media="screen"></link> <link type="text/css" rel="stylesheet" href="<?=base_url()?>css/venta.css" media="screen"></link>
 <link type="text/css" rel="stylesheet" href="<?=base_url()?>css/adopcion.css" media="screen"></link>
+<?php $this->load->view('general/LoginFiles');?>
    <script src="<?=base_url()?>js/jquery-1.10.2.js"></script>
      <script src="<?=base_url()?>js/jPages.js"></script>
      <script src="<?=base_url()?>js/funciones_venta.js"></script>
