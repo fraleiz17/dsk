@@ -378,8 +378,8 @@ $(document).ready(function()
                 url: "<?php echo base_url('venta/upload_file') ?>",
                 allowedTypes: "png,jpg,jpeg",
                 fileName: "file_form",
-                multiple: true,
-                showFileCounter: false,
+                maxNumberOfFiles: 2,
+                showFileCounter: true,
                 returnType: 'json',
                 showStatusAfterSuccess: false,
                 onSuccess: function(files, data, xhr)
@@ -522,7 +522,7 @@ $(document).ready(function()
         </div>
         <br/>
         <strong>
-            Precio: <label id="precioPrev"></label>
+            Precio: $ <label id="precioPrev"></label>
         </strong>
         <br/>
         <font> Fecha de publicacion:<label id="fechaPrev"><?=date('d-m-Y');?></label></font>
@@ -659,7 +659,7 @@ $c = 0;
             
             <?php endif;
                 endforeach; ?>
-            <input type="radio" name="radiog_dark" id="radio_pago<?=$c?>" class="css-checkbox cupon" checked="checked" value="0" data-rel="0>"><label for="radio_pago<?=$c?>" class="css-label radGroup2"> No usar cupones</label>
+            <input type="radio" name="radiog_dark" id="radio_pago<?=$c?>" class="css-checkbox cupon"  value="0" data-rel="0"/><label for="radio_pago<?=$c?>" class="css-label radGroup2"> No usar cupones</label>
             <?php else:
             echo 'No hay cupones disponibles';
             endif;  ?>
@@ -682,12 +682,12 @@ $c = 0;
 </th>
 </tr>
 <tr> 
-<th colspan="2" style="background:#FFF;color:#000;">
+<th colspan="2">
 <p>IVA:</p>
 </td>
-<td>
+<th>
 <p class="totales"> $<label id="niva" class="niva"></label> </p>
-</td>
+</th>
 </tr>
 <tr>
 <th colspan="2">
@@ -858,8 +858,8 @@ TOTAL
             $('#nvideos').html(paquete_val.videos);
             $('#ncupones').html(paquete_val.cupones);
             $('#ncaracteres').html(paquete_val.caracteres);
-            $('#subtotal').html(paquete_val.precio - ( paquete_val.precio * .17));
-			var iva = paquete_val.precio * .17;			
+            $('#subtotal').html((paquete_val.precio - ( paquete_val.precio * .16)).toFixed(2));
+			var iva = paquete_val.precio * .16;			
 			$('#niva').html(iva.toFixed(2));
             $('#totalConDescuento').html(paquete_val.precio);
             $('#nprecio').html(paquete_val.precio);
@@ -870,6 +870,7 @@ TOTAL
             console.log(cantidadVideos+' cantidad de videos')
             if(cantidadVideos == 0){
                 $('#links_videos').hide();
+                $('#ver_video').hide();
             }
             
             
@@ -889,6 +890,8 @@ TOTAL
             contador--;
         return false;
          });
+
+
             console.log(paquete_val.videos);
             $('#contenedor_publicar_anuncio').fadeIn();
             <?php endif;?>
@@ -922,7 +925,7 @@ TOTAL
         
         $('#cerrarPublicacion').on('click', function() {
             oculta('contenedor_publicar_anuncio');
-            window.location.href="<?=base_url()?>principal/miPerfil";
+            //window.location.href="<?=base_url()?>principal/miPerfil";
         });
         
         $("body").on("click",".del", function(e){
@@ -957,6 +960,7 @@ TOTAL
             if(valor == 6 || valor == 7){
                 $('#precio').val('0.00');
                 $('#precio').attr('disabled', 'disabled');
+
             } else {
                 $('#precio').removeAttr('disabled');
             }
@@ -974,7 +978,7 @@ TOTAL
                     dataType: 'html',
                     data: form.serialize(),
                     success: function(data){
-                        $('#cerrarPublicacion').hide();
+                        //$('#cerrarPublicacion').hide();
                         $('#iframe').append(data);
                     }
                 });
