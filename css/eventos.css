@@ -42,7 +42,7 @@ color: #FFFFFF;
 
 	}
 .dia{
-	font-size:28px;
+	font-size:23px;
 	margin-top:10px;
 	}
 .mes{
@@ -108,7 +108,7 @@ color: #FFFFFF;
 	margin-top:20px;
 	display:inline-block;
 	width: 203px;
-	height:609px;
+	height:470px;
 	border-left: 3px solid #707173;
 	margin-left:10px;
 	overflow-y:auto;
