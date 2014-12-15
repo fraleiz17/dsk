@@ -379,7 +379,9 @@ $data['paises'] = $this->defaultdata_model->getPaises();
                 </div>
             </div>
 
-            <a href="'.base_url().'principal/miPerfil" style="text-decoration:none; float:right;">Cerrar Proceso</a>
+            <div style="margin-right:120px;margin-top:10px;"><a href="'.$this -> agent -> referrer().'" style="text-decoration:none; float:right;">Cerrar Proceso</a></div>
+
+            
                   ';
 
         } else {
@@ -842,7 +844,7 @@ function editAanuncio() {
                 </div>
             </div>
 
-            <a href="'.base_url().'principal/miPerfil" style="text-decoration:none; float:right;">Cerrar Proceso</a>
+            <div style="margin-right:120px;margin-top:10px;"><a href="'.$this -> agent -> referrer().'" style="text-decoration:none; float:right;">Cerrar Proceso</a></div>
                   ';
 
         } else {

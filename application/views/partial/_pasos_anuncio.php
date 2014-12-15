@@ -706,13 +706,14 @@ TOTAL
 </br>
 </br>
 </br>
-<div>
-                 <ul class="morado_mini" id="btn_sig" style="
-    padding-left: 704px;">
-                                <li class="sig_paso save">
-                                  <input type="submit" value="Publicar"/>
-                                </li>
-                            </ul>
+<div style="width:840px;" >
+    <div style="float:right;widht: 136px;margin-left: 700px;margin-right: 58px;width: 136px;display: block;overflow: hidden;">
+        <ul class="morado_mini" id="btn_sig" style="">
+            <li class="sig_paso save" style="width:134px;height:42px;color:#FFFFFF;text-align:center;padding-top:10px;">
+                <input type="submit" value="Publicar"/>
+            </li>
+        </ul>
+    </div>
               <br/>
                             <br/>
                             <div id="msj_paso" style="font-size: 10px;display: inline-block; vertical-align: bottom; height: 38px;"></div>
