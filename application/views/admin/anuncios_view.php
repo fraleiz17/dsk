@@ -207,20 +207,23 @@ function buscar_videos(id){
                  success: function(result)
                 { 
                     $("#you_tube").empty();
-
+                    //$(".boton_naranja_dos").fadeOut();
                     var data = result.data;
-
-                    if (result.count < 1) {
+                    if (result.count = 0) {
+                        alert('meh');
+                        $("#video").fadeOut();
                     
                     }
                     for (var i = 0; i < result.count; i++)
                     {
-						
-                       
+						if(data[i].link != ''){
+                       //$(".boton_naranja_dos").fadeIn();
                         var video=$('#you_tube');
 						var direccion=$('<iframe src="'+data[i].link+'"></iframe> <br/><br/>');
 						    video.append(direccion);
-                        
+                        } else {
+                            $(".boton_naranja_dos").fadeOut();
+                        }
             }
             
     }

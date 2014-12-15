@@ -275,7 +275,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         );
 
         $publicacionID = $this->defaultdata_model->insertItem('publicaciones', $dataPublicacion);
-
+        $this->notificacionAdmin($this->input->post('seccion'),$this->input->post('titulo'),$publicacionID);
         //VIDEOS PUBLICACION
 
         
@@ -357,7 +357,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
             'productoID' => $publicacionID
         );
         $compraDetalle = $this->defaultdata_model->insertItem('compradetalle', $compradetalle);
-        $this->notificacionAdmin($this->input->post('seccion'),$this->input->post('titulo'),$publicacionID);
+        
 
         if($precio_total <= 00.00){
         $this->defaultdata_model->updateItem('compraID', $compraID, $data = array('pagado' => 1), 'compra');
@@ -925,7 +925,7 @@ function editAanuncio() {
 <br/>
 
 <font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
-El anuncio anuncio <strong>"'.$titulo.'"</strong> con fecha de publicaci&oacute; '.date('Y-m-d').' en la secci&oacute; '.$datos->seccionNombre.', ha sido adquirido y está esperando ser aprobado.<br/><br/>
+El anuncio anuncio <strong>"'.$titulo.'"</strong> con fecha de publicaci&oacute; '.date('Y-m-d').' en la secci&oacute;n '.$datos->seccionNombre.', ha sido adquirido y está esperando ser aprobado.<br/><br/>
 <br/><br/>
 
 </font>
@@ -951,6 +951,59 @@ El anuncio anuncio <strong>"'.$titulo.'"</strong> con fecha de publicaci&oacute;
 
 ';
 $this->email_model->send_email('', 'marthahdez2@gmail.com', 'Se ha publicado un nuevo anuncio en QUP', $mensaje);
+
+$mensaje2 = '
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Notificacion-QuieroUnPerro.com</title>
+
+</head>
+
+<body>
+<table width="647" align="center">
+<tr>
+<td width="231" height="129" colspan="2" valign="top">
+<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
+</td>
+</tr>
+<!-- <tr>
+<td align="center"><h4 style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;">¡Bienvenido a QuieroUnPerro.com!</h4></td>
+</tr> -->
+<tr>
+<td style="padding-left:15px;"> 
+<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >Hola '.$this->session->userdata('nombre').'! </font>
+<br/>
+<br/>
+
+<font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
+Tu anuncio <strong>"'.$titulo.'"</strong> con fecha de publicaci&oacute; '.date('Y-m-d').' en la secci&oacute;n '.$datos->seccionNombre.', está esperando ser aprobado.<br/><br/>
+<br/><br/>
+Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
+</font>
+<p> </p>
+</td>
+</tr>
+
+<tr>
+<td colspan="7" >
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;"> ¡Muchas Gracias! </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:12px; padding-left:15px;"> El Equipo de QuieroUnPerro.com </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:10px; padding-left:15px;"> Todos los derechos reservados '.date('Y').' </font>
+</td>
+</tr>
+</table>
+
+
+
+</body>
+</html>
+
+';
+$this->email_model->send_email('', $this->session->userdata('correo'), 'Has publicado un anuncio en QUP', $mensaje2);
 return true;
 
     }

@@ -196,6 +196,7 @@ class Admin_model extends CI_Model
         }
 
         $this->db->where("p.vigente", 1);
+        $this->db->order_by("p.fechaCreacion", "asc");
 
         $resultSet = $this->db->get();
 

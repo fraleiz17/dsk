@@ -36,7 +36,7 @@
 <div class="titulo_de_pasos_mini"> PUBLICAR ANUNCIO</div>
 <div class="instrucciones_pasos_mini">Selecciona la sección de publicación</div>
 <div class="contenido_indicacion_mini">
-<form id="p_form" name="p_form" method="post" action="<?=base_url()?>venta/anuncio" enctype="multipart/form-data">
+<form id="p_form" name="p_form" method="post" action="#" enctype="multipart/form-data">
 <!--pasos-->
 <!--paso uno-->
 <div id="paso_uno" class="paso view_step" style="height: 190px;">

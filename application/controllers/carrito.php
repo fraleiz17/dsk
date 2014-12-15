@@ -111,7 +111,7 @@ class Carrito extends CI_Controller
             "payer" => array(
                 'name' => $this->session->userdata('nombre'),
                 'surname' => $this->session->userdata('apellido'),
-                'email' => $this->session->userdata('email')
+                'email' => $this->session->userdata('correo')
             ),
             "back_urls" => array(
                 
