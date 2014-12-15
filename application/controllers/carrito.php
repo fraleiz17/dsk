@@ -53,6 +53,15 @@ class Carrito extends CI_Controller
         $data['paises'] = $this->defaultdata_model->getPaises();
         $data['cupones'] = $this->usuario_model->getCuponesUsuario($this->session->userdata('idUsuario'), 1);
         $data['seccion'] = 2;
+        $data['paquetes'] = $this->defaultdata_model->getPaquetes();
+        $data['razas'] = $this->defaultdata_model->getRazas();
+        $data['banner'] = $this->defaultdata_model->getTable('banner');
+        if(is_logged()){
+         $cupones = $this->usuario_model->getCuponesUsuario($this->session->userdata('idUsuario'));
+         $data['cupones'] = $cupones;
+        } else {
+            $data['cupones'] = null;
+        }
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
         $carrito = $this->admin_model->getCarrito($this->session->userdata('idUsuario'));
         $carritototal = $this->admin_model->getSingleItem('usuarioID', $this->session->userdata('idUsuario'), 'carritototal');

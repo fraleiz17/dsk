@@ -82,22 +82,32 @@ function buscar_imagen(id){
     </div>
     <div class="contactar_al_aunuciante">
         <font class="titulo_anuncio_publicado"> DENUNCIA DE CONTENIDO </font>
-        <div class="datos_anunciante_dos">
+        <div class="datos_anunciante_doss">
+        <strong>Todas las denuncias son an&oacute;nimas.</strong><br>
+        Selecciona la razón por la cual deseas denunciar este anuncio y/o anunciante:
+        </br>
    
 </div>
-<font class="titulo_anuncio_publicado"> PROPORCIONA TU INFORMACIÓN </font>
+<font class="titulo_anuncio_publicado"> Motivos</font>
 </br>
 </br>
 <form id="denuncia_form">
-    <input type="text" class="formu_contacto" name="nombre_denuncia" id="nombre_denuncia"
+    <input type="hidden" class="formu_contacto" name="nombre_denuncia" id="nombre_denuncia"
     value="<?php echo $this->session->userdata('nombre')?>" size="44"/>
-    <input type="text" class="formu_contacto" name="mail_denuncia" id="mail_denuncia"
+    <input type="hidden" class="formu_contacto" name="mail_denuncia" id="mail_denuncia"
     value="<?php echo $this->session->userdata('correo')?>" size="44"/>
-    <input type="text" class="formu_contacto" name="asunto_denuncia" id="asunto_denuncia"
+    <input type="hidden" class="formu_contacto" name="asunto_denuncia" id="asunto_denuncia"
     onfocus="clear_textbox('asunto_denuncia', 'Asunto')" value="Asunto" size="44"/>
-    <textarea cols="50" onfocus="clear_textbox('comentarios_denuncia', 'Comentarios')" name="comentarios_denuncia" id="comentarios_denuncia"
-    class="formu_contacto" rows="5">Comentarios</textarea>
+    <!-- <textarea cols="50" onfocus="clear_textbox('comentarios_denuncia', 'Comentarios')" name="comentarios_denuncia" id="comentarios_denuncia"
+    class="formu_contacto" rows="5">Comentarios</textarea> <?=base_url()?>content/terminos_y_condiciones.pdf -->
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia1" value="Fotos Inapropiadas"><label>Fotos Inapropiadas</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia2" value="Contenido Violento"><label>Fotos Inapropiadas</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia3" value="Informaci&oacute;n de anuncio falsa"><label>Informaci&oacute;n de anuncio falsa</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia4" value="Fraude"><label>Fraude</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia5" value="Datos de contacto falsos"><label>Datos de contacto falsos</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia6" value="Otro"><label>Otro</label></br>
 </br>
+<label><a href="" style="text-decoration:none;">T&eacute;rminos y Condiciones de Uso</label></br>
 </br>
 <ul class="boton_naranja_tres">
     <li>
