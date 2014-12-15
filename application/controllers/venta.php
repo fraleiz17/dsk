@@ -13,6 +13,7 @@ class Venta extends CI_Controller {
 
         $this->load->model('defaultdata_model');
         $this->load->model('admin_model');
+        $this->load->model('email_model');
         $this->load->model('venta_model');
         $this->load->model('usuario_model');
         $this->load->helper(array('form', 'url'));
@@ -356,6 +357,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
             'productoID' => $publicacionID
         );
         $compraDetalle = $this->defaultdata_model->insertItem('compradetalle', $compradetalle);
+        $this->notificacionAdmin($this->input->post('seccion'),$this->input->post('titulo'),$publicacionID);
 
         if($precio_total <= 00.00){
         $this->defaultdata_model->updateItem('compraID', $compraID, $data = array('pagado' => 1), 'compra');
@@ -406,7 +408,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         $preference = $this->mercadopago->create_preference($preference_data);
          if ($this->db->trans_status() === FALSE) {
             $this->db->trans_rollback();
-            echo 'rollback';
+            echo 'Vuelva a intentarlo.';
             } else {
             $this->db->trans_commit();
             //TODO hay que cambiar a init_point
@@ -891,6 +893,64 @@ function editAanuncio() {
         $numeroVisitas = $visitas->numeroVisitas + 1;
         $this->defaultdata_model->updateItem('publicacionID', $publicacionID, $data = array('numeroVisitas' => $numeroVisitas), 'publicaciones');
         return true;
+    }
+
+    function notificacionAdmin($seccion, $titulo,$publicacionID){
+        $datos = $this->admin_model->getDatosAnunciante($publicacionID);
+       $mensaje = '
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Notificacion-QuieroUnPerro.com</title>
+
+</head>
+
+<body>
+<table width="647" align="center">
+<tr>
+<td width="231" height="129" colspan="2" valign="top">
+<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
+</td>
+</tr>
+<!-- <tr>
+<td align="center"><h4 style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;">¡Bienvenido a QuieroUnPerro.com!</h4></td>
+</tr> -->
+<tr>
+<td style="padding-left:15px;"> 
+<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >Un nuevo anuncio ha sido publicado en QUP </font>
+<br/>
+<br/>
+
+<font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
+El anuncio anuncio <strong>"'.$titulo.'"</strong> con fecha de publicaci&oacute; '.date('Y-m-d').' en la secci&oacute; '.$datos->seccionNombre.', ha sido adquirido y está esperando ser aprobado.<br/><br/>
+<br/><br/>
+
+</font>
+<p> </p>
+</td>
+</tr>
+
+<tr>
+<td colspan="7" >
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;"> ¡Muchas Gracias! </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:12px; padding-left:15px;"> El Equipo de QuieroUnPerro.com </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:10px; padding-left:15px;"> Todos los derechos reservados '.date('Y').' </font>
+</td>
+</tr>
+</table>
+
+
+
+</body>
+</html>
+
+';
+$this->email_model->send_email('', 'marthahdez2@gmail.com', 'Se ha publicado un nuevo anuncio en QUP', $mensaje);
+return true;
+
     }
 
 
