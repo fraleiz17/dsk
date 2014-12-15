@@ -454,6 +454,68 @@ class Principal extends CI_Controller {
 <br/>
 
 <font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
+Tu anuncio <strong>"'.$datos->titulo.'"</strong> con fecha de publicaci&oacute; '.$datos->fechaCreacion.' en la secci&oacute; '.$datos->seccionNombre.', ha sido aprobado para publicarse en esta secci&oacute;n.<br/><br/>
+<br/><br/>
+Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
+</font>
+<p> </p>
+</td>
+</tr>
+
+<tr>
+<td colspan="7" >
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;"> ¡Muchas Gracias! </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:12px; padding-left:15px;"> El Equipo de QuieroUnPerro.com </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:10px; padding-left:15px;"> Todos los derechos reservados '.date('Y').' </font>
+</td>
+</tr>
+</table>
+
+
+
+</body>
+</html>
+
+';
+$this->email_model->send_email('', $datos->correo, 'Ha sido aprobado tu anuncio en QUP: '.$datos->titulo, $mensaje);
+
+
+        echo json_encode($aprobar);
+    }
+
+
+    function declinarAnuncio() {
+        $publicacionID = $this->input->post('publicacionID');
+        $aprobar =  $this->admin_model->updateItem('publicacionID', $publicacionID, $data = array('aprobada' => 2), 'publicaciones');
+        $datos = $this->admin_model->getDatosAnunciante($publicacionID);
+        $mensaje = '
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Notificacion-QuieroUnPerro.com</title>
+
+</head>
+
+<body>
+<table width="647" align="center">
+<tr>
+<td width="231" height="129" colspan="2" valign="top">
+<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
+</td>
+</tr>
+<!-- <tr>
+<td align="center"><h4 style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;">¡Bienvenido a QuieroUnPerro.com!</h4></td>
+</tr> -->
+<tr>
+<td style="padding-left:15px;"> 
+<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >Hola: '.$datos->nombre.' </font>
+<br/>
+<br/>
+
+<font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
 Se ha detectado que tu anuncio <strong>"'.$datos->titulo.'"</strong> con fecha de publicaci&oacute; '.$datos->fechaCreacion.' en la secci&oacute; '.$datos->seccionNombre.', viola uno o m&aacute;s de nuestros t&eacute;rminos y condiciones de uso.<br/><br/>
 Tu anuncio no ha sido aprobado para publicarse en esta secci&oacute;n, pero puedes editarlo eintentarlo nuevamente. Solo ve la la secc&ocuten de Administrador de Anuncios, en Mi Perfil.<br/><br/>
 <br/><br/>
@@ -481,70 +543,8 @@ Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
 </html>
 
 ';
-$this->email_model->send_email('', $datos->correo, 'Ha sido aprobado tu anuncio en QUP: '.$datos->titulo, $mensaje);
 
 
-        echo json_encode($aprobar);
-    }
-
-
-    function declinarAnuncio() {
-        $publicacionID = $this->input->post('publicacionID');
-        $aprobar =  $this->admin_model->updateItem('publicacionID', $publicacionID, $data = array('aprobada' => 2), 'publicaciones');
-        $datos = $this->admin_model->getDatosAnunciante($publicacionID);
-
-
-$mensaje = '
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Notificacion-QuieroUnPerro.com</title>
-
-</head>
-
-<body>
-<table width="647" align="center">
-<tr>
-<td width="231" height="129" colspan="2" valign="top">
-<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
-</td>
-</tr>
-<!-- <tr>
-<td align="center"><h4 style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;">¡Bienvenido a QuieroUnPerro.com!</h4></td>
-</tr> -->
-<tr>
-<td style="padding-left:15px;"> 
-<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >Hola: '.$datos->nombre.' </font>
-<br/>
-<br/>
-
-<font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
-Tu anuncio <strong>"'.$datos->titulo.'"</strong> con fecha de publicaci&oacute; '.$datos->fechaCreacion.' en la secci&oacute; '.$datos->seccionNombre.', ha sido aprobado para publicarse en esta secci&oacute;n.<br/><br/>
-<br/><br/>
-Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
-</font>
-<p> </p>
-</td>
-</tr>
-
-<tr>
-<td colspan="7" >
-<font style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;"> ¡Muchas Gracias! </font>
-<br/>
-<font style=" font-family:Verdana, Geneva, sans-serif; font-size:12px; padding-left:15px;"> El Equipo de QuieroUnPerro.com </font>
-<br/>
-<font style=" font-family:Verdana, Geneva, sans-serif; font-size:10px; padding-left:15px;"> Todos los derechos reservados '.date('Y').' </font>
-</td>
-</tr>
-</table>
-
-
-
-</body>
-</html>
-
-';
 $this->email_model->send_email('', $datos->correo, 'Ha sido declinado tu anuncio en QUP: '.$datos->titulo, $mensaje);
 
 
