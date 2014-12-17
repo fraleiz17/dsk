@@ -399,3 +399,16 @@ float: left;
 .mensaje{
 	width:580px;
 	padding:10px;}
+
+.titulo_seccion{
+	font-size:60px;
+	margin: 0 auto; 
+	width: 990px;
+	max-width:990px;
+	font-family:"titulos";
+	color:#7EA715;
+	margin-top: 15px;
+    height: 60px;
+    line-height: 1em;
+
+	}
