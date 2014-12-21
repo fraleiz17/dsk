@@ -692,7 +692,7 @@
 <div id="espacio_izquierda" class="seccion_izquierda_secciones">
 <ul class="iconos" id="iconos_grandes">
         <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  onclick="window.location='<?= base_url() ?>carrito';" <?php else: ?>  <?php endif; ?>>
-            <div class="indicadores"> 
+            <div class="indicadores" style="margin-top: 78px;margin-left: 60px;"> 
                 <?php echo $carritoT ?>
                 
             </div> 
@@ -704,7 +704,7 @@
         
         
         
-            <div class="indicador">
+            <div class="indicador" style="margin-top: 78px;margin-left: 60px;">
              <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
              <img src="<?php echo base_url() ?>images/indicador_si.png" title="Ya estas logueado">
              <?php else: ?>
@@ -714,7 +714,7 @@
             <img src="<?php echo base_url() ?>images/sesion.png"/></li> 
             
         <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  <?php else: ?>onclick="muestra('contenedor_registro');" <?php endif; ?>>
-            <div class="indicador"> 
+            <div class="indicador" style="margin-top: 78px;margin-left: 60px;"> 
             <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
              <img src="<?php echo base_url() ?>images/indicador_si.png" title="Ya estas registrado">
              <?php else: ?>

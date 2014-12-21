@@ -39,7 +39,10 @@ if ($keyUser === FALSE || ($keyUser !== FALSE && $tipoUsuario !== 0)):
 
         .principal li ul li a:hover {
             color: #FFF;
+            background-color: #C6A7D9;
         }
+
+
 
         .principal li:hover > ul li {
             height: 25px;
@@ -207,8 +210,8 @@ if ($keyUser === FALSE || ($keyUser !== FALSE && $tipoUsuario !== 0)):
                 </li>
                 <li>
                     <a href="<?php echo base_url() ?>adopcion"> Adopción </a>
-                    <ul style="display: block;">
-                        <li><a href="<?php echo base_url('asociacion') ?>">Asociaciones</a></li>
+                    <ul style="display: block; margin-left:-30px; ">
+                        <li><a style=""href="<?php echo base_url('asociacion') ?>">Asociaciones</a></li>
                     </ul>
                 </li>
                 <li>
