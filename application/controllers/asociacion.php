@@ -12,6 +12,7 @@ class Asociacion extends CI_Controller {
         $this->load->model('defaultdata_model');
         $this->load->model('admin_model');
         $this->load->model('usuario_model');
+        $this->load->library('googlemaps');
         $this->load->helper(array('form', 'url'));
 
         if (!is_authorized(array(1, 2, 3), 5, $this->session->userdata('nivel'), $this->session->userdata('rol'))) {
