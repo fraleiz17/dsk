@@ -12,7 +12,13 @@
         oculta('contenedor_registro');
         <?php endif; ?>
 
-      
+        $('#recuperarcontrasena').submit(function() {
+        $(".recuperar").fadeOut(350, function(){
+            $(".enviando").show();
+        });
+    });
+
+      });
 </script>
 
 
@@ -105,9 +111,15 @@
             </div>
 
                 
-				<ul class="morado_reg">
+				<ul class="morado_reg recuperar">
                 <li>
                    <input type="submit" value="Recuperar" class="el_submit"/>
+                </li>
+            </ul>
+
+            <ul class="enviando" style="display:none;">
+                <li>
+                   Enviando informacion
                 </li>
             </ul>
                 

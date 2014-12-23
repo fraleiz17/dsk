@@ -26,15 +26,63 @@ class Recuperarcontrasena extends CI_Controller{
 			$this->usuario_model->insertNewConfirmationCode($usuario, $this->usuario_model->getNewConfirmationCode($usuario));
 			$CC = $this->usuario_model->getMyConfirmationCode($usuario);
 			//var_dump($CC,$usuario);
-			$mensaje = "
-				Hola ".$CC->nombre.", ha solicitado un cambio de contraseña. <br/>Para efectuar el cambio, por favor, ingrese al enlace más abajo mostrado y cambie su contraseña.<br/>
-				Este enlace tiene una validez de <strong>sólo 24 horas</strong>, después de esto, tendrá que solicitar otro cambio en caso de que no lo haya efectuado.
-				<br>
-				".base_url()."recuperarcontrasena/doChange/".$CC->codigoConfirmacion.time()."
-				<br>
-				<br/>En caso de que usted no haya solicitado este cambio, simplemente ignore este correo y su cuenta permancerá segura.
-			";
-			$this->email_model->send_email(null, $CC->correo, 'Cambio de contraseña', $mensaje);
+			
+
+			$mensaje = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Notificacion-QuieroUnPerro.com</title>
+
+</head>
+
+<body>
+<table width="647" align="center">
+<tr>
+<td width="231" height="129" colspan="2" valign="top">
+<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
+</td>
+</tr>
+<tr>
+<td align="center"><h4 style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;"></h4></td>
+</tr> 
+<tr>
+<td style="padding-left:15px;"> 
+<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >Hola '.$CC->nombre.': </font>
+<br/>
+<br/>
+
+<font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
+Has solicitado un cambio de contraseña. <br/><br/>
+Para efectuar el cambio, por favor, ingrese al enlace más abajo mostrado y cambie su contraseña.<br/><br/>
+Este enlace tiene una validez de <strong>sólo 24 horas</strong>, después de esto, tendrá que solicitar otro cambio en caso de que no lo haya efectuado.
+<br><br/>
+'.base_url().'recuperarcontrasena/doChange/'.$CC->codigoConfirmacion.time().'
+<br><br/>En caso de que usted no haya solicitado este cambio, simplemente ignore este correo y su cuenta permancerá segura.
+<br/><br/>
+
+</font>
+<p> </p>
+</td>
+</tr>
+
+<tr>
+<td colspan="7" >
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;"> ¡Muchas Gracias! </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:12px; padding-left:15px;"> El Equipo de QuieroUnPerro.com </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:10px; padding-left:15px;"> Todos los derechos reservados '.date('Y').' </font>
+</td>
+</tr>
+</table>
+
+
+
+</body>
+</html>
+';
+			$this->email_model->send_email(null, $CC->correo, 'Cambio de contraseña en QUP', $mensaje);
 			$data['email'] = $CC->correo;
 			$data['response'] = true;
 			$data['cambioContrasena'] = true;
