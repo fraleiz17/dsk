@@ -1,5 +1,5 @@
 
-<?php $this->load->view('general/LoginFiles');?>
+
 <?php
 $this->load->view('general/general_header_view', array('title' => 'Venta',
   'links'                                                      => array('venta'), 'scripts' => array('funciones_venta')))
@@ -38,7 +38,7 @@ function buscar_imagen(id){
    
   
 
-
+<?php $this->load->view('general/LoginFiles');?>
 <?php $this->load->view('general/menu_view')?>
 <div class="contenedor_contactar" id="contenedor_contactar" style=" display:none;">
     <div class="contenedor_cerrar_contactar">

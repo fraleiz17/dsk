@@ -293,9 +293,6 @@ centreGot = true;';
 $config['map_name'] = 'map';
 $config['map_div_id'] = 'map_canvas';
 $this->googlemaps->initialize($config);
-$data['map'] = $this->googlemaps->create_map();
-
-
 // set up the marker ready for positioning 
 // once we know the users location
 $marker = array();
@@ -303,6 +300,10 @@ $marker['draggable'] = true;
 $marker['ondragend'] = 'updateDatabase(event.latLng.lat(), event.latLng.lng());';
 //$marker['ondragend'] = 'alert(\'You just dropped me at: \' + event.latLng.lat() + \', \' + event.latLng.lng());';
 $this->googlemaps->add_marker($marker);
+$data['map'] = $this->googlemaps->create_map();
+
+
+
 
 // mapa
 

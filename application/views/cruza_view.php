@@ -11,7 +11,6 @@
 <link type="text/css" rel="stylesheet" href="<?=base_url()?>css/general.css" media="screen"></link> <link type="text/css" rel="stylesheet" href="<?=base_url()?>css/venta.css" media="screen"></link>
 <link type="text/css" rel="stylesheet" href="<?=base_url()?>css/cruza.css" media="screen"></link>
 
-<?php $this->load->view('general/LoginFiles');?>
    <script src="<?=base_url()?>js/jquery-1.10.2.js"></script>
      <script src="<?=base_url()?>js/jPages.js"></script>
      <script src="<?=base_url()?>js/funciones_venta.js"></script>
@@ -233,7 +232,7 @@ que el nombre del criador esté en el certificado.
 </div>
 
 
-
+<?php $this->load->view('general/LoginFiles');?>
 <?php $this->load->view('general/menu_view', array('seccion' => $seccion)) ?>
 </div>
 

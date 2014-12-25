@@ -5,9 +5,8 @@ $this->load->view('general/general_header_view', array('title' => 'Asociaciones 
         'directorio')))
 ?>
 
-<?php $this->load->view('general/menu_view', array('seccion' => $seccion)) ?>
-
 <?php $this->load->view('general/LoginFiles');?>
+<?php $this->load->view('general/menu_view', array('seccion' => $seccion)) ?>
 <div class="titulo_seccion">
     ASOCIACIONES PROTECTORAS
 </div>

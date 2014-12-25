@@ -53,7 +53,6 @@
 
          function ajaxValidationCallback(status, form, json, options) {
             if (status === true) {
-
                  var data = json;
                 console.log(data.response);
                 if (data.response == true && data.cambioContrasena == false) {
