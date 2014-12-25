@@ -80,12 +80,13 @@ function buscar_imagen(id){
     <div class="contenedor_cerrar_contactar">
         <img src="<?php echo base_url()?>images/cerrar_anuncio_gris.png" onclick="oculta('contenedor_denunciar');"/>
     </div>
-    <div class="contactar_al_aunuciante">
-        <font class="titulo_anuncio_publicado"> DENUNCIA DE CONTENIDO </font>
+    <div class="contactar_al_aunuciante" style="height:383px;">
+        <font class="titulo_anuncio_publicado"> DENUNCIA DE CONTENIDO </font><br>
         <div class="datos_anunciante_doss">
+            <br>
         <strong>Todas las denuncias son an&oacute;nimas.</strong><br>
         Selecciona la razón por la cual deseas denunciar este anuncio y/o anunciante:
-        </br>
+        <br><br>
    
 </div>
 <font class="titulo_anuncio_publicado"> Motivos</font>
@@ -100,7 +101,7 @@ function buscar_imagen(id){
     onfocus="clear_textbox('asunto_denuncia', 'Asunto')" value="Asunto" size="44"/>
     <!-- <textarea cols="50" onfocus="clear_textbox('comentarios_denuncia', 'Comentarios')" name="comentarios_denuncia" id="comentarios_denuncia"
     class="formu_contacto" rows="5">Comentarios</textarea> <?=base_url()?>content/terminos_y_condiciones.pdf -->
-    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia1" value="Fotos Inapropiadas"><label>Fotos Inapropiadas</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia1" value="Fotos Inapropiadas"><label>Contenido Violento</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia2" value="Contenido Violento"><label>Fotos Inapropiadas</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia3" value="Informaci&oacute;n de anuncio falsa"><label>Informaci&oacute;n de anuncio falsa</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia4" value="Fraude"><label>Fraude</label></br>
