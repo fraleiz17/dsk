@@ -233,28 +233,56 @@ class Principal extends CI_Controller {
     function editar_contrasena() {       
             if ($this -> usuario_model -> cambiarContrasena($this -> input -> post('contrasenaActual'), $this -> input -> post('contrasena1'), $this -> session -> userdata('idUsuario'),1)) {
                
-                $mensaje = '<link rel="stylesheet" href="'.base_url().'css/general.css" type="text/css" media="screen" /><table width="647" align="center"><tr>
-<td width="231" rowspan="2"><img src="'.base_url().'images/logo_mail.jpg"/></td>
-<td height="48" colspan="6" style="font-family: "titulos"; font-size:50px; color:#72A937; margin:0px; padding:0px; margin-bottom:-10px;">
-Bienvenido</td></tr>
-<tr style="font-size:14px; background-color:#72A937; color:#FFFFFF;" valign="top">
-<td width="60" height="23"><a> &nbsp;Inicio</a></td>
-<td width="57"><a>&nbsp;Venta</a></td>
-<td width="52"><a>&nbsp;Cruza</a></td>
-<td width="78"><a>&nbsp;Adopción</a></td>
-<td width="64"><a>&nbsp;Tienda</a></td>
-<td width="73"><a>&nbsp;Directorio</a></td>
-</tr>
+               $mensaje = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Notificacion-QuieroUnPerro.com</title>
+
+</head>
+
+<body>
+<table width="647" align="center">
 <tr>
-<td colspan="7" ><p>&nbsp;  </p><font style="margin-top:100px; font-size:19px; font-weight:bold; color:#72A937;" >Hola: '.$this->session->userdata('nombre').'!! </font>
-</br></br><font>Tu contraseña ha sido cambiada por la siguiente:</font>
-</br></br><font color="#000066">  '.$this -> input -> post("contrasena1").' </font>
-<br/>
-<p> </p>
-</td></tr><tr bgcolor="#6A2C91" ><td colspan="7" ><font style=" font-size:14px; padding-left:15px; color:#FFFFFF;"> Bienvenido </font>
-<br/><font style=" font-size:12px; padding-left:15px; color:#FFFFFF;"> Equipo QUP </font></td>
+<td width="231" height="129" colspan="2" valign="top">
+<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
+</td>
 </tr>
-</table>';
+<!-- <tr>
+<td align="center"><h4 style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;">¡Bienvenido a QuieroUnPerro.com!</h4></td>
+</tr> -->
+<tr>
+<td style="padding-left:15px;"> 
+<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >Hola '.$this->session->userdata('nombre').': </font>
+<br/>
+<br/>
+
+<font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
+Te informamos que ha cambiado la contraseña de tu cuenta en QUP<br/><br/>
+Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
+</font>
+<p> </p>
+</td>
+</tr>
+
+<tr>
+<td colspan="7" >
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;"> ¡Muchas Gracias! </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:12px; padding-left:15px;"> El Equipo de QuieroUnPerro.com </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:10px; padding-left:15px;"> Todos los derechos reservados '.date('Y').' </font>
+</td>
+</tr>
+</table>
+
+
+
+</body>
+</html>
+';
+
+               
 
         $this->email_model->send_email('', $this->session->userdata('correo'), 'Has cambiado tu contraseña en QUP', $mensaje);
                 $data['response'] = true;
