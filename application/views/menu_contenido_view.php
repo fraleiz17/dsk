@@ -1,4 +1,17 @@
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      
 
+        $('#recuperarcontrasena').submit(function() {
+        $(".recuperar").fadeOut(350, function(){
+            $(".enviando").show();
+        });
+    });
+
+});
+
+      
+</script>
 <!--		CONTENEDOR LOGIN							-->
 <!-- ------------------------------------------------------ -->
 <form action="<?= base_url() ?>sesion/login/principal/principal" id="login" class="validate" method="post">
@@ -54,7 +67,13 @@
                    <input type="submit" value="Recuperar" class="el_submit"/>
                 </li>
             </ul>
-                
+            
+            <ul class="enviando" style="display:none;">
+                <li>
+                   Enviando informacion
+                </li>
+            </ul>
+            
             </form>
 			</br>
             </div>
