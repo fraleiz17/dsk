@@ -20,6 +20,7 @@ class Principal extends CI_Controller {
         $this->load->model('defaultdata_model');
         $this->load->library('googlemaps');
         $this->load->model('usuario_model');
+        $this->load->model('admin_model');
         $this->load->model('perfil_model');
 
         //is_authorized($nivelesReq, $idPermiso, $nivelUsuario, $rolUsuario)
@@ -82,7 +83,7 @@ class Principal extends CI_Controller {
         $data['cupones']    = $this->defaultdata_model->getCupones();
         $data['info']     = $this->usuario_model->getInfoCompleta($this->session->userdata('idUsuario'));
         $data['estados']    = $this->defaultdata_model->getEstados();
-
+        $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
         if($this->session->userdata('tipoUsuario') == 2 || $this->session->userdata('tipoUsuario') == 3){
             $data['ubicacion'] = $this->usuario_model->miUbicacion($this->session->userdata('idUsuarioDato'));
             $data['giro'] = $this->usuario_model->getGiro($this->session->userdata('idUsuarioDetalle'));

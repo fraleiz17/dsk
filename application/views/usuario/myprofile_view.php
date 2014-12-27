@@ -299,7 +299,7 @@ MI PERFIL
             </div> 
 
             <img src="<?php echo base_url() ?>images/compras.png"/></li>
-        <li 
+        <li
         <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
        <?php else: ?> onclick="muestra('contenedor_login');oculta('envio_con');muestra('ingreso_normal');" <?php endif; ?>>
         
