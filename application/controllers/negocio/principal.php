@@ -78,6 +78,11 @@ class Principal extends CI_Controller {
         $data['SYS_metaTitle']          = '';
         $data['SYS_metaKeyWords']       = '';
         $data['SYS_metaDescription']    = '';  
+        $data['paquetes'] = $this->defaultdata_model->getPaquetes();
+        $data['razas'] = $this->defaultdata_model->getRazas();
+        $data['banner'] = $this->defaultdata_model->getTable('banner');
+        $data['myInfo']    = $this->usuario_model->getMyInfo($this->session->userdata('idUsuario'));
+        $data['cupones']    = $this->defaultdata_model->getCupones();
         $data['myInfo']    = $this->usuario_model->getMyInfo($this->session->userdata('idUsuario'));
         $data['info']     = $this->usuario_model->getInfoCompleta($this->session->userdata('idUsuario'));
         $data['estados']    = $this->defaultdata_model->getEstados();
