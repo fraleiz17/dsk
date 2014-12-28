@@ -134,7 +134,8 @@
         </div>
         <input type="radio" style="margin-left:100px;" data-vigencia="<?php echo $paquetes[0]->vigencia ?>"
                data-np="<?php echo $paquetes[0]->nombrePaquete ?>" name="paquete"
-               value="<?php echo $paquetes[0]->paqueteID ?>" data-precio="<?php echo $paquetes[0]->precio ?>" id="RadioGroup1_0"/>
+               value="<?php echo $paquetes[0]->paqueteID ?>" data-precio="<?php echo $paquetes[0]->precio ?>" id="RadioGroup1_0" class="paquete_comprar reset"
+   data-paquete='{"id":"<?php echo $paquetes[0]->paqueteID ?>","nombre":"<?php echo $paquetes[0]->nombrePaquete ?>","vigencia":"<?php echo $paquetes[0]->vigencia ?>","precio":"<?php echo $paquetes[0]->precio ?>","caracteres":"<?php echo $paquetes[0]->caracteres ?>","cantFotos":"<?php echo $paquetes[0]->cantFotos ?>","videos":"<?php echo $paquetes[0]->videos ?>","cupones":"<?php echo $paquetes[0]->cupones ?>"}'/>
     </label>
 </div>
 <div class="paquetes_mini">
@@ -210,7 +211,8 @@
         <input type="radio" style="margin-left:100px;" data-vigencia="<?php echo $paquetes[1]->vigencia ?>"
                data-np="<?php echo $paquetes[1]->nombrePaquete ?>" data-precio="<?php echo $paquetes[1]->precio ?>"
                name="paquete"
-               value="<?php echo $paquetes[1]->paqueteID ?>" id="RadioGroup1_1"/>
+               value="<?php echo $paquetes[1]->paqueteID ?>" id="RadioGroup1_1" class="paquete_comprar reset"
+   data-paquete='{"id":"<?php echo $paquetes[1]->paqueteID ?>","nombre":"<?php echo $paquetes[1]->nombrePaquete ?>","vigencia":"<?php echo $paquetes[1]->vigencia ?>","precio":"<?php echo $paquetes[1]->precio ?>","caracteres":"<?php echo $paquetes[1]->caracteres ?>","cantFotos":"<?php echo $paquetes[1]->cantFotos ?>","videos":"<?php echo $paquetes[1]->videos ?>","cupones":"<?php echo $paquetes[1]->cupones ?>"}'/>
     </label>
 </div>
 
@@ -282,7 +284,8 @@
         <input type="radio" style="margin-left:100px;" data-vigencia="<?php echo $paquetes[2]->vigencia ?>"
                data-np="<?php echo $paquetes[2]->nombrePaquete ?>" data-precio="<?php echo $paquetes[2]->precio ?>"
                name="paquete"
-               value="<?php echo $paquetes[2]->paqueteID ?>" id="RadioGroup1_2" <?=($this->session->userdata('tipoUsuario') == 3) ? 'disabled="disabled"' : ''?>/>
+               value="<?php echo $paquetes[2]->paqueteID ?>" id="RadioGroup1_2" <?=($this->session->userdata('tipoUsuario') == 3) ? 'disabled="disabled"' : ''?> class="paquete_comprar reset"
+   data-paquete='{"id":"<?php echo $paquetes[2]->paqueteID ?>","nombre":"<?php echo $paquetes[2]->nombrePaquete ?>","vigencia":"<?php echo $paquetes[2]->vigencia ?>","precio":"<?php echo $paquetes[2]->precio ?>","caracteres":"<?php echo $paquetes[2]->caracteres ?>","cantFotos":"<?php echo $paquetes[2]->cantFotos ?>","videos":"<?php echo $paquetes[2]->videos ?>","cupones":"<?php echo $paquetes[2]->cupones ?>"}'/>
     </label>
 </div>
 </div>
@@ -755,6 +758,7 @@ TOTAL
 </div>
 </div>
 </div>
+
 <script>
     $(function () {
         $('.paso').hide();
