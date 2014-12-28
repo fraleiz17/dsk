@@ -84,6 +84,7 @@ class Principal extends CI_Controller {
         $data['banner'] = $this->defaultdata_model->getTable('banner');
         $data['myInfo']    = $this->usuario_model->getMyInfo($this->session->userdata('idUsuario'));
         $data['cupones']    = $this->defaultdata_model->getCupones();
+        $data['seccion'] = 5;
         $data['myInfo']    = $this->usuario_model->getMyInfo($this->session->userdata('idUsuario'));
         $data['info']     = $this->usuario_model->getInfoCompleta($this->session->userdata('idUsuario'));
         $data['estados']    = $this->defaultdata_model->getEstados();

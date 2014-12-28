@@ -122,7 +122,7 @@ class Cuenta extends CI_Controller {
         $data['myInfo']    = $this->usuario_model->getMyInfo($this->session->userdata('idUsuario'));
         $data['banner'] = $this->defaultdata_model->getTable('banner');
         $data['info']     = $this->usuario_model->getInfoCompleta($this->session->userdata('idUsuario'));
-        
+        $data['seccion'] = 5;
         $data['estados']    = $this->defaultdata_model->getEstados();
         $data['paquetes'] = $this->defaultdata_model->getPaquetes();
         $data['razas'] = $this->defaultdata_model->getRazas();
