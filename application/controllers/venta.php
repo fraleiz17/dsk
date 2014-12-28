@@ -894,7 +894,7 @@ function editAanuncio() {
 <br/>
 
 <font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
-El anuncio anuncio <strong>"'.$titulo.'"</strong> con fecha de publicaci&oacute; '.date('Y-m-d').' en la secci&oacute;n '.$datos->seccionNombre.', ha sido adquirido y está esperando ser aprobado.<br/><br/>
+El anuncio <strong>"'.$titulo.'"</strong> con fecha de publicaci&oacute;n '.date('Y-m-d').' en la secci&oacute;n '.$datos->seccionNombre.', ha sido adquirido y está esperando ser aprobado.<br/><br/>
 <br/><br/>
 
 </font>
@@ -947,7 +947,7 @@ $mensaje2 = '
 <br/>
 
 <font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
-Tu anuncio <strong>"'.$titulo.'"</strong> con fecha de publicaci&oacute; '.date('Y-m-d').' en la secci&oacute;n '.$datos->seccionNombre.', está esperando ser aprobado.<br/><br/>
+Tu anuncio <strong>"'.$titulo.'"</strong> con fecha de publicaci&oacute;n '.date('Y-m-d').' en la secci&oacute;n '.$datos->seccionNombre.', está esperando ser aprobado.<br/><br/>
 <br/><br/>
 Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
 </font>
