@@ -80,6 +80,7 @@
         <input type="submit" value="Enviar"/>
     </li>
 </ul>
+<span class="info"></span>
 </form>
 
 </div>
@@ -408,10 +409,31 @@ function buscar_anunciante(id){
     
 });
 
+
+
+
 }
 
 
+$('#contenedor_contactar #contacto_form').submit(function(e){
+            $('.boton_naranja_tres').html('');
+            $('.info',form).html('Enviando...');
+            e.preventDefault();
+            var form = $(this);
+            $.ajax({
+                url: '<?php echo base_url('perdidos/contactar');?>',
+                type: 'post',
+                dataType: 'html',
+                data: '',
+                beforeSend: function () {
+                    $(".info").empty().html('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
+                },
+                success: function (data) {
+                    $(".info").empty().append(data);
 
+                }
+            });
+        });
 function buscar_anunciante_dos(id){
 
 	    $(".datos_anunciante_dos").empty();
@@ -466,7 +488,7 @@ function obten_id(id) {
 
 
             $.ajax({
-                url: '<?php echo base_url('venta/contactar/');?>/' + id,
+                url: '<?php echo base_url('perdidos/contactar');?>/' + id,
                 type: 'post',
                 dataType: 'html',
                 data: '',
@@ -751,7 +773,7 @@ function denunciar_pub(id) {
                 dataType: 'html',
                 type: 'post',
                 before: function () {
-                    $('.info',form).html('loading');
+                   $('.info',form).empty().html('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
                 },
                 success: function (data) {
                     $('.info',form).html(data);
