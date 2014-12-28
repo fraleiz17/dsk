@@ -840,6 +840,13 @@ $('.mas_anuncio').on('click', function(){
 
 <div class="division_menu_inferior"></div>
 <?php $this->load->view('general/footer_view');?>
+<div id="contenedor_publicar_anuncio" class="contenedor_publicar" style=" display:none">
 
+    <!-- Inicio contenedor pap publicar anuncio aunucio !-->
+    <div id="publicar_anuncio" class="pubicar_anuncio_mini">
+        <?php $this->load->view('partial/_pasos_anuncio', array('paquetes' => $paquetes, 'estados' => $estados, 'razas' => $razas,'cupones' => $cupones)); ?>
+
+    </div>
+</div>
 </body>
 </html>
