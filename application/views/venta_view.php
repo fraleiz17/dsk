@@ -108,7 +108,7 @@ function buscar_imagen(id){
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia5" value="Datos de contacto falsos"><label>Datos de contacto falsos</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia6" value="Otro"><label>Otro</label></br>
 </br>
-<label><a href="" style="text-decoration:none;">T&eacute;rminos y Condiciones de Uso</label></br>
+<label><a href="<?=base_url()?>content/terminos_y_condiciones.pdf" style="text-decoration:none;">T&eacute;rminos y Condiciones de Uso</label></br>
 </br>
 <ul class="boton_naranja_tres">
     <li>

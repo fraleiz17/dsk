@@ -582,6 +582,18 @@ limit 1');
             return null;
         }
     }
+
+    function getFav($publicacionID){
+        $this->db->where('publicacionID',$publicacionID);
+        $this->db->where('idUsuario',$this->session->userdata('idUsuario'));
+        $query = $this->db->get('favoritos');
+        if ($query->num_rows() >= 1) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
 }
 
 ?>

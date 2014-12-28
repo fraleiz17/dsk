@@ -549,9 +549,14 @@ $data['paises'] = $this->defaultdata_model->getPaises();
             'publicacionID' => $this->input->post('pub'),
             'idUsuario' => $this->session->userdata('idUsuario')
         );
-        $insert = false;
+       
+        $fav = $this->usuario_model->getFav($this->input->post('pub'));
+        if($fav){
+             $insert = false;
+         } else {
         $this->usuario_model->insert_values($data);
         $insert=true;
+        }
         if($insert){
             echo 'Se ha agregado a favoritos.';
         }else{
@@ -580,26 +585,8 @@ $data['paises'] = $this->defaultdata_model->getPaises();
     function denunciar() {
 
         //contacto@quierounperro.com
-        $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null, $this->input->post('pub'), self::$seccion);
-
-        $config = array(
-   // 'protocol'  => 'smtp',
-   // 'smtp_host' => '127.0.0.1',
-   // 'smtp_port' => 25,
-   // 'smtp_user' => 'postmaster@127.0.0.1',
-   // 'smtp_pass' => '123456',
-   'mailtype'  => 'html',
-   'crlf'  => "\r\n",
-   'newline'    => "\r\n" 
-  );
-
-        $this->email->initialize($config);
-
-        $this->email->from($this->session->userdata('correo'), $this->session->userdata('nombre') . ' ' . $this->session->userdata('apellido'));
-
-        $this->email->to('marthahdez2@gmail.com','contacto@qup.com');
-
-        $this->email->subject('Denuncia de anuncio');
+        $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null, 2, self::$seccion);
+        $data = $directorio['data'];
 
         $msj = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -621,16 +608,14 @@ $data['paises'] = $this->defaultdata_model->getPaises();
 </tr> -->
 <tr>
 <td style="padding-left:15px;"> 
-<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >Hola: Marina </font>
+<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >Hola! </font>
 <br/>
 <br/>
 
 <font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
-Te informamos que tu anuncio <strong>"ANUNCIO"</strong> ha sido rportado por uno(s) de nuestros usuarios por las siguientes razones.<br/><br/>
-' . $this->input->post('asunto_denuncia') . '<br/><br/>
+Te informamos que el anuncio <strong>"'.$data[0]->titulo.'"</strong>  en la secci&oacute;n <strong>"'.$data[0]->seccionNombre.'"</strong> ha sido reportado por uno(s) de nuestros usuarios por las siguientes razones.<br/><br/>
 ' . $this->input->post('comentarios_denuncia') . '<br/><br/>
 <br/><br/>
-Es por esto que tu anuncio ha sido retirado de nuestra p&aacute;gina, recuerda que QuieroUnPerro.com es un espacio que promueve la seguridad y la confianza para todos nuestros usuarios.<br/>
 Si tienes cualquier duda al respecto, por favor escr&iacute;benos a contacto@quierounperro.com
 </font>
 <p> </p>
@@ -655,9 +640,9 @@ Si tienes cualquier duda al respecto, por favor escr&iacute;benos a contacto@qui
  ';
 
        
-        $this->email->message($msj);
-
-        if (!$this->email->send()) {
+        //$this->email->message($msj);
+        if(!$this->email_model->send_email('', 'marthahdez2@gmail.com', 'Denuncia de anuncio', $msj)){
+        
             echo "<div class='alert alert-warning'>No se ha logrado envíar el correo al dueño de este directorio. Vuelva a intentarlo o contacte al administrador del sitio.</div>";
         } else {
             echo '<div class="alert alert-success">Se ha enviado correctamente el correo electrónico.</div>';

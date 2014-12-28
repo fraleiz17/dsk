@@ -14,6 +14,7 @@ class Perdidos extends CI_Controller
         $this->load->model('admin_model');
         $this->load->model('venta_model');
         $this->load->model('usuario_model');
+        $this->load->model('email_model');
         $this->load->helper(array('form', 'url'));
         $this->load->library('googlemaps');
         $this->load->library('cart');
@@ -106,6 +107,82 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         $id_anuncio = $this->input->post('id_anuncio') === '' ? NULL : $this->input->post('id_anuncio');
 
         echo json_encode($this->venta_model->getPublicaciones($raza, $genero, $estado, $precio, $palabra_clave, $id_anuncio, self::$seccion));
+    }
+
+     function meh() {
+
+        $v =$this->venta_model->getPublicaciones(null, null, null, null, null, 2, self::$seccion);
+        $data = $v['data'];
+        $c = $data[0]->paqueteID;
+        var_dump($v,$data,$c);
+    }
+
+    function denunciar() {
+
+        //contacto@quierounperro.com
+        $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null, 2, self::$seccion);
+        $data = $directorio['data'];
+            
+        $msj = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Notificacion-QuieroUnPerro.com</title>
+
+</head>
+
+<body>
+<table width="647" align="center">
+<tr>
+<td width="231" height="129" colspan="2" valign="top">
+<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
+</td>
+</tr>
+<!-- <tr>
+<td align="center"><h4 style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;">¡Bienvenido a QuieroUnPerro.com!</h4></td>
+</tr> -->
+<tr>
+<td style="padding-left:15px;"> 
+<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >Hola! </font>
+<br/>
+<br/>
+
+<font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
+Te informamos que el anuncio <strong>"'.$data[0]->titulo.'"</strong>  en la secci&oacute;n <strong>"'.$data[0]->seccionNombre.'"</strong> ha sido reportado por uno(s) de nuestros usuarios por las siguientes razones.<br/><br/>
+' . $this->input->post('comentarios_denuncia') . '<br/><br/>
+<br/><br/>
+Si tienes cualquier duda al respecto, por favor escr&iacute;benos a contacto@quierounperro.com
+</font>
+<p> </p>
+</td>
+</tr>
+
+<tr>
+<td colspan="7" >
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;"> ¡Muchas Gracias! </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:12px; padding-left:15px;"> El Equipo de QuieroUnPerro.com </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:10px; padding-left:15px;"> Todos los derechos reservados '.date('Y').' </font>
+</td>
+</tr>
+</table>
+
+
+
+</body>
+</html>
+ ';
+
+       
+        //$this->email->message($msj);
+        if(!$this->email_model->send_email('', 'marthahdez2@gmail.com', 'Denuncia de anuncio', $msj)){
+        
+            echo "<div class='alert alert-warning'>No se ha logrado envíar el correo al dueño de este directorio. Vuelva a intentarlo o contacte al administrador del sitio.</div>";
+        } else {
+            echo '<div class="alert alert-success">Se ha enviado correctamente el correo electrónico.</div>';
+        }
+
     }
 }
  ?>

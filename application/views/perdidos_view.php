@@ -93,22 +93,31 @@
         <img src="<?php echo base_url()?>images/cerrar_anuncio_gris.png" onclick="oculta('contenedor_denunciar');"/>
     </div>
     <div class="contactar_al_aunuciante">
-        <font class="titulo_anuncio_publicado"> DENUNCIA DE CONTENIDO </font>
-        <div class="datos_anunciante_dos">
-   
-</div>
-<font class="titulo_anuncio_publicado"> PROPORCIONA TU INFORMACIÓN </font>
+    <font class="titulo_anuncio_publicado"> DENUNCIA DE CONTENIDO </font>
+    </br>
+    </br>    
+<font class=""><strong>Todas las denuncias son an&oacute;nimas.</strong><br>
+        Selecciona la razón por la cual deseas denunciar este anuncio y/o anunciante:</font>
 </br>
 </br>
 <form id="denuncia_form">
-    <input type="text" class="formu_contacto" name="nombre_denuncia" id="nombre_denuncia"
+    <input type="hidden" class="formu_contacto" name="nombre_denuncia" id="nombre_denuncia"
     value="<?php echo $this->session->userdata('nombre')?>" size="44"/>
-    <input type="text" class="formu_contacto" name="mail_denuncia" id="mail_denuncia"
+    <input type="hidden" class="formu_contacto" name="mail_denuncia" id="mail_denuncia"
     value="<?php echo $this->session->userdata('correo')?>" size="44"/>
-    <input type="text" class="formu_contacto" name="asunto_denuncia" id="asunto_denuncia"
+    <input type="hidden" class="formu_contacto" name="asunto_denuncia" id="asunto_denuncia"
     onfocus="clear_textbox('asunto_denuncia', 'Asunto')" value="Asunto" size="44"/>
-    <textarea cols="50" onfocus="clear_textbox('comentarios_denuncia', 'Comentarios')" name="comentarios_denuncia" id="comentarios_denuncia"
-    class="formu_contacto" rows="5">Comentarios</textarea>
+    <!-- <textarea cols="50" onfocus="clear_textbox('comentarios_denuncia', 'Comentarios')" name="comentarios_denuncia" id="comentarios_denuncia"
+    class="formu_contacto" rows="5">Comentarios</textarea> <?=base_url()?>content/terminos_y_condiciones.pdf -->
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia3" checked="checked" value="Informaci&oacute;n de anuncio falsa"><label>Informaci&oacute;n de anuncio falsa</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia1" value="Fotos Inapropiadas"><label>Contenido Violento</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia2" value="Contenido Violento"><label>Fotos Inapropiadas</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia4" value="Fraude"><label>Fraude</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia5" value="Datos de contacto falsos"><label>Datos de contacto falsos</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia6" value="Otro"><label>Otro</label></br>
+</br>
+
+<label><a href="<?=base_url()?>content/terminos_y_condiciones.pdf" target="_blank" style="text-decoration:none;">T&eacute;rminos y Condiciones de Uso</a></label></br>
 </br>
 </br>
 <ul class="boton_naranja_tres">
@@ -312,7 +321,7 @@ que el nombre del criador esté en el certificado.
 <font> Ciudad: <?=$publicacion->ciudad?></font>
 </div>
 <div class="contenedor_foto_anuncio">
-<img src="<?=base_url()?>images/anuncios/01/perro.png" align="middle" width="128" height="80" />
+<img src="<?=base_url()?><?=$publicacion->foto?>" align="middle" width="128" height="80" />
 </div>
  
           <ul class="ver_detalle_anuncio">
@@ -584,6 +593,8 @@ function buscar_detalles(id) {
             $(".descripcion_del_anuncio").empty().html('<div class="spinner" style="position:fixed;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
             $("#you_tube").empty().html('<div class="spinner" style="position:fixed;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
             $(".contenedor_galeria").empty().html('<div class="spinner" style="position:fixed;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
+            $(".boton_naranja_dos").empty().html('<div class="spinner" style="position:fixed;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
+            //$('.contenedor_foto_anuncio').empty().html('');   
         },
         success: function (result) {
 
@@ -606,12 +617,15 @@ function buscar_detalles(id) {
 
                 $(".contenedor_galeria").append('<img src="' + data[i].foto + '" width="294" height="200" style=" top: 0px; left: 0px; display: block; z-index: 5; opacity: 1;"/>');
                 var cont_datos = $('.datos_general');
-                var cont_info = $(' <div class="titulo_anuncio_publicado">' + data[i].titulo + '</div></br><strong>Precio:' + data[i].precio + '</strong></br><font> Fecha de publicación:' + data[i].fechaCreacion + '</font></br><font>Sección: Venta</font></br><font>Raza:' + data[i].raza + '</font></br><font>Género:' + (data[i].genero ? 'Macho' : 'Hembra') + '</font></br><font>Lugar: ' + data[i].nombreEstado + '</font></br></br>');
+                var cont_info = $(' <div class="titulo_anuncio_publicado">' + data[i].titulo + '</div></br><strong>Precio: $' + data[i].precio + '</strong></br><font> Fecha de publicación:' + data[i].fechaCreacion + '</font></br><font>Sección: Venta</font></br><font>Raza:' + data[i].raza + '</font></br><font>Género:' + (data[i].genero ? 'Macho' : 'Hembra') + '</font></br><font>Lugar: ' + data[i].nombreEstado + '</font></br></br>');
                 cont_datos.append(cont_info);
                 var botones = $('<ul class="boton_naranja"><li onclick="buscar_anunciante(\'' + data[i].publicacionID + '\')">Contactar al anunciante</li> </ul> </br> <ul class="boton_gris"><li data-pub="' + data[i].publicacionID + '" class="btn_fvt"><img src="images/favorito.png"/>Agregar a Favoritos</li></ul><span id="info_fav"></span>');
                 cont_datos.append(botones);
                 $('.descripcion_del_anuncio').append(data[i].descripcion);
-              buscar_videos(data[i].publicacionID);
+                //$('.contenedor_foto_anuncio').append(data[i].foto);
+                if (data[i].paqueteID != '1'){
+                buscar_videos(data[i].publicacionID);
+                }
 
                 $('.btn_den').data('pub', data[i].publicacionID);
             }
@@ -721,15 +735,18 @@ function denunciar_pub(id) {
 
     $('.btn_den').on('click', function (){
         var pub = $(this).data("pub");
+        console.log(pub);
         $('.info', '#denuncia_form').html('');
         buscar_anunciante_dos(pub);
         muestra('contenedor_denunciar');
         
         $('#contenedor_denunciar #denuncia_form').submit(function(e){
+            $('.boton_naranja_tres').html('');
+            $('.info',form).html('Enviando...');
             e.preventDefault();
             var form = $(this);
             $.ajax({
-                url: '<?php echo base_url('venta/denunciar')?>',
+                url: '<?php echo base_url('perdidos/denunciar')?>',
                 data: form.serialize()+'&pub='+pub,
                 dataType: 'html',
                 type: 'post',
