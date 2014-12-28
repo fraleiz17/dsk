@@ -373,6 +373,8 @@ que el nombre del criador esté en el certificado.
 <script>
 function buscar_anunciante(id){
 	muestra('contenedor_contactar');
+    $('.boton_naranja_tres').show();
+    $('.info').html('');
 	         $(".datos_anunciante").empty();
              id_anuncio="id_anuncio="+id;
 
@@ -417,7 +419,7 @@ function buscar_anunciante(id){
 
 $('#contenedor_contactar #contacto_form').submit(function(e){
             $('.boton_naranja_tres').html('');
-            $('.info',form).html('Enviando...');
+            $('.info').html('Enviando...');
             e.preventDefault();
             var form = $(this);
             $.ajax({
@@ -756,6 +758,8 @@ function add_favorite() {
 function denunciar_pub(id) {
 
     $('.btn_den').on('click', function (){
+        $('.boton_naranja_tres').show();
+        $('.info').html('');
         var pub = $(this).data("pub");
         console.log(pub);
         $('.info', '#denuncia_form').html('');
@@ -763,7 +767,7 @@ function denunciar_pub(id) {
         muestra('contenedor_denunciar');
         
         $('#contenedor_denunciar #denuncia_form').submit(function(e){
-            $('.boton_naranja_tres').html('');
+            $('.boton_naranja_tres').hide();
             $('.info',form).html('Enviando...');
             e.preventDefault();
             var form = $(this);

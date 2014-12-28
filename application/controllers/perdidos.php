@@ -120,7 +120,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
     function denunciar() {
 
         //contacto@quierounperro.com
-        $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null, 2, self::$seccion);
+        $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null, $this->input->post('pub'), self::$seccion);
         $data = $directorio['data'];
             
         $msj = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

@@ -1,5 +1,5 @@
 
-
+<?php $this->load->view('general/LoginFiles');?>
 <?php
 $this->load->view('general/general_header_view', array('title' => 'Venta',
   'links'                                                      => array('venta'), 'scripts' => array('funciones_venta')))
@@ -35,10 +35,7 @@ function buscar_imagen(id){
 
    </script>
    
-   
-  
 
-<?php $this->load->view('general/LoginFiles');?>
 <?php $this->load->view('general/menu_view')?>
 <div class="contenedor_contactar" id="contenedor_contactar" style=" display:none;">
     <div class="contenedor_cerrar_contactar">
@@ -80,16 +77,12 @@ function buscar_imagen(id){
     <div class="contenedor_cerrar_contactar">
         <img src="<?php echo base_url()?>images/cerrar_anuncio_gris.png" onclick="oculta('contenedor_denunciar');"/>
     </div>
-    <div class="contactar_al_aunuciante" style="height:383px;">
-        <font class="titulo_anuncio_publicado"> DENUNCIA DE CONTENIDO </font><br>
-        <div class="datos_anunciante_doss">
-            <br>
-        <strong>Todas las denuncias son an&oacute;nimas.</strong><br>
-        Selecciona la razón por la cual deseas denunciar este anuncio y/o anunciante:
-        <br><br>
-   
-</div>
-<font class="titulo_anuncio_publicado"> Motivos</font>
+    <div class="contactar_al_aunuciante">
+    <font class="titulo_anuncio_publicado"> DENUNCIA DE CONTENIDO </font>
+    </br>
+    </br>    
+<font class=""><strong>Todas las denuncias son an&oacute;nimas.</strong><br>
+        Selecciona la razón por la cual deseas denunciar este anuncio y/o anunciante:</font>
 </br>
 </br>
 <form id="denuncia_form">
@@ -101,14 +94,16 @@ function buscar_imagen(id){
     onfocus="clear_textbox('asunto_denuncia', 'Asunto')" value="Asunto" size="44"/>
     <!-- <textarea cols="50" onfocus="clear_textbox('comentarios_denuncia', 'Comentarios')" name="comentarios_denuncia" id="comentarios_denuncia"
     class="formu_contacto" rows="5">Comentarios</textarea> <?=base_url()?>content/terminos_y_condiciones.pdf -->
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia3" checked="checked" value="Informaci&oacute;n de anuncio falsa"><label>Informaci&oacute;n de anuncio falsa</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia1" value="Fotos Inapropiadas"><label>Contenido Violento</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia2" value="Contenido Violento"><label>Fotos Inapropiadas</label></br>
-    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia3" value="Informaci&oacute;n de anuncio falsa"><label>Informaci&oacute;n de anuncio falsa</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia4" value="Fraude"><label>Fraude</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia5" value="Datos de contacto falsos"><label>Datos de contacto falsos</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia6" value="Otro"><label>Otro</label></br>
 </br>
-<label><a href="<?=base_url()?>content/terminos_y_condiciones.pdf" style="text-decoration:none;">T&eacute;rminos y Condiciones de Uso</label></br>
+
+<label><a href="<?=base_url()?>content/terminos_y_condiciones.pdf" target="_blank" style="text-decoration:none;">T&eacute;rminos y Condiciones de Uso</a></label></br>
+</br>
 </br>
 <ul class="boton_naranja_tres">
     <li>
@@ -739,11 +734,14 @@ function denunciar_pub(id) {
 
     $('.btn_den').on('click', function (){
         var pub = $(this).data("pub");
-        $('.info', '#denuncia_form').html('');
+        $('.boton_naranja_tres').show();
+        $('.info').html('');
         buscar_anunciante_dos(pub);
         muestra('contenedor_denunciar');
         
         $('#contenedor_denunciar #denuncia_form').submit(function(e){
+            $('.boton_naranja_tres').hide('');
+            $('.info',form).html('Enviando...');
             e.preventDefault();
             var form = $(this);
             $.ajax({
@@ -762,7 +760,25 @@ function denunciar_pub(id) {
     });
 }
 
+$('#contenedor_contactar #contacto_form').submit(function(e){
+            $('.boton_naranja_tres').html('');
+            $('.info').html('Enviando...');
+            e.preventDefault();
+            var form = $(this);
+            $.ajax({
+                url: '<?php echo base_url('venta/contactar');?>',
+                type: 'post',
+                dataType: 'html',
+                data: form.serialize(),
+                beforeSend: function () {
+                    $(".info").empty().html('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
+                },
+                success: function (data) {
+                    $(".info").empty().append(data);
 
+                }
+            });
+        });
 
 
 function contactar_pub(id) {
