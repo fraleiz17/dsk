@@ -190,68 +190,72 @@ Si tienes cualquier duda al respecto, por favor escr&iacute;benos a contacto@qui
         //contacto@quierounperro.com
         $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null, 2, self::$seccion);
 
+$msj = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Notificacion-QuieroUnPerro.com</title>
 
-        $msj = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-        <html xmlns="http://www.w3.org/1999/xhtml">
-        <head>
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            <title>Bienvenido-QuieroUnPerro.com</title>
-            <link rel="stylesheet" href="http://quierounperro.com/quiero_un_perro/css/general.css" type="text/css" media="screen" />
-        </head>
+</head>
 
-        <body>
-            <table width="647" align="center">
-                <tr>
-                    <td width="231" rowspan="2">
-                        <img src="'.base_url().'images/logo_mail.jpg"/>
-                    </td>
-                    </tr>
-                    <tr>
-                    <td height="48" colspan="6" style=" font-size:50px; color:#72A937; margin:0px; padding:0px; margin-bottom:-10px;">
-                      <strong>  CONTACTO </strong>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="7" >
-                        <p>&nbsp;  </p>
-                        <font> El usuario ' . $this->session->userdata('nombre') . ' ' . $this->session->userdata('apellido') . ' esta interesado en el siguiente anuncio:</font>
-                       
-                    </br>
-                </br>
- <font style="margin-top:100px; font-size:19px; font-weight:bold; color:#72A937;" >' . ($directorio['data'][0]->titulo).'</font>
+<body>
+<table width="647" align="center">
+<tr>
+<td width="231" height="129" colspan="2" valign="top">
+<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
+</td>
+</tr>
+<!-- <tr>
+<td align="center"><h4 style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;">Contacto en QUP</h4></td>
+</tr> -->
+<tr>
+<td style="padding-left:15px;"> 
+<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >Hola! </font>
+<br/>
+<br/>
+
+<font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
+<font> El usuario ' . $this->session->userdata('nombre') . ' ' . $this->session->userdata('apellido') . ' esta interesado en el siguiente anuncio:</font>
+<font style="margin-top:100px; font-size:19px; font-weight:bold; color:#72A937;" >' . ($directorio['data'][0]->titulo).'</font>
                 
-            </br>
+            <br/><br/>
            <font > <strong> Creado por:</strong> '.$directorio['data'][0]->correo.'</font>
-           <br/>
+           <br/><br/>
            <font > <strong> Fecha de creacion: </strong>'.$directorio['data'][0]->fechaCreacion.'</font>
-           <br/>
+           <br/><br/>
            <font ><strong> Duracion:</strong> '.$directorio['data'][0]->vigencia.' ('.$directorio['data'][0]->fechaVencimiento.')</font
-           <br/>
+           <br/><br/>
            <font><strong> Descripcion:</strong> '.$directorio['data'][0]->descripcion.'</font>
-        </br>
-       </br>
-       </br>
+        <br/><br/>
         <font color="#000066"><strong> Asunto:</strong> ' . $this->input->post('asunto_contacto') . '</font>
-        </br>
+        <br/><br/>
         <font color="#000066"><strong>Mensaje: </strong><br/>' . $this->input->post('comentarios_contacto') . '</font>
-        <br/>
+        <br/><br/>
         <p> </p>
-    </td>
+<br/><br/>
+Si tienes cualquier duda al respecto, por favor escr&iacute;benos a contacto@quierounperro.com
+</font>
+<p> </p>
+</td>
 </tr>
 
-<tr bgcolor="#6A2C91" >
-    <td colspan="7" >
-        <font style=" font-size:14px; padding-left:15px; color:#FFFFFF;">Gracias por tu preferencia </font>
-        <br/>
-        <font style=" font-size:12px; padding-left:15px; color:#FFFFFF;"> Equipo QuieroUnPerro.com </font>
-        <br/>
-        <font style=" font-size:12px; padding-left:15px; color:#FFFFFF;"> Todos los derecho reservados </font>
-    </td>
+<tr>
+<td colspan="7" >
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;"> ¡Muchas Gracias! </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:12px; padding-left:15px;"> El Equipo de QuieroUnPerro.com </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:10px; padding-left:15px;"> Todos los derechos reservados '.date('Y').' </font>
+</td>
 </tr>
 </table>
-</body>
-</html>';
 
+
+
+</body>
+</html>
+ ';
+        
         if(!$this->email_model->send_email('', $directorio['data'][0]->correo, 'Contacto QUP', $msj)){
             echo "<div class='alert alert-warning'>No se ha logrado envíar el correo al dueño de este directorio. Vuelva a intentarlo o contacte al administrador del sitio.</div>";
         } else {

@@ -69,9 +69,9 @@
     value="<?php echo $this->session->userdata('nombre')?>" size="44"/>
     <input type="text" class="formu_contacto" id="mail_contacto"
     value="<?php echo $this->session->userdata('correo')?>" size="44"/>
-    <input type="text" class="formu_contacto" id="asunto_contacto"
+    <input type="text" class="formu_contacto" id="asunto_contacto" name="asunto_contacto" 
     onfocus="clear_textbox('asunto_contacto', 'Asunto')" placeholder="Asunto" size="44"/>
-    <textarea cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto"
+    <textarea cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto" name="comentarios_contacto"
     class="formu_contacto" rows="5">Comentarios</textarea>
 </br>
 </br>
@@ -424,7 +424,7 @@ $('#contenedor_contactar #contacto_form').submit(function(e){
                 url: '<?php echo base_url('perdidos/contactar');?>',
                 type: 'post',
                 dataType: 'html',
-                data: '',
+                data: form.serialize(),
                 beforeSend: function () {
                     $(".info").empty().html('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
                 },
