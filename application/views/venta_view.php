@@ -77,7 +77,7 @@ function buscar_imagen(id){
     <div class="contenedor_cerrar_contactar">
         <img src="<?php echo base_url()?>images/cerrar_anuncio_gris.png" onclick="oculta('contenedor_denunciar');"/>
     </div>
-    <div class="contactar_al_aunuciante">
+    <div class="contactar_al_aunuciante" style="height:346px;">
     <font class="titulo_anuncio_publicado"> DENUNCIA DE CONTENIDO </font>
     </br>
     </br>    
