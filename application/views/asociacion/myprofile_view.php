@@ -290,7 +290,7 @@ MI PERFIL
 
 <div id="contenedor_central">
   <div style="widht:100px; height:344px; display:block; float: left;">
-<<div id="espacio_izquierda" class="seccion_izquierda_secciones">
+<div id="espacio_izquierda" class="seccion_izquierda_secciones">
 <ul class="iconos" id="iconos_grandes">
         <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  onclick="window.location='<?= base_url() ?>carrito';" <?php else: ?>  <?php endif; ?>>
             <div class="indicadores"> 
@@ -314,16 +314,7 @@ MI PERFIL
               </div>
             <img src="<?php echo base_url() ?>images/sesion.png"/></li> 
             
-        <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  <?php else: ?>onclick="muestra('contenedor_registro');" <?php endif; ?>>
-            <div class="indicador"> 
-            <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
-             <img src="<?php echo base_url() ?>images/indicador_si.png" title="Ya estas registrado">
-             <?php else: ?>
-             <img src="<?php echo base_url() ?>images/indicador_no.png">
-             <?php endif; ?>
-             </div>
-            <img src="<?php echo base_url() ?>images/registrate.png"/>
-        </li>
+        
     </ul>
 </div>
 </div>
