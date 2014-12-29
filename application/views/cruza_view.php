@@ -1,20 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Cruza-Quierounperro.com</title>
+
 <?php $this->load->view('general/LoginFiles');?>
+<?php
+$this->load->view('general/general_header_view', array('title' => 'Venta',
+  'links'                                                      => array('venta'), 'scripts' => array('funciones_venta')))
+  ?>
 
-<link rel="shortcut icon" href="<?=base_url()?>images/ico.ico" />  
-
-<link rel="stylesheet" href="<?=base_url()?>css/jPages.css">
-<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/venta.css" media="screen"></link>
 <link type="text/css" rel="stylesheet" href="<?=base_url()?>css/cruza.css" media="screen"></link>
 
-   <script src="<?=base_url()?>js/jquery-1.10.2.js"></script>
-     <script src="<?=base_url()?>js/jPages.js"></script>
-     <script src="<?=base_url()?>js/funciones_venta.js"></script>
-   
+
    <script type="text/javascript" src="<?=base_url()?>js/funcion_select.js"></script>
    <script type="text/javascript" src="<?=base_url()?>js/jquery.customSelect.js"></script>
   <script>
