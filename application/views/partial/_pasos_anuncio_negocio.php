@@ -386,6 +386,14 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td colspan="2">
+                                    <p>IVA:</p>
+                                </td>
+                                <td>
+                                    <p id="iva" class="totales"> $435.00 </p>
+                                </td>
+                            </tr>
+                            <tr>
                                 <th colspan="2">
                                     TOTAL
                                 </th>
@@ -650,6 +658,8 @@
                 var total_val = field.data('precio') - (field.data('precio') * (field.data('descuento') / 100));
                 $('#totales', form_negocio).text('$ ' + (total_val.toFixed(2)));
                 $('#subtotal', form_negocio).text('$ ' + (total_val.toFixed(2)));
+                var iva = (total_val * .16);
+                $('#iva', form_negocio).text('$ ' + (iva.toFixed(2)));
                 $('#total', form_negocio).text('$ ' + (total_val.toFixed(2)));
 
             });
