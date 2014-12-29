@@ -465,7 +465,7 @@
                                                                     <li>
                                                                         <script type="text/javascript" src="http://mp-tools.mlstatic.com/buttons/render.js"></script>
                                                                         <a href="<?php echo $preference['response']['init_point']; ?>" name="MP-Checkout"
-                                                                           class="green-M-Rn" mp-mode="modal" onreturn="execute_my_onreturn" style="padding: 0px; float:right;">Pagar</a>
+                                                                           class="green-M-Rn" mp-mode="modal" onreturn="execute_my_onreturn" style="padding: 0px; float:right;" onclick="confirm('¿Los datos de envio son correctos?')">Pagar</a>
 
 
                                                                         <script type="text/javascript">
