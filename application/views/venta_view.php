@@ -313,7 +313,7 @@ echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
                     <?php echo $publicacion->titulo?>
                 </div>
                 <div class="descripcion_anuncio">
-                    <font> Precio:&nbsp;$&nbsp;<?php echo $publicacion->precio?></font>
+                    <font> Precio:&nbsp;$&nbsp;<?php echo $publicacion->precioVenta?></font>
                     <br/>
                     <font> Raza: <?php $razita= $publicacion->raza;echo substr($razita, 0, 15); ?> </font>
                     <br/>
@@ -539,7 +539,7 @@ function obten_id(id) {
                         cont_anun.append(cont_titulo);
 
                         var cont_descripcion = $('<div class="descripcion_anuncio"></div>');
-                        cont_descripcion.append('<font> Precio:&nbsp;$&nbsp;' + data[i].precio + '</font> </br> <font> Raza &nbsp; : &nbsp; ' + data[i].raza.substring(0, 15) + ' </font></br> <font>Género&nbsp;:&nbsp;' + el_genero + '</font></br> <font>Ciudad&nbsp;:&nbsp;' + data[i].nombreEstado + '</font> ');
+                        cont_descripcion.append('<font> Precio:&nbsp;$&nbsp;' + data[i].precioVenta + '</font> </br> <font> Raza &nbsp; : &nbsp; ' + data[i].raza.substring(0, 15) + ' </font></br> <font>Género&nbsp;:&nbsp;' + el_genero + '</font></br> <font>Ciudad&nbsp;:&nbsp;' + data[i].nombreEstado + '</font> ');
                         cont_anun.append(cont_descripcion);
 
                         var cont_imagen = $('<div class="contenedor_foto_anuncio" id="contener_foto'+data[i].publicacionID+'" ></div>');
@@ -617,7 +617,7 @@ function buscar_detalles(id) {
 
                 $(".contenedor_galeria").append('<img src="' + data[i].foto + '" width="294" height="200" style=" top: 0px; left: 0px; display: block; z-index: 5; opacity: 1;"/>');
                 var cont_datos = $('.datos_general');
-                var cont_info = $(' <div class="titulo_anuncio_publicado">' + data[i].titulo + '</div></br><strong>Precio:&nbsp;$&nbsp;' + data[i].precio + '</strong></br><font> Fecha de publicación:' + data[i].fechaCreacion + '</font></br><font>Sección: Venta</font></br><font>Raza:' + data[i].raza + '</font></br><font>Género:' + (data[i].genero ? 'Macho' : 'Hembra') + '</font></br><font>Lugar: ' + data[i].nombreEstado + '</font></br></br>');
+                var cont_info = $(' <div class="titulo_anuncio_publicado">' + data[i].titulo + '</div></br><strong>Precio:&nbsp;$&nbsp;' + data[i].precioVenta + '</strong></br><font> Fecha de publicación:' + data[i].fechaCreacion + '</font></br><font>Sección: Venta</font></br><font>Raza:' + data[i].raza + '</font></br><font>Género:' + (data[i].genero ? 'Macho' : 'Hembra') + '</font></br><font>Lugar: ' + data[i].nombreEstado + '</font></br></br>');
                 cont_datos.append(cont_info);
                 var botones = $('<ul class="boton_naranja"><li onclick="buscar_anunciante(\'' + data[i].publicacionID + '\')" class="btn_contactar">Contactar al anunciante</li> </ul> </br> <ul class="boton_gris"><li data-pub="' + data[i].publicacionID + '" class="btn_fvt"><img src="images/favorito.png"/>Agregar a Favoritos</li></ul><span id="info_fav"></span>');
                 cont_datos.append(botones);

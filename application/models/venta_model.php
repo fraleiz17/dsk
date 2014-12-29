@@ -18,7 +18,7 @@ class Venta_model extends CI_Model {
     }
 
     function getAnuncios($seccion = null) {
-        $this->db->select("*, (select foto from fotospublicacion f where f.publicacionID = p.publicacionID group by f.publicacionID limit 1) as foto");
+        $this->db->select("*,(select foto from fotospublicacion f where f.publicacionID = p.publicacionID group by f.publicacionID limit 1) as foto");
         $this->db->from("publicaciones p");
         //$this->db->join("fotospublicacion fp", "p.detalleID=fp.detalleID AND p.paqueteID=fp.paqueteID AND p.publicacionID=fp.publicacionID AND p.servicioID=fp.servicioID");
         $this->db->join("serviciocontratado sc", "p.detalleID=sc.detalleID AND p.paqueteID=sc.paqueteID AND p.servicioID=sc.servicioID");
