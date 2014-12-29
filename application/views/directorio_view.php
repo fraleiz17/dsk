@@ -320,7 +320,7 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
 
     </div>
 </div>!-->
-
+<!-- Vista de publicacion directorio -->
 <?php $this->load->view('partial/_pasos_anuncio_negocio'); ?>
 
 
