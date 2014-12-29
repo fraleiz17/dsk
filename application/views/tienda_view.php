@@ -1,6 +1,9 @@
+<?php $this->load->view('general/LoginFiles');?>  
 <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/index_.css" media="screen"></link>
 
 <?php $this->load->view('general/general_header_view', array('title'=> 'Tienda', 'links' => array('venta', 'tienda'),'scripts'=> array('funciones_venta', 'funciones_tienda', 'funciones_'))) ?>
+
+     
         <script>
             jQuery(document).ready(function() {
 
@@ -84,7 +87,7 @@
         </li>
     </ul>
         </div>
-        <?php $this->load->view('general/LoginFiles');?>
+        
         <?php $this->load->view('general/menu_view'); ?>
 
         <div class="contenedor_contactar_previo" id="contenedor_contactar_previo" style=" display:none;">
