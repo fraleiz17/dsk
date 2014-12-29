@@ -16,7 +16,6 @@
     <!--<script src="<?php echo base_url() ?>js/jquery-latest.js" type="text/javascript"></script>-->
     <script src="<?php echo base_url() ?>js/funciones_.js" type="text/javascript"></script>
 
-
   <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/index_.css" media="screen"></link> 
   <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/general.css" media="screen"></link> 
 

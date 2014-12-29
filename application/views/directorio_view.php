@@ -1,10 +1,10 @@
-
+<?php $this->load->view('general/LoginFiles');?>
 <?php
 $this->load->view('general/general_header_view', array('title' => 'Directorio',
     'scripts' => array('funciones_venta', 'funciones_'), 'links' => array('venta',
         'directorio')))
 ?>
-<?php $this->load->view('general/LoginFiles');?>
+
 <?php $this->load->view('general/menu_view', array('seccion' => $seccion)) ?>
 <div class="titulo_seccion">
     DIRECTORIO

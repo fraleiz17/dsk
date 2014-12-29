@@ -49,10 +49,10 @@ $db['default']['database'] = 'quieroun_perro_dev';
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'quierounperro.com';
-$db['default']['database'] = 'quieroun_test';
-$db['default']['username'] = 'quieroun_test';
-$db['default']['password'] = 'testo#01';
+$db['default']['hostname'] = 'localhost';
+$db['default']['database'] = 'qup';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
