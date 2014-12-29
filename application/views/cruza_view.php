@@ -311,13 +311,13 @@ CRUZA
 <?=$publicacion->titulo?>
 </div>
 <div class="descripcion_anuncio">
-<font> Precio: <?=$publicacion->precioVenta?></font>
+<font> Precio&nbsp;:&nbsp;$&nbsp; <?=$publicacion->precioVenta?></font>
 <br/>
-<font> Raza: <?php $razita= $publicacion->raza;echo substr($razita, 0, 15); ?> </font>
+<font> Raza&nbsp;:&nbsp; <?php $razita= $publicacion->raza;echo substr($razita, 0, 15); ?> </font>
 <br/>
-<font> Género:  <?php echo $publicacion->genero?'Macho':'Hembra'?> </font>
+<font> Género&nbsp;:&nbsp;  <?php echo $publicacion->genero?'Macho':'Hembra'?> </font>
 <br/>
-<font> Ciudad: <?=$publicacion->ciudad?></font>
+<font> Ciudad&nbsp;:&nbsp; <?=$publicacion->ciudad?></font>
 </div>
  <div class="contenedor_foto_anuncio" id="contener_foto<?php echo $publicacion->publicacionID?>">
                     
@@ -536,7 +536,7 @@ function obten_id(id) {
                         cont_anun.append(cont_titulo);
 
                         var cont_descripcion = $('<div class="descripcion_anuncio"></div>');
-                        cont_descripcion.append('<font> Precio:' + data[i].precioVenta + '</font> </br> <font> Raza: ' + data[i].raza.substring(0, 15) + ' </font></br> <font>Género:' + el_genero + '</font></br> <font>Ciudad:' + data[i].nombreEstado + '</font> ');
+                        cont_descripcion.append('<font> Precio&nbsp;:&nbsp;$&nbsp;' + data[i].precioVenta + '</font> </br> <font> Raza&nbsp;:&nbsp; ' + data[i].raza.substring(0, 15) + ' </font></br> <font>Género&nbsp;:&nbsp;' + el_genero + '</font></br> <font>Ciudad&nbsp;:&nbsp;' + data[i].nombreEstado + '</font> ');
                         cont_anun.append(cont_descripcion);
 
                         var cont_imagen = $('<div class="contenedor_foto_anuncio" id="contener_foto'+data[i].publicacionID+'" ></div>');
