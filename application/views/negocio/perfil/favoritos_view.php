@@ -19,7 +19,7 @@ function buscar_imagen(id){
 						
 						}
 					
-				$("#contener_foto"+id).append('<img src="<?php echo base_url() ?>' + foto + '" width="45%" height="auto"/>');
+				$("#contener_foto"+id).append('<img src="<?php echo base_url() ?>' + foto + '" width="auto" height="100%"/>');
 				
 				}
                  })
@@ -470,13 +470,13 @@ echo "<script> buscar_imagen('".$favorito->publicacionID."');</script>";
                     <?php echo $favorito->titulo?>
                 </div>
                 <div class="descripcion_anuncio">
-                    <font> Precio: <?php echo $favorito->precio?></font>
+                    <font> Precio : &nbsp;$ &nbsp; <?php echo $favorito->precio?></font>
                     <br/>
-                    <font> Raza: <?php $razita= $favorito->razaID;echo substr($razita, 0, 15); ?> </font>
+                    <font> Raza&nbsp;: <?php $razita= $favorito->razaID;echo substr($razita, 0, 15); ?> </font>
                     <br/>
-                    <font> Género: <?php echo $favorito->genero?'Macho':'Hembra'?> </font>
+                    <font> Género&nbsp;: <?php echo $favorito->genero?'Macho':'Hembra'?> </font>
                     <br/>
-                    <font> Ciudad: <?php echo $favorito->ciudad?></font>
+                    <font> Ciudad&nbsp;: <?php echo $favorito->ciudad?></font>
                 </div>
                 <div class="contenedor_foto_anuncio" id="contener_foto<?php echo $favorito->publicacionID?>">
                     
@@ -515,13 +515,4 @@ echo "<script> buscar_imagen('".$favorito->publicacionID."');</script>";
         <!-- navigation holder -->
         <div class="holder"></div>
     </div>
-    
-    
-      </div>
-
-
-
-
- 
- 
- 
+</div>

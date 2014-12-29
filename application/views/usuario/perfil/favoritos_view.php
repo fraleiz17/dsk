@@ -19,7 +19,7 @@ function buscar_imagen(id){
 						
 						}
 					
-				$("#contener_foto"+id).append('<img src="<?php echo base_url() ?>' + foto + '" width="45%" height="auto"/>');
+				$("#contener_foto"+id).append('<img src="<?php echo base_url() ?>' + foto + '" width="auto" height="100%"/>');
 				
 				}
                  })

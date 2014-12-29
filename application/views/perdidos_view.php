@@ -39,7 +39,7 @@
 						
 						}
 					
-				$("#contener_foto"+id).append('<img src="' + foto + '" width="45%" height="auto"/>');
+				$("#contener_foto"+id).append('<img src="' + foto + '" width="auto" height="100%"/>');
 				
 				}
                  })
