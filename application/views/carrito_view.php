@@ -369,9 +369,9 @@
                                                                             oculta('ocultar_envio');">  Ocultar datos de envío </font>
                                                                     </p>
                                                                     <br/>
-                                                                    <div id="los_datos_envio" style="display: none;"> 
+                                                                    <div id="los_datos_envio" style="display:;"> 
                                                                         <div class="subtotal">
-                                                                            <div style="margin-bottom:20px;">
+                                                                            <div style="margin-bottom:20px; display:none;">
                                                                                 <a> Datos de envio </a> Datos de envio guardados
                                                                                 <select id="direcciones">
                                                                                     <option> ---</option>
