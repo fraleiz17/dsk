@@ -173,6 +173,7 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
 </script>
 <br/>
 <?php $this->load->view('general/footer_view'); ?>
+<?php $this->load->view('partial/_pasos_anuncio_negocio'); ?>
 
 </body>
 </html>

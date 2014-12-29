@@ -228,7 +228,7 @@
                                 <p class="margen_15_left"> 
                                     <label>CP:</label><input name="cp_negocio" value="<?php echo $user->cp; ?>" type="text" class="background_gris_55 validate[required,maxSize[5],minSize[5],custom[integer]]"/> 
                                     <label>E-mail:</label><input name="email_negocio" type="text" value="<?php echo $user->correo; ?>" class="background_gris validate[required]"/>
-                                    <label>Pagina Web:</label><input name="pagina_web_negocio" id="pagina_web_negocioT" value="<?php echo $user->paginaWeb; ?>" class="background_gris validate[required,custom[url]]" type="text"/>
+                                    <label>Pagina Web:</label><input name="pagina_web_negocio" id="pagina_web_negocioT" value="<?php echo $user->paginaWeb; ?>" class="background_gris validate[required,custom[url]]" type="text" placeholder="http://www.ejemplo.com" title="http://www.ejemplo.com"/>
                                 </p>
                             </div>
                             <br/>
@@ -237,7 +237,8 @@
                             </p>
                             <br/>
                             <p class="margen_15_left">
-                                <label>Ubicación:</label>
+                                <label><strong>Ubicación:</strong></label><br/>
+                                <label>Arraste el puntero rojo hasta la ubicación de su negocio para almacenarla.</label>
                             <div id="mapa_negocio" style="height: 300px;"></div>
                             <input type="hidden" value="" name="latitud_negocio" id="latitud_negocio"/>
                             <input type="hidden" value="" name="longitud_negocio" id="longitud_negocio"/>
