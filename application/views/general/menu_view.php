@@ -35,6 +35,7 @@ if ($keyUser === FALSE || ($keyUser !== FALSE && $tipoUsuario !== 0)):
         .principal li ul li a {
             color: #FFFFFF;
             text-decoration: none;
+            background-color: #924591;
         }
 
         .principal li ul li a:hover {
