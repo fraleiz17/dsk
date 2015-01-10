@@ -78,7 +78,7 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
     </div>
 
     <div style=" margin-left:8px; margin-right:8px;" class="contenido_directorio">
-        <div class="contenedor_titulo_informcacion"> CONTACTANOS </div>
+        <div class="contenedor_titulo_informcacion"> CONT&Aacute;CTANOS </div>
         <div class="contenedor_informacion">
             <p>Querétaro, Servicio a Domicilio
                 Querétaro Querétaro</p>

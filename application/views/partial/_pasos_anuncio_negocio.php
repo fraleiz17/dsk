@@ -288,7 +288,7 @@
                             </div>
 
                             <div style=" margin-left:8px; margin-right:8px;" class="contenido_directorio_mini">
-                                <div class="contenedor_titulo_informcacion_mini"> CONTACTANOS </div>
+                                <div class="contenedor_titulo_informcacion_mini"> CONT&Aacute;CTANOS </div>
                                 <div class="contenedor_informacion_mini">
                                     <p><span id="estado_negocio">Querétaro</span>,
                                         <span id="calle_negocio">Querétaro</span> <span id="numero_negocio">Querétaro</span> <span id="colonia_negocio"></span>
