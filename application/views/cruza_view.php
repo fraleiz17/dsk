@@ -6,10 +6,6 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
   ?>
 
 <link type="text/css" rel="stylesheet" href="<?=base_url()?>css/cruza.css" media="screen"></link>
-
-
-   <script type="text/javascript" src="<?=base_url()?>js/funcion_select.js"></script>
-   <script type="text/javascript" src="<?=base_url()?>js/jquery.customSelect.js"></script>
   <script>
   function buscar_imagen(id){
              id_anuncio="id_anuncio="+id;
@@ -271,14 +267,6 @@ CRUZA
 <option style="background-color: #BCBEC0;" value="<?=$estado->estadoID?>"><?=$estado->nombreEstado?></option>
 <?php endforeach;
 		endif;?>
-
-</select>
-</div>
-<div class="fondo_select">
-<select   class="styled" id="Precio" name="precio">
-<option value="" > Ordenar por precio </option>
-<option style="background-color: #BCBEC0;" value="asc"> De menor a mayor </option>
-<option style="background-color: #BCBEC0;" value="desc"> De mayor a menor </option>
 
 </select>
 </div>

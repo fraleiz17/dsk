@@ -4,9 +4,7 @@
 $this->load->view('general/general_header_view', array('title' => 'Venta',
   'links'                                                      => array('venta'), 'scripts' => array('funciones_venta')))
   ?>
-    <script type="text/javascript" src="<?=base_url()?>js/funcion_select.js"></script>
-   <script type="text/javascript" src="<?=base_url()?>js/jquery.customSelect.js"></script>
-   <script>
+    <script>
 function buscar_imagen(id){
              id_anuncio="id_anuncio="+id;
 
@@ -231,64 +229,52 @@ que el nombre del criador esté en el certificado.
     VENTA
 </div>
 <div class="contenedor_buscador">
-    <div class="buscador">
-        <form id="filtro_venta">
-            <input type="hidden" name="id_anuncio" id="id_anuncio" value=""/>
+<div class="buscador">
+ <form id="filtro_venta">
+ <input type="hidden" name="id_anuncio" id="id_anuncio" value=""/>
+<div class="fondo_select">
+<select   class="styled" id="raza" name="raza">
+<option value="" > Selecciona un raza </option>
+<?php if($razas != null):
+    foreach($razas as $raza):
+    echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
+    
+    ?>
+<option style="background-color: #BCBEC0;" value="<?=$raza->razaID?>"><?=$raza->raza?></option>
+<?php endforeach;
+        endif;?>
+</select>
+</div>
 
-            <div class="fondo_select">
-                <select class="styled" id="raza" name="raza">
-                    <option value=""> Selecciona un raza</option>
-                    <?php if ($razas != null):?>
-                        <?php foreach ($razas as $raza):?>
-                            ?>
-                            <option style="background-color: #BCBEC0;"
-                            value="<?php echo $raza->razaID?>"><?php echo $raza->raza?></option>
-                        <?php endforeach;?>
-                    <?php endif;?>
-                    ?>
-                </select>
-            </div>
+<div class="fondo_select">
+<select    class="styled" id="genero" name="genero">
+<option value="" > Selecciona un género </option>
+<option value="1" style="background-color: #BCBEC0;">Macho </option>
+<option value="0" style="background-color: #BCBEC0;">Hembra </option>
 
-            <div class="fondo_select">
-                <select class=" styled estilo_select" id="genero" name="genero">
-                    <option value=""> Selecciona un género</option>
-                    <option style="background-color: #BCBEC0;">Macho</option>
-                    <option style="background-color: #BCBEC0;">Hembra</option>
+</select>
+</div>
 
-                </select>
-            </div>
+<div class="fondo_select">
+<select    class="styled" id="estado" name="estado">
+<option value=""> Selecciona un Estado </option>
+<?php if($estados != null):
+    foreach($estados as $estado):?>
+<option style="background-color: #BCBEC0;" value="<?=$estado->estadoID?>"><?=$estado->nombreEstado?></option>
+<?php endforeach;
+        endif;?>
 
-            <div class="fondo_select">
-                <select class="styled estilo_select" id="estado" name="estado">
-                    <option value=""> Selecciona un Estado</option>
-                    <?php
-                    if ($estados != null):
-                     foreach ($estados as $estado):
-                         ?>
-                     <option style="background-color: #BCBEC0;"
-                     value="<?php echo $estado->estadoID?>"><?php echo $estado->nombreEstado?></option>
-                     <?php
-                     endforeach;
-                     endif;
-                     ?>
+</select>
+</div>
 
-                 </select>
-             </div>
-             <div class="fondo_select">
-                <select class="styled estilo_select" id="Precio" name="precio">
-                    <option value=""> Ordenar por precio</option>
-                    <option style="background-color: #BCBEC0;" value="asc"> De menor a mayor</option>
-                    <option style="background-color: #BCBEC0;" value="desc"> De mayor a menor</option>
+<input type="hidden" id="Precio" name="precio">
 
-                </select>
-            </div>
-            <div class="contenedor_buscar">
-                <input type="text" class="buscar" placeholder="palabras clave" size="4" name="palabra_clave"
-                id="palabra_clave"/>
-                <input type="button" height="40" value="  " class="boton_palabras_clave"/>
-            </div>
-        </form>
-    </div>
+<div class="contenedor_buscar">
+<input  type="text" class="buscar" size="4" name="palabra_clave" id="palabra_clave"/>
+<input type="button" height="40" value="  " class="boton_palabras_clave" />
+</div>
+</form>
+</div>
 
 </div>
 

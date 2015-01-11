@@ -52,7 +52,7 @@ class Venta extends CI_Controller {
         $data['seccion'] = self::$seccion;
         $data['estados']  = $this->defaultdata_model->getEstados();
         $data['paquetes'] = $this->defaultdata_model->getPaquetes();
-        $data['razas'] = $this->defaultdata_model->getRazas();
+        //$data['razas'] = $this->defaultdata_model->getRazas();
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
         $config = array();
 $config['center'] = 'auto';
