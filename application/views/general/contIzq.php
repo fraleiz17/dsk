@@ -226,7 +226,7 @@
     <div class="datos_fiscales"> Datos fiscales</div>
 
 
-    <div class="texto_inputs" style="margin-top:12px;">
+    <div class="texto_inputs" style="margin-top:18px;">
         <p> Razón Social:</p>
 
         <p style="margin-top:0px;">RFC:</p>
@@ -434,7 +434,7 @@
     </div>
 
 
-    <div class="texto_inputs" style="margin-top:8px;">
+    <div class="texto_inputs" style="margin-top:18px;">
         <p>Contacto:</p>
 
         <p style="margin-top:11px;">Teléfono:</p>
@@ -510,7 +510,7 @@
 
     <div class="datos_fiscales"> Datos fiscales</div>
 
-    <div class="texto_inputs" style="margin-top:12px;">
+    <div class="texto_inputs" style="margin-top:17px;">
         <p> Razón Social:</p>
 
         <p style="margin-top:0px;">RFC:</p>
@@ -572,7 +572,8 @@
     <div class="datos_fiscales"> Datos de la Asociación</div>
 
 
-    <div class="texto_inputs" style="margin-top:8px;">
+    <div class="texto_inputs" style="margin-top:18px;">
+        <p> Nombre: </p>
         <p>Contacto:</p>
 
         <p style="margin-top:11px;">Teléfono:</p>
