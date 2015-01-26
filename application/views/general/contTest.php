@@ -447,6 +447,8 @@
 
         <p><textarea rows="3" cols="40" style="margin-top:3px;" name="descripcionN1"> </textarea></p>
 
+        <p>Desplace el puntero hacia su ubicaci&oacute;n.</p>
+        <br/><br/>
 
     </div>
 
@@ -583,6 +585,8 @@
 
         <p><textarea rows="3" cols="40" style="margin-top:3px;" name="descripcionAC1"> </textarea></p>
 
+        <p>Desplace el puntero hacia su ubicaci&oacute;n.</p>
+        <br/><br/>
 
     </div>
 
