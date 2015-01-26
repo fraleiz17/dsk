@@ -107,7 +107,7 @@ class Registro extends CI_Controller {
 
 <font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
 Gracias por registrate en QuieroUnperro.com<br/>
-Tu usuario ha sido creado correctamente. Te recordamos tus datos de inicio de sesi&oacute;:<br/><br/>
+Tu usuario ha sido creado correctamente. Te recordamos tus datos de inicio de sesi&oacute;n:<br/><br/>
 Correo: '.$this->input->get('correo').' <br/>
 Contrase&ntilde;a: * Por seguridad no se muestra. En caso de olvidarla sol&iacute;citala en el portal.<br/><br/>
 Para poder comenzar a disfrutar de todas las herramientas del portal, valida tu cuenta haciendo clic <a href="'.base_url().'registro/activar/'.$confirmationCode.'">aqu&iacute;</a> o copia esta direcci&oacute;n en el explorador:<br/><br/>
@@ -355,7 +355,7 @@ Para poder comenzar a disfrutar de todas las herramientas del portal, valida tu 
 		
 
 		$config = array();
-		$config['center'] = 'auto';
+		$config['center'] = '19.433463102009004,-99.13711169501954';
 		$config['zoom'] = 'auto';
 		$config['onboundschanged'] = 'if (!centreGot) {
 				var mapCentre = map.getCenter();

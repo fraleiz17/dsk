@@ -115,15 +115,7 @@
   </p>
 <p style="margin-top:18px;">
 <select name="paisID" class="gris_input"> 
-<option value="">Seleccione</option>
-            <?php
-                if ($paises != null):
-                    foreach ($paises as $pais):
-                        ?>
-                        <option value="<?php echo $pais->paisID ?>" <?=($fiscData->idPais == $pais->paisID)  ? 'selected="selected"' : ''?>><?php echo $pais->nombrePais ?></option>
-
-                    <?php endforeach;
-                endif; ?>
+<option value="147">México</option>
            </select> </p>
 
 

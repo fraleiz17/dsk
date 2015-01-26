@@ -49,7 +49,7 @@ class Evento extends CI_Controller
        $data['paquetes'] = $this->defaultdata_model->getPaquetes();
        $data['razas'] = $this->defaultdata_model->getRazas();
        $config = array();
-$config['center'] = 'auto';
+$config['center'] = '19.433463102009004,-99.13711169501954';
 $config['zoom'] = 'auto';
 $config['onboundschanged'] = 'if (!centreGot) {
 var mapCentre = map.getCenter();
@@ -110,7 +110,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
        $data['paquetes'] = $this->defaultdata_model->getPaquetes();
        $data['razas'] = $this->defaultdata_model->getRazas();
               $config = array();
-$config['center'] = 'auto';
+$config['center'] = '19.433463102009004,-99.13711169501954';
 $config['zoom'] = 'auto';
 $config['onboundschanged'] = 'if (!centreGot) {
 var mapCentre = map.getCenter();

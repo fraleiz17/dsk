@@ -385,7 +385,7 @@ $(document).ready(function()
                 allowedTypes: "png,jpg,jpeg",
                 fileName: "file_form",
                 maxNumberOfFiles: 2,
-                showFileCounter: true,
+                showFileCounter: false,
                 returnType: 'json',
                 showStatusAfterSuccess: false,
                 onSuccess: function(files, data, xhr)

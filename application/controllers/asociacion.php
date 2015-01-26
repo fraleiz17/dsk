@@ -34,7 +34,7 @@ class Asociacion extends CI_Controller {
         $data['directorios'] = $this->usuario_model->getDirectorios(11);
         
         $config = array();
-        $config['center'] = 'auto';
+        $config['center'] = '19.433463102009004,-99.13711169501954';
         $config['zoom'] = 'auto';
         $config['onboundschanged'] = 'if (!centreGot) {
             var mapCentre = map.getCenter();
@@ -97,7 +97,7 @@ class Asociacion extends CI_Controller {
     function mapa(){
 
         $config = array();
-        $config['center'] = 'auto';
+        $config['center'] = '19.433463102009004,-99.13711169501954';
         $config['zoom'] = 'auto';
         $config['onboundschanged'] = 'if (!centreGot) {
                 var mapCentre = map.getCenter();
@@ -130,7 +130,7 @@ class Asociacion extends CI_Controller {
     function mapa2(){
 
         $config = array();
-        $config['center'] = 'auto';
+        $config['center'] = '19.433463102009004,-99.13711169501954';
         $config['zoom'] = 'auto';
         $config['onboundschanged'] = 'if (!centreGot) {
                 var mapCentre = map.getCenter();
@@ -156,7 +156,7 @@ class Asociacion extends CI_Controller {
 
 
         $config = array();
-        $config['center'] = 'auto';
+        $config['center'] = '19.433463102009004,-99.13711169501954';
         $config['zoom'] = 'auto';
         $config['onboundschanged'] = 'if (!centreGot) {
                 var mapCentre = map.getCenter();

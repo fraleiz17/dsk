@@ -71,6 +71,7 @@ class Carrito extends CI_Controller
 
         $productos = 0;
         $precio = 0;
+        $total = 0;
         if ($carrito != null) {
             foreach ($carrito as $producto) {
                 $productos += $producto->cantidad;

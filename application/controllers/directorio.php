@@ -52,7 +52,7 @@ class Directorio extends CI_Controller {
         $data['giros'] = $this->defaultdata_model->getGiros();        
         
          $config = array();
-$config['center'] = 'auto';
+$config['center'] = '19.433463102009004,-99.13711169501954';
 $config['zoom'] = 'auto';
 $config['onboundschanged'] = 'if (!centreGot) {
 var mapCentre = map.getCenter();

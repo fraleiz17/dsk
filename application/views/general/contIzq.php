@@ -273,14 +273,7 @@
             </select></p>
         <p><select name="pais">
                 <option value="147">México</option>
-                <?php
-                if ($paises != null):
-                    foreach ($paises as $pais):
-                        ?>
-                        <option value="<?php echo $pais->paisID ?>"><?php echo $pais->nombrePais ?></option>
-
-                    <?php endforeach;
-                endif; ?>
+                
             </select></p>
 
 
@@ -343,14 +336,7 @@
             </select></p>
         <p><select name="paisN">
                 <option value="147">México</option>
-                <?php
-                if ($paises != null):
-                    foreach ($paises as $pais):
-                        ?>
-                        <option value="<?php echo $pais->paisID ?>"><?php echo $pais->nombrePais ?></option>
-
-                    <?php endforeach;
-                endif; ?>
+                
             </select></p>
 
 
@@ -556,14 +542,7 @@
             </select></p>
         <p><select name="paisAC"/>
             <option value="147">México</option>
-            <?php
-            if ($paises != null):
-                foreach ($paises as $pais):
-                    ?>
-                    <option value="<?php echo $pais->paisID ?>"><?php echo $pais->nombrePais ?></option>
-
-                <?php endforeach;
-            endif; ?>
+            
             </select> </p>
 
 

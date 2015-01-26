@@ -720,6 +720,7 @@ function denunciar_pub(id) {
 
     $('.btn_den').on('click', function (){
         var pub = $(this).data("pub");
+        console.log(pub);
         $('.boton_naranja_tres').show();
         $('.info').html('');
         buscar_anunciante_dos(pub);
