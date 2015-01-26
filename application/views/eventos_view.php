@@ -290,7 +290,8 @@ margin-top: 30px;">
                 }
                 ?>
 	</div> 
-<div class="division_menu_inferior"></div>
+
+<div class="division_menu_inferior" style="display:block;overflow:hidden;"></div>
 <?php $this->load->view('general/footer_view');?>
 </body>
 </html>

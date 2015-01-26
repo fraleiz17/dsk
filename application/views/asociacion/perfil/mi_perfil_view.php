@@ -90,17 +90,17 @@
 
 <div class="contendeor_inputs" >
 <p><input type="text" name="razon" class="gris_input" value ="<?php echo $fiscData->razonSocial ?>"/> </p>
-<p style="margin-top:14px;"><input type="text" name="RFC" class="gris_input" value ="<?php echo $fiscData->rfc ?>" > </p>
+<p style="margin-top:18px;"><input type="text" name="RFC" class="gris_input" value ="<?php echo $fiscData->rfc ?>" > </p>
 
-<p style="margin-top:14px;"><input type="text" name="calle" class="gris_input" value ="<?php echo $fiscData->calle ?>"> </p>
+<p style="margin-top:18px;"><input type="text" name="calle" class="gris_input" value ="<?php echo $fiscData->calle ?>"> </p>
 
-<p style="margin-top:14px;"><input type="text" name="no_exterior" class="gris_input" value ="<?php echo $fiscData->noExterior ?>"></p>
+<p style="margin-top:22px;"><input type="text" name="no_exterior" class="gris_input" value ="<?php echo $fiscData->noExterior ?>"></p>
 
-<p style="margin-top:14px;"><input type="text" name="cp" class="gris_input" value ="<?php echo $fiscData->cp ?>"> </p>
+<p style="margin-top:18px;"><input type="text" name="cp" class="gris_input" value ="<?php echo $fiscData->cp ?>"> </p>
 
-<p style="margin-top:14px;"><input type="text" name="municipio" class="gris_input" value ="<?php echo $fiscData->municipio ?>"> </p>
+<p style="margin-top:20px;"><input type="text" name="municipio" class="gris_input" value ="<?php echo $fiscData->municipio ?>"> </p>
 
-<p style="margin-top:14px;"><select name="estadoID" class="gris_input" id="estadoID">      
+<p style="margin-top:22px;"><select name="estadoID" class="gris_input" id="estadoID">      
 <option value="">Seleccione</option>
            <?php
 
@@ -113,7 +113,7 @@
                 endif; ?>
            </select> 
   </p>
-<p style="margin-top:14px;">
+<p style="margin-top:18px;">
 <select name="paisID" class="gris_input"> 
 <option value="">Seleccione</option>
             <?php

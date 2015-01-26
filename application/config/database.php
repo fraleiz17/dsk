@@ -43,16 +43,15 @@
 |
 | The $active_record variables lets you determine whether or not to load
 | the active record class
-$db['default']['database'] = 'quieroun_perro_dev';
 */
 
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['database'] = 'qup';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '';
+$db['default']['hostname'] = 'quierounperro.com';
+$db['default']['database'] = 'quieroun_vacia';
+$db['default']['username'] = 'quieroun_test';
+$db['default']['password'] = 'testo#01';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
