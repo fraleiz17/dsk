@@ -299,7 +299,7 @@
                                     <p>Contacto: <span id="nombre_negocio"> Luis</span> <span id="apellido_negocio">Garay</span></p>
 
                                     <p>Pagina Web: <span id="pagina_web_negocio">von_marab.com</span></p>
-                                    <br/>
+                                    
                                     <ul class="boton_morado_mini">
                                         <li> Enviar mail </li>
                                     </ul>
@@ -458,7 +458,7 @@
 
         function initialize() {
             g = google.maps.event;
-            myLatlng = new google.maps.LatLng(<?php echo $this->session->userdata('latitud') !== FALSE ? $this->session->userdata('latitud') : '20.5593958' ?>, <?php echo $this->session->userdata('longitud') !== FALSE ? $this->session->userdata('longitud') : '-100.4190292' ?>);
+            myLatlng = new google.maps.LatLng(<?php echo $this->session->userdata('latitud') != FALSE ? $this->session->userdata('latitud') : '20.5593958' ?>, <?php echo $this->session->userdata('longitud') != FALSE ? $this->session->userdata('longitud') : '-100.4190292' ?>);
 
             var mapOptions = {
                 zoom: 16,
