@@ -57,7 +57,7 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
     value="<?php echo $this->session->userdata('correo')?>" size="44"/>
     <input type="text" class="formu_contacto" id="asunto_contacto"
     onfocus="clear_textbox('asunto_contacto', 'Asunto')" placeholder="Asunto" size="44"/>
-    <textarea cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto"
+    <textarea style = "width:334px;" cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto"
     class="formu_contacto" rows="5">Comentarios</textarea>
 </br>
 </br>
