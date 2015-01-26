@@ -243,7 +243,7 @@ class Principal extends CI_Controller {
 
     
     function editar_contrasena() {       
-            if ($this -> usuario_model -> cambiarContrasena($this -> input -> post('contrasenaActual'), $this -> input -> post('contrasena1'), $this -> session -> userdata('idUsuario'),1)) {
+            if ($this -> usuario_model -> passRecover($this -> input -> post('contrasena1'), $this -> session -> userdata('idUsuario'))) {
                
                 $mensaje = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -296,6 +296,7 @@ Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
 
         $this->email_model->send_email('', $this->session->userdata('correo'), 'Has cambiado tu contraseña en QUP', $mensaje);
                 $data['response'] = true;
+                $this->session->set_userdata('recuperarusuario',false);
             } else {
                $data['response'] = false;
             }

@@ -85,7 +85,10 @@ $(document).ready(function() {
 <?php if($contrasena): ?>
         $('#contrasenaActual').removeClass('validate[required]');
         $('#contrasenaActual').attr('disabled', 'disabled');
+        $('#contrasenaActual').attr('placeholder', 'No requerido');
         muestra('contenedor_cambiar_contrasena');
+<?php else: ?>
+        $('#contrasenaActual').attr('placeholder', 'Ingrese su contraseña actual');
   <?php endif; ?>
 
 

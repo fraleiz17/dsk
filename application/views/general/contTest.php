@@ -45,7 +45,7 @@
             </div>
 
             <div class="contendeor_inputs">
-                <p><input type="text" name="correo" class="validate[required]"/> *</p>
+                <p><input type="text" name="correo" class="validate[required]" placeholder="correo@ejemplo.com"/> *</p>
 
                 <p><input type="password" name="contrasena" class="validate[required]"/> *</p>
             </div>
@@ -72,7 +72,7 @@
                 </div>
 
             <div class="contendeor_inputs">
-                <p><input type="text" name="correoR" class="validate[required,custom[email]]"/> *</p>
+                <p><input type="text" name="correoR" class="validate[required,custom[email]]" placeholder="correo@ejemplo.com"/> *</p>
             </div>
 
                 
@@ -136,7 +136,7 @@
 <p><input type="text" name="nombre" id="nombre" class="validate[required],custom[onlyLetterSp]"/> *</p>
 <p><input type="text" name="apellido" id="apellido" class="validate[required],custom[onlyLetterSp]"/> *</p>
 
-<p><input type="text" name="correo" class="validate[required,custom[email],ajax[isthereemail]]" /> *</p>
+<p><input type="text" name="correo" class="validate[required,custom[email],ajax[isthereemail]]" placeholder="correo@ejemplo.com"/> *</p>
 
 <p><input type="text" name="telefono" class="validate[custom[onlyNumberSp],minSize[10]]"/></p>
 
@@ -439,7 +439,7 @@
             </select> </p>
         <p><input style="margin-top:3px;" type="text" name="cpN1" class="custom[onlyNumberSp]"/></p>
 
-        <p><input style="margin-top:3px;" type="text" name="correoN1"class="validate[required],custom[email]"></p>
+        <p><input style="margin-top:3px;" type="text" name="correoN1"class="validate[required],custom[email]" placeholder="correo@ejemplo.com"></p>
 
         <p><input style="margin-top:3px;" type="text" name="pagina_webN1"/></p>
 
@@ -575,7 +575,7 @@
             </select> </p>
         <p><input style="margin-top:3px;" type="text" name="cpAC1" class="custom[onlyNumberSp]" /></p>
 
-        <p><input style="margin-top:3px;" type="text" name="correoA1C" class="validate[required],custom[email]"/></p>
+        <p><input style="margin-top:3px;" type="text" name="correoA1C" class="validate[required],custom[email]" placeholder="correo@ejemplo.com"/></p>
 
         <p><input style="margin-top:3px;" type="text" name="pagina_webAC1"/></p>
 

@@ -344,7 +344,7 @@ class Cuenta extends CI_Controller {
 
     
     function editar_contrasena() {       
-            if ($this -> usuario_model -> cambiarContrasena($this -> input -> post('contrasenaActual'), $this -> input -> post('contrasena1'), $this -> session -> userdata('idUsuario'),false)) {
+            if ($this -> usuario_model -> cambiarContrasena($this -> input -> post('contrasena1'), $this -> session -> userdata('idUsuario'))) {
                
                  $mensaje = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

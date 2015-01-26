@@ -376,18 +376,18 @@ display:block;
 /*placeholder */
 
 ::-webkit-input-placeholder { /* WebKit browsers */
-    color:    #FFF;
+    color:    #848484;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    #FFF;
+    color:    #848484;
     opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    #FFF;
+    color:    #848484;
     opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:    #FFF;
+    color:    #848484;
 }
 /*end placeholder */
 
