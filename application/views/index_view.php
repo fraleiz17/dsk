@@ -156,7 +156,10 @@
                 class="title_paquetes_titilos"> PAQUETE <?php echo strtoupper($paquetes[0]->nombrePaquete) ?> </font>
         </div>
         <div class="precio_paquete_lite">
-            <?php if ($paquetes[0]->precio == 0): ?>
+            <?php if ($paquetes[0]->precio == 0 || is_logged() == false): ?>
+                <div class="el_titulo_paquete_lite"> Gratis</div>
+                <div class="descripcion_precio_paquete_lite">al crear tu usuario</div>
+            <?php elseif (is_logged() == true && $this->session->userdata('paqueteGratis') == 1): ?>
                 <div class="el_titulo_paquete_lite"> Gratis</div>
                 <div class="descripcion_precio_paquete_lite">al crear tu usuario</div>
             <?php else: ?>

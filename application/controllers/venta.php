@@ -208,6 +208,11 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         $paqueteID = $this->input->post('paquete');
         $detallePaquete = $this->defaultdata_model->getPaquete($paqueteID);
 
+        if (is_logged() == true && $this->session->userdata('paqueteGratis') == 1 && $paqueteID == 1):
+            $precioPaqueteA = 0;
+        else:
+            $precioPaqueteA = $detallePaquete->precio;
+        endif;
         //SERVICIOS ADQUIRIDOS
         $data = array(
             'cantFotos' => $detallePaquete->cantFotos,
@@ -215,7 +220,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
             'vigencia' => $detallePaquete->vigencia,
             'cupones' => $detallePaquete->cupones,
             'videos' => $detallePaquete->videos,
-            'precio' => $detallePaquete->precio,
+            'precio' => $precioPaqueteA,
             'detalleID' => $detallePaquete->detalleID,
             'paqueteID' => $detallePaquete->paqueteID,
             'idUsuario' => $this->session->userdata('idUsuario')
@@ -265,7 +270,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
             'ciudad' => $this->input->post('ciudad'),
             'genero' => $this->input->post('genero'),
             'razaID' => $this->input->post('raza'),
-            'precio' => $this->input->post('precio'),
+            'precioVenta' => $this->input->post('precio'),
             'descripcion' => $this->input->post('descripcion'),
             'muestraTelefono' => $this->input->post('mostrar_telefono'),
             'aprobada' => 0,
@@ -275,6 +280,14 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         );
 
         $publicacionID = $this->defaultdata_model->insertItem('publicaciones', $dataPublicacion);
+        //Paquete gratis?
+        if($paqueteID == 1 && $precioPaqueteA == 0){
+            $this->defaultdata_model->updateItem('idUsuario', $this->session->userdata('idUsuario'), $data = array('paqueteGratis' => 0), 'usuario');
+            $this->session->unset_userdata('paqueteGratis');
+            $this->session->set_userdata('paqueteGratis',0);
+        }
+        //Paquete Gratis
+
         $this->notificacionAdmin($this->input->post('seccion'),$this->input->post('titulo'),$publicacionID);
         //VIDEOS PUBLICACION
 
@@ -330,7 +343,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
          //COMPRA
          $valorCupon = $this->input->post('radiog_dark');
          $cuponID = $this->input->post('cuponUsado');
-         $precio_total = $detallePaquete->precio - ($detallePaquete->precio * ($valorCupon / 100));
+         $precio_total = $precioPaqueteA - ($precioPaqueteA * ($valorCupon / 100));
 
          if($cuponID != 0){
             $this->defaultdata_model->updateItem('cuponID', $cuponID, $data = array('usado' => 1), 'cuponadquirido');

@@ -70,7 +70,10 @@
                 PAQUETE <?php echo strtoupper($paquetes[0]->nombrePaquete) ?> </font>
         </div>
         <div class="precio_paquete_lite_mini">
-            <?php if ($paquetes[0]->precio == 0): ?>
+            <?php if ($paquetes[0]->precio == 0 || is_logged() == false): ?>
+                <div class="el_titulo_paquete_lite_mini"> Gratis</div>
+                <div class="descripcion_precio_paquete_lite_mini">al crear tu usuario</div>
+            <?php elseif (is_logged() == true && $this->session->userdata('paqueteGratis') == 1): ?>
                 <div class="el_titulo_paquete_lite_mini"> Gratis</div>
                 <div class="descripcion_precio_paquete_lite_mini">al crear tu usuario</div>
             <?php else: ?>
@@ -501,7 +504,11 @@ $(document).ready(function()
                 $(".preview").change(function() {
 					
                 $("#tituloPrev").html($("#titulo").val());
+                <?php if (is_logged() == true && $this->session->userdata('paqueteGratis') == 1):?>
+                    $("#precioPrev").html('0.00');
+                <?php else: ?>
                 $("#precioPrev").html($("#precio").val());
+                <?php endif; ?>
                 $("#seccionPrev").html($("#seccion").val());
                 var genero = $('#generoP option:selected').html();
                 $("#generoPrev").html(genero);
@@ -863,6 +870,11 @@ TOTAL
             $('#nvideos').html(paquete_val.videos);
             $('#ncupones').html(paquete_val.cupones);
             $('#ncaracteres').html(paquete_val.caracteres);
+
+            <?php if (is_logged() == true && $this->session->userdata('paqueteGratis') == 1):?>
+            paquete_val.precio = 0;
+            <?php endif; ?>
+
             $('#subtotal').html((paquete_val.precio - ( paquete_val.precio * .16)).toFixed(2));
 			var iva = paquete_val.precio * .16;			
 			$('#niva').html(iva.toFixed(2));
