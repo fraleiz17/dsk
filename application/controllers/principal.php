@@ -396,7 +396,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
 <br/>
 
 <font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
-Te informamos que tu anuncio <strong>"'.$anuncio->titulo.'"</strong> est&aacute; a punto de vencer. Recuerda que puedes consultar la vigencia de tus anuncio y renovarlo en caso de que lo desees, consultando en la secci&oacute; de Administrador de Anuncios, en Mi Perfil.<br/><br/>
+Te informamos que tu anuncio <strong>"'.$anuncio->titulo.'"</strong> est&aacute; a punto de vencer. Recuerda que puedes consultar la vigencia de tus anuncio y renovarlo en caso de que lo desees, consultando en la secci&oacute;n de Administrador de Anuncios, en Mi Perfil.<br/><br/>
 Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
 </font>
 <p> </p>

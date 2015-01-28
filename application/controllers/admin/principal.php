@@ -449,12 +449,12 @@ class Principal extends CI_Controller {
 </tr> -->
 <tr>
 <td style="padding-left:15px;"> 
-<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >Hola: '.$datos->nombre.' </font>
+<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >Hola '.$datos->nombre.':  </font>
 <br/>
 <br/>
 
 <font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
-Tu anuncio <strong>"'.$datos->titulo.'"</strong> con fecha de publicaci&oacute; '.$datos->fechaCreacion.' en la secci&oacute; '.$datos->seccionNombre.', ha sido aprobado para publicarse en esta secci&oacute;n.<br/><br/>
+Tu anuncio <strong>"'.$datos->titulo.'"</strong> con fecha de publicaci&oacute;n '.$datos->fechaCreacion.' en la secci&oacute; '.$datos->seccionNombre.', ha sido aprobado para publicarse en esta secci&oacute;n.<br/><br/>
 <br/><br/>
 Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
 </font>
@@ -516,7 +516,7 @@ $this->email_model->send_email('', $datos->correo, 'Ha sido aprobado tu anuncio 
 <br/>
 
 <font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
-Se ha detectado que tu anuncio <strong>"'.$datos->titulo.'"</strong> con fecha de publicaci&oacute; '.$datos->fechaCreacion.' en la secci&oacute; '.$datos->seccionNombre.', viola uno o m&aacute;s de nuestros t&eacute;rminos y condiciones de uso.<br/><br/>
+Se ha detectado que tu anuncio <strong>"'.$datos->titulo.'"</strong> con fecha de publicaci&oacute;n '.$datos->fechaCreacion.' en la secci&oacute; '.$datos->seccionNombre.', viola uno o m&aacute;s de nuestros t&eacute;rminos y condiciones de uso.<br/><br/>
 Tu anuncio no ha sido aprobado para publicarse en esta secci&oacute;n, pero puedes editarlo eintentarlo nuevamente. Solo ve la la secc&ocuten de Administrador de Anuncios, en Mi Perfil.<br/><br/>
 <br/><br/>
 El tiempo de vigencia de tu anuncio sigue corriendo a pesar de no estar publicado, as&iacute; que te invitamos a que realices los cambios necesarios lo antes posible.<br/><br/>
@@ -748,7 +748,7 @@ $mensaje = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http
 
 <font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
 Gracias por registrate en QuieroUnperro.com<br/>
-Tu usuario ha sido creado correctamente. Te recordamos tus datos de inicio de sesi&oacute;:<br/><br/>
+Tu usuario ha sido creado correctamente. Te recordamos tus datos de inicio de sesi&oacute;n:<br/><br/>
 Correo: '.$this->input->post('correo').' <br/>
 Contrase&nacute;a: * Por seguridad no se muestra. En caso de olvidarla sol&iacute;citala en el portal.<br/><br/>
 Para poder comenzar a disfrutar de todas las herramientas del portal, valida tu cuenta haciendo clic <a href="'.base_url().'registro/activar/'.$confirmationCode.'">aqu&iacute;</a> o copia esta direcci&oacute;n en el explorador:<br/><br/>
