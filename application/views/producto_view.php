@@ -70,6 +70,15 @@
                             </li>
                         </ul>
                     </div>
+                <?php else:?>
+                    <div>
+                        <div class="loader"></div>
+                        <ul class="boton_verde">
+                            <li>
+                                <label onclick="muestra('contenedor_login');muestra('ingreso_normal');">Inicie Sesión</label>
+                            </li>
+                        </ul>
+                    </div>
                 <?php endif; ?>
                 <div class="infouser">
 
