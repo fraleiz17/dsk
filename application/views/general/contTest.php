@@ -12,21 +12,56 @@
         oculta('contenedor_registro');
         <?php endif; ?>
 
-
         $('#recuperarcontrasena').submit(function() {
         $(".recuperar").fadeOut(350, function(){
             $(".enviando").show();
         });
     });
 
-});
-
-      
+      });
 </script>
 
 
+<div id="iconos_ocultos" class="iconos_ocultos">
 
-<!--		CONTENEDOR LOGIN							-->
+
+    <ul class="iconos_estatus">
+        <li   <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  onclick="window.location='<?= base_url() ?>carrito';" <?php else: ?>  <?php endif; ?>>
+
+            <img id="horizontal_compras_mini"
+                 onmouseover="mostrar_icono('horizontal_compras'); ocultar_icono('horizontal_compras_mini');"
+                 class="iconos_flotantes" src="<?php echo base_url() ?>images/compras_horizontal_mini.png"/>
+
+            <img class="iconos_flotantes2"
+                 onmouseout="mostrar_icono('horizontal_compras_mini'); ocultar_icono('horizontal_compras');"
+                 id="horizontal_compras" src="<?php echo base_url() ?>images/compras_horizontal.png"
+               />
+
+        </li>
+        <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
+       <?php else: ?> onclick="muestra('contenedor_login');oculta('envio_con');muestra('ingreso_normal');" <?php endif; ?>>
+            <img id="horizontal_ingresar_mini"
+                 onmouseover="mostrar_icono('horizontal_ingresar'); ocultar_icono('horizontal_ingresar_mini');"
+                 class="iconos_flotantes" src="<?php echo base_url() ?>images/ingresar_horizontal_mini.png"/>
+
+            <img class="iconos_flotantes2"
+                 onmouseout="mostrar_icono('horizontal_ingresar_mini'); ocultar_icono('horizontal_ingresar');"
+                id="horizontal_ingresar"
+                 src="<?php echo base_url() ?>images/ingresar_horizontal.png"/>
+        </li>
+
+        <li  <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  <?php else: ?>onclick="muestra('contenedor_registro');" <?php endif; ?>>
+            <img id="horizontal_registrate_mini"
+                 onmouseover="mostrar_icono('horizontal_registrate'); ocultar_icono('horizontal_registrate_mini');"
+                 class="iconos_flotantes" src="<?php echo base_url() ?>images/registrate_horizontal_mini.png"/>
+
+            <img class="iconos_flotantes2"
+                 onmouseout="mostrar_icono('horizontal_registrate_mini'); ocultar_icono('horizontal_registrate');"
+                 id="horizontal_registrate" src="<?php echo base_url() ?>images/registrate_horizontal.png"/>
+        </li>
+    </ul>
+</div>
+<!--        CONTENEDOR LOGIN                            -->
 <!-- ------------------------------------------------------ -->
 <form action="<?= base_url() ?>sesion/login/principal/principal" id="login" class="validate" method="post">
     <div class="contenedor_login" id="contenedor_login" style="display:none;text-align:left;">
@@ -34,9 +69,9 @@
                                           onclick="oculta('contenedor_login');"/></div>
 
         <div class="registro_normal">
-			
+            
             <div class="titulo_registro"> INGRESAR</div>
-			<div id="ingreso_normal">
+            <div id="ingreso_normal">
             <div class="texto_inputs" style="margin-top:10px;">
                 <p> Usuario:</p>
 
@@ -59,15 +94,15 @@
                     <input type="submit" class="el_submit"/>
                 </li>
             </ul>
-			</div>
+            </div>
 </form>
 
             
             <div id="envio_con" class="envio_con">
             <form action="<?= base_url() ?>recuperarcontrasena/sendLink" id="recuperarcontrasena" method="post">
-				</br>
+                </br>
                 <div class="titulo_registro"></div>
-				<div class="texto_inputs">
+                <div class="texto_inputs">
                 <p> Ingresa tu correo:</p>
                 </div>
 
@@ -76,25 +111,25 @@
             </div>
 
                 
-				<ul class="morado_reg">
+                <ul class="morado_reg recuperar">
                 <li>
                    <input type="submit" value="Recuperar" class="el_submit"/>
                 </li>
             </ul>
-            
+
             <ul class="enviando" style="display:none;">
                 <li>
                    Enviando informacion
                 </li>
             </ul>
-            
+                
             </form>
-			</br>
+            </br>
             </div>
-			
-			<div id="confirmacionCambio" style="display:none; padding:20px;">
-			 Se ha enviado contraseña al correo electronico indicado.
-			</div>
+            
+            <div id="confirmacionCambio" style="display:none; padding:20px;">
+             Se ha enviado contraseña al correo electronico indicado.
+            </div>
             
 
         </div>
@@ -102,10 +137,10 @@
     </div>
 <!--</form>-->
 <!-- ------------------------------------------------------ -->
-<!--		FIN    CONTENEDOR LOGIN							-->
+<!--        FIN    CONTENEDOR LOGIN                         -->
 
 
-<!--		CONTENEDOR REGISTRO							-->
+<!--        CONTENEDOR REGISTRO                         -->
 <!-- ------------------------------------------------------ -->
 <form action="<?php echo base_url() ?>registro/registrar" id="registerNow" class="validate" method="get" autocomplete="off"
       enctype="multipart/form-data">
@@ -191,7 +226,7 @@
     <div class="datos_fiscales"> Datos fiscales</div>
 
 
-    <div class="texto_inputs" style="margin-top:12px;">
+    <div class="texto_inputs" style="margin-top:18px;">
         <p> Razón Social:</p>
 
         <p style="margin-top:0px;">RFC:</p>
@@ -385,7 +420,7 @@
     </div>
 
 
-    <div class="texto_inputs" style="margin-top:8px;">
+    <div class="texto_inputs" style="margin-top:18px;">
         <p>Contacto:</p>
 
         <p style="margin-top:11px;">Teléfono:</p>
@@ -439,7 +474,7 @@
             </select> </p>
         <p><input style="margin-top:3px;" type="text" name="cpN1" class="custom[onlyNumberSp]"/></p>
 
-        <p><input style="margin-top:3px;" type="text" name="correoN1"class="validate[required],custom[email]" placeholder="correo@ejemplo.com"></p>
+        <p><input style="margin-top:3px;" type="text" name="correoN1"class="validate[required],custom[email]" placeholder="correo@ejemplo.com"/></p>
 
         <p><input style="margin-top:3px;" type="text" name="pagina_webN1"/></p>
 
@@ -463,7 +498,7 @@
 
     <div class="datos_fiscales"> Datos fiscales</div>
 
-    <div class="texto_inputs" style="margin-top:12px;">
+    <div class="texto_inputs" style="margin-top:17px;">
         <p> Razón Social:</p>
 
         <p style="margin-top:0px;">RFC:</p>
@@ -518,10 +553,8 @@
     <div class="datos_fiscales"> Datos de la Asociación</div>
 
 
-    <div class="texto_inputs" style="margin-top:8px;">
-
-        <p style="margin-top:5px;"> Nombre: </p>
-
+    <div class="texto_inputs" style="margin-top:18px;">
+        <p> Nombre: </p>
         <p>Contacto:</p>
 
         <p style="margin-top:11px;">Teléfono:</p>
@@ -618,11 +651,11 @@
 <!-- Fin contenedor negro registro -->
 
 </form>
-<!--		FIN CONTENEDOR REGISTRO							-->
+<!--        FIN CONTENEDOR REGISTRO                         -->
 <!-- ------------------------------------------------------ -->
 
 
-<!--		EXITO REGISTRO							-->
+<!--        EXITO REGISTRO                          -->
 <!-- ------------------------------------------------------ -->
 <div class="contenedor_registro" id="contenedor_correcto" style="display:none;"> <!-- Contenedor negro reistro-->
     <div class="cerrar_registro"><img src="<?php echo base_url() ?>images/cerrar.png"
@@ -649,11 +682,11 @@
 
 </div>
 
-<!--		FIN EXITO REGISTRO						-->
+<!--        FIN EXITO REGISTRO                      -->
 <!-- ------------------------------------------------------ -->
 
 
-<!--		ERROR REGISTRO							-->
+<!--        ERROR REGISTRO                          -->
 <!-- ------------------------------------------------------ -->
 
 <div class="contenedor_registro" id="contenedor_error" style="display:none;"> <!-- Contenedor negro reistro-->
@@ -681,16 +714,15 @@
 
 
 
-<!--		FIN ERROR REGISTRO							-->
+<!--        FIN ERROR REGISTRO                          -->
 <!-- ------------------------------------------------------ -->
 
 
 
-<div style="display:block;float:left;widht:100px;height:344px;">
-<div id="espacio_izquierda" class="seccion_izquierda_secciones">
+
 <ul class="iconos" id="iconos_grandes">
         <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  onclick="window.location='<?= base_url() ?>carrito';" <?php else: ?>  <?php endif; ?>>
-            <div class="indicadores" style="margin-top: 78px;margin-left: 60px;"> 
+            <div class="indicadores"> 
                 <?php echo $carritoT ?>
                 
             </div> 
@@ -702,7 +734,7 @@
         
         
         
-            <div class="indicador" style="margin-top: 78px;margin-left: 60px;">
+            <div class="indicador">
              <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
              <img src="<?php echo base_url() ?>images/indicador_si.png" title="Ya estas logueado">
              <?php else: ?>
@@ -712,7 +744,7 @@
             <img src="<?php echo base_url() ?>images/sesion.png"/></li> 
             
         <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  <?php else: ?>onclick="muestra('contenedor_registro');" <?php endif; ?>>
-            <div class="indicador" style="margin-top: 78px;margin-left: 60px;"> 
+            <div class="indicador"> 
             <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
              <img src="<?php echo base_url() ?>images/indicador_si.png" title="Ya estas registrado">
              <?php else: ?>
@@ -722,4 +754,3 @@
             <img src="<?php echo base_url() ?>images/registrate.png"/>
         </li>
     </ul>
-</div></div>
