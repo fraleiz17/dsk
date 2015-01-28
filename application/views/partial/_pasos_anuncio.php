@@ -717,10 +717,10 @@ TOTAL
 </br>
 </br>
 <div style="width:840px;" >
-    <div style="float:right;widht: 136px;margin-left: 700px;margin-right: 58px;width: 136px;display: block;overflow: hidden;">
+    <div style="float:right;widht: 136px;margin-left: 700px;margin-right: 58px;width: 136px;display: block;overflow: hidden; height: 80px;">
         <ul class="morado_mini" id="btn_sig" style="">
-            <li class="sig_paso save" style="width:134px;height:42px;color:#FFFFFF;text-align:center;padding-top:10px;">
-                <input type="submit" value="Publicar"/>
+            <li id="test"class="sig_paso save" style="width:134px;height:42px;text-align:center;padding-top:10px;">
+                <input id="test" type="submit" value="Publicar"/>
             </li>
         </ul>
     </div>

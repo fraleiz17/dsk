@@ -270,6 +270,13 @@ display:block;
     font-size: 12px;
     padding: 0;
     cursor: pointer;
+    font-size: 18px;
+    font-family: "miFuente";
+    margin-top:-10px;
+}
+
+#test:hover{
+	color:#762EA4;
 }
 
 .morado_reg input[type=submit]:hover {
