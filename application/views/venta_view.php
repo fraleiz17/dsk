@@ -296,16 +296,16 @@ echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
             <!-- INICIO contenedor anuncio  -->
             <div class="contenedor_anuncio">
                 <div class="titulo_anuncio">
-                    <?php echo $publicacion->titulo?>
+                    <?=substr($publicacion->titulo, 0, 12).'...'?>
                 </div>
                 <div class="descripcion_anuncio">
-                    <font> Precio:&nbsp;$&nbsp;<?php echo $publicacion->precioVenta?></font>
+                    <font> Precio:&nbsp;$&nbsp;<?php echo substr($publicacion->precioVenta,0,9)?></font>
                     <br/>
                     <font> Raza: <?php $razita= $publicacion->raza;echo substr($razita, 0, 15); ?> </font>
                     <br/>
                     <font> Género: <?php echo $publicacion->genero?'Macho':'Hembra'?> </font>
                     <br/>
-                    <font> Ciudad: <?php echo $publicacion->ciudad?></font>
+                    <font> Ciudad: <?php echo substr($publicacion->ciudad, 0, 10)?></font>
                 </div>
                 <div class="contenedor_foto_anuncio" id="contener_foto<?php echo $publicacion->publicacionID?>">
                     
@@ -581,6 +581,7 @@ function buscar_detalles(id) {
             $(".descripcion_del_anuncio").empty().html('<div class="spinner" style="position:fixed;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
             $("#you_tube").empty().html('<div class="spinner" style="position:fixed;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
             $(".contenedor_galeria").empty().html('<div class="spinner" style="position:fixed;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
+            $(".boton_naranja_dos").empty().html('<div></div>');
         },
         success: function (result) {
 
@@ -608,7 +609,9 @@ function buscar_detalles(id) {
                 var botones = $('<ul class="boton_naranja"><li onclick="buscar_anunciante(\'' + data[i].publicacionID + '\')" class="btn_contactar">Contactar al anunciante</li> </ul> </br> <ul class="boton_gris"><li data-pub="' + data[i].publicacionID + '" class="btn_fvt"><img src="images/favorito.png"/>Agregar a Favoritos</li></ul><span id="info_fav"></span>');
                 cont_datos.append(botones);
                 $('.descripcion_del_anuncio').append(data[i].descripcion);
-              buscar_videos(data[i].publicacionID);
+                if (data[i].paqueteID != '1'){
+                buscar_videos(data[i].publicacionID);
+                }
 
                 $('.btn_den').data('pub', data[i].publicacionID);
 				$('.btn_contactar').data('pub', data[i].publicacionID);

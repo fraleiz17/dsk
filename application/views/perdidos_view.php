@@ -312,14 +312,14 @@ que el nombre del criador esté en el certificado.
    <!-- INICIO contenedor anuncio  -->
 <div class="contenedor_anuncio">
 <div class="titulo_anuncio_perdidos">
-<?=$publicacion->titulo?>
+<?=substr($publicacion->titulo, 0, 12).'...'?>
 </div>
 <div class="descripcion_anuncio">
 <font> Raza: <?php $razita= $publicacion->raza;echo substr($razita, 0, 15); ?>  </font>
 <br/>
 <font> Género: <?php echo $publicacion->genero?'Macho':'Hembra'?> </font>
 <br/>
-<font> Ciudad: <?=$publicacion->ciudad?></font>
+<font> Ciudad: <?=substr($publicacion->ciudad 0, 10)?></font>
 </div>
 <div class="contenedor_foto_anuncio">
 <img src="<?=base_url()?><?=$publicacion->foto?>" align="middle" width="128" height="80" />
@@ -617,7 +617,7 @@ function buscar_detalles(id) {
             $(".descripcion_del_anuncio").empty().html('<div class="spinner" style="position:fixed;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
             $("#you_tube").empty().html('<div class="spinner" style="position:fixed;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
             $(".contenedor_galeria").empty().html('<div class="spinner" style="position:fixed;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
-            $(".boton_naranja_dos").empty().html('<div class="spinner" style="position:fixed;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
+            $(".boton_naranja_dos").empty().html('<div></div>');
             //$('.contenedor_foto_anuncio').empty().html('');   
         },
         success: function (result) {
