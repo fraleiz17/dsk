@@ -46,7 +46,7 @@ DATOS CURIOSOS
 <div class="franja_verde">  </div>
 <?php if($fotoscontenido != null){ 
 foreach ($fotoscontenido as $fc){
-	if($fc->contenidoID == $contenidos[0]->contenidoID){?>
+  if($fc->contenidoID == $contenidos[0]->contenidoID){?>
 <div class="contenedor_imagen_verde"><img src="<?php echo base_url() ?>images/datos_curiosos/<?=$fc->foto?>"/> </div>
 <?php }
 }
@@ -61,7 +61,7 @@ foreach ($fotoscontenido as $fc){
 <div class="franja_amarilla"> </div>
 <?php if($fotoscontenido != null){ 
 foreach ($fotoscontenido as $fc){
-	if($fc->contenidoID == $contenidos[1]->contenidoID){?>
+  if($fc->contenidoID == $contenidos[1]->contenidoID){?>
 <div class="contenedor_imagen_amarilla"><img src="<?php echo base_url() ?>images/datos_curiosos/<?=$fc->foto?>"/> </div>
 <?php }
 }
@@ -81,7 +81,7 @@ foreach ($fotoscontenido as $fc){
  
  <div class="contenedor_imagen_horizontal_naranja"> <?php if($fotoscontenido != null){ 
 foreach ($fotoscontenido as $fc){
-	if($fc->contenidoID == $contenidos[2]->contenidoID){?>
+  if($fc->contenidoID == $contenidos[2]->contenidoID){?>
 <div class="contenedor_imagen_naranja"><img src="<?php echo base_url() ?>images/datos_curiosos/<?=$fc->foto?>"/> </div>
 <?php }
 }
@@ -96,7 +96,7 @@ foreach ($fotoscontenido as $fc){
 <div class="ver_mas_azul" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[2]->contenidoID?>'"> Ver más.. </div>
 <?php if($fotoscontenido != null){ 
 foreach ($fotoscontenido as $fc){
-	if($fc->contenidoID == $contenidos[3]->contenidoID){?>
+  if($fc->contenidoID == $contenidos[3]->contenidoID){?>
 <div class="contenedor_imagen_azul"><img src="<?php echo base_url() ?>images/datos_curiosos/<?=$fc->foto?>"/>  </div>
 <?php }
 }

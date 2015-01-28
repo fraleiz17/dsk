@@ -27,7 +27,7 @@
 
 <div id="espacio_izquierda" class="seccion_izquierda">
     
-    <?php $this->load->view('general/contTest.php'); ?>
+    <?php $this->load->view('general/contIzq.php'); ?>
 </div>
 <div id="banner_central">
     <div class="container" id="carousel_container">

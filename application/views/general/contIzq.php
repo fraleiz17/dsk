@@ -61,7 +61,7 @@
         </li>
     </ul>
 </div>
-<!--		CONTENEDOR LOGIN							-->
+<!--        CONTENEDOR LOGIN                            -->
 <!-- ------------------------------------------------------ -->
 <form action="<?= base_url() ?>sesion/login/principal/principal" id="login" class="validate" method="post">
     <div class="contenedor_login" id="contenedor_login" style="display:none;text-align:left;">
@@ -69,9 +69,9 @@
                                           onclick="oculta('contenedor_login');"/></div>
 
         <div class="registro_normal">
-			
+            
             <div class="titulo_registro"> INGRESAR</div>
-			<div id="ingreso_normal">
+            <div id="ingreso_normal">
             <div class="texto_inputs" style="margin-top:10px;">
                 <p> Usuario:</p>
 
@@ -82,27 +82,28 @@
             <div class="contendeor_inputs">
                 <p><input type="text" name="correo" class="validate[required]" placeholder="correo@ejemplo.com"/> *</p>
 
-                <p><input type="password" name="contrasena" class="validate[required]"/> *</p>
+                <p><input type="password" name="contrasena" class="validate[required]" placeholder="Contraseña"/> *</p>
             </div>
+            <ul class="morado_reg">
+                    <li>
+                        <input type="submit" class="el_submit"/>
+                    </li>
+                </ul>
             </br>
             <div class="subrayado" onclick="muestra('envio_con');oculta('ingreso_normal');">¿Olvidaste contraseña?</div>
             <div class="subrayado" onclick="muestra('contenedor_registro');oculta('contenedor_login');"> Crear cuenta
             </div>
             </br>
-            <ul class="morado_reg">
-                <li>
-                    <input type="submit" class="el_submit"/>
-                </li>
-            </ul>
-			</div>
+            
+            </div>
 </form>
 
             
             <div id="envio_con" class="envio_con">
             <form action="<?= base_url() ?>recuperarcontrasena/sendLink" id="recuperarcontrasena" method="post">
-				</br>
+                </br>
                 <div class="titulo_registro"></div>
-				<div class="texto_inputs">
+                <div class="texto_inputs">
                 <p> Ingresa tu correo:</p>
                 </div>
 
@@ -111,7 +112,7 @@
             </div>
 
                 
-				<ul class="morado_reg recuperar">
+                <ul class="morado_reg recuperar">
                 <li>
                    <input type="submit" value="Recuperar" class="el_submit"/>
                 </li>
@@ -124,12 +125,12 @@
             </ul>
                 
             </form>
-			</br>
+            </br>
             </div>
-			
-			<div id="confirmacionCambio" style="display:none; padding:20px;">
-			 Se ha enviado contraseña al correo electronico indicado.
-			</div>
+            
+            <div id="confirmacionCambio" style="display:none; padding:20px;">
+             Se ha enviado contraseña al correo electronico indicado.
+            </div>
             
 
         </div>
@@ -137,10 +138,10 @@
     </div>
 <!--</form>-->
 <!-- ------------------------------------------------------ -->
-<!--		FIN    CONTENEDOR LOGIN							-->
+<!--        FIN    CONTENEDOR LOGIN                         -->
 
 
-<!--		CONTENEDOR REGISTRO							-->
+<!--        CONTENEDOR REGISTRO                         -->
 <!-- ------------------------------------------------------ -->
 <form action="<?php echo base_url() ?>registro/registrar" id="registerNow" class="validate" method="get" autocomplete="off"
       enctype="multipart/form-data">
@@ -651,11 +652,11 @@
 <!-- Fin contenedor negro registro -->
 
 </form>
-<!--		FIN CONTENEDOR REGISTRO							-->
+<!--        FIN CONTENEDOR REGISTRO                         -->
 <!-- ------------------------------------------------------ -->
 
 
-<!--		EXITO REGISTRO							-->
+<!--        EXITO REGISTRO                          -->
 <!-- ------------------------------------------------------ -->
 <div class="contenedor_registro" id="contenedor_correcto" style="display:none;"> <!-- Contenedor negro reistro-->
     <div class="cerrar_registro"><img src="<?php echo base_url() ?>images/cerrar.png"
@@ -682,11 +683,11 @@
 
 </div>
 
-<!--		FIN EXITO REGISTRO						-->
+<!--        FIN EXITO REGISTRO                      -->
 <!-- ------------------------------------------------------ -->
 
 
-<!--		ERROR REGISTRO							-->
+<!--        ERROR REGISTRO                          -->
 <!-- ------------------------------------------------------ -->
 
 <div class="contenedor_registro" id="contenedor_error" style="display:none;"> <!-- Contenedor negro reistro-->
@@ -714,7 +715,7 @@
 
 
 
-<!--		FIN ERROR REGISTRO							-->
+<!--        FIN ERROR REGISTRO                          -->
 <!-- ------------------------------------------------------ -->
 
 
