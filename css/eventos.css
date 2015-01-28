@@ -179,8 +179,10 @@ color: #FFFFFF;
 	min-height:500px;
 	background-color:#999;}
 .contenedor_texto_inferior{
-	width:573px;
+	width:310px;
 	margin-top:-364px;
+	overflow: hidden;
+	display: block;
 	}
 .recuadro_rosa{
 	width:12px;
