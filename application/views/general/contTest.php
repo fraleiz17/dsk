@@ -82,18 +82,19 @@
             <div class="contendeor_inputs">
                 <p><input type="text" name="correo" class="validate[required]" placeholder="correo@ejemplo.com"/> *</p>
 
-                <p><input type="password" name="contrasena" class="validate[required]"/> *</p>
+                <p><input type="password" name="contrasena" class="validate[required]" placeholder="Contraseña"/> *</p>
             </div>
+            <ul class="morado_reg">
+                    <li>
+                        <input type="submit" class="el_submit"/>
+                    </li>
+                </ul>
             </br>
             <div class="subrayado" onclick="muestra('envio_con');oculta('ingreso_normal');">¿Olvidaste contraseña?</div>
             <div class="subrayado" onclick="muestra('contenedor_registro');oculta('contenedor_login');"> Crear cuenta
             </div>
             </br>
-            <ul class="morado_reg">
-                <li>
-                    <input type="submit" class="el_submit"/>
-                </li>
-            </ul>
+            
             </div>
 </form>
 
