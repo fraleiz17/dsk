@@ -319,7 +319,7 @@ que el nombre del criador esté en el certificado.
 <br/>
 <font> Género: <?php echo $publicacion->genero?'Macho':'Hembra'?> </font>
 <br/>
-<font> Ciudad: <?=substr($publicacion->ciudad 0, 10)?></font>
+<font> Ciudad: <?=substr($publicacion->ciudad, 0, 10)?></font>
 </div>
 <div class="contenedor_foto_anuncio">
 <img src="<?=base_url()?><?=$publicacion->foto?>" align="middle" width="128" height="80" />
