@@ -382,9 +382,12 @@ class Principal extends CI_Controller {
 
     function anuncios_lista() {
         $aprobado = $this->input->post('validacion_admin');
-       
+        
         switch ($aprobado) {
             case 'e_aprobacion':
+                $aprobado = 0;
+                break;
+            case false:
                 $aprobado = 0;
                 break;
             case 'aprobados':
@@ -396,7 +399,7 @@ class Principal extends CI_Controller {
             default:
                 $aprobado = 0;
         }
-
+        
         $zonas = $this->input->post('zonas');
 
         if (empty($zonas) || $zonas == '') {

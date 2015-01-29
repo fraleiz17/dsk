@@ -165,7 +165,7 @@ class Admin_model extends CI_Model
         return $query->row();
     }
 
-    function getAnuncios($aprobado = null, $seccion = null, $zona = null)
+    function getAnuncios($aprobado, $seccion, $zona)
     {
         $this->db->select("*");
         $this->db->from("publicaciones p");
@@ -187,7 +187,7 @@ class Admin_model extends CI_Model
             $this->db->where("uu.zonageograficaID", $zona);
         }
 
-        if ($aprobado != null) {
+       if (is_numeric($aprobado)) {
             $this->db->where("p.aprobada", $aprobado);
         }
 
