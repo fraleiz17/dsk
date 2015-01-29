@@ -309,7 +309,6 @@ $data['map'] = $this->googlemaps->create_map();
 
 
 $data['mapaSegundo'] = 'mapa_view'; 
-$data['seccion'] = 12;
 $data['banner'] = $this->defaultdata_model->getTable('banner');
 $data['estados'] = $this->defaultdata_model->getEstados();
 $data['paquetes'] = $this->defaultdata_model->getPaquetes();

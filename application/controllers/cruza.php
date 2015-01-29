@@ -45,8 +45,8 @@ class Cruza extends CI_Controller
         $data['paquetes']    = $this->defaultdata_model->getPaquetes();
         $data['razas']       = $this->defaultdata_model->getRazas();
         $data['giros']       = $this->defaultdata_model->getGiros();
-        $data['publicaciones']       = $this->venta_model->getAnuncios(self::$seccion);
-		$data['seccion']= self::$seccion;
+        $data['publicaciones']       = $this->venta_model->getAnuncios(3);
+		$data['seccion']= 3;
 
         $config = array();
 $config['center'] = '19.433463102009004,-99.13711169501954';
@@ -76,7 +76,7 @@ $this->googlemaps->add_marker($marker);
 
 
 $data['mapaSegundo'] = 'mapa_view'; 
-$data['seccion'] = 12;
+//$data['seccion'] = 12;
 $data['banner'] = $this->defaultdata_model->getTable('banner');
 $data['estados'] = $this->defaultdata_model->getEstados();
 $data['paquetes'] = $this->defaultdata_model->getPaquetes();
