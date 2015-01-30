@@ -579,11 +579,10 @@ Si tienes cualquier duda al respecto, por favor escr&iacute;benos a contacto@qui
     }
 
     function denunciar() {
-
+        
         //contacto@quierounperro.com
-        $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null,$this->input->post('pub'), self::$seccion);
+        $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null,$this->input->post('pub'), $this->input->post('seccion'));
         $data = $directorio['data'];
-
         $msj = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>

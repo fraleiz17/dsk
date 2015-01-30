@@ -723,13 +723,14 @@ function denunciar_pub(id) {
         $('.info', '#denuncia_form').html('');
         buscar_anunciante_dos(pub);
         muestra('contenedor_denunciar');
+        console.log(pub);
         
         $('#contenedor_denunciar #denuncia_form').submit(function(e){
             e.preventDefault();
             var form = $(this);
             $.ajax({
                 url: '<?php echo base_url('venta/denunciar')?>',
-                data: form.serialize()+'&pub='+pub,
+                data: form.serialize()+'&pub='+pub+'&seccion='+<?=$seccion?>,
                 dataType: 'html',
                 type: 'post',
                 before: function () {

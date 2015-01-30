@@ -736,7 +736,7 @@ function denunciar_pub(id) {
             var form = $(this);
             $.ajax({
                 url: '<?php echo base_url('venta/denunciar')?>',
-                data: form.serialize()+'&pub='+pub,
+                data: form.serialize()+'&pub='+pub+'&seccion='+<?=$seccion?>,
                 dataType: 'html',
                 type: 'post',
                 before: function () {
