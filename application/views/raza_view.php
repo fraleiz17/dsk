@@ -10,6 +10,7 @@
  <link href="<?php echo base_url() ?>css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/general.css" media="screen"></link> <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/venta.css" media="screen"></link><link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/la_raza.css" media="screen"></link>
   </script>
+  <?php $this->load->view('general/LoginFiles');?>
    <script src="<?php echo base_url() ?>js/jquery-1.10.2.js"></script>
      <script src="<?php echo base_url() ?>js/jPages.js"></script>
 <script src="<?php echo base_url() ?>js/funciones_venta.js"></script>

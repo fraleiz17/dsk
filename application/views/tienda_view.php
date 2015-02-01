@@ -1,6 +1,6 @@
-<?php $this->load->view('general/LoginFiles');?>  
-<link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/index_.css" media="screen"></link>
 
+<link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/index_.css" media="screen"></link>
+<?php $this->load->view('general/LoginFiles');?>  
 <?php $this->load->view('general/general_header_view', array('title'=> 'Tienda', 'links' => array('venta', 'tienda'),'scripts'=> array('funciones_venta', 'funciones_tienda', 'funciones_'))) ?>
 
      
