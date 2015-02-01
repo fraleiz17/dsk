@@ -35,7 +35,7 @@
 <div id="contenedor_publicar_anuncio_negocio" class="contenedor_publicar_anuncio" style=" display:none;">
     <!-- Inicio contenedor pap publicar anuncio anuncio !-->
     <div id="publicar_anuncio_negocio" class="pubicar_anuncio"><?= $this->session->userdata('tipoUsuario')?>
-        <?php if (is_logged() && ($this->session->userdata('tipoUsuario') == 2 || $this->session->userdata('tipoUsuario') == 3)): ?>
+        <?php if (is_logged() && ($this->session->userdata('tipoUsuario') == 2 || $this->session->userdata('tipoUsuario') == 3)){ ?>
             <form method="post" name="form_anuncio_negocio" id="form_anuncio_negocio">
                 <div class="numeros_publicar_anuncio">
                     <ul class="listado_numeros_anuncio">
@@ -426,7 +426,7 @@
                     </div>
                 </div>
             </form>
-        <?php else: ?>
+        <?php } else{ ?>
             <div class="numeros_publicar_anuncio">
                 <ul class="listado_numeros_anuncio">
                     <li class="numero_seccion view_step">1</li>
@@ -440,7 +440,7 @@
                 <div class="titulo_de_pasos"> PUBLICAR EN DIRECTORIO </div>
                 <div class="instrucciones_pasos" style="font-size:22px; color:white !important;"> Favor de registrarte como Asociación, Negocio o <a href="<?php echo base_url('principal/index') ?>" style="color:white !important;">Inicia Sesi&oacute;n.</a></div>
             </div>
-        <?php endif; ?>
+        <?php } ?>
     </div>
 </div>
 <?php if (is_logged()): ?>
