@@ -457,7 +457,7 @@ class Principal extends CI_Controller {
 <br/>
 
 <font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
-Tu anuncio <strong>"'.$datos->titulo.'"</strong> con fecha de publicaci&oacute;n '.$datos->fechaCreacion.' en la secci&oacute; '.$datos->seccionNombre.', ha sido aprobado para publicarse en esta secci&oacute;n.<br/><br/>
+Tu anuncio <strong>"'.$datos->titulo.'"</strong> con fecha de publicaci&oacute;n '.$datos->fechaCreacion.' en la secci&oacute;n '.$datos->seccionNombre.', ha sido aprobado para publicarse en esta secci&oacute;n.<br/><br/>
 <br/><br/>
 Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
 </font>
@@ -519,7 +519,7 @@ $this->email_model->send_email('', $datos->correo, 'Ha sido aprobado tu anuncio 
 <br/>
 
 <font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
-Se ha detectado que tu anuncio <strong>"'.$datos->titulo.'"</strong> con fecha de publicaci&oacute;n '.$datos->fechaCreacion.' en la secci&oacute; '.$datos->seccionNombre.', viola uno o m&aacute;s de nuestros t&eacute;rminos y condiciones de uso.<br/><br/>
+Se ha detectado que tu anuncio <strong>"'.$datos->titulo.'"</strong> con fecha de publicaci&oacute;n '.$datos->fechaCreacion.' en la secci&oacute;n '.$datos->seccionNombre.', viola uno o m&aacute;s de nuestros t&eacute;rminos y condiciones de uso.<br/><br/>
 Tu anuncio no ha sido aprobado para publicarse en esta secci&oacute;n, pero puedes editarlo eintentarlo nuevamente. Solo ve la la secc&ocuten de Administrador de Anuncios, en Mi Perfil.<br/><br/>
 <br/><br/>
 El tiempo de vigencia de tu anuncio sigue corriendo a pesar de no estar publicado, as&iacute; que te invitamos a que realices los cambios necesarios lo antes posible.<br/><br/>

@@ -418,7 +418,7 @@ $(document).ready(function()
 });
 </script>
     <p class="margen_15_left_mini contenedorFotos">
-    <label>Seleccione las imágenes para su anuncio</label>
+    <label>Seleccione <strong><label id="nfotosl"></label></strong> imágenes para su anuncio. (Solo se almacenarán el número permitido)</label>
          <div id="fileuploader" >Seleccionar Imagenes</div>
          
                             <div class="row-fluid">
@@ -882,9 +882,12 @@ TOTAL
             $('#nprecio').html(paquete_val.precio);
             if(paquete_val.cantFotos == 0){
                 $('.contenedorFotos').hide();           
-            }
+            } //nfotosl
+
+            $('#nfotosl').html(paquete_val.cantFotos);
+
             var cantidadVideos = paquete_val.videos;
-            console.log(cantidadVideos+' cantidad de videos')
+            console.log(paquete_val.cantFotos+' cantidad de fotos')
             if(cantidadVideos == 0){
                 $('#links_videos').hide();
                 $('#ver_video').hide();

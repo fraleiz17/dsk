@@ -15,6 +15,7 @@ class Venta extends CI_Controller {
         $this->load->model('admin_model');
         $this->load->model('email_model');
         $this->load->model('venta_model');
+        $this->load->model('perfil_model');
         $this->load->model('usuario_model');
         $this->load->helper(array('form', 'url'));
         $this->load->library('googlemaps');
@@ -314,7 +315,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         //IMAGENES
          $name_logo_form = $this->input->post('name_logo_form');
                 if( $name_logo_form != null){
-                    for($i=0;$i<=count($name_logo_form) -1;$i++){     
+                    for($i=0;$i<=$detallePaquete->cantFotos -1;$i++){     
                         //Se mueve la imagen de tmp a negocio_logo
                         if($name_logo_form[$i] != null){
                         $name_file = explode('/', $name_logo_form[$i]);                        
@@ -446,10 +447,10 @@ $data['paises'] = $this->defaultdata_model->getPaises();
     }
 
  function contactar() {
-
+        //var_dump($_POST);
         //contacto@quierounperro.com
-        $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null, 43, self::$seccion);
-
+        $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null, $this->input->post('pub'), $this->input->post('seccion'));
+        //var_dump($directorio);
 $msj = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -704,7 +705,7 @@ function editAanuncio() {
             'ciudad' => $this->input->post('ciudad'),
             'genero' => $this->input->post('genero'),
             'razaID' => $this->input->post('raza'),
-            'precio' => $this->input->post('precio'),
+            'precioVenta' => $this->input->post('precio'),
             'descripcion' => $this->input->post('descripcion'),
             'muestraTelefono' => $this->input->post('mostrar_telefono'),
             'aprobada' => 0,

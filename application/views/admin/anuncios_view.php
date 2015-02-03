@@ -288,6 +288,7 @@ function buscar_imagenes(id){
 				success: function(response) {
 					oculta('contenedor_anuncio_detalle');
 					alert('El anuncio ha sido aprobado');
+                    load_data_filter();
 					
 				}
 				
@@ -306,6 +307,7 @@ function buscar_imagenes(id){
 				success: function(response) {
 					oculta('contenedor_anuncio_detalle');
 					alert('El anuncio ha sido declinado');
+                    load_data_filter();
 					
 				}
 				

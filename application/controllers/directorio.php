@@ -83,7 +83,7 @@ $data['banner'] = $this->defaultdata_model->getTable('banner');
 $data['estados'] = $this->defaultdata_model->getEstados();
 $data['paquetes'] = $this->defaultdata_model->getPaquetes();
 $data['razas'] = $this->defaultdata_model->getRazas();
-//$data['zona'] = 9;
+$data['zona'] = 9;
 $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
 $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
 $data['paises'] = $this->defaultdata_model->getPaises();
@@ -100,7 +100,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
         //var_dump($data['directorios']);
-        if($this->session->userdata('tipoUsuario') == 2){
+        if($this->session->userdata('tipoUsuario') == 2 || $this->session->userdata('tipoUsuario') == 1 || $this->session->userdata('tipoUsuario') == false){
             $data['directorios'] = $this->usuario_model->getDirectorios(4);
             $data['planes'] = $this->defaultdata_model->getPaquetesCupon(5);
             $data['seccion'] = 4;
@@ -109,7 +109,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         $data['planes'] = $this->defaultdata_model->getPaquetesCupon(4);
         $data['seccion'] = 4;
         }
-
+        var_dump($this->session->userdata('tipoUsuario'));
 
         $this->load->view('directorio_view', $data);
     }
