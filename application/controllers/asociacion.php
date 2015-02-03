@@ -32,7 +32,7 @@ class Asociacion extends CI_Controller {
         $data['giros'] = $this->defaultdata_model->getGiros();
         $data['seccion'] = 11;
         $data['directorios'] = $this->usuario_model->getDirectorios(11);
-        
+        //var_dump($data['directorios'] );
         $config = array();
         $config['center'] = '19.433463102009004,-99.13711169501954';
         $config['zoom'] = 'auto';

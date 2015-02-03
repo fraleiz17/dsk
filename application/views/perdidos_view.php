@@ -75,6 +75,7 @@
     class="formu_contacto" rows="5">Comentarios</textarea>
 </br>
 </br>
+<span class="info"></span>
 <ul class="boton_naranja_tres">
     <li>
         <input type="submit" value="Enviar"/>

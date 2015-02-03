@@ -97,19 +97,21 @@ $data['paises'] = $this->defaultdata_model->getPaises();
             $data['cupones'] = null;
             $data['user'] = null;
         }
+
+        $data['directorios'] = $this->usuario_model->getDirectorios(4);
         
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
         //var_dump($data['directorios']);
         if($this->session->userdata('tipoUsuario') == 2 || $this->session->userdata('tipoUsuario') == 1 || $this->session->userdata('tipoUsuario') == false){
-            $data['directorios'] = $this->usuario_model->getDirectorios(4);
+            //$data['directorios'] = $this->usuario_model->getDirectorios(4);
             $data['planes'] = $this->defaultdata_model->getPaquetesCupon(5);
             $data['seccion'] = 4;
         } else{
-        $data['directorios'] = $this->usuario_model->getDirectorios(11);
+        //$data['directorios'] = $this->usuario_model->getDirectorios(11);
         $data['planes'] = $this->defaultdata_model->getPaquetesCupon(4);
         $data['seccion'] = 4;
         }
-        var_dump($this->session->userdata('tipoUsuario'));
+        //var_dump($this->session->userdata('tipoUsuario'));
 
         $this->load->view('directorio_view', $data);
     }

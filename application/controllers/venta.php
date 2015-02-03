@@ -449,7 +449,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
  function contactar() {
         //var_dump($_POST);
         //contacto@quierounperro.com
-        $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null, $this->input->post('pub'), $this->input->post('seccion'));
+        $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null, 4, 2);
         //var_dump($directorio);
 $msj = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

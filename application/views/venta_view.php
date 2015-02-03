@@ -755,11 +755,14 @@ $('#contenedor_contactar #contacto_form').submit(function(e){
             $('.info').html('Enviando...');
             e.preventDefault();
             var form = $(this);
+            var seccion = '<?=$seccion?>';
+            var pub = $(this).data("pub");
+
             $.ajax({
                 url: '<?php echo base_url('venta/contactar');?>',
                 type: 'post',
                 dataType: 'html',
-                data: form.serialize(),
+                data: form.serialize()+'&pub='+pub+'&seccion='+seccion,
                 beforeSend: function () {
                     $(".info").empty().html('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
                 },
@@ -778,13 +781,15 @@ function contactar_pub(id) {
         $('.info', '#contacto_form').html('');
         buscar_anunciante_dos(pub);
         muestra('contenedor_contactar');
+        console.log(pub);
         
         $('#contenedor_contactar #contacto_form').submit(function(e){
             e.preventDefault();
             var form = $(this);
+            var seccion = '<?=$seccion?>';
             $.ajax({
                 url: '<?php echo base_url('venta/contactar')?>',
-                data: form.serialize()+'&pub='+pub,
+                data: form.serialize()+'&pub='+pub+'&seccion='+seccion,
                 dataType: 'html',
                 type: 'post',
                 before: function () {

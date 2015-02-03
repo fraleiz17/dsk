@@ -606,7 +606,7 @@ function buscar_detalles(id) {
                 var cont_datos = $('.datos_general');
                 var cont_info = $(' <div class="titulo_anuncio_publicado">' + data[i].titulo + '</div></br><strong>Precio:' + data[i].precio + '</strong></br><font> Fecha de publicación:' + data[i].fechaCreacion + '</font></br><font>Sección: Venta</font></br><font>Raza:' + data[i].raza + '</font></br><font>Género:' + (data[i].genero ? 'Macho' : 'Hembra') + '</font></br><font>Lugar: ' + data[i].nombreEstado + '</font></br></br>');
                 cont_datos.append(cont_info);
-                var botones = $('<ul class="boton_naranja"><li onclick="buscar_anunciante(\'' + data[i].publicacionID + '\')">Contactar al anunciante</li> </ul> </br> <ul class="boton_gris"><li data-pub="' + data[i].publicacionID + '" class="btn_fvt"><img src="images/favorito.png"/>Agregar a Favoritos</li></ul><span id="info_fav"></span>');
+                var botones = $('<ul class="boton_naranja"><li data-pub="' + data[i].publicacionID + '" onclick="buscar_anunciante(\'' + data[i].publicacionID + '\')">Contactar al anunciante</li> </ul> </br> <ul class="boton_gris"><li data-pub="' + data[i].publicacionID + '" class="btn_fvt"><img src="images/favorito.png"/>Agregar a Favoritos</li></ul><span id="info_fav"></span>');
                 cont_datos.append(botones);
                 $('.descripcion_del_anuncio').append(data[i].descripcion);
                 if (data[i].paqueteID != '1'){
@@ -614,10 +614,12 @@ function buscar_detalles(id) {
                 }
 
                 $('.btn_den').data('pub', data[i].publicacionID);
+                $('.btn_contactar').data('pub', data[i].publicacionID);
             }
 
             add_favorite();
             denunciar_pub();
+            contactar_pub();
         }
     });
 }
@@ -731,6 +733,58 @@ function denunciar_pub(id) {
             $.ajax({
                 url: '<?php echo base_url('venta/denunciar')?>',
                 data: form.serialize()+'&pub='+pub+'&seccion='+<?=$seccion?>,
+                dataType: 'html',
+                type: 'post',
+                before: function () {
+                    $('.info',form).html('loading');
+                },
+                success: function (data) {
+                    $('.info',form).html(data);
+                }
+            });
+        });
+    });
+}
+
+$('#contenedor_contactar #contacto_form').submit(function(e){
+            $('.boton_naranja_tres').html('');
+            $('.info').html('Enviando...');
+            e.preventDefault();
+            var form = $(this);
+            var seccion = '<?=$seccion?>';
+            var pub = $(this).data("pub");
+
+            $.ajax({
+                url: '<?php echo base_url('venta/contactar');?>',
+                type: 'post',
+                dataType: 'html',
+                data: form.serialize()+'&pub='+pub+'&seccion='+seccion,
+                beforeSend: function () {
+                    $(".info").empty().html('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
+                },
+                success: function (data) {
+                    $(".info").empty().append(data);
+
+                }
+            });
+        });
+
+function contactar_pub(id) {
+
+    $('.btn_contactar').on('click', function (){
+        var pub = $(this).data("pub");
+        $('.info', '#contacto_form').html('');
+        buscar_anunciante_dos(pub);
+        muestra('contenedor_contactar');
+        console.log(pub+'**************************');
+        
+        $('#contenedor_contactar #contacto_form').submit(function(e){
+            e.preventDefault();
+            var form = $(this);
+            var seccion = '<?=$seccion?>';
+            $.ajax({
+                url: '<?php echo base_url('venta/contactar')?>',
+                data: form.serialize()+'&pub='+pub+'&seccion='+seccion,
                 dataType: 'html',
                 type: 'post',
                 before: function () {
