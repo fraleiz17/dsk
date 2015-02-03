@@ -1,3 +1,4 @@
+<?php $this->load->view('general/LoginFiles');?>
 <?php
 $this->load->view('general/general_header_view', array('title' => 'Detalles Directorio',
     'scripts' => array('funciones_venta', 'funciones_'), 'links' => array('venta',
@@ -172,6 +173,7 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
 
 </script>
 <br/>
+<div class="division_menu_inferior"> </div>
 <?php $this->load->view('general/footer_view'); ?>
 <?php $this->load->view('partial/_pasos_anuncio_negocio'); ?>
 
