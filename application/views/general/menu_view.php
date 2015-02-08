@@ -166,9 +166,9 @@ if ($keyUser === FALSE || ($keyUser !== FALSE && $tipoUsuario !== 0)):
                         foreach ($banner as $contenido) {
                             if ($this->session->userdata('zonaID') == $contenido->zonaID && $contenido->posicion == 1 && $contenido->seccionID == $seccion) {
                                 ?>
-                                <div class="item"><a href="<?php echo base_url() ?>#" target="_blank"><img
+                                <div class="item"><img
                                             src="<?php echo base_url() ?>images/<?php echo $contenido->imgbaner; ?>"
-                                            alt="Model 2"></a>
+                                            alt="Quierounperro.com">
                                 </div>
 
                             <?php
@@ -181,9 +181,9 @@ if ($keyUser === FALSE || ($keyUser !== FALSE && $tipoUsuario !== 0)):
                         foreach ($banner as $contenido) {
                             if ($contenido->zonaID == 9 && $contenido->posicion == 1 && $contenido->seccionID == $seccion) {
                                 ?>
-                                <div class="item"><a href="<?php echo base_url() ?>#" target="_blank"><img
+                                <div class="item"><img
                                             src="<?php echo base_url() ?>images/<?php echo $contenido->imgbaner; ?>"
-                                            alt="Model 2"></a>
+                                            alt="Quierounperro.com">
                                 </div>
                             <?php
                             }

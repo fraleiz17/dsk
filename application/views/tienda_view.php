@@ -44,6 +44,11 @@
 
                     });
                 });
+
+                        jQuery("form").validationEngine({
+                             promptPosition:"topRight",
+                             ajaxFormValidation: false,
+                            });
             });
 
         </script>

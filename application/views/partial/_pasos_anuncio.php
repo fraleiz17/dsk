@@ -346,7 +346,7 @@
             <option value="1"> Macho</option>
         </select>
 
-        Raza*: &nbsp;&nbsp;&nbsp;&nbsp;<select required="required" name="raza" class="background_gris_82_mini preview" id="razaP">
+        Raza*: &nbsp;&nbsp;&nbsp;&nbsp;<select required="required" name="raza" class="background_gris_82_mini preview validate[required]" id="razaP">
             <option value="">--</option>
             <?php foreach ($razas as $r): ?>
                 <option value="<?php echo $r->razaID ?>"><?php echo $r->raza ?></option>
@@ -945,7 +945,7 @@ TOTAL
         
         $('#cerrarPublicacion').on('click', function() {
             oculta('contenedor_publicar_anuncio');
-            //window.location.href="<?=base_url()?>principal/miPerfil";
+            location.reload();
         });
         
         $("body").on("click",".del", function(e){
