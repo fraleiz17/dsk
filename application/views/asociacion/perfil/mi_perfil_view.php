@@ -46,7 +46,7 @@
 <ul class="boton_gris_perfil">
 <li>
 
-<input type="submit" value="Editar"/>
+<input type="submit" value="Guardar"/>
 </li>
 </ul>
 </div>

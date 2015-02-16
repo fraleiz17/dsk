@@ -6,6 +6,7 @@
 ?>
 
 
+
 <style>
     #paso_tres_negocio label{
         display: inline-block;
@@ -65,7 +66,7 @@
                             <?php if($this->session->userdata('tipoUsuario') == 3):?>
                             <div class="contenedor_checkbox">
                                 <label style="display: inline-block; margin-bottom: 2px;">
-                                            <input class="giro_form validate[required]" type="checkbox" name="giro_13_form" value="13" id="CheckboxGiro_0" />
+                                            <input class="giro_form validate[required] ckGiro" type="checkbox" name="giro_13_form" value="13" id="CheckboxGiro_0" />
                                             <?php echo 'Asociacion Protectora'; ?>
                                             <input type="hidden" name="Asociación Protectora" id="giro_13_form" value="giros_negocio/protectora.png" />
                                         </label>
@@ -75,7 +76,7 @@
                                 <?php foreach ($giros as $index => $giro): ?>
                                     <?php if ($index % 2 !== 0): ?>
                                         <label style="display: inline-block; margin-bottom: 2px;">
-                                            <input class="giro_form validate[required]" type="checkbox" name="giro_<?php echo ($index + 1) ?>_form" value="<?php echo $giro->giroID ?>" id="CheckboxGiro_0" />
+                                            <input class="giro_form validate[required] ckGiro" type="checkbox" name="giro_<?php echo ($index + 1) ?>_form" value="<?php echo $giro->giroID ?>" id="CheckboxGiro_0" />
                                             <?php echo $giro->nombreGiro; ?>
                                             <input type="hidden" name="<?=$giro->nombreGiro?>" id="giro_<?php echo ($index + 1) ?>_form" value="<?=$giro->logo?>" />
                                         </label>
@@ -88,7 +89,7 @@
                                 <?php foreach ($giros as $index => $giro): ?>
                                     <?php if ($index % 2 === 0): ?>
                                         <label style="display: inline-block; margin-bottom: 2px;">
-                                            <input class="giro_form validate[required]" type="checkbox" name="giro_<?php echo ($index + 1) ?>_form" value="<?php echo $giro->giroID ?>" id="CheckboxGiro_0" />
+                                            <input class="giro_form validate[required] ckGiro" type="checkbox" name="giro_<?php echo ($index + 1) ?>_form" value="<?php echo $giro->giroID ?>" id="CheckboxGiro_0" />
                                             <?php echo $giro->nombreGiro; ?>
                                             <input type="hidden" name="<?=$giro->nombreGiro?>" id="giro_<?php echo ($index + 1) ?>_form" value="<?=$giro->logo?>" />
                                         </label>
@@ -179,14 +180,14 @@
                         <div class="sub_instrucciones_pasos"> Datos de contacto </div>
                         <div class="contenido_indicacion_formulario" style="height: auto!important;">
                             <p class="margen_15_left" >
-                                <label>Nombre:</label><input name="nombre_negocio" id="nombre_negocioT" value="<?php echo $user->nombre; ?>" type="text" class="background_morado_35 validate[required]" readonly="readonly" /> 
-                                <label>Apellido:</label><input name="apellido_negocio" id="apellido_negocioT" value="<?php echo $user->apellido; ?>" type="text" class="background_morado_35 validate[required]" readonly="readonly" />  
-                                <label>Correo electrónico:</label><input name="email_negocio" value="<?php echo $user->correo; ?>" type="text" class="background_morado validate[required, custom[email]]" readonly="readonly" />
+                                <label>Nombre:</label><input name="nombre_negocio" id="nombre_negocioT" value="<?php echo $user->nombre; ?>" type="text" class="background_morado_35 validate[required]" readonly="readonly" required="required"/> 
+                                <label>Apellido:</label><input name="apellido_negocio" id="apellido_negocioT" value="<?php echo $user->apellido; ?>" type="text" class="background_morado_35 validate[required]" readonly="readonly" required="required"/>  
+                                <label>Correo electrónico:</label><input name="email_negocio" value="<?php echo $user->correo; ?>" type="text" class="background_morado validate[required, custom[email]]" readonly="readonly" required="required"/>
                             </p>
                             <br/>
                             <p class="margen_15_left"> 
-                                <label>Teléfono:</label><input name="telefono_negocio" id="telefono_negocioT" value="<?php echo $user->telefono; ?>" type="text" class="background_gris_35 validate[required, custom[phone]]"/> 
-                                <label>Mostrar teléfono en el anuncio:</label><select name="muestra_telefono_negocio" class="background_gris validate[required]" id="muestra_telefono_negocioS">
+                                <label>Teléfono:</label><input name="telefono_negocio" id="telefono_negocioT" value="<?php echo $user->telefono; ?>" type="text" class="background_gris_35 validate[required, custom[phone]]" required="required"/> 
+                                <label>Mostrar teléfono en el anuncio:</label><select name="muestra_telefono_negocio" class="background_gris validate[required]" id="muestra_telefono_negocioS" required="required">
                                     <option value="0">--</option>
                                     <option value="1"> Si </option>
                                     <option value="0"> No </option>
@@ -260,7 +261,7 @@
                                 </p>                            
                             </div>
 
-                            <div>
+                             <div>
                                 <ul class="morado_directorio">
                                     <li class="sig_paso">
                                         Continuar
@@ -616,7 +617,7 @@
                 }
 
                 if (element.prop('id') === 'paso_tres_negocio') {
-                    $('#msj_paso', form_negocio).text("Debe completar todos los campos requeridos");
+                    /*$('#msj_paso', form_negocio).text("Debe completar todos los campos requeridos");
                     var obj = $('#paso_tres_negocio [name]:required', form_negocio).serialize().split('&');
                     $('#paso_tres_negocio [name]:required', form_negocio).validationEngine('validate');
                     for (var i = 0; i < obj.length; i++) {
@@ -625,8 +626,9 @@
                             return false;
                         }
                     }
-                    return true;
-
+                    return true;*/
+                    $('#msj_paso', form_negocio).text("Complete los campos requeridos");
+                    $('#paso_tres_negocio [name]:required', form_negocio).validationEngine('validate');
 
 
                 }
@@ -696,6 +698,18 @@
                         $('#error_logo').fadeIn().text(data.error);
                     }
                 }
+            });
+
+            $('.ckGiro').click(function () {
+                console.log('si esta checando');
+                var pass = 4;
+                var days = $('input[type="checkbox"]:checked').length -1;
+                console.log(days, pass);
+                if (days == pass) {
+                    $('input[type="checkbox"]').not(':checked').prop('disabled', true);
+                } else {
+                    $('input[type="checkbox"]').not(':checked').prop('disabled', false);
+                } 
             });
 
             $('#form_anuncio_negocio').submit(function(e) {

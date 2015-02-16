@@ -218,6 +218,24 @@ class Carrito extends CI_Controller
         }
     }
 
+    function updateDestino()
+    {
+       $carritototal = $this->admin_model->getSingleItem('usuarioID', $this->session->userdata('idUsuario'), 'carritototal');
+       $costo = $this->usuario_model->getCostoEnvio($this->input->post('idEstado'));
+       $data['costo'] = $costo;
+       $precio = $carritototal->totalPrecio + $costo;
+       $carritoTotal = array(
+                'subtotal' => ($precio-($precio*.16)),
+                'totalPrecio' => $precio
+                );
+        $totales = $this->admin_model->updateItem('usuarioID', $this->session->userdata('idUsuario'), $carritoTotal, 'carritototal');
+
+ 
+        
+        $data['response'] = "true";
+        echo json_encode($data);
+    }
+
     function carritoDetalle()
     {
         $this->load->view('carrito_view');

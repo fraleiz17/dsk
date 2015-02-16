@@ -288,7 +288,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         }
         //Paquete Gratis
 
-        $this->notificacionAdmin($this->input->post('seccion'),$this->input->post('titulo'),$publicacionID);
+        
         //VIDEOS PUBLICACION
 
         
@@ -375,6 +375,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         if($precio_total <= 00.00){
         $this->defaultdata_model->updateItem('compraID', $compraID, $data = array('pagado' => 1), 'compra');
         $this->defaultdata_model->updateItem('servicioID', $servicioID, $data = array('pagado' => 1), 'serviciocontratado');
+        $this->notificacionAdmin($this->input->post('seccion'),$this->input->post('titulo'),$publicacionID);
            echo '<div class="registro_normal"> <!-- Contenedor morado registro -->
 
                 <div class="titulo_registro">GRACIAS</div>
@@ -414,9 +415,9 @@ $data['paises'] = $this->defaultdata_model->getPaises();
                 'date_created' => date('Y-m-d')
             ),
             "back_urls" => array(
-                "success" => base_url().'venta/updateCompra/'.$compraID.'/1/'.$servicioID.'/'.$publicacionID,
-                "pending" => base_url().'venta/updateCompra/'.$compraID.'/1/'.$servicioID.'/'.$publicacionID,
-                "failure" => base_url().'venta/updateCompra/'.$compraID.'/0/'.$servicioID.'/'.$publicacionID
+                "success" => base_url().'venta/updateCompra/'.$compraID.'/1/'.$servicioID.'/'.$publicacionID.'/'.$this->input->post('titulo').'/'.$this->input->post('seccion'), 
+                "pending" => base_url().'venta/updateCompra/'.$compraID.'/1/'.$servicioID.'/'.$publicacionID.'/'.$this->input->post('titulo').'/'.$this->input->post('seccion'),
+                "failure" => base_url().'venta/updateCompra/'.$compraID.'/0/'.$servicioID.'/'.$publicacionID.'/'.$this->input->post('titulo').'/'.$this->input->post('seccion')
             )
         );
 
@@ -525,12 +526,14 @@ Si tienes cualquier duda al respecto, por favor escr&iacute;benos a contacto@qui
 
     }
 
-    function updateCompra($compraID,$estado,$servicioID,$publicacionID){
+    function updateCompra($compraID,$estado,$servicioID,$publicacionID,$titulo,$seccionID){
 
          if($estado == 1){
           $this->defaultdata_model->updateItem('compraID', $compraID, $data = array('pagado' => $estado), 'compra');
           $this->defaultdata_model->updateItem('servicioID', $servicioID, $data = array('pagado' => $estado), 'serviciocontratado');
           $data = array('estatusCompra' => 1);
+          $publicacionID = $this->defaultdata_model->updateItem('publicacionID', $publicacionID, $dataPublicacion,'publicaciones');
+           $this->notificacionAdmin($seccionID,$titulo,$publicacionID);
         } else {
           $delAnuncio = $this->admin_model->deleteItem('compraID', $compraID, 'compras');
           $delPublicacion = $this->admin_model->deleteItem('publicacionID', $publicacionID, 'publicaciones');
@@ -715,7 +718,7 @@ function editAanuncio() {
         );
 
         //$publicacionID = $this->defaultdata_model->updateItem('publicaciones', $dataPublicacion);
-        $publicacionID = $this->defaultdata_model->updateItem('publicacionID', $publicacionID, $dataPublicacion,'publicaciones');
+        
 
         //VIDEOS PUBLICACION 
 
@@ -808,6 +811,7 @@ function editAanuncio() {
         if($precio_total <= 00.00){
         $this->defaultdata_model->updateItem('compraID', $compraID, $data = array('pagado' => 1), 'compra');
         $this->defaultdata_model->updateItem('servicioID', $servicioID, $data = array('pagado' => 1), 'serviciocontratado');
+        $publicacionID = $this->defaultdata_model->updateItem('publicacionID', $publicacionID, $dataPublicacion,'publicaciones');
            echo '<div class="registro_normal"> <!-- Contenedor morado registro -->
 
                 <div class="titulo_registro">GRACIAS</div>

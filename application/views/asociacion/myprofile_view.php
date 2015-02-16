@@ -175,7 +175,7 @@ function getView(viewURL){
 </br>
 <ul class="morado_boton">
 <li>
-<input type="submit" value="Editar" class="el_submit"/>
+<input type="submit" value="Guardar" class="el_submit"/>
 </li>
 </ul> 
 </div>

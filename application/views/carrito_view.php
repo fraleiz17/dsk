@@ -69,6 +69,24 @@
 
                                     });
 
+                            $(".destino").change(
+                                    function() {
+                                        var idEstado = $(this).val();
+                                        $.ajax({
+                                            url: '<?php echo base_url() ?>carrito/updateDestino',
+                                            type: 'POST',
+                                            dataType: 'json',
+                                            data: 'idEstado=' + idEstado,
+                                            success: function(data) {
+                                                if (data.response == "true") {
+                                                    location.reload();
+                                                }
+                                            }
+                            });
+
+
+                                    });
+
                             $(".deleteItem").click(
                                     function() {
                                         var cartID = $(this).attr('data-rel');
@@ -404,7 +422,7 @@
                                                                             </div>
               <br/>                                                              <div>                   
                                                                                 <label>Ciudad:</label> <input class="background_gris_mini validate[required]" type="text" name="ciudad" value="<?php echo $datosPersonales->municipio ?>" style=" margin-right:31px;"/>
-                                                                                <label style="margin-right:14px;">Estado:</label> <select class="background_gris_mini validate[required]" name="idEstado">
+                                                                                <label style="margin-right:14px;">Estado:</label> <select class="background_gris_mini validate[required] destino" name="idEstado">
                                                                                     <option> ---</option>
                                                                                     <?php
                                                                                     if ($estados != null):
