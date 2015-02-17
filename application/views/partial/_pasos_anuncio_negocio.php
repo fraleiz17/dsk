@@ -312,7 +312,7 @@
                                 <div id="giro_form" class="contenedor_informacion_mini">
                                     <p > <img src="<?php echo base_url() ?>images/giros_negocio/adistramiento_canino.png" width="24" height="20"/> Adiestramiento Canino </p>
 
-                                    <p style="margin-top:7px;"> <img src="<?php echo base_url() ?>images/giros_negocio/criadero.png" width="24" height="20"/> Criadero de Perros </p>
+                                    <p style="margin-top:3px;"> <img src="<?php echo base_url() ?>images/giros_negocio/criadero.png" width="24" height="20"/> Criadero de Perros </p>
                                 </div>
                             </div>
                             <div id="descripcion_negocio" class="contenedor_descripcion_detalle_mini" style="word-break: normal; word-wrap: break-word;">
