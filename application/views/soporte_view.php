@@ -187,13 +187,15 @@ Comentarios:
 <table width="692" class="tabla_soporte">
 <tr> 
 <td width="115" height="30"> Contacto: </td>
-<td width="336"> <input name="nombre" type="text" class="input_bg_gris" id="nombre" placeholder=" Nombre" /> <input name="apellido" type="text" class="input_bg_gris" id="apellido" placeholder=" Apellidos" /> </td>
+<td height="30"width="336"> 
+    <input name="nombre" type="text" class="input_bg_gris" id="nombre" placeholder=" Nombre" /> 
+</td>
 <td width="73"> E-mail:</td>
 <td width="166"> <input name="correo" type="text" class="input_bg_gris" id="correo" placeholder="ejemplo@hotmail.com"/> </td>
 </tr>
 <tr>
 <td height="30"> Asunto: </td>
-<td colspan="3"><input type="text" class="input_bg_gris" /></td>
+<td colspan="3"><input type="text" class="input_bg_gris" placeholder="Asunto"/></td>
  </tr>
 <tr> 
 <td height="30"> Comentarios: </td>
