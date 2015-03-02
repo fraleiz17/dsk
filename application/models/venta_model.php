@@ -211,7 +211,7 @@ function getAnunciante($id_anuncio){
         }
 
         if (!is_null($precio)) {
-            $this->db->order_by("p.precio", $precio);
+            $this->db->order_by("p.precioVenta", $precio);
         }
 
         $resultSet = $this->db->get();
