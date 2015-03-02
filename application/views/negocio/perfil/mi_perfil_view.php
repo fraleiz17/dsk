@@ -9,7 +9,7 @@
 <p class="usuario_bienvenido"><?=$myInfo->nombre.' '.$myInfo->apellido;?></p>
 </div>
 </br>
-<form style = "margin-top:-160px;" action="<?= base_url() ?>usuario/cuenta/updateMiPerfilB" id="mpB" method="post">
+<form style = "margin-top:-160px;" action="<?= base_url() ?>negocio/principal/updateMiPerfilB" id="mpB" method="post">
 <div class="contenedor_formulario">
 <p>Nombre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input name="nombre" type="text" class="background_morado" id="nombre" value="<?=$myInfo->nombre;?>" readonly="readonly"/> </p>
 </br>
@@ -66,7 +66,7 @@
 </div>
 
 
-<form style = "margin-top:0px;" action="<?= base_url() ?>usuario/cuenta/updateMiPerfilF" id="mpB" method="post">
+<form style = "margin-top:0px;" action="<?= base_url() ?>negocio/principal/updateMiPerfilF" id="mpB" method="post">
 <div id="contenedor_formu_detalle_user" style=" display:none;">
 <div class="texto_inputs" >
 <p> Razón Social:</p>
