@@ -84,8 +84,26 @@
                                             }
                             });
 
+                            });
 
-                                    });
+                            $(".updateDestino").live(
+                                    'blur',
+                                    function(){
+                                        
+                                        
+                                        $.ajax({
+                                            url : '<?php echo base_url() ?>carrito/updateDireccion',
+                                            type : 'POST',
+                                            dataType :'json',
+                                            data : $('.formCarrito').serialize(),
+                                            success: function(data){
+                                                if(data.response !="true"){ 
+                                                    alert("Ocurrio un error al modificar tu informacion porfavor intenta más tarde");
+                                                }
+                                            }                        
+                                        });
+                                    }
+                                );
 
                             $(".deleteItem").click(
                                     function() {
@@ -405,24 +423,25 @@
                                                                                             <?php endif; ?>
                                                                                 </select>
                                                                             </div>
+                                                                            <?php if($direccion_envio == null){ ?>
                                                                             <div id="form_envio">
                                                                             <div>
-                                                                                <label>Nombre:</label> <input class="background_gris_mini validate[required]" name="nombre" type="text" value="<?php echo $datosPersonales->nombre ?>" style="margin-right:27px;"/>
-                                                                                <label>Apellidos:</label> <input class="background_gris_mini" name="apellidos" type="text" value="<?php echo $datosPersonales->apellido ?>"/>
+                                                                                <label>Nombre:</label> <input class="background_gris_mini validate[required] updateDestino" name="nombre" type="text" value="<?php echo $datosPersonales->nombre ?>" style="margin-right:27px;"/>
+                                                                                <label>Apellidos:</label> <input class="background_gris_mini updateDestino" name="apellidos" type="text" value="<?php echo $datosPersonales->apellido ?>"/>
                                                                             </div>
                 <br/>                 <div>
-                                                                                <label style="margin-right:34px;">C.P:</label> <input class="background_gris_mini validate[required]" name="cp" type="text" value="<?php echo $datosPersonales->cp ?>" style="margin-right:28px;"/>
-                                                                                <label style="margin-right:28px;">Calle:</label> <input class="background_gris_mini validate[required]" name="calle" type="text" value="<?php echo $datosPersonales->calle ?>"/>
+                                                                                <label style="margin-right:34px;">C.P:</label> <input class="background_gris_mini validate[required] updateDestino" name="cp" type="text" value="<?php echo $datosPersonales->cp ?>" style="margin-right:28px;"/>
+                                                                                <label style="margin-right:28px;">Calle:</label> <input class="background_gris_mini validate[required] updateDestino" name="calle" type="text" value="<?php echo $datosPersonales->calle ?>"/>
                                                                             </div>
                      <br/>
                                           <div>
-                                                                                <label>Número:</label> <input name="noExterior" class="background_gris_mini validate[required]" type="text" value="<?php echo $datosPersonales->numero ?>" style="margin-right:28px;"/>
-                                                                                <label style="margin-right:8px;">Colonia:</label> <input class="background_gris_mini validate[required]" type="text" name="colonia"
+                                                                                <label>Número:</label> <input name="noExterior" class="background_gris_mini validate[required] updateDestino" type="text" value="<?php echo $datosPersonales->numero ?>" style="margin-right:28px;"/>
+                                                                                <label style="margin-right:8px;">Colonia:</label> <input class="background_gris_mini validate[required] updateDestino" type="text" name="colonia"
                                                                                                                value="<?php echo $datosPersonales->colonia ?>"/>
                                                                             </div>
               <br/>                                                              <div>                   
-                                                                                <label>Ciudad:</label> <input class="background_gris_mini validate[required]" type="text" name="ciudad" value="<?php echo $datosPersonales->municipio ?>" style=" margin-right:31px;"/>
-                                                                                <label style="margin-right:14px;">Estado:</label> <select class="background_gris_mini validate[required] destino" name="idEstado">
+                                                                                <label>Ciudad:</label> <input class="background_gris_mini validate[required] updateDestino" type="text" name="ciudad" value="<?php echo $datosPersonales->municipio ?>" style=" margin-right:31px;"/>
+                                                                                <label style="margin-right:14px;">Estado:</label> <select class="background_gris_mini validate[required] destino updateDestino" name="idEstado">
                                                                                     <option> ---</option>
                                                                                     <?php
                                                                                     if ($estados != null):
@@ -443,7 +462,50 @@
                                                                                     <option> México</option>
                                                                                 </select>
                                                                             </div>
-<br/>                                                                        </div>
+<br/>                                                                     </div>
+                                                                        <?php } else{ ?>
+
+                                                                        <div id="form_envio">
+                                                                            <div>
+                                                                                <label>Nombre:</label> <input class="background_gris_mini validate[required] updateDestino" name="nombre" type="text" value="<?php echo $direccion_envio->nombre ?>" style="margin-right:27px;"/>
+                                                                                <label>Apellidos:</label> <input class="background_gris_mini updateDestino" name="apellidos" type="text" value="<?php echo $direccion_envio->apellido ?>"/>
+                                                                            </div>
+                <br/>                 <div>
+                                                                                <label style="margin-right:34px;">C.P:</label> <input class="background_gris_mini validate[required] updateDestino" name="cp" type="text" value="<?php echo $direccion_envio->cp ?>" style="margin-right:28px;"/>
+                                                                                <label style="margin-right:28px;">Calle:</label> <input class="background_gris_mini validate[required] updateDestino" name="calle" type="text" value="<?php echo $direccion_envio->calle ?>"/>
+                                                                            </div>
+                     <br/>
+                                          <div>
+                                                                                <label>Número:</label> <input name="noExterior" class="background_gris_mini validate[required] updateDestino" type="text" value="<?php echo $direccion_envio->numero ?>" style="margin-right:28px;"/>
+                                                                                <label style="margin-right:8px;">Colonia:</label> <input class="background_gris_mini validate[required] updateDestino" type="text" name="colonia"
+                                                                                                               value="<?php echo $direccion_envio->colonia ?>"/>
+                                                                            </div>
+              <br/>                                                              <div>                   
+                                                                                <label>Ciudad:</label> <input class="background_gris_mini validate[required] updateDestino" type="text" name="ciudad" value="<?php echo $direccion_envio->ciudad ?>" style=" margin-right:31px;"/>
+                                                                                <label style="margin-right:14px;">Estado:</label> <select class="background_gris_mini validate[required] destino updateDestino" name="idEstado">
+                                                                                    <option> ---</option>
+                                                                                    <?php
+                                                                                    if ($estados != null):
+                                                                                        foreach ($estados as $edo):
+                                                                                            ?>
+                                                                                            <option
+                                                                                                value="<?php echo $edo->estadoID ?>" <?php echo ($edo->estadoID == $direccion_envio->estadoID) ? 'selected="selected"' : '' ?>><?php echo $edo->nombreEstado ?></option>
+
+                                                                                        <?php
+                                                                                        endforeach;
+                                                                                    endif;
+                                                                                    ?>
+                                                                                </select>
+                                                                            </div>
+              <br/>                                                              <div>          
+
+                                                                                <label style="margin-right:30px;">Pais:</label> <select class="background_gris_mini validate[required]" name="idPais">
+                                                                                    <option> México</option>
+                                                                                </select>
+                                                                            </div>
+<br/>                                                                     </div>
+
+                                                                        <?php } ?>
                                                                         </div>
                                                                     </div>
                                                                     </td>

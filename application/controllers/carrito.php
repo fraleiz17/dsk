@@ -49,6 +49,8 @@ class Carrito extends CI_Controller
         $datosPersonales = $this->usuario_model->myInfo($this->session->userdata('idUsuario'));
         $data['datosPersonales'] = $datosPersonales;
         $data['direcciones'] = $this->usuario_model->getDireccionesEnvioUsuario($this->session->userdata('idUsuario'));
+        $direccion_envio = $this->usuario_model->getDireccionEnvio($this->session->userdata('idUsuario'));
+        $data['direccion_envio'] = $direccion_envio;
         $data['estados'] = $this->defaultdata_model->getEstados();
         $data['paises'] = $this->defaultdata_model->getPaises();
         $data['cupones'] = $this->usuario_model->getCuponesUsuario($this->session->userdata('idUsuario'), 1);
@@ -56,6 +58,8 @@ class Carrito extends CI_Controller
         $data['paquetes'] = $this->defaultdata_model->getPaquetes();
         $data['razas'] = $this->defaultdata_model->getRazas();
         $data['banner'] = $this->defaultdata_model->getTable('banner');
+
+
         if(is_logged()){
          $cupones = $this->usuario_model->getCuponesUsuario($this->session->userdata('idUsuario'));
          $data['cupones'] = $cupones;
@@ -65,7 +69,13 @@ class Carrito extends CI_Controller
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
         $carrito = $this->admin_model->getCarrito($this->session->userdata('idUsuario'));
         $carritototal = $this->admin_model->getSingleItem('usuarioID', $this->session->userdata('idUsuario'), 'carritototal');
-        $estadoID = $datosPersonales->estadoID;
+       
+        if($direccion_envio == null){
+            $estadoID = $datosPersonales->estadoID;
+        } else {
+            $estadoID = $direccion_envio->estadoID;   
+        }
+        var_dump($direccion_envio);
         $costo = $this->usuario_model->getCostoEnvio($estadoID);
         $data['costo'] = $costo;
 
@@ -220,6 +230,11 @@ class Carrito extends CI_Controller
 
     function updateDestino()
     {
+       $arrUpdate = array(
+            'estadoID' => $this->input->post('idEstado')
+        );
+       $this->usuario_model->updateDireccion($arrUpdate, $this->session->userdata('idUsuario'));
+
        $carritototal = $this->admin_model->getSingleItem('usuarioID', $this->session->userdata('idUsuario'), 'carritototal');
        $costo = $this->usuario_model->getCostoEnvio($this->input->post('idEstado'));
        $data['costo'] = $costo;
@@ -233,6 +248,26 @@ class Carrito extends CI_Controller
  
         
         $data['response'] = "true";
+        echo json_encode($data);
+    }
+
+    function updateDireccion(){
+        $arrUpdate = array(
+            'idUsuario' => $this->session->userdata('idUsuario'),
+            'nombre' => $this->input->post('nombre'),
+            'apellido' => $this->input->post('apellidos'),
+            'cp' => $this->input->post('cp'),
+            'calle' => $this->input->post('calle'),
+            'colonia' => $this->input->post('colonia'),
+            'numero' => $this->input->post('noExterior'),
+            'ciudad' => $this->input->post('ciudad'),
+            'estadoID' => $this->input->post('idEstado'),
+            'paisID' => 146
+        );
+
+        $data['response'] = "false";        
+        if($this->usuario_model->updateDireccion($arrUpdate, $this->session->userdata('idUsuario')))
+            $data['response'] = "true";
         echo json_encode($data);
     }
 

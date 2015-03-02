@@ -375,6 +375,18 @@ class Usuario_model extends CI_Model
         return $this->db->get()->result();
     }
 
+    function getDireccionEnvio($idUsuario){
+        $this->db->from('direccionenvio ud');
+        $this->db->join('usuario u', 'ud.idUsuario=u.idUsuario');
+        $this->db->where('u.idUsuario', $idUsuario);
+        $query = $this->db->get();
+         if ($query->num_rows() == 1) {
+            return $query->row();
+        } else {
+            return null;
+        }
+    }
+
     function addCompra($compra, $compra_detalle)
     {
 
@@ -593,6 +605,18 @@ limit 1');
             return false;
         }
 
+    }
+
+    function updateDireccion($data, $idUsuario){
+        $query = $this -> db -> get_where('direccionenvio', array('idUsuario' => $idUsuario));
+        if ($query -> num_rows() == 1) {
+            $this -> db -> where('idUsuario', $idUsuario);
+            $this -> db -> update('direccionenvio', $data);
+            return true;
+        } else {
+            $this -> db -> insert('direccionenvio', $data);
+            return true;
+        }
     }
 }
 
