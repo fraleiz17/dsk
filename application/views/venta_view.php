@@ -59,7 +59,7 @@ function buscar_imagen(id){
 </br>
 </br>
 <span class="info"></span>
-<ul class="boton_naranja_tres">
+<ul class="boton_naranja_tres contactoForm">
     <li>
         <input type="submit" value="Enviar"/>
     </li>
@@ -103,7 +103,7 @@ function buscar_imagen(id){
 <label><a href="<?=base_url()?>content/terminos_y_condiciones.pdf" target="_blank" style="text-decoration:none;">T&eacute;rminos y Condiciones de Uso</a></label></br>
 </br>
 </br>
-<ul class="boton_naranja_tres">
+<ul class="boton_naranja_tres denunciaForm">
     <li>
         <input type="submit" value="Enviar"/>
     </li>
@@ -744,6 +744,7 @@ function denunciar_pub(id) {
                 },
                 success: function (data) {
                     $('.info',form).html(data);
+                    $('.boton_naranja_tres').show();
                 }
             });
         });
@@ -768,6 +769,7 @@ $('#contenedor_contactar #contacto_form').submit(function(e){
                 },
                 success: function (data) {
                     $(".info").empty().append(data);
+                    $('.boton_naranja_tres').show();
 
                 }
             });
@@ -797,6 +799,7 @@ function contactar_pub(id) {
                 },
                 success: function (data) {
                     $('.info',form).html(data);
+                    $('.boton_naranja_tres').show();
                 }
             });
         });

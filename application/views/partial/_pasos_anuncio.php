@@ -738,7 +738,7 @@ TOTAL
                     <div class="descipcion_pasos_mediano">
                         <div class="titulo_de_pasos"> PUBLICAR EN ANUNCIOS </div>
                         <div class="instrucciones_pasos"> Pago del servicio: </div>
-                        <div id="iframe"></div>
+                        <div id="iframez"></div>
                         <div id="closeProcess"></div>
                         <br/>
                     </div>
@@ -999,7 +999,7 @@ TOTAL
                     data: form.serialize(),
                     success: function(data){
                         //$('#cerrarPublicacion').hide();
-                        $('#iframe').append(data);
+                        $('#iframez').append(data);
                     }
                 });
             });

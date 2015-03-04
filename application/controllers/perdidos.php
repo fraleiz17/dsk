@@ -217,15 +217,8 @@ $msj = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://w
 <font> El usuario ' . $this->session->userdata('nombre') . ' ' . $this->session->userdata('apellido') . ' esta interesado en el siguiente anuncio:</font>
 <font style="margin-top:100px; font-size:19px; font-weight:bold; color:#72A937;" >' . ($directorio['data'][0]->titulo).'</font>
                 
-            <br/><br/>
-           <font > <strong> Creado por:</strong> '.$directorio['data'][0]->correo.'</font>
-           <br/><br/>
-           <font > <strong> Fecha de creacion: </strong>'.$directorio['data'][0]->fechaCreacion.'</font>
-           <br/><br/>
-           <font ><strong> Duracion:</strong> '.$directorio['data'][0]->vigencia.' ('.$directorio['data'][0]->fechaVencimiento.')</font
-           <br/><br/>
-           <font><strong> Descripcion:</strong> '.$directorio['data'][0]->descripcion.'</font>
-        <br/><br/>
+        <font color="#000066"><strong> Correo Contacto:</strong> ' . $this->input->post('mail_contacto') . '</font>
+        <br/><br/> 
         <font color="#000066"><strong> Asunto:</strong> ' . $this->input->post('asunto_contacto') . '</font>
         <br/><br/>
         <font color="#000066"><strong>Mensaje: </strong><br/>' . $this->input->post('comentarios_contacto') . '</font>

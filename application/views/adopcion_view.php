@@ -747,7 +747,7 @@ function denunciar_pub(id) {
 }
 
 $('#contenedor_contactar #contacto_form').submit(function(e){
-            $('.boton_naranja_tres').html('');
+            $('.boton_naranja_tres').hide('');
             $('.info').html('Enviando...');
             e.preventDefault();
             var form = $(this);
@@ -764,6 +764,8 @@ $('#contenedor_contactar #contacto_form').submit(function(e){
                 },
                 success: function (data) {
                     $(".info").empty().append(data);
+                    $('.boton_naranja_tres').show();
+
 
                 }
             });
