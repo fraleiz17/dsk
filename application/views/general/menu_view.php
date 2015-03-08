@@ -168,7 +168,7 @@ if ($keyUser === FALSE || ($keyUser !== FALSE && $tipoUsuario !== 0)):
                                 ?>
                                 <div class="item"><img
                                             src="<?php echo base_url() ?>images/<?php echo $contenido->imgbaner; ?>"
-                                            alt="Quierounperro.com">
+                                            alt="QuieroUnPerro.com">
                                 </div>
 
                             <?php
@@ -183,7 +183,7 @@ if ($keyUser === FALSE || ($keyUser !== FALSE && $tipoUsuario !== 0)):
                                 ?>
                                 <div class="item"><img
                                             src="<?php echo base_url() ?>images/<?php echo $contenido->imgbaner; ?>"
-                                            alt="Quierounperro.com">
+                                            alt="QuieroUnPerro.com">
                                 </div>
                             <?php
                             }

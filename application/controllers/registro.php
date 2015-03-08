@@ -106,7 +106,7 @@ class Registro extends CI_Controller {
 <br/>
 
 <font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
-Gracias por registrate en QuieroUnperro.com<br/>
+Gracias por registrate en QuieroUnPerro.com<br/>
 Tu usuario ha sido creado correctamente. Te recordamos tus datos de inicio de sesi&oacute;n:<br/><br/>
 Correo: '.$this->input->get('correo').' <br/>
 Contrase&ntilde;a: * Por seguridad no se muestra. En caso de olvidarla sol&iacute;citala en el portal.<br/><br/>
