@@ -160,7 +160,7 @@
 
     <p style="margin-top:-1px;">Correo:</p>
 
-    <p style="margin-top:0px;">Teléfono:</p>
+    <p style="margin-top:0px;">Tel&eacute;fono:</p>
 
     <p style="margin-top:-1px;">Contrase&ntilde;a:</p>
 

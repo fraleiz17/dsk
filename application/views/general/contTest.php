@@ -11,7 +11,6 @@
         oculta('contenedor_registro');
         <?php endif; ?>
 
-
         $('#recuperarcontrasena').submit(function() {
         $(".recuperar").fadeOut(350, function(){
             $(".enviando").show();
@@ -19,8 +18,6 @@
     });
 
 });
-
-      
 </script>
 
 
@@ -37,9 +34,9 @@
             <div class="titulo_registro"> INGRESAR</div>
             <div id="ingreso_normal">
             <div class="texto_inputs" style="margin-top:10px;">
-                <p> Usuario:</p>
+                <p style="margin-top:10px;"> Usuario:</p>
 
-                <p style="margin-top:15px;">Contraseña:</p>
+                <p style="margin-top:10px;">Contraseña:</p>
 
             </div>
 
@@ -118,18 +115,18 @@
 
 <div class="titulo_registro"> REGISTRATE</div>
 
-<div class="texto_inputs" style="margin-top:9px;" >
+<div class="texto_inputs" style="margin-top:21px;" >
     <p> Nombre:</p>
 
-    <p style="margin-top:12px;">Apellido:</p>
+    <p style="margin-top:-3px;">Apellido:</p>
 
     <p style="margin-top:-1px;">Correo:</p>
 
-    <p style="margin-top:3px;">Teléfono:</p>
+    <p style="margin-top:0px;">Tel&eacute;fono:</p>
 
-    <p style="margin-top:5px;">Contrase&ntilde;a:</p>
+    <p style="margin-top:-1px;">Contrase&ntilde;a:</p>
 
-    <p style="margin-top:-3px;">Confirmar Contrase&ntilde;a:</p>
+    <p style="margin-top:-5px;">Confirmar Contrase&ntilde;a:</p>
 
 </div>
 <div class="contendeor_inputs" >
@@ -191,7 +188,7 @@
     <div class="datos_fiscales"> Datos fiscales</div>
 
 
-    <div class="texto_inputs" style="margin-top:12px;">
+ <div class="texto_inputs" style="margin-top:18px;">
         <p> Razón Social:</p>
 
         <p style="margin-top:0px;">RFC:</p>
@@ -238,16 +235,8 @@
             </select></p>
         <p><select name="pais">
                 <option value="147">México</option>
-                <?php
-                if ($paises != null):
-                    foreach ($paises as $pais):
-                        ?>
-                        <option value="<?php echo $pais->paisID ?>"><?php echo $pais->nombrePais ?></option>
-
-                    <?php endforeach;
-                endif; ?>
+                
             </select></p>
-
 
     </div>
 
@@ -262,22 +251,22 @@
 
     
 
-    <div class="texto_inputs" style="margin-top:12px;">
+<div class="texto_inputs" style="margin-top:20px;">
         <p> Razón Social:</p>
 
         <p style="margin-top:0px;">RFC:</p>
 
-        <p style="margin-top:5px;">Calle:</p>
+        <p style="margin-top:-2px;">Calle:</p>
 
-        <p style="margin-top:8px;">No. Exterior:</p>
+        <p style="margin-top:-2px;">No. Exterior:</p>
 
-        <p style="margin-top:-2px;">CP:</p>
+        <p style="margin-top:0px;">CP:</p>
 
         <p style="margin-top:-1px;">Municipio:</p>
 
-        <p style="margin-top:-1px;">Estado:</p>
+        <p style="margin-top:-2px;">Estado:</p>
 
-        <p style="margin-top:-2px;">País:</p>
+        <p style="margin-top:-4px;">País:</p>
 
 
     </div>
@@ -307,15 +296,7 @@
                 endif; ?>
             </select></p>
         <p><select name="paisN">
-                <option value="147">México</option>
-                <?php
-                if ($paises != null):
-                    foreach ($paises as $pais):
-                        ?>
-                        <option value="<?php echo $pais->paisID ?>"><?php echo $pais->nombrePais ?></option>
-
-                    <?php endforeach;
-                endif; ?>
+                 <option value="147">México</option>
             </select></p>
 
 
@@ -399,7 +380,7 @@
     </div>
 
 
-    <div class="texto_inputs" style="margin-top:8px;">
+   <div class="texto_inputs" style="margin-top:20px;">
         <p>Contacto:</p>
 
         <p style="margin-top:11px;">Teléfono:</p>
@@ -424,7 +405,7 @@
 
         <p style="margin-top:15px;">Descripción:</p>
 
-        <p style="margin-top:45px;">Ubicación:</p>
+        <p style="margin-top:70px;">Ubicación:</p>
     </div>
 
     <div class="contendeor_inputs">
@@ -461,7 +442,8 @@
 
         <p><textarea rows="3" cols="40" style="margin-top:3px;" name="descripcionN1"> </textarea></p>
 
-
+         <p style="font-size:80%;margin-top:49px;">Desplace el puntero hacia su ubicaci&oacute;n.</p>
+        <br/><br/>
     </div>
 
 
@@ -475,7 +457,7 @@
 
     <div class="datos_fiscales"> Datos fiscales</div>
 
-    <div class="texto_inputs" style="margin-top:12px;">
+<div class="texto_inputs" style="margin-top:17px;">
         <p> Razón Social:</p>
 
         <p style="margin-top:0px;">RFC:</p>
@@ -491,7 +473,6 @@
         <p style="margin-top:-1px;">Estado:</p>
 
         <p style="margin-top:-2px;">País:</p>
-
 
     </div>
 
@@ -519,16 +500,9 @@
                 <?php endforeach;
             endif; ?>
             </select></p>
-        <p><select name="paisAC"/>
+         <p><select name="paisAC"/>
             <option value="147">México</option>
-            <?php
-            if ($paises != null):
-                foreach ($paises as $pais):
-                    ?>
-                    <option value="<?php echo $pais->paisID ?>"><?php echo $pais->nombrePais ?></option>
-
-                <?php endforeach;
-            endif; ?>
+            
             </select> </p>
 
 
@@ -537,10 +511,8 @@
     <div class="datos_fiscales"> Datos de la Asociación</div>
 
 
-    <div class="texto_inputs" style="margin-top:8px;">
-
-        <p style="margin-top:5px;"> Nombre: </p>
-
+    <div class="texto_inputs" style="margin-top:18px;">
+        <p> Nombre: </p>
         <p>Contacto:</p>
 
         <p style="margin-top:11px;">Teléfono:</p>
@@ -565,7 +537,7 @@
 
         <p style="margin-top:15px;">Descripción:</p>
 
-        <p style="margin-top:45px;">Ubicación:</p>
+        <p style="margin-top:70px;">Ubicación:</p>
     </div>
 
     <div class="contendeor_inputs">
@@ -604,7 +576,8 @@
 
         <p><textarea rows="3" cols="40" style="margin-top:3px;" name="descripcionAC1"> </textarea></p>
 
-
+        <p style="font-size:80%;margin-top:49px;">Desplace el puntero hacia su ubicaci&oacute;n.</p>
+        <br/><br/>
     </div>
 
 
