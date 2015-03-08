@@ -91,8 +91,7 @@ jQuery(document).ready(function(){
             jQuery("form").validationEngine({
                 promptPosition: "topRight",
                 scroll: false,
-                ajaxFormValidation: false,
-                ajaxFormValidationMethod: 'post'
+                ajaxFormValidation: false
             });
 
 
@@ -109,14 +108,14 @@ jQuery(document).ready(function(){
  <!-- -->
  <!-- -->
 <div class="contenedor_negro" id="soporteQUPP" style="display:;">
-<div class="cerrar_publi"> <img src="<?php echo base_url() ?>images/cerrar.png" onclick="window.location.href='<?=base_url()?>'"/> </div>
+<div class="cerrar_publi"> <img src="<?php echo base_url() ?>images/cerrar.png" onclick="window.location.href='<?=$this -> agent -> referrer()?>'"/> </div>
 <div class="contenedor_publicidad">
 <div class="titulo_publicidad"> PUBLICIDAD </div>
 <div class="instrucciones"> ¿Quieres anunciar tu marca, producto, servicio o evento con nosotros? </div>
-<div class="contenedor_perrito_instrucciones"> <img src="<?php echo base_url() ?>images/pero_paso_uno.png" width="94" height="84" /><div class="instrucciones_perrito"> Envianos tus datos y nos ponemos en contacto contigo</div></div>
+<div class="contenedor_perrito_instrucciones"> <img src="<?php echo base_url() ?>images/pero_paso_uno.png" width="94" height="84" /><div class="instrucciones_perrito"> Env&iacute;anos tus datos y nos ponemos en contacto contigo</div></div>
 </br>
 </br>
-<form action="<?=base_url()?>quienes/publicidad" method="post" id="pub">
+<form action="<?=base_url()?>quienes/publicidad_do" method="post" id="pub">
 <table class="tabla_contacto_publicidad"> 
 <tr> 
 <td height="30"> Contacto: </td>
@@ -124,10 +123,10 @@ jQuery(document).ready(function(){
 </tr>
 <tr>
 <td height="30"> E-mail: </td>
-<td><input name="correo" type="text" class="input_bg_gris validate[required]" id="correo" placeholder="ejemplo@uno.com" /> </td>
+<td><input name="correo" type="text" class="input_bg_gris validate[required,custom[email]]" id="correo" placeholder="ejemplo@uno.com" /> </td>
 </tr>
 <tr>
-<td height="31"> Teléfono: </td>
+<td height="31"> Tel&eacute;fono: </td>
 <td> <input name="telefono" type="text" class="input_bg_gris validate[required]" id="telefono" /> </td>
 </tr>
 <tr> 
@@ -136,13 +135,13 @@ jQuery(document).ready(function(){
 </tr>
 <tr> 
 <td height="30"> Sitio Web: </td>
-<td> <input name="web" type="text" class="input_bg_gris" id="web"/> </td>
+<td> <input name="web" type="text" class="input_bg_gris validate[custom[url]]" id="web"/> </td>
 </tr>
 </table>
 <div class="separador_morado_publicidad"> </div>
 <table class="tabla_contacto_publicidad"> 
 <tr>
-<td height="30" >¿Como te enteraste de nosotros?: </td>
+<td height="30" >¿C&oacute;mo te enteraste de nosotros?: </td>
 <td > <select name="fuente" class="input_bg_gris validate[required]" id="fuente" >
     <option> ---- </option>
     <option> Redes sociales </option>
@@ -175,10 +174,10 @@ Comentarios:
  <!-- -->
  
  <div class="contenedor_negro" id="soporteQUP" style="display:;">
- <div class="cerrar_publi"> <img src="<?=base_url()?>images/cerrar.png" onclick="window.location.href='<?=base_url()?>'"/> </div>
+ <div class="cerrar_publi"> <img src="<?=base_url()?>images/cerrar.png" onclick="window.location.href='<?=$this -> agent -> referrer()?>'"/> </div>
  <div class="contenedor_publicidad">
  <div class="titulo_publicidad"> SOPORTE </div>
-<div class="instrucciones"> ¿Tienes problemas en nuestra pagina? </div>
+<div class="instrucciones"> ¿Tienes problemas en nuestra p&aacute;gina? </div>
 <div class="contenedor_perrito_instrucciones"> <img src="<?=base_url()?>images/pero_paso_uno.png" width="94" height="84" /><div class="instrucciones_perrito_soporte"> Si estás teniendo problemas con la compra de algún paquete, la creación de tu anuncio o tienes cualquier comentario, contáctanos.</div>
 
 </div>
@@ -188,18 +187,18 @@ Comentarios:
 <tr> 
 <td width="115" height="30"> Contacto: </td>
 <td height="30"width="336"> 
-    <input name="nombre" type="text" class="input_bg_gris" id="nombre" placeholder=" Nombre" /> 
+    <input name="nombre" type="text" class="input_bg_gris validate[required]" id="nombre" placeholder=" Nombre" /> 
 </td>
 <td width="73"> E-mail:</td>
-<td width="166"> <input name="correo" type="text" class="input_bg_gris" id="correo" placeholder="ejemplo@hotmail.com"/> </td>
+<td width="166"> <input name="correo" type="text" class="input_bg_gris validate[required,custom[email]]" id="correo" placeholder="ejemplo@hotmail.com"/> </td>
 </tr>
 <tr>
 <td height="30"> Asunto: </td>
-<td colspan="3"><input type="text" class="input_bg_gris" placeholder="Asunto"/></td>
+<td colspan="3"><input type="text" class="input_bg_gris validate[required]" placeholder="Asunto" name="asunto"/></td>
  </tr>
 <tr> 
 <td height="30"> Comentarios: </td>
-<td colspan="3"> <textarea name="comentarios" cols="67" class="input_bg_gris" id="comentarios"> </textarea></td>
+<td colspan="3"> <textarea name="comentarios" cols="67" class="input_bg_gris validate[required]" id="comentarios"> </textarea></td>
 </tr>
  </table>
  </br>
@@ -224,7 +223,7 @@ Comentarios:
 <!--		EXITO REGISTRO							-->
 <!-- ------------------------------------------------------ -->
 <div class="contenedor_modificaciones" id="contenedor_correctoQUP" style="display:none"> <!-- Contenedor negro imagenes-->
-<div class="cerrar_modificaciones"> <img src="<?=base_url()?>images/cerrar.png" onclick="window.location.href='<?=base_url()?>'"/> </div>
+<div class="cerrar_modificaciones"> <img src="<?=base_url()?>images/cerrar.png" onclick="window.location.href='<?=$this -> agent -> referrer()?>'"/> </div>
 
 
 <div class="modificaciones"> 
@@ -248,7 +247,7 @@ El correo se envió exitosamente
 <!-- ------------------------------------------------------ -->
 
 <div class="contenedor_modificaciones" id="contenedor_errorQUP" style="display:none"> <!-- Contenedor negro imagenes-->
-<div class="cerrar_modificaciones"> <img src="<?=base_url()?>images/cerrar.png" onclick="window.location.href='<?=base_url()?>'"/> </div>
+<div class="cerrar_modificaciones"> <img src="<?=base_url()?>images/cerrar.png" onclick="window.location.href='<?=$this -> agent -> referrer()?>'"/> </div>
 
 
 <div class="modificaciones"> 
