@@ -57,11 +57,11 @@
                 if (data.response == true && data.cambioContrasena == false) {
                     
                     if(data.registro == true){
-                    $("#confirm").html('<label>Tu usuario ha sido creado exitosamente, por favor activa tu cuenta a traves del e-mail que ha sido enviado a tu cuenta de correo electronico. Para poder anunciarte y publicar anuncios, deberás registrar tu información completa. Esto lo podrás hacer en cualquier momento entrando a tu perfil.</label>');
+                    $("#confirm").html('<label>Tu usuario ha sido creado exitosamente, por favor activa tu cuenta a traves del e-mail que ha sido enviado a tu cuenta de correo electr&oacute;nico. Para poder anunciarte y publicar anuncios, deberás registrar tu informaci&oacute;n completa. Esto lo podr&aacute;s hacer en cualquier momento entrando a tu perfil.</label>');
                     muestra('contenedor_correcto');
                     oculta('contenedor_registro');
                     } else{
-                        $("#confirm").html('<label>Inicio de sesion correcto.</label>');
+                        $("#confirm").html('<label>Inicio de sesi&oacute;n correcto.</label>');
                         muestra('contenedor_correcto');
                         oculta('contenedor_login');
                         window.location.replace(data.url);
