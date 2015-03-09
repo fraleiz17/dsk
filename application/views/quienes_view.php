@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es-419">
 <head>
@@ -202,7 +201,7 @@ if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
                     }
                 }
                 ?>
-	</div> 
+  </div> 
 <div class="division_menu_inferior"></div>
 <?php $this->load->view('general/footer_view');?>
 </body>

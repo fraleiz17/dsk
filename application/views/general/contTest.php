@@ -17,49 +17,11 @@
         });
     });
 
-      });
+});
 </script>
 
 
-<div id="iconos_ocultos" class="iconos_ocultos">
 
-
-    <ul class="iconos_estatus">
-        <li   <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  onclick="window.location='<?= base_url() ?>carrito';" <?php else: ?>  <?php endif; ?>>
-
-            <img id="horizontal_compras_mini"
-                 onmouseover="mostrar_icono('horizontal_compras'); ocultar_icono('horizontal_compras_mini');"
-                 class="iconos_flotantes" src="<?php echo base_url() ?>images/compras_horizontal_mini.png"/>
-
-            <img class="iconos_flotantes2"
-                 onmouseout="mostrar_icono('horizontal_compras_mini'); ocultar_icono('horizontal_compras');"
-                 id="horizontal_compras" src="<?php echo base_url() ?>images/compras_horizontal.png"
-               />
-
-        </li>
-        <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
-       <?php else: ?> onclick="muestra('contenedor_login');oculta('envio_con');muestra('ingreso_normal');" <?php endif; ?>>
-            <img id="horizontal_ingresar_mini"
-                 onmouseover="mostrar_icono('horizontal_ingresar'); ocultar_icono('horizontal_ingresar_mini');"
-                 class="iconos_flotantes" src="<?php echo base_url() ?>images/ingresar_horizontal_mini.png"/>
-
-            <img class="iconos_flotantes2"
-                 onmouseout="mostrar_icono('horizontal_ingresar_mini'); ocultar_icono('horizontal_ingresar');"
-                id="horizontal_ingresar"
-                 src="<?php echo base_url() ?>images/ingresar_horizontal.png"/>
-        </li>
-
-        <li  <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  <?php else: ?>onclick="muestra('contenedor_registro');" <?php endif; ?>>
-            <img id="horizontal_registrate_mini"
-                 onmouseover="mostrar_icono('horizontal_registrate'); ocultar_icono('horizontal_registrate_mini');"
-                 class="iconos_flotantes" src="<?php echo base_url() ?>images/registrate_horizontal_mini.png"/>
-
-            <img class="iconos_flotantes2"
-                 onmouseout="mostrar_icono('horizontal_registrate_mini'); ocultar_icono('horizontal_registrate');"
-                 id="horizontal_registrate" src="<?php echo base_url() ?>images/registrate_horizontal.png"/>
-        </li>
-    </ul>
-</div>
 <!--        CONTENEDOR LOGIN                            -->
 <!-- ------------------------------------------------------ -->
 <form action="<?= base_url() ?>sesion/login/principal/principal" id="login" class="validate" method="post">
@@ -84,10 +46,10 @@
                 <p><input type="password" name="contrasena" class="validate[required]" placeholder="Contraseña"/> *</p>
             </div>
             <ul class="morado_reg">
-                    <li>
-                        <input type="submit" class="el_submit"/>
-                    </li>
-                </ul>
+                <li>
+                    <input type="submit" class="el_submit"/>
+                </li>
+            </ul>
             </br>
             <div class="subrayado" onclick="muestra('envio_con');oculta('ingreso_normal');">¿Olvidaste contraseña?</div>
             <div class="subrayado" onclick="muestra('contenedor_registro');oculta('contenedor_login');"> Crear cuenta
@@ -107,22 +69,22 @@
                 </div>
 
             <div class="contendeor_inputs">
-                <p><input type="text" name="correoR" class="validate[required,custom[email]]" placeholder="correo@ejemplo.com"/> *</p>
+                <p><input type="text" name="correoR" class="validate[required,custom[email]]"/> *</p>
             </div>
 
                 
-                <ul class="morado_reg recuperar">
+                <ul class="morado_reg">
                 <li>
                    <input type="submit" value="Recuperar" class="el_submit"/>
                 </li>
             </ul>
-
+            
             <ul class="enviando" style="display:none;">
                 <li>
                    Enviando informacion
                 </li>
             </ul>
-                
+            
             </form>
             </br>
             </div>
@@ -160,7 +122,7 @@
 
     <p style="margin-top:-1px;">Correo:</p>
 
-    <p style="margin-top:0px;">Teléfono:</p>
+    <p style="margin-top:0px;">Tel&eacute;fono:</p>
 
     <p style="margin-top:-1px;">Contrase&ntilde;a:</p>
 
@@ -171,7 +133,7 @@
 <p><input type="text" name="nombre" id="nombre" class="validate[required],custom[onlyLetterSp]"/> *</p>
 <p><input type="text" name="apellido" id="apellido" class="validate[required],custom[onlyLetterSp]"/> *</p>
 
-<p><input type="text" name="correo" class="validate[required,custom[email],ajax[isthereemail]]" placeholder="correo@ejemplo.com"/> *</p>
+<p><input type="text" name="correo" class="validate[required,custom[email],ajax[isthereemail]]" /> *</p>
 
 <p><input type="text" name="telefono" class="validate[custom[onlyNumberSp],minSize[10]]"/></p>
 
@@ -226,7 +188,7 @@
     <div class="datos_fiscales"> Datos fiscales</div>
 
 
-    <div class="texto_inputs" style="margin-top:18px;">
+ <div class="texto_inputs" style="margin-top:18px;">
         <p> Razón Social:</p>
 
         <p style="margin-top:0px;">RFC:</p>
@@ -276,7 +238,6 @@
                 
             </select></p>
 
-
     </div>
 
 
@@ -290,7 +251,7 @@
 
     
 
-    <div class="texto_inputs" style="margin-top:20px;">
+<div class="texto_inputs" style="margin-top:20px;">
         <p> Razón Social:</p>
 
         <p style="margin-top:0px;">RFC:</p>
@@ -335,8 +296,7 @@
                 endif; ?>
             </select></p>
         <p><select name="paisN">
-                <option value="147">México</option>
-                
+                 <option value="147">México</option>
             </select></p>
 
 
@@ -420,7 +380,7 @@
     </div>
 
 
-    <div class="texto_inputs" style="margin-top:20px;">
+   <div class="texto_inputs" style="margin-top:20px;">
         <p>Contacto:</p>
 
         <p style="margin-top:11px;">Teléfono:</p>
@@ -474,7 +434,7 @@
             </select> </p>
         <p><input style="margin-top:3px;" type="text" name="cpN1" class="custom[onlyNumberSp]"/></p>
 
-        <p><input style="margin-top:3px;" type="text" name="correoN1"class="validate[required],custom[email]" placeholder="correo@ejemplo.com"/></p>
+        <p><input style="margin-top:3px;" type="text" name="correoN1"class="validate[required],custom[email]"></p>
 
         <p><input style="margin-top:3px;" type="text" name="pagina_webN1"/></p>
 
@@ -482,9 +442,8 @@
 
         <p><textarea rows="3" cols="40" style="margin-top:3px;" name="descripcionN1"> </textarea></p>
 
-        <p style="font-size:80%;margin-top:49px;">Desplace el puntero hacia su ubicaci&oacute;n.</p>
+         <p style="font-size:80%;margin-top:49px;">Desplace el puntero hacia su ubicaci&oacute;n.</p>
         <br/><br/>
-
     </div>
 
 
@@ -498,7 +457,7 @@
 
     <div class="datos_fiscales"> Datos fiscales</div>
 
-    <div class="texto_inputs" style="margin-top:17px;">
+<div class="texto_inputs" style="margin-top:17px;">
         <p> Razón Social:</p>
 
         <p style="margin-top:0px;">RFC:</p>
@@ -514,7 +473,6 @@
         <p style="margin-top:-1px;">Estado:</p>
 
         <p style="margin-top:-2px;">País:</p>
-
 
     </div>
 
@@ -542,7 +500,7 @@
                 <?php endforeach;
             endif; ?>
             </select></p>
-        <p><select name="paisAC"/>
+         <p><select name="paisAC"/>
             <option value="147">México</option>
             
             </select> </p>
@@ -610,7 +568,7 @@
             </select> </p>
         <p><input style="margin-top:3px;" type="text" name="cpAC1" class="custom[onlyNumberSp]" /></p>
 
-        <p><input style="margin-top:3px;" type="text" name="correoA1C" class="validate[required],custom[email]" placeholder="correo@ejemplo.com"/></p>
+        <p><input style="margin-top:3px;" type="text" name="correoA1C" class="validate[required],custom[email]"/></p>
 
         <p><input style="margin-top:3px;" type="text" name="pagina_webAC1"/></p>
 
@@ -620,7 +578,6 @@
 
         <p style="font-size:80%;margin-top:49px;">Desplace el puntero hacia su ubicaci&oacute;n.</p>
         <br/><br/>
-
     </div>
 
 
@@ -719,10 +676,11 @@
 
 
 
-
+<div style="display:block;float:left;widht:100px;height:344px;">
+<div id="espacio_izquierda" class="seccion_izquierda_secciones">
 <ul class="iconos" id="iconos_grandes">
         <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  onclick="window.location='<?= base_url() ?>carrito';" <?php else: ?>  <?php endif; ?>>
-            <div class="indicadores"> 
+            <div class="indicadores" style="margin-top: 78px;margin-left: 60px;"> 
                 <?php echo $carritoT ?>
                 
             </div> 
@@ -734,7 +692,7 @@
         
         
         
-            <div class="indicador">
+            <div class="indicador" style="margin-top: 78px;margin-left: 60px;">
              <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
              <img src="<?php echo base_url() ?>images/indicador_si.png" title="Ya estas logueado">
              <?php else: ?>
@@ -744,7 +702,7 @@
             <img src="<?php echo base_url() ?>images/sesion.png"/></li> 
             
         <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  <?php else: ?>onclick="muestra('contenedor_registro');" <?php endif; ?>>
-            <div class="indicador"> 
+            <div class="indicador" style="margin-top: 78px;margin-left: 60px;"> 
             <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
              <img src="<?php echo base_url() ?>images/indicador_si.png" title="Ya estas registrado">
              <?php else: ?>
@@ -754,3 +712,4 @@
             <img src="<?php echo base_url() ?>images/registrate.png"/>
         </li>
     </ul>
+</div></div>

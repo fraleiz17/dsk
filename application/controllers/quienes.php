@@ -59,6 +59,7 @@ $config['map_name'] = 'map';
 $config['map_div_id'] = 'map_canvas';
 $this->googlemaps->initialize($config);
 $data['map'] = $this->googlemaps->create_map();
+$data['seccion'] = 12;
 
 
 // set up the marker ready for positioning 

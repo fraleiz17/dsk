@@ -62,7 +62,7 @@ function ajaxValidationCallback(status, form, json, options){
         console.log(data.response);
         if(data.response == true){
                                
-                              $("#confirm").prepend('<label>Tu usuario ha sido creado exitosamente, por favor activa tu cuenta atravez del e-mail que ha sido enviado a tu cuenta de correo electronico. Para poder anunciarte y publicar anuncios, deberás registrar tu información completa. Esto lo podrás hacer en cualquier momento entrando a tu perfil.</label>');
+                              $("#confirm").prepend('<label>Tu usuario ha sido creado exitosamente, por favor activa tu cuenta atravez del e-mail que ha sido enviado a tu cuenta de correo electr&oacute;nico. Para poder anunciarte y publicar anuncios, deber&aacute;s registrar tu informaci&oacute;n completa. Esto lo podr&aacute;s hacer en cualquier momento entrando a tu perfil.</label>');
                                 muestra('contenedor_correcto'); 
                                 oculta('contenedor_registro');                                                                            
           
