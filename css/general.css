@@ -485,8 +485,7 @@ input[type=radio].css-checkbox {
 	}
 .contenedor_publicidad{
 	margin:0px auto;
-	
-    width: 840px;
+	width: 900px;
     min-height: 500px;
     background-color: #FFF;
     border: 2px solid #762EA4;
@@ -503,12 +502,14 @@ input[type=radio].css-checkbox {
     padding-top: 21px;
 	}
 .instrucciones{
-	width: 830px;
+	width: auto;
     height: 44px;
     background-color: #762EA4;
     color: #FFFFFF;
     font-size: 23px;
     padding-left: 10px;
+    text-align: center;
+    padding-top: 10px;
 	}
 .contenedor_perrito_instrucciones{
 	width:852px;
