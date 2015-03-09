@@ -147,7 +147,7 @@ jQuery(document).ready(function(){
     <option> Redes sociales </option>
     <option> Buscadores web </option>
     <option> Publicidad Impresa </option>
-    <option> Evento </option>
+    #testvento </option>
     <option> Otro </option>
  </select> </td>
 </tr>
@@ -161,7 +161,20 @@ Comentarios:
 </table>
 
 <ul class="morado_pub">
-<li>
+<style>
+#tester {
+  margin-left: 698px;
+  width: 134px;
+  height: 42px;
+  text-align: center;
+}
+
+#tester > input[type="submit"]:hover{
+    color:#762EA4;
+
+}
+</style>
+<li id="tester">
 <input type="submit" value="Enviar" />
 </li>
 </ul>
