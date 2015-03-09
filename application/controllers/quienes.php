@@ -78,6 +78,7 @@ $data['estados'] = $this->defaultdata_model->getEstados();
 $data['paquetes'] = $this->defaultdata_model->getPaquetes();
 $data['razas'] = $this->defaultdata_model->getRazas();
 $data['zona'] = 9;
+$data['seccion'] = 12;
 $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
 $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
 $data['paises'] = $this->defaultdata_model->getPaises();
@@ -194,25 +195,24 @@ QUP Contacto
 <tr>
 <td colspan="7" >
 <p>&nbsp;  </p>
-<font style="margin-top:100px; font-size:19px; font-weight:bold; color:#72A937;" >Hola!! </font>
-</br>
-</br>
+<font style="margin-top:100px; font-size:19px; font-weight:bold; color:#72A937;" >Hola! </font>
+<br/>
+<br/>
 
 <font> El usuario '.$nombre.' '.$apellido.' dejo el siguiente mensaje:</font>
-</br>
-</br>
+<br/><br/>
 <font>Correo: '.$correo.'</font>
-<br/>
+<br/><br/>
 <font>Teléfono: '.$telefono.'</font>
-<br/>
+<br/><br/>
 <font>Empresa: '.$empresa.'</font>
-<br/>
+<br/><br/>
 <font>Web: '.$web.'</font>
-<br/>
+<br/><br/>
 <font>Se enteró por: '.$fuente.'</font>
-<br/>
+<br/><br/>
 <font>Comentarios: '.$comentarios.'</font>
-<br/>
+<br/><br/>
 <p> </p>
 </td>
 </tr>
@@ -232,7 +232,7 @@ QUP Contacto
 </html>';
    
     
-    if($this->email_model->send_email('', 'marthahdez2@gmail.com', 'Se ha recibido un correo desde Publicidad QUP',$mensaje)){
+    if($this->email_model->send_email('', 'publicidad@quierounperro.com', 'Se ha recibido un correo desde Publicidad QUP',$mensaje)){
         $data['response'] = true;
     } else {
         $data['response'] = false;
@@ -271,18 +271,15 @@ QUP Contacto
 <td colspan="7" >
 <p>&nbsp;  </p>
 <font style="margin-top:100px; font-size:19px; font-weight:bold; color:#72A937;" >Hola!! </font>
-</br>
-</br>
-
+<br/><br/>
 <font> El usuario '.$nombre.' '.$apellido.' dejo el siguiente mensaje:</font>
-</br>
-</br>
+<br/><br/>
 <font>Correo: '.$correo.'</font>
-<br/>
+<br/><br/>
 <font>Asunto: '.$asunto.'</font>
-<br/>
+<br/><br/>
 <font>Comentarios: '.$comentarios.'</font>
-<br/>
+<br/><br/>
 <p> </p>
 </td>
 </tr>
@@ -302,7 +299,7 @@ QUP Contacto
 </html>';
    
     
-    if($this->email_model->send_email('', 'marthahdez2@gmail.com', 'Se ha recibido un correo desde Soporte QUP',$mensaje)){
+    if($this->email_model->send_email('', 'soporte@quierounperro.com', 'Se ha recibido un correo desde Soporte QUP',$mensaje)){
         $data['response'] = true;
     } else {
         $data['response'] = false;

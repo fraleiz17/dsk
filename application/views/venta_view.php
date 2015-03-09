@@ -49,8 +49,8 @@ function buscar_imagen(id){
 </br>
 <form id="contacto_form">
     <input type="text" class="formu_contacto" id="nombre_contacto"
-    value="<?php echo $this->session->userdata('nombre')?>" size="44"/>
-    <input type="text" class="formu_contacto" id="mail_contacto"
+    value="<?php echo $this->session->userdata('nombre')?>" size="44" name="nombre_contacto"/>
+    <input type="text" class="formu_contacto" id="mail_contacto" name="mail_contacto"
     value="<?php echo $this->session->userdata('correo')?>" size="44"/>
     <input type="text" class="formu_contacto" id="asunto_contacto" name="asunto_contacto"
     onfocus="clear_textbox('asunto_contacto', 'Asunto')" placeholder="Asunto" size="44"/>
@@ -783,7 +783,7 @@ function contactar_pub(id) {
         $('.info', '#contacto_form').html('');
         buscar_anunciante_dos(pub);
         muestra('contenedor_contactar');
-        console.log(pub);
+        console.log(pub+'meh');
         
         $('#contenedor_contactar #contacto_form').submit(function(e){
             e.preventDefault();

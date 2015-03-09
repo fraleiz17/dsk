@@ -450,7 +450,8 @@ $data['paises'] = $this->defaultdata_model->getPaises();
  function contactar() {
         //var_dump($_POST);
         //contacto@quierounperro.com
-        $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null, 4, 2);
+        $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null, $this->input->post('pub'),$this->input->post('seccion'));
+        //var_dump($directorio);
         //var_dump($directorio);
 $msj = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -479,12 +480,12 @@ $msj = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://w
 <font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
 <font> El usuario ' . $this->session->userdata('nombre') . ' ' . $this->session->userdata('apellido') . ' esta interesado en el siguiente anuncio:</font>
 <font style="margin-top:100px; font-size:19px; font-weight:bold; color:#72A937;" >' . ($directorio['data'][0]->titulo).'</font>
-                
+        <br/><br/>        
         <font color="#000066"><strong> Correo Contacto:</strong> ' . $this->input->post('mail_contacto') . '</font>
         <br/><br/> 
         <font color="#000066"><strong> Asunto:</strong> ' . $this->input->post('asunto_contacto') . '</font>
         <br/><br/>
-        <font color="#000066"><strong>Mensaje: </strong><br/>' . $this->input->post('comentarios_contacto') . '</font>
+        <font color="#000066"><strong>Mensaje: </strong> ' . $this->input->post('comentarios_contacto') . '</font>
         <br/><br/>
         <p> </p>
 <br/><br/>
