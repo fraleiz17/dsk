@@ -69,9 +69,9 @@
     value="<?php echo $this->session->userdata('nombre')?>" size="44"/>
     <input type="text" class="formu_contacto" id="mail_contacto"
     value="<?php echo $this->session->userdata('correo')?>" size="44"/>
-    <input type="text" class="formu_contacto" id="asunto_contacto" name="asunto_contacto" 
+    <input type="text" class="formu_contacto" id="asunto_contacto"
     onfocus="clear_textbox('asunto_contacto', 'Asunto')" placeholder="Asunto" size="44"/>
-    <textarea cols="50" style = "width:334px;" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto" name="comentarios_contacto"
+    <textarea cols="50" style = "width:334px;" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto" name="comentarios_contacto" 
     class="formu_contacto" rows="5">Comentarios</textarea>
 </br>
 </br>
@@ -81,7 +81,6 @@
         <input type="submit" value="Enviar"/>
     </li>
 </ul>
-<span class="info"></span>
 </form>
 
 </div>
@@ -94,7 +93,7 @@
     <div class="contenedor_cerrar_contactar">
         <img src="<?php echo base_url()?>images/cerrar_anuncio_gris.png" onclick="oculta('contenedor_denunciar');"/>
     </div>
-    <div class="contactar_al_aunuciante">
+    <div class="contactar_al_aunuciante" style="height:346px;">
     <font class="titulo_anuncio_publicado"> DENUNCIA DE CONTENIDO </font>
     </br>
     </br>    
@@ -112,8 +111,8 @@
     <!-- <textarea cols="50" onfocus="clear_textbox('comentarios_denuncia', 'Comentarios')" name="comentarios_denuncia" id="comentarios_denuncia"
     class="formu_contacto" rows="5">Comentarios</textarea> <?=base_url()?>content/terminos_y_condiciones.pdf -->
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia3" checked="checked" value="Informaci&oacute;n de anuncio falsa"><label>Informaci&oacute;n de anuncio falsa</label></br>
-    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia1" value="Fotos Inapropiadas"><label>Contenido Violento</label></br>
-    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia2" value="Contenido Violento"><label>Fotos Inapropiadas</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia1" value="Contenido Violento"><label>Contenido Violento</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia2" value="Fotos Inapropiadas"><label>Fotos Inapropiadas</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia4" value="Fraude"><label>Fraude</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia5" value="Datos de contacto falsos"><label>Datos de contacto falsos</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia6" value="Otro"><label>Otro</label></br>
@@ -418,25 +417,38 @@ function buscar_anunciante(id){
 }
 
 
-$('#contenedor_contactar #contacto_form').submit(function(e){
-            $('.boton_naranja_tres').html('');
-            $('.info').html('Enviando...');
+function contactar_pub(id) {
+
+    $('.btn_contactar').on('click', function (){
+        var pub = $(this).data("pub");
+        $('.info', '#contacto_form').html('');
+        buscar_anunciante_dos(pub);
+        muestra('contenedor_contactar');
+        $("#contacto_form")[0].reset();
+        //console.log(pub+'meh');
+        
+        $('#contenedor_contactar #contacto_form').submit(function(e){
             e.preventDefault();
             var form = $(this);
+            var seccion = '<?=$seccion?>';
+            $('.info').html('Enviando...');
             $.ajax({
-                url: '<?php echo base_url('perdidos/contactar');?>',
-                type: 'post',
+                url: '<?php echo base_url('venta/contactar')?>',
+                data: form.serialize()+'&pub='+pub+'&seccion='+seccion,
                 dataType: 'html',
-                data: form.serialize(),
-                beforeSend: function () {
-                    $(".info").empty().html('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
+                type: 'post',
+                before: function () {
+                    $('.info',form).html('loading');
                 },
                 success: function (data) {
-                    $(".info").empty().append(data);
-
+                    $('.info',form).html(data);
+                    //$('.boton_naranja_tres').show();
                 }
             });
         });
+    });
+}
+
 function buscar_anunciante_dos(id){
 
 	    $(".datos_anunciante_dos").empty();
@@ -657,6 +669,7 @@ function buscar_detalles(id) {
 
             add_favorite();
             denunciar_pub();
+            contactar_pub();
         }
     });
 }

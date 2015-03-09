@@ -5,6 +5,13 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
   'links'                                                      => array('venta'), 'scripts' => array('funciones_venta')))
   ?>
     <script>
+
+jQuery(document).ready(
+ jQuery("form").validationEngine({
+        promptPosition:"topRight",
+        ajaxFormValidation: false,
+    });
+ });
 function buscar_imagen(id){
              id_anuncio="id_anuncio="+id;
 
@@ -48,14 +55,14 @@ function buscar_imagen(id){
 </br>
 </br>
 <form id="contacto_form">
-    <input type="text" class="formu_contacto" id="nombre_contacto"
-    value="<?php echo $this->session->userdata('nombre')?>" size="44" name="nombre_contacto"/>
-    <input type="text" class="formu_contacto" id="mail_contacto" name="mail_contacto"
+    <input type="text" class="formu_contacto validate[required]" id="nombre_contacto"
+    value="<?php echo $this->session->userdata('nombre')?>" size="44" name="nombre_contacto" />
+    <input type="text" class="formu_contacto validate[required]" id="mail_contacto" name="mail_contacto"
     value="<?php echo $this->session->userdata('correo')?>" size="44"/>
-    <input type="text" class="formu_contacto" id="asunto_contacto" name="asunto_contacto"
+    <input type="text" class="formu_contacto validate[required]" id="asunto_contacto" name="asunto_contacto"
     onfocus="clear_textbox('asunto_contacto', 'Asunto')" placeholder="Asunto" size="44"/>
     <textarea style = "width:334px;" cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto"
-    class="formu_contacto" rows="5" name="comentarios_contacto">Comentarios</textarea>
+    class="formu_contacto validate[required]" rows="5" name="comentarios_contacto">Comentarios</textarea>
 </br>
 </br>
 <span class="info"></span>
@@ -84,17 +91,17 @@ function buscar_imagen(id){
 </br>
 </br>
 <form id="denuncia_form">
-    <input type="hidden" class="formu_contacto" name="nombre_denuncia" id="nombre_denuncia"
+    <input type="hidden" class="formu_contacto validate[required]" name="nombre_denuncia" id="nombre_denuncia"
     value="<?php echo $this->session->userdata('nombre')?>" size="44"/>
-    <input type="hidden" class="formu_contacto" name="mail_denuncia" id="mail_denuncia"
+    <input type="hidden" class="formu_contacto validate[required]" name="mail_denuncia" id="mail_denuncia"
     value="<?php echo $this->session->userdata('correo')?>" size="44"/>
-    <input type="hidden" class="formu_contacto" name="asunto_denuncia" id="asunto_denuncia"
+    <input type="hidden" class="formu_contacto validate[required]" name="asunto_denuncia" id="asunto_denuncia"
     onfocus="clear_textbox('asunto_denuncia', 'Asunto')" value="Asunto" size="44"/>
     <!-- <textarea cols="50" onfocus="clear_textbox('comentarios_denuncia', 'Comentarios')" name="comentarios_denuncia" id="comentarios_denuncia"
     class="formu_contacto" rows="5">Comentarios</textarea> <?=base_url()?>content/terminos_y_condiciones.pdf -->
-    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia3" checked="checked" value="Informaci&oacute;n de anuncio falsa"><label>Informaci&oacute;n de anuncio falsa</label></br>
-    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia1" value="Fotos Inapropiadas"><label>Contenido Violento</label></br>
-    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia2" value="Contenido Violento"><label>Fotos Inapropiadas</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia3" checked="checked" value="Información de anuncio falsa"><label>Informaci&oacute;n de anuncio falsa</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia1" value="Contenido Violento"><label>Contenido Violento</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia2" value="Fotos Inapropiadas"><label>Fotos Inapropiadas</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia4" value="Fraude"><label>Fraude</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia5" value="Datos de contacto falsos"><label>Datos de contacto falsos</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia6" value="Otro"><label>Otro</label></br>
@@ -724,13 +731,14 @@ function denunciar_pub(id) {
     $('.btn_den').on('click', function (){
         var pub = $(this).data("pub");
         console.log(pub);
-        $('.boton_naranja_tres').show();
+        $("#denuncia_form")[0].reset();
+        //$('.boton_naranja_tres').show();
         $('.info').html('');
         buscar_anunciante_dos(pub);
         muestra('contenedor_denunciar');
         
         $('#contenedor_denunciar #denuncia_form').submit(function(e){
-            $('.boton_naranja_tres').hide('');
+            //$('.boton_naranja_tres').hide('');
             $('.info',form).html('Enviando...');
             e.preventDefault();
             var form = $(this);
@@ -744,15 +752,15 @@ function denunciar_pub(id) {
                 },
                 success: function (data) {
                     $('.info',form).html(data);
-                    $('.boton_naranja_tres').show();
+                    //$('.boton_naranja_tres').show();
                 }
             });
         });
     });
 }
 
-$('#contenedor_contactar #contacto_form').submit(function(e){
-            $('.boton_naranja_tres').html('');
+/*$('#contenedor_contactar #contacto_form').submit(function(e){
+            //$('.boton_naranja_tres').html('');
             $('.info').html('Enviando...');
             e.preventDefault();
             var form = $(this);
@@ -769,11 +777,11 @@ $('#contenedor_contactar #contacto_form').submit(function(e){
                 },
                 success: function (data) {
                     $(".info").empty().append(data);
-                    $('.boton_naranja_tres').show();
+                    //$('.boton_naranja_tres').show();
 
                 }
             });
-        });
+        });*/
 
 
 function contactar_pub(id) {
@@ -783,12 +791,14 @@ function contactar_pub(id) {
         $('.info', '#contacto_form').html('');
         buscar_anunciante_dos(pub);
         muestra('contenedor_contactar');
-        console.log(pub+'meh');
+        $("#contacto_form")[0].reset();
+        //console.log(pub+'meh');
         
         $('#contenedor_contactar #contacto_form').submit(function(e){
             e.preventDefault();
             var form = $(this);
             var seccion = '<?=$seccion?>';
+            $('.info').html('Enviando...');
             $.ajax({
                 url: '<?php echo base_url('venta/contactar')?>',
                 data: form.serialize()+'&pub='+pub+'&seccion='+seccion,
@@ -799,7 +809,7 @@ function contactar_pub(id) {
                 },
                 success: function (data) {
                     $('.info',form).html(data);
-                    $('.boton_naranja_tres').show();
+                    //$('.boton_naranja_tres').show();
                 }
             });
         });

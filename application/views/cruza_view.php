@@ -98,8 +98,8 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
     <!-- <textarea cols="50" onfocus="clear_textbox('comentarios_denuncia', 'Comentarios')" name="comentarios_denuncia" id="comentarios_denuncia"
     class="formu_contacto" rows="5">Comentarios</textarea> <?=base_url()?>content/terminos_y_condiciones.pdf -->
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia3" checked="checked" value="Informaci&oacute;n de anuncio falsa"><label>Informaci&oacute;n de anuncio falsa</label></br>
-    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia1" value="Fotos Inapropiadas"><label>Contenido Violento</label></br>
-    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia2" value="Contenido Violento"><label>Fotos Inapropiadas</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia1" value="Contenido Violento"><label>Contenido Violento</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia2" value="Fotos Inapropiadas"><label>Fotos Inapropiadas</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia4" value="Fraude"><label>Fraude</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia5" value="Datos de contacto falsos"><label>Datos de contacto falsos</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia6" value="Otro"><label>Otro</label></br>

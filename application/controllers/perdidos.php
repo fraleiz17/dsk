@@ -46,8 +46,8 @@ class Perdidos extends CI_Controller
         $data['paquetes']    = $this->defaultdata_model->getPaquetes();
         $data['razas']       = $this->defaultdata_model->getRazas();
         $data['giros']       = $this->defaultdata_model->getGiros();
-        $data['publicaciones']       = $this->venta_model->getAnuncios(self::$seccion);
-		$data['seccion']= self::$seccion;
+        $data['publicaciones']       = $this->venta_model->getAnuncios(7);
+		$data['seccion']= 7;
 $config = array();
 $config['center'] = '19.433463102009004,-99.13711169501954';
 $config['zoom'] = 'auto';
@@ -105,12 +105,12 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         $palabra_clave = $this->input->post('palabra_clave') === '' ? NULL : $this->input->post('palabra_clave');
         $id_anuncio = $this->input->post('id_anuncio') === '' ? NULL : $this->input->post('id_anuncio');
 
-        echo json_encode($this->venta_model->getPublicaciones($raza, $genero, $estado, $precio, $palabra_clave, $id_anuncio, self::$seccion));
+        echo json_encode($this->venta_model->getPublicaciones($raza, $genero, $estado, $precio, $palabra_clave, $id_anuncio, 7));
     }
 
      function meh() {
 
-        $v =$this->venta_model->getPublicaciones(null, null, null, null, null, 2, self::$seccion);
+        $v =$this->venta_model->getPublicaciones(null, null, null, null, null, 2, 7);
         $data = $v['data'];
         $c = $data[0]->paqueteID;
         var_dump($v,$data,$c);
@@ -119,7 +119,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
     function denunciar() {
 
         //contacto@quierounperro.com
-        $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null, $this->input->post('pub'), self::$seccion);
+        $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null, $this->input->post('pub'), 7);
         $data = $directorio['data'];
             
         $msj = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -187,7 +187,7 @@ Si tienes cualquier duda al respecto, por favor escr&iacute;benos a contacto@qui
     function contactar() {
 
         //contacto@quierounperro.com
-        $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null, 2, self::$seccion);
+        $directorio = $this->venta_model->getPublicaciones(null, null, null, null, null, 2, 7);
 
 $msj = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
