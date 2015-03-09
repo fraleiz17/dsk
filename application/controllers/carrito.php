@@ -75,7 +75,6 @@ class Carrito extends CI_Controller
         } else {
             $estadoID = $direccion_envio->estadoID;   
         }
-        var_dump($direccion_envio);
         $costo = $this->usuario_model->getCostoEnvio($estadoID);
         $data['costo'] = $costo;
 
@@ -496,7 +495,6 @@ class Carrito extends CI_Controller
     }
 
     function anuncio(){
-        var_dump($_POST);
         $paqueteID = $this->input->post('paquete');
         $detallePaquete = $this->defaultdata_model->getPaquete($paqueteID);
         
