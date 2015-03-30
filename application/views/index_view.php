@@ -463,10 +463,11 @@
 </div>
 <!-- End datos curioso -->
 </div>
-
-<div class="separacion_final"></div>
-<?php $this->load->view('general/footer_view'); ?>
 </div>
+<div class="separacion_final"></div>
+
+<?php $this->load->view('general/footer_view'); ?>
+
 <script src="<?php echo base_url() ?>js/bootstrap.min.js"></script>
 <script>
     $('#artCarousel').carousel({
