@@ -21,12 +21,10 @@
 
 <?php $this->load->view('general/menu_view'); ?>
 
-<center>
+<div id="masterconteinerfull" style = "width:1000px; margin: 0 auto; display:block; overflow:hidden;">
 </br>
 <div id="contenedor_central">
-
 <div id="espacio_izquierda" class="seccion_izquierda">
-    
     <?php $this->load->view('general/contIzq.php'); ?>
 </div>
 <div id="banner_central">
@@ -374,137 +372,101 @@
 </a>
 </div>
 <!-- Contenedor de paquetes  -->
+</div><!-- Contenedor central -->
 
-
+<!-- Contenedor De secciones de contenido -->
+<div id = "prueba" style= "display:block;overflow:hidden;width:990px !important;min-height:250px;">
 <!-- Inician secciones de contenido -->
 <!-- perros perdidos -->
-<a href="<?php echo base_url() ?>perdidos" style="text-decoration:none; color:#000;"
-   onmouseover="Mostrar('ver_perdidos');Ocultar('ver_raza');Ocultar('ver_mes');Ocultar('ver_curiosos');">
     <div id="perros_perdidos" class="seccion_inferior_izquierda">
-
-        <div class="contenido_secciones">
-            <p class="titulo_segunda_seccion"> PERROS PERDIDOS </p>
-
-            <p><strong> Nombre:</strong> <?=$contenidosP->titulo?>
-                <strong>Raza:</strong> <?=$contenidosP->raza?>
-                <strong>Caracteristicas:</strong> <?=substr($contenidosP->descripcion,0,20)?>...</p>
-
-        </div>
-        <div class="sub_imagenes_dos">
-
-            <img align="center" style="width:50%; max-width:150px;" class="imagen_relleno" src="<?php echo base_url() ?><?=$contenidosP->foto?>"/>
-
-          
-
-        </div> 
-         <div id="ver_perdidos" class="ver_mas" style=" display:none;"> Ver más...</div>
+        <a href="<?php echo base_url() ?>perdidos" style="text-decoration:none; color:#000;" onmouseover="Mostrar('ver_perdidos');Ocultar('ver_raza');Ocultar('ver_mes');Ocultar('ver_curiosos');">
+            <div class="contenido_secciones">
+                <p class="titulo_segunda_seccion"> PERROS PERDIDOS </p>
+                <p><strong> Nombre:</strong> <?=$contenidosP->titulo?>
+                    <strong>Raza:</strong> <?=$contenidosP->raza?>
+                    <strong>Caracteristicas:</strong> <?=substr($contenidosP->descripcion,0,20)?>...</p>
+            </div>
+            <div class="sub_imagenes_dos">
+                <img align="center" style="width:50%; max-width:150px;" class="imagen_relleno" src="<?php echo base_url() ?><?=$contenidosP->foto?>"/>
+            </div> 
+            <div id="ver_perdidos" class="ver_mas" style=" display:none;"> Ver más...</div>
+         </a>
     </div>
-</div>
-</a>
 <!-- End perros perdidos -->
 <!-- Raza del mes -->
-<a href="<?php echo base_url() ?>raza" style="text-decoration:none; color:#000;"
-   onmouseover="Mostrar('ver_raza'); Ocultar('ver_perdidos');Ocultar('ver_mes'); Ocultar('ver_curiosos')">
-    <div id="la_raza_mes" class="seccion_inferior_izquierda">
+<div id="la_raza_mes" class="seccion_inferior_izquierda">
+    <a href="<?php echo base_url() ?>raza" style="text-decoration:none; color:#000;" onmouseover="Mostrar('ver_raza'); Ocultar('ver_perdidos');Ocultar('ver_mes'); Ocultar('ver_curiosos')">
         <div class="contenido_secciones">
             <p class="titulo_segunda_seccion"> LA RAZA DEL MES </p>
-
             <p>
                 <?=substr($contenidos[0]->origenes,0,40)?>
             </p>
-
         </div>
         <div class="sub_imagenes_dos">
-			<?php 
-if($fotocontenido != null){
-foreach($fotocontenido as $foto){
-	if($foto->contenidoID == $contenidos[0]->contenidoID){?>
- <img align="center" class="imagen_relleno" src="<?php echo base_url() ?>images/raza_mes/<?=$foto->foto;?>"
-                 width="87" height="103"/>
-<?php }
-}
-}?>
-            
+            <?php 
+            if($fotocontenido != null){
+                foreach($fotocontenido as $foto){
+                    if($foto->contenidoID == $contenidos[0]->contenidoID){?>
+                        <img align="center" class="imagen_relleno" src="<?php echo base_url() ?>images/raza_mes/<?=$foto->foto;?>" width="87" height="103"/>
+                    <?php } 
+                }
+            }?>
         </div>
         <div id="ver_raza" class="ver_mas" style=" display:none;"> Ver más...</div>
+    </a>
 
-    </div>
-</a>
 <!-- End raza del mes -->
-
 <!-- Eventos del mes -->
-<a href="<?php echo base_url() ?>evento" style="text-decoration:none; color:#000;"
-   onmouseover="Mostrar('ver_mes');Ocultar('ver_raza'); Ocultar('ver_perdidos');Ocultar('ver_curiosos');">
-    <div id="eventos_mes" class="seccion_inferior">
+</div>
+<div id="eventos_mes" class="seccion_inferior">
+    <a href="<?php echo base_url() ?>evento" style="text-decoration:none; color:#000;" onmouseover="Mostrar('ver_mes');Ocultar('ver_raza'); Ocultar('ver_perdidos');Ocultar('ver_curiosos');">
         <div class="contenido_secciones">
             <p class="titulo_segunda_seccion"> EVENTOS DEL MES </p>
-
             <p> <strong>Título:</strong> <?=$contenidosE[0]->nombre?><br />
                 <strong>Fecha del evento:</strong> <?=$contenidosE[0]->fecha?>
             </p>
-
         </div>
         <div class="sub_imagenes_dos">
-         <?php if($fotocontenido != null){
-	 	foreach($fotocontenido as $p){
-			if($p->contenidoID == $contenidosE[0]->contenidoID){?>
-            <img class="imagen_relleno" src="<?php echo base_url() ?>images/eventos/<?=$p->foto?>" width="144"
-                 height="110"/>
- <?php }
-	}
-}?>
-            
-            
+            <?php if($fotocontenido != null){
+                foreach($fotocontenido as $p){
+                    if($p->contenidoID == $contenidosE[0]->contenidoID){?>
+                        <img class="imagen_relleno" src="<?php echo base_url() ?>images/eventos/<?=$p->foto?>" width="144" height="110"/>
+                        <?php }
+                    }
+            }?>
         </div>
         <div id="ver_mes" class="ver_mas" style=" display:none;"> Ver más...</div>
+    </a>
+</div>
 
-    </div>
-</a>
 <!-- End eventos del mes -->
 <!-- Datos curiosos -->
-<a href="<?php echo base_url() ?>curiosos" style="text-decoration:none; color:#000;"
-   onmouseover="Mostrar('ver_curiosos');Ocultar('ver_raza'); Ocultar('ver_perdidos');Ocultar('ver_mes');">
-    <div id="datos_curiosos" class="seccion_inferior_derecha">
+<div id="datos_curiosos" class="seccion_inferior_derecha">
+    <a href="<?php echo base_url() ?>curiosos" style="text-decoration:none; color:#000;" onmouseover="Mostrar('ver_curiosos');Ocultar('ver_raza'); Ocultar('ver_perdidos');Ocultar('ver_mes');">
         <div class="contenido_secciones">
             <p class="titulo_segunda_seccion"> DATOS CURIOSOS </p>
-
             <p>
                 <?=substr($contenidosD[0]->texto,0,60)?>...
             </p>
-
         </div>
         <div class="sub_imagenes_dos">
-        	<?php if($fotocontenido != null){
-	 	foreach($fotocontenido as $p){
-			if($p->contenidoID == $contenidosD[0]->contenidoID){?>
-            <img class="imagen_relleno" src="<?php echo base_url() ?>images/datos_curiosos/<?=$p->foto?>" width="63"
-                 height="119"/>
- <?php }
-	}
-}?>
-
-           
-    </div>
-    
-     <div id="ver_curiosos" class="ver_mas" style=" display:none;"> Ver más...</div>
-
+            <?php if($fotocontenido != null){
+                foreach($fotocontenido as $p){
+                    if($p->contenidoID == $contenidosD[0]->contenidoID){?>
+                        <img class="imagen_relleno" src="<?php echo base_url() ?>images/datos_curiosos/<?=$p->foto?>" width="63" height="119"/>
+                    <?php }
+                }
+            }?>
         </div>
-
-</a>
+        <div id="ver_curiosos" class="ver_mas" style=" display:none;"> Ver más...</div>
+    </a>
+</div>
 <!-- End datos curioso -->
-
-</div><!-- Contenedor central -->
-
-
-<div class="separacion_final">
-
 </div>
 
-
-
+<div class="separacion_final"></div>
 <?php $this->load->view('general/footer_view'); ?>
-
-</center>
+</div>
 <script src="<?php echo base_url() ?>js/bootstrap.min.js"></script>
 <script>
     $('#artCarousel').carousel({
@@ -513,7 +475,5 @@ foreach($fotocontenido as $foto){
         cycle: true
     });
 </script>
-
-
 </body>
 </html>

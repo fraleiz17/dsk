@@ -48,10 +48,14 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'quierounperro.com';
+/*$db['default']['hostname'] = 'quierounperro.com';
 $db['default']['database'] = 'quieroun_vacia';
 $db['default']['username'] = 'quieroun_test';
-$db['default']['password'] = 'testo#01';
+$db['default']['password'] = 'testo#01';*/
+$db['default']['hostname'] = '107.180.1.199';
+$db['default']['database'] = 'quieroun_beta';
+$db['default']['username'] = 'qupdev';
+$db['default']['password'] = '#1Champance01';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
