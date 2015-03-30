@@ -76,6 +76,8 @@ body{
 	width:100%;
     height:40px;
 	background-color:#7DA615;
+	overflow: hidden;
+	display: block;
 	}
 .contenedor_menu_principal{
 	width:990px;
