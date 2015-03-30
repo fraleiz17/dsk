@@ -42,44 +42,7 @@ $(function () {
   // definir mediente $pos la altura en píxeles desde el borde superior de la ventana del navegador y el elemento
 
   var $pos = 100;
-
-  $win.scroll(function () {
-
-     if ($win.scrollTop() <= $pos ){
-
-      $("#mini_menu").css("display","none");
-	   $("#menu_oculto").css("display","none");
-	   $("#iconos_ocultos").css("display","none");
-	   $("#bajar_menu").css("display","block");
-	   $('.iconos_flotantes_dos').addClass("iconos_flotantes");
-	   document.getElementById('efecto').value='corre';
-	   $("#iconos_grandes").css("display","block");
-	  // document.getElementById('iconos_ocultos').className="iconos_flotantes";
-       //$('.menu').removeClass('fijar');
-	 }
-     else {
-      //$('.menu').addClass('fijar');
-      
-        $("#mini_menu").css("display","block");
-	    $("#iconos_ocultos").css("display","block");
-		$("#iconos_grandes").css("display","none");
-	  
-
-     }
-	 $menu=120;
-	 $menu2=200;
-	
-	 if ($win.scrollTop() >= $menu  && $win.scrollTop() <= $menu2 && document.getElementById('efecto').value=='corre' ){
-		 
-		 $("#contenedor_menu_principal").effect("transfer", { to: $("#bajar_menu")}, 1000);
-		
-	document.getElementById('efecto').value='detente';
-	
-		 }
-
-   });
-
-});
+ 
 function ver_resultado_iconos(id){
 
 	document.getElementById(id).className="iconos_flotantes_dos";
