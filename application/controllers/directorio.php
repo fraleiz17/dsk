@@ -564,8 +564,8 @@ $data['paises'] = $this->defaultdata_model->getPaises();
             echo 'rollback';
         } else {
             $this->db->trans_commit();
-            //TODO hay que cambiar a init_point
-            echo '<iframe src="' .$preference['response']['init_point']. '" name="MP-Checkout" width="840" height="450" frameborder="0"></iframe>';
+            //TODO hay que cambiar a sandbox_init_point
+            echo '<iframe src="' .$preference['response']['sandbox_init_point']. '" name="MP-Checkout" width="840" height="450" frameborder="0"></iframe>';
         }
          }
     }

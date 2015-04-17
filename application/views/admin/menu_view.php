@@ -202,9 +202,9 @@ Pantallas
 <li>
 <a href="<?php echo base_url()?>admin/principal/getPantalla/11/9" id="ASOCIACIONES P." name="11" class="seccion filtro"> <img src="<?php echo base_url()?>images/ciculo.png" /> Asociaciones Protectoras</a>
 </li>
-<li>
+<!-- <li>
 <a href="<?php echo base_url()?>admin/principal/getPantalla/3/9" id="CRUZA" name="3" class="seccion filtro"> <img src="<?php echo base_url()?>images/ciculo.png" /> Cruza</a>
-</li>
+</li> -->
 <li>
 <a href="<?php echo base_url()?>admin/principal/getDatosCuriosos/10/9" id="DATOS CURIOSOS" name="10" class="seccion filtro"> <img src="<?php echo base_url()?>images/ciculo.png" /> Datos curiosos</a>
 </li>

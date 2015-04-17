@@ -121,7 +121,7 @@ if ($keyUser === FALSE || ($keyUser !== FALSE && $tipoUsuario !== 0)):
                     <a href="<?php echo base_url() ?>venta"> Venta </a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url() ?>cruza"> Cruza </a>
+                    <a href="<?php echo base_url() ?>perdidos"> Perdidos </a>
                 </li>
                 <li>
                     <a href="<?php echo base_url() ?>adopcion"> Adopción </a>
@@ -165,9 +165,9 @@ if ($keyUser === FALSE || ($keyUser !== FALSE && $tipoUsuario !== 0)):
                         <li>
                             <a href="#"> <img src="/images/ciculo.png"/> Venta</a>
                         </li>
-                        <li>
+                        <!--<li>
                             <a href="#"> <img src="/images/ciculo.png"/> Cruza</a>
-                        </li>
+                        </li>-->
                         <li>
                             <a href="#"> <img src="/images/ciculo.png"/> Directorio</a>
                         </li>

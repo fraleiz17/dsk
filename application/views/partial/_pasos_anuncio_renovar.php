@@ -43,9 +43,9 @@
         <img src="<?php echo base_url() ?>images/pero_paso_uno.png" class="perro_paso_uno_mini"/>
 
         <div class="radios_secciones_mini">
-            <input type="radio" id="radio3" name="seccion" value="3" class="css-checkbox"disabled="disabled"/>
+            <!-- <input type="radio" id="radio3" name="seccion" value="3" class="css-checkbox"disabled="disabled"/>
             <label for="radio4" class="css-label radGroup2">Cruza</label>
-            <br/>
+            <br/> -->
             <input type="radio" id="radio2" name="seccion" value="2" class="css-checkbox" disabled="disabled"/>
             <label for="radio5" class="css-label radGroup2">Venta</label>
             <br/>

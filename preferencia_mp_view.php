@@ -21,7 +21,7 @@ $preference_data = array(
 <ul class="boton_verde">
  <li>
   <script type="text/javascript" src="http://mp-tools.mlstatic.com/buttons/render.js"></script>
-<a href="<?php echo $preference['response']['init_point']; ?>" name="MP-Checkout" class="lightblue-ar-s-ov" mp-mode="modal" onreturn="execute_my_onreturn" style="padding: 0px;">Pagar</a>
+<a href="<?php echo $preference['response']['sandbox_init_point']; ?>" name="MP-Checkout" class="lightblue-ar-s-ov" mp-mode="modal" onreturn="execute_my_onreturn" style="padding: 0px;">Pagar</a>
 
  <script type="text/javascript">
   function execute_my_onreturn(json) {

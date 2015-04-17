@@ -432,7 +432,7 @@ EDITAR DATO
 <td><?php if($fotoscontenido != null){
 	foreach($fotoscontenido as $foto){
 		if($foto->contenidoID == $dce->contenidoID){?>
- <p><img src="<?=base_url()?>images/datos_curiosos/<?=$foto->foto?>" width="40"/> <input type="hidden" id="imagen" name="imagen[]" value="<?=$foto->foto?>"/><a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a></p>
+ <p><img src="<?=base_url()?>images/datos_curiosos/<?=$foto->foto?>" width="40 "/> <input type="hidden" id="imagen" name="imagen[]" value="<?=$foto->foto?>"/><a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a></p>
 <?php }
 	}
 }?></td>
@@ -620,7 +620,7 @@ Imagen
 <?php if($fotoscontenido != null){
 	foreach($fotoscontenido as $f){
 		if($f->contenidoID == $dc->contenidoID){?>
- <img src="<?=base_url()?>images/datos_curiosos/<?=$f->foto?>" /> 
+ <img src="<?=base_url()?>images/datos_curiosos/<?=$f->foto?>" style="width:80px;"/> 
  <?php }
  }
  }?>

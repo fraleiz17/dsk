@@ -427,8 +427,8 @@ $data['paises'] = $this->defaultdata_model->getPaises();
             echo 'Vuelva a intentarlo.';
             } else {
             $this->db->trans_commit();
-            //TODO hay que cambiar a init_point
-           echo '<iframe src="' . $preference['response']['init_point'] . '" name="MP-Checkout" width="740" height="600" frameborder="0"></iframe>';
+            //TODO hay que cambiar a sandbox_init_point
+           echo '<iframe src="' . $preference['response']['sandbox_init_point'] . '" name="MP-Checkout" width="740" height="600" frameborder="0"></iframe>';
         }
 
          //echo json_encode($publicacionID);
@@ -444,7 +444,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         $palabra_clave = $this->input->post('palabra_clave') === '' ? NULL : $this->input->post('palabra_clave');
         $id_anuncio = $this->input->post('id_anuncio') === '' ? NULL : $this->input->post('id_anuncio');
 
-        echo json_encode($this->venta_model->getPublicaciones($raza, $genero, $estado, $precio, $palabra_clave, $id_anuncio, self::$seccion));
+        echo json_encode($this->venta_model->getPublicaciones($raza, $genero, $estado, $precio, $palabra_clave, $id_anuncio, null));
     }
 
  function contactar() {
@@ -856,8 +856,8 @@ function editAanuncio() {
             echo 'rollback';
             } else {
             $this->db->trans_commit();
-            //TODO hay que cambiar a init_point
-           echo '<iframe src="' . $preference['response']['init_point'] . '" name="MP-Checkout" width="740" height="600" frameborder="0"></iframe>';
+            //TODO hay que cambiar a sandbox_init_point
+           echo '<iframe src="' . $preference['response']['sandbox_init_point'] . '" name="MP-Checkout" width="740" height="600" frameborder="0"></iframe>';
         }
 
          //echo json_encode($publicacionID);

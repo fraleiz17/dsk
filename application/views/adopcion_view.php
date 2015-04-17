@@ -4,9 +4,15 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
   'links'                                                      => array('venta'), 'scripts' => array('funciones_venta')))
   ?><link type="text/css" rel="stylesheet" href="<?=base_url()?>css/adopcion.css" media="screen"></link>
 
-  
-  <script>
-  function buscar_imagen(id){
+    <script>
+
+jQuery(document).ready(
+ jQuery("form").validationEngine({
+        promptPosition:"topRight",
+        ajaxFormValidation: false,
+    });
+ });
+function buscar_imagen(id){
              id_anuncio="id_anuncio="+id;
 
             $.ajax({
@@ -16,28 +22,26 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
                 type: 'post',
                  success: function(result)
                 { 
-				var data = result.data;
-				 if (result.count < 1) {
+                var data = result.data;
+                 if (result.count < 1) {
                     
                     }
                     for (var i = 0; i < result.count; i++)
                     {
-						foto=(data[i].foto);
-						
-						}
-					
-				$("#contener_foto"+id).append('<img src="' + foto + '" width="auto" height="100%"/>');
-				
-				}
+                        foto=(data[i].foto);
+                        
+                        }
+                    
+                $("#contener_foto"+id).append('<img src="' + foto + '"width="auto" height="100%"/>');
+                
+                }
                  })
 }
-  </script>
 
-</head>
+   </script>
+   
 
-<body>
-
-<?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
+<?php $this->load->view('general/menu_view')?>
 <div class="contenedor_contactar" id="contenedor_contactar" style=" display:none;">
     <div class="contenedor_cerrar_contactar">
         <img src="<?php echo base_url()?>images/cerrar_anuncio_gris.png" onclick="oculta('contenedor_contactar');"/>
@@ -73,7 +77,7 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
 
 
 </div>
-<?php endif; ?>
+
 <div class="contenedor_contactar" id="contenedor_denunciar" style=" display:none;">
     <div class="contenedor_cerrar_contactar">
         <img src="<?php echo base_url()?>images/cerrar_anuncio_gris.png" onclick="oculta('contenedor_denunciar');"/>
@@ -118,9 +122,6 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
 
 
 </div>
-
-
-
 
 <div class="contenedor_anuncio_detalle" id="contenedor_anuncio_detalle" style=" display:none;">
 <div class="contenedor_cerrar_anuncio">
@@ -229,7 +230,7 @@ que el nombre del criador esté en el certificado.
 </div>
 
 
-<?php $this->load->view('general/menu_view', array('seccion' => $seccion)) ?>
+
 
 <div class="titulo_seccion">
 ADOPCIÓN
@@ -242,13 +243,13 @@ ADOPCIÓN
 <select   class="styled" id="raza" name="raza">
 <option value="" > Selecciona un raza </option>
 <?php if($razas != null):
-	foreach($razas as $raza):
-	echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
-	
-	?>
+    foreach($razas as $raza):
+    echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
+    
+    ?>
 <option style="background-color: #BCBEC0;" value="<?=$raza->razaID?>"><?=$raza->raza?></option>
 <?php endforeach;
-		endif;?>
+        endif;?>
 </select>
 </div>
 
@@ -265,10 +266,10 @@ ADOPCIÓN
 <select    class="styled" id="estado" name="estado">
 <option value=""> Selecciona un Estado </option>
 <?php if($estados != null):
-	foreach($estados as $estado):?>
+    foreach($estados as $estado):?>
 <option style="background-color: #BCBEC0;" value="<?=$estado->estadoID?>"><?=$estado->nombreEstado?></option>
 <?php endforeach;
-		endif;?>
+        endif;?>
 
 </select>
 </div>
@@ -295,9 +296,9 @@ ADOPCIÓN
      
 <?php
          
-		foreach($publicaciones as $publicacion):
-		echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
-		?>
+        foreach($publicaciones as $publicacion):
+        echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
+        ?>
    <!-- INICIO contenedor anuncio  -->
 <div class="contenedor_anuncio">
 <div class="titulo_anuncio_adopcion">
@@ -347,22 +348,22 @@ ADOPCIÓN
       <div class="holder">  </div>
       </div>
       </div>
- 
-
 
 
 <div class="seccion_derecha_paquetes">
-<ul class="aqui_crear_anuncio">
-<li onclick="muestra('contenedor_publicar_anuncio');">
+    <ul class="aqui_crear_anuncio">
+        <li onclick="muestra('contenedor_publicar_anuncio');">
 
-</li>
-</ul>
+        </li>
+    </ul>
 </div>
+
+
 
 <script>
 function buscar_anunciante(id){
-	muestra('contenedor_contactar');
-	         $(".datos_anunciante").empty();
+    muestra('contenedor_contactar');
+             $(".datos_anunciante").empty();
              id_anuncio="id_anuncio="+id;
 
             $.ajax({
@@ -372,7 +373,7 @@ function buscar_anunciante(id){
                 type: 'post',
                  success: function(result)
                 { 
-				
+                
                
 
                     var data = result.data;
@@ -382,14 +383,14 @@ function buscar_anunciante(id){
                     }
                     for (var i = 0; i < result.count; i++)
                     {
-						if (data[i].muestraTelefono==1 ){
-							var telefono=data[i].telefono;
-							} else{
-								
-								var telefono="---";
-								}
-						
-						 $(".datos_anunciante").append('</br><strong> Nombre de usuario:</strong> <font >'+data[i].nombre+' '+data[i].apellido+'</font></br><strong> Estado: </strong> <font >'+data[i].nombreEstado+'</font></br><strong> Ciudad: </strong> <font>'+data[i].ciudad+'</font></br><strong> Teléfono: </strong><font>'+telefono+'</font></br></br>');
+                        if (data[i].muestraTelefono==1 ){
+                            var telefono=data[i].telefono;
+                            } else{
+                                
+                                var telefono="---";
+                                }
+                        
+                         $(".datos_anunciante").append('</br><strong> Nombre de usuario:</strong> <font >'+data[i].nombre+' '+data[i].apellido+'</font></br><strong> Estado: </strong> <font >'+data[i].nombreEstado+'</font></br><strong> Ciudad: </strong> <font>'+data[i].ciudad+'</font></br><strong> Teléfono: </strong><font>'+telefono+'</font></br></br>');
                         
                         
             }
@@ -404,7 +405,7 @@ function buscar_anunciante(id){
 
 function buscar_anunciante_dos(id){
 
-	    $(".datos_anunciante_dos").empty();
+        $(".datos_anunciante_dos").empty();
              id_anuncio="id_anuncio="+id;
 
             $.ajax({
@@ -414,7 +415,7 @@ function buscar_anunciante_dos(id){
                 type: 'post',
                  success: function(result)
                 { 
-				
+                
                
 
                     var data = result.data;
@@ -424,14 +425,14 @@ function buscar_anunciante_dos(id){
                     }
                     for (var i = 0; i < result.count; i++)
                     {
-						if (data[i].muestraTelefono==1 ){
-							var telefono=data[i].telefono;
-							} else{
-								
-								var telefono="---";
-								}
-						
-						 $(".datos_anunciante_dos").append('</br><strong> Nombre de usuario:</strong> <font >'+data[i].nombre+' '+data[i].apellido+'</font></br><strong> Estado: </strong> <font >'+data[i].nombreEstado+'</font></br><strong> Ciudad: </strong> <font>'+data[i].ciudad+'</font></br><strong> Teléfono: </strong><font>'+telefono+'</font></br></br>');
+                        if (data[i].muestraTelefono==1 ){
+                            var telefono=data[i].telefono;
+                            } else{
+                                
+                                var telefono="---";
+                                }
+                        
+                         $(".datos_anunciante_dos").append('</br><strong> Nombre de usuario:</strong> <font >'+data[i].nombre+' '+data[i].apellido+'</font></br><strong> Estado: </strong> <font >'+data[i].nombreEstado+'</font></br><strong> Ciudad: </strong> <font>'+data[i].ciudad+'</font></br><strong> Teléfono: </strong><font>'+telefono+'</font></br></br>');
                         
                         
             }
@@ -572,8 +573,9 @@ function show_details(data) {
 function buscar_detalles(id) {
     muestra('contenedor_anuncio_detalle');
     var id_anuncio = "raza=&genero=&estado=&precio=&palabra_clave=&id_anuncio=" + id;
+    console.log(id_anuncio);
     $.ajax({
-        url: '<?php echo base_url('adopcion/lista')?>',
+        url: '<?php echo base_url('venta/lista')?>',
         data: id_anuncio,
         dataType: 'json',
         type: 'post',
@@ -680,11 +682,11 @@ function buscar_videos(id){
                     }
                     for (var i = 0; i < result.count; i++)
                     {
-						
+                        
                        
                         var video=$('#you_tube');
-						var direccion=$('<iframe src="'+data[i].link+'"></iframe> <br/><br/>');
-						    video.append(direccion);
+                        var direccion=$('<iframe src="'+data[i].link+'"></iframe> <br/><br/>');
+                            video.append(direccion);
                         
             }
             
@@ -814,7 +816,7 @@ function contactar_pub(id) {
 $('.mas_anuncio').on('click', function(){
 
     var id = $(this).data('id');
-	$.ajax({
+    $.ajax({
                 url: '<?php echo base_url('venta/click')?>',
                 data: 'id='+id,
                 dataType: 'html',
@@ -830,42 +832,19 @@ $('.mas_anuncio').on('click', function(){
 });
 
 
-	
+    
 </script>
 </div>
 
 
-<div class="slideshow_tres" >
-<?php $banner = $this->session->userdata('banner'); ?>
-                <?php
-                if (is_logged() && ($this->session->userdata('tipoUsuario') == 2 || $this->session->userdata('tipoUsuario') == 3)) {
-                    if ($banner != null) {
+<div class="slideshow_tres">
+    <img src="<?php echo base_url()?>images/banner_inferior/1.png" width="638" height="93"/>
+    <img src="<?php echo base_url()?>images/banner_inferior/2.png" width="638" height="93"/>
+    <img src="<?php echo base_url()?>images/banner_inferior/3.png" width="638" height="93"/>
+</div>
 
-                        foreach ($banner as $contenido) {
-                            if ($this->session->userdata('zonaID') == $contenido->zonaID && $contenido->posicion == 3 && $contenido->seccionID == $seccion) {
-                                ?>
-                                <img src="<?php echo base_url()?>images/<?php echo $contenido->imgbaner; ?>" width="638" height="93"/>
-                            <?php
-                            }
-                        }
-                    }
-                } else {
-
-                    if ($banner !== null && !empty($banner)) {
-                        foreach ($banner as $contenido) {
-                            if ($contenido->zonaID == 9 && $contenido->posicion == 3 && $contenido->seccionID == $seccion) {
-                                ?>
-                                <img src="<?php echo base_url()?>images/<?php echo $contenido->imgbaner; ?>" width="638" height="93"/>
-                            <?php
-                            }
-                        }
-                    }
-                }
-                ?>
-	</div>
-    
-<div class="division_menu_inferior"> </div>
-<?php $this->load->view('general/footer_view'); ?>
+<div class="division_menu_inferior"></div>
+<?php $this->load->view('general/footer_view');?>
 <div id="contenedor_publicar_anuncio" class="contenedor_publicar" style=" display:none">
 
     <!-- Inicio contenedor pap publicar anuncio aunucio !-->

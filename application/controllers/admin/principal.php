@@ -589,7 +589,7 @@ Bienvenido</td></tr>
 <tr style="font-size:14px; background-color:#72A937; color:#FFFFFF;" valign="top">
 <td width="60" height="23"><a> &nbsp;Inicio</a></td>
 <td width="57"><a>&nbsp;Venta</a></td>
-<td width="52"><a>&nbsp;Cruza</a></td>
+<!-- <td width="52"><a>&nbsp;Cruza</a></td> -->
 <td width="78"><a>&nbsp;Adopción</a></td>
 <td width="64"><a>&nbsp;Tienda</a></td>
 <td width="73"><a>&nbsp;Directorio</a></td>
