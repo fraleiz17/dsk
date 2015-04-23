@@ -245,6 +245,10 @@ class Principal extends CI_Controller {
         if($seccionID == 8){
             redirect('admin/principal/getRazaMes/'.$seccionID.'/'.$zonaID);
         }
+
+        if($seccionID == 9){
+            redirect('admin/principal/getEventoMes/'.$seccionID.'/'.$zonaID);
+        }
          redirect('admin/principal/getPantalla/'.$seccionID.'/'.$zonaID);
         
     }
