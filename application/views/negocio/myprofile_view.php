@@ -5,7 +5,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Mi Perfil-Quierounperro.com</title>
-<link rel="shortcut icon" href="<?php echo base_url()?>images/ico.ico" />  
+<link rel="shortcut icon" href="<?php echo base_url()?>images/ico.ico" />
 <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/reset.css" media="screen"/>
  <link rel="stylesheet" href="<?php echo base_url()?>css/jPages.css">
 <script>
@@ -42,7 +42,7 @@ if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
     <script src="<?php echo base_url() ?>js/funciones_.js" type="text/javascript"></script>
 
 
-  <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/index_.css" media="screen"></link> <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/general.css" media="screen"></link> 
+  <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/index_.css" media="screen"></link> <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/general.css" media="screen"></link>
 
     <!-- [if lt IE ]>
     <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/index_explorer.css" media="screen"></link>
@@ -62,15 +62,15 @@ if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
 
   <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/general.css" media="screen"></link>
   <link rel="stylesheet" href="<?php echo base_url() ?>css/mi_perfil.css" type="text/css"/>
-  
-  
+
+
   <link rel="stylesheet" href="<?php echo base_url() ?>css/validator/validationEngine.jquery.css" type="text/css"/>
 
 
     <script type="text/javascript"
             src="<?php echo base_url() ?>js/validator/languages/jquery.validationEngine-es.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>js/validator/jquery.validationEngine.js"></script> 
-  
+    <script type="text/javascript" src="<?php echo base_url() ?>js/validator/jquery.validationEngine.js"></script>
+
 
 
 </head>
@@ -78,10 +78,10 @@ if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
 <body>
 <?php
   $contrasena = $this->session->userdata('recuperarusuario');
-  ?> 
+  ?>
 <script type="text/javascript">
 var busy = false;
-$(document).ready(function() { 
+$(document).ready(function() {
 <?php if($contrasena): ?>
         $('#contrasenaActual').removeClass('validate[required]');
         $('#contrasenaActual').attr('disabled', 'disabled');
@@ -93,20 +93,20 @@ $(document).ready(function() {
 
 
 getView('<?=base_url()?>negocio/principal/miPerfil/');
- /****************************************/ 
+ /****************************************/
                    $(".ajaxLink").live(
                        'click',
-                        function(e){                            
+                        function(e){
                             e.preventDefault();
 							               var clase = $(this).attr('id');
 							               $(".icono_seleccion").removeClass("icono_seleccion");
-                                $('.'+clase).addClass("icono_seleccion");                       
+                                $('.'+clase).addClass("icono_seleccion");
                                 var gotoURL = $(this).attr('href');
                                 $("#appSectionContainer").html();
-                                getView(gotoURL);                                                             
+                                getView(gotoURL);
                         }
-                    );	
-	
+                    );
+
 
 
 $('#editarContrasena').submit(function(e) {
@@ -131,7 +131,7 @@ $('#editarContrasena').submit(function(e) {
 		});
 });
 jQuery(document).ready(function(){
-	
+
 			// binds form submission and fields to the validation engine
 			jQuery("form").validationEngine({
 				promptPosition           : "topRight",
@@ -140,19 +140,19 @@ jQuery(document).ready(function(){
 				ajaxFormValidationMethod : 'post'
 			});
 
-     
+
 });
 function getView(viewURL){
                 busy = true;
                 $("#appSectionContainer").children().remove();
-                $("#appSectionContainer").load(viewURL, function(){                    
+                $("#appSectionContainer").load(viewURL, function(){
                     $(".hidden").stop().fadeIn('fast', function(){
                         busy = false;
                         // $('#TIbody').css('cursor', 'default');
-                    });       
+                    });
                 });
             }
-	
+
 </script>
 <div id="contenedor_cambiar_contrasena" class="contenedor_anuncio_detalle" style="display:none;">
 <div class="cerrar_registro"> <img src="<?php echo base_url()?>images/cerrar.png" onclick="oculta('contenedor_cambiar_contrasena');"/> </div>
@@ -177,7 +177,7 @@ function getView(viewURL){
 <li>
 <input type="submit" value="Guardar" class="el_submit"/>
 </li>
-</ul> 
+</ul>
 </div>
 </form>
 </div>
@@ -231,10 +231,10 @@ Se ha enviado una copia al email: <?=$this->session->userdata('correo');?>
 
 
 
-<!-- Fin del contenedor publicar anucio fondo negro 
+<!-- Fin del contenedor publicar anucio fondo negro
 
 <div class="menu_principal" id="menu_principal" >
-<div id="contenedor_menu_principal" class="contenedor_menu_principal"> 
+<div id="contenedor_menu_principal" class="contenedor_menu_principal">
 <ul class="principal">
 <li>
 <a href="<?php echo base_url()?>"> Inicio </a>
@@ -296,18 +296,18 @@ MI PERFIL
 <div id="espacio_izquierda" class="seccion_izquierda_secciones">
 <ul class="iconos" id="iconos_grandes">
         <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  onclick="window.location='<?= base_url() ?>carrito';" <?php else: ?>  <?php endif; ?>>
-            <div class="indicadores"> 
+            <div class="indicadores">
                 <?php echo $carritoT ?>
-                
-            </div> 
+
+            </div>
 
             <img src="<?php echo base_url() ?>images/compras.png"/></li>
-        <li 
+        <li
         <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
        <?php else: ?> onclick="muestra('contenedor_login');oculta('envio_con');muestra('ingreso_normal');" <?php endif; ?>>
-        
-        
-        
+
+
+
             <div class="indicador">
              <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
              <img src="<?php echo base_url() ?>images/indicador_si.png" title="Ya estas logueado">
@@ -315,19 +315,30 @@ MI PERFIL
              <img src="<?php echo base_url() ?>images/indicador_no.png">
              <?php endif; ?>
               </div>
-            <img src="<?php echo base_url() ?>images/sesion.png"/></li> 
+            <img src="<?php echo base_url() ?>images/sesion.png"/></li>
 
     </ul>
 </div>
 </div>
 
+<style>
 
-<div class="contenedor_central" style="margin-bottom:45px;">
+.contenedor_central2
+{
+  float: left;
+  width: 795px !important;
+  margin-top: -15px;
+}
+
+</style>
+
+
+<div class="contenedor_central2" style="margin-bottom:45px;">
 <div id="appSectionContainer">
 </div>
 </div>
-	  
-	  
+
+
 	  <div class="seccion_derecha_paquetes">
 <ul class="aqui_crear_anuncio">
 <li onclick="muestra('contenedor_publicar_anuncio');">
@@ -335,10 +346,10 @@ MI PERFIL
 </li>
 </ul>
 </div>
- 
+
 </div>
 
-      
+
 
 <div class="slideshow_tres" >
 <?php $banner = $this->session->userdata('banner'); ?>
@@ -368,7 +379,7 @@ MI PERFIL
                 }
                 ?>
 	</div>
-    
+
 
 
 
@@ -380,9 +391,8 @@ MI PERFIL
 
     </div>
 </div>
-  
+
 <div class="division_menu_inferior" style="display:block;overflow:hidden"></div>
 <?php $this->load->view('general/footer_view');?>
 </body>
 </html>
-
