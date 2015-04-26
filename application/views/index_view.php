@@ -5,7 +5,11 @@
      <title>Quierounperro</title>
     <link rel="shortcut icon" href="<?php echo base_url() ?>images/ico.ico"/>
     <?php $this->load->view('general/LoginFiles.php'); ?>
-
+<style>
+#contenedor_paquetes > a:nth-child(1) > div > div.precio_paquete_lite > div{
+    color:#E95D0F !important;
+}
+</style>
 </head>
 <body>
 
