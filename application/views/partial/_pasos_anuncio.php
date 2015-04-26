@@ -736,8 +736,10 @@ TOTAL
 </div>
 <div id="paso_seis" class="paso">
                     <div class="descipcion_pasos_mediano">
-                        <div class="titulo_de_pasos"> PUBLICAR EN ANUNCIOS </div>
-                        <div class="instrucciones_pasos"> Pago del servicio: </div>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
                         <div id="iframez"></div>
                         <div id="closeProcess"></div>
                         <br/>

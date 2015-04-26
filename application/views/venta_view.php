@@ -1,4 +1,18 @@
+<style>
+.title_paquetes_titilos_mini {
+  float: left !important;
+  width: 200px !important;
+  line-height: 1em !important;
+  margin-top: -175px !important;
+  font-family: "titulos" !important;
+  font-size: 15px !important;
+  margin-left: 45px !important;
+  margin-bottom: -10px !important;
+}
 
+
+
+</style>
 <?php $this->load->view('general/LoginFiles');?>
 <?php
 $this->load->view('general/general_header_view', array('title' => 'Venta',
@@ -10,8 +24,8 @@ jQuery(document).ready(
  jQuery("form").validationEngine({
         promptPosition:"topRight",
         ajaxFormValidation: false,
-    });
- });
+    })
+  );
 function buscar_imagen(id){
              id_anuncio="id_anuncio="+id;
 
@@ -21,27 +35,28 @@ function buscar_imagen(id){
                 dataType: 'json',
                 type: 'post',
                  success: function(result)
-                { 
+                {
 				var data = result.data;
 				 if (result.count < 1) {
-                    
+
                     }
                     for (var i = 0; i < result.count; i++)
                     {
 						foto=(data[i].foto);
-						
+
 						}
-					
+
 				$("#contener_foto"+id).append('<img src="' + foto + '"width="auto" height="100%"/>');
-				
+
 				}
                  })
 }
 
    </script>
-   
+
 
 <?php $this->load->view('general/menu_view')?>
+
 <div class="contenedor_contactar" id="contenedor_contactar" style=" display:none;">
     <div class="contenedor_cerrar_contactar">
         <img src="<?php echo base_url()?>images/cerrar_anuncio_gris.png" onclick="oculta('contenedor_contactar');"/>
@@ -49,7 +64,7 @@ function buscar_imagen(id){
     <div class="contactar_al_aunuciante">
         <font class="titulo_anuncio_publicado"> CONTACTA AL ANUNCIANTE </font>
         <div class="datos_anunciante">
-   
+
 </div>
 <font class="titulo_anuncio_publicado"> PROPORCIONA TU INFORMACIÓN </font>
 </br>
@@ -85,7 +100,7 @@ function buscar_imagen(id){
     <div class="contactar_al_aunuciante" style="height:346px;">
     <font class="titulo_anuncio_publicado"> DENUNCIA DE CONTENIDO </font>
     </br>
-    </br>    
+    </br>
 <font class=""><strong>Todas las denuncias son an&oacute;nimas.</strong><br>
         Selecciona la razón por la cual deseas denunciar este anuncio y/o anunciante:</font>
 </br>
@@ -139,7 +154,7 @@ function buscar_imagen(id){
         <div class="datos_general">
 
             <div class="titulo_anuncio_publicado">
-             
+
         </div>
 
 
@@ -226,7 +241,7 @@ que el nombre del criador esté en el certificado.
 
 </div>
 
- 
+
 </div>
 
 
@@ -245,7 +260,7 @@ que el nombre del criador esté en el certificado.
 <?php if($razas != null):
     foreach($razas as $raza):
     echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
-    
+
     ?>
 <option style="background-color: #BCBEC0;" value="<?=$raza->razaID?>"><?=$raza->raza?></option>
 <?php endforeach;
@@ -298,7 +313,7 @@ que el nombre del criador esté en el certificado.
             <?php
             foreach ($publicaciones as $publicacion):
 echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
-			
+
                 ?>
             <!-- INICIO contenedor anuncio  -->
             <div class="contenedor_anuncio">
@@ -315,7 +330,7 @@ echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
                     <font> Ciudad: <?php echo substr($publicacion->ciudad, 0, 10)?></font>
                 </div>
                 <div class="contenedor_foto_anuncio" id="contener_foto<?php echo $publicacion->publicacionID?>">
-                    
+
                 </div>
 
                 <ul class="ver_detalle_anuncio">
@@ -376,31 +391,31 @@ function buscar_anunciante(id){
                 dataType: 'json',
                 type: 'post',
                  success: function(result)
-                { 
-				
-               
+                {
+
+
 
                     var data = result.data;
 
                     if (result.count < 1) {
-                    
+
                     }
                     for (var i = 0; i < result.count; i++)
                     {
 						if (data[i].muestraTelefono==1 ){
 							var telefono=data[i].telefono;
 							} else{
-								
+
 								var telefono="---";
 								}
-						
+
 						 $(".datos_anunciante").append('</br><strong> Nombre de usuario:</strong> <font >'+data[i].nombre+' '+data[i].apellido+'</font></br><strong> Estado: </strong> <font >'+data[i].nombreEstado+'</font></br><strong> Ciudad: </strong> <font>'+data[i].ciudad+'</font></br><strong> Teléfono: </strong><font>'+telefono+'</font></br></br>');
-                        
-                        
+
+
             }
-            
+
     }
-    
+
 });
 
 }
@@ -418,31 +433,31 @@ function buscar_anunciante_dos(id){
                 dataType: 'json',
                 type: 'post',
                  success: function(result)
-                { 
-				
+                {
+
                $(".datos_anunciante_dos").empty();
 
                     var data = result.data;
 
                     if (result.count < 1) {
-                    
+
                     }
                     for (var i = 0; i < result.count; i++)
                     {
 						if (data[i].muestraTelefono==1 ){
 							var telefono=data[i].telefono;
 							} else{
-								
+
 								var telefono="---";
 								}
-						
+
 						 $(".datos_anunciante_dos").append('</br><strong> Nombre de usuario:</strong> <font >'+data[i].nombre+' '+data[i].apellido+'</font></br><strong> Estado: </strong> <font >'+data[i].nombreEstado+'</font></br><strong> Ciudad: </strong> <font>'+data[i].ciudad+'</font></br><strong> Teléfono: </strong><font>'+telefono+'</font></br></br>');
-                        
-                        
+
+
             }
-            
+
     }
-    
+
 });
 
 }
@@ -643,23 +658,23 @@ function buscar_imagenes(id){
                 dataType: 'json',
                 type: 'post',
                  success: function(result)
-                { 
+                {
                     $(".contenedor_galeria").empty().html('<div id="slideshow_publicar_anuncio_previo" class="picse"></div>');
 
                     var data = result.data;
 
                     if (result.count < 1) {
-                    
+
                     }
                     for (var i = 0; i < result.count; i++)
                     {
-                       
+
                         $("#slideshow_publicar_anuncio_previo").append('<img src="' + data[i].foto + '" width="294" height="200" style=" top: 0px; left: 0px; display: block; z-index: 5; opacity: 1;"/>');
-                        
+
             }
             contener_images();
     }
-    
+
 });
 
 }
@@ -675,26 +690,26 @@ function buscar_videos(id){
                 dataType: 'json',
                 type: 'post',
                  success: function(result)
-                { 
+                {
                     $("#you_tube").empty();
 
                     var data = result.data;
 
                     if (result.count < 1) {
-                    
+
                     }
                     for (var i = 0; i < result.count; i++)
                     {
-						
-                       
+
+
                         var video=$('#you_tube');
 						var direccion=$('<iframe src="'+data[i].link+'"></iframe> <br/><br/>');
 						    video.append(direccion);
-                        
+
             }
-            
+
     }
-    
+
 });
 
 }
@@ -736,7 +751,7 @@ function denunciar_pub(id) {
         $('.info').html('');
         buscar_anunciante_dos(pub);
         muestra('contenedor_denunciar');
-        
+
         $('#contenedor_denunciar #denuncia_form').submit(function(e){
             //$('.boton_naranja_tres').hide('');
             $('.info',form).html('Enviando...');
@@ -793,7 +808,7 @@ function contactar_pub(id) {
         muestra('contenedor_contactar');
         $("#contacto_form")[0].reset();
         //console.log(pub+'meh');
-        
+
         $('#contenedor_contactar #contacto_form').submit(function(e){
             e.preventDefault();
             var form = $(this);
