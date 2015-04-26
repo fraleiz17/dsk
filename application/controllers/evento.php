@@ -211,7 +211,7 @@ QUP Contacto
 </html>';
    
     
-    if($this->email_model->send_email('', 'marthahdez2@gmail.com', 'Se ha recibido un correo desde Eventos QUP',$mensaje)){
+    if($this->email_model->send_email('', 'publicidad@quierounperro.com', 'Se ha recibido un correo desde Eventos QUP',$mensaje)){
         $data['response'] = true;
     } else {
         $data['response'] = false;

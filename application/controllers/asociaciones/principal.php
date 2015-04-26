@@ -313,7 +313,7 @@ Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
         $correo = $this->session->userdata('correo');
         $asunto = $this->input->post('asunto');
         $descripcion = $this->input->post('descripcion');
-        $destino = 'marthahdez2@gmail.com';//'administrador.soporte@quierounperro.com';
+        $destino = 'soporte@quierounperro.com';//'administrador.soporte@quierounperro.com';
         $mensaje = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
         <html xmlns="http://www.w3.org/1999/xhtml">
         <head>

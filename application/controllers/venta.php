@@ -634,7 +634,7 @@ Si tienes cualquier duda al respecto, por favor escr&iacute;benos a contacto@qui
 
        
         //$this->email->message($msj);
-        if(!$this->email_model->send_email('', 'marthahdez2@gmail.com', 'Denuncia de anuncio', $msj)){
+        if(!$this->email_model->send_email('', 'denuncia@quierounperro.com', 'Denuncia de anuncio', $msj)){
         
             echo "<div class='alert alert-warning'>No se ha logrado envíar el correo al dueño de este directorio. Vuelva a intentarlo o contacte al administrador del sitio.</div>";
         } else {
@@ -929,7 +929,7 @@ El anuncio <strong>"'.$titulo.'"</strong> con fecha de publicaci&oacute;n '.date
 </html>
 
 ';
-$this->email_model->send_email('', 'marthahdez2@gmail.com', 'Se ha publicado un nuevo anuncio en QUP', $mensaje);
+$this->email_model->send_email('', 'admin@quierounperro.com', 'Se ha publicado un nuevo anuncio en QUP', $mensaje);
 
 $mensaje2 = '
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
