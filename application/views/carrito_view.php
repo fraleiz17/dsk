@@ -557,7 +557,7 @@
                                                                         if (json.collection_status == 'approved' || json.collection_status == 'in_process') {
                                                                             window.location = "<?php echo base_url('carrito/guardar_compra') ?>?id=" + json.collection_id
                                                                         } else if (json.collection_status == 'pending') {
-                                                                            alert('El usuario no completó el pago');
+                                                                            window.location = "<?php echo base_url('carrito/guardar_compra') ?>?id=" + json.collection_id
                                                                         } else if (json.collection_status == 'rejected') {
                                                                             alert('El pago fué rechazado, el usuario puede intentar nuevamente el pago');
                                                                         }

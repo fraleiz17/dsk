@@ -212,7 +212,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
             $precioPaqueteA = 0;
         else:
             $precioPaqueteA = $detallePaquete->precio;
-        endif;
+        endif; 
         //SERVICIOS ADQUIRIDOS
         $data = array(
             'cantFotos' => $detallePaquete->cantFotos,
@@ -402,7 +402,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
            $preference_data = array(
             "items" => array(
                 array(
-                    "title" => "Publicacion en Anuncios",
+                    "title" => "Publicacion en Anuncios - Cliente ID: ".$this->session->userdata('idUsuario'),
                     "quantity" => 1,
                     "currency_id" => "MXN",
                     "unit_price" => floatval($precio_total)
@@ -522,11 +522,11 @@ Si tienes cualquier duda al respecto, por favor escr&iacute;benos a contacto@qui
 
     function updateCompra($compraID,$estado,$servicioID,$publicacionID,$titulo,$seccionID){
 
-         if($estado == 1){
+         if($estado == 1 || $estado == 2){
           $this->defaultdata_model->updateItem('compraID', $compraID, $data = array('pagado' => $estado), 'compra');
           $this->defaultdata_model->updateItem('servicioID', $servicioID, $data = array('pagado' => $estado), 'serviciocontratado');
           $data = array('estatusCompra' => 1);
-          $publicacionID = $this->defaultdata_model->updateItem('publicacionID', $publicacionID, $dataPublicacion,'publicaciones');
+          //$publicacionID = $this->defaultdata_model->updateItem('publicacionID', $publicacionID, $data,'publicaciones');
            $this->notificacionAdmin($seccionID,$titulo,$publicacionID);
         } else {
           $delAnuncio = $this->admin_model->deleteItem('compraID', $compraID, 'compras');

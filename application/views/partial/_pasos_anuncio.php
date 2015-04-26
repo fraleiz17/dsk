@@ -853,6 +853,7 @@ TOTAL
             $('#paso_tres [name=vigencia_texto]').val(paquete_val.vigencia);
             $('#paso_tres [name=cantFotos]').val(paquete_val.cantFotos);
             $('#paso_tres [name=caracteresN]').val(paquete_val.caracteres);
+            $('#paso_tres [name=precio]').val('0.00');   
             
             if(paquete_val.id == 1){
                 var imagen = '<img src="<?php echo base_url() ?>images/pago_lite.png"/>';           }
@@ -943,8 +944,13 @@ TOTAL
         });
         
         $('#cerrarPublicacion').on('click', function() {
-            oculta('contenedor_publicar_anuncio');
-            location.reload();
+            if(confirm("Al cerrar esta ventana toda la informacion ingresada será borrada.\n Para terminar el proceso de la publicación debe dar clic en el enlace 'Volver al sitio del vendedor' en la ventana de mercadopago para alamacenar la informaciónde su compra. \n Está seguro que desea cerrarla?")){
+                oculta('contenedor_publicar_anuncio');
+                location.reload();
+            } else{
+               return false;
+            } 
+            
         });
         
         $("body").on("click",".del", function(e){
@@ -976,6 +982,7 @@ TOTAL
         
         $('#paso_uno [name=seccion]').on('click', function () {
             var valor = $(this).val();   
+
             if(valor == 6 || valor == 7){
                 $('#precio').val('0.00');
                 $('#precio').attr('disabled', 'disabled');
