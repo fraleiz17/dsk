@@ -9,8 +9,18 @@
   margin-left: 45px !important;
   margin-bottom: -10px !important;
 }
+.descipcion_pasos_mediano{
 
+  width: 840px;
+  min-height: 650px;
+  background-color: #FFF;
+  border: 0px solid #FFFFFF !important; 
+  margin-top: 0px !important;
+}
 
+#paso_dos > div > div.paquetes_izquierda_mini > label > div.precio_paquete_lite_mini > div {
+    color:#E95D0F !important;
+}
 
 </style>
 <?php $this->load->view('general/LoginFiles');?>

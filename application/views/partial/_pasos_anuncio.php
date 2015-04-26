@@ -736,10 +736,7 @@ TOTAL
 </div>
 <div id="paso_seis" class="paso">
                     <div class="descipcion_pasos_mediano">
-                        <br />
-                        <br />
-                        <br />
-                        <br />
+
                         <div id="iframez"></div>
                         <div id="closeProcess"></div>
                         <br/>
