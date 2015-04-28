@@ -26,13 +26,12 @@ jQuery(document).ready(function(){
 	 
 	 
 	 
-	 $(".deleteContentT").click(function() {
+	 $(".deleteContent").click(function() {
 		 	
              var productoID = $(this).attr('data-rel');
-             //alert(productoID);
 			 $("#productoIDE").val(productoID);
-			 muestra('contenedor_eliminar');
-              
+			  muestra('contenedor_eliminar');
+              console.log(productoID);
      });
 	 
 	  $(".addColor").click(function(e){
@@ -372,7 +371,7 @@ Chica
 <img src="<?php echo base_url()?>images/productos/01/01.png" width="70" height="70"/>
 </td>
 <td>
-<img src="<?php echo base_url()?>images/baja_contenido.png" class="deleteContentT" id="deleteContent" data-rel="<?=$productoID?>" />
+<img src="<?php echo base_url()?>images/baja_contenido.png" onclick="muestra('contenedor_eliminar');"/>
 </td>
 
 </tr>
@@ -427,7 +426,7 @@ Chica
 }?>
 </td>
 <td>
-<img src="<?php echo base_url()?>images/baja_contenido.png" class="deleteContentT" id="deleteContent" data-rel="<?=$productoID?>" />
+<img src="<?php echo base_url()?>images/baja_contenido.png" class="deleteContent" data-rel="<?=$productoID?>" />
 <img src="<?=base_url()?>images/editar.png" class="editarL" id="editarL" data-rel="<?=$productoID?>"/>
 </td>
 
