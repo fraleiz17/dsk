@@ -1103,7 +1103,7 @@ Para poder comenzar a disfrutar de todas las herramientas del portal, valida tu 
             }
         }
 
-        redirect('admin/principal/getDatosCuriosos/9/'.$this->input->post('zonaRaza'));
+        redirect('admin/principal/getDatosCuriosos/10/'.$this->input->post('zonaRaza'));
         
     }
 

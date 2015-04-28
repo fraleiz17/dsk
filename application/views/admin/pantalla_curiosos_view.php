@@ -439,7 +439,7 @@ EDITAR DATO
 </tr>
 <tr> 
 <td> Contenido: </td> 
-<td> <textarea name="texto" id="texto" class="validate[required]"><?=$dce->nombre?></textarea> </td></tr>
+<td> <textarea name="texto" id="texto" class="validate[required]" style="margin: 0px; width: 310px; height: 150px;"><?=$dce->texto?></textarea> </td></tr>
 </table>
 
 
