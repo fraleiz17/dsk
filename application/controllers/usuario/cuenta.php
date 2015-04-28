@@ -282,7 +282,7 @@ class Cuenta extends CI_Controller {
             <table width="647" align="center">
                 <tr>
                     <td width="231" rowspan="2">
-                        <img src="http://quierounperro.com/quiero_un_perro/images/logo_mail.jpg"/>
+                        <img src="http://quierounperro.com/psk/images/logo_mail.jpg"/>
                     </td>
                     <td height="48" colspan="6" style="font-family: \'titulos\'; font-size:50px; color:#72A937; margin:0px; padding:0px; margin-bottom:-10px;">
                         QUP Contacto
@@ -358,7 +358,7 @@ class Cuenta extends CI_Controller {
 <table width="647" align="center">
 <tr>
 <td width="231" height="129" colspan="2" valign="top">
-<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
+<img src="http://quierounperro.com/psk/images/logo_mail.jpg"/>
 </td>
 </tr>
 <!-- <tr>

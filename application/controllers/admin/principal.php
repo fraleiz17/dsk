@@ -448,7 +448,7 @@ class Principal extends CI_Controller {
 <table width="647" align="center">
 <tr>
 <td width="231" height="129" colspan="2" valign="top">
-<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
+<img src="http://quierounperro.com/psk/images/logo_mail.jpg"/>
 </td>
 </tr>
 <!-- <tr>
@@ -510,7 +510,7 @@ $this->email_model->send_email('', $datos->correo, 'Ha sido aprobado tu anuncio 
 <table width="647" align="center">
 <tr>
 <td width="231" height="129" colspan="2" valign="top">
-<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
+<img src="http://quierounperro.com/psk/images/logo_mail.jpg"/>
 </td>
 </tr>
 <!-- <tr>
@@ -741,7 +741,7 @@ $mensaje = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http
 <table width="647" align="center">
 <tr>
 <td width="231" height="129" colspan="2" valign="top">
-<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
+<img src="http://quierounperro.com/psk/images/logo_mail.jpg"/>
 </td>
 </tr>
 <tr>

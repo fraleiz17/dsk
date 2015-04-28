@@ -40,7 +40,7 @@ class Recuperarcontrasena extends CI_Controller{
 <table width="647" align="center">
 <tr>
 <td width="231" height="129" colspan="2" valign="top">
-<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
+<img src="http://quierounperro.com/psk/images/logo_mail.jpg"/>
 </td>
 </tr>
 <tr>

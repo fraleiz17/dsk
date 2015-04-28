@@ -465,7 +465,7 @@ $msj = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://w
 <table width="647" align="center">
 <tr>
 <td width="231" height="129" colspan="2" valign="top">
-<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
+<img src="http://quierounperro.com/psk/images/logo_mail.jpg"/>
 </td>
 </tr>
 <!-- <tr>
@@ -593,7 +593,7 @@ Si tienes cualquier duda al respecto, por favor escr&iacute;benos a contacto@qui
 <table width="647" align="center">
 <tr>
 <td width="231" height="129" colspan="2" valign="top">
-<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
+<img src="http://quierounperro.com/psk/images/logo_mail.jpg"/>
 </td>
 </tr>
 <!-- <tr>
@@ -891,7 +891,7 @@ function editAanuncio() {
 <table width="647" align="center">
 <tr>
 <td width="231" height="129" colspan="2" valign="top">
-<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
+<img src="http://quierounperro.com/psk/images/logo_mail.jpg"/>
 </td>
 </tr>
 <!-- <tr>
@@ -944,7 +944,7 @@ $mensaje2 = '
 <table width="647" align="center">
 <tr>
 <td width="231" height="129" colspan="2" valign="top">
-<img src="http://quierounperro.com/dsk/images/logo_mail.jpg"/>
+<img src="http://quierounperro.com/psk/images/logo_mail.jpg"/>
 </td>
 </tr>
 <!-- <tr>
