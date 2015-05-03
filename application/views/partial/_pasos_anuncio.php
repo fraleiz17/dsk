@@ -946,7 +946,7 @@ TOTAL
         $('#cerrarPublicacion').on('click', function() {
             if(confirm("IMPORTANTE\nAl cerrar esta ventana toda la informacion ingresada será borrada.\n Para terminar el proceso de la publicación debe dar clic en el enlace 'Volver al sitio del vendedor' en la ventana de mercadopago para alamacenar la información de su compra. \n Está seguro que desea cerrarla?")){
                 oculta('contenedor_publicar_anuncio');
-                location.relo ad();
+                location.reload();
             } else{
                return false;
             } 
