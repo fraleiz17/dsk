@@ -147,21 +147,21 @@
         </div>
         <div class="secciones">
             <input type="radio" data-label="venta" name="seccion" value="venta" id="venta" class="css-checkbox" checked="checked"/><label for="venta" class="css-label radGroup2">
-                Venta: <font class="color_morado"> <?php echo $count_sale_pets ?> </font></label>
+                Venta: <label id="c_venta"><font class="color_morado"> <?php echo $count_sale_pets ?> </font></label>
             &nbsp;&nbsp;
            <!--  <input type="radio" data-label="cruza" name="seccion" value="cruza" id="cruza" class="css-checkbox"/>
             <label for="cruza" class="css-label radGroup2"> Cruza: <font class="color_morado"> <?php echo $count_cross_pets ?> </font> </label>
             &nbsp;&nbsp;-->
             <input type="radio" data-label="adopción" name="seccion" value="adopcion" id="adopcion" class="css-checkbox"/><label for="adopcion"
                                                                                                                                  class="css-label radGroup2">
-                Adopción: <font class="color_morado"> <?php echo $count_adoption_pets ?> </font></label>
+                Adopción: <label id="c_adopcion"><font class="color_morado"> <?php echo $count_adoption_pets ?> </font></label>
             &nbsp;&nbsp;
             <input type="radio" data-label="perdidos" name="seccion" value="perdidos" id="perdidos" class="css-checkbox"/><label for="perdidos"
                                                                                                                                  class="css-label radGroup2">
-                Perdidos:<font class="color_morado"> <?php echo $count_lost_pets ?></font></label>
+                Perdidos:<label id="c_perdidos"><font class="color_morado"> <?php echo $count_lost_pets ?></font></label>
             &nbsp;&nbsp;
             <input type="radio" data-label="directorio" name="seccion" value="directorio" id="directorio" class="css-checkbox"/><label for="directorio" class="css-label radGroup2">
-                Directorio:<font class="color_morado"> <?php echo $count_directory ?> </font></label>
+                Directorio:<label id="c_directorio"><font class="color_morado"> <?php echo $count_directory ?> </font></label>
         </div>
     </form>
     <div id="subtitulo" class="subtitulo"></div>
@@ -336,6 +336,22 @@ function buscar_imagenes(id){
                     }
                     else {
                         text_zona = ' - ' + text_zona + ' - ';
+                    }
+                    console.log(data_seccion);
+                    if(data_seccion == 'venta'){
+                        $('#c_venta').html(response.count);
+                    }
+
+                    if(data_seccion == 'adopción'){
+                        $('#c_adopcion').html(response.count);
+                    }
+
+                    if(data_seccion == 'perdidos'){
+                        $('#c_perdidos').html(response.count);
+                    }
+
+                    if(data_seccion == 'directorio'){
+                        $('#c_directorio').html(response.count);
                     }
 
                     $('#subtitulo').fadeOut().empty().text((data_validation + text_zona + data_seccion).toUpperCase()).fadeIn();

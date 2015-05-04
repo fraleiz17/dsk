@@ -40,7 +40,7 @@ cuponNegocioO
 		$('<p id="cupon'+paqueteID+'"><input name="cuponPaquete[]" value="'+paquete+'" type="text" id="cuponPaquete" size="3" class="validate[required],custom[number]"/>% <a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br /></p>').appendTo('#cupon2'+paqueteID);
 		} 
 		if(tipoCupon == 3) {
-		$('<p id="cupon'+paqueteID+'"><select name="cuponNegocioTienda[]" id="cuponNegocioTienda" class="validate[required]"><option value="'+negocio+'">'+negocio+'</option><?php if($tiendas != null){ foreach ($tiendas as $tienda) { ?><option value="<?=$tienda->nombreNegocio?>"><?=$tienda->nombreNegocio?></option><?php } }?></select><input name="cuponNegocio[]" type="text" id="cuponNegocio" value="'+negocioVal+'" size="3" class="validate[required],custom[number]"/>% <a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br /></p>').appendTo('#cupon3'+paqueteID);
+		$('<p id="cupon'+paqueteID+'"><select name="cuponNegocioTienda[]" id="cuponNegocioTienda" class="validate[required]"><option value="'+negocio+'">'+negocio+'</option><?php if($tiendas != null){ foreach ($tiendas as $tienda) { if($tienda->nombreNegocio != null && $tienda->nombreNegocio != ''){ ?><option value="<?=$tienda->nombreNegocio?>"><?=$tienda->nombreNegocio?></option><?php } } }?></select><input name="cuponNegocio[]" type="text" id="cuponNegocio" value="'+negocioVal+'" size="3" class="validate[required],custom[number]"/>% <a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br /></p>').appendTo('#cupon3'+paqueteID);
 		}
 		
 		contador++;
@@ -146,13 +146,17 @@ NEGOCIO
 <select name="cuponNegocioTienda[]" id="cuponNegocioTiendaO<?=$paquete->paqueteID;?>">
 <option value> Seleccione </option>
 <?php if($tiendas != null){
-		foreach ($tiendas as $tienda) { ?>
+		foreach ($tiendas as $tienda) { 
+			if($tienda->nombreNegocio != null && $tienda->nombreNegocio != ''){?>
 			<option value="<?=$tienda->nombreNegocio?>"><?=$tienda->nombreNegocio?></option>
 <?php		}
-	}?>
+		}
+	} else { ?>
+		<option value="">No hay tiendas registradas</option>
+<?php }	?>
 </select> 
 <input name="cuponNegocio[]" type="hidden" id="cuponNegocio" size="3" value="0" />
-<input name="cuponNegocio[]" type="text" id="cuponNegocioO<?=$paquete->paqueteID;?>" size="3" />% <a class="agregar" href="#" id="3" data-rel="<?=$paquete->paqueteID;?>"> Agregar </a>
+<input name="cuponNegocio[]" type="text" id="cuponNegocioO<?=$paquete->paqueteID;?>" size="3" />% <?php if($tiendas != null) :?><a class="agregar" href="#" id="3" data-rel="<?=$paquete->paqueteID;?>"> Agregar </a> <?php endif;?>
 
 <?php if($cupones != null){
 	foreach($cupones as $cupon){

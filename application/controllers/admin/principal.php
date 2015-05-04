@@ -45,7 +45,7 @@ class Principal extends CI_Controller {
         $data['mapaSegundo'] = 'mapa_view';
         $data['usuariosT'] = count($this->defaultdata_model->getUsers());
         $data['anunciosT'] = count($this->defaultdata_model->getAnnounces());
-        $data['paquetes'] =
+        //$data['paquetes'] =
         
         
         // mapa
@@ -373,11 +373,11 @@ class Principal extends CI_Controller {
     function anuncios() {
 
         $data['zonageografica'] = $this->admin_model->getZonasG();
-        $data['count_sale_pets'] = $this->admin_model->getCountSalePets();
-        $data['count_cross_pets'] = $this->admin_model->getCountCrossPets();
-        $data['count_adoption_pets'] = $this->admin_model->getCountAdoptionPets();
-        $data['count_lost_pets'] = $this->admin_model->getCountLostPets();
-        $data['count_directory'] = $this->admin_model->getCountDirectory();
+        $data['count_sale_pets'] = $this->admin_model->getCountSalePets(0);
+        $data['count_cross_pets'] = $this->admin_model->getCountCrossPets(0);
+        $data['count_adoption_pets'] = $this->admin_model->getCountAdoptionPets(0);
+        $data['count_lost_pets'] = $this->admin_model->getCountLostPets(0);
+        $data['count_directory'] = $this->admin_model->getCountDirectory(0);
         $data['anuncios'] = $this->admin_model->getAnuncios(0,2,NULL);
 
 
@@ -426,6 +426,13 @@ class Principal extends CI_Controller {
             default:
                 $seccion = 2;
         }
+
+
+        $data['count_sale_pets'] = $this->admin_model->getCountSalePets($aprobado);
+        $data['count_cross_pets'] = $this->admin_model->getCountCrossPets($aprobado);
+        $data['count_adoption_pets'] = $this->admin_model->getCountAdoptionPets($aprobado);
+        $data['count_lost_pets'] = $this->admin_model->getCountLostPets($aprobado);
+        $data['count_directory'] = $this->admin_model->getCountDirectory($aprobado);
         
         echo json_encode($this->admin_model->getAnuncios($aprobado, $seccion, $zonas));
     }

@@ -204,42 +204,47 @@ class Admin_model extends CI_Model
 
     }
 
-    public function getCountSalePets()
+    public function getCountSalePets($estado)
     {
         $this->db->from("publicaciones");
         $this->db->where("seccion", 2);
+        $this->db->where("aprobada", $estado);
 
         return $this->db->count_all_results();
     }
 
-    public function getCountCrossPets()
+    public function getCountCrossPets($estado)
     {
         $this->db->from("publicaciones");
         $this->db->where("seccion", 3);
+        $this->db->where("aprobada", $estado);
 
         return $this->db->count_all_results();
     }
 
-    public function getCountAdoptionPets()
+    public function getCountAdoptionPets($estado)
     {
         $this->db->from("publicaciones");
         $this->db->where("seccion", 6);
+        $this->db->where("aprobada", $estado);
 
         return $this->db->count_all_results();
     }
 
-    public function getCountLostPets()
+    public function getCountLostPets($estado)
     {
         $this->db->from("publicaciones");
         $this->db->where("seccion", 7);
+        $this->db->where("aprobada", $estado);
 
         return $this->db->count_all_results();
     }
 
-    public function getCountDirectory()
+    public function getCountDirectory($estado)
     {
         $this->db->from("publicaciones");
         $this->db->where("seccion", 4);
+        $this->db->where("aprobada", $estado);
 
         return $this->db->count_all_results();
     }
