@@ -47,20 +47,16 @@ function buscar_imagen(id){
                 type: 'post',
                  success: function(result)
                 {
-				var data = result.data;
-				 if (result.count <= 1) {
 
+                    var data = result.data;
+                    if (result.count < 1) {
+                        for (var i = 0; i < result.count; i++)
+                            {
+                                foto=(data[i].foto);
+                            }
+                        $("#contener_foto"+id).append('<img src="' + foto + '"width="auto" height="100%"/>');
                     }
-                    for (var i = 0; i < result.count; i++)
-                    {
-						foto=(data[i].foto);
-                        //$("#contener_foto"+id).append('<img src="' + foto + '"width="auto" height="100%"/>');
-
-						}
-
-				
-
-				}
+                }
                  })
 }
 

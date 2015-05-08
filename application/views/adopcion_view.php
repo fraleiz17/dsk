@@ -1,3 +1,34 @@
+<title>Adopci&oacute;n</title>
+
+<style>
+.title_paquetes_titilos_mini {
+  float: left !important;
+  width: 200px !important;
+  line-height: 1em !important;
+  margin-top: -175px !important;
+  font-family: "titulos" !important;
+  font-size: 15px !important;
+  margin-left: 45px !important;
+  margin-bottom: -10px !important;
+}
+
+.descipcion_pasos_mediano{
+
+  width: 840px;
+  min-height: 650px;
+  background-color: #FFF;
+  border: 0px solid #FFFFFF !important; 
+  margin-top: 0px !important;
+}
+
+#paso_dos > div > div.paquetes_izquierda_mini > label > div.precio_paquete_lite_mini > div {
+    color:#E95D0F !important;
+}
+
+
+
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <?php $this->load->view('general/LoginFiles');?>
 <?php
 $this->load->view('general/general_header_view', array('title' => 'Adopcion',
