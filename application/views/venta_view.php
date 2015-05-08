@@ -38,6 +38,7 @@ jQuery(document).ready(
   );
 function buscar_imagen(id){
              id_anuncio="id_anuncio="+id;
+             console.log(id_anuncio);
 
             $.ajax({
                 url: '<?php echo base_url('venta/fotos') ?>',
@@ -47,16 +48,17 @@ function buscar_imagen(id){
                  success: function(result)
                 {
 				var data = result.data;
-				 if (result.count < 1) {
+				 if (result.count <= 1) {
 
                     }
                     for (var i = 0; i < result.count; i++)
                     {
 						foto=(data[i].foto);
+                        //$("#contener_foto"+id).append('<img src="' + foto + '"width="auto" height="100%"/>');
 
 						}
 
-				$("#contener_foto"+id).append('<img src="' + foto + '"width="auto" height="100%"/>');
+				
 
 				}
                  })
