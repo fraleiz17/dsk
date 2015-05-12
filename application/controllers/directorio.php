@@ -511,7 +511,13 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         if($precio_total <= 00.00){
         $this->defaultdata_model->updateItem('compraID', $key_compra, $data = array('pagado' => 1), 'compra');
         $this->defaultdata_model->updateItem('servicioID', $key_servicio, $data = array('pagado' => 1), 'serviciocontratado');
-           echo '<div class="registro_normal"> <!-- Contenedor morado registro -->
+        if ($this->db->trans_status() === FALSE) {
+            $this->db->trans_rollback();
+            echo 'rollback';
+        } else {
+            $this->db->trans_commit();
+            //TODO hay que cambiar a sandbox_init_point
+            echo '<div class="registro_normal"> <!-- Contenedor morado registro -->
 
                 <div class="titulo_registro">GRACIAS</div>
                 </br>
@@ -530,6 +536,8 @@ $data['paises'] = $this->defaultdata_model->getPaises();
 
             <div style="margin-right:120px;margin-top:10px;"><a href="'.$this -> agent -> referrer().'" style="text-decoration:none; float:right;">Cerrar Proceso</a></div>
                   ';
+        }
+          
 
         } else {
 

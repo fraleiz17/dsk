@@ -191,11 +191,19 @@ class Admin_model extends CI_Model
             $this->db->where("p.aprobada", $aprobado);
         }
 
+        $this->db->where("p.vigente", 1);
+        
         if ($seccion != null) {
-            $this->db->where("p.seccion", $seccion);
+            if($seccion == 4){
+                $this->db->where("p.seccion", 4);
+                $this->db->or_where("p.seccion", 11);
+            }else{
+                $this->db->where("p.seccion", $seccion);
+            }
+            
         }
 
-        $this->db->where("p.vigente", 1);
+        
         $this->db->order_by("p.fechaCreacion", "asc");
 
         $resultSet = $this->db->get();
@@ -243,8 +251,10 @@ class Admin_model extends CI_Model
     public function getCountDirectory($estado)
     {
         $this->db->from("publicaciones");
-        $this->db->where("seccion", 4);
         $this->db->where("aprobada", $estado);
+        $this->db->where("seccion", 4);
+        $this->db->or_where("seccion", 11);
+        
 
         return $this->db->count_all_results();
     }
