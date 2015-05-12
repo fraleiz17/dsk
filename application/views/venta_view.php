@@ -713,6 +713,10 @@ function buscar_videos(id){
                         var video=$('#you_tube');
 						var direccion=$('<iframe src="'+data[i].link+'"></iframe> <br/><br/>');
 						    video.append(direccion);
+                            $(".boton_naranja_dos").empty().html('<li id="ver_video" onclick="muestra('video');">
+        Ver video
+    </li>');
+                            
 
             }
 

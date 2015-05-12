@@ -363,9 +363,12 @@ function buscar_imagenes(id){
                             var row = $('<tr></tr>');
 
                             row.data('titulo', response.data[i].titulo);
-                            row.data('precio', response.data[i].precio);
+                            
                             row.data('fechaCreacion', response.data[i].fechaCreacion);
                             row.data('seccionNombre', response.data[i].seccionNombre);
+                            if( response.data[i].seccionNombre != 'Adopción' && response.data[i].seccionNombre != 'Asociaciones' && response.data[i].seccionNombre != 'Directorio'){
+                                row.data('precio', response.data[i].precio);
+                            }
                             row.data('raza', response.data[i].raza);
                             row.data('genero', response.data[i].genero);
                             row.data('descripcion', response.data[i].descripcion);
@@ -421,7 +424,12 @@ function buscar_imagenes(id){
 
                 var anuncio_div = $('#contenedor_anuncio_detalle');
                 $('#titulo_anuncio_publicado', anuncio_div).text(row_data.data('titulo'));
-                $('.precio', anuncio_div).text(parseFloat(row_data.data('precio')).toFixed(2));
+                if(row_data.data('seccionNombre') != 'Asociaciones' && row_data.data('seccionNombre') != 'Adopción' && row_data.data('seccionNombre') != 'Directorio' ){
+                    $('.precio', anuncio_div).text(parseFloat(row_data.data('precio')).toFixed(2));
+                } else {
+                    $('.precio', anuncio_div).text('0.00');
+                }
+                
 				$('.publicacion_ID', anuncio_div).val(row_data.data('publicacion_id'));
 				$('.usuario_ID', anuncio_div).val(row_data.data('idUsuario'));
                 $('.f_pub', anuncio_div).text(row_data.data('fechaCreacion'));

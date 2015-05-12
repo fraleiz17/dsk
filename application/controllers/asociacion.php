@@ -82,6 +82,15 @@ class Asociacion extends CI_Controller {
             $data['user'] = null;
             $data['carritoT'] = 0;
         }
+        if($this->session->userdata('tipoUsuario') == 2 || $this->session->userdata('tipoUsuario') == 1 || $this->session->userdata('tipoUsuario') == false){
+            //$data['directorios'] = $this->usuario_model->getDirectorios(4);
+            $data['planes'] = $this->defaultdata_model->getPaquetesCupon(5);
+            $data['seccion'] = 4;
+        } else{
+        //$data['directorios'] = $this->usuario_model->getDirectorios(11);
+        $data['planes'] = $this->defaultdata_model->getPaquetesCupon(4);
+        $data['seccion'] = 4;
+        }
         $this->load->view('asociacion_view', $data);
     }
 
