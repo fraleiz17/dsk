@@ -62,7 +62,7 @@ class Asociacion extends CI_Controller {
 
 
         $data['mapaSegundo'] = 'mapa_view'; 
-        $data['seccion'] = 12;
+        
         $data['banner'] = $this->defaultdata_model->getTable('banner');
         $data['estados'] = $this->defaultdata_model->getEstados();
         $data['paquetes'] = $this->defaultdata_model->getPaquetes();
@@ -85,11 +85,11 @@ class Asociacion extends CI_Controller {
         if($this->session->userdata('tipoUsuario') == 2 || $this->session->userdata('tipoUsuario') == 1 || $this->session->userdata('tipoUsuario') == false){
             //$data['directorios'] = $this->usuario_model->getDirectorios(4);
             $data['planes'] = $this->defaultdata_model->getPaquetesCupon(5);
-            $data['seccion'] = 4;
+            $data['seccion'] = 11;
         } else{
         //$data['directorios'] = $this->usuario_model->getDirectorios(11);
         $data['planes'] = $this->defaultdata_model->getPaquetesCupon(4);
-        $data['seccion'] = 4;
+        $data['seccion'] = 11;
         }
         $this->load->view('asociacion_view', $data);
     }

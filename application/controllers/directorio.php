@@ -131,7 +131,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         $data['giros'] = $this->usuario_model->getGirosUsuario(intval($id));
 
         if($this->session->userdata('tipoUsuario') == 3){
-             $data['seccion'] = 11;
+             $data['seccion'] = 4;
         } else {
             $data['seccion'] = 4;
         }
