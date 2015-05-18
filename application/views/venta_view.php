@@ -38,7 +38,6 @@ jQuery(document).ready(
   );
 function buscar_imagen(id){
              id_anuncio="id_anuncio="+id;
-             console.log(id_anuncio);
 
             $.ajax({
                 url: '<?php echo base_url('venta/fotos') ?>',
@@ -47,7 +46,6 @@ function buscar_imagen(id){
                 type: 'post',
                  success: function(result)
                 {
-
                     var data = result.data;
                     if (result.count < 1) {
                         for (var i = 0; i < result.count; i++)
@@ -389,8 +387,8 @@ echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
 <script>
 
 function buscar_anunciante(id){
-	muestra('contenedor_contactar');
-	         $(".datos_anunciante").empty();
+    muestra('contenedor_contactar');
+             $(".datos_anunciante").empty();
              id_anuncio="id_anuncio="+id;
 
             $.ajax({
@@ -410,14 +408,14 @@ function buscar_anunciante(id){
                     }
                     for (var i = 0; i < result.count; i++)
                     {
-						if (data[i].muestraTelefono==1 ){
-							var telefono=data[i].telefono;
-							} else{
+                        if (data[i].muestraTelefono==1 ){
+                            var telefono=data[i].telefono;
+                            } else{
 
-								var telefono="---";
-								}
+                                var telefono="---";
+                                }
 
-						 $(".datos_anunciante").append('</br><strong> Nombre de usuario:</strong> <font >'+data[i].nombre+' '+data[i].apellido+'</font></br><strong> Estado: </strong> <font >'+data[i].nombreEstado+'</font></br><strong> Ciudad: </strong> <font>'+data[i].ciudad+'</font></br><strong> Teléfono: </strong><font>'+telefono+'</font></br></br>');
+                         $(".datos_anunciante").append('</br><strong> Nombre de usuario:</strong> <font >'+data[i].nombre+' '+data[i].apellido+'</font></br><strong> Estado: </strong> <font >'+data[i].nombreEstado+'</font></br><strong> Ciudad: </strong> <font>'+data[i].ciudad+'</font></br><strong> Teléfono: </strong><font>'+telefono+'</font></br></br>');
 
 
             }
@@ -432,7 +430,7 @@ function buscar_anunciante(id){
 
 function buscar_anunciante_dos(id){
 
-	    $(".datos_anunciante_dos").empty();
+        $(".datos_anunciante_dos").empty();
              id_anuncio="id_anuncio="+id;
 
             $.ajax({
@@ -452,14 +450,14 @@ function buscar_anunciante_dos(id){
                     }
                     for (var i = 0; i < result.count; i++)
                     {
-						if (data[i].muestraTelefono==1 ){
-							var telefono=data[i].telefono;
-							} else{
+                        if (data[i].muestraTelefono==1 ){
+                            var telefono=data[i].telefono;
+                            } else{
 
-								var telefono="---";
-								}
+                                var telefono="---";
+                                }
 
-						 $(".datos_anunciante_dos").append('</br><strong> Nombre de usuario:</strong> <font >'+data[i].nombre+' '+data[i].apellido+'</font></br><strong> Estado: </strong> <font >'+data[i].nombreEstado+'</font></br><strong> Ciudad: </strong> <font>'+data[i].ciudad+'</font></br><strong> Teléfono: </strong><font>'+telefono+'</font></br></br>');
+                         $(".datos_anunciante_dos").append('</br><strong> Nombre de usuario:</strong> <font >'+data[i].nombre+' '+data[i].apellido+'</font></br><strong> Estado: </strong> <font >'+data[i].nombreEstado+'</font></br><strong> Ciudad: </strong> <font>'+data[i].ciudad+'</font></br><strong> Teléfono: </strong><font>'+telefono+'</font></br></br>');
 
 
             }
@@ -644,12 +642,12 @@ function buscar_detalles(id) {
                 }
 
                 $('.btn_den').data('pub', data[i].publicacionID);
-				$('.btn_contactar').data('pub', data[i].publicacionID);
+                $('.btn_contactar').data('pub', data[i].publicacionID);
             }
 
             add_favorite();
             denunciar_pub();
-			contactar_pub();
+            contactar_pub();
         }
     });
 }
@@ -711,12 +709,8 @@ function buscar_videos(id){
 
 
                         var video=$('#you_tube');
-						var direccion=$('<iframe src="'+data[i].link+'"></iframe> <br/><br/>');
-						    video.append(direccion);
-                            $(".boton_naranja_dos").empty().html('<li id="ver_video" onclick="muestra('video');">
-        Ver video
-    </li>');
-                            
+                        var direccion=$('<iframe src="'+data[i].link+'"></iframe> <br/><br/>');
+                            video.append(direccion);
 
             }
 
@@ -848,7 +842,7 @@ function contactar_pub(id) {
 $('.mas_anuncio').on('click', function(){
 
     var id = $(this).data('id');
-	$.ajax({
+    $.ajax({
                 url: '<?php echo base_url('venta/click')?>',
                 data: 'id='+id,
                 dataType: 'html',
