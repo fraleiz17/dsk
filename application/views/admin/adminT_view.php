@@ -346,37 +346,6 @@ Fotos
 
 </tr>
 
-<tr >
-<td>
-000001
-</td>
-<td>
-Ejemplo - Shampoo
-</td>
-<td>
-Shampoo para perros delicados
-</td>
-<td>
-$20
-</td>
-<td>
-Chica
-</td>
-<td>
----
-</td>
-<td>
-<img src="<?php echo base_url()?>images/productos/01/01.png" width="70" height="70"/>
-<img src="<?php echo base_url()?>images/productos/01/01.png" width="70" height="70"/>
-<img src="<?php echo base_url()?>images/productos/01/01.png" width="70" height="70"/>
-<img src="<?php echo base_url()?>images/productos/01/01.png" width="70" height="70"/>
-</td>
-<td>
-<img src="<?php echo base_url()?>images/baja_contenido.png" class="deleteContentT" id="deleteContent" data-rel="<?=$productoID?>" />
-</td>
-
-</tr>
-
 <?php if($catalogoProductos != null):
       foreach($catalogoProductos as $producto):
 	 	$productoID = $producto->productoID; ?>
