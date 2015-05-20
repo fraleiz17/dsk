@@ -162,6 +162,9 @@
             &nbsp;&nbsp;
             <input type="radio" data-label="directorio" name="seccion" value="directorio" id="directorio" class="css-checkbox"/><label for="directorio" class="css-label radGroup2">
                 Directorio:<label id="c_directorio"><font class="color_morado"> <?php echo $count_directory ?> </font></label>
+            &nbsp;&nbsp;
+            <input type="radio" data-label="asociaciones" name="seccion" value="asociaciones" id="asociaciones" class="css-checkbox"/><label for="asociaciones" class="css-label radGroup2">
+                Asociaciones:<label id="c_asociaciones"><font class="color_morado"> <?php echo $count_asc ?> </font></label>
         </div>
     </form>
     <div id="subtitulo" class="subtitulo"></div>
@@ -352,6 +355,10 @@ function buscar_imagenes(id){
 
                     if(data_seccion == 'directorio'){
                         $('#c_directorio').html(response.count);
+                    }
+
+                    if(data_seccion == 'asociaciones'){
+                        $('#c_asc').html(response.count);
                     }
 
                     $('#subtitulo').fadeOut().empty().text((data_validation + text_zona + data_seccion).toUpperCase()).fadeIn();

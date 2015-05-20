@@ -378,6 +378,7 @@ class Principal extends CI_Controller {
         $data['count_adoption_pets'] = $this->admin_model->getCountAdoptionPets(0);
         $data['count_lost_pets'] = $this->admin_model->getCountLostPets(0);
         $data['count_directory'] = $this->admin_model->getCountDirectory(0);
+        $data['count_asc'] = $this->admin_model->getCountAsc(0);
         $data['anuncios'] = $this->admin_model->getAnuncios(0,2,NULL);
 
 
@@ -422,6 +423,8 @@ class Principal extends CI_Controller {
             case "perdidos": $seccion = 7;
                 break;
             case "directorio": $seccion = 4;
+                break;
+            case "asociaciones": $seccion = 11;
                 break;
             default:
                 $seccion = 2;

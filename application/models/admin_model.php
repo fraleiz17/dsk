@@ -194,12 +194,8 @@ class Admin_model extends CI_Model
         $this->db->where("p.vigente", 1);
         
         if ($seccion != null) {
-            if($seccion == 4){
-                $this->db->where("p.seccion", 4);
-                $this->db->or_where("p.seccion", 11);
-            }else{
+            
                 $this->db->where("p.seccion", $seccion);
-            }
             
         }
 
@@ -253,11 +249,21 @@ class Admin_model extends CI_Model
         $this->db->from("publicaciones");
         $this->db->where("aprobada", $estado);
         $this->db->where("seccion", 4);
-        $this->db->or_where("seccion", 11);
         
 
         return $this->db->count_all_results();
     }
+
+    public function getCountAsc($estado)
+    {
+        $this->db->from("publicaciones");
+        $this->db->where("aprobada", $estado);
+        $this->db->where("seccion", 11);
+        
+
+        return $this->db->count_all_results();
+    }
+
 
     function deleteDetalle($id,$detalle){
         $this -> db -> where('productoID', $id);
