@@ -120,6 +120,7 @@ class TiendaAdmin extends CI_Controller {
     function deleteProduct(){
         $productoID = $this->input->post('productoIDE');
         $this->admin_model->deleteItem('productoID',$productoID,'catalogoproductos');
+        $this->admin_model->deleteItem('productoID',$productoID,'carrito');
         redirect('admin/tiendaAdmin');
     }
 
