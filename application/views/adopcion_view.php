@@ -202,7 +202,7 @@ function buscar_imagen(id){
     </div>
 </br>
 <ul class="boton_naranja_dos">
-    <li id="ver_video" onclick="muestra('video');">
+    <li id="ver_video" onclick="$('#video').toggle();">
         Ver video
     </li>
 </ul>
@@ -616,7 +616,7 @@ function buscar_detalles(id) {
             $(".descripcion_del_anuncio").empty().html('<div class="spinner" style="position:fixed;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
             $("#you_tube").empty().html('<div class="spinner" style="position:fixed;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
             $(".contenedor_galeria").empty().html('<div class="spinner" style="position:fixed;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
-            $(".boton_naranja_dos").empty().html('<div></div>');
+            //$(".boton_naranja_dos").empty().html('<div></div>');
         },
         success: function (result) {
 
@@ -645,7 +645,10 @@ function buscar_detalles(id) {
                 cont_datos.append(botones);
                 $('.descripcion_del_anuncio').append(data[i].descripcion);
                 if (data[i].paqueteID != '1'){
+                //(".boton_naranja_dos").show();
                 buscar_videos(data[i].publicacionID);
+                } else {
+                    $('#video').html('No hay video para mostrar');
                 }
 
                 $('.btn_den').data('pub', data[i].publicacionID);
