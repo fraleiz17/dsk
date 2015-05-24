@@ -379,7 +379,7 @@
 </div><!-- Contenedor central -->
 
 <!-- Contenedor De secciones de contenido -->
-<div id = "prueba" style= "display:block;overflow:hidden;width:990px !important;min-height:250px;">
+<div id = "prueba" style= "display:block;overflow:hidden;width:1000px !important;min-height:250px;">
 <!-- Inician secciones de contenido -->
 <!-- perros perdidos -->
     <div id="perros_perdidos" class="seccion_inferior_izquierda">

@@ -85,13 +85,12 @@ body{
 	margin-bottom:10px;
 	}
 .seccion_inferior{
-	
 	float: left;
 	margin-top:15px;
 	width: 241px;
 	height:290px;
-	margin-left: 4px;
-	margin-right:4px;
+	margin-left: 5px;
+	margin-right:5px;
 	box-shadow: 2px 2px 5px #999;
 	margin-bottom:10px;
 
@@ -102,7 +101,7 @@ body{
 	margin-left:0px;
 	width: 241px;
 	height:290px;
-	margin-right:4px;
+	margin-right:7px;
 	box-shadow: 2px 2px 5px #999;
 	margin-bottom:10px;
 
@@ -112,7 +111,7 @@ body{
 	margin-top:15px;
 	width: 241px;
 	height:290px;
-	margin-left: 4px;
+	margin-left: 8px;
 	box-shadow: 2px 2px 5px #999;
 	margin-bottom:10px;
 
