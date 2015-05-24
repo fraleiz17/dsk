@@ -174,12 +174,17 @@
         <div class="descripcion_paquetes">
             <strong>Incluye:</strong>
             <ul class="contenido_paquetes">
-                <li>
+               <li>
                     * <?php echo $paquetes[0]->cantFotos ?> fotos
                 </li>
-
                 <li>
                     * Texto de <?php echo $paquetes[0]->caracteres ?> caracteres
+                </li>
+                <li>
+                    * <?php echo $paquetes[0]->videos ?> video
+                </li>
+                <li>
+                    * <?php echo $paquetes[0]->cupones ?> cupones
                 </li>
                 <li>
                     * Vigencia de <?php echo $paquetes[0]->vigencia ?> días.
