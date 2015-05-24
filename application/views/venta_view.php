@@ -335,8 +335,8 @@ echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
                     <br/>
                     <font> Ciudad: <?php echo substr($publicacion->ciudad, 0, 10)?></font>
                 </div>
-                <div class="contenedor_foto_anuncio" id="contener_foto<?php echo $publicacion->publicacionID?>">
-
+                <div class="contenedor_foto_anunciod" id="contener_foto<?php echo $publicacion->publicacionID?>d">
+                  <img src="<?=base_url().$publicacion->foto?>" width="50px;">  
                 </div>
 
                 <ul class="ver_detalle_anuncio">
