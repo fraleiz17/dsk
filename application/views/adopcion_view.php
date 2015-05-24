@@ -692,6 +692,20 @@ function buscar_imagenes(id){
 
 }
 
+function contener_images() {
+
+    $('#slideshow_publicar_anuncio_previo').before('<ul id="nav_anuncio">').cycle({
+    fx:      'scrollRight', 
+    next:   '#right_previo', 
+    timeout:  0, 
+    easing:  'easeInOutBack',
+        pager:  '#nav_anuncio',
+        pagerAnchorBuilder: function(idx, slide) {
+            return '<li><a href="#"><img src="' + slide.src + '" width="61" height="44" /></a></li>';
+        }
+    });
+}
+
 
 function buscar_videos(id){
 

@@ -609,7 +609,7 @@ function buscar_detalles(id) {
             $(".descripcion_del_anuncio").empty().html('<div class="spinner" style="position:fixed;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
             $("#you_tube").empty().html('<div class="spinner" style="position:fixed;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
             $(".contenedor_galeria").empty().html('<div class="spinner" style="position:fixed;"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
-            $(".boton_naranja_dos").empty().html('<div></div>');
+            $(".boton_naranja_dos").hide();
         },
         success: function (result) {
 
@@ -638,6 +638,7 @@ function buscar_detalles(id) {
                 cont_datos.append(botones);
                 $('.descripcion_del_anuncio').append(data[i].descripcion);
                 if (data[i].paqueteID != '1'){
+                (".boton_naranja_dos").show();
                 buscar_videos(data[i].publicacionID);
                 }
 
@@ -653,7 +654,19 @@ function buscar_detalles(id) {
 }
 
 
+function contener_images() {
 
+    $('#slideshow_publicar_anuncio_previo').before('<ul id="nav_anuncio">').cycle({
+    fx:      'scrollRight', 
+    next:   '#right_previo', 
+    timeout:  0, 
+    easing:  'easeInOutBack',
+        pager:  '#nav_anuncio',
+        pagerAnchorBuilder: function(idx, slide) {
+            return '<li><a href="#"><img src="' + slide.src + '" width="61" height="44" /></a></li>';
+        }
+    });
+}
 
 function buscar_imagenes(id){
              id_anuncio="id_anuncio="+id;
@@ -664,23 +677,23 @@ function buscar_imagenes(id){
                 dataType: 'json',
                 type: 'post',
                  success: function(result)
-                {
+                { 
                     $(".contenedor_galeria").empty().html('<div id="slideshow_publicar_anuncio_previo" class="picse"></div>');
 
                     var data = result.data;
 
                     if (result.count < 1) {
-
+                    
                     }
                     for (var i = 0; i < result.count; i++)
                     {
-
-                        $("#slideshow_publicar_anuncio_previo").append('<img src="' + data[i].foto + '" width="294" height="200" style=" top: 0px; left: 0px; display: block; z-index: 5; opacity: 1;"/>');
-
+                       
+                        $("#slideshow_publicar_anuncio_previo").append('<img src="<?php echo base_url() ?>' + data[i].foto + '" width="294" height="200" style=" top: 0px; left: 0px; display: block; z-index: 5; opacity: 1;"/>');
+                        
             }
             contener_images();
     }
-
+    
 });
 
 }
