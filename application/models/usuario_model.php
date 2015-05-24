@@ -409,7 +409,7 @@ class Usuario_model extends CI_Model
      * */
     function save_cupones($idCuponAdquirido)
     {
-        $this->db->where('idCuponAdquirido', $idCuponAdquirido->idCuponAdquirido);
+        $this->db->where('idCuponAdquirido', $idCuponAdquirido);
         $this->db->update('cuponadquirido', array('usado' => 1));
     }
 
