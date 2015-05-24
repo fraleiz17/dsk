@@ -50,7 +50,6 @@ class Venta extends CI_Controller {
         $data['razas'] = $this->defaultdata_model->getRazas();
         $data['giros'] = $this->defaultdata_model->getGiros();
         $data['publicaciones'] = $this->venta_model->getAnuncios(self::$seccion);
-        var_dump($data['publicaciones']);
         $data['seccion'] = self::$seccion;
         $data['estados']  = $this->defaultdata_model->getEstados();
         $data['paquetes'] = $this->defaultdata_model->getPaquetes();

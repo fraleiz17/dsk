@@ -335,8 +335,8 @@ echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
                     <br/>
                     <font> Ciudad: <?php echo substr($publicacion->ciudad, 0, 10)?></font>
                 </div>
-                <div class="contenedor_foto_anunciod" id="contener_foto<?php echo $publicacion->publicacionID?>d">
-                  <img src="<?=base_url().$publicacion->foto?>" width="50px;">  
+                <div class="contenedor_foto_anuncio" id="contener_foto<?php echo $publicacion->publicacionID?>">
+                  <img src="<?=base_url().$publicacion->foto?>" width="auto" height="100%">  
                 </div>
 
                 <ul class="ver_detalle_anuncio">
@@ -557,8 +557,8 @@ function obten_id(id) {
                         cont_anun.append(cont_descripcion);
 
                         var cont_imagen = $('<div class="contenedor_foto_anuncio" id="contener_foto'+data[i].publicacionID+'" ></div>');
-                       buscar_imagen(data[i].publicacionID);
-                        cont_anun.append(cont_imagen);
+                       //buscar_imagen(data[i].publicacionID);
+                        //cont_anun.append(cont_imagen);
 
                         <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
                         var ver_mas = $('<ul class="ver_detalle_anuncio"><li onclick="muestra(\'contenedr_anuncio_detalle\')">Ver detalle...</li></ul>');
