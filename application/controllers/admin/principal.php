@@ -596,7 +596,7 @@ $this->email_model->send_email('', $datos->correo, 'Ha sido declinado tu anuncio
         $mensajeC = $this->admin_model->getMensaje($mensajeID);
         $destinatario = $this->input->post('destinatario');
         $usuarioID = $this->input->post('usuarioID');
-         $mensaje = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        $mensaje = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

@@ -378,6 +378,7 @@ class Usuario_model extends CI_Model
     function getDireccionEnvio($idUsuario){
         $this->db->from('direccionenvio ud');
         $this->db->join('usuario u', 'ud.idUsuario=u.idUsuario');
+        $this->db->join('estado e', 'ud.estadoID=e.estadoID');
         $this->db->where('u.idUsuario', $idUsuario);
         $query = $this->db->get();
          if ($query->num_rows() == 1) {
@@ -396,6 +397,7 @@ class Usuario_model extends CI_Model
             $value['compraID'] = $compraID;
             $this->db->insert('compradetalle', $value);
         }
+        return $compraID; 
     }
 
     function deleteCarrito($idUsuario)

@@ -17,6 +17,7 @@ class Carrito extends CI_Controller
         $this->load->model('defaultdata_model');
         $this->load->model('admin_model');
         $this->load->model('usuario_model');
+        $this->load->model('email_model');
         $this->load->helper(array('form', 'url'));
         $this->load->library('googlemaps');
         $this->load->library('cart');
@@ -471,20 +472,145 @@ class Carrito extends CI_Controller
                     );
             }
 
-            $this->usuario_model->addCompra($compra, $compra_detalle);
+            
+
+            $compraID = $this->usuario_model->addCompra($compra, $compra_detalle);
 
             $this->usuario_model->deleteCarrito($usuario);
 
             $this->usuario_model->save_cupones($this->session->userdata('cuponusuario'));
 
+
+            // Mensaje de Salida
+            $direccion_envio = $this->usuario_model->getDireccionEnvio($usuario);
+
+            $encabezado = '<strong>Orden de Compra en QuieroUnPerro.com No.:</strong> '.$compraID;
+            $datosEnvio = '<strong>Nombre: </strong> '.strtoupper($direccion_envio->nombre.' '.$direccion_envio->apellido).'.<br>';
+            $datosEnvio .= '<strong>Correo: </strong> '.strtoupper($this->session->userdata('correo')).'<strong> Teléfono: </strong>  '.$this->session->userdata('telefono').'.<br>';
+            $datosEnvio .= '<strong>Calle: </strong> '.strtoupper($direccion_envio->calle.'<strong> Número: </strong>  '.$direccion_envio->numero.'<strong> Colonia: </strong>  '.$direccion_envio->numero).'.<br>';
+            $datosEnvio .= '<strong>CP: </strong> '.strtoupper($direccion_envio->cp.'<strong> Ciudad: </strong>  '.$direccion_envio->ciudad.'<strong> Estado: </strong>  '.$direccion_envio->nombreEstado).'.<br>';
+            $costoEnvio = $this->usuario_model->getCostoEnvio($direccion_envio->estadoID);
+
+            $tablaCompra = '<table border="1">
+                                    <tr>
+                                        <th>ProductoID</th>
+                                        <th>Producto</th>
+                                        <th>Cantidad</th>
+                                        <th>Talla</th>
+                                        <th>Color</th>
+                                        <th>Precio</th>
+                                    </tr>';
+            $total_se = 0;
+            foreach ($carrito as $value) {
+                $tablaCompra .='<tr>
+                                        <td>'.$value->productoID.'</td>
+                                        <td>'.$value->nombre.'</td>
+                                        <td>'.$value->cantidad.'</td>
+                                        <td>'.$value->talla.'</td>
+                                        <td>'.$value->color.'</td>
+                                        <td> $ '.$value->precio.'</td>
+                                    </tr>';
+                     $total_se +=  ($value->cantidad * $value->precio );    
+
+               
+            }
+            if($compra[0]['descuento'] != null){
+                $descuento = $compra[0]['descuento'];
+            } else { $descuento = 0; }
+            $t_descuento = $total_se -($total_se * ((100 - $descuento)/100));
+            $i_total = ($total_se - $t_descuento + $costoEnvio) * .16;
+            $s_total = ($total_se - $t_descuento + $costoEnvio) - $i_total;
+
+            $tablaCompra .= '<tr>
+                                 <th colspan="5">Descuento</th>
+                                 <th>'.$t_descuento.'</th>
+                             </tr>';
+            $tablaCompra .= '<tr>
+                                 <th colspan="5">Gastos Envío</th>
+                                 <th>'.$costoEnvio.'</th>
+                             </tr>';
+            $tablaCompra .= '<tr>
+                                 <th colspan="5">Subtotal</th>
+                                 <th>'.$s_total.'</th>
+                             </tr>';
+            
+            $tablaCompra .= '<tr>
+                                 <th colspan="5"> IVA </th>
+                                 <th>'.$i_total.'</th>
+                             </tr>';
+            $tablaCompra .= '<tr>
+                                 <th colspan="5">Total</th>
+                                 <th>'.($total_se - $t_descuento + $costoEnvio).'</th>
+                             </tr>';
+
+             $tablaCompra .= '</table>';
+
+             $mensaje = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Notificacion-QuieroUnPerro.com</title>
+
+</head>
+
+<body>
+<table width="647" align="center">
+<tr>
+<td width="231" height="129" colspan="2" valign="top">
+<img src="http://quierounperro.com/psk/images/logo_mail.jpg"/>
+</td>
+</tr>
+<tr>
+<td align="center"><h4 style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;">Gracias por comprar en QuieroUnPerro.com</h4></td>
+</tr> 
+<tr>
+<td style="padding-left:15px;"> 
+<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >'.$encabezado.'</font>
+<br/>
+<br/>
+
+<font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
+'.$datosEnvio.'
+<br/><br/>
+<p> '.$tablaCompra.'</p>
+</font>
+<br/>
+<p>Pronto recibirás información del envío de tu producto</p>
+<br/>
+<p>Si tienes cualquier duda al respecto, por favor escr&iacute;benos a contacto@quierounperro.com</p>
+</td>
+</tr>
+
+<tr>
+<td colspan="7" >
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;"> ¡Muchas Gracias! </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:12px; padding-left:15px;"> El Equipo de QuieroUnPerro.com </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:10px; padding-left:15px;"> Todos los derechos reservados '.date('Y').' </font>
+</td>
+</tr>
+</table>
+
+
+
+</body>
+</html>
+';
+
+
+            //fin mensaje
+
             if ($this->db->trans_status() === FALSE)
             {
                 $this->db->trans_rollback();
                 $this->session->set_flashdata('info', "<div class='alert alert-warning'>No se ha logrado la compra. Vuelva a intentarlo o contacte al administrador del sitio.</div>");
+            
             } else {
                 $this->db->trans_commit();
                 $this->session->set_flashdata('info', '<div class="alert alert-success">La compra se realizo correctamente.</div>');
-
+                $this->email_model->send_email('', 'marthahdez2@gmail.com', 'Compra realizada con éxito en QUP', $mensaje);
+                //$this->session->userdata('correo')
             }
         //TODO Debe de redirigir a las compras
             redirect('principal/tienda');
