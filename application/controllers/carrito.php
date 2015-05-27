@@ -491,8 +491,8 @@ class Carrito extends CI_Controller
             $datosEnvio .= '<strong>CP: </strong> '.strtoupper($direccion_envio->cp.'<strong> Ciudad: </strong>  '.$direccion_envio->ciudad.'<strong> Estado: </strong>  '.$direccion_envio->nombreEstado).'.<br>';
             $costoEnvio = $this->usuario_model->getCostoEnvio($direccion_envio->estadoID);
 
-            $tablaCompra = '<table border="1">
-                                    <tr>
+            $tablaCompra = '<table style=" font-family:Verdana, Geneva, sans-serif; font-size:12px; text-align: left; vertical-align: middle;">
+                                    <tr style=" font-weight:bold; background-color:#6A2C91; color:white; ">
                                         <th>ProductoID</th>
                                         <th>Producto</th>
                                         <th>Cantidad</th>
@@ -502,7 +502,7 @@ class Carrito extends CI_Controller
                                     </tr>';
             $total_se = 0;
             foreach ($carrito as $value) {
-                $tablaCompra .='<tr>
+                $tablaCompra .='<tr style="background-color:#D8E7D2;">
                                         <td>'.$value->productoID.'</td>
                                         <td>'.$value->nombre.'</td>
                                         <td>'.$value->cantidad.'</td>
@@ -521,26 +521,30 @@ class Carrito extends CI_Controller
             $i_total = ($total_se - $t_descuento + $costoEnvio) * .16;
             $s_total = ($total_se - $t_descuento + $costoEnvio) - $i_total;
 
-            $tablaCompra .= '<tr>
+            $tablaCompra .= '
+                            <tr style="background-color:#DFF0D8;">
+                                 <th colspan="6"></th>
+                             </tr>
+                            <tr style="background-color:#DFF0D8;">
                                  <th colspan="5">Descuento</th>
-                                 <th>'.$t_descuento.'</th>
+                                 <td> $ '.number_format((float)$t_descuento, 2, '.', '').'</td>
                              </tr>';
-            $tablaCompra .= '<tr>
+            $tablaCompra .= '<tr style="background-color:#DFF0D8;">
                                  <th colspan="5">Gastos Envío</th>
-                                 <th>'.$costoEnvio.'</th>
+                                 <td> $ '.number_format((float)$costoEnvio, 2, '.', '').'</td>
                              </tr>';
-            $tablaCompra .= '<tr>
+            $tablaCompra .= '<tr style="background-color:#DFF0D8;">
                                  <th colspan="5">Subtotal</th>
-                                 <th>'.$s_total.'</th>
+                                 <td> $ '.number_format((float)$s_total, 2, '.', '').'</td>
                              </tr>';
             
-            $tablaCompra .= '<tr>
+            $tablaCompra .= '<tr style="background-color:#DFF0D8;">
                                  <th colspan="5"> IVA </th>
-                                 <th>'.$i_total.'</th>
+                                 <td> $ '.number_format((float)$i_total, 2, '.', '').'</td>
                              </tr>';
-            $tablaCompra .= '<tr>
+            $tablaCompra .= '<tr style="background-color:#DFF0D8;">
                                  <th colspan="5">Total</th>
-                                 <th>'.($total_se - $t_descuento + $costoEnvio).'</th>
+                                 <td> $ '.number_format((float)($total_se - $t_descuento + $costoEnvio), 2, '.', '').'</td>
                              </tr>';
 
              $tablaCompra .= '</table>';
@@ -609,7 +613,8 @@ class Carrito extends CI_Controller
             } else {
                 $this->db->trans_commit();
                 $this->session->set_flashdata('info', '<div class="alert alert-success">La compra se realizo correctamente.</div>');
-                $this->email_model->send_email('', 'marthahdez2@gmail.com', 'Compra realizada con éxito en QUP', $mensaje);
+                $this->email_model->send_email('', 'tienda@quierounperro.com', 'Compra realizada con éxito en QUP', $mensaje);
+                $this->email_model->send_email('', $this->session->userdata('correo'), 'Compra realizada con éxito en QUP', $mensaje);
                 //$this->session->userdata('correo')
             }
         //TODO Debe de redirigir a las compras
