@@ -133,6 +133,7 @@
 	width:316px;
 	height:94px;
 	border: 1px solid #E7511E;
+	overflow: hidden;
 	}
 .franja_naranja{
 	width:318px;
@@ -169,6 +170,7 @@
 	height:227px;
 	border:1px solid #39A9DC;
 	margin-top:-61px;
+	overflow: hidden;
 		}
 .ver_mas_azul{
 	width:159px;
@@ -405,3 +407,8 @@ color: #3E3D40;
 .ver_mas_verde_mini:hover{
 	font-size:11px;
 	cursor:pointer;}
+.contenedor_imagen_amarilla {
+  width: 316px;
+  height: 94px;
+  border: 1px solid #F8B334;
+}

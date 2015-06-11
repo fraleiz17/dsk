@@ -47,7 +47,7 @@ DATOS CURIOSOS
 <?php if($fotoscontenido != null){ 
 foreach ($fotoscontenido as $fc){
   if($fc->contenidoID == $contenidos[0]->contenidoID){?>
-<div class="contenedor_imagen_verde"><img src="<?php echo base_url() ?>images/datos_curiosos/<?=$fc->foto?>"/> </div>
+<div class="contenedor_imagen_verde"><img src="<?php echo base_url() ?>images/datos_curiosos/<?=$fc->foto?>" width="100%" height="100%"/> </div>
 <?php }
 }
 }?>
@@ -62,7 +62,7 @@ foreach ($fotoscontenido as $fc){
 <?php if($fotoscontenido != null){ 
 foreach ($fotoscontenido as $fc){
   if($fc->contenidoID == $contenidos[1]->contenidoID){?>
-<div class="contenedor_imagen_amarilla"><img src="<?php echo base_url() ?>images/datos_curiosos/<?=$fc->foto?>"/> </div>
+<div class="contenedor_imagen_amarilla"><img src="<?php echo base_url() ?>images/datos_curiosos/<?=$fc->foto?>" width="100%" height="100%"/> </div>
 <?php }
 }
 }?>
@@ -82,7 +82,7 @@ foreach ($fotoscontenido as $fc){
  <div class="contenedor_imagen_horizontal_naranja"> <?php if($fotoscontenido != null){ 
 foreach ($fotoscontenido as $fc){
   if($fc->contenidoID == $contenidos[2]->contenidoID){?>
-<div class="contenedor_imagen_naranja"><img src="<?php echo base_url() ?>images/datos_curiosos/<?=$fc->foto?>"/> </div>
+<div class="contenedor_imagen_naranja"><img src="<?php echo base_url() ?>images/datos_curiosos/<?=$fc->foto?>" width="100%" height="100%" /> </div>
 <?php }
 }
 }?></div>
@@ -97,7 +97,7 @@ foreach ($fotoscontenido as $fc){
 <?php if($fotoscontenido != null){ 
 foreach ($fotoscontenido as $fc){
   if($fc->contenidoID == $contenidos[3]->contenidoID){?>
-<div class="contenedor_imagen_azul"><img src="<?php echo base_url() ?>images/datos_curiosos/<?=$fc->foto?>"/>  </div>
+<div class="contenedor_imagen_azul"><img src="<?php echo base_url() ?>images/datos_curiosos/<?=$fc->foto?>" width="100%" height="100%"/>  </div>
 <?php }
 }
 }?>
