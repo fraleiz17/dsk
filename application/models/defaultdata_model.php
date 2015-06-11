@@ -242,6 +242,20 @@ where `publicaciones`.`fechaVencimiento` = date_add(CURRENT_DATE(), INTERVAL 7 D
          }
     }
 
+    function getTexto($seccionID){
+       $query = $this->db->query('select distinct texto
+        from banner
+        where posicion = 2
+        and (seccionID = '.$seccionID.' )');
+      
+      if ($query->num_rows() == 1){
+          $e = $query->row();
+            return $e->texto;
+         } else {
+            return null;
+         }
+    }
+
 
 
 }

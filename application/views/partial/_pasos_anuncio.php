@@ -458,17 +458,7 @@ $(document).ready(function()
     <!--imagenes-->
     
     
-    <div style="width:800px; height:auto;">
-       <?php  if ($banner !== null && !empty($banner)) {
-                    foreach ($banner as $contenido) {
-                        if ($contenido->zonaID == 9 && $contenido->posicion == 2 && $contenido->seccionID == $seccion) {
-                            ?>    
-                            <div>
-                                <h3><?php echo $contenido->texto; ?></h3>
-                            </div>
-                            <?php }
-                        }
-                    } ?>
+    <div style="width:800px; height:auto;" id="texto_apoyo">
     </div>
 
 </div>
@@ -990,7 +980,17 @@ TOTAL
             } else {
                 $('#precio').removeAttr('disabled');
             }
-            console.log(valor+'seccionnnnnnnn')
+            console.log(valor+'seccionnnnnnnn');
+            $.ajax({
+                    url:'<?php echo base_url('venta/getTextoApoyo') ?>',
+                    type:'post',
+                    dataType: 'html',
+                    data: 'seccionID=' +valor,
+                    success: function(data){
+                        $('#texto_apoyo').html('');
+                        $('#texto_apoyo').html(data);
+                    }
+                });
             
         });
 
