@@ -539,12 +539,12 @@
 
 
                                                                 <br/>
-                                                                <br/>
+                                                                <p style=" background-color: #DFF0D8; color: #3C763D; font-weight:bolder;">* Antes de proceder al pago, revisa por favor que tus datos de envío sean correctos.</p>
                                                                 <br/>
                                                                 <ul class="">
                                                                     <li>
                                                                         <script type="text/javascript" src="http://mp-tools.mlstatic.com/buttons/render.js"></script>
-                                                                        <a href="<?php echo $preference['response']['sandbox_init_point']; ?>" name="MP-Checkout"
+                                                                        <a href="<?php echo $preference['response']['init_point']; ?>" name="MP-Checkout"
                                                                            class="green-M-Rn" mp-mode="modal" onreturn="execute_my_onreturn" style="padding: 0px; float:right;" onclick="confirm('¿Los datos de envio son correctos?')">Pagar</a>
 
 
