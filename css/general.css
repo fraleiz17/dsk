@@ -170,6 +170,7 @@ body{
 	padding: 0 10px;
 	position: static;
 	min-height:450px;
+	overflow: hidden;
 
 	}
 
