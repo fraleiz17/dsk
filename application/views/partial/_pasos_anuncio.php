@@ -13,7 +13,14 @@
 <link href="http://hayageek.github.io/jQuery-Upload-File/uploadfile.min.css" rel="stylesheet">
 <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
 <script src="http://hayageek.github.io/jQuery-Upload-File/jquery.uploadfile.min.js"></script>
-
+<style>
+#descripcionPrev {
+  overflow: hidden;
+  width: 640px;
+  height: 30px;
+  text-overflow: ellipsis;
+}
+</style>
 <div>
 <div class="numeros_publicar_anuncio_mini">
     <ul class="listado_numeros_anuncio_mini">
@@ -556,7 +563,7 @@ $(document).ready(function()
             MÁS DETALLES
         </div>
         <div class="descripcion_del_anuncio_mini">
-           <label id="descripcionPrev"></label>
+           <p id="descripcionPrev"></p>
         </div>
         <br/>
         <ul class="boton_naranja_dos_mini">
