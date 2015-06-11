@@ -63,7 +63,7 @@ function buscar_imagen(id){
                         
                         }
                     
-                $("#contener_foto"+id).append('<img src="' + foto + '"width="auto" height="100%"/>');
+                $("#contener_foto"+id).append('<img src="' + foto + '"width="100%" height="100%"/>');
                 
                 }
                  })
@@ -343,7 +343,7 @@ ADOPCIÓN
 <font> Ciudad: <?=substr($publicacion->ciudad, 0, 10)?></font>
 </div>
  <div class="contenedor_foto_anuncio" id="contener_foto<?php echo $publicacion->publicacionID?>">
-                   <img src="<?=base_url().$publicacion->foto?>" width="auto" height="100%""> 
+                   <img src="<?=base_url().$publicacion->foto?>" width="100%" height="100%""> 
                 </div>
  
           <ul class="ver_detalle_anuncio">
