@@ -15,8 +15,9 @@ class Principal extends CI_Controller {
 		$CI = & get_instance();
         $CI->config->load("mercadopago", FALSE);
         $config = $CI->config->item('mercadopago');
-        $this->load->library('Mercadopago', $config);
-        $this->mercadopago->sandbox_mode(TRUE);
+        require_once(APPPATH.'libraries/mercadopago.php');
+        //$this->load->library('Mercadopago', $config);
+        //$this->mercadopago->sandbox_mode(TRUE);
 
 		/*if(is_logged()&&$this->session->userdata('tipoUsuario')==1){
                 redirect('usuario/cuenta/activado');
@@ -85,6 +86,7 @@ class Principal extends CI_Controller {
         //razas
         $data['razas'] = $this->defaultdata_model->getRazas();
         $data['banner'] = $this->defaultdata_model->getTable('banner');
+        //$data['textos'] = $this->defaultdata_model->getTexto(2);
         if(is_logged()){
         	$cupones = $this->usuario_model->getCuponesUsuario($this->session->userdata('idUsuario'));
         	$data['cupones'] = $cupones;

@@ -1,4 +1,5 @@
 <?php
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
  * MercadoPago Integration Library
  * Access MercadoPago for payments integration
@@ -6,26 +7,22 @@
  * @author hcasatti
  *
  */
-class MP {
+$GLOBALS["LIB_LOCATION"] = dirname(__FILE__);
+
+class Mercadopago {
     const version = "0.3.3";
+
     private $client_id;
     private $client_secret;
     private $ll_access_token;
     private $access_data;
     private $sandbox = FALSE;
-    function __construct() {
-        $i = func_num_args(); 
-        if ($i > 2 || $i < 1) {
-            throw new Exception("Invalid arguments. Use CLIENT_ID and CLIENT SECRET, or ACCESS_TOKEN");
-        }
-        if ($i == 1) {
-            $this->ll_access_token = func_get_arg(0);
-        }
-        if ($i == 2) {
-            $this->client_id = func_get_arg(0);
-            $this->client_secret = func_get_arg(1);
-        }
+
+    function __construct($config) {
+        $this->client_id = $config['CLIENT_ID'];
+        $this->client_secret = $config['CLIENT_SECRET'];
     }
+
     public function sandbox_mode($enable = NULL) {
         if (!is_null($enable)) {
             $this->sandbox = $enable === TRUE;
@@ -36,19 +33,16 @@ class MP {
      * Get Access Token for API use
      */
     public function get_access_token() {
-        if (isset ($this->ll_access_token) && !is_null($this->ll_access_token)) {
-            return $this->ll_access_token;
-        }
         $app_client_values = $this->build_query(array(
             'client_id' => $this->client_id,
             'client_secret' => $this->client_secret,
             'grant_type' => 'client_credentials'
-        ));
+                ));
+
         $access_data = MPRestClient::post("/oauth/token", $app_client_values, "application/x-www-form-urlencoded");
-        if ($access_data["status"] != 200) {
-            throw new Exception ($access_data['response']['message'], $access_data['status']);
-        }
+
         $this->access_data = $access_data['response'];
+
         return $this->access_data['access_token'];
     }
     /**
@@ -287,7 +281,7 @@ class MPRestClient {
             throw new Exception("cURL extension not found. You need to enable cURL in your php.ini or another configuration you have.");
         }
         $connect = curl_init(self::API_BASE_URL . $uri);
-        curl_setopt($connect, CURLOPT_USERAGENT, "MercadoPago PHP SDK v" . MP::version);
+        curl_setopt($connect, CURLOPT_USERAGENT, "MercadoPago PHP SDK v" . Mercadopago::version);
         curl_setopt($connect, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($connect, CURLOPT_CUSTOMREQUEST, $method);
         curl_setopt($connect, CURLOPT_HTTPHEADER, array("Accept: application/json", "Content-Type: " . $content_type));
@@ -314,41 +308,34 @@ class MPRestClient {
         if ($data) {
             self::set_data($connect, $data, $content_type);
         }
+
         $api_result = curl_exec($connect);
         $api_http_code = curl_getinfo($connect, CURLINFO_HTTP_CODE);
-        if ($api_result === FALSE) {
-            throw new Exception (curl_error ($connect));
-        }
+
         $response = array(
             "status" => $api_http_code,
             "response" => json_decode($api_result, true)
         );
+
         if ($response['status'] >= 400) {
-            $message = $response['response']['message'];
-            if (isset ($response['response']['cause'])) {
-                if (isset ($response['response']['cause']['code']) && isset ($response['response']['cause']['description'])) {
-                    $message .= " - ".$response['response']['cause']['code'].': '.$response['response']['cause']['description'];
-                } else if (is_array ($response['response']['cause'])) {
-                    foreach ($response['response']['cause'] as $cause) {
-                        $message .= " - ".$cause['code'].': '.$cause['description'];
-                    }
-                }
-            }
-            throw new Exception ($message, $response['status']);
+            throw new Exception ($response['response']['message'], $response['status']);
         }
+
         curl_close($connect);
+
         return $response;
     }
+
     public static function get($uri, $content_type = "application/json") {
         return self::exec("GET", $uri, null, $content_type);
     }
+
     public static function post($uri, $data, $content_type = "application/json") {
         return self::exec("POST", $uri, $data, $content_type);
     }
+
     public static function put($uri, $data, $content_type = "application/json") {
         return self::exec("PUT", $uri, $data, $content_type);
     }
-    public static function delete($uri, $content_type = "application/json") {
-        return self::exec("DELETE", $uri, $null, $content_type);
-    }
+
 }

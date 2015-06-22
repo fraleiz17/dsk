@@ -27,8 +27,8 @@ class Directorio extends CI_Controller {
 
 
         $config = $CI->config->item('mercadopago');
-        $this->load->library('Mercadopago', $config);
-        $this->mercadopago->sandbox_mode(FALSE);
+        //$this->load->library('Mercadopago', $config);
+        //$this->mercadopago->sandbox_mode(FALSE);
 
         $this->load->library('email');
 
@@ -564,8 +564,12 @@ $data['paises'] = $this->defaultdata_model->getPaises();
             "external_reference" => "$key_compra"
         );
 
-        $preference = $this->mercadopago->create_preference($preference_data);
+        //$preference = $this->mercadopago->create_preference($preference_data);
+        require_once(APPPATH.'libraries/mercadopago.php');
+        $mp = new MP ("4460844937988109", "4iEWzMutgMTEWYvCOUjbGUP7VPJ8pr6k");
 
+        //$preference = $mp->get_preference($preference_data);
+        $preference = $mp->create_preference ($preference_data);
 
         if ($this->db->trans_status() === FALSE) {
             $this->db->trans_rollback();

@@ -27,8 +27,8 @@ class Venta extends CI_Controller {
         $CI = & get_instance();
         $CI->config->load("mercadopago", TRUE);
         $config = $CI->config->item('mercadopago');
-        $this->load->library('Mercadopago', $config);
-        $this->mercadopago->sandbox_mode(FALSE);
+        //$this->load->library('Mercadopago', $config);
+        //$this->mercadopago->sandbox_mode(FALSE);
 
 
         if (!is_authorized(array(1, 2, 3), 5, $this->session->userdata('nivel'), $this->session->userdata('rol'))) {
@@ -421,7 +421,11 @@ $data['paises'] = $this->defaultdata_model->getPaises();
             )
         );
 
-        $preference = $this->mercadopago->create_preference($preference_data);
+        //$preference = $this->mercadopago->create_preference($preference_data);
+        require_once(APPPATH.'libraries/mercadopago.php');
+        $mp = new MP ("4460844937988109", "4iEWzMutgMTEWYvCOUjbGUP7VPJ8pr6k");
+        $preference = $mp->create_preference ($preference_data);
+        
          if ($this->db->trans_status() === FALSE) {
             $this->db->trans_rollback();
             echo 'Vuelva a intentarlo.';
@@ -984,6 +988,13 @@ Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
 ';
 $this->email_model->send_email('', $this->session->userdata('correo'), 'Has publicado un anuncio en QUP', $mensaje2);
 return true;
+
+    }
+
+    function getTextoApoyo(){
+        $seccionID = $this->input->post('seccionID');
+        $texto = $this->defaultdata_model->getTexto($seccionID);
+        echo $texto;
 
     }
 

@@ -23,12 +23,13 @@ class Carrito extends CI_Controller
         $this->load->library('cart');
         $this->load->helper('date');
 
-        $CI = & get_instance();
+        /*$CI = & get_instance();
         $CI->config->load("mercadopago", TRUE);
         $config = $CI->config->item('mercadopago');
-        $this->load->library('Mercadopago', $config);
-        $this->mercadopago->sandbox_mode(FALSE);
-
+        //$this->load->library('Mercadopago', $config);
+        //$this->mercadopago->sandbox_mode(FALSE);*/
+        
+        
 
         if (!is_authorized(array(1, 2, 3), 5, $this->session->userdata('nivel'), $this->session->userdata('rol'))) {
             $this->session->set_flashdata('error', 'userNotAutorized');
@@ -42,6 +43,9 @@ class Carrito extends CI_Controller
 
     public function index()
     {
+        require_once(APPPATH.'libraries/mercadopago.php');
+
+
         $data['SYS_metaTitle'] = '';
         $data['SYS_metaKeyWords'] = '';
         $data['SYS_metaDescription'] = '';
@@ -78,6 +82,7 @@ class Carrito extends CI_Controller
         }
         $costo = $this->usuario_model->getCostoEnvio($estadoID);
         $data['costo'] = $costo;
+        //var_dump($datosPersonales,$data['costo'],$estadoID);
 
         $productos = 0;
         $precio = 0;
@@ -144,8 +149,12 @@ class Carrito extends CI_Controller
         $data['iva'] = $iva;
         $data['totalSinIVA'] = $totalSinIVA;
 
-        $preference = $this->mercadopago->create_preference($preference_data);
-        //var_dump($preference);
+        //require_once(APPPATH.'libraries/mercadopago.php');
+        $mp = new MP ("4460844937988109", "4iEWzMutgMTEWYvCOUjbGUP7VPJ8pr6k");
+
+        //$preference = $mp->get_preference($preference_data);
+        $preference = $mp->create_preference ($preference_data);
+        //$preference = $this->mercadopago->create_preference($preference_data);
         $data['preference'] = $preference;
 
         $this->load->view('carrito_view', $data);

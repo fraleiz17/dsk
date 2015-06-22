@@ -23,8 +23,8 @@ class Perdidos extends CI_Controller
         $CI = & get_instance();
         $CI->config->load("mercadopago", TRUE);
         $config = $CI->config->item('mercadopago');
-        $this->load->library('Mercadopago', $config);
-        $this->mercadopago->sandbox_mode(FALSE);
+        //$this->load->library('Mercadopago', $config);
+        //$this->mercadopago->sandbox_mode(FALSE);
 		$this->load->library('email');
 
 
