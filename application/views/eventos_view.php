@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es-419">
 <head>
 
@@ -7,8 +7,9 @@
 <link rel="shortcut icon" href="<?php echo base_url() ?>images/ico.ico" />  
 <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/reset.css" media="screen"></link>
  <link rel="stylesheet" href="<?php echo base_url() ?>css/jPages.css">
-<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/general.css" media="screen"></link> <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/venta.css" media="screen"></link><link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/directorio.css" media="screen"></link> <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/eventos.css" media="screen"></link>
-<?php $this->load->view('general/LoginFiles');?>
+<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/general.css" media="screen"></link> <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/venta.css" media="screen"></link>
+
+<?php //$this->load->view('general/LoginFiles');?>
 
    <script src="<?php echo base_url() ?>js/jquery-1.10.2.js"></script>
      <script src="<?php echo base_url() ?>js/jPages.js"></script>
@@ -18,8 +19,14 @@
    <script type="text/javascript" src="<?php echo base_url() ?>js/jquery.cycle.all.js"></script>
    <script src="<?php echo base_url() ?>js/funciones_.js" type="text/javascript"></script>
        <script type="text/javascript" src="<?php echo base_url() ?>js/jquery.customSelect.js"></script>
-     <script type="text/javascript" src="<?php echo base_url() ?>js/funcion_select.js"></script>
-  
+     <script type="text/javascript" src="<?php echo base_url() ?>js/funcion_select.js"></script>-->
+  <?php $this->load->view('general/LoginFiles');?>
+<?php
+$this->load->view('general/general_header_view', array('title' => 'Evento del Mes',
+  'links'                                                      => array('venta'), 'scripts' => array('funciones_evento')))
+  ?>
+  <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/directorio.css" media="screen"></link> <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/eventos.css" media="screen"></link>
+
     <script>
 jQuery(document).ready(function(){
 

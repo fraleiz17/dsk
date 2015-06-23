@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -8,8 +8,8 @@
 <link type="text/css" rel="stylesheet" href="<?=base_url()?>css/reset.css" media="screen"></link>
 <link rel="stylesheet" href="<?=base_url()?>css/jPages.css">
 <link type="text/css" rel="stylesheet" href="<?=base_url()?>css/general.css" media="screen"></link> <link type="text/css" rel="stylesheet" href="<?=base_url()?>css/venta.css" media="screen"></link>
-<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/perdidos.css" media="screen"></link>
-<?php $this->load->view('general/LoginFiles');?>
+
+<?php //$this->load->view('general/LoginFiles');?>
 <script src="<?=base_url()?>js/jquery-1.10.2.js"></script>
 <script src="<?=base_url()?>js/jPages.js"></script>
 <script src="<?=base_url()?>js/funciones_venta.js"></script>
@@ -17,7 +17,14 @@
 <script type="text/javascript" src="<?=base_url()?>js/jquery.cycle.all.js"></script>
 <script src="<?=base_url()?>js/funciones_.js" type="text/javascript"></script>
 <script type="text/javascript" src="<?=base_url()?>js/funcion_select.js"></script>
-<script type="text/javascript" src="<?=base_url()?>js/jquery.customSelect.js"></script>
+<script type="text/javascript" src="<?=base_url()?>js/jquery.customSelect.js"></script> -->
+
+<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/perdidos.css" media="screen"></link>
+<?php $this->load->view('general/LoginFiles');?>
+<?php
+$this->load->view('general/general_header_view', array('title' => 'Perdidos',
+  'links'                                                      => array('venta'), 'scripts' => array('funciones_venta')))
+  ?>
 <script>
   function buscar_imagen(id){
              id_anuncio="id_anuncio="+id;

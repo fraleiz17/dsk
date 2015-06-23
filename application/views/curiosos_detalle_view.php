@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es-419">
 <head>
 
@@ -16,9 +16,16 @@
    <script src="<?php echo base_url() ?>js/jquery-ui.js"></script>
    <script type="text/javascript" src="<?php echo base_url() ?>js/jquery.cycle.all.js"></script>
    <script src="<?php echo base_url() ?>js/funciones_.js" type="text/javascript"></script>
-    <script src="<?php echo base_url() ?>js/funciones_curiosos.js" type="text/javascript"></script>
+    <script src="<?php echo base_url() ?>js/funciones_curiosos.js" type="text/javascript"></script>-->
 
-  
+  <?php $this->load->view('general/LoginFiles');?>
+<?php
+$this->load->view('general/general_header_view', array('title' => 'Datos Curiosos detalle',
+  'links'                                                      => array('venta'), 'scripts' => array('funciones_curiosos')))
+  ?>
+<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/curiosos.css" media="screen"></link>
+
+
   
 
 
@@ -26,47 +33,6 @@
 
 <body>
 
-
-
-<div id="iconos_ocultos" class="iconos_ocultos">
-
-
-<ul class="iconos_estatus">
-        <li   <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  onclick="window.location='<?= base_url() ?>carrito';" <?php else: ?>  <?php endif; ?>>
-
-            <img id="horizontal_compras_mini"
-                 onmouseover="mostrar_icono('horizontal_compras'); ocultar_icono('horizontal_compras_mini');"
-                 class="iconos_flotantes" src="<?php echo base_url() ?>images/compras_horizontal_mini.png"/>
-
-            <img class="iconos_flotantes2"
-                 onmouseout="mostrar_icono('horizontal_compras_mini'); ocultar_icono('horizontal_compras');"
-                 id="horizontal_compras" src="<?php echo base_url() ?>images/compras_horizontal.png"
-               />
-
-        </li>
-        <li <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
-       <?php else: ?> onclick="muestra('contenedor_login');oculta('envio_con');muestra('ingreso_normal');" <?php endif; ?>>
-            <img id="horizontal_ingresar_mini"
-                 onmouseover="mostrar_icono('horizontal_ingresar'); ocultar_icono('horizontal_ingresar_mini');"
-                 class="iconos_flotantes" src="<?php echo base_url() ?>images/ingresar_horizontal_mini.png"/>
-
-            <img class="iconos_flotantes2"
-                 onmouseout="mostrar_icono('horizontal_ingresar_mini'); ocultar_icono('horizontal_ingresar');"
-                id="horizontal_ingresar"
-                 src="<?php echo base_url() ?>images/ingresar_horizontal.png"/>
-        </li>
-
-        <li  <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>  <?php else: ?>onclick="muestra('contenedor_registro');" <?php endif; ?>>
-            <img id="horizontal_registrate_mini"
-                 onmouseover="mostrar_icono('horizontal_registrate'); ocultar_icono('horizontal_registrate_mini');"
-                 class="iconos_flotantes" src="<?php echo base_url() ?>images/registrate_horizontal_mini.png"/>
-
-            <img class="iconos_flotantes2"
-                 onmouseout="mostrar_icono('horizontal_registrate_mini'); ocultar_icono('horizontal_registrate');"
-                 id="horizontal_registrate" src="<?php echo base_url() ?>images/registrate_horizontal.png"/>
-        </li>
-    </ul>
-</div>
 <?php $this->load->view('general/menu_view')?>
 
 <div class="titulo_seccion">

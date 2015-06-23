@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es-419">
 <head>
 
@@ -8,9 +8,9 @@
 <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/reset.css" media="screen"></link>
  <link rel="stylesheet" href="<?php echo base_url() ?>css/jPages.css">
  <link href="<?php echo base_url() ?>css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/general.css" media="screen"></link> <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/venta.css" media="screen"></link><link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/la_raza.css" media="screen"></link>
+<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/general.css" media="screen"></link> 
   </script>
-  <?php $this->load->view('general/LoginFiles');?>
+  <?php //$this->load->view('general/LoginFiles');?>
    <script src="<?php echo base_url() ?>js/jquery-1.10.2.js"></script>
      <script src="<?php echo base_url() ?>js/jPages.js"></script>
 <script src="<?php echo base_url() ?>js/funciones_venta.js"></script>
@@ -20,8 +20,14 @@
    <script src="<?php echo base_url() ?>js/funciones_.js" type="text/javascript"></script>
    <script src="<?php echo base_url() ?>js/funciones_index.js" type="text/javascript"></script>
    <script src="<?php echo base_url() ?>js/funciones_raza.js"></script>
+   <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/venta.css" media="screen"></link> -->
 
-  
+<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/la_raza.css" media="screen"></link>
+  <?php $this->load->view('general/LoginFiles');?>
+<?php
+$this->load->view('general/general_header_view', array('title' => 'Raza del Mes',
+  'links'                                                      => array('venta'), 'scripts' => array('funciones_raza')))
+  ?>
   
 
 
