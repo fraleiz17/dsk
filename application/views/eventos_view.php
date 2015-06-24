@@ -151,7 +151,7 @@ jQuery(document).ready(function(){
 <div class="titulo_de_pasos"> PUBLICAR   EVENTO </div>
 <div class="instrucciones_pasos"> ¿Quieres anunciar tu evento? ¡Cont&aacute;ctanos! </div>
 <div class="contenido_indicacion">
-<form action="<?=base_url()?>evento/publicarEvento" method="post" id="enviarMail">
+<form  method="post" id="enviarMail">
 <table width="616" style="margin-left: 31px;
 margin-top: 30px;">
 <tr> 
