@@ -71,15 +71,15 @@ $this->load->view('general/general_header_view', array('title' => 'Perdidos',
 <font class="titulo_anuncio_publicado"> PROPORCIONA TU INFORMACIÓN </font>
 </br>
 </br>
-<form id="contacto_form">
-    <input type="text" class="formu_contacto" id="nombre_contacto"
-    value="<?php echo $this->session->userdata('nombre')?>" size="44"/>
-    <input type="text" class="formu_contacto" id="mail_contacto"
+<form id="contacto_form" method="post">
+    <input type="text" class="formu_contacto validate[required]" id="nombre_contacto"
+    value="<?php echo $this->session->userdata('nombre')?>" size="44" name="nombre_contacto" />
+    <input type="text" class="formu_contacto validate[required]" id="mail_contacto" name="mail_contacto"
     value="<?php echo $this->session->userdata('correo')?>" size="44"/>
-    <input type="text" class="formu_contacto" id="asunto_contacto"
+    <input type="text" class="formu_contacto validate[required]" id="asunto_contacto" name="asunto_contacto"
     onfocus="clear_textbox('asunto_contacto', 'Asunto')" placeholder="Asunto" size="44"/>
-    <textarea cols="50" style = "width:334px;" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto" name="comentarios_contacto" 
-    class="formu_contacto" rows="5">Comentarios</textarea>
+    <textarea style = "width:334px;" cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto"
+    class="formu_contacto validate[required]" rows="5" name="comentarios_contacto">Comentarios</textarea>
 </br>
 </br>
 <span class="info"></span>
@@ -109,15 +109,15 @@ $this->load->view('general/general_header_view', array('title' => 'Perdidos',
 </br>
 </br>
 <form id="denuncia_form">
-    <input type="hidden" class="formu_contacto" name="nombre_denuncia" id="nombre_denuncia"
+    <input type="hidden" class="formu_contacto validate[required]" name="nombre_denuncia" id="nombre_denuncia"
     value="<?php echo $this->session->userdata('nombre')?>" size="44"/>
-    <input type="hidden" class="formu_contacto" name="mail_denuncia" id="mail_denuncia"
+    <input type="hidden" class="formu_contacto validate[required]" name="mail_denuncia" id="mail_denuncia"
     value="<?php echo $this->session->userdata('correo')?>" size="44"/>
-    <input type="hidden" class="formu_contacto" name="asunto_denuncia" id="asunto_denuncia"
+    <input type="hidden" class="formu_contacto validate[required]" name="asunto_denuncia" id="asunto_denuncia"
     onfocus="clear_textbox('asunto_denuncia', 'Asunto')" value="Asunto" size="44"/>
     <!-- <textarea cols="50" onfocus="clear_textbox('comentarios_denuncia', 'Comentarios')" name="comentarios_denuncia" id="comentarios_denuncia"
     class="formu_contacto" rows="5">Comentarios</textarea> <?=base_url()?>content/terminos_y_condiciones.pdf -->
-    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia3" checked="checked" value="Informaci&oacute;n de anuncio falsa"><label>Informaci&oacute;n de anuncio falsa</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia3" checked="checked" value="Información de anuncio falsa"><label>Informaci&oacute;n de anuncio falsa</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia1" value="Contenido Violento"><label>Contenido Violento</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia2" value="Fotos Inapropiadas"><label>Fotos Inapropiadas</label></br>
     <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia4" value="Fraude"><label>Fraude</label></br>
@@ -642,7 +642,7 @@ function buscar_detalles(id) {
         },
         success: function (result) {
 
-            buscar_imagenes(id);
+           /* buscar_imagenes(id);
 
             $(".contenedor_galeria").empty();
             $(".datos_general").empty();
@@ -675,6 +675,44 @@ function buscar_detalles(id) {
                 }
 
                 $('.btn_den').data('pub', data[i].publicacionID);
+            }
+
+            add_favorite();
+            denunciar_pub();
+            contactar_pub(); */
+            buscar_imagenes(id);
+
+            $(".contenedor_galeria").empty();
+            $(".datos_general").empty();
+            $(".descripcion_del_anuncio").empty();
+            $("#you_tube").empty();
+            var data = result.data;
+
+            if (result.count < 1) {
+                $(".contendor_galeria").append('<div class="alert alert-warning">No hay resultados.</div>');
+            }
+            for (var i = 0; i < result.count; i++) {
+                if (data[i].genero === '0')
+                    var el_genero = "Hembra";
+                else
+                    var el_genero = "Macho";
+
+                $(".contenedor_galeria").append('<img src="' + data[i].foto + '" width="294" height="200" style=" top: 0px; left: 0px; display: block; z-index: 5; opacity: 1;"/>');
+                var cont_datos = $('.datos_general');
+                var cont_info = $(' <div class="titulo_anuncio_publicado">' + data[i].titulo + '</div></br><strong>Precio:&nbsp;$&nbsp;' + data[i].precioVenta + '</strong></br><font> Fecha de publicación:' + data[i].fechaCreacion + '</font></br><font>Sección: Venta</font></br><font>Raza:' + data[i].raza + '</font></br><font>Género:' + (data[i].genero ? 'Macho' : 'Hembra') + '</font></br><font>Lugar: ' + data[i].nombreEstado + '</font></br></br>');
+                cont_datos.append(cont_info);
+                var botones = $('<ul class="boton_naranja"><li onclick="buscar_anunciante(\'' + data[i].publicacionID + '\')" class="btn_contactar">Contactar al anunciante</li> </ul> </br> <ul class="boton_gris"><li data-pub="' + data[i].publicacionID + '" class="btn_fvt"><img src="images/favorito.png"/>Agregar a Favoritos</li></ul><span id="info_fav"></span>');
+                cont_datos.append(botones);
+                $('.descripcion_del_anuncio').append(data[i].descripcion);
+                if (data[i].paqueteID != '1'){
+                //(".boton_naranja_dos").show();
+                buscar_videos(data[i].publicacionID);
+                } else {
+                    $('#video').html('No hay video para mostrar');
+                }
+
+                $('.btn_den').data('pub', data[i].publicacionID);
+                $('.btn_contactar').data('pub', data[i].publicacionID);
             }
 
             add_favorite();
