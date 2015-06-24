@@ -257,7 +257,7 @@
                             </p>
                             <div style="width:800px; height:150px;">
                                 <p>
-                                <h3>Notas</h3>
+                                <h3 id="textoApoyo"><?=$texto?></h3>
                                 </p>                            
                             </div>
 
@@ -331,11 +331,11 @@
                         <br/>
 
                         <div id="contendedor_morado" class="contenedor_morado">
-                            <ul class="morado_15_sinmargen" >
+                            <!--<ul class="morado_15_sinmargen" >
                                 <li data-titulo="Completa tu información" data-p="paso_tres_negocio" onclick="$('.paso', '#form_anuncio_negocio').hide(); $('#paso_tres_negocio', '#form_anuncio_negocio').show().addClass('paso_show');">
                                     Editar
                                 </li>
-                            </ul>
+                            </ul>-->
                             <ul class="morado_15_sinmargen" >
                                 <li class="sig_paso">
                                     Continuar

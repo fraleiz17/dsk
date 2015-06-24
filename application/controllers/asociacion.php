@@ -64,6 +64,7 @@ class Asociacion extends CI_Controller {
         $data['mapaSegundo'] = 'mapa_view'; 
         
         $data['banner'] = $this->defaultdata_model->getTable('banner');
+        $data['texto'] = $this->defaultdata_model->getTexto(11);
         $data['estados'] = $this->defaultdata_model->getEstados();
         $data['paquetes'] = $this->defaultdata_model->getPaquetes();
         $data['razas'] = $this->defaultdata_model->getRazas();

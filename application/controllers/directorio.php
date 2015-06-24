@@ -80,6 +80,7 @@ $this->googlemaps->add_marker($marker);
 
 $data['mapaSegundo'] = 'mapa_view'; 
 $data['banner'] = $this->defaultdata_model->getTable('banner');
+$data['texto'] = $this->defaultdata_model->getTexto(4);
 $data['estados'] = $this->defaultdata_model->getEstados();
 $data['paquetes'] = $this->defaultdata_model->getPaquetes();
 $data['razas'] = $this->defaultdata_model->getRazas();
