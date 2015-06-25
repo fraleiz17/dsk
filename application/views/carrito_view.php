@@ -539,7 +539,7 @@
 
 
                                                                 <br/>
-                                                                <p style=" background-color: #DFF0D8; color: #3C763D; font-weight:bolder;">* Antes de proceder al pago, revisa por favor que tus datos de envío sean correctos.</p>
+                                                                <p style="background-color: #FFF; color: #FF0000; font-weight:bolder;">* Antes de proceder al pago, revisa por favor que tus datos de envío sean correctos.</p>
                                                                 <br/>
                                                                 <ul class="">
                                                                     <li>

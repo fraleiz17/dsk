@@ -75,6 +75,24 @@ function buscar_imagen(id){
 <font class="titulo_anuncio_publicado"> PROPORCIONA TU INFORMACIÓN </font>
 </br>
 </br>
+
+<style>
+::-webkit-input-placeholder {
+   color: #FFF;  
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #FFF;   
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #FFF;   
+}
+
+:-ms-input-placeholder {  
+   color: #FFF;  
+}
+</style>
 <form id="contacto_form">
     <input type="text" class="formu_contacto validate[required]" id="nombre_contacto"
     value="<?php echo $this->session->userdata('nombre')?>" size="44" name="nombre_contacto" />
