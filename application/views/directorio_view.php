@@ -68,13 +68,20 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
 
                     <div class="contenedor_negocio" data-object='<?php echo json_encode($directorio) ?>'>
                         <div class="contenedor_imagen_negocio">
-                        <?php if (isset($giros)): ?>
+                        <?php 
+                        if($directorio->foto != null){ ?>
+                            <img src="<?php echo base_url() ?><?=$directorio->foto?>" width="127px" height="107px"/>
+                        
+                        <?php } else {
+
+                        if (isset($giros)): ?>
                             <?php foreach ($giros as $g): 
                                     if($g->giroID == $directorio->giroID):?>
-                            <img src="<?php echo base_url() ?>images/<?=$g->logo?>"/>
+                            <img src="<?php echo base_url() ?>images/<?=$g->logo?>" width="127px" height="107px"/>
                         <?php endif;
                               endforeach;
-                              endif; ?>
+                              endif; 
+                            } ?>
                         </div>
                         <div class="contenedor_nombre_negocio">
                             <strong>

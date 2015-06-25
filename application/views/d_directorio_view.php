@@ -52,7 +52,7 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
     DIRECTORIO
 
 
-    <div class="contenedor_anunciar_negocio" onclick="muestra('contenedor_publicar_anuncio_negocio');">
+    <!-- <div class="contenedor_anunciar_negocio" onclick="muestra('contenedor_publicar_anuncio_negocio');">
         <div class="titulo_anunciate">
             ANUNCIATE
         </div>
@@ -62,7 +62,7 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
         <div class="el_click">
             <img src="<?php echo base_url() ?>images/click.png" width="60" height="60">
         </div>
-    </div>
+    </div>-->
 </div>
 
 <div id="contenedor_central">
@@ -118,6 +118,7 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
     </div>
 
 </div>
+
 <script>
     function initialize() {
         var myLatlng = new google.maps.LatLng(<?php echo $detalles->latitud ?>, <?php echo $detalles->longitud ?>);
@@ -175,7 +176,7 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
 <br/>
 <div class="division_menu_inferior"> </div>
 <?php $this->load->view('general/footer_view'); ?>
-<?php $this->load->view('partial/_pasos_anuncio_negocio'); ?>
+<?php //$this->load->view('partial/_pasos_anuncio_negocio'); ?>
 
 </body>
 </html>

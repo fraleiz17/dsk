@@ -263,14 +263,14 @@
 
                              <div>
                                 <ul class="morado_directorio">
-                                    <li class="sig_paso">
+                                    <li class="sig_paso" onclick="alert('grrrrr');">
                                         Continuar
                                     </li>
                                 </ul>
                                 <br/>
                                 <br/>
                                 <div id="msj_paso" style="font-size: 10px;display: inline-block; vertical-align: bottom; height: 38px;"></div>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -564,6 +564,8 @@
             });
 
             $('.sig_paso', form_negocio).on('click', function() {
+                $(form_negocio).validationEngine('validate');
+                console.log('Siguiente Paso------');
                 var sig_paso = $('.paso_show', form_negocio).next('.paso');
                 if (revision_step($('.paso_show', form_negocio))) {
                     $('.paso_show', form_negocio).removeClass('paso_show').hide();
