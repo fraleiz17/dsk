@@ -76,7 +76,7 @@
                                 <?php foreach ($giros as $index => $giro): ?>
                                     <?php if ($index % 2 !== 0): ?>
                                         <label style="display: inline-block; margin-bottom: 2px;">
-                                            <input class="giro_form validate[required] ckGiro" type="checkbox" name="giro_<?php echo ($index + 1) ?>_form" value="<?php echo $giro->giroID ?>" id="CheckboxGiro_0" />
+                                            <input class="giro_form validate[required] ckGiro" type="checkbox" name="giro_<?php echo ($index + 1) ?>_form" value="<?php echo $giro->giroID ?>" id="CheckboxGiro_0" <?php if($girosN != null): foreach ($girosN as $gn) { if($gn->giroID == $giro->giroID): echo 'checked="checked"'; endif; } endif;?> />
                                             <?php echo $giro->nombreGiro; ?>
                                             <input type="hidden" name="<?=$giro->nombreGiro?>" id="giro_<?php echo ($index + 1) ?>_form" value="<?=$giro->logo?>" />
                                         </label>
@@ -89,7 +89,7 @@
                                 <?php foreach ($giros as $index => $giro): ?>
                                     <?php if ($index % 2 === 0): ?>
                                         <label style="display: inline-block; margin-bottom: 2px;">
-                                            <input class="giro_form validate[required] ckGiro" type="checkbox" name="giro_<?php echo ($index + 1) ?>_form" value="<?php echo $giro->giroID ?>" id="CheckboxGiro_0" />
+                                            <input class="giro_form validate[required] ckGiro" type="checkbox" name="giro_<?php echo ($index + 1) ?>_form" value="<?php echo $giro->giroID ?>" id="CheckboxGiro_0" <?php if($girosN != null): foreach ($girosN as $gn) { if($gn->giroID == $giro->giroID): echo 'checked="checked"'; endif; } endif;?>/>
                                             <?php echo $giro->nombreGiro; ?>
                                             <input type="hidden" name="<?=$giro->nombreGiro?>" id="giro_<?php echo ($index + 1) ?>_form" value="<?=$giro->logo?>" />
                                         </label>
@@ -310,9 +310,16 @@
                             <div class="contenido_directorio_mini">
                                 <div class="contenedor_titulo_informcacion_mini"> SERVICIOS </div>
                                 <div id="giro_form" class="contenedor_informacion_mini">
-                                    <p > <img src="<?php echo base_url() ?>images/giros_negocio/adistramiento_canino.png" width="24" height="20"/> Adiestramiento Canino </p>
-
-                                    <p style="margin-top:3px;"> <img src="<?php echo base_url() ?>images/giros_negocio/criadero.png" width="24" height="20"/> Criadero de Perros </p>
+                                    <?php if($girosN != null):
+                                            foreach ($girosN as $gn) { ?>
+                                            <p id="<?=$gn->nombreGiro?>P" style="margin-top:7px;"> <img src="<?php echo base_url() ?>images/<?=$gn->logo?>" width="24" height="20"/><?=$gn->nombreGiro?></p>
+                                    <?php   }
+                                        endif;
+                                    ?>
+                                    
+                                    <!--<p > <img src="<?php echo base_url() ?>images/giros_negocio/adistramiento_canino.png" width="24" height="20"/> Adiestramiento Canino </p>
+                                
+                                    <p style="margin-top:3px;"> <img src="<?php echo base_url() ?>images/giros_negocio/criadero.png" width="24" height="20"/> Criadero de Perros </p>-->
                                 </div>
                             </div>
                             <div id="descripcion_negocio" class="contenedor_descripcion_detalle_mini" style="word-break: normal; word-wrap: break-word;">
@@ -535,6 +542,13 @@
         window.onload = loadScript;
 
         $(function() {
+            // DATOS DEL USUARIO 
+            
+
+
+            //DATOS DEL USUARIO
+
+
             var form_negocio = $('#form_anuncio_negocio');
             $('#pagina_web_negocio').html('');
             $('#nombre_negocio').html($('#nombre_negocioT').val());
@@ -543,14 +557,14 @@
 
             $('.paso', form_negocio).hide();
             $('#paso_uno_negocio', form_negocio).show().addClass('paso_show');
-            $('#giro_form').html('');
+            //$('#giro_form').html('');
             $('.giro_form').on('click', function() {
 
                 var valor = $(this).is(":checked");
                 var giro = $(this).attr('name');
                 var logo = $('#'+giro).val();
                 var giroNombre = $('#'+giro).attr('name');
-                console.log(valor);
+                console.log(giro);
                 
                 if(valor === false){
                     $('#'+giro+'P').detach();

@@ -358,7 +358,7 @@ function buscar_imagenes(id){
                     }
 
                     if(data_seccion == 'asociaciones'){
-                        $('#c_asc').html(response.count);
+                        $('#c_asociaciones').html(response.count);
                     }
 
                     $('#subtitulo').fadeOut().empty().text((data_validation + text_zona + data_seccion).toUpperCase()).fadeIn();

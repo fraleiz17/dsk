@@ -49,8 +49,7 @@ class Directorio extends CI_Controller {
         $data['paises'] = $this->defaultdata_model->getPaises();
         $data['paquetes'] = $this->defaultdata_model->getPaquetes();
         $data['razas'] = $this->defaultdata_model->getRazas();
-        $data['giros'] = $this->defaultdata_model->getGiros();        
-        
+        $data['giros'] = $this->defaultdata_model->getGiros();  
          $config = array();
 $config['center'] = '19.433463102009004,-99.13711169501954';
 $config['zoom'] = 'auto';
@@ -112,7 +111,8 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         $data['planes'] = $this->defaultdata_model->getPaquetesCupon(4);
         $data['seccion'] = 4;
         }
-        //var_dump($this->session->userdata('tipoUsuario'));
+
+        $data['girosN'] = $this->usuario_model->getGirosUsuario($this->session->userdata('idUsuarioDetalle'));
 
         $this->load->view('directorio_view', $data);
     }
@@ -129,7 +129,8 @@ $data['paises'] = $this->defaultdata_model->getPaises();
     public function detalles($id) {
 
         $data['detalles'] = $this->usuario_model->getDirectorios(4, null, null, null, intval($id));
-        $data['giros'] = $this->usuario_model->getGirosUsuario(intval($id));
+        $data['giros'] = $this->usuario_model->getGirosUsuario(22);
+        var_dump($data['giros']);
 
         if($this->session->userdata('tipoUsuario') == 3){
              $data['seccion'] = 4;
@@ -594,6 +595,11 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         $zona_geo = $this->defaultdata_model->get_zona_geografica(22);
         $detalles_plan = $this->defaultdata_model->getPaquetesCupon(null, 2);
         var_dump($myinfo,$zona_geo,$detalles_plan);
+    }
+
+    function getGirosNegocio(){
+        $giros = $this->usuario_model->getGirosUsuario($this->session->userdata('idUsuarioDetalle'));
+        echo json_encode($giros);
     }
 
 }
