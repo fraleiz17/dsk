@@ -5,7 +5,7 @@
 <div class="admin_title"> Tienes <?php echo count($cupones);?> cupones </div>
 </div>
 </br>
- <table class="tabla_perfil">
+ <table class="tabla_perfil" style="width:100%;">
  <tr>
  <th> Tipo de cupón </th>
  <th> Descripción </th>
