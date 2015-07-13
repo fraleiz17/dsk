@@ -1,3 +1,9 @@
+#main_content > div.texto_descripcion_detalle > div > img{
+width: 100%;
+height: 100%;
+
+}
+
 .central_curiosos{
 	width:660px;
 	display:inline-block;
@@ -207,7 +213,11 @@
 	margin-top:10px;
 	margin-right:10px;
 	margin-bottom:10px;
+	height:20%;
+	width: 20%;
 	float:left;}
+
+
 .texto_descripcion_detalle{
     width: 460px;
 	height:800px;
@@ -236,6 +246,7 @@
 	width:182px;
 	height:54px;
 	border: 1px solid #F8B334;
+	overflow: hidden;
 	}
 .contenido_horizontal_mini{
 	width: 175px;
@@ -297,6 +308,7 @@
 	width:181px;
 	height:54px;
     border: 1px solid #E7511E;
+    overflow: hidden;
 	}
 .franja_naranja_mini{
 	width:183px;
