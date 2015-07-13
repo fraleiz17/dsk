@@ -111,9 +111,7 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
         <div class="contenedor_titulo_informcacion"> HORARIOS </div>
         <br>
         <div class="contenedor_datos_horario">
-            <p>Lunes a Vienes :  8:00 am a 5:00 p.m</p>
-            <br>
-            <p>Sabados: 10:00 a.m a 2:00p.m</p>
+            <p><?php echo $detalles->horario; ?></p>
         </div>
     </div>
 

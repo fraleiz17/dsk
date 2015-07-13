@@ -620,6 +620,18 @@ limit 1');
             return true;
         }
     }
+
+    function getIDDetalle($idUsuario){
+        $this->db->where('idUsuario',$idUsuario);
+        $query = $this->db->get('usuariodetalle');
+        if ($query->num_rows() == 1) {
+            $detalle = $query->row();
+            return $detalle = $detalle->idusuarioDetalle;
+        } else {
+            return null;
+        }
+
+    }
 }
 
 ?>

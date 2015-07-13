@@ -197,9 +197,10 @@ class Asociacion extends CI_Controller {
     }
     public function detalles($id) {
 
-        $data['detalles'] = $this->usuario_model->getDirectorios(11,null, null, null, intval($id));
-        
-        $data['giros'] = $this->usuario_model->getGirosUsuario(intval($id));
+        $detalles = $this->usuario_model->getDirectorios(11, null, null, null, intval($id));
+        $data['detalles'] = $detalles;
+        $idUsuarioDetalle = $this->usuario_model->getIDDetalle($detalles->idUsuario);
+        $data['giros'] = $this->usuario_model->getGirosUsuario($idUsuarioDetalle);
 
         $data['seccion'] = 11;
         $this->load->view('d_directorio_view', $data);

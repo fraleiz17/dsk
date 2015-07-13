@@ -560,7 +560,7 @@
 
             var form_negocio = $('#form_anuncio_negocio');
             $('#pagina_web_negocio').html('');
-            $('#nombre_negocio').html($('#nombre_negocioT').val());
+            $('#nombre_negocio').html($('#nombre_negocio_form').val());
             $('#apellido_negocio').html($('#apellido_negocioT').val());
             $('#telefono_negocio').html($('#telefono_negocioT').val());
             $('#horarios_negocio').html($('#horarios_negocioT').val());

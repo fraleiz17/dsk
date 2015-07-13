@@ -128,8 +128,10 @@ $data['paises'] = $this->defaultdata_model->getPaises();
 
     public function detalles($id) {
 
-        $data['detalles'] = $this->usuario_model->getDirectorios(4, null, null, null, intval($id));
-        $data['giros'] = $this->usuario_model->getGirosUsuario($this->session->userdata('idUsuarioDetalle'));
+        $detalles = $this->usuario_model->getDirectorios(4, null, null, null, intval($id));
+        $data['detalles'] = $detalles;
+        $idUsuarioDetalle = $this->usuario_model->getIDDetalle($detalles->idUsuario);
+        $data['giros'] = $this->usuario_model->getGirosUsuario($idUsuarioDetalle);
 
         if($this->session->userdata('tipoUsuario') == 3){
              $data['seccion'] = 4;
@@ -137,7 +139,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
             $data['seccion'] = 4;
         }
         
-        
+        //var_dump($data['detalles']);
         $this->load->view('d_directorio_view', $data);
     }
 
@@ -323,7 +325,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
             'correo' => $correo_negocio,
             'nombre' => $nombre_negocio,
             'telefono' => $telefono_negocio,
-            'tipoUsuario' => 3
+            //'tipoUsuario' => 3
         );
 
         $data['usuariodetalle'] = array(
@@ -338,6 +340,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
             'nombreContacto' => "$nombre_negocio $apellido_negocio",
             'nombreNegocio' => $nombre_negocio_form,
             'numero' => $numero_negocio,
+            'horario' => $horarios_negocio,
             'paginaWeb' => $pagina_web_negocio,
             'telefono' => $telefono_negocio,
                 //'tipoUsuario' => 3
