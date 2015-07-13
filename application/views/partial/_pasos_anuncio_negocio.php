@@ -50,7 +50,8 @@
                     </ul>
                 </div>
                 <div class="crerar_publicar_anuncio">
-                    <img src="<?php echo base_url() ?>images/cerrar.png" onclick="oculta('contenedor_publicar_anuncio_negocio');"/>
+                    <img src="<?php echo base_url() ?>images/cerrar.png" id="cerrarPublicacion"/>
+                    
                 </div>
                 <br/>            
                 <!-- Inicio Paso UNO -->
@@ -66,9 +67,9 @@
                             <?php if($this->session->userdata('tipoUsuario') == 3):?>
                             <div class="contenedor_checkbox">
                                 <label style="display: inline-block; margin-bottom: 2px;">
-                                            <input class="giro_form validate[required] ckGiro" type="checkbox" name="giro_13_form" value="13" id="CheckboxGiro_0" />
+                                            <input class="giro_form validate[required] ckGiro" type="checkbox" name="giro_11_form" value="13" id="CheckboxGiro_0" />
                                             <?php echo 'Asociacion Protectora'; ?>
-                                            <input type="hidden" name="Asociación Protectora" id="giro_13_form" value="giros_negocio/protectora.png" />
+                                            <input type="hidden" name="Asociación Protectora" id="giro_11_form" value="giros_negocio/protectora.png" />
                                         </label>
                             </div>
                             <?php else : ?>
@@ -76,7 +77,7 @@
                                 <?php foreach ($giros as $index => $giro): ?>
                                     <?php if ($index % 2 !== 0): ?>
                                         <label style="display: inline-block; margin-bottom: 2px;">
-                                            <input class="giro_form validate[required] ckGiro" type="checkbox" name="giro_<?php echo ($index + 1) ?>_form" value="<?php echo $giro->giroID ?>" id="CheckboxGiro_0" <?php if($girosN != null): foreach ($girosN as $gn) { if($gn->giroID == $giro->giroID): echo 'checked="checked"'; endif; } endif;?> />
+                                            <input class="giro_form validate[required] ckGiro" type="checkbox" name="giro_<?php echo $giro->giroID ?>_form" value="<?php echo $giro->giroID ?>" id="CheckboxGiro_0" <?php if($girosN != null): foreach ($girosN as $gn) { if($gn->giroID == $giro->giroID): echo 'checked="checked"'; endif; } endif;?> />
                                             <?php echo $giro->nombreGiro; ?>
                                             <input type="hidden" name="<?=$giro->nombreGiro?>" id="giro_<?php echo ($index + 1) ?>_form" value="<?=$giro->logo?>" />
                                         </label>
@@ -197,13 +198,13 @@
                             <br/>
                             <p class="margen_15_left"> 
                                 <label>Nombre del negocio:</label>
-                                <input name="nombre_negocio_form" type="text" class="background_gris_55 validate[required]" value="<?php echo $user->nombreNegocio ?>"/>
+                                <input name="nombre_negocio_form" type="text" class="background_gris_55 validate[required] form-validation-field-1"  value="<?php echo $user->nombreNegocio ?>" id="nombre_negocioT"/>
                             </p>
                             <br/>
                             <div class="sub_instrucciones_pasos"> Horarios atención </div>
                             <br/>
                             <p>
-                                <label>Favor de colocar el horario y días de atención.</label> <textarea name="horarios_negocio" class="background_gris validate[required]" cols="95" rows="6" ></textarea>
+                                <label>Favor de colocar el horario y días de atención.</label> <textarea name="horarios_negocio" class="background_gris validate[required]" cols="95" rows="6" id="horarios_negocioT"></textarea>
                             </p>
                             <div class="sub_instrucciones_pasos"> Detalles del anuncio </div>
                             <br/>
@@ -234,7 +235,7 @@
                             </div>
                             <br/>
                             <p class="margen_15_left">
-                                <label>Descripción:</label><textarea name="descripcion_negocio" class="background_gris validate[required]" cols="95" rows="3" ></textarea>
+                                <label>Descripción:</label><textarea name="descripcion_negocio" class="background_gris validate[required]" cols="95" rows="3" id="descripcion_negocioT" ><?php echo $user->descripcion; ?></textarea>
                             </p>
                             <br/>
                             <p class="margen_15_left">
@@ -252,7 +253,7 @@
                             <input name="name_logo_form" value="" type="hidden"/>
                             <div class="row-fluid">
                                 <span id="error_logo" style="display:none;" class="alert alert-error"></span>
-                                <img id="logo_image" class="span6 thumbnail" src="" width="50px" />
+                                <img id="logo_image" class="span6 thumbnail" <?=($user->logo == '' ? 'src="'.base_url().'images/giros_negocio/accesorios.png"' : 'src="'.base_url().$user->logo.'"')?> width="50px" />
                             </div>
                             </p>
                             <div style="width:800px; height:150px;">
@@ -263,7 +264,7 @@
 
                              <div>
                                 <ul class="morado_directorio">
-                                    <li class="sig_paso" onclick="alert('grrrrr');">
+                                    <li class="sig_paso" >
                                         Continuar
                                     </li>
                                 </ul>
@@ -282,7 +283,7 @@
                         <div class="instrucciones_pasos"> Vista previa de tu anuncio</div>
                         <div class="contenedor_total_directorio_mini">
                             <div class="contenido_directorio_mini">
-                                <div class="contenedor_logotipo_directorio_mini"> <img id="name_logo_form" src="<?php echo base_url() ?>images/negocio_logo/marab.png" width="145" height="145" /></div>
+                                <div class="contenedor_logotipo_directorio_mini"> <img id="name_logo_form" <?=($user->logo == '' ? 'src="'.base_url().'images/giros_negocio/accesorios.png"' : 'src="'.base_url().$user->logo.'"')?> width="145" height="145" /></div>
                                 <div id="nombre_negocio_form" class="contenedor_nombre_empresa_mini"> 
                                     CENTRO DE ADIESTRAMIENTO CANINO VON MARAB
                                 </div>
@@ -312,7 +313,7 @@
                                 <div id="giro_form" class="contenedor_informacion_mini">
                                     <?php if($girosN != null):
                                             foreach ($girosN as $gn) { ?>
-                                            <p id="<?=$gn->nombreGiro?>P" style="margin-top:7px;"> <img src="<?php echo base_url() ?>images/<?=$gn->logo?>" width="24" height="20"/><?=$gn->nombreGiro?></p>
+                                            <p id="giro_<?=$gn->giroID?>_formP" style="margin-top:7px;"> <img src="<?php echo base_url() ?>images/<?=$gn->logo?>" width="24" height="20"/><?=$gn->nombreGiro?></p>
                                     <?php   }
                                         endif;
                                     ?>
@@ -543,7 +544,15 @@
 
         $(function() {
             // DATOS DEL USUARIO 
+            $('#cerrarPublicacion').on('click', function() {
+            if(confirm("IMPORTANTE\nAl cerrar esta ventana toda la informacion ingresada será borrada.\n Para terminar el proceso de la publicación debe dar clic en el enlace 'Volver al sitio del vendedor' en la ventana de mercadopago para alamacenar la información de su compra. \n Está seguro que desea cerrarla?")){
+                oculta('contenedor_publicar_anuncio_negocio');
+                location.reload();
+            } else{
+               return false;
+            } 
             
+            });
 
 
             //DATOS DEL USUARIO
@@ -554,10 +563,17 @@
             $('#nombre_negocio').html($('#nombre_negocioT').val());
             $('#apellido_negocio').html($('#apellido_negocioT').val());
             $('#telefono_negocio').html($('#telefono_negocioT').val());
+            $('#horarios_negocio').html($('#horarios_negocioT').val());
+            $('#pagina_web_negocio').html($('#pagina_web_negocioT').val());
+            $('#descripcion_negocio').html($('#descripcion_negocioT').val());
 
             $('.paso', form_negocio).hide();
             $('#paso_uno_negocio', form_negocio).show().addClass('paso_show');
             //$('#giro_form').html('');
+            var g_numero = <?=count($girosN)?>;
+            if(g_numero === 4 || g_numero >= 4){
+                $('input[type="checkbox"]').not(':checked').prop('disabled', true);
+            }
             $('.giro_form').on('click', function() {
 
                 var valor = $(this).is(":checked");

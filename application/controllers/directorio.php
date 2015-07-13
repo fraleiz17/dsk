@@ -97,7 +97,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
             $data['cupones'] = null;
             $data['user'] = null;
         }
-
+        //var_dump($data['user']);
         $data['directorios'] = $this->usuario_model->getDirectorios(4);
         
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
@@ -129,8 +129,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
     public function detalles($id) {
 
         $data['detalles'] = $this->usuario_model->getDirectorios(4, null, null, null, intval($id));
-        $data['giros'] = $this->usuario_model->getGirosUsuario(22);
-        var_dump($data['giros']);
+        $data['giros'] = $this->usuario_model->getGirosUsuario($this->session->userdata('idUsuarioDetalle'));
 
         if($this->session->userdata('tipoUsuario') == 3){
              $data['seccion'] = 4;
