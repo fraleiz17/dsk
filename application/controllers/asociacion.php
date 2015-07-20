@@ -201,9 +201,8 @@ class Asociacion extends CI_Controller {
         $data['detalles'] = $detalles;
         $idUsuarioDetalle = $this->usuario_model->getIDDetalle($detalles->idUsuario);
         $data['giros'] = $this->usuario_model->getGirosUsuario($idUsuarioDetalle);
-
         $data['seccion'] = 11;
-        $this->load->view('d_directorio_view', $data);
+        $this->load->view('d_asc_view', $data);
     }
 
 }
