@@ -108,7 +108,38 @@ $data['paises'] = $this->defaultdata_model->getPaises();
             $data['cupones'] = $cupones;
         }
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
-        $this->load->view('curiosos_detalle_view',$data);
-    }
+       $data['seccion'] = 10;
+       
+    
+    $config = array();
+$config['center'] = '19.433463102009004,-99.13711169501954';
+$config['zoom'] = 'auto';
+$config['onboundschanged'] = 'if (!centreGot) {
+var mapCentre = map.getCenter();
+marker_0.setOptions({
+position: new google.maps.LatLng(mapCentre.lat(), mapCentre.lng()) 
+});
+} 
+centreGot = true;';
+$config['map_name'] = 'map';
+$config['map_div_id'] = 'map_canvas';
+$this->googlemaps->initialize($config);
+$data['map'] = $this->googlemaps->create_map();
+
+
+// set up the marker ready for positioning 
+// once we know the users location
+$marker = array();
+$marker['draggable'] = true;
+$marker['ondragend'] = 'updateDatabase(event.latLng.lat(), event.latLng.lng());';
+//$marker['ondragend'] = 'alert(\'You just dropped me at: \' + event.latLng.lat() + \', \' + event.latLng.lng());';
+$this->googlemaps->add_marker($marker);
+$data['mapaSegundo'] = 'mapa_view'; 
+$data['zona'] = 9;
+$data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
+$data['paises'] = $this->defaultdata_model->getPaises();
+ $this->load->view('curiosos_detalle_view',$data);
+}
+
 }
  ?>
