@@ -46,7 +46,16 @@ $this->load->view('general/general_header_view', array('title' => 'Asociaciones 
 
                     <div class="contenedor_negocio" data-object='<?php echo json_encode($directorio) ?>'>
                         <div class="contenedor_imagen_negocio">
+                        <?php 
+                        if($directorio->foto != null){ ?>
+                            <img src="<?php echo base_url() ?><?=$directorio->foto?>" width="127px" height="107px"/>
+                        
+                        <?php } else { ?>
                             <img src="<?php echo base_url() ?>images/giros_negocio/protectora.png"/>
+                        <?php 
+                            
+                            } ?>
+                            
                         </div>
                         <div class="contenedor_nombre_negocio">
                             <strong>

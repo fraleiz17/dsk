@@ -75,7 +75,7 @@
                             <?php else : ?>
                              <div class="contenedor_checkbox">
                                 <?php foreach ($giros as $index => $giro): ?>
-                                    <?php if ($index % 2 !== 0): ?>
+                                    <?php if ($index % 2 !== 0 && $giro->giroID != 13): ?>
                                         <label style="display: inline-block; margin-bottom: 2px;">
                                             <input class="giro_form validate[required] ckGiro" type="checkbox" name="giro_<?php echo $giro->giroID ?>_form" value="<?php echo $giro->giroID ?>" id="CheckboxGiro_0" <?php if($girosN != null): foreach ($girosN as $gn) { if($gn->giroID == $giro->giroID): echo 'checked="checked"'; endif; } endif;?> />
                                             <?php echo $giro->nombreGiro; ?>
@@ -88,7 +88,7 @@
                             <div class="contenedor_checkbox">
 
                                 <?php foreach ($giros as $index => $giro): ?>
-                                    <?php if ($index % 2 === 0): ?>
+                                    <?php if ($index % 2 === 0  && $giro->giroID != 13): ?>
                                         <label style="display: inline-block; margin-bottom: 2px;">
                                             <input class="giro_form validate[required] ckGiro" type="checkbox" name="giro_<?php echo ($index + 1) ?>_form" value="<?php echo $giro->giroID ?>" id="CheckboxGiro_0" <?php if($girosN != null): foreach ($girosN as $gn) { if($gn->giroID == $giro->giroID): echo 'checked="checked"'; endif; } endif;?>/>
                                             <?php echo $giro->nombreGiro; ?>
