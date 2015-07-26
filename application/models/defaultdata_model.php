@@ -256,6 +256,20 @@ where `publicaciones`.`fechaVencimiento` = date_add(CURRENT_DATE(), INTERVAL 7 D
          }
     }
 
+    function getVencidos(){
+      $query = $this->db->query('select *
+        from publicaciones
+        where fechaVencimiento < CURRENT_DATE()');
+      
+      if ($query->num_rows() >= 1){
+          return $query->result();
+         } else {
+            return null;
+         }
+    }
+
+    
+
 
 
 }
