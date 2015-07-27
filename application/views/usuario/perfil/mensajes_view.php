@@ -17,26 +17,17 @@
 </div>
 <div class="mensaje"> 
 <strong> <?php echo $mensaje->asunto ?></strong>
-</br>
 <strong><?php echo substr($mensaje->mensaje,0,15); ?> </strong>
-</br></br>
 <?php echo $mensaje->mensaje ?>
-
 </div>
-
 </div>
-
 </div>
-
-
-
-</br>
 <table class="tabla_mensajes" width="795">
  
      <td width="221"> 
-   <img src="<?php echo base_url()?>images/sobre_perfil.png" width="43" height="34"/> <?php echo $mensaje->asunto ?> 
+   <img src="<?php echo base_url()?>images/sobre_perfil.png" width="43" height="34" style="padding:5px 8px 5px 8px;overflow:hidden;display:block;float:left;"/> <?php echo $mensaje->asunto ?> 
   </td>
-  <td width="311">  <?php echo substr($mensaje->mensaje,0,15); ?> </td>
+  <td width="311"> <span style="margin:0px -5px 0px 8px;"> <?php echo substr($mensaje->mensaje,0,15); ?> </span> </td>
   <td width="247">
  <font class="ver_mas" onclick="muestra('contenedor_ver_mensaje<?php echo $mensaje->mensajeID ?>');"> Ver más... </font>
   </td>
