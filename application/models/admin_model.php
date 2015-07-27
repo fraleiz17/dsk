@@ -213,6 +213,7 @@ class Admin_model extends CI_Model
         $this->db->from("publicaciones");
         $this->db->where("seccion", 2);
         $this->db->where("aprobada", $estado);
+        $this->db->where("vigente", 1);
 
         return $this->db->count_all_results();
     }
@@ -222,6 +223,7 @@ class Admin_model extends CI_Model
         $this->db->from("publicaciones");
         $this->db->where("seccion", 3);
         $this->db->where("aprobada", $estado);
+        $this->db->where("vigente", 1);
 
         return $this->db->count_all_results();
     }
@@ -231,6 +233,7 @@ class Admin_model extends CI_Model
         $this->db->from("publicaciones");
         $this->db->where("seccion", 6);
         $this->db->where("aprobada", $estado);
+        $this->db->where("vigente", 1);
 
         return $this->db->count_all_results();
     }
@@ -240,6 +243,7 @@ class Admin_model extends CI_Model
         $this->db->from("publicaciones");
         $this->db->where("seccion", 7);
         $this->db->where("aprobada", $estado);
+        $this->db->where("vigente", 1);
 
         return $this->db->count_all_results();
     }
@@ -249,7 +253,7 @@ class Admin_model extends CI_Model
         $this->db->from("publicaciones");
         $this->db->where("aprobada", $estado);
         $this->db->where("seccion", 4);
-        
+        $this->db->where("vigente", 1);
 
         return $this->db->count_all_results();
     }
@@ -259,7 +263,7 @@ class Admin_model extends CI_Model
         $this->db->from("publicaciones");
         $this->db->where("aprobada", $estado);
         $this->db->where("seccion", 11);
-        
+        $this->db->where("vigente", 1);
 
         return $this->db->count_all_results();
     }

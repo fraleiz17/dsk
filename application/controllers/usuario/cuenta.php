@@ -432,4 +432,19 @@ Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
         }
         echo json_encode($data);
     }
+
+    function cancelarAnuncio(){
+        $publicacionID = $this->input->post('publicacionID');
+        $cancelar = $this->perfil_model->updateItem('publicacionID', $publicacionID,array('vigente' => 0, ),'publicaciones');
+        if($cancelar){
+            $data['response'] ='true';
+        } else {
+            $data['response'] ='false';
+        }
+
+            echo json_encode($data);
+        
+        }
+        
+
 }

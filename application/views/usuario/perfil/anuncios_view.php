@@ -65,10 +65,28 @@
             </td>
             <td> <?php echo $anuncio->fechaVencimiento ?> </td>
             <td> <?php echo $anuncio->numeroVisitas ?> </td>
-            <td> <ul class="boton_gris_perfil_tabla"> <li><a href="#"  class="paquete_renovar reset"
+            <td> <ul class="boton_gris_perfil_tabla"> <li>
+
+            <!--BOTON -->
+            <?php if ($anuncio->vigente == 1 && $anuncio->aprobada == 1) { ?>
+            <p data-id="<?=$anuncio->publicacionID?>" class=" cancelar_anuncio">Cancelar</p>
+                <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 0)  { ?>
+            <p data-id="<?=$anuncio->publicacionID?>" class=" cancelar_anuncio">Cancelar</p>
+                <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 2)  { ?>
+            <a href="#"  class="paquete_renovarr reset"
    data-paquete='{"id":"<?php echo $anuncio->paqueteID ?>","nombre":"<?php echo $anuncio->NombrePaquete ?>","vigencia":"<?php echo $anuncio->vigencia ?>","precio":"<?php echo $anuncio->precio ?>","caracteres":"<?php echo $anuncio->caracteres ?>","cantFotos":"<?php echo $anuncio->cantFotos ?>","videos":"<?php echo $anuncio->videos ?>","cupones":"<?php echo $anuncio->cupones ?>","seccion":"<?php echo $anuncio->seccion?>","publicacionID":"<?php echo $anuncio->publicacionID?>","expirado":"<?php  if ($anuncio->vigente == 1 && $anuncio->aprobada == 1) {
         echo 'false'; } elseif( $anuncio->vigente == 1 && $anuncio->aprobada == 0)  { echo 'false';} elseif($anuncio->vigente == 1 && $anuncio->aprobada == 2) {
-echo 'false'; } elseif($anuncio->vigente == 0) { echo 'true';}?>"}'>Renovar</a></li> </ul> </td>
+echo 'false'; } elseif($anuncio->vigente == 0) { echo 'true';}?>"}'>Renovar</a>
+                <?php } elseif($anuncio->vigente == 0) { ?>
+            <a href="#"  class="paquete_renovarr reset"
+   data-paquete='{"id":"<?php echo $anuncio->paqueteID ?>","nombre":"<?php echo $anuncio->NombrePaquete ?>","vigencia":"<?php echo $anuncio->vigencia ?>","precio":"<?php echo $anuncio->precio ?>","caracteres":"<?php echo $anuncio->caracteres ?>","cantFotos":"<?php echo $anuncio->cantFotos ?>","videos":"<?php echo $anuncio->videos ?>","cupones":"<?php echo $anuncio->cupones ?>","seccion":"<?php echo $anuncio->seccion?>","publicacionID":"<?php echo $anuncio->publicacionID?>","expirado":"<?php  if ($anuncio->vigente == 1 && $anuncio->aprobada == 1) {
+        echo 'false'; } elseif( $anuncio->vigente == 1 && $anuncio->aprobada == 0)  { echo 'false';} elseif($anuncio->vigente == 1 && $anuncio->aprobada == 2) {
+echo 'false'; } elseif($anuncio->vigente == 0) { echo 'true';}?>"}'>Renovar</a>
+                <?php } ?>
+            <!-- BOTON -->
+
+            
+            </li> </ul> </td>
     </tr>
   <?php } ?>
 
@@ -187,3 +205,24 @@ echo 'false'; } elseif($anuncio->vigente == 0) { echo 'true';}?>"}'>Renovar</a><
 
     </div>
 </div>
+
+<script type="text/javascript">
+  $('.cancelar_anuncio').on('click', function () {
+      
+      var pubID = $(this).attr('data-id');
+      var m = confirm('¿Estás seguro de cancelar la publicación de este anuncio?');
+      if(m === true){
+      $.ajax({
+                    url:'<?php echo base_url('usuario/cuenta/cancelarAnuncio') ?>',
+                    type:'post',
+                    dataType: 'JSON',
+                    data: 'publicacionID='+pubID,
+                    success: function(data){
+                    location.reload();
+                  }
+                });
+      } 
+        });
+
+        
+</script>

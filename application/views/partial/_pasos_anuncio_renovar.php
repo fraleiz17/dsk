@@ -800,7 +800,7 @@ TOTAL
 
         add_step_move();
 
-        $('.paquete_renovar').on('click', function () {
+        $('.paquete_renovarr').on('click', function () {
 			
             <?php if (!is_logged()): ?>  
                 muestra('contenedor_login');
