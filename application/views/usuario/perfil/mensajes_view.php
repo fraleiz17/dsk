@@ -1,3 +1,23 @@
+<style>
+.ver_masi {
+    width: 237px;
+    height: 23px;
+    margin-top: -23px;
+    position: absolute;
+    text-align: right;
+    padding-right: 5px;
+    color: #6D398B;
+    font-weight: bold;
+}
+
+.ver_masi:hover {
+    color: #762EA4;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+</style>
+
 <div class="titulo_seccion_admin">
 <div class="perrito_perfil">
 <img src="<?php echo base_url()?>images/sobre_perfil.png" />
@@ -29,7 +49,7 @@
   </td>
   <td width="311"> <span style="margin:0px -5px 0px 8px;"> <?php echo substr($mensaje->mensaje,0,15); ?> </span> </td>
   <td width="247">
- <font class="ver_mas" onclick="muestra('contenedor_ver_mensaje<?php echo $mensaje->mensajeID ?>');"> Ver más... </font>
+ <font class="ver_masi" onclick="muestra('contenedor_ver_mensaje<?php echo $mensaje->mensajeID ?>');"> Ver más... </font>
   </td>
   </tr>
             
