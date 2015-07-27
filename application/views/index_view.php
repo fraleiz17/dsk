@@ -181,7 +181,7 @@
                     * Texto de <?php echo $paquetes[0]->caracteres ?> caracteres
                 </li>
                 <li>
-                    * <?php echo $paquetes[0]->videos ?> video
+                    * <?php echo $paquetes[0]->videos ?> video(s)
                 </li>
                 <li>
                     * <?php echo $paquetes[0]->cupones ?> cupones
@@ -255,7 +255,7 @@
                     * Texto de <?php echo $paquetes[1]->caracteres ?> caracteres
                 </li>
                 <li>
-                    * <?php echo $paquetes[1]->videos ?> video
+                    * <?php echo $paquetes[1]->videos ?> video(s)
                 </li>
                 <li>
                     * <?php echo $paquetes[1]->cupones ?> cupones
@@ -332,7 +332,7 @@
                     * Texto de <?php echo $paquetes[2]->caracteres ?> caracteres
                 </li>
                 <li>
-                    * <?php echo $paquetes[2]->videos ?> video
+                    * <?php echo $paquetes[2]->videos ?> video(s)
                 </li>
                 <li>
                     * <?php echo $paquetes[2]->cupones ?> cupones

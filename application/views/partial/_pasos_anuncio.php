@@ -91,14 +91,19 @@
             <strong>Incluye:</strong>
             <ul class="contenido_paquetes_mini">
                 <li>
-                    * <?php echo $paquetes[0]->cantFotos ?> fotos
-                </li>
-
-                <li>
-                    * Texto de <?php echo $paquetes[0]->caracteres ?> caracteres
+                    * <?php echo $paquetes[2]->cantFotos ?> fotos
                 </li>
                 <li>
-                    * Vigencia de <?php echo $paquetes[0]->vigencia ?> días.
+                    * Texto de <?php echo $paquetes[2]->caracteres ?> caracteres
+                </li>
+                <li>
+                    * <?php echo $paquetes[2]->videos ?> video(s)
+                </li>
+                <li>
+                    * <?php echo $paquetes[2]->cupones ?> cupones
+                </li>
+                <li>
+                    * Vigencia de <?php echo $paquetes[2]->vigencia ?> días
                 </li>
             </ul>
         </div>
