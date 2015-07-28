@@ -77,7 +77,7 @@ $this->load->view('general/general_header_view', array('title' => 'Perdidos',
     <input type="text" class="formu_contacto validate[required]" id="mail_contacto" name="mail_contacto"
     value="<?php echo $this->session->userdata('correo')?>" size="44"/>
     <input type="text" class="formu_contacto validate[required]" id="asunto_contacto" name="asunto_contacto"
-    onfocus="clear_textbox('asunto_contacto', 'Asunto')" placeholder="Asunto" size="44"/>
+    onfocus="if(this.value == 'Asunto') { this.value = ''; }" value="Asunto" size="44" />
     <textarea style = "width:334px;" cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto"
     class="formu_contacto validate[required]" rows="5" name="comentarios_contacto">Comentarios</textarea>
 </br>
