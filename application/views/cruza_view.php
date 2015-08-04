@@ -52,6 +52,7 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
 </br>
 </br>
 <form id="contacto_form">
+    <div style="width:323px;height:auto;display:block;overflow:hidden;-ms-overflow-style: none">
     <input type="text" class="formu_contacto" id="nombre_contacto"
     value="<?php echo $this->session->userdata('nombre')?>" size="44"/>
     <input type="text" class="formu_contacto" id="mail_contacto"
@@ -60,6 +61,7 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
     onfocus="clear_textbox('asunto_contacto', 'Asunto')" placeholder="Asunto" size="44"/>
     <textarea cols="50" style = "width:334px;" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto" name="comentarios_contacto" 
     class="formu_contacto" rows="5">Comentarios</textarea>
+</div>
 </br>
 </br>
 <span class="info"></span>

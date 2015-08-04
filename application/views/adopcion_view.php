@@ -86,6 +86,7 @@ function buscar_imagen(id){
 </br>
 </br>
 <form id="contacto_form">
+    <div style="width:323px;height:auto;display:block;overflow:hidden;-ms-overflow-style: none">
     <input type="text" class="formu_contacto validate[required]" id="nombre_contacto"
     value="<?php echo $this->session->userdata('nombre')?>" size="44" name="nombre_contacto" />
     <input type="text" class="formu_contacto validate[required]" id="mail_contacto" name="mail_contacto"
@@ -94,6 +95,7 @@ function buscar_imagen(id){
     onfocus="if(this.value == 'Asunto') { this.value = ''; }" value="Asunto" size="44" />
     <textarea style = "width:334px;" cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto"
     class="formu_contacto validate[required]" rows="5" name="comentarios_contacto">Comentarios</textarea>
+</div>
 </br>
 </br>
 <span class="info"></span>
