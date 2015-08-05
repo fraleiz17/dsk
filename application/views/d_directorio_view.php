@@ -69,9 +69,9 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
     <div class="contenido_directorio">
         <div class="contenedor_logotipo_directorio"> 
             <?php if (!is_null($detalles->logo)):  ?>
-                <img style="width: 66%;" src="<?php echo base_url() ?><?php echo str_replace(' ', '_', strtolower($detalles->foto)); ?>"/>
+                <img style="height: 180px; width:auto;" src="<?php echo base_url() ?><?php echo str_replace(' ', '_', strtolower($detalles->foto)); ?>"/>
             <?php else: ?>
-                <img style="width: 66%;" src="<?php echo base_url() ?>images/giros_negocio/<?php echo str_replace(' ', '_', strtolower($detalles->nombreGiro)); ?>.png"/>
+                <img style="height: 180px; width:auto;" src="<?php echo base_url() ?>images/giros_negocio/<?php echo str_replace(' ', '_', strtolower($detalles->nombreGiro)); ?>.png"/>
             <?php endif; ?>
         </div>
 

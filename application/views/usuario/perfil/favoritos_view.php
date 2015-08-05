@@ -311,6 +311,7 @@ function denunciar_pub() {
 </br>
 </br>
 <form id="contacto_form">
+    <div style="width:323px;height:auto;display:block;overflow:hidden;-ms-overflow-style: none">
     <input type="text" class="formu_contacto" id="nombre_contacto"
     value="<?php echo $this->session->userdata('nombre')?>" size="44"/>
     <input type="text" class="formu_contacto" id="mail_contacto"
@@ -319,6 +320,7 @@ function denunciar_pub() {
     onfocus="clear_textbox('asunto_contacto', 'Asunto')" placeholder="Asunto" size="44"/>
     <textarea cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto"
     class="formu_contacto" rows="5">Comentarios</textarea>
+</div>
 </br>
 </br>
 <ul class="boton_naranja_tres">

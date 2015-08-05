@@ -37,10 +37,10 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
 
         <div class="fondo_select_directorio">
             <?php if (isset($estados)): ?>
-                <select name="estado"  class="estilo_select_directorio" id="estado">
+                <select name="estado"  class="estilo_select_directorio" id="estado" >
                     <option value="" > Selecciona un Estado </option>
                     <?php foreach ($estados as $edo): ?>
-                        <option value="<?php echo $edo->estadoID ?>" ><?php echo $edo->nombreEstado; ?></option>
+                        <option style="background-color:#BCBEC0;" value="<?php echo $edo->estadoID ?>" ><?php echo $edo->nombreEstado; ?></option>
                     <?php endforeach; ?>
                 </select>
             <?php endif; ?>

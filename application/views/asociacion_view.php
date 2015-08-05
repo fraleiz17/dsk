@@ -249,7 +249,8 @@ $this->load->view('general/general_header_view', array('title' => 'Asociaciones 
         <br/>
         <input type="text" class="formu_contacto" id="nombre_contacto" onfocus="clear_textbox('nombre_contacto', 'Nombre');" value="Nombre" size="44" />
         <input type="text" class="formu_contacto" id="mail_contacto" onfocus="clear_textbox('mail_contacto', 'Tu-email')" value="Tu-email" size="44" />
-        <input type="text" class="formu_contacto" id="asunto_contacto" onfocus="clear_textbox('asunto_contacto', 'Asunto')" value="Asunto" size="44" />
+        <input type="text" class="formu_contacto validate[required]" id="asunto_contacto" name="asunto_contacto"
+    onfocus="if(this.value == 'Asunto') { this.value = ''; }" value="Asunto" size="44" />
         <textarea cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto" class="formu_contacto" rows="5">Comentarios</textarea>
         <br/>
         <br/>
