@@ -174,13 +174,12 @@ function getAnunciante($id_anuncio){
         $this->db->join("usuario u", "sc.idUsuario=u.idUsuario");
         $this->db->join("estado es", "p.estadoID=es.estadoID");
         /**
-        Se comenta para que no se traiga las fotos pues, estas se extraen de forma independiente.
+        *Se comenta para que no se traiga las fotos pues, estas se extraen de forma independiente.
         **/
         //$this->db->join("fotospublicacion fp", "p.publicacionID=fp.publicacionID"); $this->db->join("videos vi", "p.publicacionID=vi.publicacionID");
 
         
-        $this->db->where("p.aprobada", 1);
-        $this->db->where("p.vigente", 1);
+        
 
 
         if (!is_null($raza)) {
@@ -209,6 +208,9 @@ function getAnunciante($id_anuncio){
             $clause .= "OR r.raza like '%" . $palabra_clave . "%')";
             $this->db->where($clause);
         }
+
+        $this->db->where("p.aprobada", 1);
+        $this->db->where("p.vigente", 1);
 
         if (!is_null($precio)) {
             $this->db->order_by("p.precioVenta", $precio);

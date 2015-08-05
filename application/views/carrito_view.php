@@ -545,7 +545,7 @@
                                                                     <li>
                                                                         <script type="text/javascript" src="http://mp-tools.mlstatic.com/buttons/render.js"></script>
                                                                         <a href="<?php echo $preference['response']['sandbox_init_point']; ?>" name="MP-Checkout"
-                                                                           class="green-M-Rn" mp-mode="modal" onreturn="execute_my_onreturn" style="padding: 0px; float:right;" onclick="confirm('¿Los datos de envio son correctos?')">Pagar</a>
+                                                                           class="green-M-Rn" mp-mode="modal" onreturn="execute_my_onreturn" style="padding: 0px; float:right;" onclick="return confirmar();">Pagar</a>
 
 
                                                                         <script type="text/javascript">
@@ -604,6 +604,15 @@
 
 
                                                                 <script type="text/javascript">
+                                                                function confirmar() {
+                                                                        var choice = confirm('¿Estás seguro que los datos de envío son correctos?');
+                                                                        if (choice) {
+                                                                            return true;
+                                                                        } else {
+                                                                            return false;
+                                                                        }
+                                                                }
+
                                                                     (function() {
                                                                         function $MPBR_load() {
                                                                             window.$MPBR_loaded !== true && (function() {

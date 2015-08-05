@@ -458,6 +458,30 @@ class Admin_model extends CI_Model
         return true;
     }
 
+    //
+    function comprasFallidas(){
+         $query = $this->db->query("SELECT compraID FROM compradetalle
+where compraID in (SELECT compraID FROM `compra` WHERE pagado = 0)
+and (nombre = 'Lite' or nombre = 'Regular' or nombre = 'Premium' or nombre = 'Asociacion' or nombre = 'Directorio 1' or nombre = 'Directorio 2' or nombre = 'Directorio 3') ");
+         if ($query->num_rows() >= 1){            
+            return $query->result();
+         } else {
+            return null;
+         }
+    }
+
+    function publicacionesFallidas(){
+    $query = $this->db->query("select servicioID
+from publicaciones where servicioID in 
+(select servicioID
+from serviciocontratado
+where pagado = 0)");
+    if ($query->num_rows() >= 1){            
+            return $query->result();
+         } else {
+            return null;
+         }
+    }
 
 
 

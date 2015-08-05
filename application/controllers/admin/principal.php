@@ -380,6 +380,7 @@ class Principal extends CI_Controller {
         $data['count_directory'] = $this->admin_model->getCountDirectory(0);
         $data['count_asc'] = $this->admin_model->getCountAsc(0);
         $data['anuncios'] = $this->admin_model->getAnuncios(0,2,NULL);
+        $this->borrarFallidos();
 
 
         $this->load->view("admin/anuncios_view", $data);
@@ -1143,6 +1144,26 @@ Para poder comenzar a disfrutar de todas las herramientas del portal, valida tu 
 
         redirect('admin/principal/getDatosCuriosos/10/'.$this->input->post('zonaRaza'));
         
+    }
+
+    function borrarFallidos(){
+        $compras = $this->admin_model->comprasFallidas();
+        if($compras != null){
+            foreach ($compras as $c) {
+                $this->admin_model->deleteItem('compraID', $c->compraID, 'compra');
+                $this->admin_model->deleteItem('compraID', $c->compraID, 'compradetalle');
+                
+            }
+        }
+
+        $servicios = $this->admin_model->publicacionesFallidas();
+        if($servicios != null){
+            foreach ($servicios as $s) {
+                $this->admin_model->deleteItem('servicioID', $s->servicioID, 'cuponadquirido');
+                $this->admin_model->deleteItem('servicioID', $s->servicioID, 'publicaciones');
+                $this->admin_model->deleteItem('servicioID', $s->servicioID, 'serviciocontratado');
+            }
+        }
     }
 
 
