@@ -25,12 +25,11 @@ function buscar_imagen(id){
                  })
 }
 
- function mas_anuncio(id){
-	
+ $('.mas_anuncio').on('click', function(){
 
-
-   
-	$.ajax({
+    var id = $(this).attr('id');
+    console.log(id);
+    $.ajax({
                 url: '<?php echo base_url('venta/click')?>',
                 data: 'id='+id,
                 dataType: 'html',
@@ -41,8 +40,7 @@ function buscar_imagen(id){
      });
 
     buscar_detalles(id);
-}
-
+});
 
    function enviar_mail(id) {
             id = document.getElementById('enviando_id').value
@@ -484,8 +482,8 @@ echo "<script> buscar_imagen('".$favorito->publicacionID."');</script>";
 
                 <ul class="ver_detalle_anuncio">
                     <?php if ($this->session->userdata('idUsuario') !== FALSE):?>
-                        <li class="mas_anuncio" onclick="mas_anuncio('<?php echo $favorito->publicacionID ?>')" >
-                            Ver detalle...
+                        <li class="mas_anuncio" id="<?php echo $favorito->publicacionID ?>" >
+                            Ver detalle...<?php echo $favorito->publicacionID ?>
                         </li>
                     <?php else:?>
                         <li onclick="javascript:alert('Favor de iniciar sesión.')">
