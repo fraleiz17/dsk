@@ -144,6 +144,12 @@
     color: #7EA715;
     height: 65px;
     line-height: 1em;
+
+}
+.contenedor_central {
+    float: left;
+    width: 795px;
+    margin-top: -15px;
 }
 </style>
         <div class="contenedor_de_detalle_compra" style="display:none">
@@ -594,7 +600,7 @@
                                                                 </div>
 
 
-                                                                <div class="slideshow_tres">
+                                                                <div class="slideshow_tres" style="margin:0auto;">
                                                                     <img src="<?php echo base_url() ?>images/banner_inferior/1.png" width="638" height="93"/>
                                                                     <img src="<?php echo base_url() ?>images/banner_inferior/2.png" width="638" height="93"/>
                                                                     <img src="<?php echo base_url() ?>images/banner_inferior/3.png" width="638" height="93"/>
