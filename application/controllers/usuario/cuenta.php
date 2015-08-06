@@ -198,7 +198,7 @@ class Cuenta extends CI_Controller {
         $data['anuncios'] = $this->perfil_model->getAnuncios($this->session->userdata('idUsuario'));
         $data['anunciosAct'] = $this->perfil_model->getAnunciosAct($this->session->userdata('idUsuario'));
         $data['anunciosInAct'] = $this->perfil_model->getAnunciosInAct($this->session->userdata('idUsuario'));
-        $data['estados']    = $this->defaultdata_model->getEstados();
+        //$data['estados']    = $this->defaultdata_model->getEstados();
         $data['paquetes'] = $this->defaultdata_model->getPaquetes();
         $data['razas'] = $this->defaultdata_model->getRazas();
         $data['seccion'] = 5;

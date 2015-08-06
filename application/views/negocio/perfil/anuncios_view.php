@@ -65,10 +65,25 @@
             </td>
             <td> <?php echo $anuncio->fechaVencimiento ?> </td>
             <td> <?php echo $anuncio->numeroVisitas ?> </td>
-            <td> <ul class="boton_gris_perfil_tabla"> <li><a href="#"  class="paquete_renovar reset"
+            <td> <ul class="boton_gris_perfil_tabla"> <li>
+
+            <!--BOTON -->
+            <?php if ($anuncio->vigente == 1 && $anuncio->aprobada == 1) { ?>
+            <p data-id="<?=$anuncio->publicacionID?>" class=" cancelar_anuncio">Cancelar</p>
+                <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 0)  { ?>
+            <p data-id="<?=$anuncio->publicacionID?>" class=" cancelar_anuncio">Cancelar</p>
+                <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 2)  { ?>
+            <a href="#" style="text-decoration:none; color:white;" class="paquete_renovarr reset"
    data-paquete='{"id":"<?php echo $anuncio->paqueteID ?>","nombre":"<?php echo $anuncio->NombrePaquete ?>","vigencia":"<?php echo $anuncio->vigencia ?>","precio":"<?php echo $anuncio->precio ?>","caracteres":"<?php echo $anuncio->caracteres ?>","cantFotos":"<?php echo $anuncio->cantFotos ?>","videos":"<?php echo $anuncio->videos ?>","cupones":"<?php echo $anuncio->cupones ?>","seccion":"<?php echo $anuncio->seccion?>","publicacionID":"<?php echo $anuncio->publicacionID?>","expirado":"<?php  if ($anuncio->vigente == 1 && $anuncio->aprobada == 1) {
         echo 'false'; } elseif( $anuncio->vigente == 1 && $anuncio->aprobada == 0)  { echo 'false';} elseif($anuncio->vigente == 1 && $anuncio->aprobada == 2) {
-echo 'false'; } elseif($anuncio->vigente == 0) { echo 'true';}?>"}'>Renovar</a></li> </ul> </td>
+echo 'false'; } elseif($anuncio->vigente == 0) { echo 'true';}?>"}'>Renovar</a>
+                <?php } elseif($anuncio->vigente == 0) { ?>
+            <a href="#"  style="text-decoration:none; color:white;" onclick="muestra('contenedor_publicar_anuncio');">Renovar</a>
+                <?php } ?>
+            <!-- BOTON -->
+
+            
+            </li> </ul> </td>
     </tr>
   <?php } ?>
 
@@ -117,7 +132,25 @@ echo 'false'; } elseif($anuncio->vigente == 0) { echo 'true';}?>"}'>Renovar</a><
             </td>
             <td> <?php echo $anuncio->fechaVencimiento ?> </td>
             <td> <?php echo $anuncio->numeroVisitas ?> </td>
-            <td> <ul class="boton_gris_perfil_tabla"> <li> Renovar </li> </ul> </td>
+           <td> <ul class="boton_gris_perfil_tabla"> <li>
+
+            <!--BOTON -->
+            <?php if ($anuncio->vigente == 1 && $anuncio->aprobada == 1) { ?>
+            <p data-id="<?=$anuncio->publicacionID?>" class=" cancelar_anuncio">Cancelar</p>
+                <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 0)  { ?>
+            <p data-id="<?=$anuncio->publicacionID?>" class=" cancelar_anuncio">Cancelar</p>
+                <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 2)  { ?>
+            <a href="#" style="text-decoration:none; color:white;" class="paquete_renovarr reset"
+   data-paquete='{"id":"<?php echo $anuncio->paqueteID ?>","nombre":"<?php echo $anuncio->NombrePaquete ?>","vigencia":"<?php echo $anuncio->vigencia ?>","precio":"<?php echo $anuncio->precio ?>","caracteres":"<?php echo $anuncio->caracteres ?>","cantFotos":"<?php echo $anuncio->cantFotos ?>","videos":"<?php echo $anuncio->videos ?>","cupones":"<?php echo $anuncio->cupones ?>","seccion":"<?php echo $anuncio->seccion?>","publicacionID":"<?php echo $anuncio->publicacionID?>","expirado":"<?php  if ($anuncio->vigente == 1 && $anuncio->aprobada == 1) {
+        echo 'false'; } elseif( $anuncio->vigente == 1 && $anuncio->aprobada == 0)  { echo 'false';} elseif($anuncio->vigente == 1 && $anuncio->aprobada == 2) {
+echo 'false'; } elseif($anuncio->vigente == 0) { echo 'true';}?>"}'>Renovar</a>
+                <?php } elseif($anuncio->vigente == 0) { ?>
+            <a href="#"  style="text-decoration:none; color:white;" onclick="muestra('contenedor_publicar_anuncio');">Renovar</a>
+                <?php } ?>
+            <!-- BOTON -->
+
+            
+            </li> </ul> </td>
     </tr>
   <?php } ?>
   <?php }?>
@@ -165,7 +198,25 @@ echo 'false'; } elseif($anuncio->vigente == 0) { echo 'true';}?>"}'>Renovar</a><
             </td>
             <td> <?php echo $anuncio->fechaVencimiento ?> </td>
             <td> <?php echo $anuncio->numeroVisitas ?> </td>
-            <td> <ul class="boton_gris_perfil_tabla"> <li> Renovar </li> </ul> </td>
+            <td> <ul class="boton_gris_perfil_tabla"> <li>
+
+            <!--BOTON -->
+            <?php if ($anuncio->vigente == 1 && $anuncio->aprobada == 1) { ?>
+            <p data-id="<?=$anuncio->publicacionID?>" class=" cancelar_anuncio">Cancelar</p>
+                <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 0)  { ?>
+            <p data-id="<?=$anuncio->publicacionID?>" class=" cancelar_anuncio">Cancelar</p>
+                <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 2)  { ?>
+            <a href="#" style="text-decoration:none; color:white;" class="paquete_renovarr reset"
+   data-paquete='{"id":"<?php echo $anuncio->paqueteID ?>","nombre":"<?php echo $anuncio->NombrePaquete ?>","vigencia":"<?php echo $anuncio->vigencia ?>","precio":"<?php echo $anuncio->precio ?>","caracteres":"<?php echo $anuncio->caracteres ?>","cantFotos":"<?php echo $anuncio->cantFotos ?>","videos":"<?php echo $anuncio->videos ?>","cupones":"<?php echo $anuncio->cupones ?>","seccion":"<?php echo $anuncio->seccion?>","publicacionID":"<?php echo $anuncio->publicacionID?>","expirado":"<?php  if ($anuncio->vigente == 1 && $anuncio->aprobada == 1) {
+        echo 'false'; } elseif( $anuncio->vigente == 1 && $anuncio->aprobada == 0)  { echo 'false';} elseif($anuncio->vigente == 1 && $anuncio->aprobada == 2) {
+echo 'false'; } elseif($anuncio->vigente == 0) { echo 'true';}?>"}'>Renovar</a>
+                <?php } elseif($anuncio->vigente == 0) { ?>
+            <a href="#"  style="text-decoration:none; color:white;" onclick="muestra('contenedor_publicar_anuncio');">Renovar</a>
+                <?php } ?>
+            <!-- BOTON -->
+
+            
+            </li> </ul> </td>
     </tr>
   <?php } ?>
   <?php } ?>
@@ -178,12 +229,12 @@ echo 'false'; } elseif($anuncio->vigente == 0) { echo 'true';}?>"}'>Renovar</a><
 
  
  
- <!--EDICION DE ANUNCIO-->
+ <!--EDICION DE ANUNCIO
 <div id="contenedor_publicar_anuncio" class="contenedor_publicar" style=" display:none">
 
-    <!-- Inicio contenedor pap publicar anuncio aunucio !-->
+Inicio contenedor pap publicar anuncio aunucio 
     <div id="publicar_anuncio" class="pubicar_anuncio_mini">
-        <?php $this->load->view('partial/_pasos_anuncio_renovar', array('paquetes' => $paquetes, 'estados' => $estados, 'razas' => $razas,'cupones' => $cupones,'anuncios'=> $anuncios)); ?>
+        <?php //$this->load->view('partial/_pasos_anuncio_renovar', array('paquetes' => $paquetes, 'estados' => $estados, 'razas' => $razas,'cupones' => $cupones,'anuncios'=> $anuncios)); ?>
 
     </div>
-</div>
+</div>!-->
