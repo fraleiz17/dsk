@@ -134,7 +134,18 @@
     </head>
 
     <body>
-
+<style>
+  .titulo_seccion {
+    font-size: 60px;
+    margin: 15px auto 0px;
+    width: 990px;
+    max-width: 990px;
+    font-family: "titulos";
+    color: #7EA715;
+    height: 65px;
+    line-height: 1em;
+}
+</style>
         <div class="contenedor_de_detalle_compra" style="display:none">
             <div class="contenedor_cerrar_comprar">
                 <img src="<?php echo base_url() ?>images/cerrar_verde.png"/>
