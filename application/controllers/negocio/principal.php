@@ -95,6 +95,7 @@ class Principal extends CI_Controller {
             $data['ubicacion'] = $this->usuario_model->miUbicacion($this->session->userdata('idUsuarioDato'));
             $data['giro'] = $this->usuario_model->getGiro($this->session->userdata('idUsuarioDetalle'));
         }
+        $this->borrarFallidos();
         
          $this->load->view('negocio/myprofile_view',$data);
     }
@@ -374,6 +375,27 @@ Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
     }
          echo json_encode($data);
 
+    }
+
+    function borrarFallidos(){
+        $compras = $this->admin_model->comprasFallidas();
+        if($compras != null){
+            foreach ($compras as $c) {
+                
+                $this->admin_model->deleteItem('compraID', $c->compraID, 'compradetalle');
+                $this->admin_model->deleteItem('compraID', $c->compraID, 'compra');
+                
+            }
+        }
+
+        $servicios = $this->admin_model->publicacionesFallidas();
+        if($servicios != null){
+            foreach ($servicios as $s) {
+                $this->admin_model->deleteItem('servicioID', $s->servicioID, 'cuponadquirido');
+                $this->admin_model->deleteItem('servicioID', $s->servicioID, 'publicaciones');
+                $this->admin_model->deleteItem('servicioID', $s->servicioID, 'serviciocontratado');
+            }
+        }
     }
        
 

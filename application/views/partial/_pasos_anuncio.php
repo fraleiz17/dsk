@@ -506,11 +506,8 @@ $(document).ready(function()
                 $(".preview").change(function() {
 					
                 $("#tituloPrev").html($("#titulo").val());
-                <?php if (is_logged() == true && $this->session->userdata('paqueteGratis') == 1):?>
-                    $("#precioPrev").html('0.00');
-                <?php else: ?>
+                
                 $("#precioPrev").html($("#precio").val());
-                <?php endif; ?>
                 $("#seccionPrev").html($("#seccion").val());
                 var genero = $('#generoP option:selected').html();
                 $("#generoPrev").html(genero);
@@ -873,10 +870,12 @@ TOTAL
             $('#ncupones').html(paquete_val.cupones);
             $('#ncaracteres').html(paquete_val.caracteres);
 
+            console.log(paquete_val.id);
+            if(paquete_val.id === 1){
             <?php if (is_logged() == true && $this->session->userdata('paqueteGratis') == 1):?>
             paquete_val.precio = 0;
             <?php endif; ?>
-
+            }
             $('#subtotal').html((paquete_val.precio - ( paquete_val.precio * .16)).toFixed(2));
 			var iva = paquete_val.precio * .16;			
 			$('#niva').html(iva.toFixed(2));

@@ -137,6 +137,7 @@ class Cuenta extends CI_Controller {
         $data['seccion'] = 5;
         $data['banner'] = $this->defaultdata_model->getTable('banner');
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
+        $this->borrarFallidos();
         $this->load->view('usuario/myprofile_view',$data);
     }
 
@@ -446,6 +447,28 @@ Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
             echo json_encode($data);
         
         }
+
+        function borrarFallidos(){
+        $compras = $this->defaultdata_model->comprasFallidas();
+        if($compras != null){
+            foreach ($compras as $c) {
+                
+                $this->defaultdata_model->deleteItem('compraID', $c->compraID, 'compradetalle');
+                $this->defaultdata_model->deleteItem('compraID', $c->compraID, 'compra');
+                
+            }
+        }
+
+        $servicios = $this->defaultdata_model->publicacionesFallidas();
+        if($servicios != null){
+            foreach ($servicios as $s) {
+                $this->defaultdata_model->deleteItem('servicioID', $s->servicioID, 'cuponadquirido');
+                $this->defaultdata_model->deleteItem('servicioID', $s->servicioID, 'publicaciones');
+                $this->defaultdata_model->deleteItem('servicioID', $s->servicioID, 'serviciocontratado');
+            }
+        }
+    }
+
         
 
 }

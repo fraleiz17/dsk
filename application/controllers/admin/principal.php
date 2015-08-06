@@ -1150,8 +1150,9 @@ Para poder comenzar a disfrutar de todas las herramientas del portal, valida tu 
         $compras = $this->admin_model->comprasFallidas();
         if($compras != null){
             foreach ($compras as $c) {
-                $this->admin_model->deleteItem('compraID', $c->compraID, 'compra');
+                
                 $this->admin_model->deleteItem('compraID', $c->compraID, 'compradetalle');
+                $this->admin_model->deleteItem('compraID', $c->compraID, 'compra');
                 
             }
         }

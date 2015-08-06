@@ -19,7 +19,7 @@
 
 
     <!--<script src="<?php echo base_url() ?>js/jquery-latest.js" type="text/javascript"></script>-->
-    <script src="<?php echo base_url() ?>js/funciones_index.js" type="text/javascript"></script>
+    <script src="<?php echo base_url() ?>js/funciones_.js" type="text/javascript"></script>
 
 
   <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/index_.css" media="screen"></link> <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/general.css" media="screen"></link> 
@@ -53,7 +53,8 @@ jQuery(document).ready(function(){
                                     dataType: 'JSON',
                                     type: 'post',
                                     success: function(data) {
-                                       if(data.response = true){
+                                        console.log(data.response);
+                                       if(data.response === true){
 										   alert('Mensaje Enviado');
 										   muestra('contenedor_correctoQUP');			   
 										} else {
@@ -72,7 +73,8 @@ jQuery(document).ready(function(){
                                     dataType: 'JSON',
                                     type: 'post',
                                     success: function(data) {
-                                       if(data.response = true){
+                                        console.log(data.response);
+                                       if(data.response === true){
 										   alert('Mensaje Enviado');
 										   oculta('soporteQUP');
 										   muestra('contenedor_correctoQUP');	   
@@ -115,7 +117,7 @@ jQuery(document).ready(function(){
 <div class="contenedor_perrito_instrucciones"> <img src="<?php echo base_url() ?>images/pero_paso_uno.png" width="94" height="84" /><div class="instrucciones_perrito"> Env&iacute;anos tus datos y nos ponemos en contacto contigo</div></div>
 </br>
 </br>
-<form action="<?=base_url()?>quienes/publicidad_do" method="post" id="pub">
+<form action="" method="post" id="pub">
 <table class="tabla_contacto_publicidad"> 
 <tr> 
 <td height="30"> Contacto: </td>
@@ -135,7 +137,7 @@ jQuery(document).ready(function(){
 </tr>
 <tr> 
 <td height="30"> Sitio Web: </td>
-<td> <input name="web" type="text" class="input_bg_gris validate[custom[url]]" id="web"/> </td>
+<td> <input name="web" type="text" class="input_bg_gris validate[custom[url]]" id="web" placeholder="http://ejemplo.com"/> </td>
 </tr>
 </table>
 <div class="separador_morado_publicidad"> </div>
@@ -195,7 +197,7 @@ Comentarios:
 
 </div>
 </br>
-<form action="<?=base_url()?>quienes/soporte" method="post" id="sop">
+<form action="" method="post" id="sop">
 <table width="692" class="tabla_soporte">
 <tr> 
 <td width="115" height="30"> Contacto: </td>

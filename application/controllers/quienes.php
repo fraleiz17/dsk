@@ -232,11 +232,14 @@ QUP Contacto
 </body>
 </html>';
    
-    
+    if($nombre == '' && $apellido == '' and $correo == ''){
+            $data['response'] = false;
+    }else {
     if($this->email_model->send_email('', 'publicidad@quierounperro.com', 'Se ha recibido un correo desde Publicidad QUP',$mensaje)){
         $data['response'] = true;
     } else {
         $data['response'] = false;
+    }
     }
        echo json_encode($data);
     }
@@ -299,12 +302,16 @@ QUP Contacto
 </body>
 </html>';
    
+    if($nombre == '' && $apellido == '' and $correo == ''){
+            $data['response'] = false;
+    }else {
     
     if($this->email_model->send_email('', 'soporte@quierounperro.com', 'Se ha recibido un correo desde Soporte QUP',$mensaje)){
         $data['response'] = true;
     } else {
         $data['response'] = false;
     }
+}
        echo json_encode($data);
        
     }
