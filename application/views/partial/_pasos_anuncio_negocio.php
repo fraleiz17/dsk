@@ -29,6 +29,20 @@
         width: 95px!important;
         height: 68px!important;
     }
+
+    #test {
+    color: #FFF;
+    font-size: 18px;
+    font-family: "miFuente";
+    margin-top: -10px;
+}
+
+    #test:hover {
+    color: #762EA4;
+    font-size: 18px;
+    font-family: "miFuente";
+    margin-top: -10px;
+}
 </style>
 <link href="http://hayageek.github.io/jQuery-Upload-File/uploadfile.min.css" rel="stylesheet">
 <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
@@ -263,8 +277,8 @@
                             </div>
 
                              <div>
-                                <ul class="morado_directorio">
-                                    <li class="sig_paso" >
+                                 <ul class="morado_directorio">
+                                    <li class="sig_paso">
                                         Continuar
                                     </li>
                                 </ul>
@@ -338,17 +352,17 @@
                         </div>
                         <br/>
 
-                        <div id="contendedor_morado" class="contenedor_morado">
+                        <div>
                             <!--<ul class="morado_15_sinmargen" >
                                 <li data-titulo="Completa tu información" data-p="paso_tres_negocio" onclick="$('.paso', '#form_anuncio_negocio').hide(); $('#paso_tres_negocio', '#form_anuncio_negocio').show().addClass('paso_show');">
                                     Editar
                                 </li>
                             </ul>-->
-                            <ul class="morado_15_sinmargen" >
-                                <li class="sig_paso">
-                                    Continuar
-                                </li>
-                            </ul>
+                             <ul class="morado_directorio">
+                                    <li class="sig_paso">
+                                        Continuar
+                                    </li>
+                                </ul>
                             <br/>
                             <div id="msj_paso" style="font-size: 10px;display: inline-block; vertical-align: bottom; height: 38px;"></div>
                         </div>
@@ -415,7 +429,7 @@
                         <div>
                             <ul class="morado_directorio">
                                 <li class="sig_paso">
-                                    <input type="submit" value="comprar"/>
+                                    <input type="submit" id="test" value="comprar"/>
                                 </li>
                             </ul>
                             <br/>
