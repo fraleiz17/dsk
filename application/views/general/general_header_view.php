@@ -43,5 +43,9 @@
 
                 document.write('<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/index_explorer.css" media="screen"></link>');
             }
+            if (navigator.userAgent.toLowerCase().indexOf('mozilla')>-1)
+            {
+                document.write('<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/index_.css" media="screen"></link>');        
+            }
         </script>
 

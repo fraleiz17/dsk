@@ -353,7 +353,7 @@ echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
                     <br/>
                     <font> Género: <?php echo $publicacion->genero?'Macho':'Hembra'?> </font>
                     <br/>
-                    <font> Ciudad: <?php echo substr($publicacion->ciudad, 0, 10)?></font>
+                    <font> Ciudad: <?php echo substr($publicacion->ciudad, 0, 8)?></font>
                 </div>
                 <div class="contenedor_foto_anuncio" id="contener_foto<?php echo $publicacion->publicacionID?>">
                   <img src="<?=base_url().$publicacion->foto?>" width="auto" height="100%">  
