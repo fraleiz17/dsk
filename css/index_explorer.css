@@ -102,6 +102,7 @@ body{
 	margin-right:4px;
 	box-shadow: 2px 2px 5px #999;
 	margin-bottom:10px;
+	overflow: hidden;
 
 	}
 .seccion_inferior_derecha{

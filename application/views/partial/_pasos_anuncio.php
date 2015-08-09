@@ -79,10 +79,10 @@
         <div class="precio_paquete_lite_mini">
             <?php if ($paquetes[0]->precio == 0 || is_logged() == false): ?>
                 <div class="el_titulo_paquete_lite_mini"> Gratis</div>
-                <div class="descripcion_precio_paquete_lite_mini">al crear tu usuario</div>
+                <div class="descripcion_precio_paquete_lite_mini"></div>
             <?php elseif (is_logged() == true && $this->session->userdata('paqueteGratis') == 1): ?>
                 <div class="el_titulo_paquete_lite_mini"> Gratis</div>
-                <div class="descripcion_precio_paquete_lite_mini">al crear tu usuario</div>
+                <div class="descripcion_precio_paquete_lite_mini"></div>
             <?php else: ?>
                 <div class="precio_paquete_regular_mini"> $<?php echo $paquetes[0]->precio ?></div>
             <?php endif; ?>

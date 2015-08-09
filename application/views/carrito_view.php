@@ -599,8 +599,12 @@
                                                                 </div>
                                                                 </div>
 
+                                                                <style>
+                                                                    .slideshow_tres{
+                                                                    margin:0 auto;
+                                                                }</style>
+                                                                <div class="slideshow_tres" >
 
-                                                                <div class="slideshow_tres" style="margin:0auto;">
                                                                     <img src="<?php echo base_url() ?>images/banner_inferior/1.png" width="638" height="93"/>
                                                                     <img src="<?php echo base_url() ?>images/banner_inferior/2.png" width="638" height="93"/>
                                                                     <img src="<?php echo base_url() ?>images/banner_inferior/3.png" width="638" height="93"/>

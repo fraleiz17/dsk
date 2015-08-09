@@ -78,7 +78,7 @@
         <div class="precio_paquete_lite_mini">
             <?php if ($paquetes[0]->precio == 0): ?>
                 <div class="el_titulo_paquete_lite_mini"> Gratis</div>
-                <div class="descripcion_precio_paquete_lite_mini">al crear tu usuario</div>
+                <div class="descripcion_precio_paquete_lite_mini"></div>
             <?php else: ?>
                 <div class="precio_paquete_regular_mini"> $<?php echo $paquetes[0]->precio ?></div>
             <?php endif; ?>
