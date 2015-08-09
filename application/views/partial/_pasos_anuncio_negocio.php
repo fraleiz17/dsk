@@ -198,7 +198,7 @@
                             <br/>
                             <p class="margen_15_left"> 
                                 <label>Nombre del negocio:</label>
-                                <input name="nombre_negocio_form" type="text" class="background_gris_55 validate[required] form-validation-field-1"  value="<?php echo $user->nombreNegocio ?>" id="nombre_negocioT"/>
+                                <input name="nombre_negocio_form" type="text" class="background_gris_55 validate[required] form-validation-field-1"  value="<?php echo $user->nombreNegocio ?>" id="nombre_negocioTT"/>
                             </p>
                             <br/>
                             <div class="sub_instrucciones_pasos"> Horarios atención </div>
@@ -560,7 +560,7 @@
 
             var form_negocio = $('#form_anuncio_negocio');
             $('#pagina_web_negocio').html('');
-            $('#nombre_negocioT').html($('#nombre_negocio_form').val());
+            $('#nombre_negocio_form').html($('#nombre_negocioTT').val());
             $('#apellido_negocio').html($('#apellido_negocioT').val());
             $('#telefono_negocio').html($('#telefono_negocioT').val());
             $('#horarios_negocio').html($('#horarios_negocioT').val());
