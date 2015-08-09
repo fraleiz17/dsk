@@ -13,6 +13,11 @@ if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
 
   document.write('<link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/general.css" media="screen"></link> <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/venta.css" media="screen"></link><link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/mi_perfil.css" media="screen"></link>');
   }
+  if (navigator.userAgent.indexOf('Mozilla') > -1)
+  {
+    document.write('<link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/general.css" media="screen"></link> <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/venta.css" media="screen"></link><link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/mi_perfil.css" media="screen"></link>');
+    
+  }
   </script>
 <!--   <script src="<?php echo base_url()?>js/jquery-1.10.2.js"></script>-->
     <script type="text/javascript" src="<?php echo base_url() ?>js/jquery-1.8.2.min.js"></script>
