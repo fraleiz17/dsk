@@ -27,6 +27,7 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
             <br>
             <br>
             <form id="form_contacto" >
+                <div style="width:323px;height:auto;display:block;overflow:hidden;-ms-overflow-style: none">
                 <input type="text" class="formu_contacto" id="nombre_contacto" name="nombre_contacto" onfocus="clear_textbox('nombre_contacto', 'Nombre');" value="<?php echo $this->session->userdata('nombre') . ' ' . $this->session->userdata('apellido') ?>" size="44">
                 <input type="text" class="formu_contacto" id="mail_contacto" name="email_contacto" onfocus="clear_textbox('mail_contacto', 'Tu-email')" value="<?php echo $this->session->userdata('correo') ?>" size="44">
                 <input type="text" class="formu_contacto" id="asunto_contacto" name="asunto_contacto" onfocus="clear_textbox('asunto_contacto', 'Asunto')" placeholder="Asunto" size="44">
@@ -43,6 +44,7 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
                     </div>
                     <div class='infouser' style="display: inline-block; width: 335px;"></div>
                 </div>
+            </div>
             </form>
         </div>
     </div>
