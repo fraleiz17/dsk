@@ -344,7 +344,7 @@ function denunciar_pub() {
 
 <div class="contenedor_anuncio_detalle" id="contenedor_anuncio_detalle" style=" display:none;">
 <div class="contenedor_cerrar_anuncio">
-<img src="<?php echo base_url()?>images/cerrar_anuncio.png" onclick="oculta('contenedor_anuncio_detalle');oculta'video');"/>
+<img src="<?php echo base_url()?>images/cerrar_anuncio.png" onclick="oculta('contenedor_anuncio_detalle');"/>
 </div>
  <div class="leer_anuncio">
 
