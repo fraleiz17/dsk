@@ -30,8 +30,8 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
                 <div style="width:320px;height:auto;display:block;overflow:hidden;-ms-overflow-style: none">
                 <input type="text" class="formu_contacto" id="nombre_contacto" name="nombre_contacto" onfocus="clear_textbox('nombre_contacto', 'Nombre');" value="<?php echo $this->session->userdata('nombre') . ' ' . $this->session->userdata('apellido') ?>" size="44">
                 <input type="text" class="formu_contacto" id="mail_contacto" name="email_contacto" onfocus="clear_textbox('mail_contacto', 'Tu-email')" value="<?php echo $this->session->userdata('correo') ?>" size="44">
-                <input type="text" class="formu_contacto" id="asunto_contacto" name="asunto_contacto" onfocus="clear_textbox('asunto_contacto', 'Asunto')" placeholder="Asunto" size="44">
-                <textarea cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto" name="comentario_contacto" class="formu_contacto" placeholder="Comentarios" rows="5"></textarea>
+                <input type="text" class="formu_contacto" id="asunto_contacto" name="asunto_contacto" onfocus="if(this.value == 'Asunto') { this.value = ''; }" value="Asunto" size="44" size="44">
+                <textarea cols="50" onfocus="if(this.value == 'Comentarios') { this.value = ''; }" size="44" id="comentarios_contacto" name="comentario_contacto" class="formu_contacto" rows="5">Comentarios</textarea>
                 <br>
                 <br>
                 <div>
