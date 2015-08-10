@@ -162,7 +162,7 @@ function getAnunciante($id_anuncio){
          * 
          * Posible recomentacion para pasarlo a una vista
          */
-
+        //$this->db->select("*,(select foto from fotospublicacion f where f.publicacionID = p.publicacionID group by f.publicacionID limit 1) as foto");
         $this->db->from("publicaciones p");
 
         $this->db->join("serviciocontratado sc", "p.detalleID=sc.detalleID AND p.paqueteID=sc.paqueteID AND p.servicioID=sc.servicioID");

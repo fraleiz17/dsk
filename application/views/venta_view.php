@@ -47,7 +47,7 @@ function buscar_imagen(id){
                  success: function(result)
                 {
                     var data = result.data;
-                    if (result.count < 1) {
+                    if (result.count >= 1) {
                         for (var i = 0; i < result.count; i++)
                             {
                                 foto=(data[i].foto);
@@ -285,7 +285,7 @@ que el nombre del criador esté en el certificado.
 <option value="" > Selecciona un raza </option>
 <?php if($razas != null):
     foreach($razas as $raza):
-    echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
+    //echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
 
     ?>
 <option style="background-color: #BCBEC0;" value="<?=$raza->razaID?>"><?=$raza->raza?></option>
@@ -338,7 +338,7 @@ que el nombre del criador esté en el certificado.
 
             <?php
             foreach ($publicaciones as $publicacion):
-echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
+//echo "<script> buscar_imagen('".$publicacion->publicacionID."');</script>";
 
                 ?>
             <!-- INICIO contenedor anuncio  -->
@@ -577,8 +577,8 @@ function obten_id(id) {
                         cont_anun.append(cont_descripcion);
 
                         var cont_imagen = $('<div class="contenedor_foto_anuncio" id="contener_foto'+data[i].publicacionID+'" ></div>');
-                       //buscar_imagen(data[i].publicacionID);
-                        //cont_anun.append(cont_imagen);
+                       buscar_imagen(data[i].publicacionID);
+                       cont_anun.append(cont_imagen);
 
                         <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
                         var ver_mas = $('<ul class="ver_detalle_anuncio"><li onclick="muestra(\'contenedr_anuncio_detalle\')">Ver detalle...</li></ul>');
