@@ -81,7 +81,7 @@
                             <?php if($this->session->userdata('tipoUsuario') == 3):?>
                             <div class="contenedor_checkbox">
                                 <label style="display: inline-block; margin-bottom: 2px;">
-                                            <input class="giro_form validate[required] ckGiro" type="checkbox" name="giro_11_form" value="13" id="CheckboxGiro_0" />
+                                            <input class="giro_form validate[required] ckGiro" type="checkbox" name="giro_13_form" value="13" id="CheckboxGiro_0" />
                                             <?php echo 'Asociacion Protectora'; ?>
                                             <input type="hidden" name="Asociación Protectora" id="giro_11_form" value="giros_negocio/protectora.png" />
                                         </label>

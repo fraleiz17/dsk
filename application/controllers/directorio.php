@@ -15,6 +15,7 @@ class Directorio extends CI_Controller {
         $this->load->model('admin_model');
         $this->load->model('usuario_model');
         $this->load->model('venta_model');
+        $this->load->model('email_model');
         $this->load->helper(array('form', 'url'));
         $this->load->library('googlemaps');
         $this->load->library("UUID", true);
@@ -132,7 +133,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         $data['detalles'] = $detalles;
         $idUsuarioDetalle = $this->usuario_model->getIDDetalle($detalles->idUsuario);
         $data['giros'] = $this->usuario_model->getGirosUsuario($idUsuarioDetalle);
-
+        //var_dump($data['giros'],$idUsuarioDetalle);
         if($this->session->userdata('tipoUsuario') == 3){
              $data['seccion'] = 4;
         } else {
@@ -146,7 +147,75 @@ $data['paises'] = $this->defaultdata_model->getPaises();
     public function contactar($id) {
         $directorio = $this->usuario_model->getDirectorios(4, null, null, null, intval($id));
 
-        $config = array(
+        //$directorio = $this->venta_model->getPublicaciones(null, null, null, null, null, $this->input->post('pub'),$this->input->post('seccion'));
+        //var_dump($directorio);
+        //var_dump($directorio);
+$msj = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Notificacion-QuieroUnPerro.com</title>
+
+</head>
+
+<body>
+<table width="647" align="center">
+<tr>
+<td width="231" height="129" colspan="2" valign="top">
+<img src="http://quierounperro.com/psk/images/logo_mail.jpg"/>
+</td>
+</tr>
+<!-- <tr>
+<td align="center"><h4 style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;">Contacto en QUP</h4></td>
+</tr> -->
+<tr>
+<td style="padding-left:15px;"> 
+<font style=" font-family:Verdana, Geneva, sans-serif; margin-top:100px; font-size:13px; font-weight:bold; color:#6A2C91; " >Hola! </font>
+<br/>
+<br/>
+
+<font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
+<font> El usuario ' . $this->session->userdata('nombre') . ' ' . $this->session->userdata('apellido') . ' esta interesado en el siguiente anuncio:</font>
+<font style="margin-top:100px; font-size:19px; font-weight:bold; color:#72A937;" >' . ($directorio->titulo).'</font>
+        <br/><br/>        
+        <font color="#000066"><strong> Correo Contacto:</strong> ' . $this->input->post('email_contacto') . '</font>
+        <br/><br/> 
+        <font color="#000066"><strong> Asunto:</strong> ' . $this->input->post('asunto_contacto') . '</font>
+        <br/><br/>
+        <font color="#000066"><strong>Mensaje: </strong> ' . $this->input->post('comentario_contacto') . '</font>
+        <br/><br/>
+        <p> </p>
+<br/><br/>
+Si tienes cualquier duda al respecto, por favor escr&iacute;benos a contacto@quierounperro.com
+</font>
+<p> </p>
+</td>
+</tr>
+
+<tr>
+<td colspan="7" >
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-left:15px;"> ¡Muchas Gracias! </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:12px; padding-left:15px;"> El Equipo de QuieroUnPerro.com </font>
+<br/>
+<font style=" font-family:Verdana, Geneva, sans-serif; font-size:10px; padding-left:15px;"> Todos los derechos reservados '.date('Y').' </font>
+</td>
+</tr>
+</table>
+
+
+
+</body>
+</html>
+ ';
+        
+        if(!$this->email_model->send_email('', $directorio->correo, 'Contacto QUP', $msj)){
+            echo "<div class='alert alert-warning'>No se ha logrado envíar el correo al dueño de este directorio. Vuelva a intentarlo o contacte al administrador del sitio.</div>";
+        } else {
+            echo '<div class="alert alert-success">Se ha enviado correctamente el correo electrónico.</div>';
+        }
+
+        /*$config = array(
             'mailtype' => 'html',
             'priority' => 2,
             'useragent' => 'qup',
@@ -215,7 +284,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
             echo "<div class='alert alert-warning'>No se ha logrado envíar el correo al dueño de este directorio. Vuelva a intentarlo o contacte al administrador del sitio.</div>";
         } else {
             echo '<div class="alert alert-success">Se ha enviado correctamente el correo electrónico.</div>';
-        }
+        }*/
     }
 
     public function file() {
@@ -247,16 +316,22 @@ $data['paises'] = $this->defaultdata_model->getPaises();
     }
 
     public function nuevo() {
-        //var_dump($_POST);
-
-        $count_giros = count($this->defaultdata_model->getGiros());
+      $count_giros = count($this->defaultdata_model->getGiros());
         $giro_form = array();
-        for ($i = 1; $i < $count_giros + 1; $i++) {
+        for ($i = 1; $i <= $count_giros; $i++) {
             $giro_form[$i] = $this->input->post('giro_' . $i . '_form');
-            if ($giro_form[$i] === false) {
+
+            if ($giro_form[$i] == false) {
                 unset($giro_form[$i]);
+            } else {
+               $this->defaultdata_model->deleteItem('idUsuarioDetalle',$this->session->userdata('idUsuarioDetalle'), 'giroempresa');   
+               $g = array('idUsuarioDetalle' => $this->session->userdata('idUsuarioDetalle'),
+                         'giroID' => $giro_form[$i] );
+               $giro_form[$i];
+               $this->defaultdata_model->insertItem('giroempresa', $g);
             }
         }
+
 
         $plan_form = $this->input->post('plan_form');
 

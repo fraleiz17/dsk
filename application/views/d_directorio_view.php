@@ -27,7 +27,7 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
             <br>
             <br>
             <form id="form_contacto" >
-                <div style="width:323px;height:auto;display:block;overflow:hidden;-ms-overflow-style: none">
+                <div style="width:320px;height:auto;display:block;overflow:hidden;-ms-overflow-style: none">
                 <input type="text" class="formu_contacto" id="nombre_contacto" name="nombre_contacto" onfocus="clear_textbox('nombre_contacto', 'Nombre');" value="<?php echo $this->session->userdata('nombre') . ' ' . $this->session->userdata('apellido') ?>" size="44">
                 <input type="text" class="formu_contacto" id="mail_contacto" name="email_contacto" onfocus="clear_textbox('mail_contacto', 'Tu-email')" value="<?php echo $this->session->userdata('correo') ?>" size="44">
                 <input type="text" class="formu_contacto" id="asunto_contacto" name="asunto_contacto" onfocus="clear_textbox('asunto_contacto', 'Asunto')" placeholder="Asunto" size="44">
@@ -83,9 +83,8 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
     <div style=" margin-left:8px; margin-right:8px;" class="contenido_directorio">
         <div class="contenedor_titulo_informcacion"> CONT&Aacute;CTANOS </div>
         <div class="contenedor_informacion">
-            <p>Querétaro, Servicio a Domicilio
-                Querétaro Querétaro</p>
-            <p class="margin_top_10">Tel: <?php echo $detalles->telefono ?></p>
+            <p class="margin_top_10">Dirección: <?php  echo $detalles->calle.' No.:'.$detalles->numero.' Colonia:'.$detalles->colonia.' Estado:'.$detalles->nombreEstado; ?></p>
+            <p class="margin_top_10">Tel: <?php  echo $detalles->telefono ?></p>
             <p class="margin_top_10">Contacto:  <?php echo $detalles->nombreContacto ?></p>
             <p class="margin_top_10">Pagina Web: <?php echo $detalles->paginaWeb ?></p>
             <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
@@ -116,7 +115,6 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
             <p><?php echo $detalles->horario; ?></p>
         </div>
     </div>
-
 </div>
 
 <script>
@@ -161,11 +159,9 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
                     $(".infouser", form).empty().html('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
                 },
                 success: function(data) {
-                    $(".infouser", form).empty().append(data);
+                    //alert('Mensaje Emviado');
+                    $(".infouser").html('<div class="alert alert-success">Se ha enviado correctamente el correo electrónico.</div>');
 
-                },
-                complete: function() {
-                    $(".infouser", form).empty();
                 }
             });
 
