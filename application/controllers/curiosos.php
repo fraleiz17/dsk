@@ -64,6 +64,7 @@ $this->googlemaps->initialize($config);
 $data['map'] = $this->googlemaps->create_map();
 
 
+
 // set up the marker ready for positioning 
 // once we know the users location
 $marker = array();
