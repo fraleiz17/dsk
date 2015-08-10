@@ -26,9 +26,6 @@ function buscar_imagen(id){
 }
 
  function mas_anuncio(id){
-	
-
-
    
 	$.ajax({
                 url: '<?php echo base_url('venta/click')?>',
@@ -463,25 +460,24 @@ que el nombre del criador esté en el certificado.
             <?php
 		    if($favoritos != null):
             foreach ($favoritos as $favorito):
-echo "<script> buscar_imagen('".$favorito->publicacionID."');</script>";
-			
                 ?>
+            
             <!-- INICIO contenedor anuncio  -->
             <div class="contenedor_anuncio">
                 <div class="titulo_anuncio">
                     <?php echo $favorito->titulo?>
                 </div>
                 <div class="descripcion_anuncio">
-                    <font> Precio : &nbsp;$ &nbsp; <?php echo $favorito->precio?></font>
+                    <font> Precio : &nbsp;$ &nbsp; <?php echo $favorito->precioVenta?></font>
                     <br/>
-                    <font> Raza&nbsp;: <?php $razita= $favorito->razaID;echo substr($razita, 0, 15); ?> </font>
+                    <font> Raza&nbsp;: <?php $razita= $favorito->raza;echo substr($razita, 0, 15); ?> </font>
                     <br/>
                     <font> Género&nbsp;: <?php echo $favorito->genero?'Macho':'Hembra'?> </font>
                     <br/>
                     <font> Ciudad&nbsp;: <?php echo $favorito->ciudad?></font>
                 </div>
                 <div class="contenedor_foto_anuncio" id="contener_foto<?php echo $favorito->publicacionID?>">
-                    
+               <img src="<?=base_url().$favorito->foto?>" width="auto" height="100%"> 
                 </div>
 
                 <ul class="ver_detalle_anuncio">

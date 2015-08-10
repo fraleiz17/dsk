@@ -120,11 +120,12 @@ FROM usuario a, usuariodetalle b , ubicacionusuario d WHERE a.idUsuario = b.idUs
     }
 
     function getFavoritos($idUsuario){
-    	$query = $this->db->query('SELECT * from favoritos d, publicaciones a, serviciocontratado b, usuario c, estado e
+    	$query = $this->db->query('SELECT *, (select foto from fotospublicacion f where f.publicacionID = a.publicacionID group by f.publicacionID limit 1) as foto from favoritos d, publicaciones a, serviciocontratado b, usuario c, estado e, raza r
 			where a.servicioID = b.servicioID
 			and b.idUsuario = c.idUsuario
 			and d.publicacionID = a.publicacionID
 			and a.estadoID = e.estadoID
+            and r .razaID = a.razaID
 			and d.idusuario =' .$idUsuario);
     	if ($query->num_rows() >= 1){
 			return $query->result();

@@ -248,6 +248,7 @@ class Cuenta extends CI_Controller {
         $data['estados']    = $this->defaultdata_model->getEstados();
         $data['razas'] = $this->perfil_model->getRazas();
         $data['favoritos'] = $this->perfil_model->getFavoritos($this->session->userdata('idUsuario'));
+        
         $data['seccion'] = 5;
 
         if($this->session->userdata('tipoUsuario') == 2 || $this->session->userdata('tipoUsuario') == 3){

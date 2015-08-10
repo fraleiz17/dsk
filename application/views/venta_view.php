@@ -581,7 +581,7 @@ function obten_id(id) {
                        cont_anun.append(cont_imagen);
 
                         <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
-                        var ver_mas = $('<ul class="ver_detalle_anuncio"><li onclick="muestra(\'contenedr_anuncio_detalle\')">Ver detalle...</li></ul>');
+                        var ver_mas = $('<ul class="ver_detalle_anuncio"><li onclick="javascript:buscar_detalles(\'' + data[i].publicacionID + '\');" >Ver detalle...</li></ul>');
                     <?php else: ?>
                     var ver_mas = $('<ul class="ver_detalle_anuncio"><li onclick="javascript:alert(\'Favor de iniciar sesión.\')">Ver detalle...</li></ul>');
                 <?php endif; ?>

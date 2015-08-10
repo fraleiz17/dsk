@@ -463,7 +463,6 @@ que el nombre del criador esté en el certificado.
             <?php
 		    if($favoritos != null):
             foreach ($favoritos as $favorito):
-echo "<script> buscar_imagen('".$favorito->publicacionID."');</script>";
 			
                 ?>
             <!-- INICIO contenedor anuncio  -->
@@ -472,16 +471,16 @@ echo "<script> buscar_imagen('".$favorito->publicacionID."');</script>";
                     <?php echo $favorito->titulo?>
                 </div>
                 <div class="descripcion_anuncio">
-                    <font> Precio: <?php echo $favorito->precio?></font>
+                    <font> Precio: <?php echo $favorito->precioVenta?></font>
                     <br/>
-                    <font> Raza: <?php $razita= $favorito->razaID;echo substr($razita, 0, 15); ?> </font>
+                    <font> Raza: <?php $razita= $favorito->raza;echo substr($razita, 0, 15); ?> </font>
                     <br/>
                     <font> Género: <?php echo $favorito->genero?'Macho':'Hembra'?> </font>
                     <br/>
                     <font> Ciudad: <?php echo $favorito->ciudad?></font>
                 </div>
                 <div class="contenedor_foto_anuncio" id="contener_foto<?php echo $favorito->publicacionID?>">
-                    
+                    <img src="<?=base_url().$favorito->foto?>" width="auto" height="100%"> 
                 </div>
 
                 <ul class="ver_detalle_anuncio">
