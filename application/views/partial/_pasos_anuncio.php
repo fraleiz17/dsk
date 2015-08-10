@@ -870,17 +870,20 @@ TOTAL
             $('#ncupones').html(paquete_val.cupones);
             $('#ncaracteres').html(paquete_val.caracteres);
 
-            console.log(paquete_val.id);
-            if(paquete_val.id === 1){
+            console.log(paquete_val.id+' pauqete ID');
+             var precio_paquete1 = paquete_val.precio;
+            if(paquete_val.id == 1){
             <?php if (is_logged() == true && $this->session->userdata('paqueteGratis') == 1):?>
-            paquete_val.precio = 0;
+             var precio_paquete1 = 0;
             <?php endif; ?>
             }
-            $('#subtotal').html((paquete_val.precio - ( paquete_val.precio * .16)).toFixed(2));
-			var iva = paquete_val.precio * .16;			
+
+            console.log(precio_paquete1+'precio_paquete1');
+            $('#subtotal').html((precio_paquete1 - ( precio_paquete1 * .16)).toFixed(2));
+			var iva = precio_paquete1 * .16;			
 			$('#niva').html(iva.toFixed(2));
-            $('#totalConDescuento').html(paquete_val.precio);
-            $('#nprecio').html(paquete_val.precio);
+            $('#totalConDescuento').html(precio_paquete1);
+            $('#nprecio').html(precio_paquete1);
             if(paquete_val.cantFotos == 0){
                 $('.contenedorFotos').hide();           
             } //nfotosl

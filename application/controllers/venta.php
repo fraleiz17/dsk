@@ -314,8 +314,15 @@ $data['paises'] = $this->defaultdata_model->getPaises();
 
         //IMAGENES
          $name_logo_form = $this->input->post('name_logo_form');
+         $p_fotos = count($name_logo_form);
+         $paq_fotos = $detallePaquete->cantFotos;
+         if($p_fotos < $paq_fotos){
+            $c_fotos = $p_fotos-1;
+         } else {
+            $c_fotos = $detallePaquete->cantFotos -1;
+         }
                 if( $name_logo_form != null){
-                    for($i=0;$i<=$detallePaquete->cantFotos -1;$i++){     
+                    for($i=0;$i<=$c_fotos;$i++){     
                         //Se mueve la imagen de tmp a negocio_logo
                         if($name_logo_form[$i] != null){
                         $name_file = explode('/', $name_logo_form[$i]);                        
