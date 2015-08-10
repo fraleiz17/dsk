@@ -124,9 +124,18 @@
                                     });
 
                              jQuery("form").validationEngine({
-                             promptPosition:"topRight",
-                             ajaxFormValidation: false,
-                            });
+                                promptPosition:"topRight",
+                                ajaxFormValidation: false,
+                                onValidationComplete: function(form, status){
+                                    console.log(status);
+                                    if(status){
+                                    alert('ddddd');
+                      return true;
+                    } else{
+                        return false;
+                    }
+                },                
+            });
 
                         });
             </script>
@@ -558,15 +567,20 @@
                                                                 <br/>
                                                                 <p style="background-color: #FFF; color: #FF0000; font-weight:bolder;">* Antes de proceder al pago, revisa por favor que tus datos de envío sean correctos.</p>
                                                                 <br/>
-                                                                <ul class="">
+                                                                <ul class="boton_naranja_mini">
+                                                                        <li onclick="$('form').validationEngine('validate'); confirmar();">
+                                                                            Pagar
+                                                                         </li>
+                                                                </ul>
+                                                                <ul class="mp_boton" style="display:none">
                                                                     <li>
                                                                         <script type="text/javascript" src="http://mp-tools.mlstatic.com/buttons/render.js"></script>
                                                                         <a href="<?php echo $preference['response']['sandbox_init_point']; ?>" name="MP-Checkout"
-                                                                           class="green-M-Rn" mp-mode="modal" onreturn="execute_my_onreturn" style="padding: 0px; float:right;" onclick="return confirmar();">Pagar</a>
+                                                                           class="green-M-Rn" mp-mode="modal" onreturn="execute_my_onreturn" style="padding: 0px; float:right;" >Pagar</a>
 
 
                                                                         <script type="text/javascript">
-                                                                    $('.formCarrito').validationEngine();
+                                                                    //$('.formCarrito').validationEngine();
 
                                                                     function execute_my_onreturn(json) {
                                                                         console.log(json.back_url, json.collection_id, json.collection_status, json.external_reference, json.preference_id);
@@ -628,7 +642,9 @@
                                                                 function confirmar() {
                                                                         var choice = confirm('¿Estás seguro que los datos de envío son correctos?');
                                                                         if (choice) {
-                                                                            return true;
+                                                                            $('.boton_naranja_mini').fadeOut();
+                                                                            $('.mp_boton').fadeIn();
+                                                                            
                                                                         } else {
                                                                             return false;
                                                                         }
