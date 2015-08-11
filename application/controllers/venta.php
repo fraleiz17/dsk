@@ -565,7 +565,7 @@ Si tienes cualquier duda al respecto, por favor escr&iacute;benos a contacto@qui
         if($insert){
             echo 'Se ha agregado a favoritos.';
         }else{
-            echo 'Favor de intentarlo mas tarde.';
+            echo 'Ya ha sido agregado a favoritos.';
         }
     }
 

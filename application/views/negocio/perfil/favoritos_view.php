@@ -25,9 +25,11 @@ function buscar_imagen(id){
                  })
 }
 
- function mas_anuncio(id){
-   
-	$.ajax({
+ $('.mas_anuncio').on('click', function(){
+
+    var id = $(this).attr('id');
+    console.log(id);
+    $.ajax({
                 url: '<?php echo base_url('venta/click')?>',
                 data: 'id='+id,
                 dataType: 'html',
@@ -38,7 +40,7 @@ function buscar_imagen(id){
      });
 
     buscar_detalles(id);
-}
+});
 
 
    function enviar_mail(id) {
@@ -482,7 +484,7 @@ que el nombre del criador esté en el certificado.
 
                 <ul class="ver_detalle_anuncio">
                     <?php if ($this->session->userdata('idUsuario') !== FALSE):?>
-                        <li class="mas_anuncio" onclick="mas_anuncio('<?php echo $favorito->publicacionID ?>')" >
+                        <li class="mas_anuncio" id="<?php echo $favorito->publicacionID ?>" >
                             Ver detalle...
                         </li>
                     <?php else:?>
