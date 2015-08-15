@@ -81,9 +81,9 @@ DATOS CURIOSOS
  <?php }
 	}
  }?></div>
-<div class="contenido_horizontal_mini"> <?=$contenidos[0]->nombre?> </div>
-<div class="contenido_texto_horizal_mini"> <?=substr($contenidos[0]->texto,0,60)?> ... </div>
-<div class="ver_mas_amarillo_mini" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[0]->contenidoID?>'"> Ver más... </div>
+<div class="contenido_horizontal_mini"> <?=$contenidos[1]->nombre?> </div>
+<div class="contenido_texto_horizal_mini"> <?=substr($contenidos[1]->texto,0,60)?> ... </div>
+<div class="ver_mas_amarillo_mini" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[1]->contenidoID?>'"> Ver más... </div>
   </div>
   
   <div class="divisor_mini"> </div>
@@ -91,13 +91,13 @@ DATOS CURIOSOS
   
   <div class="contenedor_datos_curiosos_mini">
   
- <div class="titulo_horizontal_mini"> <?=$contenidos[1]->nombre?> </div>
- <div class="contenido_texto_horizal_mini"> <?=substr($contenidos[1]->texto,0,60)?> </div>
- <div class="ver_mas_naranja_mini" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[1]->contenidoID?>'"> Ver más... </div>
+ <div class="titulo_horizontal_mini"> <?=$contenidos[2]->nombre?> </div>
+ <div class="contenido_texto_horizal_mini"> <?=substr($contenidos[2]->texto,0,60)?> </div>
+ <div class="ver_mas_naranja_mini" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[2]->contenidoID?>'"> Ver más... </div>
  <div class="contenedor_imagen_horizontal_naranja_mini">
   <?php if($fotocontenido != null){
 	 	foreach($fotocontenido as $p){
-			if($p->contenidoID == $contenidos[1]->contenidoID){?>
+			if($p->contenidoID == $contenidos[2]->contenidoID){?>
  <img src="<?php echo base_url()?>images/datos_curiosos/<?=$p->foto?>" width="181" heigt="57"/>
  <?php }
 	}
@@ -108,12 +108,12 @@ DATOS CURIOSOS
    
      <div class="divisor_mini"> </div>
      <div class="contenedor_datos_curiosos_mini">
-<div class="titulo_azul_mini"> <?=$contenidos[2]->nombre?> </div>
-<div class="contendor_descripcion_curioso_azul_mini"> <?=substr($contenidos[2]->texto,0,60)?>...</div>
-<div class="ver_mas_azul_mini" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[2]->contenidoID?>'"> Ver más.. </div>
+<div class="titulo_azul_mini"> <?=$contenidos[3]->nombre?> </div>
+<div class="contendor_descripcion_curioso_azul_mini"> <?=substr($contenidos[3]->texto,0,60)?>...</div>
+<div class="ver_mas_azul_mini" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[3]->contenidoID?>'"> Ver más.. </div>
 <div class="contenedor_imagen_azul_mini"> <?php if($fotocontenido != null){
 	 	foreach($fotocontenido as $p){
-			if($p->contenidoID == $contenidos[2]->contenidoID){?>
+			if($p->contenidoID == $contenidos[3]->contenidoID){?>
  <img src="<?php echo base_url()?>images/datos_curiosos/<?=$p->foto?>" width="72" height="132"/>
  <?php }
 	}
@@ -129,14 +129,14 @@ DATOS CURIOSOS
 <div class="franja_verde_mini">  </div>
 <div class="contenedor_imagen_verde_mini"><?php if($fotocontenido != null){
 	 	foreach($fotocontenido as $p){
-			if($p->contenidoID == $contenidos[3]->contenidoID){?>
+			if($p->contenidoID == $contenidos[0]->contenidoID){?>
  <img src="<?php echo base_url()?>images/datos_curiosos/<?=$p->foto?>" width="72" height="132"/>
  <?php }
 	}
   }?> </div>
-<div class="titulo_verde_mini"> <?=$contenidos[3]->nombre?> </div>
-<div class="contendor_descripcion_curioso_mini"> <?=substr($contenidos[3]->texto,0,60)?>...</div>
-<div class="ver_mas_verde_mini" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[3]->contenidoID?>'"> Ver más.. </div>
+<div class="titulo_verde_mini"> <?=$contenidos[0]->nombre?> </div>
+<div class="contendor_descripcion_curioso_mini"> <?=substr($contenidos[0]->texto,0,60)?>...</div>
+<div class="ver_mas_verde_mini" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[0]->contenidoID?>'"> Ver más.. </div>
 
  </div>
      
