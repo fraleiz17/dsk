@@ -1,3 +1,8 @@
+<style>
+    #paso_dos > div > div.paquetes_izquierda_mini > label > div.precio_paquete_lite_mini > div{
+        color:#E95D0F !important;
+    }
+    </style>
 <div class="titulo_seccion_admin hidden">
 <div class="perrito_perfil">
 <img src="<?php echo base_url()?>images/perrito_perfil.png" />
