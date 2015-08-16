@@ -206,6 +206,19 @@ where compra.`usuarioID` ='.$idUsuario);
         return true;
     }
 
+    function getSeccionID($publicacionID){
+       $query = $this->db->query('select distinct seccion
+        from publicaciones
+        where publicacionID = '.$publicacionID);
+      
+      if ($query->num_rows() == 1){
+          $e = $query->row();
+            return $e->seccion;
+         } else {
+            return null;
+         }
+    }
+
 }
 
 ?>

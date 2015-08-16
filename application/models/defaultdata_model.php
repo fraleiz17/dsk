@@ -234,6 +234,8 @@ where `publicaciones`.`fechaVencimiento` = date_add(CURRENT_DATE(), INTERVAL 7 D
                                 from `publicaciones`
                                 join raza on raza.razaID = publicaciones.razaID
                                 where `publicaciones`.`seccion` = 7
+                                and vigente = 1
+                                and aprobada = 1
                                 limit 1');
       if ($query->num_rows() == 1){
             return $query->row();

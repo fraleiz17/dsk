@@ -391,6 +391,11 @@
         <a href="<?php echo base_url() ?>perdidos" style="text-decoration:none; color:#000;" onmouseover="Mostrar('ver_perdidos');Ocultar('ver_raza');Ocultar('ver_mes');Ocultar('ver_curiosos');">
             <div class="contenido_secciones">
                 <p class="titulo_segunda_seccion"> PERROS PERDIDOS </p>
+                <?php if($contenidosP == null):
+                      echo '<p>No hay perros perdidos</p></div>
+                      <div class="sub_imagenes_dos"></div> 
+                      <div id="ver_perdidos" class="" style=" display:none;"></div>';
+                      else : ?>
                 <p><strong> Nombre:</strong> <?=$contenidosP->titulo?>
                     <strong>Raza:</strong> <?=$contenidosP->raza?>
                     <strong>Caracteristicas:</strong> <?=substr($contenidosP->descripcion,0,20)?>...</p>
@@ -399,6 +404,7 @@
                 <img align="center" style="width:50%; max-width:150px;" class="imagen_relleno" src="<?php echo base_url() ?><?=$contenidosP->foto?>"/>
             </div> 
             <div id="ver_perdidos" class="ver_mas" style=" display:none;"> Ver más...</div>
+        <?php endif; ?>
          </a>
     </div>
 <!-- End perros perdidos -->

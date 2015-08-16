@@ -25,6 +25,52 @@ function buscar_imagen(id){
                  })
 }
 
+function contactar_pub(id) {
+
+    $('.btn_contactar').on('click', function (){
+        var pub = $(this).data("pub");
+        $('.info', '#contacto_form').html('');
+        buscar_anunciante_dos(pub);
+        muestra('contenedor_contactar');
+        $("#contacto_form")[0].reset();
+        //console.log(pub+'meh');
+
+        $('#contenedor_contactar #contacto_form').submit(function(e){
+            e.preventDefault();
+            var form = $(this);
+            console.log(pub);
+
+            $.ajax({
+                    url:'<?php echo base_url('venta/getSeccion') ?>',
+                    type:'post',
+                    dataType: 'html',
+                    data: 'pub=' +pub,
+                    success: function(data){
+                       var seccion = data;
+                    }
+             });
+
+
+
+            
+            $('.info').html('Enviando...');
+            $.ajax({
+                url: '<?php echo base_url('venta/contactar')?>',
+                data: form.serialize()+'&pub='+pub+'&seccion='+seccion,
+                dataType: 'html',
+                type: 'post',
+                before: function () {
+                    $('.info',form).html('loading');
+                },
+                success: function (data) {
+                    $('.info',form).html(data);
+                    //$('.boton_naranja_tres').show();
+                }
+            });
+        });
+    });
+}
+
  $('.mas_anuncio').on('click', function(){
 
     var id = $(this).attr('id');
@@ -119,9 +165,15 @@ function buscar_detalles(id) {
                 var botones = $('<ul class="boton_naranja"><li onclick="buscar_anunciante(\'' + data[i].publicacionID + '\')">Contactar al anunciante</li> </ul> </br> <ul class="boton_gris"><li data-pub="' + data[i].publicacionID + '" class="btn_fvt"><img src="<?php echo base_url() ?>images/favorito.png"/>Agregar a Favoritos</li></ul><span id="info_fav"></span>');
                 cont_datos.append(botones);
                 $('.descripcion_del_anuncio').append(data[i].descripcion);
+                if (data[i].paqueteID != '1'){
+                //(".boton_naranja_dos").show();
                 buscar_videos(data[i].publicacionID);
+                } else {
+                    $('#video').html('No hay video para mostrar');
+                }
 
-                $('.btn_den').data('pub', data[i].publicacionID);
+                $('.btn_den').data('pub', data[i].publicacionID);                
+                $('.btn_contactar').data('pub', data[i].publicacionID);
             }
 
             add_favorite();
@@ -273,6 +325,15 @@ function denunciar_pub() {
     $('.btn_den').on('click', function (){
         var pub = $(this).data("pub");
         $('.info', '#denuncia_form').html('');
+         $.ajax({
+                    url:'<?php echo base_url('venta/getSeccion') ?>',
+                    type:'post',
+                    dataType: 'html',
+                    data: 'pub=' +pub,
+                    success: function(data){
+                       var seccion = data;
+                    }
+             });
 
         muestra('contenedor_denunciar');
         
@@ -281,7 +342,7 @@ function denunciar_pub() {
             var form = $(this);
             $.ajax({
                 url: '<?php echo base_url('venta/denunciar')?>',
-                data: form.serialize()+'&pub='+pub+'&seccion='+<?=$seccion?>,
+                data: form.serialize()+'&pub='+pub+'&seccion='+seccion,
                 dataType: 'html',
                 type: 'post',
                 before: function () {
@@ -305,31 +366,94 @@ function denunciar_pub() {
     <div class="contactar_al_aunuciante">
         <font class="titulo_anuncio_publicado"> CONTACTA AL ANUNCIANTE </font>
         <div class="datos_anunciante">
-   
+
 </div>
 <font class="titulo_anuncio_publicado"> PROPORCIONA TU INFORMACIÓN </font>
 </br>
 </br>
+
+<style>
+::-webkit-input-placeholder {
+   color: #FFF;  
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #FFF;   
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #FFF;   
+}
+
+:-ms-input-placeholder {  
+   color: #FFF;  
+}
+</style>
 <form id="contacto_form">
     <div style="width:323px;height:auto;display:block;overflow:hidden;-ms-overflow-style: none">
-    <input type="text" class="formu_contacto" id="nombre_contacto"
-    value="<?php echo $this->session->userdata('nombre')?>" size="44"/>
-    <input type="text" class="formu_contacto" id="mail_contacto"
+    <input type="text" class="formu_contacto validate[required]" id="nombre_contacto"
+    value="<?php echo $this->session->userdata('nombre')?>" size="44" name="nombre_contacto" />
+    <input type="text" class="formu_contacto validate[required]" id="mail_contacto" name="mail_contacto"
     value="<?php echo $this->session->userdata('correo')?>" size="44"/>
-    <input type="text" class="formu_contacto" id="asunto_contacto"
-    onfocus="clear_textbox('asunto_contacto', 'Asunto')" placeholder="Asunto" size="44"/>
-    <textarea cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto"
-    class="formu_contacto" rows="5">Comentarios</textarea>
-</div>
+    <input type="text" class="formu_contacto validate[required]" id="asunto_contacto" name="asunto_contacto"
+    onfocus="if(this.value == 'Asunto') { this.value = ''; }" value="Asunto" size="44" />
+    <textarea style = "width:334px;" cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto"
+    class="formu_contacto validate[required]" rows="5" name="comentarios_contacto">Comentarios</textarea>
+    </div>
 </br>
 </br>
-<ul class="boton_naranja_tres">
+<span class="info"></span>
+<ul class="boton_naranja_tres contactoForm">
     <li>
         <input type="submit" value="Enviar"/>
     </li>
 </ul>
 </form>
 
+</div>
+
+
+</div>
+
+<div class="contenedor_contactar" id="contenedor_denunciar" style=" display:none;">
+    <div class="contenedor_cerrar_contactar">
+        <img src="<?php echo base_url()?>images/cerrar_anuncio_gris.png" onclick="oculta('contenedor_denunciar');"/>
+    </div>
+    <div class="contactar_al_aunuciante" style="height:346px;">
+    <font class="titulo_anuncio_publicado"> DENUNCIA DE CONTENIDO </font>
+    </br>
+    </br>
+<font class=""><strong>Todas las denuncias son an&oacute;nimas.</strong><br>
+        Selecciona la razón por la cual deseas denunciar este anuncio y/o anunciante:</font>
+</br>
+</br>
+<form id="denuncia_form">
+    <input type="hidden" class="formu_contacto validate[required]" name="nombre_denuncia" id="nombre_denuncia"
+    value="<?php echo $this->session->userdata('nombre')?>" size="44"/>
+    <input type="hidden" class="formu_contacto validate[required]" name="mail_denuncia" id="mail_denuncia"
+    value="<?php echo $this->session->userdata('correo')?>" size="44"/>
+    <input type="hidden" class="formu_contacto validate[required]" name="asunto_denuncia" id="asunto_denuncia"
+    onfocus="clear_textbox('asunto_denuncia', 'Asunto')" value="Asunto" size="44"/>
+    <!-- <textarea cols="50" onfocus="clear_textbox('comentarios_denuncia', 'Comentarios')" name="comentarios_denuncia" id="comentarios_denuncia"
+    class="formu_contacto" rows="5">Comentarios</textarea> <?=base_url()?>content/terminos_y_condiciones.pdf -->
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia3" checked="checked" value="Información de anuncio falsa"><label>Informaci&oacute;n de anuncio falsa</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia1" value="Contenido Violento"><label>Contenido Violento</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia2" value="Fotos Inapropiadas"><label>Fotos Inapropiadas</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia4" value="Fraude"><label>Fraude</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia5" value="Datos de contacto falsos"><label>Datos de contacto falsos</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia6" value="Otro"><label>Otro</label></br>
+</br>
+
+<label><a href="<?=base_url()?>content/terminos_y_condiciones.pdf" target="_blank" style="text-decoration:none;">T&eacute;rminos y Condiciones de Uso</a></label></br>
+</br>
+</br>
+<ul class="boton_naranja_tres denunciaForm">
+    <li>
+        <input type="submit" value="Enviar"/>
+    </li>
+</ul>
+<span class="info"></span>
+</form>
 </div>
 
 
@@ -484,7 +608,7 @@ que el nombre del criador esté en el certificado.
                 <ul class="ver_detalle_anuncio">
                     <?php if ($this->session->userdata('idUsuario') !== FALSE):?>
                         <li class="mas_anuncio" id="<?php echo $favorito->publicacionID ?>" >
-                            Ver detalle...<?php echo $favorito->publicacionID ?>
+                            Ver detalle...
                         </li>
                     <?php else:?>
                         <li onclick="javascript:alert('Favor de iniciar sesión.')">
@@ -506,7 +630,10 @@ que el nombre del criador esté en el certificado.
             <?php endif;?>
             <!-- FIN margen falso -->
         <?php endforeach;
-                endif;?>
+              else:
+                echo '<p>No has registrado ningún favorito.</p>';
+                endif;
+        ?>
 
     </ul>
 
