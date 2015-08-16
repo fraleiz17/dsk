@@ -41,7 +41,7 @@ Descripción:
 </p>
     
     
- <div style="width:795px; margin-top:20px; height:150px;">
+ <div style="width:795px; margin-top:20px; height:50px;">
  <?php  if ($banner !== null && !empty($banner)) {
                     foreach ($banner as $contenido) {
                         if ($contenido->zonaID == 9 && $contenido->posicion == 2 && $contenido->seccionID == $seccion) {
@@ -53,6 +53,19 @@ Descripción:
                         }
                     } ?>
  </div>
-    <ul class="boton_gris_perfil"><li> <input type="submit" value="Enviar" /></li> </ul>
+    <ul class="boton_gris_perfil">
+        <li> 
+            <style type="text/css">
+            #mark{
+                text-align: center;
+                color: #FFF;
+            }
+            #mark:hover {
+                cursor: pointer;
+                color: #000000;
+            }
+        </style>
+        <input id="mark" type="submit" value="Enviar" />
+        </li> </ul>
     </form>
       </div>

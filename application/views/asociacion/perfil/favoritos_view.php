@@ -1,3 +1,8 @@
+<style>
+    #paso_dos > div > div.paquetes_izquierda_mini > label > div.precio_paquete_lite_mini > div{
+        color:#E95D0F !important;
+    }
+    </style>
 <script> 
 function buscar_imagen(id){
              id_anuncio="id_anuncio="+id;

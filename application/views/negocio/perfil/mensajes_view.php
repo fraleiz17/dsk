@@ -1,3 +1,30 @@
+<style>
+    #paso_dos > div > div.paquetes_izquierda_mini > label > div.precio_paquete_lite_mini > div{
+        color:#E95D0F !important;
+    }
+
+.ver_masi {
+    width: 237px;
+    height: 23px;
+    margin-top: -23px;
+    position: absolute;
+    text-align: right;
+    padding-right: 5px;
+    color: #6D398B;
+    font-weight: bold;
+}
+
+.ver_masi:hover {
+    color: #762EA4;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+</style>
+    #paso_dos > div > div.paquetes_izquierda_mini > label > div.precio_paquete_lite_mini > div{
+        color:#E95D0F !important;
+    }
+    </style>
 <div class="titulo_seccion_admin">
 <div class="perrito_perfil">
 <img src="<?php echo base_url()?>images/sobre_perfil.png" />

@@ -1,3 +1,8 @@
+<style>
+    #paso_dos > div > div.paquetes_izquierda_mini > label > div.precio_paquete_lite_mini > div{
+        color:#E95D0F !important;
+    }
+    </style>
 <div class="contenedor_bienvenido hidden">
 <div class="contenedor_icono_bienvenido">
 <img src="<?php echo base_url()?>images/icono_perfil.png"/>
@@ -45,8 +50,17 @@
 <div class="contenedor_boton"> 
 <ul class="boton_gris_perfil">
 <li>
-
-<input type="submit" value="Guardar"/>
+  <style type="text/css">
+  #mark{
+    text-align: center;
+    color: #FFF;
+}
+#mark:hover {
+    cursor: pointer;
+    color: #000000;
+}
+  </style>
+<input id="mark" type="submit" value="Guardar"/>
 </li>
 </ul>
 </div>
@@ -127,7 +141,7 @@
 <div class="contenedor_boton" id="guardar_fiscales" style=" display:none;"> 
 <ul class="boton_gris_perfil">
 <li>
-<input type="submit" value="Guardar"/>
+<input id="mark" type="submit" value="Guardar"/>
 </li>
 </ul>
 </div>

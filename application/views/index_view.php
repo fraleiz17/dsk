@@ -9,6 +9,9 @@
 #contenedor_paquetes > a:nth-child(1) > div > div.precio_paquete_lite > div{
     color:#E95D0F !important;
 }
+#paso_dos > div > div.paquetes_izquierda_mini > label > div.precio_paquete_lite_mini > div{
+        color:#E95D0F !important;
+    }
 </style>
 </head>
 <body>

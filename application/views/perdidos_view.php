@@ -3,7 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Perdidos-Quierounperro.com</title>
-
+<style>
+#paso_dos > div > div.paquetes_izquierda_mini > label > div.precio_paquete_lite_mini > div{
+     color:#E95D0F !important;
+}
+</style>
 <link rel="shortcut icon" href="<?=base_url()?>images/ico.ico" />  
 <link type="text/css" rel="stylesheet" href="<?=base_url()?>css/reset.css" media="screen"></link>
 <link rel="stylesheet" href="<?=base_url()?>css/jPages.css">
