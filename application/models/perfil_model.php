@@ -110,6 +110,7 @@ FROM usuario a, usuariodetalle b , ubicacionusuario d WHERE a.idUsuario = b.idUs
     	$query = $this->db->query('SELECT b.tipocupon, b.descripcion, b.valor, b.vigencia
 		from serviciocontratado a,cuponadquirido b
 		where b.servicioID = a.servicioID
+        and b.usado=0
 		and a.idUsuario ='.$idUsuario);
 		if ($query->num_rows() >= 1){
 			return $query->result();
