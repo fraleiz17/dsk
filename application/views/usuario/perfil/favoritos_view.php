@@ -329,6 +329,8 @@ function denunciar_pub() {
 
     $('.btn_den').on('click', function (){
         var pub = $(this).data("pub");
+        console.log(pub);
+        var secc = 0;
         $('.info', '#denuncia_form').html('');
          $.ajax({
                     url:'<?php echo base_url('venta/getSeccion') ?>',
@@ -336,7 +338,8 @@ function denunciar_pub() {
                     dataType: 'html',
                     data: 'pub=' +pub,
                     success: function(data){
-                       var seccion = data;
+                       secc = data;
+                       
                     }
              });
 
@@ -345,9 +348,10 @@ function denunciar_pub() {
         $('#contenedor_denunciar #denuncia_form').submit(function(e){
             e.preventDefault();
             var form = $(this);
+            console.log(secc+'seccion-----');
             $.ajax({
                 url: '<?php echo base_url('venta/denunciar')?>',
-                data: form.serialize()+'&pub='+pub+'&seccion='+seccion,
+                data: form.serialize()+'&pub='+pub+'&seccion='+secc,
                 dataType: 'html',
                 type: 'post',
                 before: function () {
@@ -650,8 +654,7 @@ que el nombre del criador esté en el certificado.
     
       </div>
 
-
-
+    
 
  
  
