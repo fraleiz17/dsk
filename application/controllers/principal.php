@@ -103,7 +103,7 @@ class Principal extends CI_Controller {
         $data['contenidosP'] = $this->defaultdata_model->getPerroPerdido();
 		$data['fotocontenido'] = $this->admin_model->getFotoContenido();
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
-
+        $this->updateVencidos();
         //$data['preference'] = $preference;
 
         $this->load->view('index_view', $data);
@@ -429,5 +429,14 @@ Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
 	
 
 	}
+
+	function updateVencidos(){
+        $vencidos =  $this->defaultdata_model->getVencidos();
+        if($vencidos != null){
+            foreach ($vencidos as $v) {
+                $this->defaultdata_model->updateItem('publicacionID', $v->publicacionID, array('vigente' => 0, ),'publicaciones');
+            }
+        }
+    }
 	
 }
