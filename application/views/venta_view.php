@@ -22,6 +22,32 @@
     color:#E95D0F !important;
 }
 
+@-moz-document url-prefix() {
+    .iconos_paquetes_mini {
+        margin-bottom: 0px;
+        padding-top: 2px;
+        width: 100%;
+        height: 63px;
+        overflow: hidden;
+    }
+
+    #paso_dos > div > div.paquetes_izquierda_mini > label > div.precio_paquete_lite_mini > div {
+        color: #E95D0F !important;
+        margin: -152px 20px 0 0;
+        position: relative;
+    }
+
+    .precio_paquete_regular_mini {
+        margin: -152px 20px 0px 0px;
+        position: relative;
+    }
+
+    .precio_paquete_premium_mini {
+        margin: -152px 20px 0px 0px;
+        position: relative;
+    }
+}
+
 </style>
 <?php $this->load->view('general/LoginFiles');?>
 <?php
