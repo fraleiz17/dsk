@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="<?php echo base_url() ?>css/jPages.css"/>
         
         <link href="<?php echo base_url() ?>css/uploadfile.css" rel="stylesheet"/>
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/index_.css" media="screen"></link> <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/general.css" media="screen"></link>
 
         <?php if (isset($links)): ?>
             <?php foreach ($links as $l): ?>
@@ -34,18 +35,5 @@
             <?php endforeach; ?>
         <?php endif; ?>
 
-        <script>
-            if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
-
-                document.write('<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/index_.css" media="screen"></link> <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/general.css" media="screen"></link> ');
-            }
-            if (navigator.appName == "Microsoft Internet Explorer") {
-
-                document.write('<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/index_explorer.css" media="screen"></link>');
-            }
-            if (navigator.userAgent.toLowerCase().indexOf('mozilla')>-1)
-            {
-                document.write('<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/index_.css" media="screen"></link>');        
-            }
-        </script>
+        
 
