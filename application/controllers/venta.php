@@ -1126,31 +1126,11 @@ return true;
             $this->defaultdata_model->updateItem('cuponID', $cuponID, $data = array('usado' => 1), 'cuponadquirido');
          }
         
-        $compra = array(
-            'descuento' => $valorCupon,
-            'fecha' => date('Y-m-d H:i:s'),
-            'idCuponAdquirido' => $cuponID,
-            'subtotal' => $detallePaquete->precio,
-            'total' => $precio_total,
-            'usuarioID' => $this->session->userdata('idUsuario'),
-            'pagado' => 0
-        );
-        $compraID = $this->defaultdata_model->insertItem('compra', $compra);
-
-        $compradetalle = array(
-            'cantidad' => 1,
-            'color' => '',
-            'talla' => '',
-            'compraID' => $compraID,
-            'nombre' => $detallePaquete->nombrePaquete,
-            'precio' => $detallePaquete->precio,
-            'productoID' => $publicacionID
-        );
-        $compraDetalle = $this->defaultdata_model->insertItem('compradetalle', $compradetalle);
+        
         
 
         if($precio_total <= 00.00){
-        $this->defaultdata_model->updateItem('compraID', $compraID, $data = array('pagado' => 1), 'compra');
+        //$this->defaultdata_model->updateItem('compraID', $compraID, $data = array('pagado' => 1), 'compra');
         $this->defaultdata_model->updateItem('servicioID', $servicioID, $data = array('pagado' => 1), 'serviciocontratado');
         $this->notificacionAdmin($this->input->post('seccion'),$this->input->post('titulo'),$publicacionID);
            echo '<div class="registro_normal"> <!-- Contenedor morado registro -->

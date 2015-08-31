@@ -534,7 +534,6 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         
         $id_anuncio = $id;
         $data['publicacion'] = $this->venta_model->getPublicacionR($id_anuncio);
-        var_dump( $data['publicacion']);
         $this->load->view('renovar_view', $data);
         
         
