@@ -64,31 +64,34 @@
                 Declinado
                 <?php } elseif($anuncio->vigente == 0) { 
         echo '<input type="hidden" name="expirado" id="expirado" value="true"/>'?>
-                Inactivo
+                Expirado
                 <?php } ?>
 
             </td>
             <td> <?php echo $anuncio->fechaVencimiento ?> </td>
             <td> <?php echo $anuncio->numeroVisitas ?> </td>
-            <td> <ul class="boton_gris_perfil_tabla"> <li>
+            <td> 
 
             <!--BOTON -->
             <?php if ($anuncio->vigente == 1 && $anuncio->aprobada == 1) { ?>
+            <ul class="boton_gris_perfil_tabla"> <li>
             <p data-id="<?=$anuncio->publicacionID?>" class=" cancelar_anuncio">Cancelar</p>
+            </li> </ul> 
                 <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 0)  { ?>
+            <ul class="boton_gris_perfil_tabla"> <li>
             <p data-id="<?=$anuncio->publicacionID?>" class=" cancelar_anuncio">Cancelar</p>
+            </li> </ul> 
                 <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 2)  { ?>
-            <a href="#" style="text-decoration:none; color:white;" class="paquete_renovarr reset"
-   data-paquete='{"id":"<?php echo $anuncio->paqueteID ?>","nombre":"<?php echo $anuncio->NombrePaquete ?>","vigencia":"<?php echo $anuncio->vigencia ?>","precio":"<?php echo $anuncio->precio ?>","caracteres":"<?php echo $anuncio->caracteres ?>","cantFotos":"<?php echo $anuncio->cantFotos ?>","videos":"<?php echo $anuncio->videos ?>","cupones":"<?php echo $anuncio->cupones ?>","seccion":"<?php echo $anuncio->seccion?>","publicacionID":"<?php echo $anuncio->publicacionID?>","expirado":"<?php  if ($anuncio->vigente == 1 && $anuncio->aprobada == 1) {
-        echo 'false'; } elseif( $anuncio->vigente == 1 && $anuncio->aprobada == 0)  { echo 'false';} elseif($anuncio->vigente == 1 && $anuncio->aprobada == 2) {
-echo 'false'; } elseif($anuncio->vigente == 0) { echo 'true';}?>"}'>Renovar</a>
+            <ul class="boton_gris_perfil_tabla"> <li>
+            <a href="<?=base_url().'usuario/cuenta/getAnuncioRenovar/'?><?php echo $anuncio->publicacionID?>" style="text-decoration:none; color:white;" class="" >Renovar</a>
+            </li> </ul> 
                 <?php } elseif($anuncio->vigente == 0) { ?>
-            <a href="#"  style="text-decoration:none; color:white;" onclick="muestra('contenedor_publicar_anuncio');">Renovar</a>
+            <!-- <a href="#"  style="text-decoration:none; color:white;" onclick="muestra('contenedor_publicar_anuncio');">Renovar</a> -->
                 <?php } ?>
             <!-- BOTON -->
 
             
-            </li> </ul> </td>
+            </td>
     </tr>
   <?php } ?>
 
@@ -128,34 +131,42 @@ echo 'false'; } elseif($anuncio->vigente == 0) { echo 'true';}?>"}'>Renovar</a>
             <td> <?php echo $anuncio->seccionNombre ?> </td>
             <td> <?php echo $anuncio->titulo ?> </td>
             <td>
-                <?php if ($anuncio->vigente == 1) {?>
+                <?php if ($anuncio->vigente == 1 && $anuncio->aprobada == 1) {
+        echo '<input type="hidden" name="expirado" id="expirado" value="true"/>'?>
                 Activo
-                <?php } else { ?>
-                Inactivo
+                <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 0)  {
+          echo '<input type="hidden" name="expirado" id="expirado" value="false"/>' ?>
+                Pendiente de Aprobacion
+                <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 2)  {
+          echo '<input type="hidden" name="expirado" id="expirado" value="false"/>' ?>
+                Declinado
+                <?php } elseif($anuncio->vigente == 0) { 
+        echo '<input type="hidden" name="expirado" id="expirado" value="true"/>'?>
+                Expirado
                 <?php } ?>
 
             </td>
             <td> <?php echo $anuncio->fechaVencimiento ?> </td>
             <td> <?php echo $anuncio->numeroVisitas ?> </td>
-            <td> <ul class="boton_gris_perfil_tabla"> <li>
-
+            <td>
             <!--BOTON -->
             <?php if ($anuncio->vigente == 1 && $anuncio->aprobada == 1) { ?>
+            <ul class="boton_gris_perfil_tabla"> <li>
             <p data-id="<?=$anuncio->publicacionID?>" class=" cancelar_anuncio">Cancelar</p>
+            </li> </ul> 
                 <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 0)  { ?>
+            <ul class="boton_gris_perfil_tabla"> <li>
             <p data-id="<?=$anuncio->publicacionID?>" class=" cancelar_anuncio">Cancelar</p>
+            </li> </ul> 
                 <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 2)  { ?>
-            <a href="#" style="text-decoration:none; color:white;" class="paquete_renovarr reset"
-   data-paquete='{"id":"<?php echo $anuncio->paqueteID ?>","nombre":"<?php echo $anuncio->NombrePaquete ?>","vigencia":"<?php echo $anuncio->vigencia ?>","precio":"<?php echo $anuncio->precio ?>","caracteres":"<?php echo $anuncio->caracteres ?>","cantFotos":"<?php echo $anuncio->cantFotos ?>","videos":"<?php echo $anuncio->videos ?>","cupones":"<?php echo $anuncio->cupones ?>","seccion":"<?php echo $anuncio->seccion?>","publicacionID":"<?php echo $anuncio->publicacionID?>","expirado":"<?php  if ($anuncio->vigente == 1 && $anuncio->aprobada == 1) {
-        echo 'false'; } elseif( $anuncio->vigente == 1 && $anuncio->aprobada == 0)  { echo 'false';} elseif($anuncio->vigente == 1 && $anuncio->aprobada == 2) {
-echo 'false'; } elseif($anuncio->vigente == 0) { echo 'true';}?>"}'>Renovar</a>
+            <ul class="boton_gris_perfil_tabla"> <li>
+            <a href="<?=base_url().'usuario/cuenta/getAnuncioRenovar/'?><?php echo $anuncio->publicacionID?>" style="text-decoration:none; color:white;" class="" >Renovar</a>
+            </li> </ul> 
                 <?php } elseif($anuncio->vigente == 0) { ?>
-            <a href="#"  style="text-decoration:none; color:white;" onclick="muestra('contenedor_publicar_anuncio');">Renovar</a>
+            <!-- <a href="#"  style="text-decoration:none; color:white;" onclick="muestra('contenedor_publicar_anuncio');">Renovar</a> -->
                 <?php } ?>
             <!-- BOTON -->
-
-            
-            </li> </ul> </td>
+            </td>
     </tr>
   <?php } ?>
   <?php }?>
@@ -194,34 +205,45 @@ echo 'false'; } elseif($anuncio->vigente == 0) { echo 'true';}?>"}'>Renovar</a>
             <td> <?php echo $anuncio->seccionNombre ?> </td>
             <td> <?php echo $anuncio->titulo ?> </td>
             <td>
-                <?php if ($anuncio->vigente == 1) {?>
+                <?php if ($anuncio->vigente == 1 && $anuncio->aprobada == 1) {
+        echo '<input type="hidden" name="expirado" id="expirado" value="true"/>'?>
                 Activo
-                <?php } else { ?>
-                Inactivo
+                <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 0)  {
+          echo '<input type="hidden" name="expirado" id="expirado" value="false"/>' ?>
+                Pendiente de Aprobacion
+                <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 2)  {
+          echo '<input type="hidden" name="expirado" id="expirado" value="false"/>' ?>
+                Declinado
+                <?php } elseif($anuncio->vigente == 0) { 
+        echo '<input type="hidden" name="expirado" id="expirado" value="true"/>'?>
+                Expirado
                 <?php } ?>
 
             </td>
             <td> <?php echo $anuncio->fechaVencimiento ?> </td>
             <td> <?php echo $anuncio->numeroVisitas ?> </td>
-            <td> <ul class="boton_gris_perfil_tabla"> <li>
+            <td> 
 
             <!--BOTON -->
             <?php if ($anuncio->vigente == 1 && $anuncio->aprobada == 1) { ?>
+            <ul class="boton_gris_perfil_tabla"> <li>
             <p data-id="<?=$anuncio->publicacionID?>" class=" cancelar_anuncio">Cancelar</p>
+            </li> </ul> 
                 <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 0)  { ?>
+            <ul class="boton_gris_perfil_tabla"> <li>
             <p data-id="<?=$anuncio->publicacionID?>" class=" cancelar_anuncio">Cancelar</p>
+            </li> </ul> 
                 <?php } elseif($anuncio->vigente == 1 && $anuncio->aprobada == 2)  { ?>
-            <a href="#" style="text-decoration:none; color:white;" class="paquete_renovarr reset"
-   data-paquete='{"id":"<?php echo $anuncio->paqueteID ?>","nombre":"<?php echo $anuncio->NombrePaquete ?>","vigencia":"<?php echo $anuncio->vigencia ?>","precio":"<?php echo $anuncio->precio ?>","caracteres":"<?php echo $anuncio->caracteres ?>","cantFotos":"<?php echo $anuncio->cantFotos ?>","videos":"<?php echo $anuncio->videos ?>","cupones":"<?php echo $anuncio->cupones ?>","seccion":"<?php echo $anuncio->seccion?>","publicacionID":"<?php echo $anuncio->publicacionID?>","expirado":"<?php  if ($anuncio->vigente == 1 && $anuncio->aprobada == 1) {
-        echo 'false'; } elseif( $anuncio->vigente == 1 && $anuncio->aprobada == 0)  { echo 'false';} elseif($anuncio->vigente == 1 && $anuncio->aprobada == 2) {
-echo 'false'; } elseif($anuncio->vigente == 0) { echo 'true';}?>"}'>Renovar</a>
+            <ul class="boton_gris_perfil_tabla"> <li>
+            <a href="<?=base_url().'usuario/cuenta/getAnuncioRenovar/'?><?php echo $anuncio->publicacionID?>" style="text-decoration:none; color:white;" class="" >Renovar</a>
+            </li> </ul> 
                 <?php } elseif($anuncio->vigente == 0) { ?>
-            <a href="#"  style="text-decoration:none; color:white;" onclick="muestra('contenedor_publicar_anuncio');">Renovar</a>
+            <!-- <a href="#"  style="text-decoration:none; color:white;" onclick="muestra('contenedor_publicar_anuncio');">Renovar</a> -->
                 <?php } ?>
             <!-- BOTON -->
 
             
-            </li> </ul> </td>
+            </td>
     </tr>
   <?php } ?>
   <?php } ?>

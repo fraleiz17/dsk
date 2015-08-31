@@ -234,6 +234,43 @@ function getAnunciante($id_anuncio){
         
     }
 
+    function getPublicacionR($id_anuncio) {
+        /*
+         * 
+         * Posible recomentacion para pasarlo a una vista
+         */
+        //$this->db->select("*,(select foto from fotospublicacion f where f.publicacionID = p.publicacionID group by f.publicacionID limit 1) as foto");
+        $this->db->from("publicaciones p");
+
+        $this->db->join("serviciocontratado sc", "p.detalleID=sc.detalleID AND p.paqueteID=sc.paqueteID AND p.servicioID=sc.servicioID");
+        $this->db->join("detallepaquete dp", "sc.paqueteID=dp.paqueteID AND sc.detalleID=dp.detalleID");
+
+        $this->db->join("raza r", "p.razaID=r.razaID");
+        $this->db->join("paquete pa", "dp.paqueteID=pa.paqueteID");
+        $this->db->join("seccion se", "p.seccion=se.seccionID");
+        $this->db->join("usuario u", "sc.idUsuario=u.idUsuario");
+        $this->db->join("estado es", "p.estadoID=es.estadoID");
+        /**
+        *Se comenta para que no se traiga las fotos pues, estas se extraen de forma independiente.
+        **/
+        //$this->db->join("fotospublicacion fp", "p.publicacionID=fp.publicacionID"); $this->db->join("videos vi", "p.publicacionID=vi.publicacionID");
+
+        
+        if (!is_null($id_anuncio)) {
+            $this->db->where("p.publicacionID", $id_anuncio);
+        }
+        
+        
+        //$this->db->where("p.aprobada", 1);
+        $this->db->where("p.vigente", 1);
+
+    
+        $resultSet = $this->db->get();
+//        $this->output->enable_profiler(TRUE);
+
+        return $resultSet->row();
+    }
+
 }
 
 ?>

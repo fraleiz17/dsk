@@ -35,6 +35,8 @@ class Principal extends CI_Controller {
     
     
     public function index() {
+        $this->borrarFallidos();
+        $this->updateVencidos();
        $data['SYS_metaTitle']           = '';
         $data['SYS_metaKeyWords']       = '';
         $data['SYS_metaDescription']    = '';  
@@ -381,6 +383,7 @@ class Principal extends CI_Controller {
         $data['count_asc'] = $this->admin_model->getCountAsc(0);
         $data['anuncios'] = $this->admin_model->getAnuncios(0,2,NULL);
         $this->borrarFallidos();
+        $this->updateVencidos();
 
 
         $this->load->view("admin/anuncios_view", $data);
@@ -535,7 +538,7 @@ $this->email_model->send_email('', $datos->correo, 'Ha sido aprobado tu anuncio 
 
 <font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
 Se ha detectado que tu anuncio <strong>"'.$datos->titulo.'"</strong> con fecha de publicaci&oacute;n '.$datos->fechaCreacion.' en la secci&oacute;n '.$datos->seccionNombre.', viola uno o m&aacute;s de nuestros t&eacute;rminos y condiciones de uso.<br/><br/>
-Tu anuncio no ha sido aprobado para publicarse en esta secci&oacute;n, pero puedes editarlo eintentarlo nuevamente. Solo ve la la secc&ocuten de Administrador de Anuncios, en Mi Perfil.<br/><br/>
+Tu anuncio no ha sido aprobado para publicarse en esta secci&oacute;n, pero puedes editarlo e intentarlo nuevamente. Solo ve la la secc&ocuten de Administrador de Anuncios, en Mi Perfil.<br/><br/>
 <br/><br/>
 El tiempo de vigencia de tu anuncio sigue corriendo a pesar de no estar publicado, as&iacute; que te invitamos a que realices los cambios necesarios lo antes posible.<br/><br/>
 Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
@@ -1163,6 +1166,15 @@ Para poder comenzar a disfrutar de todas las herramientas del portal, valida tu 
                 $this->admin_model->deleteItem('servicioID', $s->servicioID, 'cuponadquirido');
                 $this->admin_model->deleteItem('servicioID', $s->servicioID, 'publicaciones');
                 $this->admin_model->deleteItem('servicioID', $s->servicioID, 'serviciocontratado');
+            }
+        }
+    }
+
+    function updateVencidos(){
+        $vencidos =  $this->defaultdata_model->getVencidos();
+        if($vencidos != null){
+            foreach ($vencidos as $v) {
+                $this->defaultdata_model->updateItem('publicacionID', $v->publicacionID, array('vigente' => 0, ),'publicaciones');
             }
         }
     }
