@@ -214,7 +214,7 @@ $msj = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://w
 <br/>
 
 <font style="font-family:Verdana, Geneva, sans-serif; font-size:13px;">
-<font> El usuario ' . $this->session->userdata('nombre') . ' ' . $this->session->userdata('apellido') . ' esta interesado en el siguiente anuncio:</font>
+<font> El usuario ' . $this->session->userdata('nombre') . ' ' . $this->session->userdata('apellido') . ' est&aacute; interesado en el siguiente anuncio:</font>
 <font style="margin-top:100px; font-size:19px; font-weight:bold; color:#72A937;" >' . ($directorio['data'][0]->titulo).'</font>
                 
         <font color="#000066"><strong> Correo Contacto:</strong> ' . $this->input->post('mail_contacto') . '</font>

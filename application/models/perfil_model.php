@@ -127,7 +127,9 @@ FROM usuario a, usuariodetalle b , ubicacionusuario d WHERE a.idUsuario = b.idUs
 			and d.publicacionID = a.publicacionID
 			and a.estadoID = e.estadoID
             and r .razaID = a.razaID
-			and d.idusuario =' .$idUsuario);
+			and d.idusuario =' .$idUsuario.'
+            and a.vigente = 1
+            and a.aprobada = 1');
     	if ($query->num_rows() >= 1){
 			return $query->result();
 		} else {
