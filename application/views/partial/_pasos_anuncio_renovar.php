@@ -531,7 +531,7 @@ $(document).ready(function()
         </div>
         <br/>
         <strong>
-            Precio: $ <label id="precioPrev"></label>
+        <span id="s_precio">Precio: $ <label id="precioPrev"></label></span>
         </strong>
         <br/>
         <font> Fecha de publicacion:<label id="fechaPrev"><?=date('d-m-Y');?></label></font>
@@ -857,7 +857,7 @@ TOTAL
             $('#paso_tres [name=vigencia_texto]').val(paquete_val.vigencia);
             $('#paso_tres [name=cantFotos]').val(paquete_val.cantFotos);
             $('#paso_tres [name=caracteresN]').val(paquete_val.caracteres);
-            $('#paso_tres [name=precio]').val('0.00');   
+            //$('#paso_tres [name=precio]').val('0.00');   
             
             if(paquete_val.id == 1){
                 var imagen = '<img src="<?php echo base_url() ?>images/pago_lite.png"/>';           }
@@ -995,9 +995,13 @@ TOTAL
             if(valor == 6 || valor == 7){
                 $('#precio').val('0.00');
                 $('#precio').attr('disabled', 'disabled');
+                $("#s_precio").hide();
 
             } else {
+                $('#precio').val('');
                 $('#precio').removeAttr('disabled');
+                $("#s_precio").show();
+
             }
             console.log(valor+'seccionnnnnnnn');
             $.ajax({
