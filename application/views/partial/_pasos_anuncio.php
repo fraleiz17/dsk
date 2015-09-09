@@ -84,7 +84,7 @@
                 <div class="el_titulo_paquete_lite_mini"> Gratis</div>
                 <div class="descripcion_precio_paquete_lite_mini"></div>
             <?php else: ?>
-                <div class="precio_paquete_regular_mini"> $<?php echo $paquetes[0]->precio ?></div>
+                <div class="precio_paquete_regular_mini p_lite"> $<?php echo $paquetes[0]->precio ?></div>
             <?php endif; ?>
         </div>
         <div class="descripcion_paquetes_mini">
@@ -870,13 +870,23 @@ TOTAL
             $('#ncupones').html(paquete_val.cupones);
             $('#ncaracteres').html(paquete_val.caracteres);
 
-            console.log(paquete_val.id+' pauqete ID');
+            //console.log(paquete_val.id+' pauqete ID');
+            //console.log(paquete_val.id+'paquete 1 mas seccion'+$('#p_form input[name=seccion]:checked').val());
+            
+            var s_adopcion = $('#p_form input[name=seccion]:checked').val();
+
              var precio_paquete1 = paquete_val.precio;
             if(paquete_val.id == 1){
             <?php if (is_logged() == true && $this->session->userdata('paqueteGratis') == 1):?>
              var precio_paquete1 = 0;
             <?php endif; ?>
             }
+
+            if(paquete_val.id == 1 && s_adopcion == 6){
+                var precio_paquete1 = 0;
+            }
+
+
 
             console.log(precio_paquete1+'precio_paquete1');
             $('#subtotal').html((precio_paquete1 - ( precio_paquete1 * .16)).toFixed(2));
@@ -991,13 +1001,16 @@ TOTAL
                 $('#precio').val('0.00');
                 $('#precio').attr('disabled', 'disabled');
                 $("#s_precio").hide();
+                $('.p_lite').html('$ 0.00');
 
             } else {
                 $('#precio').val('');
                 $('#precio').removeAttr('disabled');
                 $("#s_precio").show();
+                $('.p_lite').html('<?php echo $paquetes[0]->precio ?>');
 
             }
+
             console.log(valor+'seccionnnnnnnn');
             $.ajax({
                     url:'<?php echo base_url('venta/getTextoApoyo') ?>',
