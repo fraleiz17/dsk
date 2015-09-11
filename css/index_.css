@@ -1,12 +1,12 @@
-@font-face
-{
- font-family: 'miFuente';
- src: url('../fonts/GOTHIC.ttf');
-}
 @font-face {
- font-family: 'miFuente';
- src: url('../fonts/GOTHIC.eot') /* EOT file for IE */
-}
+    font-family: 'miFuente';
+    src: url('../fonts/GOTHIC.eot') format('embedded-opentype'), 
+         url('../fonts/GOTHIC.ttf')  format('truetype'),
+    }
+
+
+
+
 body{
 	font-family:"miFuente";
 	font-size:15px;}
