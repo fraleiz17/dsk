@@ -71,7 +71,7 @@ if ($keyUser === FALSE || ($keyUser !== FALSE && $tipoUsuario !== 0)):
             <img src="<?php echo base_url() ?>images/logo_superior.png" width="348" height="93"
                  class="contenido_superior"/>
 
-            <div class="slideshow">
+            <div class="slideshow" style="position: relative; width: 638px; height: 93px; overflow: hidden;">
                 <?php $banner = $this->session->userdata('banner'); ?>
                 <?php
                 if (is_logged() && ($this->session->userdata('tipoUsuario') == 2 || $this->session->userdata('tipoUsuario') == 3)) {
