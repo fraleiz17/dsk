@@ -482,7 +482,7 @@ que el nombre del criador esté en el certificado.
                     <br/>
                     <font> Género: <?php echo $favorito->genero?'Macho':'Hembra'?> </font>
                     <br/>
-                    <font> Ciudad: <?php echo $favorito->ciudad?></font>
+                    <font> Ciudad: <?php echo substr($favorito->ciudad,0,5).'...'?></font>
                 </div>
                 <div class="contenedor_foto_anuncio" id="contener_foto<?php echo $favorito->publicacionID?>">
                     <img src="<?=base_url().$favorito->foto?>" width="auto" height="100%"> 
