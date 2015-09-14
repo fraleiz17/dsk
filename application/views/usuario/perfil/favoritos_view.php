@@ -650,12 +650,4 @@ que el nombre del criador esté en el certificado.
         <!-- navigation holder -->
         <div class="holder"></div>
     </div>
-    
-    
-      </div>
-
-    
-
- 
- 
- 
+</div>
