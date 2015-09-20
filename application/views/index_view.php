@@ -399,9 +399,9 @@
                       <div class="sub_imagenes_dos"></div> 
                       <div id="ver_perdidos" class="" style=" display:none;"></div>';
                       else : ?>
-                <p><strong> Nombre:</strong> <?=$contenidosP->titulo?>
-                    <strong>Raza:</strong> <?=$contenidosP->raza?>
-                    <strong>Caracteristicas:</strong> <?=substr($contenidosP->descripcion,0,20)?>...</p>
+                <p><strong> Nombre:</strong> <?=substr($contenidosP->titulo,0,10)?>...<br/>
+                    <strong>Raza:</strong> <?=substr($contenidosP->raza,0,10)?>...<br/>
+                    <strong></strong> <?=substr($contenidosP->descripcion,0,20)?>...</p>
             </div>
             <div class="sub_imagenes_dos">
                 <img align="center" style="width:50%; max-width:150px;" class="imagen_relleno" src="<?php echo base_url() ?><?=$contenidosP->foto?>"/>
