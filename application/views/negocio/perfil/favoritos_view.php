@@ -14,26 +14,72 @@ function buscar_imagen(id){
                 type: 'post',
                  success: function(result)
                 { 
-				var data = result.data;
-				 if (result.count < 1) {
+                var data = result.data;
+                 if (result.count < 1) {
                     
                     }
                     for (var i = 0; i < result.count; i++)
                     {
-						foto=(data[i].foto);
-						
-						}
-					
-				$("#contener_foto"+id).append('<img src="<?php echo base_url() ?>' + foto + '" width="auto" height="100%"/>');
-				
-				}
+                        foto=(data[i].foto);
+                        
+                        }
+                    
+                $("#contener_foto"+id).append('<img src="<?php echo base_url() ?>' + foto + '" width="auto" height="100%"/>');
+                
+                }
                  })
+}
+
+function contactar_pub(id) {
+
+    $('.btn_contactar').on('click', function (){
+        var pub = $(this).data("pub");
+        $('.info', '#contacto_form').html('');
+        buscar_anunciante_dos(pub);
+        muestra('contenedor_contactar');
+        $("#contacto_form")[0].reset();
+        //console.log(pub+'meh');
+
+        $('#contenedor_contactar #contacto_form').submit(function(e){
+            e.preventDefault();
+            var form = $(this);
+            console.log(pub);
+
+            $.ajax({
+                    url:'<?php echo base_url('venta/getSeccion') ?>',
+                    type:'post',
+                    dataType: 'html',
+                    data: 'pub=' +pub,
+                    success: function(data){
+                       var seccion = data;
+                    }
+             });
+
+
+
+            
+            $('.info').html('Enviando...');
+            $.ajax({
+                url: '<?php echo base_url('venta/contactar')?>',
+                data: form.serialize()+'&pub='+pub+'&seccion='+seccion,
+                dataType: 'html',
+                type: 'post',
+                before: function () {
+                    $('.info',form).html('loading');
+                },
+                success: function (data) {
+                    $('.info',form).html(data);
+                    //$('.boton_naranja_tres').show();
+                }
+            });
+        });
+    });
 }
 
  $('.mas_anuncio').on('click', function(){
 
     var id = $(this).attr('id');
-    console.log(id);
+    console.log(id+'-*-*-*-*');
     $.ajax({
                 url: '<?php echo base_url('venta/click')?>',
                 data: 'id='+id,
@@ -46,7 +92,6 @@ function buscar_imagen(id){
 
     buscar_detalles(id);
 });
-
 
    function enviar_mail(id) {
             id = document.getElementById('enviando_id').value
@@ -70,7 +115,7 @@ function buscar_imagen(id){
    
    
    function contener_images() {
-	
+    
 
     $('#slideshow_publicar_anuncio_previo').before('<ul id="nav_anuncio_previo">').cycle({
     fx:      'scrollRight', 
@@ -120,14 +165,20 @@ function buscar_detalles(id) {
 
                 $(".contenedor_galeria").append('<img src="' + data[i].foto + '" width="294" height="200" style=" top: 0px; left: 0px; display: block; z-index: 5; opacity: 1;"/>');
                 var cont_datos = $('.datos_general');
-                var cont_info = $(' <div class="titulo_anuncio_publicado">' + data[i].titulo + '</div></br><strong>Precio:' + data[i].precio + '</strong></br><font> Fecha de publicación:' + data[i].fechaCreacion + '</font></br><font>Sección: Venta</font></br><font>Raza:' + data[i].raza + '</font></br><font>Género:' + (data[i].genero ? 'Macho' : 'Hembra') + '</font></br><font>Lugar: ' + data[i].nombreEstado + '</font></br></br>');
+                var cont_info = $(' <div class="titulo_anuncio_publicado">' + data[i].titulo + '</div></br><strong>Precio: $' + data[i].precioVenta + '</strong></br><font> Fecha de publicación:' + data[i].fechaCreacion + '</font></br><font>Sección: Venta</font></br><font>Raza:' + data[i].raza + '</font></br><font>Género:' + (data[i].genero ? 'Macho' : 'Hembra') + '</font></br><font>Lugar: ' + data[i].nombreEstado + '</font></br></br>');
                 cont_datos.append(cont_info);
                 var botones = $('<ul class="boton_naranja"><li onclick="buscar_anunciante(\'' + data[i].publicacionID + '\')">Contactar al anunciante</li> </ul> </br> <ul class="boton_gris"><li data-pub="' + data[i].publicacionID + '" class="btn_fvt"><img src="<?php echo base_url() ?>images/favorito.png"/>Agregar a Favoritos</li></ul><span id="info_fav"></span>');
                 cont_datos.append(botones);
                 $('.descripcion_del_anuncio').append(data[i].descripcion);
+                if (data[i].paqueteID != '1'){
+                //(".boton_naranja_dos").show();
                 buscar_videos(data[i].publicacionID);
+                } else {
+                    $('#video').html('No hay video para mostrar');
+                }
 
-                $('.btn_den').data('pub', data[i].publicacionID);
+                $('.btn_den').data('pub', data[i].publicacionID);                
+                $('.btn_contactar').data('pub', data[i].publicacionID);
             }
 
             add_favorite();
@@ -140,8 +191,8 @@ function buscar_detalles(id) {
 
 
 function buscar_anunciante(id){
-	muestra('contenedor_contactar');
-	    
+    muestra('contenedor_contactar');
+        
              id_anuncio="id_anuncio="+id;
 
             $.ajax({
@@ -151,7 +202,7 @@ function buscar_anunciante(id){
                 type: 'post',
                  success: function(result)
                 { 
-				
+                
                
 
                     var data = result.data;
@@ -161,14 +212,14 @@ function buscar_anunciante(id){
                     }
                     for (var i = 0; i < result.count; i++)
                     {
-						if (data[i].muestraTelefono==1 ){
-							var telefono=data[i].telefono;
-							} else{
-								
-								var telefono="---";
-								}
-						
-						 $(".datos_anunciante").append('</br><strong> Nombre de usuario:</strong> <font >'+data[i].nombre+' '+data[i].apellido+'</font></br><strong> Estado: </strong> <font >'+data[i].nombreEstado+'</font></br><strong> Ciudad: </strong> <font>'+data[i].ciudad+'</font></br><strong> Teléfono: </strong><font>'+telefono+'</font></br></br>');
+                        if (data[i].muestraTelefono==1 ){
+                            var telefono=data[i].telefono;
+                            } else{
+                                
+                                var telefono="---";
+                                }
+                        
+                         $(".datos_anunciante").append('</br><strong> Nombre de usuario:</strong> <font >'+data[i].nombre+' '+data[i].apellido+'</font></br><strong> Estado: </strong> <font >'+data[i].nombreEstado+'</font></br><strong> Ciudad: </strong> <font>'+data[i].ciudad+'</font></br><strong> Teléfono: </strong><font>'+telefono+'</font></br></br>');
                         
                         
             }
@@ -192,7 +243,7 @@ function buscar_imagenes(id){
                 type: 'post',
                  success: function(result)
                 { 
-				
+                
                     $(".contenedor_galeria").empty().html('<div id="slideshow_publicar_anuncio_previo" class="picse"></div>');
 
                     var data = result.data;
@@ -234,10 +285,10 @@ function buscar_videos(id){
                     }
                     for (var i = 0; i < result.count; i++)
                     {
-						
+                        
                         var video=$('#you_tube');
-						var direccion=$('<iframe src="'+data[i].link+'"></iframe> <br/><br/>');
-						    video.append(direccion);
+                        var direccion=$('<iframe src="'+data[i].link+'"></iframe> <br/><br/>');
+                            video.append(direccion);
                         
             }
             
@@ -278,16 +329,29 @@ function denunciar_pub() {
 
     $('.btn_den').on('click', function (){
         var pub = $(this).data("pub");
+        console.log(pub);
+        var secc = 0;
         $('.info', '#denuncia_form').html('');
+         $.ajax({
+                    url:'<?php echo base_url('venta/getSeccion') ?>',
+                    type:'post',
+                    dataType: 'html',
+                    data: 'pub=' +pub,
+                    success: function(data){
+                       secc = data;
+                       
+                    }
+             });
 
         muestra('contenedor_denunciar');
         
         $('#contenedor_denunciar #denuncia_form').submit(function(e){
             e.preventDefault();
             var form = $(this);
+            console.log(secc+'seccion-----');
             $.ajax({
                 url: '<?php echo base_url('venta/denunciar')?>',
-                data: form.serialize()+'&pub='+pub+'&seccion='+<?=$seccion?>,
+                data: form.serialize()+'&pub='+pub+'&seccion='+secc,
                 dataType: 'html',
                 type: 'post',
                 before: function () {
@@ -311,31 +375,94 @@ function denunciar_pub() {
     <div class="contactar_al_aunuciante">
         <font class="titulo_anuncio_publicado"> CONTACTA AL ANUNCIANTE </font>
         <div class="datos_anunciante">
-   
+
 </div>
 <font class="titulo_anuncio_publicado"> PROPORCIONA TU INFORMACIÓN </font>
 </br>
 </br>
+
+<style>
+::-webkit-input-placeholder {
+   color: #FFF;  
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #FFF;   
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #FFF;   
+}
+
+:-ms-input-placeholder {  
+   color: #FFF;  
+}
+</style>
 <form id="contacto_form">
     <div style="width:323px;height:auto;display:block;overflow:hidden;-ms-overflow-style: none">
-    <input type="text" class="formu_contacto" id="nombre_contacto"
-    value="<?php echo $this->session->userdata('nombre')?>" size="44"/>
-    <input type="text" class="formu_contacto" id="mail_contacto"
+    <input type="text" class="formu_contacto validate[required]" id="nombre_contacto"
+    value="<?php echo $this->session->userdata('nombre')?>" size="44" name="nombre_contacto" />
+    <input type="text" class="formu_contacto validate[required]" id="mail_contacto" name="mail_contacto"
     value="<?php echo $this->session->userdata('correo')?>" size="44"/>
-    <input type="text" class="formu_contacto" id="asunto_contacto"
-    onfocus="clear_textbox('asunto_contacto', 'Asunto')" placeholder="Asunto" size="44"/>
-    <textarea cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto"
-    class="formu_contacto" rows="5">Comentarios</textarea>
-</div>
+    <input type="text" class="formu_contacto validate[required]" id="asunto_contacto" name="asunto_contacto"
+    onfocus="if(this.value == 'Asunto') { this.value = ''; }" value="Asunto" size="44" />
+    <textarea style = "width:334px;" cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto"
+    class="formu_contacto validate[required]" rows="5" name="comentarios_contacto">Comentarios</textarea>
+    </div>
 </br>
 </br>
-<ul class="boton_naranja_tres">
+<span class="info"></span>
+<ul class="boton_naranja_tres contactoForm">
     <li>
         <input type="submit" value="Enviar"/>
     </li>
 </ul>
 </form>
 
+</div>
+
+
+</div>
+
+<div class="contenedor_contactar" id="contenedor_denunciar" style=" display:none;">
+    <div class="contenedor_cerrar_contactar">
+        <img src="<?php echo base_url()?>images/cerrar_anuncio_gris.png" onclick="oculta('contenedor_denunciar');"/>
+    </div>
+    <div class="contactar_al_aunuciante" style="height:346px;">
+    <font class="titulo_anuncio_publicado"> DENUNCIA DE CONTENIDO </font>
+    </br>
+    </br>
+<font class=""><strong>Todas las denuncias son an&oacute;nimas.</strong><br>
+        Selecciona la razón por la cual deseas denunciar este anuncio y/o anunciante:</font>
+</br>
+</br>
+<form id="denuncia_form">
+    <input type="hidden" class="formu_contacto validate[required]" name="nombre_denuncia" id="nombre_denuncia"
+    value="<?php echo $this->session->userdata('nombre')?>" size="44"/>
+    <input type="hidden" class="formu_contacto validate[required]" name="mail_denuncia" id="mail_denuncia"
+    value="<?php echo $this->session->userdata('correo')?>" size="44"/>
+    <input type="hidden" class="formu_contacto validate[required]" name="asunto_denuncia" id="asunto_denuncia"
+    onfocus="clear_textbox('asunto_denuncia', 'Asunto')" value="Asunto" size="44"/>
+    <!-- <textarea cols="50" onfocus="clear_textbox('comentarios_denuncia', 'Comentarios')" name="comentarios_denuncia" id="comentarios_denuncia"
+    class="formu_contacto" rows="5">Comentarios</textarea> <?=base_url()?>content/terminos_y_condiciones.pdf -->
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia3" checked="checked" value="Información de anuncio falsa"><label>Informaci&oacute;n de anuncio falsa</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia1" value="Contenido Violento"><label>Contenido Violento</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia2" value="Fotos Inapropiadas"><label>Fotos Inapropiadas</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia4" value="Fraude"><label>Fraude</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia5" value="Datos de contacto falsos"><label>Datos de contacto falsos</label></br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia6" value="Otro"><label>Otro</label></br>
+</br>
+
+<label><a href="<?=base_url()?>content/terminos_y_condiciones.pdf" target="_blank" style="text-decoration:none;">T&eacute;rminos y Condiciones de Uso</a></label></br>
+</br>
+</br>
+<ul class="boton_naranja_tres denunciaForm">
+    <li>
+        <input type="submit" value="Enviar"/>
+    </li>
+</ul>
+<span class="info"></span>
+</form>
 </div>
 
 
@@ -465,26 +592,26 @@ que el nombre del criador esté en el certificado.
             <?php $fila = 1;?>
 
             <?php
-		    if($favoritos != null):
+            if($favoritos != null):
             foreach ($favoritos as $favorito):
-                ?>
             
+                ?>
             <!-- INICIO contenedor anuncio  -->
             <div class="contenedor_anuncio">
                 <div class="titulo_anuncio">
                     <?php echo $favorito->titulo?>
                 </div>
                 <div class="descripcion_anuncio">
-                    <font> Precio : &nbsp;$ &nbsp; <?php echo $favorito->precioVenta?></font>
+                    <font> Precio: <?php echo $favorito->precioVenta?></font>
                     <br/>
-                    <font> Raza&nbsp;: <?php $razita= $favorito->raza;echo substr($razita, 0, 15); ?> </font>
+                    <font> Raza: <?php $razita= $favorito->raza;echo substr($razita, 0, 15); ?> </font>
                     <br/>
-                    <font> Género&nbsp;: <?php echo $favorito->genero?'Macho':'Hembra'?> </font>
+                    <font> Género: <?php echo $favorito->genero?'Macho':'Hembra'?> </font>
                     <br/>
-                    <font> Ciudad&nbsp;: <?php <?php echo substr($favorito->ciudad,0,5).'...'?></font>
+                    <font> Ciudad: <?php echo substr($favorito->ciudad,0,5).'...'?></font>
                 </div>
                 <div class="contenedor_foto_anuncio" id="contener_foto<?php echo $favorito->publicacionID?>">
-               <img src="<?=base_url().$favorito->foto?>" width="auto" height="100%"> 
+                    <img src="<?=base_url().$favorito->foto?>" width="auto" height="100%"> 
                 </div>
 
                 <ul class="ver_detalle_anuncio">
@@ -512,7 +639,10 @@ que el nombre del criador esté en el certificado.
             <?php endif;?>
             <!-- FIN margen falso -->
         <?php endforeach;
-                endif;?>
+              else:
+                echo '<p>No has registrado ningún favorito.</p>';
+                endif;
+        ?>
 
     </ul>
 

@@ -454,8 +454,9 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         $precio = $this->input->post('precio') === '' ? NULL : $this->input->post('precio');
         $palabra_clave = $this->input->post('palabra_clave') === '' ? NULL : $this->input->post('palabra_clave');
         $id_anuncio = $this->input->post('id_anuncio') === '' ? NULL : $this->input->post('id_anuncio');
+        $seccion = $this->getSeccionN($id_anuncio);
 
-        echo json_encode($this->venta_model->getPublicaciones($raza, $genero, $estado, $precio, $palabra_clave, $id_anuncio, 2));
+        echo json_encode($this->venta_model->getPublicaciones($raza, $genero, $estado, $precio, $palabra_clave, $id_anuncio, $seccion));
     }
 
  function contactar() {
@@ -1194,6 +1195,13 @@ return true;
 
          //echo json_encode($publicacionID);
         }
+    }
+
+    function getSeccionN($publicacionID){
+        //$publicacionID = $this->input->post('pub');
+        $seccionID = $this->perfil_model->getSeccionID($publicacionID);
+        return $seccionID;
+
     }
 
 
