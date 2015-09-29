@@ -43,7 +43,7 @@ $this->load->view('general/general_header_view', array('title' => 'Datos Curioso
 <?php $this->load->view('general/menu_view')?>
 
 <div class="titulo_seccion">
-DATOS CURIOSOS
+DATOS CURIOSOS H
 
 </div>
 <div class="contenedor_buscador">
@@ -90,7 +90,7 @@ DATOS CURIOSOS
  }?></div>
 <div class="contenido_horizontal_mini"> <?=$contenidos[1]->nombre?> </div>
 <div class="contenido_texto_horizal_mini"> <?=substr($contenidos[1]->texto,0,60)?> ... </div>
-<div class="ver_mas_amarillo_mini" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[1]->contenidoID?>'"> Ver más... </div>
+<div class="ver_mas_amarillo_mini" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[1]->contenidoID?>/2'"> Ver más... </div>
   </div>
   
   <div class="divisor_mini"> </div>
@@ -100,7 +100,7 @@ DATOS CURIOSOS
   
  <div class="titulo_horizontal_mini"> <?=$contenidos[2]->nombre?> </div>
  <div class="contenido_texto_horizal_mini"> <?=substr($contenidos[2]->texto,0,60)?> </div>
- <div class="ver_mas_naranja_mini" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[2]->contenidoID?>'"> Ver más... </div>
+ <div class="ver_mas_naranja_mini" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[2]->contenidoID?>/2'"> Ver más... </div>
  <div class="contenedor_imagen_horizontal_naranja_mini" style="width:181px; height:57px;">
   <?php if($fotocontenido != null){
         foreach($fotocontenido as $p){
@@ -117,7 +117,7 @@ DATOS CURIOSOS
      <div class="contenedor_datos_curiosos_mini">
 <div class="titulo_azul_mini"> <?=$contenidos[3]->nombre?> </div>
 <div class="contendor_descripcion_curioso_azul_mini"> <?=substr($contenidos[3]->texto,0,60)?>...</div>
-<div class="ver_mas_azul_mini" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[3]->contenidoID?>'"> Ver más.. </div>
+<div class="ver_mas_azul_mini" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[3]->contenidoID?>/1'"> Ver más.. </div>
 <div class="contenedor_imagen_azul_mini" style="height:132px; width:72px;"> <?php if($fotocontenido != null){
         foreach($fotocontenido as $p){
             if($p->contenidoID == $contenidos[3]->contenidoID){?>
@@ -144,7 +144,7 @@ DATOS CURIOSOS
   }?> </div>
 <div class="titulo_verde_mini"> <?=$contenidos[0]->nombre?> </div>
 <div class="contendor_descripcion_curioso_mini"> <?=substr($contenidos[0]->texto,0,60)?>...</div>
-<div class="ver_mas_verde_mini" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[0]->contenidoID?>'"> Ver más.. </div>
+<div class="ver_mas_verde_mini" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[0]->contenidoID?>/1'"> Ver más.. </div>
 
  </div>
      

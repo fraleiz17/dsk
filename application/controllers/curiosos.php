@@ -94,7 +94,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
         $this->load->view('curiosos_view',$data);
     }
 
-    function detalle($ID){
+    function detalle($ID,$tipo){
        $data['ID'] = $ID;
        $data['contenidos'] = $this->admin_model->getContenidos(10);
        $data['fotoscontenido'] = $this->admin_model->getFotosContenido();
@@ -139,7 +139,12 @@ $data['mapaSegundo'] = 'mapa_view';
 $data['zona'] = 9;
 $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
 $data['paises'] = $this->defaultdata_model->getPaises();
- $this->load->view('curiosos_detalle_view',$data);
+if($tipo == 1){
+  $this->load->view('curiosos_detalle_view',$data);
+} else {
+  $this->load->view('curiosos_detalle_h_view',$data);
+}
+ 
 }
 
 }
