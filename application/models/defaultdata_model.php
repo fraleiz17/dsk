@@ -301,6 +301,10 @@ where pagado = 0)");
          }
     }
 
+    function getBannerS($seccionID) {
+               $this->db->where('seccionID', $seccionID);
+        return $this -> db -> get('banner') -> result();
+    }
 
     
 

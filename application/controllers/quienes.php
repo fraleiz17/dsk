@@ -74,7 +74,7 @@ $this->googlemaps->add_marker($marker);
 
 
 $data['mapaSegundo'] = 'mapa_view'; 
-$data['banner'] = $this->defaultdata_model->getTable('banner');
+$data['banner'] = $this->defaultdata_model->getBannerS(12);
 $data['estados'] = $this->defaultdata_model->getEstados();
 $data['paquetes'] = $this->defaultdata_model->getPaquetes();
 $data['razas'] = $this->defaultdata_model->getRazas();
@@ -99,7 +99,7 @@ $this->load->view('quienes_view',$data);
 
     function preguntas(){
        $data['seccion'] = 15;
-       $data['banner'] = $this->defaultdata_model->getTable('banner');
+       $data['banner'] = $this->defaultdata_model->getBannerS(12);
        $data['estados']     = $this->defaultdata_model->getEstados();
        $data['paquetes'] = $this->defaultdata_model->getPaquetes();
        $data['razas'] = $this->defaultdata_model->getRazas();
@@ -139,7 +139,7 @@ $this->googlemaps->add_marker($marker);
 
 
 $data['mapaSegundo'] = 'mapa_view'; 
-$data['banner'] = $this->defaultdata_model->getTable('banner');
+$data['banner'] = $this->defaultdata_model->getBannerS(12);
 $data['estados'] = $this->defaultdata_model->getEstados();
 $data['paquetes'] = $this->defaultdata_model->getPaquetes();
 $data['razas'] = $this->defaultdata_model->getRazas();

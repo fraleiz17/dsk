@@ -121,7 +121,7 @@ class Cuenta extends CI_Controller {
         $data['SYS_metaKeyWords']       = '';
         $data['SYS_metaDescription']    = '';  
         $data['myInfo']    = $this->usuario_model->getMyInfo($this->session->userdata('idUsuario'));
-        $data['banner'] = $this->defaultdata_model->getTable('banner');
+        $data['banner'] = $this->defaultdata_model->getBannerS(5);
         $data['info']     = $this->usuario_model->getInfoCompleta($this->session->userdata('idUsuario'));
         $data['seccion'] = 5;
         $data['estados']    = $this->defaultdata_model->getEstados();
@@ -136,7 +136,7 @@ class Cuenta extends CI_Controller {
             $data['giro'] = $this->usuario_model->getGiro($this->session->userdata('idUsuarioDetalle'));
         }
         $data['seccion'] = 5;
-        $data['banner'] = $this->defaultdata_model->getTable('banner');
+        $data['banner'] = $this->defaultdata_model->getBannerS(5);
         $data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
         $this->borrarFallidos();
         $this->load->view('usuario/myprofile_view',$data);
@@ -203,7 +203,7 @@ class Cuenta extends CI_Controller {
         $data['paquetes'] = $this->defaultdata_model->getPaquetes();
         $data['razas'] = $this->defaultdata_model->getRazas();
         $data['seccion'] = 5;
-        $data['banner'] = $this->defaultdata_model->getTable('banner');
+        $data['banner'] = $this->defaultdata_model->getBannerS(5);
         if(is_logged()){
             $cupones = $this->usuario_model->getCuponesUsuario($this->session->userdata('idUsuario'));
             $data['cupones'] = $cupones;
@@ -260,7 +260,7 @@ class Cuenta extends CI_Controller {
     }
 
     function soporte(){
-        $data['banner'] = $this->defaultdata_model->getTable('banner');
+        $data['banner'] = $this->defaultdata_model->getBannerS(5);
         $data['seccion'] = 5;
         if($this->session->userdata('tipoUsuario') == 2 || $this->session->userdata('tipoUsuario') == 3){
             $data['ubicacion'] = $this->usuario_model->miUbicacion($this->session->userdata('idUsuarioDato'));
@@ -514,7 +514,7 @@ $this->googlemaps->add_marker($marker);
 
 
 $data['mapaSegundo'] = 'mapa_view'; 
-$data['banner'] = $this->defaultdata_model->getTable('banner');
+$data['banner'] = $this->defaultdata_model->getBannerS(5);
 $data['estados'] = $this->defaultdata_model->getEstados();
 $data['paquetes'] = $this->defaultdata_model->getPaquetes();
 $data['razas'] = $this->defaultdata_model->getRazas();

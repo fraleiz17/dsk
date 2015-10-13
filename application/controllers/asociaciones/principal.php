@@ -80,7 +80,7 @@ class Principal extends CI_Controller {
         $data['SYS_metaDescription']    = '';  
         $data['paquetes'] = $this->defaultdata_model->getPaquetes();
         $data['razas'] = $this->defaultdata_model->getRazas();
-        $data['banner'] = $this->defaultdata_model->getTable('banner');
+        $data['banner'] = $this->defaultdata_model->getBannerS(5);
         $data['myInfo']    = $this->usuario_model->getMyInfo($this->session->userdata('idUsuario'));
         $data['cupones']    = $this->defaultdata_model->getCupones();
         $data['seccion'] = 5;
@@ -303,7 +303,7 @@ Cualquier duda, escr&iacute;benos a contacto@quierounperro.com
     }
 	
 	 function soporte(){
-        $data['banner'] = $this->defaultdata_model->getTable('banner');
+        $data['banner'] = $this->defaultdata_model->getBannerS(5);
         $data['seccion'] = 5;
         if($this->session->userdata('tipoUsuario') == 2 || $this->session->userdata('tipoUsuario') == 3){
             $data['ubicacion'] = $this->usuario_model->miUbicacion($this->session->userdata('idUsuarioDato'));
@@ -436,7 +436,7 @@ $this->googlemaps->add_marker($marker);
 
 
 $data['mapaSegundo'] = 'mapa_view'; 
-$data['banner'] = $this->defaultdata_model->getTable('banner');
+$data['banner'] = $this->defaultdata_model->getBannerS(5);
 $data['estados'] = $this->defaultdata_model->getEstados();
 $data['paquetes'] = $this->defaultdata_model->getPaquetes();
 $data['razas'] = $this->defaultdata_model->getRazas();

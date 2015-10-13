@@ -76,7 +76,7 @@ $this->googlemaps->add_marker($marker);
 
 
 $data['mapaSegundo'] = 'mapa_view'; 
-$data['banner'] = $this->defaultdata_model->getTable('banner');
+$data['banner'] = $this->defaultdata_model->getBannerS(6);
 $data['estados'] = $this->defaultdata_model->getEstados();
 $data['paquetes'] = $this->defaultdata_model->getPaquetes();
 $data['razas'] = $this->defaultdata_model->getRazas();

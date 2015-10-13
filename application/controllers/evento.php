@@ -44,7 +44,7 @@ class Evento extends CI_Controller
        $data['fotoscontenido'] = $this->admin_model->getFotosContenido();
        $data['fotocontenido'] = $this->admin_model->getFotoContenido();
        $data['seccion'] = 9;
-       $data['banner'] = $this->defaultdata_model->getTable('banner');
+       $data['banner'] = $this->defaultdata_model->getBannerS(9);
        $data['estados']     = $this->defaultdata_model->getEstados();
        $data['paquetes'] = $this->defaultdata_model->getPaquetes();
        $data['razas'] = $this->defaultdata_model->getRazas();
@@ -76,7 +76,7 @@ $this->googlemaps->add_marker($marker);
 
 
 $data['mapaSegundo'] = 'mapa_view'; 
-$data['banner'] = $this->defaultdata_model->getTable('banner');
+$data['banner'] = $this->defaultdata_model->getBannerS(9);
 $data['estados'] = $this->defaultdata_model->getEstados();
 $data['paquetes'] = $this->defaultdata_model->getPaquetes();
 $data['razas'] = $this->defaultdata_model->getRazas();
@@ -104,7 +104,7 @@ $data['paises'] = $this->defaultdata_model->getPaises();
        $data['fotoscontenido'] = $this->admin_model->getFotosContenido();
        $data['fotocontenido'] = $this->admin_model->getFotoContenido();
        $data['seccion'] = 9;
-       $data['banner'] = $this->defaultdata_model->getTable('banner');
+       $data['banner'] = $this->defaultdata_model->getBannerS(9);
        $data['estados']     = $this->defaultdata_model->getEstados();
        $data['paquetes'] = $this->defaultdata_model->getPaquetes();
        $data['razas'] = $this->defaultdata_model->getRazas();
@@ -137,7 +137,7 @@ $this->googlemaps->add_marker($marker);
 
 $data['mapaSegundo'] = 'mapa_view'; 
 $data['seccion'] = 12;
-$data['banner'] = $this->defaultdata_model->getTable('banner');
+$data['banner'] = $this->defaultdata_model->getBannerS(9);
 $data['estados'] = $this->defaultdata_model->getEstados();
 $data['paquetes'] = $this->defaultdata_model->getPaquetes();
 $data['razas'] = $this->defaultdata_model->getRazas();

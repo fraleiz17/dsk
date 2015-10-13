@@ -85,7 +85,7 @@ class Principal extends CI_Controller {
 
         //razas
         $data['razas'] = $this->defaultdata_model->getRazas();
-        $data['banner'] = $this->defaultdata_model->getTable('banner');
+        $data['banner'] = $this->defaultdata_model->getBannerS(1);
         //$data['textos'] = $this->defaultdata_model->getTexto(2);
         if(is_logged()){
         	$cupones = $this->usuario_model->getCuponesUsuario($this->session->userdata('idUsuario'));
@@ -275,7 +275,7 @@ class Principal extends CI_Controller {
 		$data['catalogo'] = $this->admin_model->getCatalogoProductos();
 		$data['seccion'] = 16;
         $data['zona'] = 9;
-        $data['banner'] = $this->defaultdata_model->getTable('banner');
+        $data['banner'] = $this->defaultdata_model->getBannerS(1);
 		$data['carritoT'] = count ($this->admin_model->getCarrito($this->session->userdata('idUsuario')));
 		$data['estados'] 	= $this->defaultdata_model->getEstados();
 		$data['paises'] 	= $this->defaultdata_model->getPaises();
@@ -311,7 +311,7 @@ $data['map'] = $this->googlemaps->create_map();
 
 
 $data['mapaSegundo'] = 'mapa_view'; 
-$data['banner'] = $this->defaultdata_model->getTable('banner');
+$data['banner'] = $this->defaultdata_model->getBannerS(1);
 $data['estados'] = $this->defaultdata_model->getEstados();
 $data['paquetes'] = $this->defaultdata_model->getPaquetes();
 $data['razas'] = $this->defaultdata_model->getRazas();
