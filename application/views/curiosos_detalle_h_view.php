@@ -43,7 +43,7 @@ $this->load->view('general/general_header_view', array('title' => 'Datos Curioso
 <?php $this->load->view('general/menu_view')?>
 
 <div class="titulo_seccion">
-DATOS CURIOSOS
+DATOS CURIOSOS H
 
 </div>
 <div class="contenedor_buscador">
@@ -134,7 +134,7 @@ DATOS CURIOSOS
 <div class="contenedor_datos_curiosos_mini">
 
 <div class="franja_verde_mini">  </div>
-<div class="contenedor_imagen_verde_mini" style="height:132px; width:72px;">
+<div class="contenedor_imagen_verde_mini" style="width:181px; height:57px;">
     <?php if($fotocontenido != null){
         foreach($fotocontenido as $p){
             if($p->contenidoID == $contenidos[0]->contenidoID){?>

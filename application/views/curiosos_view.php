@@ -69,7 +69,7 @@ foreach ($fotoscontenido as $fc){
 }?>
 <div class="titulo_verde"> <?=$contenidos[0]->nombre?> </div>
 <div class="contendor_descripcion_curioso"> <?=substr($contenidos[0]->texto,0,60)?>...</div>
-<div class="ver_mas_verde" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[0]->contenidoID?>'"> Ver más.. </div>
+<div class="ver_mas_verde" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[0]->contenidoID?>/1'"> Ver más.. </div>
   </div>  
 <div class="margen_20">  </div>
 
@@ -85,7 +85,7 @@ foreach ($fotoscontenido as $fc){
 }?>
 <div class="contenido_horizontal"> <?=$contenidos[1]->nombre?> </div>
 <div class="contenido_texto_horizal"> <?=substr($contenidos[1]->texto,0,60)?> ... </div>
-<div class="ver_mas_amarillo" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[1]->contenidoID?>'"> Ver más... </div>
+<div class="ver_mas_amarillo" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[1]->contenidoID?>/2'"> Ver más... </div>
 
  </div>
  <div class="margen_horizontal"> </div>
@@ -94,7 +94,7 @@ foreach ($fotoscontenido as $fc){
  <div class="contenedor_datos_curiosos">
  <div class="titulo_horizontal"><?=$contenidos[2]->nombre?></div>
  <div class="contenido_texto_horizal"> <?=substr($contenidos[2]->texto,0,60)?></div>
- <div class="ver_mas_naranja" onclick="window.location.href ='<?=base_url()?>curiosos/detalle/<?=$contenidos[2]->contenidoID?>'"> Ver más... </div>
+ <div class="ver_mas_naranja" onclick="window.location.href ='<?=base_url()?>curiosos/detalle/<?=$contenidos[2]->contenidoID?>/1'"> Ver más... </div>
  
  <div class="contenedor_imagen_horizontal_naranja"> <?php if($fotoscontenido != null){ 
 foreach ($fotoscontenido as $fc){
@@ -111,7 +111,7 @@ foreach ($fotoscontenido as $fc){
 <div class="contenedor_datos_curiosos">
 <div class="titulo_azul"><?=$contenidos[3]->nombre?></div>
 <div class="contendor_descripcion_curioso_azul"> <?=substr($contenidos[3]->texto,0,60)?></div>
-<div class="ver_mas_azul" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[3]->contenidoID?>'"> Ver más.. </div>
+<div class="ver_mas_azul" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[3]->contenidoID?>/2'"> Ver más.. </div>
 <?php if($fotoscontenido != null){ 
 foreach ($fotoscontenido as $fc){
   if($fc->contenidoID == $contenidos[3]->contenidoID){?>
