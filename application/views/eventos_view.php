@@ -234,8 +234,8 @@ margin-top: 30px;">
        </br>
        
        <p><strong>FECHA:</strong> <?=strtoupper($ev->fecha)?></p>
-       <p> <strong>HORA</strong> <?=strtoupper($ev->horario)?></p>
-       <p> <strong>LUGAR</strong>  <?=strtoupper($ev->lugar)?></p>
+       <p> <strong>HORA:</strong> <?=strtoupper($ev->horario)?></p>
+       <p> <strong>LUGAR:</strong>  <?=strtoupper($ev->lugar)?></p>
        
       
        </div>

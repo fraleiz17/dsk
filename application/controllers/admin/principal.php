@@ -970,7 +970,7 @@ Para poder comenzar a disfrutar de todas las herramientas del portal, valida tu 
         $this->load->library('upload'); 
 
       
-        $config['upload_path'] = 'images/curiosos';
+        $config['upload_path'] = 'images/eventos';
         $config['allowed_types'] = 'gif|jpg|png|jpeg';
         $config['max_size'] = '99999';
         $config['max_width'] = '99999';
@@ -989,7 +989,7 @@ Para poder comenzar a disfrutar de todas las herramientas del portal, valida tu 
             }
         }
 
-        redirect('admin/principal/getDatosCuriosos/9/'.$this->input->post('zonaRaza'));
+        redirect('admin/principal/getEventoMes/9/'.$this->input->post('zonaRaza'));
         
     }
 

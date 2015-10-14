@@ -444,23 +444,23 @@ AGREGAR EVENTO
 </tr>
 <tr> 
 <td> Fecha: </td>
-<td> <input name="fecha" type="text" id="fecha" value="<?=$c->fecha?>" class="validate[required]"/> </td>
+<td> <input name="fecha" type="text" id="fecha" value="<?=$c->fecha?>" class="validate[required]" placeholder="01 Oct"/> </td>
 </tr>
 <tr> 
 <td> Hora: </td>
-<td> <input name="horario" type="text" id="horario" value="<?=$c->horario?>" class="validate[required]"/>  </td>
+<td> <input name="horario" type="text" id="horario" value="<?=$c->horario?>" class="validate[required]" placeholder="19:00 hrs."/>  </td>
 </tr>
 <tr>
 <td> Lugar: </td>
-<td> <input name="lugar" type="text" id="lugar" value="<?=$c->lugar?>" class="validate[required]"/> </td>
+<td> <input name="lugar" type="text" id="lugar" value="<?=$c->lugar?>" class="validate[required]" placeholder="Estadio Corregidora"/> </td>
 </tr>
 <tr>
 <td> Domicilio: </td>
-<td> <input name="domicilio" type="text" id="domicilio" value="<?=$c->domicilio?>" class="validate[required]"/> </td>
+<td> <input name="domicilio" type="text" id="domicilio" value="<?=$c->domicilio?>" class="validate[required]" placeholder="Av. de las Torres s/n entre Cerro Blanco y calle Estadio, Col. Cimatario, Querétaro, Querétaro"/> </td>
 </tr>
 <tr> 
 <td> Contenido: </td> 
-<td> <textarea name="texto" id="texto" class="validate[required]"><?=$c->texto?></textarea> </td></tr>
+<td> <textarea name="texto" id="texto" class="validate[required]" placeholder="Para un salto de línea utilice '<p></p>' (sin comillas), en lugar de 'enter'" title="Para un salto de línea utilice '<p></p>' (sin comillas), en lugar de 'enter'"><?=$c->texto?></textarea> </td></tr>
 </table>
 
 
@@ -511,23 +511,23 @@ AGREGAR EVENTO
 </tr>
 <tr> 
 <td> Fecha: </td>
-<td> <input name="fecha" type="text" id="fecha" class="validate[required]" class="validate[required]"/> </td>
+<td> <input name="fecha" type="text" id="fecha" class="validate[required]" class="validate[required]" placeholder="01 Oct"/> </td>
 </tr>
 <tr> 
 <td> Hora: </td>
-<td> <input name="horario" type="text" id="horario" class="validate[required]" />  </td>
+<td> <input name="horario" type="text" id="horario" class="validate[required]" placeholder="19:00 hrs."/>  </td>
 </tr>
 <tr>
 <td> Lugar: </td>
-<td> <input name="lugar" type="text" id="lugar" class="validate[required]"/> </td>
+<td> <input name="lugar" type="text" id="lugar" class="validate[required]" placeholder="Estadio Corregidora"/> </td>
 </tr>
 <tr>
 <td> Domicilio: </td>
-<td> <input name="domicilio" type="text" id="domicilio" class="validate[required]"/> </td>
+<td> <input name="domicilio" type="text" id="domicilio" class="validate[required]" placeholder="Av. de las Torres s/n entre Cerro Blanco y calle Estadio, Col. Cimatario, Querétaro, Querétaro"/> </td>
 </tr>
 <tr> 
 <td> Contenido: </td> 
-<td> <textarea name="texto" id="texto" class="validate[required]"></textarea> </td></tr>
+<td> <textarea name="texto" id="texto" class="validate[required]" placeholder="Para un salto de línea utilice '<p></p>' (sin comillas), en lugar de 'enter'" title="Para un salto de línea utilice '<p></p>' (sin comillas), en lugar de 'enter'"></textarea> </td></tr>
 </table>
 
 

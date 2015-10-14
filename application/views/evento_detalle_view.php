@@ -168,7 +168,7 @@ margin-top: 30px;">
 	foreach($contenidos as $cv){
 		if($cv->contenidoID != $ID){?>
 
-     <div class="evento_proximo">
+     <div class="evento_proximo" style="font-size:10px;">
      <div class="contenedor_evento_proxi_mini">
      <div class="fecha_mini"> 
      <p class="dia_mini"><?=$cv->fecha?></p>
@@ -176,8 +176,8 @@ margin-top: 30px;">
       <img src="<?php echo base_url()?>images/cale_event.png" width="83"  height="115"/>  </div>
      <div class="contenedor_nombre_evento_mini"> 
      <?=strtoupper($cv->nombre)?><br />
-     Hora: <?=$cv->fecha?><br />
-     Lugar: <?=$cv->lugar?>
+     <strong>Fecha:</strong> <?=$cv->fecha?><br />
+     <strong>Lugar:</strong> <?=$cv->lugar?>
       </div> <div class="ver_mas_mini" onclick="window.location.href = '<?php echo base_url()?>evento/detalle/<?=$cv->contenidoID?>'"> Ver más... </div>
        </div>
        </br>
@@ -192,13 +192,13 @@ margin-top: 30px;">
 <?=$cv->texto?>
 </br>
 </br>
-<p id="fecha_evento"> <div class="recuadro_rosa"> </div>  Fecha: <?=$cv->fecha?> </p>
+<p id="fecha_evento"> <div class="recuadro_rosa"> </div><strong>  Fecha:</strong> <?=$cv->fecha?> </p>
 </br>
-<p id="hora_evento"> <div class="recuadro_rosa"> </div>  Hora: <?=$cv->horario?> </p>
+<p id="hora_evento"> <div class="recuadro_rosa"> </div><strong>  Hora:</strong> <?=$cv->horario?></p>
 </br>
-<p id="lugar_evento"> <div class="recuadro_rosa"> </div>  Lugar: <?=$cv->lugar?> </p>
+<p id="lugar_evento"> <div class="recuadro_rosa"> </div><strong>  Lugar:</strong> <?=$cv->lugar?></p>
 </br>
-<p id="domicilio_evento"> <div class="recuadro_rosa"> </div>  Domicilio: <?=$cv->domicilio?> </p>
+<p id="domicilio_evento"> <div class="recuadro_rosa"> </div><strong>  Domicilio:</strong> <?=$cv->domicilio?></p>
 
 </div>
    
