@@ -1,5 +1,0 @@
-$(function(){
-
-$('select.styled').customSelect();
-
-});

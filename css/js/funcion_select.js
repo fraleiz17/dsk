@@ -1,0 +1,1 @@
+$(function(){$("select.styled").customSelect()});
