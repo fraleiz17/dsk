@@ -1,1 +1,15 @@
-$(function(){$("ul li a").on("click",function(t){t.preventDefault();var o=$(this).attr("href");$("html,div").stop(!0,!0).animate({scrollTop:$(o).offset().top},1e3)})});
+$(function(){
+	//clic en un enlace de la lista
+	$('ul li a').on('click',function(e){
+		//prevenir en comportamiento predeterminado del enlace
+		e.preventDefault();
+		//obtenemos el id del elemento en el que debemos posicionarnos
+		var strAncla=$(this).attr('href');
+		
+		//utilizamos body y html, ya que dependiendo del navegador uno u otro no funciona
+		$('html,div').stop(true,true).animate({
+			//realizamos la animacion hacia el ancla
+			scrollTop: $(strAncla).offset().top
+		},1000);
+	});
+});

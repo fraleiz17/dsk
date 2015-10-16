@@ -1,1 +1,16 @@
-function Ocultar(o){$("#"+o).slideUp(),stop()}function Mostrar(o){$("#"+o).slideDown(),stop()}
+	function Ocultar(id)
+	{
+		$("#"+id).slideUp();
+		stop();
+	};
+
+	function Mostrar(id)
+	{
+		
+		$("#"+id).slideDown();
+		stop();
+	};
+	
+	
+	
+	

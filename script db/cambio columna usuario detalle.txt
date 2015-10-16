@@ -1,6 +1,0 @@
---------------- SQL ---------------
-
-ALTER TABLE `usuariodetalle` ADD COLUMN `municipioC` VARCHAR(80) DEFAULT NULL;
-
-ALTER TABLE `quieroun_perro_dev`.`carrito` 
-CHANGE COLUMN `precio` `precio` FLOAT(8,2) NULL DEFAULT NULL ;

@@ -1,1 +1,4 @@
-$(".contenedor_banner").cycle({fx:"blindX",delay:-1e3});
+	$('.contenedor_banner').cycle({ 
+    fx:    'blindX', 
+    delay: -1000 
+ });

@@ -1,1 +1,414 @@
-.contenedor_menu_perfil{width:990px;height:70px;margin:0 auto}.icono_seleccion,.menu_perfil li{width:132px;height:49px;display:inline-block;margin-left:-1px;font-size:17px}.menu_perfil li{background-image:url(../images/boton_perfil.png);color:#FFF}.menu_perfil li a{color:#FFF;text-decoration:none}.menu_perfil li:hover a{color:#3E3E40}.menu_perfil li:hover{background-image:url(../images/boton_perfil_select.png);color:#3E3E40;cursor:pointer}.icono_seleccion{vertical-align:auto;background-image:url(../images/boton_perfil_select.png)!important;color:#3E3E40!important}.icono_seleccion a{color:#3E3E40!important;text-decoration:none}.contenedor_bienvenido{width:794px;height:118px;background-color:#D9DADB;margin-top:20px}.contenedor_icono_bienvenido{float:left;width:128px;height:119px}.bienvenido{font-size:43px;font-weight:700;float:left;height:43px;margin-left:10px}.usuario_bienvenido{font-size:37px;float:left;height:37px;margin-left:10px}.contenedor_giros,.texto_inputs{margin-left:15px;display:inline-block}.contenedor_formulario{width:387px;height:120px;text-align:left;margin-top:15px;float:left}.cambiar_contraseña{color:#762EA4;width:800px;text-align:left;margin-top:150px;height:25px,}.aqui_cambiar{text-decoration:underline;font-weight:600}.lite,.premium,.regular,.ver_mas,.ver_mas:hover{font-weight:700}.aqui_cambiar:hover{cursor:pointer}.margen_div{height:100px;width:19.5px;float:left}.boton_gris_perfil,.morado_boton{float:right}.boton_gris_perfil li{width:90px;padding:5px;height:13px;background-color:#3E3E40;text-align:center;color:#FFF;box-shadow:2px 2px 7px #999;font-size:13px}.boton_gris_perfil li:hover{background-color:#FFF;cursor:pointer;color:#000}.contenedor_boton{width:800px;height:30px;text-align:center;margin-top:15px}.contenedor_fiscales{margin-top:15px;width:790px;height:29px;background-color:#762EA4;color:#FFF;font-size:22px;padding-left:10px}.detalle_fiscales{width:213px;height:29px;float:right;background-color:#93117E;text-align:right}.detalle_fiscales:hover{cursor:pointer}.espacios{margin-top:10px;margin-bottom:10px}.texto_inputs{margin-top:15px;width:150px}.contendeor_inputs{width:400px;text-align:left;display:inline-block;margin-top:20px}.gris_input{color:#762EA4;background-color:#D9DADB;border:hidden;font-size:13px}.contenedor_giros{margin-top:10px}#map_canvas{height:200px;width:350px;margin:0;padding:0;margin-left:170px!important}.giro_negocio{font-size:12px}.cerrar_registro{width:443px;margin:0 auto;text-align:right}.contenedor_contrasena{background-color:#FFF;width:443px;height:250px;margin:0 auto}.contenedor_titulo{padding-top:5px;font-size:27px;font-family:titulos;color:#762EA4;text-align:center;height:40px;border-bottom:4px solid #762EA4;line-height:1em}.contenido_contrasena{padding-top:15px;color:#762EA4;font-size:16px;padding-left:15px}.contenido_contrasena p{margin-bottom:10px}.el_submit{width:120px;height:35px;z-index:-1;background:0 0;border:none;color:#FFF;margin-top:-5px;font-family:miFuente;font-size:16px}.el_submit:hover{color:#762EA4;cursor:pointer}.morado_boton li{width:134px;height:42px;color:#FFF;background-image:url(../images/boton_redondo.png);background-repeat:no-repeat;text-align:center;padding-top:10px}.morado_boton li:hover{background-image:url(../images/boton_redondo_over.png);color:#762EA4;cursor:pointer}.contenido_contrasena_notificacion{padding-top:15px;color:#762EA4;font-size:16px;padding-left:15px;width:200px;display:inline-block;border-left:4px solid #762EA4}.palomita{margin-top:20px;margin-left:30px;display:inline-block;width:100px}.titulo_seccion_admin{margin-top:20px;width:795px;background-color:#3E3E40;height:53px}.perrito_perfil{width:64px;height:52px;display:inline-block}.admin_title{width:600px;display:inline-block;font-size:18px;color:#FFF;margin-top:15px}.icono_seleccion_mini,.menu_perfil_mini li{width:105px;height:27px;vertical-align:auto;display:inline-block;margin-left:-1px}.menu_perfil_mini li{background-image:url(../images/perfil_mini.png);color:#FFF;font-size:14px}.menu_perfil_mini li:hover{background-image:url(../images/perfil_mini_select.png);color:#3E3E40;cursor:pointer}.icono_seleccion_mini{background-image:url(../images/perfil_mini_select.png)!important;color:#3E3E40!important;font-size:17px}.tabla_perfil th{border-bottom:4px solid #3E3E40;border-top:4px solid #3E3E40;border-left:5px solid #FFF;height:30px;vertical-align:middle;background-color:#FFF!important;color:#3E3E40!important}.tabla_perfil td{padding-top:6px;text-align:center;vertical-align:middle}.tabla_perfil tr:nth-child(odd){background-color:#D9DADB;color:#3E3E40}.tabla_perfil tr:nth-child(even){background-color:#FFF;color:#3E3E40}.boton_gris_perfil_tabla{margin-bottom:5px;margin-left:25px}.boton_gris_perfil_tabla li{width:90px;padding:5px;height:13px;background-color:#3E3E40;text-align:center;color:#FFF;box-shadow:2px 2px 7px #999;font-size:13px}.boton_gris_perfil_tabla li:hover{background-color:#FFF;cursor:pointer;color:#000}.lite{color:#E95D0F}.regular{color:#7EA715}.premium{color:#762EA4}.tabla_mensajes td{padding-top:6px;text-align:left;vertical-align:middle;border-bottom:2px solid #3E3E40;border-top:2px solid #3E3E40}.tabla_mensajes tr:nth-child(odd){background-color:#D9DADB;color:#3E3E40}.tabla_mensajes tr:nth-child(even){background-color:#FFF;color:#3E3E40}.ver_mas{color:#762EA4}.ver_mas:hover{color:#762EA4;font-size:16px;cursor:pointer}.cerrar_mensaje{width:600px;margin:0 auto;text-align:right}.ver_mensaje{margin:0 auto;width:600px;min-height:200px;background-color:#FFF}.titulo_mensaje{font-family:titulos;font-size:34px;color:#762EA4}.contenedor_titulo_mensaje{width:600px;border-bottom:2px solid #762EA4;text-align:center;height:40px}.mensaje{width:580px;padding:10px}.titulo_seccion{font-size:60px;margin:15px auto 0;width:990px;max-width:990px;font-family:titulos;color:#7EA715;height:65px;line-height:1em}
+.contenedor_menu_perfil{
+	width:990px;
+	height:70px;
+	margin: 0px auto;
+	}
+
+.menu_perfil li {
+	width:132px;
+	height:49px;
+	background-image:url(../images/boton_perfil.png);
+	display:inline-block;
+	margin-left:-1px;
+	color:#FFFFFF;
+	font-size:17px;
+	}
+.menu_perfil li a{
+	color:#FFFFFF;
+	text-decoration:none;
+	}
+.menu_perfil li:hover a{
+	color:#3E3E40;
+	}
+.menu_perfil li:hover {
+	background-image:url(../images/boton_perfil_select.png);
+	color:#3E3E40;
+	cursor:pointer;}
+
+.icono_seleccion{
+	width:132px;
+	height:49px;
+	vertical-align: auto;
+	background-image:url(../images/boton_perfil_select.png) !important;
+	display:inline-block;
+	margin-left:-1px;
+	color:#3E3E40 !important;
+	font-size:17px;
+	}
+.icono_seleccion a{
+	color:#3E3E40 !important;
+	text-decoration:none;
+	}
+.contenedor_bienvenido{
+     width: 794px;
+     height: 118px;
+     background-color: #D9DADB;
+     margin-top: 20px;
+	}
+.contenedor_icono_bienvenido{
+	float:left;
+	width:128px;
+	height:119px;
+	}
+.bienvenido{
+	font-size:43px;
+	font-weight:bold;
+	float:left;
+	height:43px;
+	margin-left:10px;}
+.usuario_bienvenido{
+	font-size:37px;
+	float:left;
+	height:37px;
+	margin-left:10px;
+	}
+.contenedor_formulario{
+	width:387px;
+	height:120px;
+	text-align:left;
+	margin-top:15px;
+	float:left;
+	}
+.cambiar_contraseña{
+	color:#762EA4;
+	width:800px;
+	text-align:left;
+	margin-top:150px;
+	height:25px,
+	}
+.aqui_cambiar{
+	text-decoration:underline;
+	font-weight:600;
+	}
+.aqui_cambiar:hover{
+	cursor:pointer;
+	}
+.margen_div {
+	height:100px;
+width: 19.5px;
+float: left;
+}
+.boton_gris_perfil{
+	float: right;}
+.boton_gris_perfil li{
+	width:90px;
+	padding-left:5px;
+	padding-right:5px;
+	padding:5px;
+	height:13px;
+	background-color:#3E3E40;
+	text-align:center;
+	color: #FFF;
+	box-shadow: 2px 2px 7px #999;
+	font-size:13px;
+	}
+.boton_gris_perfil li:hover{
+	background-color:#FFFFFF;
+	cursor:pointer;
+	color:#000000;
+	}
+.contenedor_boton{
+	width:800px;
+	height:30px;
+	text-align:center;
+	margin-top:15px;
+	}
+.contenedor_fiscales{
+	margin-top:15px;
+	width:790px;
+	height:29px;
+	background-color:#762EA4;
+	color:#FFF;
+	font-size:22px;
+	padding-left:10px;
+	}
+.detalle_fiscales{
+	width: 213px;
+    height: 29px;
+	float:right;
+	background-color:#93117E;
+	text-align:right;
+	}
+.detalle_fiscales:hover{
+	cursor:pointer;
+	}
+.espacios{
+	margin-top:10px;
+	margin-bottom:10px;
+	}
+.texto_inputs{
+	margin-top:15px;
+	width:150px;
+	display: inline-block;
+	margin-left:15px;
+	}
+.contendeor_inputs{
+	width:400px;
+	text-align:left;
+	display: inline-block;
+	margin-top:20px;}
+.gris_input{
+	color:#762EA4;
+	background-color:#D9DADB;
+	border:hidden;
+	font-size:13px;
+	}
+.contenedor_giros{
+	display:inline-block;
+	margin-left:15px;
+	margin-top:10px;
+}	
+      #map_canvas {
+        height: 200px;
+		width:350px;
+        margin: 0px;
+        padding: 0px;
+		margin-left:170px !important;
+      }
+.giro_negocio{
+	font-size:12px;}
+.cerrar_registro{
+	width: 443px;
+	margin: 0px auto;
+	text-align:right;}
+.contenedor_contrasena{
+	background-color:#FFFFFF;
+	width:443px;
+	height:250px;
+	margin: 0px auto;
+	}
+.contenedor_titulo{
+	padding-top:5px;
+	font-size:27px;
+	font-family:'titulos';
+	color: #762EA4;
+	text-align:center;
+	height:40px;
+	border-bottom:4px solid #762EA4;
+	line-height: 1em;	
+	}
+.contenido_contrasena{
+	padding-top:15px;
+	color:#762EA4;
+	font-size:16px;
+	padding-left:15px;
+	}
+.contenido_contrasena p{
+	margin-bottom:10px;}
+
+.el_submit{
+	width:120px; 
+	height:35px; 
+	z-index:-1; 
+	background: transparent; 
+	border:none; 
+	color:#FFFFFF; 
+	margin-top:-5px;
+	font-family:'miFuente';
+	font-size:16px;
+	}
+.el_submit:hover{
+	color:#762EA4;
+	cursor:pointer;}
+.morado_boton{
+	float:right;}
+.morado_boton li{
+	width:134px;
+	height:42px;
+	color:#FFFFFF;
+	background-image:url(../images/boton_redondo.png);
+	background-repeat:no-repeat;
+	text-align:center;
+	padding-top:10px;}
+	
+.morado_boton li:hover{
+	background-image:url(../images/boton_redondo_over.png);
+	color:#762EA4;
+	cursor:pointer;
+	}
+.contenido_contrasena_notificacion{
+	padding-top:15px;
+	color:#762EA4;
+	font-size:16px;
+	padding-left:15px;
+	width:200px;
+	display:inline-block;
+	border-left:4px solid #762EA4;	
+	}
+.palomita{
+	margin-top:20px;
+	margin-left:30px;
+	display:inline-block;
+	width:100px;
+	}
+.titulo_seccion_admin{
+	margin-top:20px;
+	width:795px;
+	background-color:#3E3E40;
+	height:53px;
+	}
+.perrito_perfil{
+	width:64px;
+	height:52px;
+	display:inline-block;}
+.admin_title{
+	width:600px;
+	display:inline-block;
+	font-size:18px;
+	color:#FFFFFF;
+	margin-top:15px;
+	}
+	
+.menu_perfil_mini li{
+	width:105px;
+	height:27px;
+	vertical-align: auto;
+	background-image:url(../images/perfil_mini.png);
+	display:inline-block;
+	margin-left:-1px;
+	color:#FFFFFF;
+	font-size:14px;
+	}
+	
+
+.menu_perfil_mini li:hover{
+	background-image:url(../images/perfil_mini_select.png);
+	color:#3E3E40;
+	cursor:pointer;
+	}
+	
+.icono_seleccion_mini{
+	width:105px;
+	height:27px;
+	vertical-align: auto;
+	background-image:url(../images/perfil_mini_select.png) !important;
+	display:inline-block;
+	margin-left:-1px;
+	color:#3E3E40 !important;
+	font-size:17px;
+	}
+.tabla_perfil th{
+	border-bottom: 4px solid #3E3E40;
+	border-top: 4px solid #3E3E40;
+	border-left: 5px solid #FFF;
+	height:30px;
+	vertical-align:middle;
+	background-color: #FFF !important;
+	color: #3E3E40 !important;
+	}
+.tabla_perfil td{
+	padding-top:6px;
+	text-align:center;
+	vertical-align:middle;
+	}
+
+.tabla_perfil tr:nth-child(odd) { 
+   
+   background-color: #D9DADB;
+   color:#3E3E40;
+  
+}
+
+.tabla_perfil tr:nth-child(even) {
+
+   background-color: #FFF;
+   color:#3E3E40; 
+}
+
+.boton_gris_perfil_tabla{
+	margin-bottom:5px;
+	margin-left:25px;}
+
+.boton_gris_perfil_tabla li{
+	width:90px;
+	padding-left:5px;
+	padding-right:5px;
+	padding:5px;
+	height:13px;
+	background-color:#3E3E40;
+	text-align:center;
+	color: #FFF;
+	box-shadow: 2px 2px 7px #999;
+	font-size:13px;
+	}
+.boton_gris_perfil_tabla li:hover{
+	background-color:#FFFFFF;
+	cursor:pointer;
+	color:#000000;
+	}
+.lite{
+	color:#E95D0F;
+	font-weight:bold;}
+.regular{
+	color:#7EA715;
+	font-weight:bold;}
+.premium{
+	color:#762EA4;
+	font-weight:bold;}
+	
+.tabla_mensajes td{
+	padding-top:6px;
+	text-align: left;
+	vertical-align:middle;
+	border-bottom: 2px solid #3E3E40;
+	border-top: 2px solid #3E3E40;
+	}
+	
+.tabla_mensajes tr:nth-child(odd) { 
+   
+   background-color: #D9DADB;
+   color:#3E3E40;
+  
+}
+
+.tabla_mensajes tr:nth-child(even) {
+
+   background-color: #FFF;
+   color:#3E3E40; 
+}
+.ver_mas{
+	color:#762EA4;
+	font-weight:bold;
+	}
+.ver_mas:hover{
+	color:#762EA4;
+	font-weight:bold;
+	font-size:16px;
+	cursor:pointer;}
+.cerrar_mensaje{
+	width:600px;
+	margin: 0px auto;
+	text-align:right;}
+.ver_mensaje{
+	margin: 0px auto;
+	width:600px;
+	min-height:200px;
+	background-color: #FFF;
+	}
+.titulo_mensaje{
+	font-family:'titulos';
+	font-size:34px;
+	color:#762EA4;
+}
+.contenedor_titulo_mensaje{
+	width:600px;
+	border-bottom: 2px solid #762EA4;
+	text-align:center;
+	height:40px;
+	}
+.mensaje{
+	width:580px;
+	padding:10px;}
+
+.titulo_seccion{
+	font-size:60px;
+	margin: 0 auto; 
+	width: 990px;
+	max-width:990px;
+	font-family:"titulos";
+	color:#7EA715;
+	margin-top: 15px;
+    height: 65px;
+    line-height: 1em;
+
+	}
