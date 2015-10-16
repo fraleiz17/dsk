@@ -926,10 +926,11 @@ border: none;
     margin-left: 520px;
 	}
 .boton_palabras_clave{
-	float:left; 
+	font-family: "select";
 	background: transparent; 
 	font-size:18px; 
 	border:none;
+	color:#fff;
 	}
 .tabla_pago th{
 	height:38px;

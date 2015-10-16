@@ -69,6 +69,10 @@ text-align: center;
 .estilo_select_directorio{
 	background: transparent;
 	-webkit-appearance: none;
+	-moz-appearance:none;
+	-ms-appearance: none;
+         -o-appearance: none;
+            appearance: none;
 	height:32px;
 	width:150px;
 	border:none;
@@ -332,3 +336,18 @@ font-family: 'titulos';
 	background-color:#FFF;
 	cursor:pointer;
 	}
+span.customSelect {
+background: transparent;
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+height: 32px;
+width: 150px;
+border: none;
+border-radius: 10px;
+font-family: "select";
+font-size: 20px;
+color: #FFFFFF;
+outline: none;
+
+}
