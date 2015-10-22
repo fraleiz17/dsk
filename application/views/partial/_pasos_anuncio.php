@@ -997,7 +997,7 @@ TOTAL
         $('#paso_uno [name=seccion]').on('click', function () {
             var valor = $(this).val();   
 
-            if(valor == 6){
+            if(valor == 6 || valor == 7){
                 $('#precio').val('0.00');
                 $('#precio').attr('disabled', 'disabled');
                 $("#s_precio").hide();
