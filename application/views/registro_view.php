@@ -1,6 +1,1 @@
-
-<?php
-echo '<br>Registrado!<br>'
-
-
-?>
+<?php echo '<br>Registrado!<br>'?>

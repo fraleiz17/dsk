@@ -1,37 +1,9 @@
-<style>
-.title_paquetes_titilos_mini {
-  float: left !important;
-  width: 200px !important;
-  line-height: 1em !important;
-  margin-top: -175px !important;
-  font-family: "titulos" !important;
-  font-size: 15px !important;
-  margin-left: 45px !important;
-  margin-bottom: -10px !important;
-}
-.descipcion_pasos_mediano{
-
-  width: 840px;
-  min-height: 650px;
-  background-color: #FFF;
-  border: 0px solid #FFFFFF !important; 
-  margin-top: 0px !important;
-}
-
-#paso_dos > div > div.paquetes_izquierda_mini > label > div.precio_paquete_lite_mini > div {
-    color:#E95D0F !important;
-}
-
-</style>
+<style>.title_paquetes_titilos_mini {  float: left !important;  width: 200px !important;  line-height: 1em !important;  margin-top: -175px !important;  font-family: "titulos" !important;  font-size: 15px !important;  margin-left: 45px !important;  margin-bottom: -10px !important;}.descipcion_pasos_mediano{  width: 840px;  min-height: 650px;  background-color: #FFF;  border: 0px solid #FFFFFF !important;   margin-top: 0px !important;}#paso_dos > div > div.paquetes_izquierda_mini > label > div.precio_paquete_lite_mini > div {    color:#E95D0F !important;}</style>
 <?php $this->load->view('general/LoginFiles');?>
 <?php
 $this->load->view('general/general_header_view', array('title' => 'Venta',
   'links'                                                      => array('venta'), 'scripts' => array('funciones_venta')))
-  ?>
-    
-
-
-<?php $this->load->view('general/menu_view')?>
+  ?><?php $this->load->view('general/menu_view')?>
 
 <div class="contenedor_contactar" id="contenedor_contactar" style=" display:none;">
     <div class="contenedor_cerrar_contactar">
@@ -46,23 +18,7 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
 </br>
 </br>
 
-<style>
-::-webkit-input-placeholder {
-   color: #FFF;  
-}
-
-:-moz-placeholder { /* Firefox 18- */
-   color: #FFF;   
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-   color: #FFF;   
-}
-
-:-ms-input-placeholder {  
-   color: #FFF;  
-}
-</style>
+<style>::-webkit-input-placeholder {   color: #FFF;  }:-moz-placeholder { /* Firefox 18- */   color: #FFF;   }::-moz-placeholder {  /* Firefox 19+ */   color: #FFF;   }:-ms-input-placeholder {     color: #FFF;  }</style>
 <form id="contacto_form">
     <div style="width:323px;height:auto;display:block;overflow:hidden;-ms-overflow-style: none">
     <input type="text" class="formu_contacto validate[required]" id="nombre_contacto"

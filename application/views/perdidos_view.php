@@ -3,49 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Perdidos-Quierounperro.com</title>
-<style>
-#paso_dos > div > div.paquetes_izquierda_mini > label > div.precio_paquete_lite_mini > div{
-     color:#E95D0F !important;
-}
-
-@-moz-document url-prefix() {
-    .iconos_paquetes_mini {
-        margin-bottom: 0px;
-        padding-top: 2px;
-        width: 100%;
-        height: 63px;
-        overflow: hidden;
-    }
-
-    #paso_dos > div > div.paquetes_izquierda_mini > label > div.precio_paquete_lite_mini > div {
-        color: #E95D0F !important;
-        margin: -152px 30px 0 0;
-        position: relative;
-    }
-
-    .precio_paquete_regular_mini {
-        margin: -152px 20px 0px 0px;
-        position: relative;
-    }
-
-    .precio_paquete_premium_mini {
-        margin: -152px 20px 0px 0px;
-        position: relative;
-    }
-
-    .title_paquetes_titilos_mini {
-        float: left;
-        color: #58585A;
-        width: 300px;
-        line-height: 1em;
-        margin-top: -169px !important;
-        font-family: "titulos";
-        font-size: 15px;
-        margin-left: 46px !important;
-    }
-
-}
-</style>
+<style>#paso_dos > div > div.paquetes_izquierda_mini > label > div.precio_paquete_lite_mini > div{     color:#E95D0F !important;}@-moz-document url-prefix() {    .iconos_paquetes_mini {        margin-bottom: 0px;        padding-top: 2px;        width: 100%;        height: 63px;        overflow: hidden;    }    #paso_dos > div > div.paquetes_izquierda_mini > label > div.precio_paquete_lite_mini > div {        color: #E95D0F !important;        margin: -152px 30px 0 0;        position: relative;    }    .precio_paquete_regular_mini {        margin: -152px 20px 0px 0px;        position: relative;    }    .precio_paquete_premium_mini {        margin: -152px 20px 0px 0px;        position: relative;    }    .title_paquetes_titilos_mini {        float: left;        color: #58585A;        width: 300px;        line-height: 1em;        margin-top: -169px !important;        font-family: "titulos";        font-size: 15px;        margin-left: 46px !important;    }}</style>
 <link rel="shortcut icon" href="<?=base_url()?>images/ico.ico" />  
 <link type="text/css" rel="stylesheet" href="<?=base_url()?>css/reset.css" media="screen"></link>
 <link rel="stylesheet" href="<?=base_url()?>css/jPages.css">
