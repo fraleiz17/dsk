@@ -40,68 +40,7 @@
     <!-- include Cycle plugin -->
     <script type="text/javascript" src="<?php echo base_url() ?>js/jquery.cycle.all.js"></script>
 
-    <script>
-jQuery(document).ready(function(){
-
-	
-	$("#pub").submit(function(e) {
-		 	e.preventDefault();
-            var form = $(this);
-                $.ajax({
-                                    url: '<?=base_url()?>quienes/publicidad_do',
-                                    data: $('#pub').serialize(),
-                                    dataType: 'JSON',
-                                    type: 'post',
-                                    success: function(data) {
-                                        console.log(data.response);
-                                       if(data.response === true){
-										   alert('Mensaje Enviado');
-										   muestra('contenedor_correctoQUP');			   
-										} else {
-											muestra('contenedor_error');
-										}
-                                    }
-                                });
-     });
-	 
-	 $("#sop").submit(function(e) {
-		 	e.preventDefault();
-            var form = $(this);
-                $.ajax({
-                                    url: '<?=base_url()?>quienes/soporte',
-                                    data: $('#sop').serialize(),
-                                    dataType: 'JSON',
-                                    type: 'post',
-                                    success: function(data) {
-                                        console.log(data.response);
-                                       if(data.response === true){
-										   alert('Mensaje Enviado');
-										   oculta('soporteQUP');
-										   muestra('contenedor_correctoQUP');	   
-										} else {
-											muestra('contenedor_error');
-										}
-                                    }
-                                });
-     });
-	 
-
-});
-
-        jQuery(document).ready(function () {
-            // binds form submission and fields to the validation engine
-            jQuery("form").validationEngine({
-                promptPosition: "topRight",
-                scroll: false,
-                ajaxFormValidation: false
-            });
-
-
-        });
-
-
-
-    </script>
+    
 
 </head>
 <body>
@@ -294,6 +233,67 @@ Intente nuevamente por favor.
 <!--		FIN ERROR REGISTRO							-->
 <!-- ------------------------------------------------------ -->
 
+<script>
+jQuery(document).ready(function(){
 
+    
+    $("#pub").submit(function(e) {
+            e.preventDefault();
+            var form = $(this);
+                $.ajax({
+                                    url: '<?=base_url()?>quienes/publicidad_do',
+                                    data: $('#pub').serialize(),
+                                    dataType: 'JSON',
+                                    type: 'post',
+                                    success: function(data) {
+                                        console.log(data.response);
+                                       if(data.response === true){
+                                           alert('Mensaje Enviado');
+                                           muestra('contenedor_correctoQUP');              
+                                        } else {
+                                            muestra('contenedor_error');
+                                        }
+                                    }
+                                });
+     });
+     
+     $("#sop").submit(function(e) {
+            e.preventDefault();
+            var form = $(this);
+                $.ajax({
+                                    url: '<?=base_url()?>quienes/soporte',
+                                    data: $('#sop').serialize(),
+                                    dataType: 'JSON',
+                                    type: 'post',
+                                    success: function(data) {
+                                        console.log(data.response);
+                                       if(data.response === true){
+                                           alert('Mensaje Enviado');
+                                           oculta('soporteQUP');
+                                           muestra('contenedor_correctoQUP');      
+                                        } else {
+                                            muestra('contenedor_error');
+                                        }
+                                    }
+                                });
+     });
+     
+
+});
+
+        jQuery(document).ready(function () {
+            // binds form submission and fields to the validation engine
+            jQuery("form").validationEngine({
+                promptPosition: "topRight",
+                scroll: false,
+                ajaxFormValidation: false
+            });
+
+
+        });
+
+
+
+    </script>
 </body>
 </html>

@@ -28,37 +28,7 @@
 $this->load->view('general/general_header_view', array('title' => 'Venta',
   'links'                                                      => array('venta'), 'scripts' => array('funciones_venta')))
   ?>
-    <script>
-
-jQuery(document).ready(
- jQuery("form").validationEngine({
-        promptPosition:"topRight",
-        ajaxFormValidation: false,
-    })
-  );
-function buscar_imagen(id){
-             id_anuncio="id_anuncio="+id;
-
-            $.ajax({
-                url: '<?php echo base_url('venta/fotos') ?>',
-                data: id_anuncio,
-                dataType: 'json',
-                type: 'post',
-                 success: function(result)
-                {
-                    var data = result.data;
-                    if (result.count >= 1) {
-                        for (var i = 0; i < result.count; i++)
-                            {
-                                foto=(data[i].foto);
-                            }
-                        $("#contener_foto"+id).append('<img src="' + foto + '"width="auto" height="100%"/>');
-                    }
-                }
-                 })
-}
-
-   </script>
+    
 
 
 <?php $this->load->view('general/menu_view')?>
@@ -403,6 +373,54 @@ que el nombre del criador esté en el certificado.
 </div>
 
 
+</div>
+
+<div class="slideshow_tres">
+    <img src="<?php echo base_url()?>images/banner_inferior/1.png" width="638" height="93"/>
+    <img src="<?php echo base_url()?>images/banner_inferior/2.png" width="638" height="93"/>
+    <img src="<?php echo base_url()?>images/banner_inferior/3.png" width="638" height="93"/>
+</div>
+
+<div class="division_menu_inferior"></div>
+<?php $this->load->view('general/footer_view');?>
+<div id="contenedor_publicar_anuncio" class="contenedor_publicar" style=" display:">
+
+    <!-- Inicio contenedor pap publicar anuncio aunucio !-->
+    <div id="publicar_anuncio" class="pubicar_anuncio_mini">
+        <?php $this->load->view('partial/_pasos_anuncio_renovar', array('paquetes' => $paquetes, 'estados' => $estados, 'razas' => $razas,'cupones' => $cupones)); ?>
+    </div>
+</div>
+<script>
+
+jQuery(document).ready(
+ jQuery("form").validationEngine({
+        promptPosition:"topRight",
+        ajaxFormValidation: false,
+    })
+  );
+function buscar_imagen(id){
+             id_anuncio="id_anuncio="+id;
+
+            $.ajax({
+                url: '<?php echo base_url('venta/fotos') ?>',
+                data: id_anuncio,
+                dataType: 'json',
+                type: 'post',
+                 success: function(result)
+                {
+                    var data = result.data;
+                    if (result.count >= 1) {
+                        for (var i = 0; i < result.count; i++)
+                            {
+                                foto=(data[i].foto);
+                            }
+                        $("#contener_foto"+id).append('<img src="' + foto + '"width="auto" height="100%"/>');
+                    }
+                }
+                 })
+}
+
+   </script>
 
 <script>
 
@@ -893,23 +911,6 @@ $('.mas_anuncio').on('click', function(){
 });
 
 </script>
-</div>
 
-
-<div class="slideshow_tres">
-    <img src="<?php echo base_url()?>images/banner_inferior/1.png" width="638" height="93"/>
-    <img src="<?php echo base_url()?>images/banner_inferior/2.png" width="638" height="93"/>
-    <img src="<?php echo base_url()?>images/banner_inferior/3.png" width="638" height="93"/>
-</div>
-
-<div class="division_menu_inferior"></div>
-<?php $this->load->view('general/footer_view');?>
-<div id="contenedor_publicar_anuncio" class="contenedor_publicar" style=" display:">
-
-    <!-- Inicio contenedor pap publicar anuncio aunucio !-->
-    <div id="publicar_anuncio" class="pubicar_anuncio_mini">
-        <?php $this->load->view('partial/_pasos_anuncio_renovar', array('paquetes' => $paquetes, 'estados' => $estados, 'razas' => $razas,'cupones' => $cupones)); ?>
-    </div>
-</div>
 </body>
 </html>
