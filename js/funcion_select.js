@@ -1,5 +1,1 @@
-$(function(){
-
-$('select.styled').customSelect();
-
-});
+$(function(){$('select.styled').customSelect();});
