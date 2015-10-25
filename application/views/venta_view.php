@@ -51,70 +51,27 @@
 </style>
 <?php $this->load->view('general/LoginFiles');?>
 <?php
-$this->load->view('general/general_header_view', array('title' => 'Venta',
-  'links'                                                      => array('venta'), 'scripts' => array('funciones_venta')))
-  ?>
-    <script>
-
-jQuery(document).ready(
- jQuery("form").validationEngine({
-        promptPosition:"topRight",
-        ajaxFormValidation: false,
-    })
-  );
-function buscar_imagen(id){
-             id_anuncio="id_anuncio="+id;
-
-            $.ajax({
-                url: '<?php echo base_url('venta/fotos') ?>',
-                data: id_anuncio,
-                dataType: 'json',
-                type: 'post',
-                 success: function(result)
-                {
-                    var data = result.data;
-                    if (result.count >= 1) {
-                        for (var i = 0; i < result.count; i++)
-                            {
-                                foto=(data[i].foto);
-                            }
-                        $("#contener_foto"+id).append('<img src="' + foto + '"width="auto" height="100%"/>');
-                    }
-                }
-                 })
-}
-
-   </script>
-
-
+$this->load->view('general/general_header_view', array('title' => 'Venta','links' => array('venta'), 'scripts' => array('funciones_venta')))?>
 <?php $this->load->view('general/menu_view')?>
-
 <div class="contenedor_contactar" id="contenedor_contactar" style=" display:none;">
     <div class="contenedor_cerrar_contactar">
         <img src="<?php echo base_url()?>images/cerrar_anuncio_gris.png" onclick="oculta('contenedor_contactar');"/>
     </div>
     <div class="contactar_al_aunuciante">
         <font class="titulo_anuncio_publicado"> CONTACTA AL ANUNCIANTE </font>
-        <div class="datos_anunciante">
-
+       <div class="datos_anunciante">
 </div>
-<font class="titulo_anuncio_publicado"> PROPORCIONA TU INFORMACIÓN </font>
-</br>
-</br>
-
+<font class="titulo_anuncio_publicado"> PROPORCIONA TU INFORMACIÓN </font></br></br>
 <style>
 ::-webkit-input-placeholder {
    color: #FFF;  
 }
-
 :-moz-placeholder { /* Firefox 18- */
    color: #FFF;   
 }
-
 ::-moz-placeholder {  /* Firefox 19+ */
    color: #FFF;   
 }
-
 :-ms-input-placeholder {  
    color: #FFF;  
 }
@@ -249,21 +206,14 @@ function buscar_imagen(id){
     VIDEO
 </div>
 <div id="you_tube" class="youtube_video"></div>
-
-
-
 </div>
-
-
 <ul class="boton_rojo_dos">
-    <li class="btn_den">
-        <img src="<?php echo base_url()?>images/alert.png"/>
-        Denunciar Anuncio
-    </li>
+<li class="btn_den">
+<img src="<?php echo base_url()?>images/alert.png"/>
+Denunciar Anuncio
+</li>
 </ul>
-
 <div class="consejos_advertencias">
-
     - QuierounPerro.com te invita a que antes de comprar pienses en adoptar, ya que hoy en día hay millones
     de perros sin hogar que deben ser sacrificados.
 </br>
@@ -285,20 +235,10 @@ que el nombre del criador esté en el certificado.
 </br>
 - El vendedor también debe estar interesado en ti y en manos de quién dejará a su perro.
 </div>
-
-
 </div>
-
 </br>
-
 </div>
-
-
 </div>
-
-
-
-
 <div class="titulo_seccion">
     VENTA
 </div>
@@ -319,16 +259,13 @@ que el nombre del criador esté en el certificado.
         endif;?>
 </select>
 </div>
-
 <div class="fondo_select">
 <select    class="styled" id="genero" name="genero">
 <option value="" > Selecciona un género </option>
 <option value="1" style="background-color: #BCBEC0;">Macho </option>
 <option value="0" style="background-color: #BCBEC0;">Hembra </option>
-
 </select>
 </div>
-
 <div class="fondo_select">
 <select    class="styled" id="estado" name="estado">
 <option value=""> Selecciona un Estado </option>
@@ -337,28 +274,19 @@ que el nombre del criador esté en el certificado.
 <option style="background-color: #BCBEC0;" value="<?=$estado->estadoID?>"><?=$estado->nombreEstado?></option>
 <?php endforeach;
         endif;?>
-
 </select>
 </div>
-
 <input type="hidden" id="Precio" name="precio">
-
 <div class="contenedor_buscar">
 <input  type="text" class="buscar" size="4" name="palabra_clave" id="palabra_clave"/>
 <input type="button" height="40" value="  " class="boton_palabras_clave" />
 </div>
 </form>
 </div>
-
 </div>
-
 <div id="contenedor_central">
-   <?php $this->load->view('general/contTest');?>
-
-
+    <?php $this->load->view('general/contTest');?>
     <div class="contenedor_central" style="margin-top:5px;">
-
-        <!-- item container -->
         <ul id="itemContainer" style="display:inline-block;">
             <?php $fila = 1;?>
 
@@ -418,8 +346,6 @@ que el nombre del criador esté en el certificado.
         <div class="holder"></div>
     </div>
 </div>
-
-
 <div class="seccion_derecha_paquetes">
     <ul class="aqui_crear_anuncio">
         <li onclick="muestra('contenedor_publicar_anuncio');">
@@ -427,10 +353,74 @@ que el nombre del criador esté en el certificado.
         </li>
     </ul>
 </div>
+</div>
+<div class="slideshow_tres" style="clear: both;">
+            <?php
+            if (is_logged() && ($this->session->userdata('tipoUsuario') == 2 || $this->session->userdata('tipoUsuario') == 3)) {
+                if ($banner != null) {
+                    foreach ($banner as $contenido) {
+                        if ($this->session->userdata('zonaID') == $contenido->zonaID && $contenido->posicion == 3 && $contenido->seccionID == $seccion) {
+                            ?>
+                            <img src="<?php echo base_url() ?>images/<?php echo $contenido->imgbaner; ?>" width="638"
+                                 height="93"/>
 
+                            <?php
+                        }
+                    }
+                }
+            } else {
+                foreach ($banner as $contenido) {
+                    if ($contenido->zonaID == 9 && $contenido->posicion == 3 && $contenido->seccionID == $seccion) {
+                        ?>    <img src="<?php echo base_url() ?>images/<?php echo $contenido->imgbaner; ?>" width="638"
+                             height="93"/>
+                             <?php
+                         }
+                     }
+                 }
+                 ?>
+        </div>
+<div class="division_menu_inferior"></div>
+<?php $this->load->view('general/footer_view');?>
+<div id="contenedor_publicar_anuncio" class="contenedor_publicar" style=" display:none">
 
+    <!-- Inicio contenedor pap publicar anuncio aunucio !-->
+    <div id="publicar_anuncio" class="pubicar_anuncio_mini">
+        <?php $this->load->view('partial/_pasos_anuncio', array('paquetes' => $paquetes, 'estados' => $estados, 'razas' => $razas,'cupones' => $cupones)); ?>
 
+    </div>
+</div>
 <script>
+
+jQuery(document).ready(
+ jQuery("form").validationEngine({
+        promptPosition:"topRight",
+        ajaxFormValidation: false,
+    })
+  );
+function buscar_imagen(id){
+             id_anuncio="id_anuncio="+id;
+
+            $.ajax({
+                url: '<?php echo base_url('venta/fotos') ?>',
+                data: id_anuncio,
+                dataType: 'json',
+                type: 'post',
+                 success: function(result)
+                {
+                    var data = result.data;
+                    if (result.count >= 1) {
+                        for (var i = 0; i < result.count; i++)
+                            {
+                                foto=(data[i].foto);
+                            }
+                        $("#contener_foto"+id).append('<img src="' + foto + '"width="auto" height="100%"/>');
+                    }
+                }
+                 })
+}
+
+   </script>
+   <script>
 
 function buscar_anunciante(id){
     muestra('contenedor_contactar');
@@ -637,8 +627,6 @@ function obten_id(id) {
 }
 
 function show_details(data) {
-
-
 }
 
 function buscar_detalles(id) {
@@ -700,8 +688,6 @@ function buscar_detalles(id) {
         }
     });
 }
-
-
 function contener_images() {
 
     $('#slideshow_publicar_anuncio_previo').before('<ul id="nav_anuncio">').cycle({
@@ -715,79 +701,52 @@ function contener_images() {
         }
     });
 }
-
 function buscar_imagenes(id){
-             id_anuncio="id_anuncio="+id;
-
-            $.ajax({
-                url: '<?php echo base_url('venta/fotos') ?>',
-                data: id_anuncio,
-                dataType: 'json',
-                type: 'post',
-                 success: function(result)
-                { 
-                    $(".contenedor_galeria").empty().html('<div id="slideshow_publicar_anuncio_previo" class="picse"></div>');
-
-                    var data = result.data;
-
-                    if (result.count < 1) {
-                    
-                    }
-                    for (var i = 0; i < result.count; i++)
-                    {
-                       
-                        $("#slideshow_publicar_anuncio_previo").append('<img src="<?php echo base_url() ?>' + data[i].foto + '" width="294" height="200" style=" top: 0px; left: 0px; display: block; z-index: 5; opacity: 1;"/>');
-                        
+     id_anuncio="id_anuncio="+id;
+    $.ajax({
+        url: '<?php echo base_url('venta/fotos') ?>',
+        data: id_anuncio,
+        dataType: 'json',
+        type: 'post',
+         success: function(result)
+        { 
+            $(".contenedor_galeria").empty().html('<div id="slideshow_publicar_anuncio_previo" class="picse"></div>');
+            var data = result.data;
+            if (result.count < 1) {
+            }
+            for (var i = 0; i < result.count; i++)
+            {
+                $("#slideshow_publicar_anuncio_previo").append('<img src="<?php echo base_url() ?>' + data[i].foto + '" width="294" height="200" style=" top: 0px; left: 0px; display: block; z-index: 5; opacity: 1;"/>');
             }
             contener_images();
     }
-    
 });
-
 }
-
-
 function buscar_videos(id){
-
-             id_anuncio="id_anuncio="+id;
-
-            $.ajax({
-                url: '<?php echo base_url('venta/videos') ?>',
-                data: id_anuncio,
-                dataType: 'json',
-                type: 'post',
-                 success: function(result)
-                {
-                    $("#you_tube").empty();
-
-                    var data = result.data;
-
-                    if (result.count < 1) {
-
-                    }
-                    for (var i = 0; i < result.count; i++)
-                    {
-
-
-                        var video=$('#you_tube');
-                        var direccion=$('<iframe src="'+data[i].link+'"></iframe> <br/><br/>');
-                            video.append(direccion);
-
-            }
-
+    id_anuncio="id_anuncio="+id;
+    $.ajax({
+    url: '<?php echo base_url('venta/videos') ?>',
+    data: id_anuncio,
+    dataType: 'json',
+    type: 'post',
+     success: function(result)
+    {
+        $("#you_tube").empty();
+        var data = result.data;
+        if (result.count < 1) {
+        }
+        for (var i = 0; i < result.count; i++)
+        {
+            var video=$('#you_tube');
+            var direccion=$('<iframe src="'+data[i].link+'"></iframe> <br/><br/>');
+               video.append(direccion);
     }
-
-});
-
 }
-
-
-
+});
+}
 function add_favorite() {
     $('.btn_fvt').on('click', function () {
-
         var pub = $(this).data("pub");
-
         $.ajax({
             url: '<?php echo base_url('venta/add_favorite')?>',
             data: 'pub=' + pub,
@@ -807,20 +766,15 @@ function add_favorite() {
         });
     });
 }
-
 function denunciar_pub(id) {
-
     $('.btn_den').on('click', function (){
         var pub = $(this).data("pub");
         console.log(pub);
         $("#denuncia_form")[0].reset();
-        //$('.boton_naranja_tres').show();
         $('.info').html('');
         buscar_anunciante_dos(pub);
         muestra('contenedor_denunciar');
-
         $('#contenedor_denunciar #denuncia_form').submit(function(e){
-            //$('.boton_naranja_tres').hide('');
             $('.info',form).html('Enviando...');
             e.preventDefault();
             var form = $(this);
@@ -840,7 +794,6 @@ function denunciar_pub(id) {
         });
     });
 }
-
 /*$('#contenedor_contactar #contacto_form').submit(function(e){
             //$('.boton_naranja_tres').html('');
             $('.info').html('Enviando...');
@@ -864,18 +817,13 @@ function denunciar_pub(id) {
                 }
             });
         });*/
-
-
 function contactar_pub(id) {
-
     $('.btn_contactar').on('click', function (){
         var pub = $(this).data("pub");
         $('.info', '#contacto_form').html('');
         buscar_anunciante_dos(pub);
         muestra('contenedor_contactar');
         $("#contacto_form")[0].reset();
-        //console.log(pub+'meh');
-
         $('#contenedor_contactar #contacto_form').submit(function(e){
             e.preventDefault();
             var form = $(this);
@@ -897,11 +845,7 @@ function contactar_pub(id) {
         });
     });
 }
-
-
-
 $('.mas_anuncio').on('click', function(){
-
     var id = $(this).data('id');
     $.ajax({
                 url: '<?php echo base_url('venta/click')?>',
@@ -912,51 +856,9 @@ $('.mas_anuncio').on('click', function(){
                    return true;
                 }
      });
-
     buscar_detalles(id);
 });
-
 });
-
 </script>
-</div>
-
-
-<div class="slideshow_tres" style="clear: both;">
-            <?php
-            if (is_logged() && ($this->session->userdata('tipoUsuario') == 2 || $this->session->userdata('tipoUsuario') == 3)) {
-                if ($banner != null) {
-                    foreach ($banner as $contenido) {
-                        if ($this->session->userdata('zonaID') == $contenido->zonaID && $contenido->posicion == 3 && $contenido->seccionID == $seccion) {
-                            ?>
-                            <img src="<?php echo base_url() ?>images/<?php echo $contenido->imgbaner; ?>" width="638"
-                                 height="93"/>
-
-                            <?php
-                        }
-                    }
-                }
-            } else {
-                foreach ($banner as $contenido) {
-                    if ($contenido->zonaID == 9 && $contenido->posicion == 3 && $contenido->seccionID == $seccion) {
-                        ?>    <img src="<?php echo base_url() ?>images/<?php echo $contenido->imgbaner; ?>" width="638"
-                             height="93"/>
-                             <?php
-                         }
-                     }
-                 }
-                 ?>
-        </div>
-
-<div class="division_menu_inferior"></div>
-<?php $this->load->view('general/footer_view');?>
-<div id="contenedor_publicar_anuncio" class="contenedor_publicar" style=" display:none">
-
-    <!-- Inicio contenedor pap publicar anuncio aunucio !-->
-    <div id="publicar_anuncio" class="pubicar_anuncio_mini">
-        <?php $this->load->view('partial/_pasos_anuncio', array('paquetes' => $paquetes, 'estados' => $estados, 'razas' => $razas,'cupones' => $cupones)); ?>
-
-    </div>
-</div>
 </body>
 </html>
