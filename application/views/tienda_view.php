@@ -27,62 +27,8 @@
 <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/index_.css" media="screen"></link>
 <?php $this->load->view('general/LoginFiles');?>  
 <?php $this->load->view('general/general_header_view', array('title'=> 'Tienda', 'links' => array('venta', 'tienda'),'scripts'=> array('funciones_venta', 'funciones_tienda', 'funciones_'))) ?>
-
-     
-        <script>
-            jQuery(document).ready(function() {
-
-
-                $(".detalleProducto").click(function() {
-                    var productoID = $(this).attr('id');
-                    $('#productoDetallePop').load('<?php echo base_url() ?>principal/getDetalleProducto/' + productoID, function() {
-                        $('.productoForm').validationEngine();
-                        //
-                        $(document).scrollTop(0);
-                        $('.productoForm').submit(function(e) {
-                            e.preventDefault();
-                            var form = $(this);
-                            if ($('.productoForm').validationEngine('validate')) {                           
-                                $.ajax({
-                                    url: '<?= base_url() ?>carrito/addProducto_tienda',
-                                    data: form.serialize(),
-                                    dataType: 'html',
-                                    type: 'post',
-                                    beforeSend: function() {
-                                        $('.loader').append('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
-                                        //show loader
-                                    },
-                                    success: function(data) {
-                                        $('.infouser', form).empty().html(data);
-                                    },
-                                    error: function(data) {
-                                        $('.infouser', form).empty();
-                                        $("<div class='alert alert-warning'>No se ha agregado el producto al carrito. Vuelva a intentarlo o contacte al administrador del sitio.</div>").appendTo($('.infouser', form));
-                                    },
-                                    complete: function() {
-                                        $('.spinner', form).remove();
-                                    }
-                                });
-                            }
-                        });
-                        //
-
-                    });
-                });
-
-                        jQuery("form").validationEngine({
-                             promptPosition:"topRight",
-                             ajaxFormValidation: false,
-                            });
-            });
-
-        </script>
-        <div id="productoDetallePop">
-        </div>
-
-        
-        <?php $this->load->view('general/menu_view'); ?>
-
+<div id="productoDetallePop"></div>
+       <?php $this->load->view('general/menu_view'); ?>
         <div class="contenedor_contactar_previo" id="contenedor_contactar_previo" style=" display:none;">
             <div class="contenedor_cerrar_contactar">
                 <img src="<?php echo base_url() ?>images/cerrar_anuncio.png" onclick="oculta('contenedor_contactar_previo');"/>
@@ -118,29 +64,16 @@
                         Enviar
                     </li>
                 </ul>
-
-
             </div>
         </div>
-
-
-       
-
         <div class="titulo_seccion">
             TIENDA
         </div>
         <div class="contenedor_buscado">
-
-
         </div>
-
         <div id="contenedor_central">
             <?php $this->load->view('general/contTest');?>
-
-
-            <div class="contenedor_central">
-                <br/>
-                <br/>
+            <div class="contenedor_central"><br/><br/>
                 <?php if ($this->session->flashdata('info')): ?>
                     <?php echo $this->session->flashdata('info'); ?>
                 <?php endif; ?>
@@ -175,8 +108,6 @@
                                     <div>
                                     </div>
                                 </div>
-
-
                                 <!-- Fin contenedor annuncio -->
  <?php if (4 > $fila++):?>
                 <!-- Inicio margen falso -->
@@ -253,5 +184,53 @@
 
     </div>
     </div>
+           <script>
+            jQuery(document).ready(function() {
+
+
+                $(".detalleProducto").click(function() {
+                    var productoID = $(this).attr('id');
+                    $('#productoDetallePop').load('<?php echo base_url() ?>principal/getDetalleProducto/' + productoID, function() {
+                        $('.productoForm').validationEngine();
+                        //
+                        $(document).scrollTop(0);
+                        $('.productoForm').submit(function(e) {
+                            e.preventDefault();
+                            var form = $(this);
+                            if ($('.productoForm').validationEngine('validate')) {                           
+                                $.ajax({
+                                    url: '<?= base_url() ?>carrito/addProducto_tienda',
+                                    data: form.serialize(),
+                                    dataType: 'html',
+                                    type: 'post',
+                                    beforeSend: function() {
+                                        $('.loader').append('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
+                                        //show loader
+                                    },
+                                    success: function(data) {
+                                        $('.infouser', form).empty().html(data);
+                                    },
+                                    error: function(data) {
+                                        $('.infouser', form).empty();
+                                        $("<div class='alert alert-warning'>No se ha agregado el producto al carrito. Vuelva a intentarlo o contacte al administrador del sitio.</div>").appendTo($('.infouser', form));
+                                    },
+                                    complete: function() {
+                                        $('.spinner', form).remove();
+                                    }
+                                });
+                            }
+                        });
+                        //
+
+                    });
+                });
+
+                        jQuery("form").validationEngine({
+                             promptPosition:"topRight",
+                             ajaxFormValidation: false,
+                            });
+            });
+
+        </script>
     </body>
 </html>
