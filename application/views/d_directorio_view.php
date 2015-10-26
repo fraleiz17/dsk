@@ -11,29 +11,18 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
             <img src="<?php echo base_url() ?>images/cerrar_anuncio_gris.png" onclick="oculta('contenedor_contactar');">
         </div>
         <div class="contactar_al_aunuciante_negocio">
-            <font class="titulo_anuncio_publicado"> CONTACTA AL ANUNCIANTE </font>
-            <br>
-            <br>
-            <strong> Nombre del negocio:</strong> <?php echo $detalles->razonSocial ?>
-            <br>
-            <strong> Estado: </strong> Hidalgo
-            <br>
-            <strong> Ciudad: </strong> <?php echo $detalles->municipio ?>
-            <br>
-            <strong> Teléfono: </strong> <?php echo $detalles->telefono ?>
-            <br>
-            <br>
-            <font class="titulo_anuncio_publicado"> PROPORCIONA TU INFORMACIÓN </font>
-            <br>
-            <br>
+            <font class="titulo_anuncio_publicado"> CONTACTA AL ANUNCIANTE </font><br><br>
+            <strong> Nombre del negocio:</strong> <?php echo $detalles->razonSocial ?><br>
+            <strong> Estado: </strong> Hidalgo<br>
+            <strong> Ciudad: </strong> <?php echo $detalles->municipio ?><br>
+            <strong> Teléfono: </strong> <?php echo $detalles->telefono ?><br><br>
+            <font class="titulo_anuncio_publicado"> PROPORCIONA TU INFORMACIÓN </font><br><br>
             <form id="form_contacto" >
                 <div style="width:320px;height:auto;display:block;overflow:hidden;-ms-overflow-style: none">
                 <input type="text" class="formu_contacto" id="nombre_contacto" name="nombre_contacto" onfocus="clear_textbox('nombre_contacto', 'Nombre');" value="<?php echo $this->session->userdata('nombre') . ' ' . $this->session->userdata('apellido') ?>" size="44">
                 <input type="text" class="formu_contacto" id="mail_contacto" name="email_contacto" onfocus="clear_textbox('mail_contacto', 'Tu-email')" value="<?php echo $this->session->userdata('correo') ?>" size="44">
                 <input type="text" class="formu_contacto" id="asunto_contacto" name="asunto_contacto" onfocus="if(this.value == 'Asunto') { this.value = ''; }" value="Asunto" size="44" size="44">
-                <textarea cols="50" onfocus="if(this.value == 'Comentarios') { this.value = ''; }" size="44" id="comentarios_contacto" name="comentario_contacto" class="formu_contacto" rows="5">Comentarios</textarea>
-                <br>
-                <br>
+                <textarea cols="50" onfocus="if(this.value == 'Comentarios') { this.value = ''; }" size="44" id="comentarios_contacto" name="comentario_contacto" class="formu_contacto" rows="5">Comentarios</textarea><br><br>
                 <div>
                     <div>
                         <ul class="boton_naranja_tres">
@@ -49,24 +38,9 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
         </div>
     </div>
 <?php endif; ?>
-
 <div class="titulo_seccion">
     DIRECTORIO
-
-
-    <!-- <div class="contenedor_anunciar_negocio" onclick="muestra('contenedor_publicar_anuncio_negocio');">
-        <div class="titulo_anunciate">
-            ANUNCIATE
-        </div>
-        <div class="descripcion_anunciar_negocio">
-            en nuestro Directorio
-        </div>
-        <div class="el_click">
-            <img src="<?php echo base_url() ?>images/click.png" width="60" height="60">
-        </div>
-    </div>-->
 </div>
-
 <div id="contenedor_central">
     <div class="contenido_directorio">
         <div class="contenedor_logotipo_directorio"> 
@@ -76,10 +50,8 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
                 <img style="height: 180px; width:auto;" src="<?php echo base_url() ?>images/giros_negocio/<?php echo str_replace(' ', '_', strtolower($detalles->nombreGiro)); ?>.png"/>
             <?php endif; ?>
         </div>
-
         <div class="contenedor_nombre_empresa"> <?php echo $detalles->nombreNegocio ?></div>
     </div>
-
     <div style=" margin-left:8px; margin-right:8px;" class="contenido_directorio">
         <div class="contenedor_titulo_informcacion"> CONT&Aacute;CTANOS </div>
         <div class="contenedor_informacion">
@@ -90,9 +62,7 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
             <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
                 <ul class="boton_morado"><li onclick="muestra('contenedor_contactar');"> Enviar mail </li> </ul>
             <?php endif; ?></div>
-
     </div>
-
     <div class="contenido_directorio">
         <div class="contenedor_titulo_informcacion"> SERVICIOS </div>
         <div class="contenedor_informacion">

@@ -1,61 +1,21 @@
-<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es-419">
-<head>
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Datos curiosos-Quierounperro.com</title>
-<link rel="shortcut icon" href="<?php echo base_url() ?>images/ico.ico" />  
-<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/reset.css" media="screen"></link>
- <link rel="stylesheet" href="css/jPages.css">
- <?php //$this->load->view('general/LoginFiles');?>
-<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/general.css" media="screen"></link>
-<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/venta.css" media="screen"></link>
-<link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/directorio.css" media="screen"></link> 
-
-   <script src="<?php echo base_url() ?>js/jquery-1.10.2.js"></script>
-     <script src="<?php echo base_url() ?>js/jPages.js"></script>
-   <script src="<?php echo base_url() ?>js/jquery-ui.js"></script>
-   <script type="text/javascript" src="<?php echo base_url() ?>js/jquery.cycle.all.js"></script>
-   <script src="<?php echo base_url() ?>js/funciones_.js" type="text/javascript"></script>
-    <script src="<?php echo base_url() ?>js/funciones_curiosos.js" type="text/javascript"></script>-->
-
 <?php $this->load->view('general/LoginFiles');?>
 <?php
 $this->load->view('general/general_header_view', array('title' => 'Datos Curiosos',
   'links'                                                      => array('venta'), 'scripts' => array('funciones_curiosos')))
   ?>
 <link type="text/css" rel="stylesheet" href="<?php echo base_url() ?>css/curiosos.css" media="screen"></link>
-<style>
-.resp{
- max-width:100%; 
-max-height:100%;
-margin:auto;
-display:block;
-}
-</style>
+<style>.resp{ max-width:100%; max-height:100%;margin:auto;display:block;}</style>
 </head>
-
 <body>
-
-
-
-
-
 <?php $this->load->view('general/menu_view')?>
-
 <div class="titulo_seccion">
 DATOS CURIOSOS
-
 </div>
 <div class="contenedor_buscador">
-
 </div>
-
 <div id="contenedor_central">
 <?php $this->load->view('general/contTest');?>
-
 <div class="central_curiosos"> 
-  
 <div class="contenedor_datos_curiosos">
 <div class="franja_verde">  </div>
 <?php if($fotoscontenido != null){ 
@@ -72,7 +32,6 @@ foreach ($fotoscontenido as $fc){
 <div class="ver_mas_verde" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[0]->contenidoID?>/1'"> Ver más.. </div>
   </div>  
 <div class="margen_20">  </div>
-
 <div class="contenedor_datos_curiosos"> 
 <div class="franja_amarilla"> </div>
 <?php if($fotoscontenido != null){ 
@@ -86,12 +45,9 @@ foreach ($fotoscontenido as $fc){
 <div class="contenido_horizontal"> <?=$contenidos[1]->nombre?> </div>
 <div class="contenido_texto_horizal"> <?=substr($contenidos[1]->texto,0,60)?> ... </div>
 <div class="ver_mas_amarillo" onclick="window.location.href = '<?=base_url()?>curiosos/detalle/<?=$contenidos[1]->contenidoID?>/2'"> Ver más... </div>
-
  </div>
  <div class="margen_horizontal"> </div>
-
-
- <div class="contenedor_datos_curiosos">
+<div class="contenedor_datos_curiosos">
  <div class="titulo_horizontal"><?=$contenidos[2]->nombre?></div>
  <div class="contenido_texto_horizal"> <?=substr($contenidos[2]->texto,0,60)?></div>
  <div class="ver_mas_naranja" onclick="window.location.href ='<?=base_url()?>curiosos/detalle/<?=$contenidos[2]->contenidoID?>/1'"> Ver más... </div>
@@ -120,17 +76,14 @@ foreach ($fotoscontenido as $fc){
 <?php }
 }
 }?>
-
 <div class="franja_azul"> </div>
- </div>
-
+</div>
 </div>
 <div id="slideshow_anuncio" class="contenedor_banner"> 
 <?php $banner = $this->session->userdata('banner'); ?>
                 <?php
                 if (is_logged() && ($this->session->userdata('tipoUsuario') == 2 || $this->session->userdata('tipoUsuario') == 3)) {
                     if ($banner != null) {
-
                         foreach ($banner as $contenido) {
                             if ($this->session->userdata('zonaID') == $contenido->zonaID && $contenido->posicion == 3 && $contenido->seccionID == $seccion) {
                                 ?>
@@ -153,7 +106,6 @@ foreach ($fotoscontenido as $fc){
                 }
                 ?> 
  </div>
-
  </div>     
 </br>
 </br>

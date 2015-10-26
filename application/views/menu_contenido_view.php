@@ -321,19 +321,12 @@
    </div>
     <div class="contendeor_inputs">
         <p><input type="text" name="nombre_ac" class="validate[required],custom[onlyLetterSp]"/></p>
-
         <p><input type="text" name="nombre_contactoAC1" class="validate[required]"/></p>
-
         <p><input style="margin-top:3px;" type="text" name="telefonoAC1" id="telefonoAC1" class="custom[onlyNumberSp]"/></p>
-
         <p><input style="margin-top:3px;" type="text" name="calleAC1" id="calleAC1" /></p>
-
         <p><input style="margin-top:3px;" type="text" name="numAC1" id="numAC1" class="custom[onlyNumberSp]"/></p>
-
         <p><input style="margin-top:3px;" type="text" name="coloniaAC1" id="coloniaAC1"/></p>
-
         <p><input style="margin-top:3px;" type="text" name="municipioAC1" id="municipioAC1" class="validate[required],custom[onlyLetterSp]"/></p>
-
         <p><select name="estadoAC1" class="validate[required]"/>
             <option> ---</option>
             <?php
@@ -346,77 +339,43 @@
             endif; ?>
             </select> </p>
         <p><input style="margin-top:3px;" type="text" name="cpAC1" class="custom[onlyNumberSp]" /></p>
-
         <p><input style="margin-top:3px;" type="text" name="correoA1C" class="validate[required],custom[email]" placeholder="correo@ejemplo.com"/></p>
-
         <p><input style="margin-top:3px;" type="text" name="pagina_webAC1"/></p>
-
         <p><input style="margin-top:3px;" type="file" name="logoAC1" id="logoAC1"/></p>
-
         <p><textarea rows="3" cols="40" style="margin-top:3px;" name="descripcionAC1"> </textarea></p>
-
-
     </div>
-
-
 </div>
 <!-- fin datos Asociacion -->
 
 <div id="map-canvas" style="display:none;">
     <?php $this->load->view($mapaSegundo); ?>
-
 </div>
-
 <input type="hidden" name="newLat" id="newLat" value=""/>
-<input type="hidden" name="newLng" id="newLng" value=""/>
-
-</br>
+<input type="hidden" name="newLng" id="newLng" value=""/></br>
 <ul class="morado_reg">
     <li><!--<a href="#" id="suscribir" style="text-decoration:none; color:#FFF;">Suscribirse</a>-->
         <input type="submit" value="Suscribir" class="el_submit"/>
-         
     </li>
 </ul>
-
-
 </div>
-<!-- fin contenedor morado registro -->
-
 </div>
-<!-- Fin contenedor negro registro -->
-
 </form>
-<!--		FIN CONTENEDOR REGISTRO							-->
-<!-- ------------------------------------------------------ -->
-
-
-<!--		EXITO REGISTRO							-->
-<!-- ------------------------------------------------------ -->
 <div class="contenedor_registro" id="contenedor_correcto" style="display:none;"> <!-- Contenedor negro reistro-->
     <div class="cerrar_registro"><img src="<?php echo base_url() ?>images/cerrar.png"
                                       onclick="oculta('contenedor_correcto');$('#registerNow')[0].reset();"/></div>
-
     <div class="registro_normal"> <!-- Contenedor morado registro -->
-
-        <div class="titulo_registro"> REGISTRATE</div>
-        </br>
+        <div class="titulo_registro"> REGISTRATE</div></br>
         <div class="imagen_confirmacion">
             <img src="<?php echo base_url() ?>images/palomita.png"/>
         </div>
         <div class="contenido_confirmacion">
-            <strong> Correcto </strong>
-            </br></br>
+            <strong> Correcto </strong></br></br>
             <div> Bienvenido</div>
             <div id="confirm">
             </div>
-
         </div>
-    </div>
-    </br>
-
-
+    </div></br>
 </div>
-
 <div class="contenedor_registro" id="contenedor_error" style="display:none;"> <!-- Contenedor negro reistro-->
    <div class="cerrar_registro"><img src="<?php echo base_url() ?>images/cerrar.png" onclick="oculta('contenedor_error');"/></div>
     <div class="registro_normal"> <!-- Contenedor morado registro -->

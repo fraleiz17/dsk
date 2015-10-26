@@ -4,12 +4,8 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
     'scripts' => array('funciones_venta', 'funciones_'), 'links' => array('venta',
         'directorio')))
 ?>
-
 <?php $this->load->view('general/menu_view', array('seccion' => $seccion)) ?>
-<div class="titulo_seccion">
-    DIRECTORIO
-
-
+<div class="titulo_seccion">DIRECTORIO
     <div class="contenedor_anunciar_negocio" onclick="muestra('contenedor_publicar_anuncio_negocio');">
         <div class="titulo_anunciate">
             ANUNCIATE
@@ -34,7 +30,6 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
                 </select>
             <?php endif; ?>
         </div>
-
         <div class="fondo_select_directorio">
             <?php if (isset($estados)): ?>
                 <select name="estado"  class="estilo_select_directorio" id="estado" >
@@ -44,8 +39,7 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
                     <?php endforeach; ?>
                 </select>
             <?php endif; ?>
-        </div>
-
+       </div>
         <div class="contenedor_buscar_directorio">
             <input type="text" class="buscar_directorio" name="palabra_clave" size="4" placeholder="Palabras clave" />
             <input type="button" height="40" value="" placeholder="Palabras clave" class="boton_palabras_clave" />
@@ -54,18 +48,12 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
 </div>
 <div id="contenedor_central">
     <?php $this->load->view('general/contTest');?>
-
-    <div class="contenedor_central" style="margin-bottom:45px;">
-        <br/>
-        <!-- item container -->
+   <div class="contenedor_central" style="margin-bottom:45px;"><br/>
         <ul id="itemContainer_negocio" style="min-height:100px; display:inline-block;">
-            <!-- Inicio FILA -->
             <?php if ($directorios['count'] > 0): ?>
                 <?php $fila = 1; ?>
                 <?php $data = $directorios['data'] ?>
                 <?php foreach ($data as $directorio): ?>
-                    <!-- INICIO contenedor anuncio  -->
-
                     <div class="contenedor_negocio" data-object='<?php echo json_encode($directorio) ?>'>
                         <div class="contenedor_imagen_negocio"> 
                         <?php 
@@ -101,21 +89,12 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
                             <?php endif; ?>
                         </ul>
                     </div>
-
-                    <!-- Fin contenedor annuncio -->
-
                     <?php if (3 > $fila++): ?>
-                        <!-- Inicio margen falso -->
-                        <div class="margen_derecho_20">
-
-                        </div>
+                        <div class="margen_derecho_20"></div>
                     <?php else: ?>
                         <?php $fila = 1; ?>
                     <?php endif; ?>
-                    <!-- FIN margen falso -->
                 <?php endforeach; ?>
-                <!-- Fin contenedor annuncio -->
-                <!-- FIN FILA ---->
             <?php else: ?>
                 <div class="alert alert-warning">No hay resultados.</div>
             <?php endif; ?>
@@ -123,12 +102,9 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
         <br/>
         <br/>
         <div style="margin: 0px auto; width:778px; padding:10px; text-align:center; position: relative; margin-top:0px; height:40px;">
-            <!-- navigation holder -->
             <div class="holder">  </div>
         </div>
     </div>
-
-
     <div class="seccion_derecha_paquetes">
         <ul class="aqui_crear_anuncio">
             <li onclick="muestra('contenedor_publicar_anuncio_negocio');">
@@ -136,47 +112,27 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
             </li>
         </ul>
     </div>
-
 </div>
-
-
-
 <div id="contenedor_anuncio_negocio" class="contenedor_publicar_anuncio" style=" display:none;">
     <div class="contenedor_cerrar_anuncio_negocio">
         <img src="<?php echo base_url() ?>images/cerrar_anuncio_gris.png" onclick="oculta('contenedor_anuncio_negocio');"/>
     </div>
     <div class="leer_anuncio_directorio">
-
-
         <div class="contenedor_galeria">
             <img src="<?php echo base_url() ?>images/negocio_logo/mundo_mascotas.png"/>
         </div>
         <div class="datos_general">
-
             <div class="titulo_anuncio_publicado">
                 EL MUNDO DE LAS MASCOTAS
-            </div>
-            <br/>
-            <strong>
-                ACCESORIOS PARA MASCOTAS
-            </strong>
-
-            <br/>
-            <font> Fecha de publicacion:12-06-2014</font>
-            <br/>
-            <font>Lugar: Queretaro (Queretaro)</font>
-            <br/>
-            <font>Municipio: Queretaro (Queretaro)</font>
-            <br/>
-            <font>Colonia: Queretaro (Queretaro)</font>
-            <br/>
-            <font>Calle:</font>
-            <br/>
-            <font>Número:</font>
-            <br/>
-            <font>Página Web:</font>
-            <br/>
-            <br/>
+            </div><br/>
+            <strong>ACCESORIOS PARA MASCOTAS</strong><br/>
+            <font> Fecha de publicacion:12-06-2014</font><br/>
+            <font>Lugar: Queretaro (Queretaro)</font><br/>
+            <font>Municipio: Queretaro (Queretaro)</font><br/>
+            <font>Colonia: Queretaro (Queretaro)</font><br/>
+            <font>Calle:</font><br/>
+            <font>Número:</font><br/>
+            <font>Página Web:</font><br/><br/>
             <ul class="boton_naranja">
                 <li onclick="muestra('contenedor_contactar');">
                     Contactar al anunciante
@@ -188,19 +144,12 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
                     <img src="<?php echo base_url() ?>images/favorito.png"/>Agregar a Favoritos
                 </li>
             </ul>
-
-        </div>
-        <br/>
-
+        </div><br/>
         <div class="contenedor_del_detalle">
-
             <div class="titulo_anuncio_publicado">
                 MÁS DETALLES
             </div>
-
             <div class="descripcion_del_anuncio">
-
-                ksdjfkjslfk fdglksj gkfdsjg  jgfkdjgkfd gfdgkdf gfdskj fgsfkjg sdlkf gjkfdsg fdlkgjdfl glfdsjg dflkgj dfgj flkgjf gjfd gfdjg fdlg fdlg fjgfd gjdslf gkgj lgjfgk gjfdkg lkgjf gjjkgj s
             </div>
             <br/>
             <ul class="boton_naranja_dos">
@@ -216,17 +165,13 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
                 </div>
                 <br/>
             </div>
-
-
             <ul class="boton_rojo_dos">
                 <li>
                     <img src="<?php echo base_url() ?>images/alert.png"/>
                     Denunciar Anuncio
                 </li>
             </ul>
-
             <div class="consejos_advertencias">
-
                 - QuierounPerro.com te invita a que antes de comprar pienses en adoptar, ya que hoy en día hay millones de perros sin hogar que deben ser sacrificados.
                 <br/>
                 - Tener un perro conlleva una serie de responsabilidades, cuidados y atenciones que debes considerar antes de comprar uno.
@@ -247,7 +192,6 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
         </div>
     </div>
 </div>
-
 <div class="contenedor_contactar" id="contenedor_contactar"  style=" display:none;">
     <div class="contenedor_cerrar_contactar_negocio">
         <img src="<?php echo base_url() ?>images/cerrar_anuncio_gris.png" onclick="oculta('contenedor_contactar');"/>
@@ -279,8 +223,6 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
                 Enviar
             </li>
         </ul>
-
-
     </div>
 </div>
 <div class="slideshow_tres" >
@@ -313,19 +255,7 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
 </div>
 <div class="division_menu_inferior"> </div>
 <?php $this->load->view('general/footer_view'); ?>
-
-  <!-- <div id="contenedor_publicar_anuncio" class="contenedor_publicar" style=" display:none">
-
-   Inicio contenedor pap publicar anuncio aunucio 
-    <div id="publicar_anuncio" class="pubicar_anuncio_mini">
-        <?php //$this->load->view('partial/_pasos_anuncio', array('paquetes' => $paquetes, 'estados' => $estados, 'razas' => $razas,'cupones' => $cupones)); ?>
-
-    </div>
-</div>!-->
-<!-- Vista de publicacion directorio -->
 <?php $this->load->view('partial/_pasos_anuncio_negocio'); ?>
-
-
 <script>
     $(function() {
 
@@ -425,7 +355,5 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
 
     });
 </script>
-
-
 </body>
 </html>
