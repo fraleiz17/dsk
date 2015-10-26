@@ -28,7 +28,7 @@ jQuery(document).ready(function(){
 		 var contador = 0; 
 		 console.log(estadoID,estadoNombre);  
 
-		  $('<p id="estadoP'+grupoID+'"><select name="estado[]" class=""><option value="'+estadoID+'"> '+estadoNombre+' </option><?php foreach ($estados as $edo) : ?><option value="<?php echo $edo->estadoID ?>" > <?php echo $edo->nombreEstado ?> </option><?php endforeach; ?></select><a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br /></p>').appendTo('#destinos'+grupoID);
+		  $('<p id="estadoP'+grupoID+'"><select name="estado[]" class=""><option value="'+estadoID+'"> '+estadoNombre+' </option><?php foreach ($estados as $edo) : ?><option value="<?php echo $edo->estadoID ?>" > <?php echo $edo->nombreEstado ?> </option><?php endforeach; ?></select><a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br></p>').appendTo('#destinos'+grupoID);
 		  var estadoID = $('#estadoA'+grupoID).val('');
 		contador++;
 		}
@@ -103,7 +103,7 @@ EDITAR GRUPO <?=$grupoID?>
                                         <?php foreach ($estados as $edo) : ?>
                                             <option value="<?php echo $edo->estadoID ?>"> <?php echo $edo->nombreEstado ?> </option>
                                         <?php endforeach; ?>
-                                    </select> <a href="#" id="addEstado" class="addEstado" style="color:#fff; font-size:9px; margin-top:8px;" data-rel="<?=$grupoID?>">Agregar</a><br />
+                                    </select> <a href="#" id="addEstado" class="addEstado" style="color:#fff; font-size:9px; margin-top:8px;" data-rel="<?=$grupoID?>">Agregar</a><br>
 <p id="destinos<?=$grupoID?>">
 <?php foreach ($destinos as $ds ) { 
 			if($ds->grupoID == $grupoID){ ?>
@@ -114,7 +114,7 @@ EDITAR GRUPO <?=$grupoID?>
                                         <?php foreach ($estados as $edo) : ?>
                                             <option value="<?php echo $edo->estadoID ?>" <?php echo $ds->estadoID === $edo->estadoID ? 'selected' : ''; ?>> <?php echo $edo->nombreEstado ?> </option>
                                         <?php endforeach; ?>
-                                    </select> <a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br/>
+                                    </select> <a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br>
 </p>
  <?php } 
 	} ?>
@@ -123,8 +123,8 @@ EDITAR GRUPO <?=$grupoID?>
 </div>
 
 
-</br>
-</br>
+<br>
+<br>
 
 <ul class="morado_reg">
 <li>
@@ -157,7 +157,7 @@ endif;?>
 <div class="titulo_seccion">
 GASTOS DE ENV&Iacute;O
 </div>
-</br>
+<br>
 <table class="tabla_carrito" width="990">
 <tr>
 <th width="77">

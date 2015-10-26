@@ -11,7 +11,7 @@ $this->load->view('general/general_header_view', array('title' => 'Evento del Me
 <div id="paso_uno">
 <div class="crerar_publicar_anuncio">
 <img src="<?php echo base_url() ?>images/cerrar.png" onclick="oculta('contenedor_publicar_anuncio');"/>
- </div></br>
+ </div><br>
 <div class="descipcion_pasos">
 <div class="titulo_de_pasos"> PUBLICAR   EVENTO </div>
 <div class="instrucciones_pasos"> ¿Quieres anunciar tu evento? ¡Cont&aacute;ctanos! </div>
@@ -23,15 +23,15 @@ $this->load->view('general/general_header_view', array('title' => 'Evento del Me
 <img src="<?php echo base_url() ?>images/pero_paso_uno.png" class="perro_paso_uno"/>
 </td>
 <td width="147">
-<p>Nombre:</p> <br/> </td>  <td width="193"><input name="nombre" type="text" id="nombre"/> </td>
+<p>Nombre:</p> <br> </td>  <td width="193"><input name="nombre" type="text" id="nombre"/> </td>
 </tr>
 <tr>
-<td><p> E-mail:</p> <br/></td> <td> <input name="correo" type="text" id="correo"/> </td>
+<td><p> E-mail:</p> <br></td> <td> <input name="correo" type="text" id="correo"/> </td>
 </tr>
 <tr>
-<td><p> Comentarios:</p> <br/></td> <td><textarea name="comentarios" cols="30" rows="10" id="comentarios"> </textarea> </td>
+<td><p> Comentarios:</p> <br></td> <td><textarea name="comentarios" cols="30" rows="10" id="comentarios"> </textarea> </td>
 </tr>
-</table></br>
+</table><br>
 <ul class="morado_directorio">
 <li onclick="muestra('paso_dos'); oculta('paso_uno');">
 <input type="submit" value="Enviar" />
@@ -83,11 +83,11 @@ $this->load->view('general/general_header_view', array('title' => 'Evento del Me
      </div>
       <img src="<?php echo base_url()?>images/cale_event.png" width="83"  height="115"/>  </div>
      <div class="contenedor_nombre_evento_mini"> 
-     <?=strtoupper($cv->nombre)?><br />
-     <strong>Fecha:</strong> <?=$cv->fecha?><br />
+     <?=strtoupper($cv->nombre)?><br>
+     <strong>Fecha:</strong> <?=$cv->fecha?><br>
      <strong>Lugar:</strong> <?=$cv->lugar?>
       </div> <div class="ver_mas_mini" onclick="window.location.href = '<?php echo base_url()?>evento/detalle/<?=$cv->contenidoID?>'"> Ver más... </div>
-       </div></br>
+       </div><br>
        <?php }
 	   }
 	   }?>
@@ -97,11 +97,11 @@ $this->load->view('general/general_header_view', array('title' => 'Evento del Me
 		if($cv->contenidoID == $ID){?>
 <div class="contenedor_texto_inferior"> 
 <?=$cv->texto?>
-</br>
-</br>
-<p id="fecha_evento"> <div class="recuadro_rosa"> </div><strong>  Fecha:</strong> <?=$cv->fecha?> </p></br>
-<p id="hora_evento"> <div class="recuadro_rosa"> </div><strong>  Hora:</strong> <?=$cv->horario?></p></br>
-<p id="lugar_evento"> <div class="recuadro_rosa"> </div><strong>  Lugar:</strong> <?=$cv->lugar?></p></br>
+<br>
+<br>
+<p id="fecha_evento"> <div class="recuadro_rosa"> </div><strong>  Fecha:</strong> <?=$cv->fecha?> </p><br>
+<p id="hora_evento"> <div class="recuadro_rosa"> </div><strong>  Hora:</strong> <?=$cv->horario?></p><br>
+<p id="lugar_evento"> <div class="recuadro_rosa"> </div><strong>  Lugar:</strong> <?=$cv->lugar?></p><br>
 <p id="domicilio_evento"> <div class="recuadro_rosa"> </div><strong>  Domicilio:</strong> <?=$cv->domicilio?></p>
 </div>
 <?php }

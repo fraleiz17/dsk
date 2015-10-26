@@ -44,9 +44,9 @@
 </div>
 <div class="mensaje"> 
 <strong> <?php echo $mensaje->asunto ?></strong>
-</br>
+<br>
 <strong><?php echo substr($mensaje->mensaje,0,15); ?> </strong>
-</br></br>
+<br><br>
 <?php echo $mensaje->mensaje ?>
 
 </div>
@@ -57,7 +57,7 @@
 
 
 
-</br>
+<br>
 <table class="tabla_mensajes" width="795">
  
      <td width="221"> 

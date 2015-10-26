@@ -206,7 +206,7 @@ AGREGAR IMAGEN
 
 <div class="contenido_intruciones">
 <p>Ingrese las imagenes para BP00001:</p>
-</br>
+<br>
 <input type="file" name="banner" id="banner" />
 
 
@@ -240,7 +240,7 @@ AGREGAR TEXTO
 </div>
 <div class="contenido_intruciones">
 <p>Ingrese las imagenes para BP00001:</p>
-</br>
+<br>
 <input type="file" name="imagenesArticulo[]" id="imagenesArticulo" multiple="multiple"/>
 
 </div>
@@ -417,11 +417,11 @@ AGREGAR EVENTO
 </div>
 
 <div class="contenido_intruciones">
-</br>
+<br>
 <input type="hidden" name="zonaRaza" id="zonaRaza" class="zonaRaza" value="9" />
 
 <p>Ingrese los datos del evento</p>
-</br>
+<br>
 
 <table width="420" height="234"> 
 <tr> 
@@ -476,7 +476,7 @@ AGREGAR EVENTO
 
 </div> <!-- Fin contenedor negro imagenes -->
 <!--FIN CONTENIDO DEL MES-->
-</br>
+<br>
 
 <?php }
 }?>
@@ -494,11 +494,11 @@ AGREGAR EVENTO
 </div>
 
 <div class="contenido_intruciones">
-</br>
+<br>
 <input type="hidden" name="zonaRaza" id="zonaRaza" class="zonaRaza" value="9" />
 
 <p>Ingrese los datos del evento</p>
-</br>
+<br>
 
 <table width="420" height="234"> 
 <tr> 
@@ -543,7 +543,7 @@ AGREGAR EVENTO
 
 </div> <!-- Fin contenedor negro imagenes -->
 <!--FIN CONTENIDO DEL MES-->
-</br>
+<br>
 
 <!--       CONTENIDO SUPERIOR       -->
 <table class="tabla_carrito superior" width="990" style="display:none">

@@ -15,8 +15,8 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
 
 </div>
 <font class="titulo_anuncio_publicado"> PROPORCIONA TU INFORMACIÓN </font>
-</br>
-</br>
+<br>
+<br>
 
 <style>::-webkit-input-placeholder {   color: #FFF;  }:-moz-placeholder { /* Firefox 18- */   color: #FFF;   }::-moz-placeholder {  /* Firefox 19+ */   color: #FFF;   }:-ms-input-placeholder {     color: #FFF;  }</style>
 <form id="contacto_form">
@@ -30,8 +30,8 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
     <textarea style = "width:334px;" cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto"
     class="formu_contacto validate[required]" rows="5" name="comentarios_contacto">Comentarios</textarea>
     </div>
-</br>
-</br>
+<br>
+<br>
 <span class="info"></span>
 <ul class="boton_naranja_tres contactoForm">
     <li>
@@ -51,12 +51,12 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
     </div>
     <div class="contactar_al_aunuciante" style="height:346px;">
     <font class="titulo_anuncio_publicado"> DENUNCIA DE CONTENIDO </font>
-    </br>
-    </br>
+    <br>
+    <br>
 <font class=""><strong>Todas las denuncias son an&oacute;nimas.</strong><br>
         Selecciona la razón por la cual deseas denunciar este anuncio y/o anunciante:</font>
-</br>
-</br>
+<br>
+<br>
 <form id="denuncia_form">
     <input type="hidden" class="formu_contacto validate[required]" name="nombre_denuncia" id="nombre_denuncia"
     value="<?php echo $this->session->userdata('nombre')?>" size="44"/>
@@ -66,17 +66,17 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
     onfocus="clear_textbox('asunto_denuncia', 'Asunto')" value="Asunto" size="44"/>
     <!-- <textarea cols="50" onfocus="clear_textbox('comentarios_denuncia', 'Comentarios')" name="comentarios_denuncia" id="comentarios_denuncia"
     class="formu_contacto" rows="5">Comentarios</textarea> <?=base_url()?>content/terminos_y_condiciones.pdf -->
-    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia3" checked="checked" value="Información de anuncio falsa"><label>Informaci&oacute;n de anuncio falsa</label></br>
-    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia1" value="Contenido Violento"><label>Contenido Violento</label></br>
-    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia2" value="Fotos Inapropiadas"><label>Fotos Inapropiadas</label></br>
-    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia4" value="Fraude"><label>Fraude</label></br>
-    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia5" value="Datos de contacto falsos"><label>Datos de contacto falsos</label></br>
-    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia6" value="Otro"><label>Otro</label></br>
-</br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia3" checked="checked" value="Información de anuncio falsa"><label>Informaci&oacute;n de anuncio falsa</label><br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia1" value="Contenido Violento"><label>Contenido Violento</label><br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia2" value="Fotos Inapropiadas"><label>Fotos Inapropiadas</label><br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia4" value="Fraude"><label>Fraude</label><br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia5" value="Datos de contacto falsos"><label>Datos de contacto falsos</label><br>
+    <input type="radio" name="comentarios_denuncia" id="comentarios_denuncia6" value="Otro"><label>Otro</label><br>
+<br>
 
-<label><a href="<?=base_url()?>content/terminos_y_condiciones.pdf" target="_blank" style="text-decoration:none;">T&eacute;rminos y Condiciones de Uso</a></label></br>
-</br>
-</br>
+<label><a href="<?=base_url()?>content/terminos_y_condiciones.pdf" target="_blank" style="text-decoration:none;">T&eacute;rminos y Condiciones de Uso</a></label><br>
+<br>
+<br>
 <ul class="boton_naranja_tres denunciaForm">
     <li>
         <input type="submit" value="Enviar"/>
@@ -110,14 +110,14 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
         </div>
 
 
-</br>
-</br>
+<br>
+<br>
 <ul class="boton_naranja">
     <li onclick="buscar_anunciante();">
         Contactar al anunciante
     </li>
 </ul>
-</br>
+<br>
 <ul class="boton_gris">
     <li>
         <img src="<?php echo base_url()?>images/favorito.png"/>Agregar a Favoritos
@@ -126,7 +126,7 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
 <span id="info_fav"></span>
 
 </div>
-</br>
+<br>
 <div class="contenedor_del_detalle">
     <div class="titulo_anuncio_publicado">
         MÁS DETALLES
@@ -136,7 +136,7 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
 
 
     </div>
-</br>
+<br>
 <ul class="boton_naranja_dos">
     <li id="ver_video" onclick="$('#video').toggle();">
         Ver video
@@ -144,7 +144,7 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
 </ul>
 
 <div id="video" class="desplegar_detalles" style="display:none;">
-</br>
+<br>
 <div class="titulo_anuncio_publicado">
     VIDEO
 </div>
@@ -166,30 +166,30 @@ $this->load->view('general/general_header_view', array('title' => 'Venta',
 
     - QuierounPerro.com te invita a que antes de comprar pienses en adoptar, ya que hoy en día hay millones
     de perros sin hogar que deben ser sacrificados.
-</br>
+<br>
 - Tener un perro conlleva una serie de responsabilidades, cuidados y atenciones que debes considerar
 antes de comprar uno.
-</br>
+<br>
 - Infórmate de los cuidados especiales que debes de tener con la raza específica que estás comprando.
-</br>
+<br>
 - NUNCA compres una nueva mascota sin verla físicamente antes.
-</br>
+<br>
 - NUNCA hagas depósitos o transferencias bancarias a través de medios donde tu dinero no pueda ser
 rastreado, como lo son Money Gram y Western Union.
-</br>
+<br>
 - NUNCA pagues por un perro con registro de pedigree AKC si no te muestran los certificados, ya que
 corres el riesgo de que sea una estafa y nunca te los entreguen. Exige ver los papeles y asegúrate de
 que el nombre del criador esté en el certificado.
-</br>
+<br>
 - Cuando vayas a ver al vendedor, nunca vayas solo y revisa los alrededores.
-</br>
+<br>
 - El vendedor también debe estar interesado en ti y en manos de quién dejará a su perro.
 </div>
 
 
 </div>
 
-</br>
+<br>
 
 </div>
 
@@ -274,11 +274,11 @@ que el nombre del criador esté en el certificado.
                 </div>
                 <div class="descripcion_anuncio">
                     <font> Precio:&nbsp;$&nbsp;<?php echo substr($publicacion->precioVenta,0,9)?></font>
-                    <br/>
+                    <br>
                     <font> Raza: <?php $razita= $publicacion->raza;echo substr($razita, 0, 15); ?> </font>
-                    <br/>
+                    <br>
                     <font> Género: <?php echo $publicacion->genero?'Macho':'Hembra'?> </font>
-                    <br/>
+                    <br>
                     <font> Ciudad: <?php echo substr($publicacion->ciudad, 0, 8)?></font>
                 </div>
                 <div class="contenedor_foto_anuncio" id="contener_foto<?php echo $publicacion->publicacionID?>">
@@ -409,7 +409,7 @@ function buscar_anunciante(id){
                                 var telefono="---";
                                 }
 
-                         $(".datos_anunciante").append('</br><strong> Nombre de usuario:</strong> <font >'+data[i].nombre+' '+data[i].apellido+'</font></br><strong> Estado: </strong> <font >'+data[i].nombreEstado+'</font></br><strong> Ciudad: </strong> <font>'+data[i].ciudad+'</font></br><strong> Teléfono: </strong><font>'+telefono+'</font></br></br>');
+                         $(".datos_anunciante").append('<br><strong> Nombre de usuario:</strong> <font >'+data[i].nombre+' '+data[i].apellido+'</font><br><strong> Estado: </strong> <font >'+data[i].nombreEstado+'</font><br><strong> Ciudad: </strong> <font>'+data[i].ciudad+'</font><br><strong> Teléfono: </strong><font>'+telefono+'</font><br><br>');
 
 
             }
@@ -451,7 +451,7 @@ function buscar_anunciante_dos(id){
                                 var telefono="---";
                                 }
 
-                         $(".datos_anunciante_dos").append('</br><strong> Nombre de usuario:</strong> <font >'+data[i].nombre+' '+data[i].apellido+'</font></br><strong> Estado: </strong> <font >'+data[i].nombreEstado+'</font></br><strong> Ciudad: </strong> <font>'+data[i].ciudad+'</font></br><strong> Teléfono: </strong><font>'+telefono+'</font></br></br>');
+                         $(".datos_anunciante_dos").append('<br><strong> Nombre de usuario:</strong> <font >'+data[i].nombre+' '+data[i].apellido+'</font><br><strong> Estado: </strong> <font >'+data[i].nombreEstado+'</font><br><strong> Ciudad: </strong> <font>'+data[i].ciudad+'</font><br><strong> Teléfono: </strong><font>'+telefono+'</font><br><br>');
 
 
             }
@@ -547,7 +547,7 @@ function obten_id(id) {
                         cont_anun.append(cont_titulo);
 
                         var cont_descripcion = $('<div class="descripcion_anuncio"></div>');
-                        cont_descripcion.append('<font> Precio:&nbsp;$&nbsp;' + data[i].precioVenta + '</font> </br> <font> Raza &nbsp; : &nbsp; ' + data[i].raza.substring(0, 15) + ' </font></br> <font>Género&nbsp;:&nbsp;' + el_genero + '</font></br> <font>Ciudad&nbsp;:&nbsp;' + data[i].nombreEstado + '</font> ');
+                        cont_descripcion.append('<font> Precio:&nbsp;$&nbsp;' + data[i].precioVenta + '</font> <br> <font> Raza &nbsp; : &nbsp; ' + data[i].raza.substring(0, 15) + ' </font><br> <font>Género&nbsp;:&nbsp;' + el_genero + '</font><br> <font>Ciudad&nbsp;:&nbsp;' + data[i].nombreEstado + '</font> ');
                         cont_anun.append(cont_descripcion);
 
                         var cont_imagen = $('<div class="contenedor_foto_anuncio" id="contener_foto'+data[i].publicacionID+'" ></div>');
@@ -626,9 +626,9 @@ function buscar_detalles(id) {
 
                 $(".contenedor_galeria").append('<img src="' + data[i].foto + '" width="294" height="200" style=" top: 0px; left: 0px; display: block; z-index: 5; opacity: 1;"/>');
                 var cont_datos = $('.datos_general');
-                var cont_info = $(' <div class="titulo_anuncio_publicado">' + data[i].titulo + '</div></br><strong>Precio:&nbsp;$&nbsp;' + data[i].precioVenta + '</strong></br><font> Fecha de publicación:' + data[i].fechaCreacion + '</font></br><font>Sección: Venta</font></br><font>Raza:' + data[i].raza + '</font></br><font>Género:' + (data[i].genero ? 'Macho' : 'Hembra') + '</font></br><font>Lugar: ' + data[i].nombreEstado + '</font></br></br>');
+                var cont_info = $(' <div class="titulo_anuncio_publicado">' + data[i].titulo + '</div><br><strong>Precio:&nbsp;$&nbsp;' + data[i].precioVenta + '</strong><br><font> Fecha de publicación:' + data[i].fechaCreacion + '</font><br><font>Sección: Venta</font><br><font>Raza:' + data[i].raza + '</font><br><font>Género:' + (data[i].genero ? 'Macho' : 'Hembra') + '</font><br><font>Lugar: ' + data[i].nombreEstado + '</font><br><br>');
                 cont_datos.append(cont_info);
-                var botones = $('<ul class="boton_naranja"><li onclick="buscar_anunciante(\'' + data[i].publicacionID + '\')" class="btn_contactar">Contactar al anunciante</li> </ul> </br> <ul class="boton_gris"><li data-pub="' + data[i].publicacionID + '" class="btn_fvt"><img src="images/favorito.png"/>Agregar a Favoritos</li></ul><span id="info_fav"></span>');
+                var botones = $('<ul class="boton_naranja"><li onclick="buscar_anunciante(\'' + data[i].publicacionID + '\')" class="btn_contactar">Contactar al anunciante</li> </ul> <br> <ul class="boton_gris"><li data-pub="' + data[i].publicacionID + '" class="btn_fvt"><img src="images/favorito.png"/>Agregar a Favoritos</li></ul><span id="info_fav"></span>');
                 cont_datos.append(botones);
                 $('.descripcion_del_anuncio').append(data[i].descripcion);
                 if (data[i].paqueteID != '1'){
@@ -718,7 +718,7 @@ function buscar_videos(id){
 
 
                         var video=$('#you_tube');
-                        var direccion=$('<iframe src="'+data[i].link+'"></iframe> <br/><br/>');
+                        var direccion=$('<iframe src="'+data[i].link+'"></iframe> <br><br>');
                             video.append(direccion);
 
             }

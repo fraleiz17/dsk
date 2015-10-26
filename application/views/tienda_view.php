@@ -10,20 +10,20 @@
             </div>
             <div class="contactar_al_aunuciante">
                 <font class="titulo_anuncio_publicado"> CONTACTA AL ANUNCIANTE </font>
-                <br/>
-                <br/>
+                <br>
+                <br>
                 <strong> Nombre de usuario:</strong> Juanito Perez
-                <br/>
+                <br>
                 <strong> Estado: </strong> Hidalgo
-                <br/>
+                <br>
                 <strong> Ciudad: </strong> Actopan
-                <br/>
+                <br>
                 <strong> Teléfono: </strong> 372829102374746
-                <br/>
-                <br/>
+                <br>
+                <br>
                 <font class="titulo_anuncio_publicado"> PROPORCIONA TU INFORMACIÓN </font>
-                <br/>
-                <br/>
+                <br>
+                <br>
                 <input type="text" class="formu_contacto" id="nombre_contacto"
                        onfocus="clear_textbox('nombre_contacto', 'Nombre');" value="Nombre" size="44"/>
                 <input type="text" class="formu_contacto" id="mail_contacto" onfocus="clear_textbox('mail_contacto', 'Tu-email')"
@@ -32,8 +32,8 @@
                        onfocus="clear_textbox('asunto_contacto', 'Asunto')" value="Asunto" size="44"/>
                 <textarea cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto"
                           class="formu_contacto" rows="5">Comentarios</textarea>
-                <br/>
-                <br/>
+                <br>
+                <br>
                 <ul class="boton_naranja_tres">
                     <li>
                         Enviar
@@ -48,7 +48,7 @@
         </div>
         <div id="contenedor_central">
             <?php $this->load->view('general/contTest');?>
-            <div class="contenedor_central"><br/><br/>
+            <div class="contenedor_central"><br><br>
                 <?php if ($this->session->flashdata('info')): ?>
                     <?php echo $this->session->flashdata('info'); ?>
                 <?php endif; ?>
@@ -76,7 +76,7 @@
                                     <div class="contenedor_descripcion_precio_producto detalleProducto"
                                          id="<?php echo $item->productoID ?>">
                                         <font class="nombre_producto"><?php echo $item->nombre ?></font>
-                                        <br/>
+                                        <br>
                                         <font class="precio_producto"><?php echo '$' . $item->precio ?></font>
                                     </div>
 
@@ -103,7 +103,7 @@
                         <!-- FIN FILA ---->
                     </div>
                 </div>
-                <br/>
+                <br>
                 <?php echo $this->pagination->create_links(); ?>
 
                 <div style="margin: 0px auto; padding:10px; text-align:center;">
@@ -148,7 +148,7 @@
                  }
                  ?>
         </div>
-        <br/>
+        <br>
         <div class="division_menu_inferior"></div>
         <?php $this->load->view('general/footer_view'); ?>
         <div id="contenedor_publicar_anuncio" class="contenedor_publicar" style=" display:none">

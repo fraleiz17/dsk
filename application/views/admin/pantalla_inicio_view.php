@@ -171,7 +171,7 @@ AGREGAR IMAGEN
 
 <div class="contenido_intruciones">
 <p>Ingrese las imagenes para BP00001:</p>
-</br>
+<br>
 <input type="file" name="banner" id="banner" />
 
 

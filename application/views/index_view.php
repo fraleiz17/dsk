@@ -14,7 +14,7 @@
     </div>
 </div>
 <?php $this->load->view('general/menu_view'); ?>
-<div id="masterconteinerfull" style = "width:1000px; margin: 0 auto; display:block; overflow:hidden;"></br>
+<div id="masterconteinerfull" style = "width:1000px; margin: 0 auto; display:block; overflow:hidden;"><br>
 <div id="contenedor_central">
 <div id="espacio_izquierda" class="seccion_izquierda">
     <?php $this->load->view('general/contIzq.php'); ?>
@@ -122,7 +122,7 @@
             <?php else: ?>
                 <div class="precio_paquete_regular"> $<?php echo $paquetes[0]->precio ?></div>
             <?php endif; ?>
-        </div><br/>
+        </div><br>
         <div class="descripcion_paquetes">
             <strong>Incluye:</strong>
             <ul class="contenido_paquetes">
@@ -195,7 +195,7 @@
 
         </div>
         <div class="precio_paquete_regular"> $<?php echo $paquetes[1]->precio ?></div>
-        <br/>
+        <br>
 
         <div class="descripcion_paquetes">
             <strong>Incluye:</strong>
@@ -266,7 +266,7 @@
             <img src="<?php echo base_url() ?>images/perrito_premium.png" class="margen"/> <font
                 class="title_paquetes_titilos"> PAQUETE <?php echo strtoupper($paquetes[2]->nombrePaquete) ?> </font>
         </div>
-        <div class="precio_paquete_premium"> $<?php echo $paquetes[2]->precio ?></div><br/>
+        <div class="precio_paquete_premium"> $<?php echo $paquetes[2]->precio ?></div><br>
         <div class="descripcion_paquetes">
             <strong>Incluye:</strong>
             <ul class="contenido_paquetes">
@@ -336,8 +336,8 @@
                       <div class="sub_imagenes_dos"></div> 
                       <div id="ver_perdidos" class="" style=" display:none;"></div>';
                       else : ?>
-                <p><strong> Nombre:</strong> <?=substr($contenidosP->titulo,0,10)?>...<br/>
-                    <strong>Raza:</strong> <?=substr($contenidosP->raza,0,10)?>...<br/>
+                <p><strong> Nombre:</strong> <?=substr($contenidosP->titulo,0,10)?>...<br>
+                    <strong>Raza:</strong> <?=substr($contenidosP->raza,0,10)?>...<br>
                     <strong></strong> <?=substr($contenidosP->descripcion,0,20)?>...</p>
             </div>
             <div class="sub_imagenes_dos">
@@ -370,7 +370,7 @@
     <a href="<?php echo base_url() ?>evento" style="text-decoration:none; color:#000;" onmouseover="Mostrar('ver_mes');Ocultar('ver_raza'); Ocultar('ver_perdidos');Ocultar('ver_curiosos');">
         <div class="contenido_secciones">
             <p class="titulo_segunda_seccion"> EVENTOS DEL MES </p>
-            <p> <strong>Título:</strong> <?=$contenidosE[0]->nombre?><br />
+            <p> <strong>Título:</strong> <?=$contenidosE[0]->nombre?><br>
                 <strong>Fecha del evento:</strong> <?=$contenidosE[0]->fecha?>
             </p>
         </div>

@@ -123,7 +123,7 @@ DATOS CURIOSOS H
                 }
                 ?> 
 </div>
-</div></br></br></br></br>    
+</div><br><br><br><br>    
 <div class="division_menu_inferior"></div>
 <?php $this->load->view('general/footer_view');?>
 </body>

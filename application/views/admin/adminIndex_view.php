@@ -226,7 +226,7 @@ AGREGAR IMAGEN
 
 <div class="contenido_intruciones">
 <p>Ingrese las imagenes para BP00001:</p>
-</br>
+<br>
 <input type="file" name="banner" id="banner" />
 
 
@@ -421,7 +421,7 @@ ZONA- <label id="zonaNombre"><label id="nombreZona">Seleccione la zona</label></
 
 
 
-</br>
+<br>
 
 <!--       CONTENIDO SUPERIOR       -->
 <table class="tabla_carrito superior" width="990" style="display:none">

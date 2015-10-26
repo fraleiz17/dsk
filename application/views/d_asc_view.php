@@ -137,7 +137,7 @@ $this->load->view('general/general_header_view', array('title' => 'Detalles Dire
     });
 
 </script>
-<br/>
+<br>
 <div class="division_menu_inferior"> </div>
 <?php $this->load->view('general/footer_view'); ?>
 <?php //$this->load->view('partial/_pasos_anuncio_negocio'); ?>

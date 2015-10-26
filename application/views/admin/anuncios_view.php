@@ -29,36 +29,36 @@
             <div class="titulo_anuncio_publicado" id="titulo_anuncio_publicado">
                 
             </div>
-            <br/>
+            <br>
             <strong>
                 Precio: <span class="precio"></span>
             </strong>
 
-            <br/>
+            <br>
             <font> Fecha de publicacion:<span class="f_pub">12-06-2014</span></font>
-            <br/>
+            <br>
             <font>Sección: <span class="seccion">Venta</span></font>
-            <br/>
+            <br>
             <font>Raza: <span class="raza">Cairn Terrier</span></font>
-            <br/>
+            <br>
             <font>Género: <span class="genero">Macho</span></font>
-            <br/>
+            <br>
             <font>Lugar: <span class="ubicacion">Queretaro (Queretaro)</span></font>
-            <br/>
-            <br/>
+            <br>
+            <br>
             <ul class="boton_naranja">
                 <li onClick="muestra('contenedor_contactar');">
                     Contactar al anunciante
                 </li>
             </ul>
-            <br/>
+            <br>
             <ul class="boton_gris">
                 <li>
                     <img src="<?php echo base_url() ?>images/favorito.png"/>Agregar a Favoritos
                 </li>
             </ul>
         </div>
-        <br/>
+        <br>
         <div class="contenedor_del_detalle">
             <div class="titulo_anuncio_publicado">
                 MÁS DETALLES
@@ -67,14 +67,14 @@
                 ksdjfkjslfk fdglksj gkfdsjg jgfkdjgkfd gfdgkdf gfdskj fgsfkjg sdlkf gjkfdsg fdlkgjdfl glfdsjg dflkgj
                 dfgj flkgjf gjfd gfdjg fdlg fdlg fjgfd gjdslf gkgj lgjfgk gjfdkg lkgjf gjjkgj s
             </div>
-            <br/>
+            <br>
             <ul class="boton_naranja_dos">
                 <li id="ver_video" onClick="muestra('video');">
                     Ver video
                 </li>
             </ul>
             <div id="video" style="display:none;">
-                <br/>
+                <br>
                 <div class="titulo_anuncio_publicado">
                     VIDEO
                 </div>
@@ -94,27 +94,27 @@
             <div class="consejos_advertencias">
                 - QuierounPerro.com te invita a que antes de comprar pienses en adoptar, ya que hoy en día hay millones
                 de perros sin hogar que deben ser sacrificados.
-                <br/>
+                <br>
                 - Tener un perro conlleva una serie de responsabilidades, cuidados y atenciones que debes considerar
                 antes de comprar uno.
-                <br/>
+                <br>
                 - Infórmate de los cuidados especiales que debes de tener con la raza específica que estás comprando.
-                <br/>
+                <br>
                 - NUNCA compres una nueva mascota sin verla físicamente antes.
-                <br/>
+                <br>
                 - NUNCA hagas depósitos o transferencias bancarias a través de medios donde tu dinero no pueda ser
                 rastreado, como lo son Money Gram y Western Union.
-                <br/>
+                <br>
                 - NUNCA pagues por un perro con registro de pedigree AKC si no te muestran los certificados, ya que
                 corres el riesgo de que sea una estafa y nunca te los entreguen. Exige ver los papeles y asegúrate de
                 que el nombre del criador esté en el certificado.
-                <br/>
+                <br>
                 - Cuando vayas a ver al vendedor, nunca vayas solo y revisa los alrededores.
-                <br/>
+                <br>
                 - El vendedor también debe estar interesado en ti y en manos de quién dejará a su perro.
             </div>
         </div>
-        <br/>
+        <br>
     </div>
 </div>
 
@@ -168,7 +168,7 @@
         </div>
     </form>
     <div id="subtitulo" class="subtitulo"></div>
-    <br/>
+    <br>
     <table id="lista_anuncios" class="tabla_carrito" width="990">
         <thead>
         <tr>
@@ -222,7 +222,7 @@ function buscar_videos(id){
 						if(data[i].link != ''){
                        //$(".boton_naranja_dos").fadeIn();
                         var video=$('#you_tube');
-						var direccion=$('<iframe src="'+data[i].link+'"></iframe> <br/><br/>');
+						var direccion=$('<iframe src="'+data[i].link+'"></iframe> <br><br>');
 						    video.append(direccion);
                         } else {
                             $(".boton_naranja_dos").fadeOut();

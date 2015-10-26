@@ -107,10 +107,10 @@ foreach ($fotoscontenido as $fc){
                 ?> 
  </div>
  </div>     
-</br>
-</br>
-</br>
-</br>    
+<br>
+<br>
+<br>
+<br>    
 <div class="division_menu_inferior"></div>
 <?php $this->load->view('general/footer_view');?>
 </body>

@@ -48,7 +48,7 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
 </div>
 <div id="contenedor_central">
     <?php $this->load->view('general/contTest');?>
-   <div class="contenedor_central" style="margin-bottom:45px;"><br/>
+   <div class="contenedor_central" style="margin-bottom:45px;"><br>
         <ul id="itemContainer_negocio" style="min-height:100px; display:inline-block;">
             <?php if ($directorios['count'] > 0): ?>
                 <?php $fila = 1; ?>
@@ -73,7 +73,7 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
                         </div>
 
                         <div class="contenedor_descripcion_negocio">
-                            <?php echo $directorio->nombreGiro ?><br/>
+                            <?php echo $directorio->nombreGiro ?><br>
                             <?php echo $directorio->telefono ?>
                         </div>
 
@@ -99,8 +99,8 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
                 <div class="alert alert-warning">No hay resultados.</div>
             <?php endif; ?>
         </ul>
-        <br/>
-        <br/>
+        <br>
+        <br>
         <div style="margin: 0px auto; width:778px; padding:10px; text-align:center; position: relative; margin-top:0px; height:40px;">
             <div class="holder">  </div>
         </div>
@@ -124,34 +124,34 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
         <div class="datos_general">
             <div class="titulo_anuncio_publicado">
                 EL MUNDO DE LAS MASCOTAS
-            </div><br/>
-            <strong>ACCESORIOS PARA MASCOTAS</strong><br/>
-            <font> Fecha de publicacion:12-06-2014</font><br/>
-            <font>Lugar: Queretaro (Queretaro)</font><br/>
-            <font>Municipio: Queretaro (Queretaro)</font><br/>
-            <font>Colonia: Queretaro (Queretaro)</font><br/>
-            <font>Calle:</font><br/>
-            <font>Número:</font><br/>
-            <font>Página Web:</font><br/><br/>
+            </div><br>
+            <strong>ACCESORIOS PARA MASCOTAS</strong><br>
+            <font> Fecha de publicacion:12-06-2014</font><br>
+            <font>Lugar: Queretaro (Queretaro)</font><br>
+            <font>Municipio: Queretaro (Queretaro)</font><br>
+            <font>Colonia: Queretaro (Queretaro)</font><br>
+            <font>Calle:</font><br>
+            <font>Número:</font><br>
+            <font>Página Web:</font><br><br>
             <ul class="boton_naranja">
                 <li onclick="muestra('contenedor_contactar');">
                     Contactar al anunciante
                 </li>
             </ul>
-            <br/>
+            <br>
             <ul class="boton_gris">
                 <li>
                     <img src="<?php echo base_url() ?>images/favorito.png"/>Agregar a Favoritos
                 </li>
             </ul>
-        </div><br/>
+        </div><br>
         <div class="contenedor_del_detalle">
             <div class="titulo_anuncio_publicado">
                 MÁS DETALLES
             </div>
             <div class="descripcion_del_anuncio">
             </div>
-            <br/>
+            <br>
             <ul class="boton_naranja_dos">
                 <li id="ver_ubicación" onclick="muestra('ubicacion_negocio');">
                     Ver Ubicación
@@ -159,11 +159,11 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
             </ul>
 
             <div id="ubicacion_negocio" style="display:none;">
-                <br/>
+                <br>
                 <div class="mapa_negocio">
                     MAPA
                 </div>
-                <br/>
+                <br>
             </div>
             <ul class="boton_rojo_dos">
                 <li>
@@ -173,22 +173,22 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
             </ul>
             <div class="consejos_advertencias">
                 - QuierounPerro.com te invita a que antes de comprar pienses en adoptar, ya que hoy en día hay millones de perros sin hogar que deben ser sacrificados.
-                <br/>
+                <br>
                 - Tener un perro conlleva una serie de responsabilidades, cuidados y atenciones que debes considerar antes de comprar uno.
-                <br/>
+                <br>
                 - Infórmate de los cuidados especiales que debes de tener con la raza específica que estás comprando.
-                <br/>
+                <br>
                 - NUNCA compres una nueva mascota sin verla físicamente antes.
-                <br/>
+                <br>
                 - NUNCA hagas depósitos o transferencias bancarias a través de medios donde tu dinero no pueda ser rastreado, como lo son Money Gram y Western Union.
-                <br/>
+                <br>
                 - NUNCA pagues por un perro con registro de pedigree AKC si no te muestran los certificados, ya que corres el riesgo de que sea una estafa y nunca te los entreguen. Exige ver los papeles y asegúrate de que el nombre del criador esté en el certificado.
-                <br/>
+                <br>
                 - Cuando vayas a ver al vendedor, nunca vayas solo y revisa los alrededores.
-                <br/>
+                <br>
                 - El vendedor también debe estar interesado en ti y en manos de quién dejará a su perro.
             </div>
-            <br/>
+            <br>
         </div>
     </div>
 </div>
@@ -198,26 +198,26 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
     </div>
     <div class="contactar_al_aunuciante_negocio">
         <font class="titulo_anuncio_publicado"> CONTACTA AL ANUNCIANTE </font>
-        <br/>
-        <br/>
+        <br>
+        <br>
         <strong> Nombre del negocio:</strong> Mundo de las mascotas
-        <br/>
+        <br>
         <strong> Estado: </strong> Hidalgo
-        <br/>
+        <br>
         <strong> Ciudad: </strong> Actopan
-        <br/>
+        <br>
         <strong> Teléfono: </strong> 372829102374746
-        <br/>
-        <br/>
+        <br>
+        <br>
         <font class="titulo_anuncio_publicado"> PROPORCIONA TU INFORMACIÓN </font>
-        <br/>
-        <br/>
+        <br>
+        <br>
         <input type="text" class="formu_contacto" id="nombre_contacto" onfocus="clear_textbox('nombre_contacto', 'Nombre');" value="Nombre" size="44" />
         <input type="text" class="formu_contacto" id="mail_contacto" onfocus="clear_textbox('mail_contacto', 'Tu-email')" value="Tu-email" size="44" />
         <input type="text" class="formu_contacto" id="asunto_contacto" onfocus="clear_textbox('asunto_contacto', 'Asunto')" value="Asunto" size="44" />
         <textarea cols="50" onfocus="clear_textbox('comentarios_contacto', 'Comentarios')" id="comentarios_contacto" class="formu_contacto" rows="5">Comentarios</textarea>
-        <br/>
-        <br/>
+        <br>
+        <br>
         <ul class="boton_naranja_tres">
             <li>
                 Enviar
@@ -314,7 +314,7 @@ $this->load->view('general/general_header_view', array('title' => 'Directorio',
                         cont_nombre.append('<strong>' + data[i].nombreNegocio + '</strong>');
                         cont_neg.append(cont_nombre);
                         var cont_descrip = $('<div class="contenedor_descripcion_negocio"></div>');
-                        cont_descrip.append(data[i].nombreGiro + '<br/>' + data[i].telefono);
+                        cont_descrip.append(data[i].nombreGiro + '<br>' + data[i].telefono);
                         cont_neg.append(cont_descrip);
 <?php if ($this->session->userdata('idUsuario') !== FALSE): ?>
                             var ver_mas = $('<ul class="ver_mas_negocio"><li onclick=" javascript:window.location.href=\'<?php echo base_url() ?>directorio/detalles/' + data[i].idUsuario + '\'">Ver más...</li></ul>');

@@ -8,18 +8,18 @@
 <img src="<?php echo base_url()?>images/icono_perfil.png"/>
 </div>
 <p class="bienvenido"> ¡Bienvenido! </p>
-</br>
-</br>
-</br>
+<br>
+<br>
+<br>
 <p class="usuario_bienvenido"><?=$myInfo->nombre.' '.$myInfo->apellido;?></p>
 </div>
-</br>
+<br>
 <form style = "margin-top:-160px;" action="<?= base_url() ?>usuario/cuenta/updateMiPerfilB" id="mpB" method="post">
 <div class="contenedor_formulario">
 <p>Nombre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input name="nombre" type="text" class="background_morado" id="nombre" value="<?=$myInfo->nombre;?>" readonly="readonly"/> </p>
-</br>
+<br>
 <p>E-mail: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input name="correo" type="text" class="background_morado" id="correo" value="<?=$this->session->userdata('correo');?>" readonly="readonly"/> </p>
-</br>
+<br>
 <p></p>
 </div>
 <div class="margen_div">
@@ -28,9 +28,9 @@
 
 <div class="contenedor_formulario">
 <p>Apellido: <input name="apellido" type="text" class="background_morado" id="apellido" value="<?=$myInfo->apellido;?>"/> </p>
-</br>
+<br>
 <p>Teléfono: <input name="telefono" type="text" class="gris_input" id="telefono" value="<?=$myInfo->telefono;?>"/> </p>
-</br>
+<br>
 <p>Estado: &nbsp;&nbsp;&nbsp;<select name="estadoID" class="gris_input" id="estadoID"> 		  <option value="">Seleccione</option>
            <?php
 
@@ -146,4 +146,4 @@
 </ul>
 </div>
 </form>
-</br>
+<br>

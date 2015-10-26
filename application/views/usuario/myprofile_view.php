@@ -176,8 +176,8 @@ function getView(viewURL){
 
 </div>
 
-</br>
-</br>
+<br>
+<br>
 <ul class="morado_boton">
 <li>
 <input type="submit" value="Guardar" class="el_submit"/>
@@ -205,7 +205,7 @@ Se ha enviado una copia al email: <?=$this->session->userdata('correo');?>
 
 </div>
 
-</br>
+<br>
 </div>
 </div>
 
@@ -226,7 +226,7 @@ Se ha enviado una copia al email: <?=$this->session->userdata('correo');?>
 
 </div>
 
-</br>
+<br>
 </div>
 </div>
 

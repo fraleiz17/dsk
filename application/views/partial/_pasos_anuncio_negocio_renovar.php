@@ -67,7 +67,7 @@
                     <img src="<?php echo base_url() ?>images/cerrar.png" id="cerrarPublicacion"/>
                     
                 </div>
-                <br/>            
+                <br>            
                 <!-- Inicio Paso UNO -->
                 <div id="paso_uno_negocio" class="paso view_step">
 
@@ -95,7 +95,7 @@
                                             <?php echo $giro->nombreGiro; ?>
                                             <input type="hidden" name="<?=$giro->nombreGiro?>" id="giro_<?php echo ($index + 1) ?>_form" value="<?=$giro->logo?>" />
                                         </label>
-                                        <br />
+                                        <br>
                                     <?php endif; ?>
                                 <?php endforeach; ?>
                             </div>
@@ -108,20 +108,20 @@
                                             <?php echo $giro->nombreGiro; ?>
                                             <input type="hidden" name="<?=$giro->nombreGiro?>" id="giro_<?php echo ($index + 1) ?>_form" value="<?=$giro->logo?>" />
                                         </label>
-                                        <br />
+                                        <br>
                                     <?php endif; ?>
                                 <?php endforeach; ?>
                             </div>
                         <?php endif; ?>
-                            <br/>                        
+                            <br>                        
                             <div>
                                 <ul class="morado_directorio">
                                     <li class="sig_paso">
                                         Continuar
                                     </li>
                                 </ul>
-                                <br/>
-                                <br/>
+                                <br>
+                                <br>
                                 <div id="msj_paso" style="font-size: 10px;display: inline-block; vertical-align: bottom; height: 38px;"></div>
                             </div>                        
                         </div>
@@ -135,7 +135,7 @@
                         <div class="titulo_de_pasos"> PUBLICAR EN DIRECTORIO </div>
                         <div class="instrucciones_pasos"> Planes</div>
                         <div class="contenido_indicacion">
-                            <br/>
+                            <br>
                             <table class="tabla_pago"  width="500" style=" margin-left:167px;">
                                 <tr>
                                     <th>
@@ -171,16 +171,16 @@
                             <? endif;?>
                             </table>
 
-                            <br/>
-                            <br/>
+                            <br>
+                            <br>
                             <div>
                                 <ul class="morado_directorio">
                                     <li class="sig_paso">
                                         Continuar
                                     </li>
                                 </ul>
-                                <br/>
-                                <br/>
+                                <br>
+                                <br>
                                 <div id="msj_paso" style="font-size: 10px;display: inline-block; vertical-align: bottom; height: 38px;"></div>
                             </div>  
                         </div>
@@ -199,7 +199,7 @@
                                 <label>Apellido:</label><input name="apellido_negocio" id="apellido_negocioT" value="<?php echo $user->apellido; ?>" type="text" class="background_morado_35 validate[required]" readonly="readonly" required="required"/>  
                                 <label>Correo electrónico:</label><input name="email_negocio" value="<?php echo $user->correo; ?>" type="text" class="background_morado validate[required, custom[email]]" readonly="readonly" required="required"/>
                             </p>
-                            <br/>
+                            <br>
                             <p class="margen_15_left"> 
                                 <label>Teléfono:</label><input name="telefono_negocio" id="telefono_negocioT" value="<?php echo $user->telefono; ?>" type="text" class="background_gris_35 validate[required, custom[phone]]" required="required"/> 
                                 <label>Mostrar teléfono en el anuncio:</label><select name="muestra_telefono_negocio" class="background_gris validate[required]" id="muestra_telefono_negocioS" required="required">
@@ -209,19 +209,19 @@
                                 </select>
 
                             </p>
-                            <br/>
+                            <br>
                             <p class="margen_15_left"> 
                                 <label>Nombre del negocio:</label>
                                 <input name="nombre_negocio_form" type="text" class="background_gris_55 validate[required] form-validation-field-1"  value="<?php echo $user->nombreNegocio ?>" id="nombre_negocioTT"/>
                             </p>
-                            <br/>
+                            <br>
                             <div class="sub_instrucciones_pasos"> Horarios atención </div>
-                            <br/>
+                            <br>
                             <p>
                                 <label>Favor de colocar el horario y días de atención.</label> <textarea name="horarios_negocio" class="background_gris validate[required]" cols="95" rows="6" id="horarios_negocioT"></textarea>
                             </p>
                             <div class="sub_instrucciones_pasos"> Detalles del anuncio </div>
-                            <br/>
+                            <br>
                             <div id="body_form_partial">
                                 <p class="margen_15_left">
                                     <label>Estado:</label><select name="estado_negocio" class="background_gris_100 validate[required]">
@@ -232,14 +232,14 @@
                                     </select>
                                     <label>Municipio:</label><input name="ciudad_negocio" value="<?php echo $user->municipio; ?>" class="background_gris_100 validate[required]"/>
                                     <label>Colonia:</label><input name="colonia_negocio" value="<?php echo $user->colonia; ?>" type="text" class="background_gris validate[required]"/> </p>
-                                <br/>
+                                <br>
 
                                 <p class="margen_15_left"> 
                                     <label>Calle:</label><input name="calle_negocio" type="text" value="<?php echo $user->calle; ?>" class="background_gris_55 validate[required]"  /> 
                                     <label>Número:</label><input name="numero_negocio" type="text" value="<?php echo $user->noExterior; ?>" class="background_gris validate[required]" />
                                     <label>Vencimiento:</label><input name="vencimiento_negocio" class="background_morado validate[required]" type="text" readonly/>
                                 </p>
-                                <br/>
+                                <br>
 
                                 <p class="margen_15_left"> 
                                     <label>CP:</label><input name="cp_negocio" value="<?php echo $user->cp; ?>" type="text" class="background_gris_55 validate[required,maxSize[5],minSize[5],custom[integer]]"/> 
@@ -247,19 +247,19 @@
                                     <label>Pagina Web:</label><input name="pagina_web_negocio" id="pagina_web_negocioT" value="<?php echo $user->paginaWeb; ?>" class="background_gris validate[required,custom[url]]" type="text" placeholder="http://www.ejemplo.com" title="http://www.ejemplo.com"/>
                                 </p>
                             </div>
-                            <br/>
+                            <br>
                             <p class="margen_15_left">
                                 <label>Descripción:</label><textarea name="descripcion_negocio" class="background_gris validate[required]" cols="95" rows="3" id="descripcion_negocioT" ><?php echo $user->descripcion; ?></textarea>
                             </p>
-                            <br/>
+                            <br>
                             <p class="margen_15_left">
-                                <label><strong>Ubicación:</strong></label><br/>
+                                <label><strong>Ubicación:</strong></label><br>
                                 <label>Arraste el puntero rojo hasta la ubicación de su negocio para almacenarla.</label>
                             <div id="mapa_negocio" style="height: 300px;"></div>
                             <input type="hidden" value="" name="latitud_negocio" id="latitud_negocio"/>
                             <input type="hidden" value="" name="longitud_negocio" id="longitud_negocio"/>
                             </p>
-                            <br/>
+                            <br>
                             <p class="margen_15_left">
                             <div id="fileuploader" >
                                 Seleccionar Logotipo
@@ -282,8 +282,8 @@
                                         Continuar
                                     </li>
                                 </ul>
-                                <br/>
-                                <br/>
+                                <br>
+                                <br>
                                 <div id="msj_paso" style="font-size: 10px;display: inline-block; vertical-align: bottom; height: 38px;"></div>
                             </div> 
                         </div>
@@ -344,13 +344,13 @@
                             <div id="mapa_selected" class="contenedor_del_mapa_mini"></div>
                             <div class="contenedor_horarios_mini">
                                 <div class="contenedor_titulo_informcacion_mini"> HORARIOS </div>
-                                <br/>
+                                <br>
                                 <div id="horarios_negocio" class="contenedor_datos_horario_mini" style="word-break: normal; word-wrap: break-word;">
 
                                 </div>
                             </div>
                         </div>
-                        <br/>
+                        <br>
 
                         <div>
                             <!--<ul class="morado_15_sinmargen" >
@@ -363,7 +363,7 @@
                                         Continuar
                                     </li>
                                 </ul>
-                            <br/>
+                            <br>
                             <div id="msj_paso" style="font-size: 10px;display: inline-block; vertical-align: bottom; height: 38px;"></div>
                         </div>
                     </div>
@@ -373,7 +373,7 @@
                     <div class="descipcion_pasos_mediano">
                         <div class="titulo_de_pasos"> PUBLICAR EN DIRECTORIO </div>
                         <div class="instrucciones_pasos"> Detalle de compra: </div>
-                        <br/>
+                        <br>
                         <table class="tabla_pago" style="margin-left:70px;" width="700">
                             <tr>
                                 <th width="158">
@@ -425,7 +425,7 @@
                             </th>
                             </tr>
                         </table>
-                        <br/>
+                        <br>
                         <div>
                             <ul class="morado_directorio">
                                 <li class="sig_paso">
@@ -435,8 +435,8 @@
                                     <input type="submit" id="test" value="comprar"/>
                                 </li>
                             </ul>
-                            <br/>
-                            <br/>
+                            <br>
+                            <br>
                             <div id="msj_paso" style="font-size: 10px;display: inline-block; vertical-align: bottom; height: 38px;"></div>
                         </div>                    
                     </div>
@@ -448,7 +448,7 @@
                         <div class="titulo_de_pasos"> PUBLICAR EN DIRECTORIO </div>
                         <div class="instrucciones_pasos"> Pago del directorio: </div>
                         <div id="iframe"></div>
-                        <br/>
+                        <br>
                     </div>
                 </div>
             </form>

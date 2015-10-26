@@ -21,7 +21,7 @@
                         <img src="<?= base_url() ?>images/productos/default.png" width="279" height="279"/>
                         <?php } ?>
                     </div>
-                </div><br/>
+                </div><br>
                 <div class="titulo_producto">
                     <?= $detalleAnuncio->nombre ?>
                 </div>

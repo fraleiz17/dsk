@@ -50,11 +50,11 @@
                     <input type="submit" class="el_submit"/>
                 </li>
             </ul>
-            </br>
+            <br>
             <div class="subrayado" onclick="muestra('envio_con');oculta('ingreso_normal');">¿Olvidaste contraseña?</div>
             <div class="subrayado" onclick="muestra('contenedor_registro');oculta('contenedor_login');"> Crear cuenta
             </div>
-            </br>
+            <br>
             
             </div>
 </form>
@@ -62,7 +62,7 @@
             
             <div id="envio_con" class="envio_con">
             <form action="<?= base_url() ?>recuperarcontrasena/sendLink" id="recuperarcontrasena" method="post">
-                </br>
+                <br>
                 <div class="titulo_registro"></div>
                 <div class="texto_inputs">
                 <p> Ingresa tu correo:</p>
@@ -86,7 +86,7 @@
             </ul>
             
             </form>
-            </br>
+            <br>
             </div>
             
             <div id="confirmacionCambio" style="display:none; padding:20px;">
@@ -138,7 +138,7 @@
 <p><input type="text" name="telefono" class="validate[custom[onlyNumberSp],minSize[10]]"/></p>
 
 <p><input type="password" name="contrasena"  id="contrasena1" class="validate[required],minSize[6],maxSize[12]"/> *</p>
-</br>
+<br>
 <p><input type="password" name="confirmar"  id="contrasena2" class="validate[required,equals[contrasena1]]"/> *</p>
 
 
@@ -160,7 +160,7 @@
                                                                                               class="css-label radGroup2"
                                                                                               onclick="obtener_usuario('datos_faltantes_asociacion'); oculta('datos_faltantes_usuario');oculta('datos_faltantes_negocio');oculta('ocultar_info_adicional');oculta('ocultar_info_adicional');muestra('llenar_info_adicional');">
         Asociación </label>
-    </br>
+    <br>
     <p><input name="recibirCorreo" type="checkbox" value="1" checked="checked" /> <label> Quiero recibir información acerca de
             promociones </label></p>
 
@@ -170,7 +170,7 @@
 
     <font class="asterisco">Los datos marcados con un astrisco (*) son obligatorios </font>
 </div>
-</br>
+<br>
 <div class="llenar_info_adicional" id="llenar_info_adicional"
      onclick="mostrar_formulario(); muestra('ocultar_info_adicional'); oculta('llenar_info_adicional');showMap();">
     <input type="hidden" id="elegir_usuario" value="datos_faltantes_usuario"/>
@@ -184,7 +184,7 @@
 </div>
 
 <div id="datos_faltantes_usuario" class="datos_faltantes_usuario" style="display:none;">
-    </br>
+    <br>
     <div class="datos_fiscales"> Datos fiscales</div>
 
 
@@ -318,17 +318,17 @@
                 <input type="hidden" name="CheckboxGroup1[]" id="CheckboxGroup1[]" value="0"/>
                 <input type="checkbox" name="CheckboxGroup1[]" value="1" id="CheckboxGroup1_0"/>
                 Accesorios para mascotas</label>
-            </br>
+            <br>
             <label>
                 <input type="checkbox" name="CheckboxGroup1[]" value="2" id="CheckboxGroup1_1"/>
                 Veterinaria</label>
-            </br>
+            <br>
 
             <label>
                 <input type="checkbox" name="CheckboxGroup1[]" value="3" id="CheckboxGroup1_2"/>
                 Estetica canina</label>
             <label>
-                </br>
+                <br>
                 <input type="checkbox" name="CheckboxGroup1[]" value="4" id="CheckboxGroup1_3"/>
                 Adiestramiento canino</label>
 
@@ -339,18 +339,18 @@
             <label>
                 <input type="checkbox" name="CheckboxGroup1[]" value="5" id="CheckboxGroup1_4"/>
                 Centro de sociabilización</label>
-            </br>
+            <br>
 
             <label>
                 <input type="checkbox" name="CheckboxGroup1[]" value="6" id="CheckboxGroup1_5"/>
                 Criadero de perros</label>
-            </br>
+            <br>
 
             <label>
                 <input type="checkbox" name="CheckboxGroup1[]" value="7" id="CheckboxGroup1_6"/>
                 Hotel y pensión canina</label>
             <label>
-                </br>
+                <br>
                 <input type="checkbox" name="CheckboxGroup1[]" value="8" id="CheckboxGroup1_7"/>
                 Alimento y medicamento </label>
 
@@ -360,17 +360,17 @@
             <label>
                 <input type="checkbox" name="CheckboxGroup1[]" value="9" id="CheckboxGroup1_8"/>
                 Guarderia de perros</label>
-            </br>
+            <br>
             <label>
                 <input type="checkbox" name="CheckboxGroup1[]" value="10" id="CheckboxGroup1_9"/>
                 Tienda de mascotas</label>
-            </br>
+            <br>
 
             <label>
                 <input type="checkbox" name="CheckboxGroup1[]" value="11" id="CheckboxGroup1_10"/>
                 Servicios funerarios</label>
             <label>
-                </br>
+                <br>
                 <input type="checkbox" name="CheckboxGroup1[]" value="12" id="CheckboxGroup1_11"/>
                 Servico de paseo</label>
 
@@ -443,7 +443,7 @@
         <p><textarea rows="3" cols="40" style="margin-top:3px;" name="descripcionN1"> </textarea></p>
 
          <p style="font-size:80%;margin-top:49px;">Desplace el puntero hacia su ubicaci&oacute;n.</p>
-        <br/><br/>
+        <br><br>
     </div>
 
 
@@ -577,7 +577,7 @@
         <p><textarea rows="3" cols="40" style="margin-top:3px;" name="descripcionAC1"> </textarea></p>
 
         <p style="font-size:80%;margin-top:49px;">Desplace el puntero hacia su ubicaci&oacute;n.</p>
-        <br/><br/>
+        <br><br>
     </div>
 
 
@@ -592,7 +592,7 @@
 <input type="hidden" name="newLat" id="newLat" value=""/>
 <input type="hidden" name="newLng" id="newLng" value=""/>
 
-</br>
+<br>
 <ul class="morado_reg">
     <li><!--<a href="#" id="suscribir" style="text-decoration:none; color:#FFF;">Suscribirse</a>-->
         <input type="submit" value="Suscribir" class="el_submit"/>
@@ -621,20 +621,20 @@
     <div class="registro_normal"> <!-- Contenedor morado registro -->
 
         <div class="titulo_registro"> REGISTRATE</div>
-        </br>
+        <br>
         <div class="imagen_confirmacion">
             <img src="<?php echo base_url() ?>images/palomita.png"/>
         </div>
         <div class="contenido_confirmacion">
             <strong> Correcto </strong>
-            </br></br>
+            <br><br>
             <div> Bienvenido</div>
             <div id="confirm">
             </div>
 
         </div>
     </div>
-    </br>
+    <br>
 
 
 </div>
@@ -653,19 +653,19 @@
     <div class="registro_normal"> <!-- Contenedor morado registro -->
 
         <div class="titulo_registro"> REGISTRATE</div>
-        </br>
+        <br>
         <div class="imagen_confirmacion">
             <img src="<?php echo base_url() ?>images/tache.png"/>
         </div>
         <div class="contenido_confirmacion">
             <strong> Ha ocurrido un error </strong>
-            </br>
+            <br>
             <div id="specificError">
 
             </div>
         </div>
     </div>
-    </br>
+    <br>
 
 </div>
 

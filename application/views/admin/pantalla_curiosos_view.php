@@ -204,7 +204,7 @@ AGREGAR IMAGEN
 
 <div class="contenido_intruciones">
 <p>Ingrese las imagenes para BP00001:</p>
-</br>
+<br>
 <input type="file" name="banner" id="banner" />
 
 
@@ -238,7 +238,7 @@ AGREGAR TEXTO
 </div>
 <div class="contenido_intruciones">
 <p>Ingrese las imagenes para BP00001:</p>
-</br>
+<br>
 <input type="file" name="imagenesArticulo[]" id="imagenesArticulo" multiple="multiple"/>
 
 </div>
@@ -414,9 +414,9 @@ ZONA- <label id="zonaNombre"><label id="nombreZona"><?=$zonaNombre->zona?></labe
 <div class="titulo_modificaciones"> 
 EDITAR DATO
 </div>
-<br />
+<br>
 <div class="contenido_intruciones">
-</br>
+<br>
 <input type="hidden" name="zonaRaza" id="zonaRaza" class="zonaRaza" value="9" />
 <table > 
 <tr> 
@@ -471,9 +471,9 @@ EDITAR DATO
 <div class="titulo_modificaciones"> 
 AGREGAR DATO
 </div>
-<br />
+<br>
 <div class="contenido_intruciones">
-</br>
+<br>
 <input type="hidden" name="zonaRaza" id="zonaRaza" class="zonaRaza" value="9" />
 <table > 
 <tr> 
@@ -502,7 +502,7 @@ AGREGAR DATO
 
 </div> <!-- Fin contenedor negro imagenes -->
 <!--FIN DATOS CURIOSOS-->
-</br>
+<br>
 
 <!--       CONTENIDO SUPERIOR       -->
 <table class="tabla_carrito superior" width="990" style="display:none">

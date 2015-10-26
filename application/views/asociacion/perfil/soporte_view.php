@@ -34,13 +34,13 @@
 </div>
 <div class="admin_title"> Contáctanos </div>
 </div>
-</br>
+<br>
 <form action="<?=base_url()?>usuario/cuenta/correoSoporte" method="post" id="correoSoporte">
 <p>Asunto: <input class="gris_input" type="text" required="required" size="45" name="asunto" id="asunto"/> </p>
-</br>
+<br>
 <p> 
 Descripción:
-</br>
+<br>
 <textarea class="gris_input" rows="14" cols="97" name="descripcion" id="descripcion" required="required"></textarea>
 
 </p>

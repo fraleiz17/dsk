@@ -9,7 +9,7 @@
 </div>
 <div class="admin_title"> Mis facturas </div>
 </div>
-</br>
+<br>
 <table class="tabla_perfil" width="795"> 
 <tr> 
 <th width="137"> Código Compra </th>

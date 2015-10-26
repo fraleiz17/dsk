@@ -179,7 +179,7 @@ $(document).ready(function(){
 <p><input type="text" name="correo"/> *</p>
 <p><input type="password" name="contrasena"/> *</p>
 </div>
-</br>
+<br>
 <ul class="morado_reg">
 <li>
 <input type="submit" />
@@ -192,7 +192,7 @@ $(document).ready(function(){
 Se ha enviado contraseña al correo electronico indicado
 </div>
 <div class="subrayado" onclick="muestra('contenedor_registro');oculta('contenedor_login');"> Crear cuenta </div>
-</br>
+<br>
 
 </div>
 
@@ -242,7 +242,7 @@ Se ha enviado contraseña al correo electronico indicado
 <p><input type="text" name="telefono" class="validate[custom[integer]]"/></p>
 
 <p><input type="password" name="contrasena"  id="contrasena1" class="validate[required]"/> *</p>
-</br>
+<br>
 <p><input type="password" name="confirmar"  id="contrasena2" class="validate[required,equals[contrasena1]]"/> *</p>
 
 
@@ -255,7 +255,7 @@ Se ha enviado contraseña al correo electronico indicado
 <label for="radio2" class="css-label radGroup2" onclick="obtener_usuario('datos_faltantes_negocio');oculta('datos_faltantes_usuario');oculta('datos_faltantes_asociacion');oculta('ocultar_info_adicional');oculta('ocultar_info_adicional');muestra('llenar_info_adicional');"> Negocio </label>
 &nbsp;&nbsp;
 <input type="radio" name="radiog_dark" id="radio3" class="css-checkbox" value="3"/><label for="radio3" class="css-label radGroup2"  onclick="obtener_usuario('datos_faltantes_asociacion'); oculta('datos_faltantes_usuario');oculta('datos_faltantes_negocio');oculta('ocultar_info_adicional');oculta('ocultar_info_adicional');muestra('llenar_info_adicional');"> Asociación </label>
-</br>
+<br>
 <p><input name="recibirCorreo" type="checkbox" value="1" /> <label> Quiero recibir información acerca de promociones </label></p>
 
 
@@ -264,7 +264,7 @@ Se ha enviado contraseña al correo electronico indicado
 
 <font class="asterisco">Los datos marcados con un astrisco (*) son obligatorios </font>
  </div>
- </br>
+ <br>
 <div class="llenar_info_adicional" id="llenar_info_adicional" onclick="mostrar_formulario(); muestra('ocultar_info_adicional'); oculta('llenar_info_adicional');showMap();">
 <input type="hidden" id="elegir_usuario" value="datos_faltantes_usuario"/>
  <img src="<?php echo base_url()?>images/flecha_blanca.png"/> Llenar información adicional </div>
@@ -273,7 +273,7 @@ Se ha enviado contraseña al correo electronico indicado
  <img src="<?php echo base_url()?>images/flecha_blanca.png"/> Despues llenar información </div>
 
 <div id="datos_faltantes_usuario" class="datos_faltantes_usuario" style="display:none;">
-</br>
+<br>
 <div class="datos_fiscales"> Datos fiscales </div>
 
 
@@ -419,17 +419,17 @@ Nombre:
       <input type="hidden" name="CheckboxGroup1[]" id="CheckboxGroup1[]" value="0" />
       <input type="checkbox" name="CheckboxGroup1[]" value="1" id="CheckboxGroup1_0" />
       Accesorios para mascotas</label>
-    </br>
+    <br>
     <label>
       <input type="checkbox" name="CheckboxGroup1[]" value="2" id="CheckboxGroup1_1" />
       Veterinaria</label>
-  </br>
+  <br>
   
      <label>
       <input type="checkbox" name="CheckboxGroup1[]" value="3" id="CheckboxGroup1_2" />
       Estetica canina</label>
           <label>
-          </br>
+          <br>
       <input type="checkbox" name="CheckboxGroup1[]" value="4" id="CheckboxGroup1_3" />
     Adiestramiento canino</label>
     
@@ -441,18 +441,18 @@ Nombre:
     <label>
       <input type="checkbox" name="CheckboxGroup1[]" value="5" id="CheckboxGroup1_4" />
      Centro de sociabilización</label>
-    </br>
+    <br>
 
     <label>
       <input type="checkbox" name="CheckboxGroup1[]" value="6" id="CheckboxGroup1_5" />
      Criadero de perros</label>
-  </br>
+  <br>
   
      <label>
       <input type="checkbox" name="CheckboxGroup1[]" value="7" id="CheckboxGroup1_6" />
       Hotel y pensión canina</label>
           <label>
-          </br>
+          <br>
       <input type="checkbox" name="CheckboxGroup1[]" value="8" id="CheckboxGroup1_7" />
    Alimento y medicamento </label>
     
@@ -463,17 +463,17 @@ Nombre:
     <label>
       <input type="checkbox" name="CheckboxGroup1[]" value="9" id="CheckboxGroup1_8" />
       Guarderia de perros</label>
-    </br>
+    <br>
     <label>
       <input type="checkbox" name="CheckboxGroup1[]" value="10" id="CheckboxGroup1_9" />
       Tienda de mascotas</label>
-  </br>
+  <br>
   
      <label>
       <input type="checkbox" name="CheckboxGroup1[]" value="11" id="CheckboxGroup1_10" />
       Servicios funerarios</label>
           <label>
-          </br>
+          <br>
       <input type="checkbox" name="CheckboxGroup1[]" value="12" id="CheckboxGroup1_11" />
      Servico de paseo</label>
     
@@ -667,7 +667,7 @@ Nombre:
 <input type="hidden" name="newLat" id="newLat" value="" />
 <input type="hidden" name="newLng" id="newLng" value="" />
 
-</br>
+<br>
 <ul class="morado_reg">
 <li><!--<a href="#" id="suscribir" style="text-decoration:none; color:#FFF;">Suscribirse</a>--><input type="submit" value="Suscribir" class="el_submit"/></li>
 </ul>
@@ -692,20 +692,20 @@ Nombre:
 <div class="registro_normal"> <!-- Contenedor morado registro -->
 
 <div class="titulo_registro"> REGISTRATE </div>
-</br>
+<br>
 <div class="imagen_confirmacion">
 <img src="<?php echo base_url()?>images/palomita.png" />
 </div>
 <div class="contenido_confirmacion"> 
 <strong> Correcto </strong>
-</br></br>
+<br><br>
 <div> Bienvenido </div>
 <div id="confirm">
 </div>
 
  </div>
 </div>
-</br>
+<br>
 
 
 </div>
@@ -723,19 +723,19 @@ Nombre:
 <div class="registro_normal"> <!-- Contenedor morado registro -->
 
 <div class="titulo_registro"> REGISTRATE </div>
-</br>
+<br>
 <div class="imagen_confirmacion">
 <img src="<?php echo base_url()?>images/tache.png" />
 </div>
 <div class="contenido_confirmacion"> 
 <strong> Ha ocurrido un error </strong>
-</br>
+<br>
 <div id="specificError">
 
 </div>
  </div>
 </div>
-</br>
+<br>
 
 </div>
 
@@ -767,7 +767,7 @@ Nombre:
 <img src="<?php echo base_url()?>images/cerrar.png" onclick="oculta('contenedor_publicar_anuncio');"/>
 
  </div>
- </br>
+ <br>
 <div class="descipcion_pasos_mini">
 <div class="titulo_de_pasos_mini"> PUBLICAR   ANUNCIO </div>
 <div class="instrucciones_pasos_mini"> Selecciona la sección de publicación</div>
@@ -776,16 +776,16 @@ Nombre:
 
 <form id="form1" name="form1" method="post" class="radios_secciones_mini" action="">
 <input type="radio" name="radiog_dark" id="radio4" class="css-checkbox" /><label for="radio4" class="css-label radGroup2"> Cruza</label>
-</br>
+<br>
 <input type="radio" name="radiog_dark" id="radio5" class="css-checkbox" checked="checked"/>
 <label for="radio5" class="css-label radGroup2">Venta</label>
-</br>
+<br>
 <input type="radio" name="radiog_dark" id="radio6" class="css-checkbox" /><label for="radio6" class="css-label radGroup2">Adopción</label>
-</br>
+<br>
 <input type="radio" name="radiog_dark" id="radio7" class="css-checkbox" /><label for="radio7" class="css-label radGroup2">Perros perdidos</label>
 </form>
 
-</br>
+<br>
 <ul class="morado_mini">
 <li onclick="muestra('paso_dos'); oculta('paso_uno');">
 
@@ -817,7 +817,7 @@ Continuar
 <img src="<?php echo base_url()?>images/cerrar.png" onclick="oculta('contenedor_publicar_anuncio');"/>
 
  </div>
- </br>
+ <br>
 <div class="descipcion_pasos_mini">
 <div class="titulo_de_pasos_mini"> PUBLICAR   ANUNCIO </div>
 <div class="instrucciones_pasos_mini"> Indica tu tipo de anuncio</div>
@@ -1004,7 +1004,7 @@ Continuar
 
  </div><!-- Contenedor de paquetes  -->
  
-</br>
+<br>
 <ul class="morado_mini">
 <li onclick="muestra('paso_tres'); oculta('paso_dos');">Continuar
 </li>
@@ -1037,26 +1037,26 @@ Continuar
 <img src="<?php echo base_url()?>images/cerrar.png" onclick="oculta('contenedor_publicar_anuncio');"/>
 
  </div>
- </br>
+ <br>
 <div class="descipcion_pasos_largo_mini">
 <div class="titulo_de_pasos_mini"> PUBLICAR   ANUNCIO </div>
 <div class="instrucciones_pasos_mini"> Completa tu información</div>
 <div class="sub_instrucciones_pasos_mini"> Datos de contacto </div>
 <div class="contenido_indicacion_formulario_mini"> 
 <p class="margen_15_left_mini" >Nombre: <input type="text" class="background_morado_35_mini" readonly="readonly" /> Apellido: <input type="text" class="background_morado_35" readonly="readonly" />  Correo electrónico: <input type="text" class="background_morado" readonly="readonly" /> </p>
-</br>
+<br>
 <p class="margen_15_left_mini"> Teléfono: <input type="text" class="background_gris_35_mini"/> Mostrar teléfono en el anuncio: <select class="background_gris_35_mini">
 <option>--</option>
 <option> Si </option>
 <option> No </option>
 </select>
 </p>
-</br>
+<br>
 
 <div class="sub_instrucciones_pasos_mini"> Detalles del aunucio </div>
-</br>
+<br>
 <p class="margen_15_left_mini" >Sección: <input type="text" class="background_morado_55_mini" readonly="readonly" /> Paquete: <input type="text" class="background_morado_55_mini" readonly="readonly" />  Vencimiento: <input type="text" class="background_morado_mini" readonly="readonly" /> </p>
-</br>
+<br>
 <p class="margen_15_left_mini"> Titúlo: &nbsp;&nbsp;&nbsp; <input type="text" class="background_gris_55_mini"/> Estado  &nbsp;&nbsp;&nbsp;&nbsp;<select class="background_gris_100_mini">
 <option>--</option>
 <option> Chihuahua </option>
@@ -1065,7 +1065,7 @@ Continuar
 
 Ciudad: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input class="background_gris_mini" type="text"/>
 </p>
-</br>
+<br>
 
 <p class="margen_15_left_mini"> Genéro: <select type="text" class="background_gris_100_mini"/>
 <option> --- </option>
@@ -1082,16 +1082,16 @@ Ciudad: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input class="background_gris
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Precio: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input class="background_gris_mini" type="text"/>
 </p>
-</br>
+<br>
 <p class="margen_15_left_mini">
 Descripción:<textarea  class="background_gris_mini" cols="95" rows="3" > </textarea>
 </p>
-</br>
+<br>
 <p class="margen_15_left_mini">
 Link de video <input type="text" size="98"/><img src="<?php echo base_url()?>images/logo_youtube.png"/>
 </p>
 <p class="margen_15_left_mini"> <a href="<?php echo base_url()?>#"> Tutorial para subir video a <img src="<?php echo base_url()?>images/logo_youtube.png" width="43" height="16"/> </a> </p>
-</br>
+<br>
 <p class="margen_15_left_mini"> 
 
 <!-- <iframe src="<?php echo base_url()?>../subir_archivos/index.html" style="overflow:none;" scrolling="no" width="800" height="100"> </iframe> -->
@@ -1133,7 +1133,7 @@ Continuar
 <img src="<?php echo base_url()?>images/cerrar.png" onclick="oculta('contenedor_publicar_anuncio');"/>
 
  </div>
- </br>
+ <br>
 <div class="descipcion_pasos_largo_mini">
 <div class="titulo_de_pasos_mini"> PUBLICAR   ANUNCIO </div>
 <div class="instrucciones_pasos_mini"> Vista previa de tu anuncio</div>
@@ -1153,33 +1153,33 @@ Continuar
 
 <div class="titulo_anuncio_publicado_mini">
 VENDO BONITO PERRO
-</br>
+<br>
 VENDO
 </div>
-</br>
+<br>
 <strong>
 Precio:
 </strong>
 
-</br>
+<br>
 <font> Fecha de publicacion:12-06-2014</font>
-</br>
+<br>
 <font>Sección: Venta</font>
-</br>
+<br>
 <font>Raza: Cairn Terrier</font>
-</br>
+<br>
 <font>Género: Macho</font>
-</br>
+<br>
 <font>Lugar: Queretaro (Queretaro)</font>
 
-</br>
-</br>
+<br>
+<br>
 <ul class="boton_naranja_mini">
 <li onclick="muestra('contenedor_contactar_previo');">
 Contactar al anunciante
 </li>
 </ul>
-</br>
+<br>
 <ul class="boton_gris_mini">
 <li>
 <img src="<?php echo base_url()?>images/favorito.png"/>Agregar a Favoritos
@@ -1187,7 +1187,7 @@ Contactar al anunciante
 </ul>
 
 </div>
-</br>
+<br>
 
 <div class="contenedor_del_detalle_mini">
 
@@ -1199,7 +1199,7 @@ MÁS DETALLES
 
 ksdjfkjslfk fdglksj gkfdsjg  jgfkdjgkfd gfdgkdf gfdskj fgsfkjg sdlkf gjkfdsg fdlkgjdfl glfdsjg dflkgj dfgj flkgjf gjfd gfdjg fdlg fdlg fjgfd gjdslf gkgj lgjfgk gjfdkg lkgjf gjjkgj s
 </div>
-</br>
+<br>
 <ul class="boton_naranja_dos_mini">
 <li id="ver_video" onclick="muestra('video_previo');">
 Ver video
@@ -1207,7 +1207,7 @@ Ver video
 </ul>
 
 <div id="video_previo" class="desplegar_detalles_mini" style="display:none;" >
-</br>
+<br>
 <div class="titulo_anuncio_publicado_mini">
 VIDEO
 </div>
@@ -1229,19 +1229,19 @@ Denunciar Anuncio
 <div class="consejos_advertencias_mini">
 
 - QuierounPerro.com te invita a que antes de comprar pienses en adoptar, ya que hoy en día hay millones de perros sin hogar que deben ser sacrificados.
-</br>
+<br>
 - Tener un perro conlleva una serie de responsabilidades, cuidados y atenciones que debes considerar antes de comprar uno.
-</br>
+<br>
 - Infórmate de los cuidados especiales que debes de tener con la raza específica que estás comprando.
-</br>
+<br>
 - NUNCA compres una nueva mascota sin verla físicamente antes.
-</br>
+<br>
 - NUNCA hagas depósitos o transferencias bancarias a través de medios donde tu dinero no pueda ser rastreado, como lo son Money Gram y Western Union.
-</br>
+<br>
 - NUNCA pagues por un perro con registro de pedigree AKC si no te muestran los certificados, ya que corres el riesgo de que sea una estafa y nunca te los entreguen. Exige ver los papeles y asegúrate de que el nombre del criador esté en el certificado.
-</br>
+<br>
 - Cuando vayas a ver al vendedor, nunca vayas solo y revisa los alrededores.
-</br>
+<br>
 - El vendedor también debe estar interesado en ti y en manos de quién dejará a su perro.
 </div>
 
@@ -1249,7 +1249,7 @@ Denunciar Anuncio
 
 </div>
 
-</br>
+<br>
 
 </div>
 
@@ -1290,7 +1290,7 @@ Continuar
 <li class="numero_seccion_mini">5</li>
 </ul>
  </div>
-  </br>
+  <br>
 <div class="crerar_publicar_anuncio_mini">
 <img src="<?php echo base_url()?>images/cerrar.png" onclick="oculta('contenedor_publicar_anuncio');"/>
 
@@ -1299,7 +1299,7 @@ Continuar
 <div class="descipcion_pasos_mediano_mini">
 <div class="titulo_de_pasos_mini"> PUBLICAR   ANUNCIO </div>
 <div class="instrucciones_pasos_mini"> Detalle de compra: </div>
-</br>
+<br>
 <div class="tipo_paquete_pago_mini">
 <img src="<?php echo base_url()?>images/pago_lite.png"/>
 </div>
@@ -1321,20 +1321,20 @@ Continuar
 
 </div>
 
-</br>
-</br>
+<br>
+<br>
 <div style="margin-top:150px;">
 <div class="sub_instrucciones_pasos_mini"> <img style=" margin-left:15px;" src="<?php echo base_url()?>images/mini_cupon.png"/> Cupones disponibles <font> 2 </font> </div>
 <div style="padding:15px;">
 <p>Si lo deseas pudes usar alguno de tus cupones</p>
 <form  class="radios_cupones_mini" action="">
 <input type="radio" name="radiog_dark" id="radio_pago1" class="css-checkbox" /><label for="radio_pago1" class="css-label radGroup2"> 10% de descuento</label>
-</br>
+<br>
 <input type="radio" name="radiog_dark" id="radio_pago2" class="css-checkbox" checked="checked"/>
 <label for="radio_pago2" class="css-label radGroup2">5% de descuento</label>
-</br>
+<br>
 <input type="radio" name="radiog_dark" id="radio_pago3" class="css-checkbox" /><label for="radio_pago3" class="css-label radGroup2"> 20% de descuento</label>
-</br>
+<br>
 </form>
 </div>
 </div>
@@ -1402,7 +1402,7 @@ Directorio
 <img src="<?php echo base_url()?>images/banner_superior/3.png" width="638" height="93"/>
   </div>
 
-</br>
+<br>
 
 </div>
 </div>
@@ -1437,7 +1437,7 @@ Directorio
 </div>
 
 <center>
-</br>
+<br>
 <div id="contenedor_central">
 
 <div id="espacio_izquierda" class="seccion_izquierda">
@@ -1519,7 +1519,7 @@ Directorio
   <img src="<?php echo base_url()?>images/perrito_lite.png" class="margen"/> <font class="title_paquetes_titilos"> PAQUETE LITE </font>
 </div>
 <div class="precio_paquete_lite">  <div class="el_titulo_paquete_lite"> Gratis </div>  <div class="descripcion_precio_paquete_lite">al crear tu usuario</div> </div>
-</br>
+<br>
  <div class="descripcion_paquetes">
  <strong>Incluye:</strong>
 <ul class="contenido_paquetes">
@@ -1570,7 +1570,7 @@ Directorio
 
 </div>
 <div class="precio_paquete_regular"> $89.00 </div>
-</br>
+<br>
  <div class="descripcion_paquetes">
  <strong>Incluye:</strong>
 <ul class="contenido_paquetes">
@@ -1627,7 +1627,7 @@ Directorio
 
 </div>
  <div class="precio_paquete_premium"> $165.00 </div>
-</br>
+<br>
  <div class="descripcion_paquetes">
  <strong>Incluye:</strong>
 <ul class="contenido_paquetes">
@@ -1803,12 +1803,12 @@ La primera semana de vida del cachorro la pasa el 90% del tiempo dormido...
 </div>
 </div>
 </div>
-</br>
-</br>
-</br>
-</br></br>
-</br></br>
-</br>
+<br>
+<br>
+<br>
+<br><br>
+<br><br>
+<br>
 <?php $this->load->view('general/footer_view');?>
 </center>
 <script src="<?php echo base_url()?>js/bootstrap.min.js"></script>

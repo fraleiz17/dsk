@@ -33,7 +33,7 @@
 LA RAZA DEL MES
 </div>
 <div id="contenedor_central">
-<?php $this->load->view('general/contTest');?></br>
+<?php $this->load->view('general/contTest');?><br>
 <div class="contenedor_central" style="margin-bottom:45px;">
 <div class="raza_mes" style="margin-bottom:45px; display:" id="razaMes<?=$contenidos[0]->contenidoID?>">
 <div class="contenedor_slide_perro_mes">
@@ -48,19 +48,19 @@ foreach($fotoscontenido as $foto){
 </div>
 <div class="contenedor_descripcion">
 <div class="title_raza_big"><?=strtoupper($contenidos[0]->nombre)?></div>
-  <div class="title_raza">  Orígenes de la raza </div></br>
+  <div class="title_raza">  Orígenes de la raza </div><br>
 <p>
 <?=$contenidos[0]->origenes?>
 </p>
-<div class="title_raza"> Carácter y temperamento </div></br>
+<div class="title_raza"> Carácter y temperamento </div><br>
 <p><?=$contenidos[0]->caracter?></p>
 </div>
-<div></br></br>
-<div class="title_raza_long">  Cualidades de esta raza </div></br>
+<div><br><br>
+<div class="title_raza_long">  Cualidades de esta raza </div><br>
 <p><?=$contenidos[0]->cualidades?></p>
-<div class="title_raza_long">Colores característicos: </div></br>
+<div class="title_raza_long">Colores característicos: </div><br>
 <p><?=$contenidos[0]->colores?></p>
-<div class="title_raza_long">Sobre la raza: </div></br>
+<div class="title_raza_long">Sobre la raza: </div><br>
 <p><?=$contenidos[0]->acercaDe?></p>
 </div>
 </div>
@@ -78,19 +78,19 @@ foreach($fotoscontenido as $foto){
 </div>
 <div class="contenedor_descripcion">
 <div class="title_raza_big"><?=strtoupper($contenidos[1]->nombre)?></div>
-  <div class="title_raza">  Orígenes de la raza </div></br>
+  <div class="title_raza">  Orígenes de la raza </div><br>
 <p>  
 <?=$contenidos[1]->origenes?>
 </p>
-<div class="title_raza"> Carácter y temperamento </div></br>
+<div class="title_raza"> Carácter y temperamento </div><br>
 <p><?=$contenidos[1]->caracter?></p>
 </div>
-<div> </br></br>
-<div class="title_raza_long">  Cualidades de esta raza </div></br>
+<div> <br><br>
+<div class="title_raza_long">  Cualidades de esta raza </div><br>
 <p><?=$contenidos[1]->cualidades?></p>
-<div class="title_raza_long">Colores característicos: </div></br>
+<div class="title_raza_long">Colores característicos: </div><br>
 <p><?=$contenidos[1]->colores?></p>
-<div class="title_raza_long">Sobre la raza: </div></br>
+<div class="title_raza_long">Sobre la raza: </div><br>
 <p><?=$contenidos[1]->acercaDe?></p>
 </div>
 </div>
@@ -108,17 +108,17 @@ foreach($fotoscontenido as $foto){
 </div>
 <div class="contenedor_descripcion">
 <div class="title_raza_big"><?=strtoupper($contenidos[2]->nombre)?></div>
-  <div class="title_raza">  Orígenes de la raza </div></br>
+  <div class="title_raza">  Orígenes de la raza </div><br>
 <p><?=$contenidos[2]->origenes?></p>
-<div class="title_raza"> Carácter y temperamento </div></br>
+<div class="title_raza"> Carácter y temperamento </div><br>
 <p><?=$contenidos[2]->caracter?></p>
 </div>
-<div></br></br>
-<div class="title_raza_long">  Cualidades de esta raza </div></br>
+<div><br><br>
+<div class="title_raza_long">  Cualidades de esta raza </div><br>
 <p><?=$contenidos[2]->cualidades?></p>
-<div class="title_raza_long">Colores característicos: </div></br>
+<div class="title_raza_long">Colores característicos: </div><br>
 <p><?=$contenidos[2]->colores?></p>
-<div class="title_raza_long">Sobre la raza: </div></br>
+<div class="title_raza_long">Sobre la raza: </div><br>
 <p><?=$contenidos[2]->acercaDe?></p>
 </div>
 </div>
@@ -136,17 +136,17 @@ foreach($fotoscontenido as $foto){
 </div>
 <div class="contenedor_descripcion">
 <div class="title_raza_big"><?=strtoupper($contenidos[3]->nombre)?></div>
-  <div class="title_raza">  Orígenes de la raza </div></br>
+  <div class="title_raza">  Orígenes de la raza </div><br>
 <p><?=$contenidos[3]->origenes?></p>
-<div class="title_raza"> Carácter y temperamento </div></br>
+<div class="title_raza"> Carácter y temperamento </div><br>
 <p><?=$contenidos[3]->caracter?></p>
 </div>
-<div></br></br>
-<div class="title_raza_long">  Cualidades de esta raza </div></br>
+<div><br><br>
+<div class="title_raza_long">  Cualidades de esta raza </div><br>
 <p><?=$contenidos[3]->cualidades?></p>
-<div class="title_raza_long">Colores característicos: </div></br>
+<div class="title_raza_long">Colores característicos: </div><br>
 <p><?=$contenidos[3]->colores?></p>
-<div class="title_raza_long">Sobre la raza: </div></br>
+<div class="title_raza_long">Sobre la raza: </div><br>
 <p><?=$contenidos[3]->acercaDe?></p>
 </div>
 </div>

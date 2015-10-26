@@ -17,20 +17,20 @@ jQuery(document).ready(function(){
 
 </script>
 </head>
-<body><br />
-<br />
-<br />
-<br />
+<body><br>
+<br>
+<br>
+<br>
 
 <form id="formID" method="post" action="<?=base_url()?>principal/uploadBanner" enctype="multipart/form-data">
-meh<br />
-<br />
-<br />
+meh<br>
+<br>
+<br>
 
-posicion = <input type="text" name="posicion" /> <br />
-seccion = <input type="text" name="seccionID" /><br />
-file = <input type="file" name="banner" /><br />
-<br />
+posicion = <input type="text" name="posicion" /> <br>
+seccion = <input type="text" name="seccionID" /><br>
+file = <input type="file" name="banner" /><br>
+<br>
 <input type="submit" />
 </form>
 

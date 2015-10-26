@@ -11,10 +11,10 @@
             <div class="contendeor_inputs">
                 <p><input type="text" name="correo" class="validate[required]" placeholder="correo@ejemplo.com"/> *</p>
                 <p><input type="password" name="contrasena" class="validate[required]"/> *</p>
-            </div></br>
+            </div><br>
             <div class="subrayado" onclick="muestra('envio_con');oculta('ingreso_normal');">¿Olvidaste contraseña?</div>
             <div class="subrayado" onclick="muestra('contenedor_registro');oculta('contenedor_login');"> Crear cuenta
-            </div></br>
+            </div><br>
             <ul class="morado_reg">
                 <li>
                     <input type="submit" class="el_submit"/>
@@ -24,7 +24,7 @@
 </form>
             <div id="envio_con" class="envio_con">
             <form action="<?= base_url() ?>recuperarcontrasena/sendLink" id="recuperarcontrasena" method="post">
-				</br>
+				<br>
                 <div class="titulo_registro"></div>
 				<div class="texto_inputs">
                 <p> Ingresa tu correo:</p>
@@ -43,7 +43,7 @@
                 </li>
             </ul>
             </form>
-			</br>
+			<br>
             </div>
 			<div id="confirmacionCambio" style="display:none; padding:20px;">
 			 Se ha enviado contraseña al correo electronico indicado.
@@ -70,7 +70,7 @@
 <p><input type="text" name="apellido" id="apellido" class="validate[required],custom[onlyLetterSp]"/> *</p>
 <p><input type="text" name="correo" class="validate[required,custom[email],ajax[isthereemail]]" placeholder="correo@ejemplo.com"/> *</p>
 <p><input type="text" name="telefono" class="validate[custom[onlyNumberSp],minSize[10]]"/></p>
-<p><input type="password" name="contrasena"  id="contrasena1" class="validate[required],minSize[6],maxSize[12]"/> *</p></br>
+<p><input type="password" name="contrasena"  id="contrasena1" class="validate[required],minSize[6],maxSize[12]"/> *</p><br>
 <p><input type="password" name="confirmar"  id="contrasena2" class="validate[required,equals[contrasena1]]"/> *</p>
 </div>
 <div class=" informacion_adicional_registro">
@@ -88,13 +88,13 @@
                                                                                               class="css-label radGroup2"
                                                                                               onclick="obtener_usuario('datos_faltantes_asociacion'); oculta('datos_faltantes_usuario');oculta('datos_faltantes_negocio');oculta('ocultar_info_adicional');oculta('ocultar_info_adicional');muestra('llenar_info_adicional');">
         Asociación </label>
-    </br>
+    <br>
     <p><input name="recibirCorreo" type="checkbox" value="1" checked="checked" /> <label> Quiero recibir información acerca de
             promociones </label></p>
     <p><input name="terminosCondiciones" type="checkbox" value="1" class="validate[required]"/> <label> He leído y acepto los <a href="<?php echo base_url()?>content/terminos_y_condiciones.pdf" target="_blank" class="link_blanco">Términos y Condiciones</a> y <a href="<?php echo base_url()?>content/politica_de_privacidad.pdf" target="_blank" class="link_blanco">la Política de Privacidad</a> *  </label></p>
     <font class="asterisco">Los datos marcados con un astrisco (*) son obligatorios </font>
 </div>
-</br>
+<br>
 <div class="llenar_info_adicional" id="llenar_info_adicional"
      onclick="mostrar_formulario(); muestra('ocultar_info_adicional'); oculta('llenar_info_adicional');showMap();">
     <input type="hidden" id="elegir_usuario" value="datos_faltantes_usuario"/>
@@ -106,7 +106,7 @@
     <img src="<?php echo base_url() ?>images/flecha_blanca.png"/> Despues llenar información
 </div>
 <div id="datos_faltantes_usuario" class="datos_faltantes_usuario" style="display:none;">
-    </br>
+    <br>
     <div class="datos_fiscales"> Datos fiscales</div>
    <div class="texto_inputs">
         <p> Razón Social:</p>
@@ -186,28 +186,28 @@
                 <input type="hidden" name="CheckboxGroup1[]" id="CheckboxGroup1[]" value="0"/>
                 <input type="checkbox" name="CheckboxGroup1[]" value="1" id="CheckboxGroup1_0"/>
                 Accesorios para mascotas</label>
-            </br>
+            <br>
             <label>
                 <input type="checkbox" name="CheckboxGroup1[]" value="2" id="CheckboxGroup1_1"/>
-                Veterinaria</label></br>
+                Veterinaria</label><br>
             <label>
                 <input type="checkbox" name="CheckboxGroup1[]" value="3" id="CheckboxGroup1_2"/>
                 Estetica canina</label>
-            <label></br>
+            <label><br>
                 <input type="checkbox" name="CheckboxGroup1[]" value="4" id="CheckboxGroup1_3"/>
                 Adiestramiento canino</label>
             </div>
         <div class="contenedor_giros">
             <label>
                 <input type="checkbox" name="CheckboxGroup1[]" value="5" id="CheckboxGroup1_4"/>
-                Centro de sociabilización</label></br>
+                Centro de sociabilización</label><br>
             <label>
                 <input type="checkbox" name="CheckboxGroup1[]" value="6" id="CheckboxGroup1_5"/>
-                Criadero de perros</label></br>
+                Criadero de perros</label><br>
             <label>
                 <input type="checkbox" name="CheckboxGroup1[]" value="7" id="CheckboxGroup1_6"/>
                 Hotel y pensión canina</label>
-            <label></br>
+            <label><br>
                 <input type="checkbox" name="CheckboxGroup1[]" value="8" id="CheckboxGroup1_7"/>
                 Alimento y medicamento </label>
         </div>
@@ -215,17 +215,17 @@
             <label>
                 <input type="checkbox" name="CheckboxGroup1[]" value="9" id="CheckboxGroup1_8"/>
                 Guarderia de perros</label>
-            </br>
+            <br>
             <label>
                 <input type="checkbox" name="CheckboxGroup1[]" value="10" id="CheckboxGroup1_9"/>
                 Tienda de mascotas</label>
-            </br>
+            <br>
 
             <label>
                 <input type="checkbox" name="CheckboxGroup1[]" value="11" id="CheckboxGroup1_10"/>
                 Servicios funerarios</label>
             <label>
-                </br>
+                <br>
                 <input type="checkbox" name="CheckboxGroup1[]" value="12" id="CheckboxGroup1_11"/>
                 Servico de paseo</label>
         </div>
@@ -351,7 +351,7 @@
     <?php $this->load->view($mapaSegundo); ?>
 </div>
 <input type="hidden" name="newLat" id="newLat" value=""/>
-<input type="hidden" name="newLng" id="newLng" value=""/></br>
+<input type="hidden" name="newLng" id="newLng" value=""/><br>
 <ul class="morado_reg">
     <li><!--<a href="#" id="suscribir" style="text-decoration:none; color:#FFF;">Suscribirse</a>-->
         <input type="submit" value="Suscribir" class="el_submit"/>
@@ -364,31 +364,31 @@
     <div class="cerrar_registro"><img src="<?php echo base_url() ?>images/cerrar.png"
                                       onclick="oculta('contenedor_correcto');$('#registerNow')[0].reset();"/></div>
     <div class="registro_normal"> <!-- Contenedor morado registro -->
-        <div class="titulo_registro"> REGISTRATE</div></br>
+        <div class="titulo_registro"> REGISTRATE</div><br>
         <div class="imagen_confirmacion">
             <img src="<?php echo base_url() ?>images/palomita.png"/>
         </div>
         <div class="contenido_confirmacion">
-            <strong> Correcto </strong></br></br>
+            <strong> Correcto </strong><br><br>
             <div> Bienvenido</div>
             <div id="confirm">
             </div>
         </div>
-    </div></br>
+    </div><br>
 </div>
 <div class="contenedor_registro" id="contenedor_error" style="display:none;"> <!-- Contenedor negro reistro-->
    <div class="cerrar_registro"><img src="<?php echo base_url() ?>images/cerrar.png" onclick="oculta('contenedor_error');"/></div>
     <div class="registro_normal"> <!-- Contenedor morado registro -->
-        <div class="titulo_registro"> REGISTRATE</div></br>
+        <div class="titulo_registro"> REGISTRATE</div><br>
         <div class="imagen_confirmacion">
             <img src="<?php echo base_url() ?>images/tache.png"/>
         </div>
         <div class="contenido_confirmacion">
-            <strong> Ha ocurrido un error </strong></br>
+            <strong> Ha ocurrido un error </strong><br>
             <div id="specificError">
             </div>
         </div>
-    </div></br>
+    </div><br>
 </div>
 <script type="text/javascript">
     jQuery(document).ready(function ($) {

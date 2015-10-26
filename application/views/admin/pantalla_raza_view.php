@@ -206,7 +206,7 @@ AGREGAR IMAGEN
 
 <div class="contenido_intruciones">
 <p>Ingrese las imagenes para BP00001:</p>
-</br>
+<br>
 <input type="file" name="banner" id="banner" />
 
 
@@ -240,7 +240,7 @@ AGREGAR TEXTO
 </div>
 <div class="contenido_intruciones">
 <p>Ingrese las imagenes para BP00001:</p>
-</br>
+<br>
 <input type="file" name="imagenesArticulo[]" id="imagenesArticulo" multiple="multiple"/>
 
 </div>
@@ -413,7 +413,7 @@ AGREGAR RAZA
 </div>
 <form action="<?=base_url()?>admin/principal/guardarRaza" method="post" enctype="multipart/form-data">
 <div class="contenido_intruciones">
-</br>
+<br>
 <input type="hidden" name="zonaRaza" id="zonaRaza" class="zonaRaza" value="9" />
 <table > 
 <tr> 
@@ -477,7 +477,7 @@ AGREGAR RAZA
 
 </div> <!-- Fin contenedor negro imagenes -->
 <!--la raza del mes-->
-</br>
+<br>
 <?php if($contenidos != null){
 foreach($contenidos as $contenidoE){?>
 <!--la raza del mes-->
@@ -491,7 +491,7 @@ EDITAR RAZA
 </div>
 <form action="<?=base_url()?>admin/principal/editarRaza/<?=$contenidoE->contenidoID?>" method="post" enctype="multipart/form-data">
 <div class="contenido_intruciones">
-</br>
+<br>
 <input type="hidden" name="zonaRaza" id="zonaRaza" class="zonaRaza" value="9" />
 <table > 
 <tr> 

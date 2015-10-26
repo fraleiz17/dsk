@@ -14,42 +14,42 @@ $this->load->view('general/general_header_view', array('title' => 'Evento del Me
     <div class="registro_normal"> <!-- Contenedor morado registro -->
 
         <div class="titulo_registro"> CORRECTO</div>
-        </br>
+        <br>
         <div class="imagen_confirmacion">
             <img src="<?php echo base_url() ?>images/palomita.png"/>
         </div>
         <div class="contenido_confirmacion">
             <strong> Correcto </strong>
-            </br></br>
+            <br><br>
             <div> Se envió correctamente tu correo</div>
             <div id="confirm">
             </div>
 
         </div>
     </div>
-    </br>
+    <br>
 </div>
 <div class="contenedor_registro" id="contenedor_errorM" style="display:none;"> <!-- Contenedor negro reistro-->
     <div class="cerrar_registro"><img src="<?php echo base_url() ?>images/cerrar.png"
                                       onclick="oculta('contenedor_errorM');"/></div>
     <div class="registro_normal">
-        <div class="titulo_registro"> ERROR</div></br>
+        <div class="titulo_registro"> ERROR</div><br>
         <div class="imagen_confirmacion">
             <img src="<?php echo base_url() ?>images/tache.png"/>
         </div>
         <div class="contenido_confirmacion">
             <strong> Ha ocurrido un error intenta nuevamente</strong>
-            </br>
+            <br>
             <div id="specificError"></div>
         </div>
-    </div></br>
+    </div><br>
 </div>
 <div id="contenedor_publicar_anuncio" class="contenedor_publicar_anuncio" style=" display:none;">
 <div id="publicar_anuncio" class="pubicar_anuncio">
 <div id="paso_uno">
 <div class="crerar_publicar_anuncio">
 <img src="<?php echo base_url() ?>images/cerrar.png" onclick="oculta('contenedor_publicar_anuncio');"/>
-</div></br>
+</div><br>
 <div class="descipcion_pasos">
 <div class="titulo_de_pasos"> PUBLICAR   EVENTO </div>
 <div class="instrucciones_pasos"> ¿Quieres anunciar tu evento? ¡Cont&aacute;ctanos! </div>
@@ -62,18 +62,18 @@ $this->load->view('general/general_header_view', array('title' => 'Evento del Me
 
 </td>
 <td width="147">
-<p>Nombre:</p> <br/> </td>  <td width="193"><input name="nombre" type="text" id="nombre"/> </td>
+<p>Nombre:</p> <br> </td>  <td width="193"><input name="nombre" type="text" id="nombre"/> </td>
 </tr>
 <tr>
-<td><p> E-mail:</p> <br/></td> <td> <input name="correo" type="text" id="correo"/> </td>
+<td><p> E-mail:</p> <br></td> <td> <input name="correo" type="text" id="correo"/> </td>
 </tr>
 <tr>
-<td><p> Comentarios:</p> <br/></td> <td><textarea name="comentarios" cols="30" rows="10" id="comentarios"> </textarea> </td>
+<td><p> Comentarios:</p> <br></td> <td><textarea name="comentarios" cols="30" rows="10" id="comentarios"> </textarea> </td>
 </tr>
 </table>
 
 
-</br>
+<br>
 <ul class="morado_directorio">
 <li onclick="muestra('paso_dos'); oculta('paso_uno');">
 <input type="submit" value="Enviar" />
@@ -93,7 +93,7 @@ $this->load->view('general/general_header_view', array('title' => 'Evento del Me
 <div class="contenedor_buscador"></div>
 <div id="contenedor_central">
 <?php $this->load->view('general/contTest');?>
-<div class="contenedor_central" style="margin-bottom:45px;"></br>
+<div class="contenedor_central" style="margin-bottom:45px;"><br>
     <ul id="itemContainer_evento" style="min-height:100px;">
       <?php if($contenidos != null){
 		  		foreach ($contenidos as $ev){ ?>
@@ -105,7 +105,7 @@ $this->load->view('general/general_header_view', array('title' => 'Evento del Me
       <img src="<?php echo base_url()?>images/cale_event.png" />
        </div>
        <div class="contenido_evento">
-       <p class="titulo_evento_mes"><?=strtoupper($ev->nombre)?></p></br></br>
+       <p class="titulo_evento_mes"><?=strtoupper($ev->nombre)?></p><br><br>
        <p><strong>FECHA:</strong> <?=strtoupper($ev->fecha)?></p>
        <p> <strong>HORA:</strong> <?=strtoupper($ev->horario)?></p>
        <p> <strong>LUGAR:</strong>  <?=strtoupper($ev->lugar)?></p>
@@ -113,7 +113,7 @@ $this->load->view('general/general_header_view', array('title' => 'Evento del Me
         <ul class="ver_mas_evento"><li onclick="window.location.href = '<?php echo base_url()?>evento/detalle/<?=$ev->contenidoID?>'"> Ver más... &nbsp;</li> </ul>
       </div>
       <?php } }?>
-   </ul></br></br>
+   </ul><br><br>
       <div style="text-align:center;">
         <div class="holder">  </div>
       </div>

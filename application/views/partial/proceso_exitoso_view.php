@@ -51,17 +51,17 @@
     <div class="registro_normal"> <!-- Contenedor morado registro -->
 
         <div class="titulo_registro">GRACIAS</div>
-        </br>
+        <br>
        <div class="contenido_confirmacion">
                     <strong> Gracias por publicar en QUP </strong>
-                    </br></br>
+                    <br><br>
                     <div> Tu anuncio ha pasado a la sección de aprobación, pronto recibirás un correo con la confirmación de la publicación.</div>
                     <div id="confirm">
                     </div>
         
                 </div>
     </div>
-    </br>
+    <br>
 
 
 </div>
@@ -80,19 +80,19 @@
     <div class="registro_normal"> <!-- Contenedor morado registro -->
 
         <div class="titulo_registro">ERROR</div>
-        </br>
+        <br>
         <div class="imagen_confirmacion">
             <img src="<?php echo base_url() ?>images/tache.png"/>
         </div>
         <div class="contenido_confirmacion">
             <strong> Ha ocurrido un error al realizar el pago, por favor inténtalo nuevamente</strong>
-            </br>
+            <br>
             <div id="specificError">
 
             </div>
         </div>
     </div>
-    </br>
+    <br>
 
 </div>
 

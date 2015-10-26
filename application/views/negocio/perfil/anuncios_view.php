@@ -9,7 +9,7 @@
 </div>
 <div class="admin_title"> Administrador de anuncios </div>
 </div>
-</br>
+<br>
 <ul class="menu_perfil_mini">
 <li class="icono_seleccion_mini">
 <p style=" margin-top:3px; margin-left:5px;" onclick="muestra('anunciar');oculta('anunciosAct');oculta('anunciosInAct');"> Todos (<?php echo count($anuncios)?>) </p>
@@ -21,7 +21,7 @@
 <p style=" margin-top:3px; margin-left:5px;" onclick="muestra('anunciosInAct');oculta('anunciosAct');oculta('anunciar');"> Expirados (<?php echo count($anunciosInAct)?>) </p>
 </li>
 </ul>
-</br>
+<br>
 <div id="anunciar" style="display:block;" >
 <table class="tabla_perfil" width="795" >
   <tr>
@@ -31,7 +31,7 @@
   <th width="86"> Estatus </th>
   <th width="105"> Vencimiento </th>
   <th width="92"> Popularidad </th>
-  <th width="142"> Renovar/</br>Cancelar </th>
+  <th width="142"> Renovar/<br>Cancelar </th>
   </tr>
   <?php if ($anuncios != null) {?>
   <?php 
@@ -39,15 +39,15 @@
     <tr>
             <?php if ($anuncio->NombrePaquete =='Lite'){?>
                 <td><img src="<?php echo base_url()?>images/ico_lite.png" width="34" height="34"/>
-                    </br>
+                    <br>
                 <font class="lite"> Lite </font> </td>
             <?php } elseif ($anuncio->NombrePaquete == 'Regular') {?>
                 <td><img src="<?php echo base_url()?>images/ico_regular.png" width="34" height="34"/>
-                </br>
+                <br>
                 <font class="regular"> Regular </font> </td>        
             <?php  } else { ?>
                 <td><img src="<?php echo base_url()?>images/ico_premium.png" width="34" height="34"/>
-                </br><font class="premium"> Premium </font> </td>        
+                <br><font class="premium"> Premium </font> </td>        
             <?php } ?>
             
             <td> <?php echo $anuncio->seccionNombre ?> </td>
@@ -110,7 +110,7 @@
   <th width="86"> Estatus </th>
   <th width="105"> Vencimiento </th>
   <th width="92"> Popularidad </th>
-  <th width="142"> Renovar/</br>Cancelar </th>
+  <th width="142"> Renovar/<br>Cancelar </th>
   </tr>
 <?php if ($anunciosAct != null) {?>
   <?php 
@@ -118,15 +118,15 @@
     <tr>
             <?php if ($anuncio->NombrePaquete =='Lite'){?>
                 <td><img src="<?php echo base_url()?>images/ico_lite.png" width="34" height="34"/>
-                    </br>
+                    <br>
                 <font class="lite"> Lite </font> </td>
             <?php } elseif ($anuncio->NombrePaquete == 'Regular') {?>
                 <td><img src="<?php echo base_url()?>images/ico_regular.png" width="34" height="34"/>
-                </br>
+                <br>
                 <font class="regular"> Regular </font> </td>        
             <?php  } else { ?>
                 <td><img src="<?php echo base_url()?>images/ico_premium.png" width="34" height="34"/>
-                </br><font class="premium"> Premium </font> </td>        
+                <br><font class="premium"> Premium </font> </td>        
             <?php } ?>
             
             <td> <?php echo $anuncio->seccionNombre ?> </td>
@@ -187,7 +187,7 @@
   <th width="86"> Estatus </th>
   <th width="105"> Vencimiento </th>
   <th width="92"> Popularidad </th>
-  <th width="142"> Renovar/</br>Cancelar </th>
+  <th width="142"> Renovar/<br>Cancelar </th>
   </tr>
 <?php if ($anunciosInAct != null) {?>
   <?php 
@@ -196,15 +196,15 @@
     <tr>
             <?php if ($anuncio->NombrePaquete =='Lite'){?>
                 <td><img src="<?php echo base_url()?>images/ico_lite.png" width="34" height="34"/>
-                    </br>
+                    <br>
                 <font class="lite"> Lite </font> </td>
             <?php } elseif ($anuncio->NombrePaquete == 'Regular') {?>
                 <td><img src="<?php echo base_url()?>images/ico_regular.png" width="34" height="34"/>
-                </br>
+                <br>
                 <font class="lite"> Regular </font> </td>        
             <?php  } else { ?>
                 <td><img src="<?php echo base_url()?>images/ico_premium.png" width="34" height="34"/>
-                </br><font class="lite"> Premium </font> </td>        
+                <br><font class="lite"> Premium </font> </td>        
             <?php } ?>
             
             <td> <?php echo $anuncio->seccionNombre ?> </td>

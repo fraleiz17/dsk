@@ -48,12 +48,12 @@
         </div>
     </div>
 </div>
-</br>
-</br>
-</br>
-</br></br>
-</br></br>
-</br>
+<br>
+<br>
+<br>
+<br><br>
+<br><br>
+<br>
 <div class="footer">
     <img src="<?php echo base_url() ?>images/perro_final.png" width="46" height="42"/>
     <a href="<?php echo base_url() ?>#"><img src="<?php echo base_url() ?>images/ico_fb.png" width="32" height="32"

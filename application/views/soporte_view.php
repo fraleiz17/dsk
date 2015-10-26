@@ -54,8 +54,8 @@
 <div class="titulo_publicidad"> PUBLICIDAD </div>
 <div class="instrucciones"> ¿Quieres anunciar tu marca, producto, servicio o evento con nosotros? </div>
 <div class="contenedor_perrito_instrucciones"> <img src="<?php echo base_url() ?>images/pero_paso_uno.png" width="94" height="84" /><div class="instrucciones_perrito"> Env&iacute;anos tus datos y nos ponemos en contacto contigo</div></div>
-</br>
-</br>
+<br>
+<br>
 <form action="" method="post" id="pub">
 <table class="tabla_contacto_publicidad"> 
 <tr> 
@@ -95,7 +95,7 @@
 <tr> 
 <td colspan="3">
 Comentarios: 
-</br>
+<br>
 <textarea name="comentarios" cols="40" rows="5" class="input_bg_gris validate[required]" id="comentarios" ></textarea>
  </td>
 </tr>
@@ -135,7 +135,7 @@ Comentarios:
 <div class="contenedor_perrito_instrucciones"> <img src="<?=base_url()?>images/pero_paso_uno.png" width="94" height="84" /><div class="instrucciones_perrito_soporte"> Si estás teniendo problemas con la compra de algún paquete, la creación de tu anuncio o tienes cualquier comentario, contáctanos.</div>
 
 </div>
-</br>
+<br>
 <form action="" method="post" id="sop">
 <table width="692" class="tabla_soporte">
 <tr> 
@@ -155,8 +155,8 @@ Comentarios:
 <td colspan="3"> <textarea name="comentarios" cols="67" class="input_bg_gris validate[required]" id="comentarios"> </textarea></td>
 </tr>
  </table>
- </br>
- </br>
+ <br>
+ <br>
  <ul class="morado_pub">
 <style>
 #testero {
@@ -198,7 +198,7 @@ CORRECTO
 </div>
 
 <div class="contenido_intruciones">
-</br>
+<br>
 El correo se envió exitosamente
 </div>
 </div>
@@ -222,7 +222,7 @@ ERROR
 </div>
 
 <div class="contenido_intruciones">
-</br>
+<br>
 Intente nuevamente por favor.
 </div>
 </div>

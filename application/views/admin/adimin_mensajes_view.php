@@ -70,7 +70,7 @@ ENVIO DE MENSAJES
 Administraci&oacute;n de mensajes
 </div>
 
-</br>
+<br>
 
 <?php if($mensajes != null){
 		foreach($mensajes as $mensaje){?>

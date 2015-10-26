@@ -37,7 +37,7 @@
 <div class="crerar_publicar_anuncio_mini">
     <img src="<?php echo base_url() ?>images/cerrar.png" id="cerrarPublicacion"/>
 </div>
-<br/>
+<br>
 
 <div class="descipcion_pasos_mini">
 <div class="titulo_de_pasos_mini"> PUBLICAR ANUNCIO</div>
@@ -53,13 +53,13 @@
         <div class="radios_secciones_mini">
             <!-- <input type="radio" id="radio4" name="seccion" value="3" class="css-checkbox" <?=($this->session->userdata('tipoUsuario') == 3) ? 'disabled="disabled" title="Solo puede publicar en Adopción o Perros Perdidos"' : ''?>/>
             <label for="radio4" class="css-label radGroup2">Cruza</label>
-            <br/>-->
+            <br>-->
             <input type="radio" id="radio5" name="seccion" value="2" class="css-checkbox" <?=($this->session->userdata('tipoUsuario') == 3) ? 'disabled="disabled" title="Solo puede publicar en Adopción o Perros Perdidos"' : ''?>/>
             <label for="radio5" class="css-label radGroup2">Venta</label>
-            <br/>
+            <br>
             <input type="radio" id="radio6" name="seccion" value="6" class="css-checkbox"/>
             <label for="radio6" class="css-label radGroup2">Adopción</label>
-            <br/>
+            <br>
             <input type="radio" id="radio7" name="seccion" value="7" class="css-checkbox"/>
             <label for="radio7" class="css-label radGroup2">Perros perdidos</label>
         </div>
@@ -317,7 +317,7 @@
                value="<?php echo $this->session->userdata('apellido') ?>"/>
         Correo electrónico: <input required="required" type="text" name="correo" class="background_morado_55_mini"
                                    readonly="readonly" value="<?php echo $this->session->userdata('correo') ?>" style = "margin-right:-4px;"/></p>
-    <br/>
+    <br>
 
     <p class="margen_15_left_mini"> Teléfono*: <input name="telefono" type="text"
                                                      class="background_gris_35_mini preview validate[required,custom[onlyNumberSp],minSize[10]]" value="<?php echo $this->session->userdata('telefono');?> " required="required"/> Mostrar
@@ -327,17 +327,17 @@
             <option value="0"> No</option>
         </select>
     </p>
-    <br/>
+    <br>
 
     <div class="sub_instrucciones_pasos_mini"> Detalles del aunucio</div>
-    <br/>
+    <br>
 
     <p class="margen_15_left_mini">Sección: <input required="required" type="text" name="seccion_texto" id="seccion" class="background_morado_55_mini" readonly="readonly"/> Paquete:
         <input required="required" type="text" name="paquete_texto" id="paquete_texto" class="background_morado_55_mini"
                readonly="readonly"/>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vencimiento: <input type="text" required="required" name="vigencia_texto" class="background_morado_mini" id="vigencia_texto"
                                                                                                     readonly="readonly"/></p>
-    <br/>
+    <br>
 
     <p class="margen_15_left_mini"> Titúlo*: &nbsp;&nbsp; <input name="titulo" type="text" class="background_gris_55_mini preview validate[required]" id="titulo" maxlength="20" required="required"/> Estado*:
         &nbsp;&nbsp;<select required="required" name="estado" class="background_gris_7_mini preview validate[required]" id="estadoP">
@@ -349,7 +349,7 @@
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ciudad*: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input required="required" class="background_gris_mini preview validate[required]" name="ciudad" type="text" id="ciudad"/>
     </p>
-    <br/>
+    <br>
 
     <p class="margen_15_left_mini"> Genéro*:&nbsp;
         <select required="required" type="text" name="genero" class="background_gris_78_mini preview validate[required]" id="generoP">
@@ -367,26 +367,26 @@
         Precio*: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <input required="required" class="background_gris_100_mini preview validate[required,custom[number]" name="precio" type="text" id="precio"/>
     </p>
-    <br/>
+    <br>
 
     <p class="margen_15_left_mini">
-        Descripción*:&nbsp;<textarea required="required" class="background_gris_mini preview validate[required]" name="descripcion" id="descripcion" cols="95" rows="3"></textarea><br />
+        Descripción*:&nbsp;<textarea required="required" class="background_gris_mini preview validate[required]" name="descripcion" id="descripcion" cols="95" rows="3"></textarea><br>
     <div style="margin-top:8px;margin-left:16px;">Caracteres:&nbsp;&nbsp;<input name="meh" type="text" id="meh" size="3" readonly="readonly" />
     <input name="caracteresN" type="text" id="caracteresN" size="3" readonly="readonly" />
     </div>
     </p>
-    <br/>
+    <br>
     <div id="links_videos">
     <p class="margen_15_left_mini" id="videoY">
     <input type="hidden" name="url_video[]" id="url_video" value="0" />
         Link de video <input type="text" name="url_video[]" id="url_video[]" size="98" class="preview one validate[custom[url]]"/><img
-            src="<?php echo base_url() ?>images/logo_youtube.png"/><a href="#" id="addVid" class="addVid" style="font-size:9px; margin-top:8px;" data-rel="">Agregar</a><br />
+            src="<?php echo base_url() ?>images/logo_youtube.png"/><a href="#" id="addVid" class="addVid" style="font-size:9px; margin-top:8px;" data-rel="">Agregar</a><br>
     </p>
 
     <p class="margen_15_left_mini"><a href="<?php echo base_url() ?>#"> Tutorial para subir video a <img
                 src="<?php echo base_url() ?>images/logo_youtube.png" width="43" height="16"/> </a></p>
      </div>
-    <br/>
+    <br>
 <script>
 $(document).ready(function()
 {
@@ -466,7 +466,7 @@ $(document).ready(function()
 <!--<output id="list" class="preview"></output>-->
 
 
-<br />
+<br>
     <!--imagenes-->
     
     
@@ -529,35 +529,35 @@ $(document).ready(function()
         
          <label><p id="tituloPrev"></p></label>
         </div>
-        <br/>
+        <br>
         <strong>
         <span id="s_precio">Precio: $ <label id="precioPrev"></label></span>
         </strong>
-        <br/>
+        <br>
         <font> Fecha de publicacion:<label id="fechaPrev"><?=date('d-m-Y');?></label></font>
-        <br/>
+        <br>
         <font>Sección: <label id="seccionPrev"></label></font>
-        <br/>
+        <br>
         <font>Raza: <label id="razaPrev"></label></font>
-        <br/>
+        <br>
         <font>Género: <label id="generoPrev"></label></font>
-        <br/>
+        <br>
         <font>Lugar: <label id="lugarPrev"></label></font>
-        <br/>
-        <br/>
+        <br>
+        <br>
         <ul class="boton_naranja_mini">
             <li onclick="muestra('contenedor_contactar_previo');">
                 Contactar al anunciante
             </li>
         </ul>
-        <br/>
+        <br>
         <ul class="boton_gris_mini">
             <li>
                 <img src="<?php echo base_url() ?>images/favorito.png"/>Agregar a Favoritos
             </li>
         </ul>
     </div>
-    <br/>
+    <br>
 
     <div class="contenedor_del_detalle_mini">
 
@@ -567,14 +567,14 @@ $(document).ready(function()
         <div class="descripcion_del_anuncio_mini">
            <p id="descripcionPrev"></p>
         </div>
-        <br/>
+        <br>
         <ul class="boton_naranja_dos_mini">
             <li id="ver_video" onclick="$('#video_previo').toggle();">
                 Ver video
             </li>
         </ul>
         <div id="video_previo" class="desplegar_detalles_mini" style="display:none;">
-        <br/>
+        <br>
 
             <div class="titulo_anuncio_publicado_mini">
                 VIDEO
@@ -592,29 +592,29 @@ $(document).ready(function()
         <div class="consejos_advertencias_mini">
             - QuierounPerro.com te invita a que antes de comprar pienses en adoptar, ya que hoy en día hay
             millones de perros sin hogar que deben ser sacrificados.
-            <br/>
+            <br>
             - Tener un perro conlleva una serie de responsabilidades, cuidados y atenciones que debes considerar
             antes de comprar uno.
-            <br/>
+            <br>
             - Infórmate de los cuidados especiales que debes de tener con la raza específica que estás
             comprando.
-            <br/>
+            <br>
             - NUNCA compres una nueva mascota sin verla físicamente antes.
-            <br/>
+            <br>
             - NUNCA hagas depósitos o transferencias bancarias a través de medios donde tu dinero no pueda ser
             rastreado, como lo son Money Gram y Western Union.
-            <br/>
+            <br>
             - NUNCA pagues por un perro con registro de pedigree AKC si no te muestran los certificados, ya que
             corres el riesgo de que sea una estafa y nunca te los entreguen. Exige ver los papeles y asegúrate
             de que el nombre del criador esté en el certificado.
-            <br/>
+            <br>
             - Cuando vayas a ver al vendedor, nunca vayas solo y revisa los alrededores.
-            <br/>
+            <br>
             - El vendedor también debe estar interesado en ti y en manos de quién dejará a su perro.
         </div>
        
     </div>
-    <br/>
+    <br>
 </div>
 </div>
 <!--paso cinco-->
@@ -651,7 +651,7 @@ COSTO
 
 <tr>
 <td colspan="2">
- <img style="" src="<?php echo base_url()?>images/mini_cupon.png"/> <font class="texto_de_cupon" >Cupones de descuento: </font> </br> <font id="ver_cupones" class="ver_cupones" onclick="muestra('los_cupones_disponibles');muestra('no_ver_cupones');
+ <img style="" src="<?php echo base_url()?>images/mini_cupon.png"/> <font class="texto_de_cupon" >Cupones de descuento: </font> <br> <font id="ver_cupones" class="ver_cupones" onclick="muestra('los_cupones_disponibles');muestra('no_ver_cupones');
  oculta('ver_cupones');"> Ver cupones </font> 
   <font style="display:none;" id="no_ver_cupones" class="ver_cupones" onclick="oculta('los_cupones_disponibles');oculta('no_ver_cupones');muestra('ver_cupones');"> Ocultar cupones </font>
 <div id="los_cupones_disponibles" style="padding:15px; display:none;">
@@ -710,11 +710,11 @@ TOTAL
 </tr>
 </table>
 
-</br>
-</br>
-</br>
-</br>
-</br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <div style="width:840px;" >
     <div style="float:right;widht: 136px;margin-left: 700px;margin-right: 58px;width: 136px;display: block;overflow:hidden;height:80px;">
         <ul class="morado_mini" id="btn_sig" style="">
@@ -723,8 +723,8 @@ TOTAL
             </li>
         </ul>
     </div>
-              <br/>
-                            <br/>
+              <br>
+                            <br>
                             <div id="msj_paso" style="font-size: 10px;display: inline-block; vertical-align: bottom; height: 38px;"></div>
                         </div>
 
@@ -738,10 +738,10 @@ TOTAL
 
                         <div id="iframez"></div>
                         <div id="closeProcess"></div>
-                        <br/>
+                        <br>
                     </div>
                 </div>
-<br/>
+<br>
 
 </form>
 <!--boton se siguiente paso-->
@@ -914,7 +914,7 @@ TOTAL
                 if(contador < cantidadVideos){
                 console.log(contador,cantidadVideos);
                 
-        $('<p id="video"> Link de video <input type="text" name="url_video[]" id="url_video" class="url_video" size="98" class="preview"/><img src="<?php echo base_url() ?>images/logo_youtube.png"/> <a href="#" id="eliminar" class="eliminar" style="font-size:9px;">Eliminar</a><br /></p>').appendTo('#videoY');
+        $('<p id="video"> Link de video <input type="text" name="url_video[]" id="url_video" class="url_video" size="98" class="preview"/><img src="<?php echo base_url() ?>images/logo_youtube.png"/> <a href="#" id="eliminar" class="eliminar" style="font-size:9px;">Eliminar</a><br></p>').appendTo('#videoY');
                 }
         contador++;
         

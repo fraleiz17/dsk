@@ -97,7 +97,7 @@ if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
 <div class="franja_morada"> </div>
  </div>
 </a>
- </div></br></br></br></br> 
+ </div><br><br><br><br> 
 <div id="contenedor_publicar_anuncio" class="contenedor_publicar" style=" display:none">
     <!-- Inicio contenedor pap publicar anuncio aunucio !-->
     <div id="publicar_anuncio" class="pubicar_anuncio_mini">

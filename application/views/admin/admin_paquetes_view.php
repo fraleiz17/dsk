@@ -34,13 +34,13 @@ cuponNegocioO
 		*/
 		
 		if(tipoCupon == 1){
-		$('<p id="cupon'+paqueteID+'"><input name="cuponTienda[]" value="'+tienda+'" type="text" id="cuponTienda" size="3" class="validate[required],custom[number]"/>% <a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br /></p>').appendTo('#cupon1'+paqueteID);
+		$('<p id="cupon'+paqueteID+'"><input name="cuponTienda[]" value="'+tienda+'" type="text" id="cuponTienda" size="3" class="validate[required],custom[number]"/>% <a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br></p>').appendTo('#cupon1'+paqueteID);
 		} 
 		if(tipoCupon == 2){
-		$('<p id="cupon'+paqueteID+'"><input name="cuponPaquete[]" value="'+paquete+'" type="text" id="cuponPaquete" size="3" class="validate[required],custom[number]"/>% <a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br /></p>').appendTo('#cupon2'+paqueteID);
+		$('<p id="cupon'+paqueteID+'"><input name="cuponPaquete[]" value="'+paquete+'" type="text" id="cuponPaquete" size="3" class="validate[required],custom[number]"/>% <a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br></p>').appendTo('#cupon2'+paqueteID);
 		} 
 		if(tipoCupon == 3) {
-		$('<p id="cupon'+paqueteID+'"><select name="cuponNegocioTienda[]" id="cuponNegocioTienda" class="validate[required]"><option value="'+negocio+'">'+negocio+'</option><?php if($tiendas != null){ foreach ($tiendas as $tienda) { if($tienda->nombreNegocio != null && $tienda->nombreNegocio != ''){ ?><option value="<?=$tienda->nombreNegocio?>"><?=$tienda->nombreNegocio?></option><?php } } }?></select><input name="cuponNegocio[]" type="text" id="cuponNegocio" value="'+negocioVal+'" size="3" class="validate[required],custom[number]"/>% <a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br /></p>').appendTo('#cupon3'+paqueteID);
+		$('<p id="cupon'+paqueteID+'"><select name="cuponNegocioTienda[]" id="cuponNegocioTienda" class="validate[required]"><option value="'+negocio+'">'+negocio+'</option><?php if($tiendas != null){ foreach ($tiendas as $tienda) { if($tienda->nombreNegocio != null && $tienda->nombreNegocio != ''){ ?><option value="<?=$tienda->nombreNegocio?>"><?=$tienda->nombreNegocio?></option><?php } } }?></select><input name="cuponNegocio[]" type="text" id="cuponNegocio" value="'+negocioVal+'" size="3" class="validate[required],custom[number]"/>% <a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br></p>').appendTo('#cupon3'+paqueteID);
 		}
 		
 		contador++;
@@ -108,8 +108,8 @@ Cupones:</td> <td> <input name="cupones" type="text" id="cupones" value="<?=$paq
 <tr>
 <td colspan="2">
 <strong>Detalle de cupones:</strong>
-</br>
-</br>
+<br>
+<br>
 <table class="tabla_cupones" width="482"> 
 <tr> 
 <th width="138">
@@ -175,7 +175,7 @@ NEGOCIO
 </tr>
 </table>
 
-</br>
+<br>
 
 </td>
 <tr> 
@@ -210,7 +210,7 @@ NEGOCIO
 <div class="titulo_seccion">
 PAQUETES- ANUNCIOS
 </div>
-</br>
+<br>
 <table class="tabla_carrito" width="990">
 <tr>
 <th width="84">
@@ -269,7 +269,7 @@ Costo
 <?=$paquete->videos?>
 </td>
 <td>
-<?=$paquete->cupones;?><br /><br />
+<?=$paquete->cupones;?><br><br>
 <?php if($cupones != null){
 	foreach($cupones as $cupon){
 		if($cupon->paqueteID == $paquete->paqueteID){

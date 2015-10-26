@@ -45,7 +45,7 @@ jQuery(document).ready(function(){
 		$('#colorP'+productoID).val('');
 		var contador = 0; 
 
-		$('<p id="colorS'+productoID+'"><input name="color[]" type="text" size="8" value="'+color+'"  class="validate[required]"/> <a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br /></p>').appendTo('#colors'+productoID);
+		$('<p id="colorS'+productoID+'"><input name="color[]" type="text" size="8" value="'+color+'"  class="validate[required]"/> <a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br></p>').appendTo('#colors'+productoID);
 
 		contador++;
         
@@ -64,7 +64,7 @@ jQuery(document).ready(function(){
 		$('#colorPE').val('');
 		var contador = 0; 
 
-		$('<p id="colorS"><input name="color[]" type="text" size="8" value="'+color+'"  class="validate[required]"/> <a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br /></p>').appendTo('#colorsE');
+		$('<p id="colorS"><input name="color[]" type="text" size="8" value="'+color+'"  class="validate[required]"/> <a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br></p>').appendTo('#colorsE');
 
 		contador++;
         
@@ -137,26 +137,26 @@ EDITAR PRODUCTO
       <input type="checkbox" name="talla[]" value="Chica" id="talla1" class="validate[required,groupRequired[tallas]]" <?php if($detalleProducto != null){
 	  foreach($detalleProducto as $detalle){
 	  if($detalle->productoID == $producto->productoID && $detalle->detalle == 'talla'){ ?><?=($detalle->valor == 'Chica') ? 'checked="checked"' : ''?><?php }}}?>/>
-      <label>Chica</label><br />
+      <label>Chica</label><br>
       <input type="checkbox" name="talla[]" value="Mediana" id="talla2" class="validate[required,groupRequired[tallas]]" <?php if($detalleProducto != null){
 	  foreach($detalleProducto as $detalle){
 	  if($detalle->productoID == $producto->productoID && $detalle->detalle == 'talla'){ ?><?=($detalle->valor == 'Mediana') ? 'checked="checked"' : ''?><?php }}}?>/>
-      <label>Mediana</label><br />
+      <label>Mediana</label><br>
       <input type="checkbox" name="talla[]" value="Grande" id="talla3" class="validate[required,groupRequired[tallas]]" <?php if($detalleProducto != null){
 	  foreach($detalleProducto as $detalle){
 	  if($detalle->productoID == $producto->productoID && $detalle->detalle == 'talla'){ ?><?=($detalle->valor == 'Grande') ? 'checked="checked"' : ''?><?php }}}?>/>
-      <label>Grande</label><br />
+      <label>Grande</label><br>
       <input type="checkbox" name="talla[]" value="Unitalla" id="talla4" class="validate[required,groupRequired[tallas]]" <?php if($detalleProducto != null){
 	  foreach($detalleProducto as $detalle){
 	  if($detalle->productoID == $producto->productoID && $detalle->detalle == 'talla'){ ?><?=($detalle->valor == 'Unitalla') ? 'checked="checked"' : ''?><?php }}}?>/>
-      <label>Unitalla</label><br />
+      <label>Unitalla</label><br>
     </p>
 <p id="colors<?=$productoID?>"><input type="hidden" name="color[]" id="color[]" value="0" />
-   <input name="color[]" type="text" size="8" id="colorP<?=$productoID?>" style="margin-top:10px;" class=""/> <a href="#" id="addColor" class="addColor" style="color:#fff; font-size:9px; margin-top:8px;" data-rel="<?=$productoID?>">Agregar</a><br />
+   <input name="color[]" type="text" size="8" id="colorP<?=$productoID?>" style="margin-top:10px;" class=""/> <a href="#" id="addColor" class="addColor" style="color:#fff; font-size:9px; margin-top:8px;" data-rel="<?=$productoID?>">Agregar</a><br>
 <?php if($detalleProducto != null){
 	  foreach($detalleProducto as $detalle){
 	  if($detalle->productoID == $producto->productoID && $detalle->detalle == 'color'){ ?>
-<p id="colorS<?=$productoID?>"><input name="color[]" type="text" size="8" value="<?=$detalle->valor?>"  class="validate[required]"/> <a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br /></p>
+<p id="colorS<?=$productoID?>"><input name="color[]" type="text" size="8" value="<?=$detalle->valor?>"  class="validate[required]"/> <a href="#" id="eliminar" class="eliminar" style="color:#fff; font-size:9px;">Eliminar</a><br></p>
 <?php }
 	  }
 }?>
@@ -173,8 +173,8 @@ EDITAR PRODUCTO
 
 </div>
 
-</br>
-</br>
+<br>
+<br>
 
 <ul class="morado_reg">
 <li>
@@ -225,24 +225,24 @@ AGREGAR PRODUCTO
 <p>
 <input type="hidden" name="talla[]" id="talla[]" value="0" />
       <input type="checkbox" name="talla[]" value="Chica" id="talla1" class="validate[required,groupRequired[tallas]]"/>
-      <label>Chica</label><br />
+      <label>Chica</label><br>
       <input type="checkbox" name="talla[]" value="Mediana" id="talla2" class="validate[required,groupRequired[tallas]]" />
-      <label>Mediana</label><br />
+      <label>Mediana</label><br>
       <input type="checkbox" name="talla[]" value="Grande" id="talla3" class="validate[required,groupRequired[tallas]]"/>
-      <label>Grande</label><br />
+      <label>Grande</label><br>
       <input type="checkbox" name="talla[]" value="Unitalla" id="talla4" class="validate[required,groupRequired[tallas]]"/>
-      <label>Unitalla</label><br />
+      <label>Unitalla</label><br>
     </p>
 <p id="colorsE"><input type="hidden" name="color[]" id="color[]" value="0" />
-   <input name="color[]" type="text" size="8" id="colorPE" style="margin-top:10px;" class="validate[required]"/> <a href="#" id="addColorE" class="addColorE" style="color:#fff; font-size:9px; margin-top:8px;">Agregar</a><br />
+   <input name="color[]" type="text" size="8" id="colorPE" style="margin-top:10px;" class="validate[required]"/> <a href="#" id="addColorE" class="addColorE" style="color:#fff; font-size:9px; margin-top:8px;">Agregar</a><br>
 </p>
 <p><input name="fotoproducto[]" type="file" id="fotoproducto" multiple="multiple" style="margin-top:13px;"/></p>
 </div>
 
 </div>
 
-</br>
-</br>
+<br>
+<br>
 
 <ul class="morado_reg">
 <li>
@@ -290,7 +290,7 @@ ELIMINAR PRODUCTO
 <div class="titulo_seccion">
 PRODUCTOS-TIENDA
 </div>
-</br>
+<br>
 <table class="tabla_carrito" width="990">
 <tr>
 <th width="77">

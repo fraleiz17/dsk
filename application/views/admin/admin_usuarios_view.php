@@ -155,7 +155,7 @@ USUARIOS
 </div>
 
 <div class="contenido_intruciones">
-</br>
+<br>
 <form action="<?=base_url()?>admin/principal/banear" id="bloquearUsuario" method="post">
 <table > 
 <tr> 
@@ -201,7 +201,7 @@ BLOQUEADO
 </div>
 
 <div class="contenido_intruciones">
-</br>
+<br>
 El usuario ha sido dado de baja exitosamente
 </div>
 </div>
@@ -225,7 +225,7 @@ BLOQUEADO
 </div>
 
 <div class="contenido_intruciones">
-</br>
+<br>
 El usuario no ha sido dado de baja, intente nuevamente
 </div>
 </div>
